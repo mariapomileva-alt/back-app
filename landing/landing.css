@@ -111,7 +111,7 @@ button {
   justify-content: space-between;
   max-width: 1240px;
   margin: 0 auto;
-  padding: 22px 28px 8px;
+  padding: 28px 32px 4px;
 }
 
 .brand {
@@ -119,9 +119,9 @@ button {
   align-items: center;
   gap: 10px;
   font-family: var(--serif);
-  font-size: 22px;
+  font-size: 23px;
   font-weight: 500;
-  letter-spacing: 0.15px;
+  letter-spacing: 0.02em;
 }
 
 .mark {
@@ -135,32 +135,34 @@ button {
 .nav-cta {
   display: inline-flex;
   align-items: center;
-  min-height: 44px;
-  padding: 0 16px;
+  min-height: 42px;
+  padding: 0 18px;
   border-radius: 999px;
   background: var(--forest);
   color: var(--ivory);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
-  gap: 8px 32px;
+  grid-template-columns: minmax(280px, 0.82fr) minmax(360px, 1.18fr);
+  gap: 8px 20px;
   align-items: center;
-  max-width: 1240px;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 48px 28px 80px;
-  min-height: min(760px, calc(100svh - 72px));
+  padding: 36px 32px 56px;
+  min-height: 0;
+  overflow: visible;
 }
 
 .hero-copy {
   position: relative;
-  z-index: 4;
+  z-index: 5;
   max-width: 34rem;
-  padding-bottom: 24px;
+  padding-bottom: 12px;
 }
 
 .kicker {
@@ -253,87 +255,96 @@ button {
 
 .stage {
   position: relative;
-  min-height: 640px;
-  overflow: hidden;
+  isolation: isolate;
+  height: 720px;
+  overflow: visible;
 }
 
 .orb {
   position: absolute;
-  top: 8px;
-  left: 8%;
-  width: 168px;
-  height: 168px;
+  z-index: 0;
+  top: 24px;
+  left: 18%;
+  width: 196px;
+  height: 196px;
   border-radius: 50%;
   background: var(--sage);
-  opacity: 0.38;
+  opacity: 0.32;
 }
 
 .slab {
   position: absolute;
-  right: 8%;
-  top: 72px;
-  width: min(300px, 70%);
-  height: 430px;
-  border-radius: 28px;
+  z-index: 0;
+  right: 6%;
+  top: 88px;
+  width: min(268px, 48%);
+  height: 460px;
+  border-radius: 32px;
   background: var(--forest);
 }
 
 .clay {
   position: absolute;
-  right: 4%;
-  bottom: 48px;
-  width: 92px;
-  height: 92px;
-  border-radius: 8px;
+  z-index: 2;
+  right: 7%;
+  top: 62%;
+  width: 78px;
+  height: 78px;
+  border-radius: 10px;
   background: var(--clay);
-  transform: rotate(12deg);
+  transform: rotate(11deg);
 }
 
 .scribble {
   position: absolute;
-  left: 0;
-  bottom: 70px;
-  width: 240px;
+  z-index: 4;
+  left: 2%;
+  bottom: 22%;
+  width: 220px;
   height: 70px;
   opacity: 0.55;
 }
 
 .giant {
   position: absolute;
-  left: -6%;
-  bottom: 18px;
   z-index: 4;
+  left: 0;
+  bottom: 8%;
   margin: 0;
   font-family: var(--serif);
-  font-size: clamp(88px, 14vw, 168px);
+  font-size: clamp(128px, 16vw, 208px);
   font-weight: 500;
+  font-optical-sizing: auto;
+  font-variation-settings: "SOFT" 40, "opsz" 144;
   line-height: 0.72;
-  letter-spacing: -0.06em;
-  color: var(--ink);
+  letter-spacing: -0.07em;
+  color: var(--forest);
   pointer-events: none;
 }
 
 .phone {
   position: absolute;
   z-index: 3;
-  top: 36px;
-  left: 50%;
-  width: 292px;
-  transform: translateX(-42%) rotate(-3.5deg);
+  top: 18px;
+  left: 72%;
+  width: 286px;
+  transform: translateX(-18%) rotate(-3.2deg);
 }
 
 .bezel {
   padding: 11px;
   border-radius: 42px;
   background: #183f34;
-  box-shadow: 0 28px 60px rgba(12, 59, 46, 0.18);
+  box-shadow:
+    0 40px 80px rgba(12, 59, 46, 0.16),
+    0 8px 18px rgba(12, 59, 46, 0.06);
 }
 
 .screen {
   position: relative;
   overflow: hidden;
-  height: 600px;
-  padding: 8px 14px 12px;
+  height: 572px;
+  padding: 6px 12px 10px;
   border-radius: 32px;
   background: var(--ivory);
   display: flex;
@@ -414,7 +425,7 @@ button {
   justify-content: flex-end;
   overflow: hidden;
   min-height: 0;
-  padding: 8px 6px 7px;
+  padding: 8px 6px 8px;
   border: 1px solid #e4dccf;
   border-radius: 16px;
   background: var(--surface);
@@ -436,15 +447,14 @@ button {
   right: 0;
   bottom: 0;
   left: 0;
-  height: 22%;
-  background: linear-gradient(to bottom, transparent, var(--mini-surface, var(--surface)));
+  height: 12%;
+  background: linear-gradient(to bottom, transparent, var(--surface));
   pointer-events: none;
 }
 
 .mini-mark {
   width: 100%;
   height: 100%;
-  max-height: 52px;
 }
 
 .mini span {
@@ -453,37 +463,8 @@ button {
   margin-top: 2px;
   font-size: 11px;
   font-weight: 600;
-  letter-spacing: 0.02em;
-}
-
-.mini-breathe {
-  --mini-surface: #f8f4ec;
-  background: #f8f4ec;
-}
-
-.mini-distract {
-  --mini-surface: #f4eee4;
-  background: #f4eee4;
-}
-
-.mini-ground {
-  --mini-surface: #f0efe6;
-  background: #f0efe6;
-}
-
-.mini-move {
-  --mini-surface: #f5f0e7;
-  background: #f5f0e7;
-}
-
-.mini-listen {
-  --mini-surface: #eaeae2;
-  background: #eaeae2;
-}
-
-.mini-read {
-  --mini-surface: #f1e7da;
-  background: #f1e7da;
+  letter-spacing: 0.15px;
+  text-align: center;
 }
 
 .home-call {
@@ -509,32 +490,35 @@ button {
 
 .tools,
 .promise {
+  position: relative;
+  z-index: 6;
   max-width: 1240px;
   margin: 0 auto;
-  padding: 32px 28px 88px;
+  padding: 88px 32px 96px;
+  background: var(--ivory);
 }
 
 .section-title {
-  margin: 0 0 36px;
+  margin: 0 0 44px;
   max-width: 16ch;
   font-family: var(--serif);
-  font-size: clamp(36px, 5vw, 56px);
+  font-size: clamp(40px, 5.4vw, 64px);
   font-weight: 500;
-  letter-spacing: -0.04em;
-  line-height: 1;
+  letter-spacing: -0.045em;
+  line-height: 0.96;
 }
 
 .tool-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
+  gap: 16px;
 }
 
 .tool {
-  min-height: 240px;
-  padding: 22px 22px 24px;
-  border: 1px solid color-mix(in srgb, var(--divider) 55%, var(--ivory));
-  border-radius: 24px;
+  min-height: 260px;
+  padding: 26px 26px 28px;
+  border: 1px solid color-mix(in srgb, var(--divider) 48%, var(--ivory));
+  border-radius: 28px;
   background: var(--surface);
 }
 
@@ -665,22 +649,28 @@ button {
   .hero {
     grid-template-columns: 1fr;
     min-height: 0;
-    padding-bottom: 8px;
+    padding-bottom: 24px;
+    overflow: hidden;
   }
 
   .stage {
-    min-height: 560px;
+    height: 620px;
     margin-right: 0;
+    overflow: hidden;
   }
 
   .phone {
-    left: 50%;
-    transform: translateX(-50%) rotate(-3deg);
+    left: 66%;
+    top: 24px;
+    transform: translateX(-28%) rotate(-3deg);
   }
 
   .giant {
-    left: 4%;
-    font-size: 96px;
+    left: 0;
+    bottom: 8%;
+    top: auto;
+    font-size: 132px;
+    z-index: 4;
   }
 
   .tool-grid,
@@ -723,13 +713,14 @@ button {
   }
 
   .stage {
-    min-height: 430px;
+    height: 520px;
     margin: 8px -18px 0;
   }
 
   .phone {
-    width: 210px;
-    top: 18px;
+    width: 214px;
+    top: 16px;
+    left: 56%;
   }
 
   .screen {
@@ -741,15 +732,11 @@ button {
     font-size: 22px;
   }
 
-  .mini-mark {
-    max-height: 38px;
-  }
-
   .slab {
-    width: 210px;
+    width: 180px;
     height: 300px;
-    right: 14%;
-    top: 40px;
+    right: 8%;
+    top: 48px;
   }
 
   .orb {
@@ -758,20 +745,21 @@ button {
   }
 
   .clay {
-    width: 58px;
-    height: 58px;
-    bottom: 28px;
+    width: 52px;
+    height: 52px;
+    top: 58%;
   }
 
   .giant {
-    font-size: 72px;
-    bottom: 6px;
-    left: 16px;
+    font-size: 86px;
+    left: 4%;
+    bottom: 6%;
   }
 
   .scribble {
-    width: 150px;
-    bottom: 36px;
+    width: 140px;
+    bottom: 18%;
+    top: auto;
   }
 
   .tool-grid {
@@ -796,7 +784,7 @@ button {
   .nav-cta {
     min-height: 40px;
     padding: 0 12px;
-    font-size: 13px;
+    font-size: 12px;
   }
 }
 
@@ -806,12 +794,12 @@ button {
   }
 
   .phone {
-    transform: translateX(-42%);
+    transform: translateX(-18%);
   }
 }
 
 @media (max-width: 980px) and (prefers-reduced-motion: reduce) {
   .phone {
-    transform: translateX(-50%);
+    transform: translateX(-28%);
   }
 }
