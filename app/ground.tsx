@@ -1,83 +1,64 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 
-import { AudioControl } from '@/components/audio/AudioControl';
-import { MuteButton } from '@/components/audio/MuteButton';
-import { ExerciseShell } from '@/components/exercise/ExerciseShell';
-import { AtmosphericImage } from '@/components/media/AtmosphericImage';
+import { PrimaryButton } from '@/components/buttons/PrimaryButton';
+import { ProgressDots } from '@/components/feedback/ProgressDots';
+import { GroundMark } from '@/components/marks';
+import { ActiveSessionScreen } from '@/components/session/ActiveSessionScreen';
 import { AppText } from '@/components/typography/AppText';
 import { groundSteps } from '@/features/ground/steps';
-import { exerciseAudio, exerciseImages } from '@/features/media/catalog';
-import { useElapsedTime, formatElapsed } from '@/hooks/useElapsedTime';
-import { useExerciseClose } from '@/hooks/useExerciseClose';
-import { useLoopingSound } from '@/hooks/useLoopingSound';
+import { useHaptics } from '@/hooks/useHaptics';
 import { t } from '@/locales/i18n';
 import { serif } from '@/theme/fonts';
 import { spacing } from '@/theme/spacing';
 
 export default function GroundScreen() {
-  const close = useExerciseClose('ground');
-  const audio = useLoopingSound({ source: exerciseAudio.groundingEnglish });
-  const elapsed = useElapsedTime(audio.isPlaying);
+  const haptics = useHaptics();
   const [step, setStep] = useState(0);
-
-  useEffect(() => {
-    if (!audio.isPlaying) {
-      return;
-    }
-    const id = setInterval(() => {
-      setStep((current) => (current + 1) % groundSteps.length);
-    }, 10000);
-    return () => clearInterval(id);
-  }, [audio.isPlaying]);
-
+  const last = step >= groundSteps.length - 1;
   const instruction = t(groundSteps[step] ?? groundSteps[0]!);
 
+  const next = () => {
+    haptics.light();
+    if (!last) {
+      setStep((current) => current + 1);
+    }
+  };
+
   return (
-    <ExerciseShell
-      title={t('home.tools.ground')}
-      onClose={close}
-      right={<MuteButton muted={audio.muted} onPress={audio.toggleMute} />}
-    >
-      <AppText variant="secondary" tone="secondary">
-        {t('exercise.progress', { current: step + 1, total: groundSteps.length })}
-      </AppText>
+    <ActiveSessionScreen tool="ground" title={t('home.tools.ground')}>
+      <View style={styles.mark} accessible={false}>
+        <GroundMark />
+      </View>
       <AppText variant="instruction" style={styles.instruction}>
         {instruction}
       </AppText>
-      <AtmosphericImage
-        source={exerciseImages.groundFeet}
-        accessibilityLabel={t('ground.image')}
-        heightRatio={0.32}
-        treatment="photo"
-      />
-      <View style={styles.controls}>
-        <AudioControl
-          layout="stack"
-          isPlaying={audio.isPlaying}
-          onPlayPause={audio.toggle}
-          elapsed={formatElapsed(elapsed)}
-          onReplay={() => {
-            setStep(0);
-            audio.replay();
-          }}
-        />
-      </View>
-    </ExerciseShell>
+      <ProgressDots count={groundSteps.length} index={step} />
+      {last ? null : (
+        <View style={styles.footer}>
+          <PrimaryButton label={t('common.next')} onPress={next} />
+        </View>
+      )}
+    </ActiveSessionScreen>
   );
 }
 
 const styles = StyleSheet.create({
+  mark: {
+    width: 168,
+    height: 100,
+    marginTop: spacing.md,
+    alignSelf: 'center',
+  },
   instruction: {
     fontFamily: serif,
     fontWeight: '500',
-    marginTop: spacing.xs,
-    marginBottom: spacing.sm,
+    marginTop: spacing.lg,
+    marginBottom: spacing.lg,
     maxWidth: 340,
   },
-  controls: {
-    alignItems: 'center',
-    marginTop: spacing.md,
-    gap: spacing.xs,
+  footer: {
+    marginTop: 'auto',
+    paddingTop: spacing.lg,
   },
 });

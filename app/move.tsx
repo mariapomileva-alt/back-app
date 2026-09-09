@@ -1,64 +1,71 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
-import { useRouter } from 'expo-router';
 
+import { PrimaryButton } from '@/components/buttons/PrimaryButton';
 import { TextButton } from '@/components/buttons/TextButton';
-import { ExerciseShell } from '@/components/exercise/ExerciseShell';
-import { AtmosphericImage } from '@/components/media/AtmosphericImage';
+import { ProgressDots } from '@/components/feedback/ProgressDots';
+import { MoveMark } from '@/components/marks';
+import { ActiveSessionScreen } from '@/components/session/ActiveSessionScreen';
 import { AppText } from '@/components/typography/AppText';
 import { moveSteps } from '@/features/move/steps';
-import { useExerciseClose } from '@/hooks/useExerciseClose';
+import { useHaptics } from '@/hooks/useHaptics';
 import { t } from '@/locales/i18n';
 import { serif } from '@/theme/fonts';
 import { spacing } from '@/theme/spacing';
 
 export default function MoveScreen() {
-  const close = useExerciseClose('move');
-  const router = useRouter();
+  const haptics = useHaptics();
   const [step, setStep] = useState(0);
+  const last = step >= moveSteps.length - 1;
   const current = moveSteps[step] ?? moveSteps[0]!;
 
-  useEffect(() => {
-    const id = setInterval(() => {
-      setStep((value) => (value + 1) % moveSteps.length);
-    }, 9000);
-    return () => clearInterval(id);
-  }, []);
+  const next = () => {
+    haptics.light();
+    if (!last) {
+      setStep((value) => value + 1);
+    }
+  };
 
   return (
-    <ExerciseShell title={t('home.tools.move')} onClose={close}>
-      <AppText variant="secondary" tone="secondary">
-        {t('exercise.progress', { current: step + 1, total: moveSteps.length })}
-      </AppText>
+    <ActiveSessionScreen
+      tool="move"
+      title={t('home.tools.move')}
+      extraActions={({ trySomethingElse }) => (
+        <TextButton label={t('exercise.moveUncomfortable')} onPress={trySomethingElse} />
+      )}
+    >
+      <View style={styles.mark} accessible={false}>
+        <MoveMark />
+      </View>
       <AppText variant="instruction" style={styles.instruction}>
         {t(current.textKey)}
       </AppText>
-      <AtmosphericImage
-        source={current.image}
-        accessibilityLabel={t(current.imageLabelKey)}
-        heightRatio={0.34}
-        treatment="photo"
-      />
-      <View style={styles.footer}>
-        <TextButton
-          label={t('exercise.moveUncomfortable')}
-          onPress={() => router.push('/session/alternatives')}
-        />
-      </View>
-    </ExerciseShell>
+      <ProgressDots count={moveSteps.length} index={step} />
+      {last ? null : (
+        <View style={styles.footer}>
+          <PrimaryButton label={t('common.next')} onPress={next} />
+        </View>
+      )}
+    </ActiveSessionScreen>
   );
 }
 
 const styles = StyleSheet.create({
+  mark: {
+    width: 168,
+    height: 100,
+    marginTop: spacing.md,
+    alignSelf: 'center',
+  },
   instruction: {
     fontFamily: serif,
     fontWeight: '500',
-    marginTop: spacing.sm,
-    marginBottom: spacing.md,
+    marginTop: spacing.lg,
+    marginBottom: spacing.lg,
     maxWidth: 340,
   },
   footer: {
-    marginTop: spacing.xl,
-    alignItems: 'flex-start',
+    marginTop: 'auto',
+    paddingTop: spacing.lg,
   },
 });

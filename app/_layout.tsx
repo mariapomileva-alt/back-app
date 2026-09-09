@@ -5,6 +5,7 @@ import { Stack } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
 
+import { useBindSessionAppState } from '@/hooks/useActiveSession';
 import { ThemeProvider, useTheme } from '@/providers/ThemeProvider';
 import { motion } from '@/theme/motion';
 
@@ -30,6 +31,8 @@ function RootNavigation() {
 }
 
 export default function RootLayout() {
+  useBindSessionAppState();
+
   useEffect(() => {
     void SplashScreen.hideAsync();
   }, []);

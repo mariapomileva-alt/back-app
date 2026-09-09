@@ -4,11 +4,10 @@ import Svg, { Path } from 'react-native-svg';
 
 import { AccessiblePressable } from '@/components/accessibility/AccessiblePressable';
 import { VolumeBar } from '@/components/audio/VolumeBar';
-import { ExerciseShell } from '@/components/exercise/ExerciseShell';
-import { AtmosphericImage } from '@/components/media/AtmosphericImage';
+import { ListenMark } from '@/components/marks';
+import { ActiveSessionScreen } from '@/components/session/ActiveSessionScreen';
 import { AppText } from '@/components/typography/AppText';
 import { defaultListenSoundId, listenSounds, type ListenSoundId } from '@/features/listen/sounds';
-import { useExerciseClose } from '@/hooks/useExerciseClose';
 import { useLoopingSound } from '@/hooks/useLoopingSound';
 import { useTheme } from '@/hooks/useTheme';
 import { t } from '@/locales/i18n';
@@ -18,7 +17,6 @@ import { spacing, touch } from '@/theme/spacing';
 import { loadLastSoundId, saveLastSoundId } from '@/storage/preferences';
 
 export default function ListenScreen() {
-  const close = useExerciseClose('listen');
   const { theme } = useTheme();
   const [soundId, setSoundId] = useState<ListenSoundId>(defaultListenSoundId);
 
@@ -49,14 +47,11 @@ export default function ListenScreen() {
   };
 
   return (
-    <ExerciseShell title={t('home.tools.listen')} onClose={close}>
+    <ActiveSessionScreen tool="listen" title={t('home.tools.listen')}>
       <AppText style={styles.name}>{t(selected.nameKey)}</AppText>
-      <AtmosphericImage
-        source={selected.image}
-        accessibilityLabel={t(selected.imageLabelKey)}
-        heightRatio={0.33}
-        treatment={selected.treatment}
-      />
+      <View style={styles.mark} accessible={false} importantForAccessibility="no">
+        <ListenMark />
+      </View>
       <View style={styles.transport}>
         <AccessiblePressable
           accessibilityRole="button"
@@ -119,7 +114,7 @@ export default function ListenScreen() {
           );
         })}
       </View>
-    </ExerciseShell>
+    </ActiveSessionScreen>
   );
 }
 
@@ -129,14 +124,20 @@ const styles = StyleSheet.create({
     fontSize: 34,
     lineHeight: 40,
     fontWeight: '500',
-    marginBottom: spacing.md,
+    marginBottom: spacing.sm,
+  },
+  mark: {
+    width: 220,
+    height: 120,
+    alignSelf: 'center',
+    marginVertical: spacing.md,
   },
   transport: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
     gap: spacing.lg,
-    marginTop: spacing.lg,
+    marginTop: spacing.md,
     marginBottom: spacing.sm,
   },
   play: {

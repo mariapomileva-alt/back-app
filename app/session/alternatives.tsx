@@ -9,7 +9,8 @@ import { PaperGrain } from '@/components/home/PaperGrain';
 import { ScreenContainer } from '@/components/layout/ScreenContainer';
 import { ScreenHeader } from '@/components/navigation/ScreenHeader';
 import { AppText } from '@/components/typography/AppText';
-import { homeTools } from '@/features/home/tools';
+import { isHomeToolId } from '@/features/session/activeSession';
+import { alternativeTools } from '@/features/session/suggestions';
 import { useTheme } from '@/hooks/useTheme';
 import { t } from '@/locales/i18n';
 import { serif } from '@/theme/fonts';
@@ -18,8 +19,9 @@ import { spacing } from '@/theme/spacing';
 export default function SessionAlternativesScreen() {
   const router = useRouter();
   const { theme } = useTheme();
-  const { feeling } = useLocalSearchParams<{ feeling?: string }>();
-  const suggestions = homeTools.slice(0, 3);
+  const { feeling, tool } = useLocalSearchParams<{ feeling?: string; tool?: string }>();
+  const currentTool = isHomeToolId(tool) ? tool : undefined;
+  const suggestions = alternativeTools(currentTool);
 
   const title =
     feeling === 'better'

@@ -63,14 +63,59 @@ export function cueKeyForPhase(phase: BreathPhase): string {
   return 'breathe.hold';
 }
 
-export function phaseAtElapsed(pattern: BreathPattern, elapsedMs: number): BreathPhase {
-  const cycleMs = pattern.steps.reduce((total, step) => total + step.durationMs, 0);
-  let position = cycleMs === 0 ? 0 : elapsedMs % cycleMs;
+export function cycleDurationMs(pattern: BreathPattern): number {
+  return pattern.steps.reduce((total, step) => total + step.durationMs, 0);
+}
+
+export type BreathMoment = {
+  phase: BreathPhase;
+  step: BreathStep;
+  progress: number;
+};
+
+/** Position inside the repeating cycle. One clock drives both copy and scale. */
+export function breathAtElapsed(pattern: BreathPattern, elapsedMs: number): BreathMoment {
+  const first = pattern.steps[0] ?? {
+    phase: 'inhale' as const,
+    durationMs: 4000,
+    target: 'open' as const,
+  };
+  const cycleMs = cycleDurationMs(pattern);
+  let position = cycleMs === 0 ? 0 : ((elapsedMs % cycleMs) + cycleMs) % cycleMs;
+
   for (const step of pattern.steps) {
     if (position < step.durationMs) {
-      return step.phase;
+      return {
+        phase: step.phase,
+        step,
+        progress: step.durationMs === 0 ? 1 : position / step.durationMs,
+      };
     }
     position -= step.durationMs;
   }
-  return pattern.steps[0]?.phase ?? 'inhale';
+
+  return { phase: first.phase, step: first, progress: 0 };
+}
+
+export function phaseAtElapsed(pattern: BreathPattern, elapsedMs: number): BreathPhase {
+  return breathAtElapsed(pattern, elapsedMs).phase;
+}
+
+function easeInOutSin(t: number): number {
+  const clamped = Math.min(1, Math.max(0, t));
+  return 0.5 - 0.5 * Math.cos(Math.PI * clamped);
+}
+
+/** Scale derived from the same elapsed time as the visible instruction. */
+export function scaleAtElapsed(
+  pattern: BreathPattern,
+  elapsedMs: number,
+  growScale: number,
+): number {
+  const { step, progress } = breathAtElapsed(pattern, elapsedMs);
+  const to = step.target === 'open' ? growScale : 1;
+  const from =
+    step.phase === 'hold' ? to : step.target === 'open' ? 1 : growScale;
+  const t = step.phase === 'hold' ? 1 : easeInOutSin(progress);
+  return from + (to - from) * t;
 }

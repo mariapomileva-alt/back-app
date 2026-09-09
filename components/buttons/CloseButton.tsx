@@ -1,11 +1,10 @@
 import { useRouter } from 'expo-router';
-import { StyleSheet, View } from 'react-native';
+import { View } from 'react-native';
 import Svg, { Line, Path } from 'react-native-svg';
 
-import { AccessiblePressable } from '@/components/accessibility/AccessiblePressable';
+import { QuietIconButton } from '@/components/session/QuietIconButton';
 import { useTheme } from '@/hooks/useTheme';
 import { t } from '@/locales/i18n';
-import { touch } from '@/theme/spacing';
 
 type Props = {
   onPress?: () => void;
@@ -21,12 +20,10 @@ export function CloseButton({ onPress, accessibilityLabel, accessibilityHint, va
   const isBack = variant === 'back';
 
   return (
-    <AccessiblePressable
-      accessibilityRole="button"
+    <QuietIconButton
       accessibilityLabel={accessibilityLabel ?? (isBack ? t('common.back') : t('common.close'))}
       accessibilityHint={accessibilityHint ?? t('common.closeHint')}
       onPress={onPress ?? (() => router.back())}
-      style={styles.button}
     >
       <View accessible={false}>
         <Svg width={22} height={22} viewBox="0 0 22 22">
@@ -63,15 +60,6 @@ export function CloseButton({ onPress, accessibilityLabel, accessibilityHint, va
           )}
         </Svg>
       </View>
-    </AccessiblePressable>
+    </QuietIconButton>
   );
 }
-
-const styles = StyleSheet.create({
-  button: {
-    width: touch.min,
-    height: touch.min,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

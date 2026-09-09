@@ -1,12 +1,11 @@
 import { useEffect, useState } from 'react';
 import { StyleSheet, View, useWindowDimensions } from 'react-native';
-import { useRouter } from 'expo-router';
 
 import { BreathingCircle } from '@/components/breathe/BreathingCircle';
 import { PatternPicker } from '@/components/breathe/PatternPicker';
-import { PrimaryButton } from '@/components/buttons/PrimaryButton';
 import { TextButton } from '@/components/buttons/TextButton';
-import { ExerciseShell } from '@/components/exercise/ExerciseShell';
+import { ActiveSessionScreen } from '@/components/session/ActiveSessionScreen';
+import { AppText } from '@/components/typography/AppText';
 import {
   cueKeyForPhase,
   defaultBreathPatternId,
@@ -15,27 +14,26 @@ import {
   type BreathPatternId,
 } from '@/features/breathe/patterns';
 import { useBreathCycle } from '@/features/breathe/useBreathCycle';
-import { useExerciseClose } from '@/hooks/useExerciseClose';
 import { useReduceMotion } from '@/hooks/useReduceMotion';
 import { t } from '@/locales/i18n';
 import { loadLastBreathPattern, saveLastBreathPattern } from '@/storage/preferences';
+import { serif } from '@/theme/fonts';
 import { spacing } from '@/theme/spacing';
 
-const REST_RATIO = 0.6;
-const GROW_SCALE = 1.15;
-const REDUCE_GROW_SCALE = 1.04;
+const REST_RATIO = 0.58;
+const GROW_SCALE = 1.12;
+const REDUCE_GROW_SCALE = 1.03;
 
 export default function BreatheScreen() {
-  const close = useExerciseClose('breathe');
-  const router = useRouter();
   const reduceMotion = useReduceMotion();
   const { width } = useWindowDimensions();
   const [patternId, setPatternId] = useState<BreathPatternId>(defaultBreathPatternId);
   const pattern = getBreathPattern(patternId);
   const growScale = reduceMotion ? REDUCE_GROW_SCALE : GROW_SCALE;
-  const restSize = Math.min(width * REST_RATIO, 280);
+  const restSize = Math.min(width * REST_RATIO, 268);
   const { phase, scale } = useBreathCycle(pattern, growScale);
   const cue = t(cueKeyForPhase(phase));
+  const patternName = t(pattern.nameKey);
 
   useEffect(() => {
     let cancelled = false;
@@ -55,23 +53,34 @@ export default function BreatheScreen() {
   };
 
   return (
-    <ExerciseShell title={t('home.tools.breathe')} onClose={close}>
+    <ActiveSessionScreen
+      tool="breathe"
+      title={t('home.tools.breathe')}
+      extraActions={({ trySomethingElse }) => (
+        <>
+          <PatternPicker selectedId={patternId} onSelect={selectPattern} />
+          <TextButton label={t('exercise.breatheUncomfortable')} onPress={trySomethingElse} />
+        </>
+      )}
+    >
       <View style={styles.stage}>
         <BreathingCircle
           restSize={restSize}
           maxScale={growScale}
           scale={scale}
-          cue={cue}
-          accessibilityLabel={`${t('breathe.circle')}. ${cue}`}
+          reduceMotion={reduceMotion}
+          accessibilityLabel={t('breathe.circle')}
         />
+        <AppText
+          variant="instruction"
+          accessibilityLiveRegion="polite"
+          accessibilityLabel={`${cue}. ${patternName}`}
+          style={styles.cue}
+        >
+          {cue}
+        </AppText>
       </View>
-      <PrimaryButton label={t('exercise.okay')} onPress={close} />
-      <PatternPicker selectedId={patternId} onSelect={selectPattern} />
-      <TextButton
-        label={t('exercise.breatheUncomfortable')}
-        onPress={() => router.push('/session/alternatives')}
-      />
-    </ExerciseShell>
+    </ActiveSessionScreen>
   );
 }
 
@@ -81,5 +90,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     paddingVertical: spacing.md,
+    gap: spacing.lg,
+  },
+  cue: {
+    fontFamily: serif,
+    fontWeight: '500',
+    textAlign: 'center',
+    maxWidth: 280,
   },
 });

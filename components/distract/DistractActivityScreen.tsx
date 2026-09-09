@@ -2,9 +2,10 @@ import { type ReactNode } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { useRouter } from 'expo-router';
 
-import { ExerciseShell } from '@/components/exercise/ExerciseShell';
+import { ActiveSessionScreen } from '@/components/session/ActiveSessionScreen';
 import type { DistractActivityId } from '@/features/distract/activities';
 import { useRememberDistractActivity } from '@/features/distract/useRememberActivity';
+import { beginInternalSessionNavigation } from '@/features/session/activeSession';
 import { t } from '@/locales/i18n';
 
 type Props = {
@@ -16,22 +17,23 @@ export function DistractActivityScreen({ activity, children }: Props) {
   const router = useRouter();
   useRememberDistractActivity(activity);
 
+  const changeActivity = () => {
+    beginInternalSessionNavigation();
+    router.replace({
+      pathname: '/distract',
+      params: { choose: '1' },
+    });
+  };
+
   return (
-    <ExerciseShell
+    <ActiveSessionScreen
+      tool="distract"
       title={t('home.tools.distract')}
-      onClose={() =>
-        router.replace({
-          pathname: '/distract',
-          params: { choose: '1' },
-        })
-      }
-      closeVariant="back"
-      closeLabel={t('distract.menu')}
-      closeHint={t('distract.menuHint')}
       scroll={false}
+      onChangeActivity={changeActivity}
     >
       <View style={styles.body}>{children}</View>
-    </ExerciseShell>
+    </ActiveSessionScreen>
   );
 }
 

@@ -1,23 +1,10 @@
-import { useRef } from 'react';
-import { useRouter } from 'expo-router';
+import { useActiveSession } from '@/hooks/useActiveSession';
+import type { HomeToolId } from '@/types';
 
-import type { ToolId } from '@/types';
-
-const OUTCOME_AFTER_MS = 20_000;
-
-export function useExerciseClose(tool: ToolId) {
-  const router = useRouter();
-  const startedAt = useRef(Date.now());
-
-  return () => {
-    const durationMs = Date.now() - startedAt.current;
-    if (durationMs >= OUTCOME_AFTER_MS) {
-      router.replace({
-        pathname: '/session/outcome',
-        params: { tool, durationMs: String(durationMs) },
-      });
-      return;
-    }
-    router.back();
-  };
+/**
+ * @deprecated Prefer ActiveSessionScreen / useActiveSession.
+ * Close still follows the shared 20-second outcome rule.
+ */
+export function useExerciseClose(tool: HomeToolId) {
+  return useActiveSession(tool).close;
 }

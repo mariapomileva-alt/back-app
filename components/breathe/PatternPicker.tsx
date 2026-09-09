@@ -45,12 +45,21 @@ export function PatternPicker({ selectedId, onSelect }: Props) {
                 styles.label,
                 {
                   color: selected ? theme.colors.text : theme.colors.textSecondary,
-                  fontWeight: selected ? '600' : '400',
+                  fontWeight: selected ? '500' : '400',
+                  opacity: selected ? 1 : 0.72,
                 },
               ]}
             >
               {label}
             </AppText>
+            <View
+              style={[
+                styles.mark,
+                {
+                  backgroundColor: selected ? theme.colors.text : 'transparent',
+                },
+              ]}
+            />
           </AccessiblePressable>
         );
       })}
@@ -64,7 +73,8 @@ const styles = StyleSheet.create({
     alignItems: 'stretch',
     justifyContent: 'space-between',
     gap: spacing.xxs,
-    marginTop: spacing.sm,
+    marginTop: spacing.md,
+    opacity: 0.92,
   },
   item: {
     flex: 1,
@@ -72,8 +82,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     paddingHorizontal: spacing.xxs,
+    gap: 6,
   },
   label: {
     textAlign: 'center',
+  },
+  mark: {
+    width: 16,
+    height: 1,
+    borderRadius: 1,
   },
 });

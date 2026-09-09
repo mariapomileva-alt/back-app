@@ -7,6 +7,7 @@ import { PaperGrain } from '@/components/home/PaperGrain';
 import { ScreenContainer } from '@/components/layout/ScreenContainer';
 import { ScreenHeader } from '@/components/navigation/ScreenHeader';
 import { AppText } from '@/components/typography/AppText';
+import { isHomeToolId } from '@/features/session/activeSession';
 import { useTheme } from '@/hooks/useTheme';
 import { t } from '@/locales/i18n';
 import { serif } from '@/theme/fonts';
@@ -16,6 +17,7 @@ export default function SessionOutcomeScreen() {
   const router = useRouter();
   const { theme } = useTheme();
   const { tool } = useLocalSearchParams<{ tool?: string }>();
+  const closedTool = isHomeToolId(tool) ? tool : undefined;
 
   return (
     <View style={[styles.root, { backgroundColor: theme.colors.background }]}>
@@ -33,19 +35,34 @@ export default function SessionOutcomeScreen() {
         <View style={styles.list}>
           <SupportCard
             title={t('session.better')}
-            onPress={() => router.replace('/session/alternatives?feeling=better')}
+            onPress={() =>
+              router.replace({
+                pathname: '/session/alternatives',
+                params: { feeling: 'better', ...(closedTool ? { tool: closedTool } : {}) },
+              })
+            }
           />
           <SupportCard
             title={t('session.same')}
-            onPress={() => router.replace('/session/alternatives?feeling=same')}
+            onPress={() =>
+              router.replace({
+                pathname: '/session/alternatives',
+                params: { feeling: 'same', ...(closedTool ? { tool: closedTool } : {}) },
+              })
+            }
           />
           <SupportCard
             title={t('session.worse')}
-            onPress={() => router.replace('/session/alternatives?feeling=worse')}
+            onPress={() =>
+              router.replace({
+                pathname: '/session/alternatives',
+                params: { feeling: 'worse', ...(closedTool ? { tool: closedTool } : {}) },
+              })
+            }
           />
         </View>
         <AppText variant="secondary" tone="secondary" style={styles.hint}>
-          {tool ? t('session.tryElse') : t('session.sameBody')}
+          {closedTool ? t('session.tryElse') : t('session.sameBody')}
         </AppText>
       </ScreenContainer>
     </View>

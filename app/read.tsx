@@ -1,8 +1,8 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { ActivityIndicator, StyleSheet, View } from 'react-native';
 
-import { ExerciseShell } from '@/components/exercise/ExerciseShell';
 import { ReadPlay } from '@/components/read/ReadPlay';
+import { ActiveSessionScreen } from '@/components/session/ActiveSessionScreen';
 import {
   beginReadSession,
   createReadSession,
@@ -12,12 +12,10 @@ import {
 import { loadReadPack } from '@/features/read/packs';
 import { loadReadMemory, saveReadMemory } from '@/features/read/storage';
 import type { ReadMemory, ReadSession } from '@/features/read/types';
-import { useExerciseClose } from '@/hooks/useExerciseClose';
 import { useTheme } from '@/hooks/useTheme';
 import { t } from '@/locales/i18n';
 
 export default function ReadScreen() {
-  const close = useExerciseClose('read');
   const { theme } = useTheme();
   const [memory, setMemory] = useState<ReadMemory | null>(null);
   const [session, setSession] = useState<ReadSession | null>(null);
@@ -97,7 +95,7 @@ export default function ReadScreen() {
   const fragments = session?.fragments;
 
   return (
-    <ExerciseShell title={t('home.tools.read')} onClose={close} scroll={false}>
+    <ActiveSessionScreen tool="read" title={t('home.tools.read')} scroll={false}>
       {!session || !memory || !fragments || fragments.length === 0 ? (
         <View style={styles.loading}>
           <ActivityIndicator color={theme.colors.primary} />
@@ -108,10 +106,9 @@ export default function ReadScreen() {
           speed={memory.revealSpeed}
           revealedCount={revealedCount}
           onReveal={onReveal}
-          onClose={close}
         />
       )}
-    </ExerciseShell>
+    </ActiveSessionScreen>
   );
 }
 

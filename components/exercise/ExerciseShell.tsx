@@ -2,8 +2,8 @@ import { type ReactNode } from 'react';
 import { StyleSheet, View } from 'react-native';
 
 import { PaperGrain } from '@/components/home/PaperGrain';
-import { ScreenContainer } from '@/components/layout/ScreenContainer';
-import { ScreenHeader } from '@/components/navigation/ScreenHeader';
+import { ActiveSessionHeader } from '@/components/session/ActiveSessionHeader';
+import { SessionSafeArea } from '@/components/session/SessionSafeArea';
 import { useTheme } from '@/hooks/useTheme';
 
 type Props = {
@@ -12,7 +12,6 @@ type Props = {
   right?: ReactNode;
   children: ReactNode;
   scroll?: boolean;
-  closeVariant?: 'close' | 'back';
   closeLabel?: string;
   closeHint?: string;
 };
@@ -23,7 +22,6 @@ export function ExerciseShell({
   right,
   children,
   scroll,
-  closeVariant,
   closeLabel,
   closeHint,
 }: Props) {
@@ -32,21 +30,20 @@ export function ExerciseShell({
   return (
     <View style={[styles.root, { backgroundColor: theme.colors.background }]}>
       <PaperGrain />
-      <ScreenContainer
+      <SessionSafeArea
         scroll={scroll}
         style={styles.transparent}
         contentStyle={[styles.content, scroll === false ? styles.fill : null]}
       >
-        <ScreenHeader
+        <ActiveSessionHeader
           title={title}
           onClose={onClose}
-          closeVariant={closeVariant}
           closeLabel={closeLabel}
           closeHint={closeHint}
           right={right}
         />
         {children}
-      </ScreenContainer>
+      </SessionSafeArea>
     </View>
   );
 }

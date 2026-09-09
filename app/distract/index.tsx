@@ -4,7 +4,7 @@ import { useLocalSearchParams, useRouter } from 'expo-router';
 
 import { ToolCard } from '@/components/cards/ToolCard';
 import { DistractActivityMark } from '@/components/distract/ActivityMarks';
-import { ExerciseShell } from '@/components/exercise/ExerciseShell';
+import { ActiveSessionScreen } from '@/components/session/ActiveSessionScreen';
 import { AppText } from '@/components/typography/AppText';
 import {
   distractActivityHref,
@@ -13,7 +13,7 @@ import {
   wantsDistractChooser,
 } from '@/features/distract/activities';
 import { homeCardBorder } from '@/features/home/surfaces';
-import { useExerciseClose } from '@/hooks/useExerciseClose';
+import { beginInternalSessionNavigation } from '@/features/session/activeSession';
 import { useTheme } from '@/hooks/useTheme';
 import { t } from '@/locales/i18n';
 import { loadLastDistractActivity, saveLastDistractActivity } from '@/storage/preferences';
@@ -21,7 +21,6 @@ import { serif } from '@/theme/fonts';
 import { spacing } from '@/theme/spacing';
 
 export default function DistractMenuScreen() {
-  const close = useExerciseClose('distract');
   const router = useRouter();
   const { theme } = useTheme();
   const params = useLocalSearchParams<{ choose?: string | string[] }>();
@@ -36,6 +35,7 @@ export default function DistractMenuScreen() {
         return;
       }
       if (!choose && isDistractActivityId(stored)) {
+        beginInternalSessionNavigation();
         router.replace(distractActivityHref(stored));
         return;
       }
@@ -47,18 +47,29 @@ export default function DistractMenuScreen() {
     };
   }, [choose, router]);
 
+  const openActivity = (id: (typeof distractActivityIds)[number]) => {
+    void saveLastDistractActivity(id);
+    beginInternalSessionNavigation();
+    router.replace(distractActivityHref(id));
+  };
+
   if (!ready) {
     return (
-      <ExerciseShell title={t('home.tools.distract')} onClose={close} scroll={false}>
+      <ActiveSessionScreen
+        tool="distract"
+        title={t('home.tools.distract')}
+        scroll={false}
+        showSessionActions={false}
+      >
         <View style={styles.body} />
-      </ExerciseShell>
+      </ActiveSessionScreen>
     );
   }
 
   const rows = [distractActivityIds.slice(0, 2), distractActivityIds.slice(2, 4)];
 
   return (
-    <ExerciseShell title={t('home.tools.distract')} onClose={close}>
+    <ActiveSessionScreen tool="distract" title={t('home.tools.distract')} showSessionActions={false}>
       <AppText style={styles.choose}>{t('distract.choose')}</AppText>
       <View style={styles.grid}>
         {rows.map((row) => (
@@ -72,10 +83,7 @@ export default function DistractMenuScreen() {
                     <DistractActivityMark id={id} />
                   </View>
                 }
-                onPress={() => {
-                  void saveLastDistractActivity(id);
-                  router.replace(distractActivityHref(id));
-                }}
+                onPress={() => openActivity(id)}
                 style={{
                   backgroundColor: theme.colors.surface,
                   borderColor: homeCardBorder(theme),
@@ -85,7 +93,7 @@ export default function DistractMenuScreen() {
           </View>
         ))}
       </View>
-    </ExerciseShell>
+    </ActiveSessionScreen>
   );
 }
 
