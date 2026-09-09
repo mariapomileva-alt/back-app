@@ -1,0 +1,240 @@
+{
+  "app": {
+    "name": "Back"
+  },
+  "home": {
+    "hero": "You’re here.",
+    "prompt": "What feels possible right now?",
+    "openSettings": "Open settings",
+    "openSettingsHint": "Opens theme, privacy, and other quiet preferences",
+    "startToolHint": "Starts support immediately",
+    "callMyPerson": "Need someone? Call my person",
+    "callMyPersonNeed": "Need someone?",
+    "callMyPersonAction": "Call my person",
+    "callMyPersonHint": "Opens your support contact",
+    "tools": {
+      "breathe": "Breathe",
+      "distract": "Distract",
+      "ground": "Ground",
+      "move": "Move",
+      "listen": "Listen",
+      "read": "Read"
+    }
+  },
+  "common": {
+    "close": "Close",
+    "closeHint": "Returns to the previous screen",
+    "back": "Back",
+    "selected": "Selected",
+    "on": "On",
+    "off": "Off",
+    "play": "Play",
+    "pause": "Pause",
+    "mute": "Mute",
+    "unmute": "Unmute",
+    "replay": "Replay"
+  },
+  "settings": {
+    "title": "Settings",
+    "theme": "Theme",
+    "themeHint": "Choose the look of Back",
+    "voice": "Voice and sound",
+    "haptics": "Haptics",
+    "hapticsHint": "Turns gentle haptic feedback on or off",
+    "reduceMotion": "Reduce motion",
+    "reduceMotionHint": "Uses calmer motion even if your system allows animation",
+    "read": "Read",
+    "readHint": "Choose how quickly lines appear",
+    "supportContact": "Support contact",
+    "patterns": "My patterns",
+    "subscription": "Subscription",
+    "privacy": "Privacy",
+    "emergency": "Extra support",
+    "about": "About Back"
+  },
+  "themes": {
+    "title": "Theme",
+    "warmNeutral": "Warm Earth",
+    "deepGreen": "Forest",
+    "softBeige": "Soft Sage",
+    "selectHint": "Applies this look immediately"
+  },
+  "placeholders": {
+    "tool": "Support will begin here.",
+    "settings": "This section will be ready in a later stage."
+  },
+  "session": {
+    "outcome": "How do you feel now?",
+    "alternatives": "We can try something different.",
+    "better": "A little better",
+    "same": "About the same",
+    "worse": "Worse",
+    "betterBody": "Take your time. You can come back whenever you need.",
+    "sameBody": "We can try something different.",
+    "worseBody": "Let’s get more support.",
+    "done": "Done",
+    "share": "Share Back",
+    "callPerson": "Call my person",
+    "emergency": "Extra support",
+    "returnTools": "Return to tools",
+    "tryElse": "Try something else"
+  },
+  "extraSupport": {
+    "title": "Extra support",
+    "heading": "Need a little more support?",
+    "steps": {
+      "feet": "Put both feet on the floor.",
+      "breath": "Let your breathing stay gentle.\nDon't force it.",
+      "water": "Take a small sip of water\nif you have some.",
+      "see": "Look around and name\nthree things you can see.",
+      "now": "You don't have to figure\neverything out right now."
+    },
+    "callMyPerson": "Call my person",
+    "messageMyPerson": "Message my person",
+    "chooseSomeone": "Choose someone I trust",
+    "chooseSomeoneHint": "Opens a private contact you keep on this device",
+    "callHint": "Opens the phone app. The call starts only if you confirm.",
+    "messageHint": "Opens messages. Nothing is sent until you send it.",
+    "urgentTitle": "Need urgent help?",
+    "urgentBody": "If you think you may need urgent medical help,\ncontact your local emergency service.",
+    "emergencyHelp": "Emergency help · {number}",
+    "emergencyHint": "Opens the phone app. The call starts only if you confirm.",
+    "findLocal": "Find local emergency help",
+    "chooseCountry": "Choose country"
+  },
+  "supportSetup": {
+    "title": "Someone I trust",
+    "intro": "This stays on this device. Back never uploads it.",
+    "name": "Name",
+    "nameHint": "A name you will recognize",
+    "phone": "Phone number",
+    "phoneHint": "Used only to call or message from here",
+    "save": "Save",
+    "clear": "Remove from this device",
+    "change": "Change this person",
+    "localNote": "Nothing here is sent to Back or anyone else."
+  },
+  "exercise": {
+    "progress": "{current} of {total}",
+    "elapsed": "Elapsed time",
+    "okay": "I’m okay for now",
+    "breatheUncomfortable": "Breathing feels uncomfortable",
+    "moveUncomfortable": "Movement doesn’t feel right"
+  },
+  "breathe": {
+    "inhale": "Inhale gently",
+    "exhale": "Exhale slowly",
+    "hold": "Hold",
+    "circle": "Breathing circle",
+    "patternHint": "Changes the breathing rhythm",
+    "patterns": {
+      "gentle": "Gentle 4/6",
+      "equal": "Equal 4/4",
+      "box": "Box 4-4-4-4"
+    }
+  },
+  "focus": {
+    "instruction": "Find the matching shape."
+  },
+  "distract": {
+    "choose": "Choose something simple.",
+    "menu": "Distract menu",
+    "menuHint": "Returns to the activity list",
+    "change": "Change activity",
+    "changeHint": "Opens the quiet activity list",
+    "activities": {
+      "shapes": "Shapes",
+      "blocks": "Blocks",
+      "snake": "Snake",
+      "catch": "Catch"
+    },
+    "shapes": {
+      "instruction": "Find the matching shape.",
+      "names": {
+        "circle": "Circle",
+        "square": "Square",
+        "triangle": "Triangle",
+        "quarter": "Quarter circle"
+      }
+    },
+    "blocks": {
+      "instruction": "Fill the space in any way.",
+      "empty": "Empty square",
+      "filled": "Filled square"
+    },
+    "snake": {
+      "instruction": "Guide the snake and collect.",
+      "field": "Quiet path",
+      "left": "Left",
+      "right": "Right",
+      "up": "Up",
+      "down": "Down"
+    },
+    "catch": {
+      "instruction": "Tap the circle as it appears.",
+      "target": "Circle"
+    }
+  },
+  "read": {
+    "revealHint": "Shows the next line",
+    "speedHint": "How quickly each line appears. Tap anywhere to show the next line immediately.",
+    "speeds": {
+      "unhurried": "Unhurried",
+      "steady": "Steady",
+      "quick": "Quick"
+    }
+  },
+  "ground": {
+    "image": "First-person view of feet resting on the floor",
+    "steps": {
+      "feet": "Feel where your feet meet the floor.",
+      "toes": "Gently move your toes.",
+      "see": "Notice one thing you can see.",
+      "sound": "Notice one sound around you.",
+      "support": "Feel the support beneath your body.",
+      "shoulders": "Let your shoulders soften.",
+      "stay": "Stay here for one more moment."
+    }
+  },
+  "move": {
+    "steps": {
+      "feet": "Press your feet into the floor for five seconds, then release.",
+      "palms": "Gently press your palms together.",
+      "release": "Release.",
+      "shoulders": "Roll your shoulders slowly.",
+      "wall": "Push your hands against a wall if one is nearby.",
+      "shake": "Shake out your hands gently."
+    },
+    "images": {
+      "feet": "Feet gently pressing into the floor",
+      "hands": "Hands resting together"
+    }
+  },
+  "listen": {
+    "volume": "Volume",
+    "previous": "Previous sound",
+    "next": "Next sound",
+    "sounds": {
+      "rain": "Soft rain",
+      "ocean": "Ocean",
+      "fan": "Steady fan",
+      "forest": "Quiet forest",
+      "brown": "Brown noise"
+    },
+    "images": {
+      "rain": "Quiet rain on leaves",
+      "ocean": "Calm ocean water",
+      "forest": "Muted forest",
+      "fan": "Soft abstract air",
+      "brown": "Warm brown texture"
+    }
+  },
+  "about": {
+    "body": "Back is a private self-help tool for the next minute."
+  },
+  "notFound": {
+    "title": "This page isn’t here",
+    "body": "Return to Back whenever you need.",
+    "home": "Go to Back"
+  }
+}

@@ -1,0 +1,18 @@
+TODO: REPLACE WITH FINAL PRODUCTION ARTWORK
+
+These files are development placeholders for the Warm Earth exercise imagery.
+The UI is already designed around them. Do not remove the slots.
+
+- ground-feet-placeholder.png
+- listen-ocean-placeholder.png
+- listen-rain-placeholder.png
+- listen-forest-placeholder.png
+- listen-fan-placeholder.png
+- listen-brown-placeholder.png
+- move-feet-placeholder.png
+- move-hands-placeholder.png
+- home-ground-placeholder.jpg
+- home-move-placeholder.jpg
+
+Treatment: editorial, slightly desaturated, warm, quiet, tactile.
+No stock-photo clichés, no clinical lighting, no cartoons.

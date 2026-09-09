@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#F3EDE1" />
+    <meta
+      name="description"
+      content="Back — quiet self-help for the next minute. Download the app."
+    />
+    <title>Back — You’re here.</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Outfit:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="landing.css" />
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <svg class="mark-defs" aria-hidden="true">
+      <symbol id="mark-breathe" viewBox="0 0 120 72">
+        <circle cx="60" cy="36" r="30" fill="#D7E0D5" opacity="0.28" />
+        <circle cx="60" cy="36" r="22" fill="#6D9773" opacity="0.28" />
+        <circle cx="60" cy="36" r="15" fill="#6D9773" opacity="0.42" />
+        <circle cx="60" cy="36" r="8.5" fill="#315E4D" opacity="0.82" />
+      </symbol>
+      <symbol id="mark-distract" viewBox="0 0 120 72">
+        <circle cx="42" cy="40" r="16" fill="#6D9773" opacity="0.42" />
+        <circle cx="70" cy="24" r="11" fill="#D7E0D5" opacity="0.7" />
+        <circle cx="86" cy="46" r="9" fill="#315E4D" opacity="0.38" />
+        <circle cx="60" cy="50" r="6.5" fill="#BB8A52" opacity="0.32" />
+      </symbol>
+      <symbol id="mark-ground" viewBox="0 0 120 72">
+        <ellipse cx="60" cy="60" rx="26" ry="7" fill="#E7DDCE" opacity="0.78" />
+        <path d="M60 58 L60 24" fill="none" stroke="#6D9773" stroke-width="1.25" stroke-linecap="round" opacity="0.8" />
+        <path d="M60 26 C50 8 70 8 60 26 Z" fill="#6D9773" fill-opacity="0.14" stroke="#6D9773" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round" opacity="0.9" />
+        <path d="M60 42 C44 38 38 22 56 32 C48 28 58 36 60 42 Z" fill="#6D9773" fill-opacity="0.12" stroke="#6D9773" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round" opacity="0.82" />
+        <path d="M60 42 C76 38 82 22 64 32 C72 28 62 36 60 42 Z" fill="#6D9773" fill-opacity="0.12" stroke="#6D9773" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round" opacity="0.82" />
+      </symbol>
+      <symbol id="mark-move" viewBox="0 0 120 72">
+        <g fill="none" stroke="#6D9773" stroke-width="1.25" stroke-linejoin="round" stroke-linecap="round" opacity="0.78">
+          <path d="M22 56c-1.4-7.2 2.4-11.2 10-11.2h1V27.2c0-3.6 4.6-3.8 4.8.2V24c0-3.8 4.8-3.8 5 .4v-.6c0-4 5-3.8 5 .8v2c0-3.2 4.6-2.6 4.6 2.2V44.8h1.2c5.6.4 7.6 5.6 4.6 11-4 7.2-20 9-31.2 4.8C23.4 59.4 22.4 58 22 56Z" />
+          <path d="M32.5 45.2c-6-1.8-9.8-7-6.6-11.2 2.8-3.8 9.4-1 10.6 5.2" />
+        </g>
+        <g fill="none" stroke="#6D9773" stroke-width="1.25" stroke-linejoin="round" stroke-linecap="round" opacity="0.78" transform="matrix(-1 0 0 1 120 0)">
+          <path d="M22 56c-1.4-7.2 2.4-11.2 10-11.2h1V27.2c0-3.6 4.6-3.8 4.8.2V24c0-3.8 4.8-3.8 5 .4v-.6c0-4 5-3.8 5 .8v2c0-3.2 4.6-2.6 4.6 2.2V44.8h1.2c5.6.4 7.6 5.6 4.6 11-4 7.2-20 9-31.2 4.8C23.4 59.4 22.4 58 22 56Z" />
+          <path d="M32.5 45.2c-6-1.8-9.8-7-6.6-11.2 2.8-3.8 9.4-1 10.6 5.2" />
+        </g>
+      </symbol>
+      <symbol id="mark-listen" viewBox="0 0 120 72">
+        <path d="M18 18 C36 12 52 24 70 18 S100 12 106 18" fill="none" stroke="#9EB6B0" stroke-width="1.05" stroke-linecap="round" opacity="0.4" />
+        <path d="M14 30 C38 22 56 38 78 30 S106 24 110 30" fill="none" stroke="#6D9773" stroke-width="1.35" stroke-linecap="round" opacity="0.62" />
+        <path d="M16 42 C40 36 58 48 80 42 S104 38 108 42" fill="none" stroke="#9EB6B0" stroke-width="1.15" stroke-linecap="round" opacity="0.44" />
+        <path d="M20 54 C40 50 58 60 76 54 S96 50 100 54" fill="none" stroke="#6D9773" stroke-width="1.1" stroke-linecap="round" opacity="0.4" />
+      </symbol>
+      <symbol id="mark-read" viewBox="0 0 120 72">
+        <text x="16" y="50" font-family="Georgia, 'Times New Roman', serif" font-size="38" font-weight="500" fill="#BB8A52" opacity="0.55">Aa</text>
+        <rect x="70" y="28" width="36" height="1.35" rx="0.7" fill="#0C3B2E" opacity="0.22" />
+        <rect x="70" y="38" width="28" height="1.35" rx="0.7" fill="#0C3B2E" opacity="0.16" />
+        <rect x="70" y="48" width="20" height="1.35" rx="0.7" fill="#0C3B2E" opacity="0.12" />
+      </symbol>
+    </svg>
+    <a class="skip" href="#download">Download Back</a>
+
+    <header class="nav">
+      <a class="brand" href="#top">
+        <span class="mark" aria-hidden="true"></span>
+        Back
+      </a>
+      <a class="nav-cta" href="#download">Download</a>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="kicker">Private self-help</p>
+          <h1 class="poster">
+            <span class="sr-only">Back. </span>
+            You’re here.
+          </h1>
+          <p class="lede">
+            For the next minute of anxiety, panic, or overload. No account. On your phone.
+          </p>
+          <div class="hero-actions">
+            <a class="btn forest" href="#download">Download Back</a>
+            <p class="quiet">Six quiet tools. Offline.</p>
+          </div>
+        </div>
+
+        <div class="stage" aria-hidden="true">
+          <div class="orb"></div>
+          <div class="slab"></div>
+          <div class="clay"></div>
+          <svg class="scribble" viewBox="0 0 280 80" fill="none">
+            <path
+              d="M8 48c36-28 72 22 112 2 28-14 44-30 72-22 24 6 48 28 80 8"
+              stroke="#0C3B2E"
+              stroke-width="1.4"
+              stroke-linecap="round"
+            />
+          </svg>
+          <p class="giant">Back</p>
+          <div class="phone">
+            <div class="bezel">
+              <div class="screen">
+                <div class="phone-grain"></div>
+                <div class="status">
+                  <span>9:41</span>
+                  <span class="nub"></span>
+                  <span>100%</span>
+                </div>
+                <div class="home-top">
+                  <span class="home-brand">Back</span>
+                  <svg class="gear" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 15.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4z" stroke="#153C32" stroke-width="1.3" />
+                    <path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06A1.7 1.7 0 0 0 15 19.4a1.7 1.7 0 0 0-1.03 1.56V21.2a2 2 0 1 1-4 0v-.24A1.7 1.7 0 0 0 8.94 19.4a1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-1.56-1.03H2.8a2 2 0 1 1 0-4h.24A1.7 1.7 0 0 0 4.6 8.94a1.7 1.7 0 0 0-.34-1.87l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.7 1.7 0 0 0 8.94 4.6 1.7 1.7 0 0 0 10 3.04V2.8a2 2 0 1 1 4 0v.24A1.7 1.7 0 0 0 15.06 4.6a1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.7 1.7 0 0 0 19.4 8.94 1.7 1.7 0 0 0 20.96 10H21.2a2 2 0 1 1 0 4h-.24A1.7 1.7 0 0 0 19.4 15z" stroke="#153C32" stroke-width="1.3" stroke-linejoin="round" />
+                  </svg>
+                </div>
+                <p class="home-hero">You’re here.</p>
+                <p class="home-prompt">What feels possible right now?</p>
+                <div class="home-grid">
+                  <article class="mini mini-breathe">
+                    <div class="mini-visual">
+                      <svg class="mini-mark" viewBox="0 0 120 72" preserveAspectRatio="xMidYMid meet"><use href="#mark-breathe" /></svg>
+                    </div>
+                    <span>Breathe</span>
+                  </article>
+                  <article class="mini mini-distract">
+                    <div class="mini-visual">
+                      <svg class="mini-mark" viewBox="0 0 120 72" preserveAspectRatio="xMidYMid meet"><use href="#mark-distract" /></svg>
+                    </div>
+                    <span>Distract</span>
+                  </article>
+                  <article class="mini mini-ground">
+                    <div class="mini-visual">
+                      <svg class="mini-mark" viewBox="0 0 120 72" preserveAspectRatio="xMidYMid meet"><use href="#mark-ground" /></svg>
+                    </div>
+                    <span>Ground</span>
+                  </article>
+                  <article class="mini mini-move">
+                    <div class="mini-visual">
+                      <svg class="mini-mark" viewBox="0 0 120 72" preserveAspectRatio="xMidYMid meet"><use href="#mark-move" /></svg>
+                    </div>
+                    <span>Move</span>
+                  </article>
+                  <article class="mini mini-listen">
+                    <div class="mini-visual">
+                      <svg class="mini-mark" viewBox="0 0 120 72" preserveAspectRatio="xMidYMid meet"><use href="#mark-listen" /></svg>
+                    </div>
+                    <span>Listen</span>
+                  </article>
+                  <article class="mini mini-read">
+                    <div class="mini-visual">
+                      <svg class="mini-mark" viewBox="0 0 120 72" preserveAspectRatio="xMidYMid meet"><use href="#mark-read" /></svg>
+                    </div>
+                    <span>Read</span>
+                  </article>
+                </div>
+                <p class="home-call">
+                  <svg viewBox="0 0 18 18" fill="none">
+                    <path d="M9 4.4a2.1 2.1 0 1 0 0 4.2 2.1 2.1 0 0 0 0-4.2z" stroke="#4F645C" stroke-width="1.2" />
+                    <path d="M5.2 13.6c.5-2.4 2-3.6 3.8-3.6s3.3 1.2 3.8 3.6" stroke="#4F645C" stroke-width="1.2" stroke-linecap="round" />
+                  </svg>
+                  Need someone? <strong>Call my person</strong>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tools" id="tools">
+        <h2 class="section-title">What feels possible.</h2>
+        <div class="tool-grid">
+          <article class="tool mini-breathe">
+            <svg class="tool-mark" viewBox="0 0 120 72" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><use href="#mark-breathe" /></svg>
+            <h3>Breathe</h3>
+            <p>A slow circle. Inhale and exhale until the hands settle.</p>
+          </article>
+          <article class="tool mini-distract">
+            <svg class="tool-mark" viewBox="0 0 120 72" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><use href="#mark-distract" /></svg>
+            <h3>Distract</h3>
+            <p>Shapes, blocks, a quiet path. Occupy the fingers for a minute.</p>
+          </article>
+          <article class="tool mini-ground">
+            <svg class="tool-mark" viewBox="0 0 120 72" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><use href="#mark-ground" /></svg>
+            <h3>Ground</h3>
+            <p>Feet. Floor. One sound. Come back into the body.</p>
+          </article>
+          <article class="tool mini-move">
+            <svg class="tool-mark" viewBox="0 0 120 72" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><use href="#mark-move" /></svg>
+            <h3>Move</h3>
+            <p>Press, roll, release. A small action instead of the spiral.</p>
+          </article>
+          <article class="tool mini-listen">
+            <svg class="tool-mark" viewBox="0 0 120 72" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><use href="#mark-listen" /></svg>
+            <h3>Listen</h3>
+            <p>Rain, forest, steady noise. Sound that stays beside you.</p>
+          </article>
+          <article class="tool mini-read">
+            <svg class="tool-mark" viewBox="0 0 120 72" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><use href="#mark-read" /></svg>
+            <h3>Read</h3>
+            <p>Short lines. Not a course. Text you can hold.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="promise">
+        <p class="kicker">How it works</p>
+        <h2 class="section-title">Now. Quiet. Yours.</h2>
+        <div class="promise-grid">
+          <article>
+            <p class="num">02s</p>
+            <h3>Two seconds.</h3>
+            <p>Open it and you are already inside. No carousel, profile, or sign-up.</p>
+          </article>
+          <article>
+            <p class="num">01</p>
+            <h3>On the phone.</h3>
+            <p>History stays on the device. No feed, ads, or cloud.</p>
+          </article>
+          <article>
+            <p class="num">—</p>
+            <h3>Not medicine.</h3>
+            <p>Not therapy, not emergency care. Just the next minute.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="shelf" id="download">
+        <div class="shelf-bg" aria-hidden="true"></div>
+        <div class="shelf-inner">
+          <div class="shelf-copy">
+            <p class="kicker light">The app</p>
+            <h2 class="poster light">Take it with you.</h2>
+            <p class="lede light">The build lives here. Download it and keep Back close.</p>
+          </div>
+
+          <article class="file">
+            <div class="file-mark" aria-hidden="true"></div>
+            <div class="file-copy">
+              <p class="file-name">Back</p>
+              <p class="file-meta">
+                <span id="file-version">1.0.0</span>
+                <span aria-hidden="true">·</span>
+                <span>application</span>
+              </p>
+            </div>
+            <div class="file-actions">
+              <a class="btn forest" id="dl-ios" href="#download">
+                <span>iPhone</span>
+                <small id="ios-state">soon</small>
+              </a>
+              <a class="btn clay" id="dl-android" href="downloads/back.apk" download="Back.apk">
+                <span>Android</span>
+                <small id="android-state">download .apk</small>
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <p>
+        Back is a private self-help tool for the next minute. Not therapy, not a diagnosis, not an emergency service.
+      </p>
+      <p class="foot-meta">© <span id="year"></span> Back</p>
+    </footer>
+
+    <script src="releases.js"></script>
+    <script src="landing.js"></script>
+  </body>
+</html>
