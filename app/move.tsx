@@ -31,6 +31,7 @@ export default function MoveScreen() {
         onBack={openChooser}
         backLabel={t('move.menu')}
         backHint={t('move.menuHint')}
+        backNavigates={!chooserOpen}
         extraActions={({ tryOfferedAlternatives }) => (
           <TextButton
             label={t('exercise.moveUncomfortable')}
@@ -38,35 +39,40 @@ export default function MoveScreen() {
           />
         )}
       >
-        <View style={styles.stage}>
-          <MoveStage
-            pressed={pressed}
-            instruction={instruction}
-            hint={hint}
-            onPressIn={onPressIn}
-            onPressOut={onPressOut}
-          />
-          <AppText variant="instruction" accessibilityLiveRegion="polite" style={styles.instruction}>
-            {instruction}
-          </AppText>
-        </View>
+        {(controls) => (
+          <>
+            <View style={styles.stage}>
+              <MoveStage
+                pressed={pressed}
+                instruction={instruction}
+                hint={hint}
+                onPressIn={onPressIn}
+                onPressOut={onPressOut}
+              />
+              <AppText variant="instruction" accessibilityLiveRegion="polite" style={styles.instruction}>
+                {instruction}
+              </AppText>
+            </View>
+            <SessionChoiceSheet
+              visible={chooserOpen}
+              title={t('move.menu')}
+              selectedId={sequenceId}
+              options={moveSequenceIds.map((id) => ({
+                id,
+                label: t(`move.activities.${id}`),
+              }))}
+              onSelect={(id) => {
+                if (isMoveSequenceId(id)) {
+                  selectSequence(id);
+                  setChooserOpen(false);
+                }
+              }}
+              onDismiss={() => setChooserOpen(false)}
+              onHardwareBack={controls.close}
+            />
+          </>
+        )}
       </ActiveSessionScreen>
-      <SessionChoiceSheet
-        visible={chooserOpen}
-        title={t('move.menu')}
-        selectedId={sequenceId}
-        options={moveSequenceIds.map((id) => ({
-          id,
-          label: t(`move.activities.${id}`),
-        }))}
-        onSelect={(id) => {
-          if (isMoveSequenceId(id)) {
-            selectSequence(id);
-            setChooserOpen(false);
-          }
-        }}
-        onDismiss={() => setChooserOpen(false)}
-      />
     </>
   );
 }

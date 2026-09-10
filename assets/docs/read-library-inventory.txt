@@ -1,0 +1,32 @@
+ENGLISH READ LIBRARY — internal inventory
+No runtime AI. No network fetch. English is the only production pack.
+
+Pack files (content/read/en) — unique item ids
+- stories.json   78 micro-stories
+- curious.json   120 curious facts / asides
+- words.json     88 single-word holds
+- observe.json   60 close observations
+- notice.json    60 environments / looking around
+- total          406 local items
+
+Threads (features/read/threads.ts): 9
+water, coast, forest, plants, paper, room, sky, light, stone
+
+Session patterns (features/read/patterns.ts): 9
+scene-then-world, fact-into-scene, look-then-stay, word-in-place,
+around-the-room, slow-return, two-scenes, quiet-walk, keep-reading
+
+Rotation
+- READ_RECENT_LIMIT = 200
+- READ_COOLDOWN_SESSIONS = 40
+- pattern memory 8, thread memory 5
+
+Distinct-session honesty
+The English pack is large enough for 50 distinct sessions. A session is a
+pattern + thread + least-recent items from each slot. With 9 patterns, 9
+threads, and hundreds of local items (stories, curious, words, observe,
+notice), repeating the same opening sequence inside 50 visits is unlikely
+once memory and cooldown are working. This is combinatorial variety, not
+50 hand-authored scripts.
+
+Do not claim infinite or generated content. Do not fetch more text at runtime.

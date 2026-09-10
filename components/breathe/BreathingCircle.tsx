@@ -9,6 +9,7 @@ type Props = {
   restSize: number;
   openSize: number;
   openness: number;
+  reduceMotion?: boolean;
   accessibilityLabel: string;
 };
 
@@ -16,13 +17,14 @@ export function BreathingCircle({
   restSize,
   openSize,
   openness,
+  reduceMotion = false,
   accessibilityLabel,
 }: Props) {
   const { theme } = useTheme();
   const rawId = useId().replace(/[^a-zA-Z0-9_-]/g, '');
   const gradientId = `breathFill${rawId}`;
   const t = Math.min(1, Math.max(0, openness));
-  const diameter = restSize + (openSize - restSize) * t;
+  const diameter = reduceMotion ? restSize : restSize + (openSize - restSize) * t;
   const forest = theme.colors.forest;
   const sage = theme.colors.secondaryGreen;
   const pale = theme.colors.muted;
@@ -30,6 +32,7 @@ export function BreathingCircle({
   const core = onDark ? mixHex(sage, forest, 0.16) : mixHex(forest, sage, 0.26);
   const mid = mixHex(sage, pale, 0.14);
   const rim = mixHex(pale, sage, onDark ? 0.08 : 0.2);
+  const fillOpacity = reduceMotion ? 0.46 + t * 0.5 : 1;
 
   return (
     <View
@@ -43,7 +46,7 @@ export function BreathingCircle({
         collapsable={false}
         accessible={false}
         importantForAccessibility="no"
-        style={[styles.orb, { width: diameter, height: diameter }]}
+        style={[styles.orb, { width: diameter, height: diameter, opacity: fillOpacity }]}
       >
         <Svg width={diameter} height={diameter} viewBox="0 0 100 100">
           <Defs>

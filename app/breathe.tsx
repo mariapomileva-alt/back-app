@@ -75,42 +75,49 @@ export default function BreatheScreen() {
         onBack={openChooser}
         backLabel={t('breathe.menu')}
         backHint={t('breathe.menuHint')}
+        backNavigates={!chooserOpen}
         extraActions={({ trySomethingElse }) => (
           <TextButton label={t('exercise.breatheUncomfortable')} onPress={trySomethingElse} />
         )}
       >
-        <View style={[styles.stage, compact && styles.stageCompact]}>
-          <BreathingCircle
-            restSize={restSize}
-            openSize={openSize}
-            openness={openness}
-            accessibilityLabel={t('breathe.circle')}
-          />
-          <AppText
-            variant="instruction"
-            accessibilityLiveRegion="polite"
-            accessibilityLabel={`${cue}. ${patternName}`}
-            style={styles.cue}
-          >
-            {cue}
-          </AppText>
-        </View>
+        {(controls) => (
+          <>
+            <View style={[styles.stage, compact && styles.stageCompact]}>
+              <BreathingCircle
+                restSize={restSize}
+                openSize={openSize}
+                openness={openness}
+                reduceMotion={reduceMotion}
+                accessibilityLabel={t('breathe.circle')}
+              />
+              <AppText
+                variant="instruction"
+                accessibilityLiveRegion="polite"
+                accessibilityLabel={`${cue}. ${patternName}`}
+                style={styles.cue}
+              >
+                {cue}
+              </AppText>
+            </View>
+            <SessionChoiceSheet
+              visible={chooserOpen}
+              title={t('breathe.menu')}
+              selectedId={patternId}
+              options={breathPatterns.map((item) => ({
+                id: item.id,
+                label: t(item.nameKey),
+              }))}
+              onSelect={(id) => {
+                if (isBreathPatternId(id)) {
+                  selectPattern(id);
+                }
+              }}
+              onDismiss={() => setChooserOpen(false)}
+              onHardwareBack={controls.close}
+            />
+          </>
+        )}
       </ActiveSessionScreen>
-      <SessionChoiceSheet
-        visible={chooserOpen}
-        title={t('breathe.menu')}
-        selectedId={patternId}
-        options={breathPatterns.map((item) => ({
-          id: item.id,
-          label: t(item.nameKey),
-        }))}
-        onSelect={(id) => {
-          if (isBreathPatternId(id)) {
-            selectPattern(id);
-          }
-        }}
-        onDismiss={() => setChooserOpen(false)}
-      />
     </>
   );
 }

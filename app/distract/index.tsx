@@ -1,4 +1,5 @@
 import { StyleSheet, View } from 'react-native';
+import { useEffect, useState } from 'react';
 import { useRouter } from 'expo-router';
 
 import { ToolCard } from '@/components/cards/ToolCard';
@@ -10,13 +11,26 @@ import { homeCardBorder } from '@/features/home/surfaces';
 import { beginInternalSessionNavigation } from '@/features/session/activeSession';
 import { useTheme } from '@/hooks/useTheme';
 import { t } from '@/locales/i18n';
-import { saveLastDistractActivity } from '@/storage/preferences';
+import { loadLastDistractActivity, saveLastDistractActivity } from '@/storage/preferences';
 import { serif } from '@/theme/fonts';
 import { spacing } from '@/theme/spacing';
 
 export default function DistractMenuScreen() {
   const router = useRouter();
   const { theme } = useTheme();
+  const [lastActivity, setLastActivity] = useState<string | null>(null);
+
+  useEffect(() => {
+    let cancelled = false;
+    void loadLastDistractActivity().then((stored) => {
+      if (!cancelled) {
+        setLastActivity(stored);
+      }
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   const openActivity = (id: (typeof distractActivityIds)[number]) => {
     void saveLastDistractActivity(id);
@@ -36,6 +50,7 @@ export default function DistractMenuScreen() {
               <ToolCard
                 key={id}
                 label={t(`distract.activities.${id}`)}
+                selected={id === lastActivity}
                 visual={
                   <View accessible={false} style={[styles.mark, { pointerEvents: 'none' }]}>
                     <DistractActivityMark id={id} />
@@ -44,7 +59,7 @@ export default function DistractMenuScreen() {
                 onPress={() => openActivity(id)}
                 style={{
                   backgroundColor: theme.colors.surface,
-                  borderColor: homeCardBorder(theme),
+                  borderColor: id === lastActivity ? theme.colors.primary : homeCardBorder(theme),
                 }}
               />
             ))}

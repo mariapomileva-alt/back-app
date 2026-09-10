@@ -1,0 +1,28 @@
+PRODUCTION ASSET MANIFEST — internal only
+Do not show this status in the product UI. Do not invent licenses or claim placeholders are final.
+
+Purpose | Temp file | Format | Dims / notes | A11y | License | Owner | Replacement
+------- | --------- | ------ | ------------ | ---- | ------- | ----- | -----------
+Ground feet still | assets/images/ground-feet-placeholder.png | PNG | Warm Earth exercise slot | Decorative / stage | Unknown — bundled placeholder | Design | Keep slot; replace file, keep require()
+Listen ocean still | assets/images/listen-ocean-placeholder.jpg | JPEG | Compressed local photo | listen.images.ocean | Unknown — bundled placeholder | Design | Keep slot
+Listen rain still | assets/images/listen-rain-placeholder.jpg | JPEG | Compressed local photo | listen.images.rain | Unknown — bundled placeholder | Design | Keep slot
+Listen forest still | assets/images/listen-forest-placeholder.jpg | JPEG | Compressed local photo | listen.images.forest | Unknown — bundled placeholder | Design | Keep slot
+Listen fan graphic | generated in ListenGraphic | SVG | Abstract air, no photo | listen.images.fan | Original in-repo graphic | Design | Keep unless a still is commissioned
+Listen brown graphic | generated in ListenGraphic | SVG | Warm abstract texture | listen.images.brown | Original in-repo graphic | Design | Keep unless a still is commissioned
+Move feet still | assets/images/move-feet-placeholder.png | PNG | Exercise slot | Decorative / stage | Unknown — bundled placeholder | Design | Keep slot
+Move hands still | assets/images/move-hands-placeholder.png | PNG | Exercise slot | Decorative / stage | Unknown — bundled placeholder | Design | Keep slot
+Home Ground card | assets/images/home-ground-placeholder.jpg | JPEG | Compressed card crop | Home tool label covers it | Unknown — bundled placeholder | Design | Keep slot; Home layout is frozen
+Home Move card | assets/images/home-move-placeholder.jpg | JPEG | Compressed card crop | Home tool label covers it | Unknown — bundled placeholder | Design | Keep slot; Home layout is frozen
+App icon | assets/docs/icon-export.txt | — | Store sizes listed there | App name | Unknown | Design | productionIconReady stays false until export
+
+Listen fan/brown placeholder PNG names may still appear in older notes. Current Listen fan and brown use in-app graphics, not those photos.
+
+AUDIO DROP-IN CHECKLIST (not production until flags flip)
+- Soft Rain     audio/sounds/soft-rain-placeholder.wav   → audio/sounds/soft-rain.wav
+- Ocean         audio/sounds/ocean-placeholder.wav       → audio/sounds/ocean.wav
+- Quiet Forest  audio/sounds/forest-placeholder.wav      → audio/sounds/forest.wav
+- Steady Fan    audio/sounds/fan-placeholder.wav         → audio/sounds/fan.wav
+- Brown Noise   audio/sounds/brown-noise-placeholder.wav → audio/sounds/brown-noise.wav
+- English Ground voice  audio/grounding/english-placeholder.wav → audio/grounding/english.wav
+
+After a human drops the production files, point features/media/catalog.ts require() at those names and set groundingAudioReady / environmentAudioReady in config/production.ts. Do not flip flags while placeholder files are still the bundled source.

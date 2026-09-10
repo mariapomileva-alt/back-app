@@ -20,6 +20,8 @@ type Props = {
   selectedId?: string;
   onSelect: (id: string) => void;
   onDismiss: () => void;
+  /** Android / hardware back while the menu is open. Defaults to dismiss. */
+  onHardwareBack?: () => void;
 };
 
 export function SessionChoiceSheet({
@@ -29,6 +31,7 @@ export function SessionChoiceSheet({
   selectedId,
   onSelect,
   onDismiss,
+  onHardwareBack,
 }: Props) {
   const { theme } = useTheme();
   const reduceMotion = useReduceMotion();
@@ -38,7 +41,7 @@ export function SessionChoiceSheet({
       visible={visible}
       transparent
       animationType={reduceMotion ? 'none' : 'fade'}
-      onRequestClose={onDismiss}
+      onRequestClose={onHardwareBack ?? onDismiss}
     >
       <View style={[styles.overlay, { backgroundColor: theme.colors.overlay }]}>
         <Pressable
@@ -68,7 +71,9 @@ export function SessionChoiceSheet({
                   key={option.id}
                   accessibilityRole="radio"
                   accessibilityState={{ selected }}
-                  accessibilityLabel={option.label}
+                  accessibilityLabel={
+                    selected ? `${option.label}, ${t('common.selected')}` : option.label
+                  }
                   onPress={() => onSelect(option.id)}
                   style={[
                     styles.row,

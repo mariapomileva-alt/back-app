@@ -1,4 +1,4 @@
-import { AppState, type AppStateStatus } from 'react-native';
+import { AppState, Platform, type AppStateStatus } from 'react-native';
 
 import type { HomeToolId } from '@/types';
 
@@ -17,6 +17,9 @@ let allowInternalNavigation = false;
 let appStateBound = false;
 
 function isForeground(state: AppStateStatus): boolean {
+  if (Platform.OS === 'web') {
+    return state !== 'background';
+  }
   return state === 'active';
 }
 
@@ -33,7 +36,7 @@ export function isHomeToolId(value: string | undefined | null): value is HomeToo
 
 /**
  * Start a session for a tool, or keep the existing one when the user stays
- * inside the same category (e.g. Distract activity → Change activity).
+ * inside the same category (e.g. Distract chooser ↔ activity).
  */
 export function startOrContinueSession(tool: HomeToolId): void {
   if (session?.tool === tool) {
