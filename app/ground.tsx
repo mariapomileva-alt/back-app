@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Pressable, StyleSheet, View, useWindowDimensions } from 'react-native';
 
 import { AudioControl } from '@/components/audio/AudioControl';
@@ -16,21 +16,36 @@ import {
 import { useGroundSequence } from '@/features/ground/useGroundSequence';
 import { useGuidedAudio } from '@/hooks/useGuidedAudio';
 import { t } from '@/locales/i18n';
+import { loadSoundMuted, saveSoundMuted } from '@/storage/preferences';
 import { serif } from '@/theme/fonts';
 import { spacing } from '@/theme/spacing';
 
 export default function GroundScreen() {
   const { height, fontScale } = useWindowDimensions();
   const compact = height < 700 || fontScale > 1.35;
+  const [soundMuted, setSoundMuted] = useState(false);
   const audio = useGuidedAudio({
     source: groundAudio.source,
     autoPlay: groundAudio.ready,
+    initialMuted: soundMuted,
   });
   const [paused, setPaused] = useState(false);
   const [sequenceId, setSequenceId] = useState<GroundSequenceId>(defaultGroundSequenceId);
   const [chooserOpen, setChooserOpen] = useState(false);
   const { instructionKey, last, next, reset } = useGroundSequence(paused, sequenceId);
   const instruction = t(instructionKey);
+
+  useEffect(() => {
+    let cancelled = false;
+    void loadSoundMuted().then((muted) => {
+      if (!cancelled) {
+        setSoundMuted(muted);
+      }
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   const onPlayPause = () => {
     if (paused) {
@@ -91,7 +106,11 @@ export default function GroundScreen() {
             isPlaying={!paused}
             muted={audio.muted}
             onPlayPause={onPlayPause}
-            onMute={audio.toggleMute}
+            onMute={() => {
+              const nextMuted = !audio.muted;
+              void saveSoundMuted(nextMuted);
+              audio.toggleMute();
+            }}
             onReplay={replay}
           />
           {groundAudio.ready ? null : (

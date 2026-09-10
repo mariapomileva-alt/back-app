@@ -17,7 +17,7 @@ import {
 import { useLoopingSound } from '@/hooks/useLoopingSound';
 import { useTheme } from '@/hooks/useTheme';
 import { t } from '@/locales/i18n';
-import { loadLastSoundId, saveLastSoundId } from '@/storage/preferences';
+import { loadLastSoundId, loadSoundMuted, saveLastSoundId } from '@/storage/preferences';
 import { serif } from '@/theme/fonts';
 import { radius } from '@/theme/radius';
 import { spacing, touch } from '@/theme/spacing';
@@ -41,17 +41,19 @@ export default function ListenScreen() {
   const compact = windowHeight < 740;
   const [soundId, setSoundId] = useState<ListenSoundId>(defaultListenSoundId);
   const [playbackReady, setPlaybackReady] = useState(false);
+  const [soundMuted, setSoundMuted] = useState(false);
   const [chooserOpen, setChooserOpen] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
-    void loadLastSoundId().then((stored) => {
+    void Promise.all([loadLastSoundId(), loadSoundMuted()]).then(([stored, muted]) => {
       if (cancelled) {
         return;
       }
       if (isListenSoundId(stored)) {
         setSoundId(stored);
       }
+      setSoundMuted(muted);
       setPlaybackReady(true);
     });
     return () => {
@@ -66,6 +68,7 @@ export default function ListenScreen() {
     source: selected.audio,
     enabled: playbackReady,
     autoPlay: true,
+    initialMuted: soundMuted,
     lockScreenTitle: t(selected.nameKey),
   });
   const visualHeight = visualHeightForWindow(windowHeight);

@@ -50,6 +50,7 @@
     "patterns": "My patterns",
     "subscription": "Subscription",
     "privacy": "Privacy",
+    "terms": "Terms of use",
     "emergency": "Extra support",
     "about": "About Back",
     "groups": {
@@ -335,6 +336,23 @@
     "extraSupport": "Extra support",
     "extraSupportHint": "Opens Extra support",
     "policy": "Privacy policy"
+  },
+  "terms": {
+    "selfHelp": "Back is a self-help tool. It is not therapy and not a medical device.",
+    "emergency": "Back is not a substitute for emergency care. If you need urgent help, use Extra support or contact local emergency services.",
+    "calls": "If you call or message someone, your phone app opens. The call or message starts only if you confirm.",
+    "data": "What you save in Back stays on this device. There is no account and no cloud."
+  },
+  "legal": {
+    "openWeb": "Open web page"
+  },
+  "voice": {
+    "notShipped": "Guided voice is not shipped yet. Ground still uses on-screen instructions. Listen and Ground audio you hear now are placeholders, not production recordings.",
+    "lastSound": "Last Listen sound",
+    "lastSoundEmpty": "Not saved yet",
+    "lastSoundNote": "Listen remembers the last sound you choose. That stays on this device.",
+    "mute": "Mute sound",
+    "muteHint": "Silences Listen and Ground on this device"
   },
   "about": {
     "body": "Back is rapid local support for the next minute, with six tools on this device.",

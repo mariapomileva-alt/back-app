@@ -9,29 +9,29 @@ import { productionConfig } from '@/config/production';
 import { t } from '@/locales/i18n';
 import { spacing } from '@/theme/spacing';
 
-export default function PrivacyScreen() {
+export default function TermsScreen() {
   const router = useRouter();
-  const privacyUrl = productionConfig.privacyUrl;
+  const termsUrl = productionConfig.termsUrl;
 
   return (
     <ScreenContainer>
-      <ScreenHeader title={t('settings.privacy')} />
+      <ScreenHeader title={t('settings.terms')} />
       <View style={styles.body}>
-        <AppText variant="body">{t('privacy.onDevice')}</AppText>
-        <AppText variant="body">{t('privacy.stored')}</AppText>
-        <AppText variant="body">{t('privacy.notSent')}</AppText>
-        <AppText variant="body">{t('privacy.emergency')}</AppText>
+        <AppText variant="body">{t('terms.selfHelp')}</AppText>
+        <AppText variant="body">{t('terms.emergency')}</AppText>
+        <AppText variant="body">{t('terms.calls')}</AppText>
+        <AppText variant="body">{t('terms.data')}</AppText>
         <TextButton
           label={t('privacy.extraSupport')}
           accessibilityHint={t('privacy.extraSupportHint')}
           onPress={() => router.push('/settings/emergency')}
           style={styles.link}
         />
-        {privacyUrl ? (
+        {termsUrl ? (
           <TextButton
             label={t('legal.openWeb')}
             onPress={() => {
-              void Linking.openURL(privacyUrl);
+              void Linking.openURL(termsUrl);
             }}
             style={styles.link}
           />

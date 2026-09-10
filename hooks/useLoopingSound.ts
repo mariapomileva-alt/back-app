@@ -15,6 +15,7 @@ type Options = {
   source: AudioSource;
   autoPlay?: boolean;
   enabled?: boolean;
+  initialMuted?: boolean;
   lockScreenTitle?: string;
 };
 
@@ -44,6 +45,7 @@ export function useLoopingSound({
   source,
   autoPlay = true,
   enabled = true,
+  initialMuted = false,
   lockScreenTitle,
 }: Options) {
   const player = useAudioPlayer(source, {
@@ -52,8 +54,14 @@ export function useLoopingSound({
   });
   const status = useAudioPlayerStatus(player);
   const [isPlaying, setIsPlaying] = useState(autoPlay);
-  const [muted, setMuted] = useState(false);
+  const [muted, setMuted] = useState(initialMuted);
   const [volume, setVolume] = useState(DEFAULT_VOLUME);
+
+  const [prevInitialMuted, setPrevInitialMuted] = useState(initialMuted);
+  if (initialMuted !== prevInitialMuted) {
+    setPrevInitialMuted(initialMuted);
+    setMuted(initialMuted);
+  }
 
   const fadeFrame = useRef<number | null>(null);
   const fading = useRef(false);

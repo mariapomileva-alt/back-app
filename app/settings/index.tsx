@@ -75,6 +75,10 @@ export default function SettingsScreen() {
             onPress={() => router.push('/settings/privacy')}
           />
           <SettingsRow
+            label={t('settings.terms')}
+            onPress={() => router.push('/settings/terms')}
+          />
+          <SettingsRow
             label={t('settings.about')}
             onPress={() => router.push('/settings/about')}
             showDivider={false}

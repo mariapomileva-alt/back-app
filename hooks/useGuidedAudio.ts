@@ -9,14 +9,21 @@ import {
 type Options = {
   source: AudioSource;
   autoPlay?: boolean;
+  initialMuted?: boolean;
 };
 
 /** One-shot guided voice. Do not use for looping environment sound. */
-export function useGuidedAudio({ source, autoPlay = false }: Options) {
+export function useGuidedAudio({ source, autoPlay = false, initialMuted = false }: Options) {
   const player = useAudioPlayer(source, { updateInterval: 500 });
   const [isPlaying, setIsPlaying] = useState(autoPlay);
-  const [muted, setMuted] = useState(false);
+  const [muted, setMuted] = useState(initialMuted);
   const [volume, setVolume] = useState(0.7);
+
+  const [prevInitialMuted, setPrevInitialMuted] = useState(initialMuted);
+  if (initialMuted !== prevInitialMuted) {
+    setPrevInitialMuted(initialMuted);
+    setMuted(initialMuted);
+  }
 
   const applyVolume = useCallback(() => {
     try {

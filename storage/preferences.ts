@@ -90,6 +90,18 @@ export async function saveLastSoundId(id: string): Promise<void> {
   }
 }
 
+export async function loadSoundMuted(): Promise<boolean> {
+  return readBoolean(storageKeys.soundMuted, false);
+}
+
+export async function saveSoundMuted(muted: boolean): Promise<void> {
+  try {
+    await AsyncStorage.setItem(storageKeys.soundMuted, String(muted));
+  } catch {
+    // Keep the in-memory mute if local storage is unavailable.
+  }
+}
+
 export async function loadLastBreathPattern(): Promise<string | null> {
   try {
     return await AsyncStorage.getItem(storageKeys.lastBreathPattern);

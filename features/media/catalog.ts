@@ -18,9 +18,33 @@ export const exerciseImages = {
 } as const;
 
 /**
+ * Production filenames a human can drop in (wav or m4a).
+ * Metro needs static require() paths — after the files exist, change exerciseAudio
+ * below to these names (keep the matching extension) and flip the flags in
+ * config/production.ts. Do not flip flags while placeholder files are still bundled.
+ */
+export const productionAudioFiles = {
+  groundingEnglish: 'audio/grounding/english.wav',
+  softRain: 'audio/sounds/soft-rain.wav',
+  ocean: 'audio/sounds/ocean.wav',
+  fan: 'audio/sounds/fan.wav',
+  forest: 'audio/sounds/forest.wav',
+  brownNoise: 'audio/sounds/brown-noise.wav',
+} as const;
+
+/**
  * PLACEHOLDER AUDIO — every file is a generated `-placeholder` loop, not a production mix.
+ * All Listen + Ground audio is a local require() so the tools work offline.
  * TODO: REPLACE WITH PROFESSIONALLY RECORDED BACK GROUNDING AUDIO BEFORE RELEASE
  * TODO: replace looping environment sounds with professionally mixed audio before store release
+ *
+ * Drop-in map (placeholder file → productionAudioFiles name):
+ *   audio/grounding/english-placeholder.wav  →  audio/grounding/english.wav
+ *   audio/sounds/soft-rain-placeholder.wav   →  audio/sounds/soft-rain.wav
+ *   audio/sounds/ocean-placeholder.wav       →  audio/sounds/ocean.wav
+ *   audio/sounds/fan-placeholder.wav         →  audio/sounds/fan.wav
+ *   audio/sounds/forest-placeholder.wav      →  audio/sounds/forest.wav
+ *   audio/sounds/brown-noise-placeholder.wav →  audio/sounds/brown-noise.wav
  */
 export const exerciseAudio = {
   groundingEnglish: require('../../audio/grounding/english-placeholder.wav'),
