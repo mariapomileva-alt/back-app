@@ -26,8 +26,8 @@ export const productionConfig = {
   // TODO: replace with the live Privacy Policy URL before store release.
   privacyUrl: null as string | null,
 
-  // TODO: add professionally recorded English grounding audio before store release.
-  groundingAudioReady: false, // TODO: REPLACE WITH FINAL PRODUCTION ARTWORK / professionally recorded English grounding audio
+  // TODO: REPLACE WITH PROFESSIONALLY RECORDED BACK GROUNDING AUDIO BEFORE RELEASE
+  groundingAudioReady: false, // TODO: REPLACE WITH PROFESSIONALLY RECORDED BACK GROUNDING AUDIO BEFORE RELEASE
 
   // TODO: add professionally mixed looping environment sounds before store release.
   environmentAudioReady: false,

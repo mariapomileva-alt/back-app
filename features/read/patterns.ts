@@ -38,6 +38,10 @@ export const sessionPatterns: SessionPattern[] = [
     id: 'quiet-walk',
     slots: ['environment', 'curious', 'micro_story', 'word', 'environment', 'observation', 'curious', 'micro_story'],
   },
+  {
+    id: 'keep-reading',
+    slots: ['micro_story', 'curious', 'micro_story', 'environment', 'curious', 'word', 'micro_story', 'observation'],
+  },
 ];
 
 export function storySlotCount(pattern: SessionPattern): number {

@@ -20,18 +20,21 @@ import { loadLastBreathPattern, saveLastBreathPattern } from '@/storage/preferen
 import { serif } from '@/theme/fonts';
 import { spacing } from '@/theme/spacing';
 
-const REST_RATIO = 0.58;
-const GROW_SCALE = 1.12;
-const REDUCE_GROW_SCALE = 1.03;
+const REST_SIZE = 180;
+const OPEN_SIZE = 320;
+const REDUCE_OPEN_SIZE = 280;
 
 export default function BreatheScreen() {
   const reduceMotion = useReduceMotion();
   const { width } = useWindowDimensions();
   const [patternId, setPatternId] = useState<BreathPatternId>(defaultBreathPatternId);
   const pattern = getBreathPattern(patternId);
-  const growScale = reduceMotion ? REDUCE_GROW_SCALE : GROW_SCALE;
-  const restSize = Math.min(width * REST_RATIO, 268);
-  const { phase, scale } = useBreathCycle(pattern, growScale);
+  const restSize = Math.min(REST_SIZE, Math.round(width * 0.48));
+  const openSize = Math.max(
+    restSize + 100,
+    Math.min(reduceMotion ? REDUCE_OPEN_SIZE : OPEN_SIZE, Math.round(width * 0.84)),
+  );
+  const { phase, openness } = useBreathCycle(pattern);
   const cue = t(cueKeyForPhase(phase));
   const patternName = t(pattern.nameKey);
 
@@ -66,9 +69,8 @@ export default function BreatheScreen() {
       <View style={styles.stage}>
         <BreathingCircle
           restSize={restSize}
-          maxScale={growScale}
-          scale={scale}
-          reduceMotion={reduceMotion}
+          openSize={openSize}
+          openness={openness}
           accessibilityLabel={t('breathe.circle')}
         />
         <AppText

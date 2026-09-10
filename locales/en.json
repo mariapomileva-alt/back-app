@@ -181,7 +181,13 @@
     }
   },
   "read": {
-    "revealHint": "Shows the next line",
+    "canvas": "Reading",
+    "revealHint": "Shows the next line. Lines also appear on their own.",
+    "pausedHint": "Lines are paused. Double tap to show the next line.",
+    "pause": "Pause the lines",
+    "pauseHint": "Stops lines from appearing on their own. You can still tap to continue.",
+    "continue": "Continue the lines",
+    "continueHint": "Lets lines appear on their own again.",
     "speedHint": "How quickly each line appears. Tap anywhere to show the next line immediately.",
     "speeds": {
       "unhurried": "Unhurried",
@@ -190,35 +196,43 @@
     }
   },
   "ground": {
-    "image": "First-person view of feet resting on the floor",
+    "continueHint": "Shows the next grounding instruction",
+    "audioPlaceholder": "TODO: REPLACE WITH PROFESSIONALLY RECORDED BACK GROUNDING AUDIO BEFORE RELEASE",
     "steps": {
       "feet": "Feel where your feet meet the floor.",
       "toes": "Gently move your toes.",
-      "see": "Notice one thing you can see.",
-      "sound": "Notice one sound around you.",
-      "support": "Feel the support beneath your body.",
+      "weight": "Notice the weight of your feet.",
+      "support": "Feel what is supporting your body.",
+      "hands": "Notice your hands.",
       "shoulders": "Let your shoulders soften.",
       "stay": "Stay here for one more moment."
     }
   },
   "move": {
-    "steps": {
-      "feet": "Press your feet into the floor for five seconds, then release.",
-      "palms": "Gently press your palms together.",
-      "release": "Release.",
-      "shoulders": "Roll your shoulders slowly.",
-      "wall": "Push your hands against a wall if one is nearby.",
-      "shake": "Shake out your hands gently."
+    "hold": "Hold.",
+    "release": "Release.",
+    "notice": "Notice the difference.",
+    "tryAnotherHint": "Tries a different gentle movement",
+    "hints": {
+      "press": "Press and hold here while you follow the instruction",
+      "hold": "Keep holding until you are asked to release",
+      "release": "Release now",
+      "notice": "Rest here and notice how your body feels"
     },
-    "images": {
-      "feet": "Feet gently pressing into the floor",
-      "hands": "Hands resting together"
+    "steps": {
+      "feet": "Press your feet gently into the floor.",
+      "palms": "Press your palms together gently.",
+      "tense": "Gently tense your hands.",
+      "shoulders": "Lift your shoulders a little.",
+      "hands": "Press your hands into your legs."
     }
   },
   "listen": {
     "volume": "Volume",
     "previous": "Previous sound",
     "next": "Next sound",
+    "chooseSound": "Choose a sound",
+    "placeholderAudio": "Placeholder audio",
     "sounds": {
       "rain": "Soft rain",
       "ocean": "Ocean",

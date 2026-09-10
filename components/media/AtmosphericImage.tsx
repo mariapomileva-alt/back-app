@@ -12,6 +12,7 @@ export type AtmosphericTreatment = 'photo' | 'abstract';
 type Props = {
   source: ImageSourcePropType;
   accessibilityLabel: string;
+  height?: number;
   heightRatio?: number;
   treatment?: AtmosphericTreatment;
 };
@@ -19,13 +20,14 @@ type Props = {
 export function AtmosphericImage({
   source,
   accessibilityLabel,
+  height,
   heightRatio = 0.36,
   treatment = 'photo',
 }: Props) {
   const { theme } = useTheme();
   const reduceTransparency = useReduceTransparency();
-  const { height } = useWindowDimensions();
-  const imageHeight = Math.round(height * heightRatio);
+  const { height: windowHeight } = useWindowDimensions();
+  const imageHeight = height ?? Math.round(windowHeight * heightRatio);
   const fade = theme.colors.background || brand.warmIvory;
   const clear = hexToRgba(fade, 0);
   const abstract = treatment === 'abstract';
@@ -78,7 +80,7 @@ export function AtmosphericImage({
 
 const styles = StyleSheet.create({
   wrap: {
-    width: 'auto',
+    width: '100%',
     marginHorizontal: -spacing.lg,
     overflow: 'hidden',
   },

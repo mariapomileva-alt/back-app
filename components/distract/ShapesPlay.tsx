@@ -13,6 +13,9 @@ import { spacing, touch } from '@/theme/spacing';
 
 import { ShapeGlyph } from './ShapeGlyph';
 
+const TARGET_SIZE = 118;
+const OPTION_SIZE = 46;
+
 export function ShapesPlay() {
   const { theme } = useTheme();
   const haptics = useHaptics();
@@ -35,7 +38,7 @@ export function ShapesPlay() {
     <View style={styles.root}>
       <AppText style={styles.instruction}>{t('distract.shapes.instruction')}</AppText>
       <View style={styles.target} accessible={false} importantForAccessibility="no">
-        <ShapeGlyph shape={round.shape} color={palette[round.colorKey]} size={118} />
+        <ShapeGlyph shape={round.shape} color={palette[round.colorKey]} size={TARGET_SIZE} />
       </View>
       <View style={styles.options}>
         {round.options.map((option, index) => (
@@ -63,7 +66,7 @@ export function ShapesPlay() {
               },
             ]}
           >
-            <ShapeGlyph shape={option.shape} color={palette[option.colorKey]} size={46} />
+            <ShapeGlyph shape={option.shape} color={palette[option.colorKey]} size={OPTION_SIZE} />
           </AccessiblePressable>
         ))}
       </View>
@@ -73,7 +76,7 @@ export function ShapesPlay() {
 
 const styles = StyleSheet.create({
   root: {
-    flex: 1,
+    flexGrow: 1,
   },
   instruction: {
     fontFamily: serif,
@@ -88,11 +91,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     marginBottom: spacing.lg,
+    overflow: 'visible',
   },
   options: {
     flexDirection: 'row',
     flexWrap: 'wrap',
     gap: spacing.sm,
+    overflow: 'visible',
   },
   option: {
     minHeight: touch.comfortable + 20,
@@ -100,5 +105,6 @@ const styles = StyleSheet.create({
     borderWidth: StyleSheet.hairlineWidth,
     alignItems: 'center',
     justifyContent: 'center',
+    overflow: 'visible',
   },
 });

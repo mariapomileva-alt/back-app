@@ -152,8 +152,10 @@ export function CatchPlay() {
 const styles = StyleSheet.create({
   root: {
     flex: 1,
+    minHeight: 0,
   },
   instruction: {
+    flexShrink: 0,
     fontFamily: serif,
     fontSize: 28,
     lineHeight: 34,
@@ -163,7 +165,7 @@ const styles = StyleSheet.create({
   },
   field: {
     flex: 1,
-    minHeight: 280,
+    minHeight: 0,
   },
   target: {
     position: 'absolute',

@@ -1,76 +1,63 @@
-import { useEffect, useId } from 'react';
+import { useId } from 'react';
 import { StyleSheet, View } from 'react-native';
-import Animated, {
-  useAnimatedStyle,
-  useSharedValue,
-  type SharedValue,
-} from 'react-native-reanimated';
-import Svg, { Defs, RadialGradient, Stop, Circle } from 'react-native-svg';
+import Svg, { Circle, Defs, RadialGradient, Stop } from 'react-native-svg';
 
-import { brand } from '@/theme/colors';
+import { useTheme } from '@/hooks/useTheme';
+import { mixHex } from '@/theme/colors';
 
 type Props = {
   restSize: number;
-  maxScale: number;
-  scale: SharedValue<number>;
-  reduceMotion?: boolean;
+  openSize: number;
+  openness: number;
   accessibilityLabel: string;
 };
 
 export function BreathingCircle({
   restSize,
-  maxScale,
-  scale,
-  reduceMotion = false,
+  openSize,
+  openness,
   accessibilityLabel,
 }: Props) {
-  const footprint = restSize * maxScale;
+  const { theme } = useTheme();
   const rawId = useId().replace(/[^a-zA-Z0-9_-]/g, '');
   const gradientId = `breathFill${rawId}`;
-  const reduceMotionValue = useSharedValue(reduceMotion ? 1 : 0);
-  const maxScaleValue = useSharedValue(maxScale);
-
-  useEffect(() => {
-    reduceMotionValue.value = reduceMotion ? 1 : 0;
-    maxScaleValue.value = maxScale;
-  }, [maxScale, maxScaleValue, reduceMotion, reduceMotionValue]);
-
-  const circleStyle = useAnimatedStyle(() => {
-    const value = scale.value;
-    const span = maxScaleValue.value - 1;
-    const t = span <= 0 ? 0 : Math.min(1, Math.max(0, (value - 1) / span));
-    const reduced = reduceMotionValue.value;
-    return {
-      transform: [{ scale: value }],
-      opacity: 1 - reduced * (1 - (0.74 + t * 0.26)),
-    };
-  });
+  const t = Math.min(1, Math.max(0, openness));
+  const diameter = restSize + (openSize - restSize) * t;
+  const forest = theme.colors.forest;
+  const sage = theme.colors.secondaryGreen;
+  const pale = theme.colors.muted;
+  const onDark = theme.name === 'deepGreen';
+  const core = onDark ? mixHex(sage, forest, 0.16) : mixHex(forest, sage, 0.26);
+  const mid = mixHex(sage, pale, 0.14);
+  const rim = mixHex(pale, sage, onDark ? 0.08 : 0.2);
 
   return (
     <View
-      style={[styles.wrap, { width: footprint, height: footprint }]}
+      style={[styles.wrap, { width: openSize, height: openSize }]}
       accessible
       accessibilityRole="image"
       accessibilityLabel={accessibilityLabel}
     >
-      <Animated.View
+      <View
+        testID="breath-orb"
+        collapsable={false}
         accessible={false}
         importantForAccessibility="no"
-        style={[styles.stack, { width: restSize, height: restSize }, circleStyle]}
+        style={[styles.orb, { width: diameter, height: diameter }]}
       >
-        <Svg width={restSize} height={restSize} viewBox="0 0 100 100">
+        <Svg width={diameter} height={diameter} viewBox="0 0 100 100">
           <Defs>
-            <RadialGradient id={gradientId} cx="48%" cy="44%" r="54%">
-              <Stop offset="0" stopColor={brand.deepForest} stopOpacity={0.9} />
-              <Stop offset="0.34" stopColor={brand.forestGreen} stopOpacity={0.82} />
-              <Stop offset="0.58" stopColor={brand.sage} stopOpacity={0.7} />
-              <Stop offset="0.8" stopColor={brand.paleSage} stopOpacity={0.38} />
-              <Stop offset="1" stopColor={brand.paleSage} stopOpacity={0} />
+            <RadialGradient id={gradientId} cx="47%" cy="45%" r="56%">
+              <Stop offset="0%" stopColor={core} stopOpacity={1} />
+              <Stop offset="28%" stopColor={core} stopOpacity={0.96} />
+              <Stop offset="58%" stopColor={mid} stopOpacity={0.94} />
+              <Stop offset="84%" stopColor={rim} stopOpacity={onDark ? 0.28 : 0.5} />
+              <Stop offset="100%" stopColor={rim} stopOpacity={0} />
             </RadialGradient>
           </Defs>
           <Circle cx="50" cy="50" r="50" fill={`url(#${gradientId})`} />
         </Svg>
-      </Animated.View>
+      </View>
     </View>
   );
 }
@@ -81,8 +68,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     overflow: 'visible',
   },
-  stack: {
-    alignItems: 'center',
-    justifyContent: 'center',
+  orb: {
+    overflow: 'visible',
   },
 });

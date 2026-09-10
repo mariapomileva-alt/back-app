@@ -18,6 +18,7 @@ type Props = {
   showSessionActions?: boolean;
   onChangeActivity?: () => void;
   changeActivityLabel?: string;
+  changeActivityHint?: string;
   extraActions?: ReactNode | ((controls: ActiveSessionControls) => ReactNode);
 };
 
@@ -30,6 +31,7 @@ export function ActiveSessionScreen({
   showSessionActions = true,
   onChangeActivity,
   changeActivityLabel,
+  changeActivityHint,
   extraActions,
 }: Props) {
   const controls = useActiveSession(tool);
@@ -40,13 +42,16 @@ export function ActiveSessionScreen({
     <ExerciseShell title={title} onClose={controls.close} right={right} scroll={scroll}>
       {scroll === false ? <View style={styles.body}>{body}</View> : body}
       {showSessionActions ? (
-        <SessionActions
-          onOkay={controls.close}
-          onTrySomethingElse={controls.trySomethingElse}
-          onChangeActivity={onChangeActivity}
-          changeActivityLabel={changeActivityLabel}
-          extra={extra}
-        />
+        <View style={styles.footer}>
+          <SessionActions
+            onOkay={controls.close}
+            onTrySomethingElse={controls.trySomethingElse}
+            onChangeActivity={onChangeActivity}
+            changeActivityLabel={changeActivityLabel}
+            changeActivityHint={changeActivityHint}
+            extra={extra}
+          />
+        </View>
       ) : null}
     </ExerciseShell>
   );
@@ -55,5 +60,10 @@ export function ActiveSessionScreen({
 const styles = StyleSheet.create({
   body: {
     flex: 1,
+    minHeight: 0,
+  },
+  footer: {
+    flexShrink: 0,
+    width: '100%',
   },
 });

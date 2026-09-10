@@ -106,16 +106,20 @@ function easeInOutSin(t: number): number {
   return 0.5 - 0.5 * Math.cos(Math.PI * clamped);
 }
 
+/** 0 at rest, 1 fully open. Same elapsed clock as the visible instruction. */
+export function opennessAtElapsed(pattern: BreathPattern, elapsedMs: number): number {
+  const { step, progress } = breathAtElapsed(pattern, elapsedMs);
+  const to = step.target === 'open' ? 1 : 0;
+  const from = step.phase === 'hold' ? to : step.target === 'open' ? 0 : 1;
+  const t = step.phase === 'hold' ? 1 : easeInOutSin(progress);
+  return from + (to - from) * t;
+}
+
 /** Scale derived from the same elapsed time as the visible instruction. */
 export function scaleAtElapsed(
   pattern: BreathPattern,
   elapsedMs: number,
   growScale: number,
 ): number {
-  const { step, progress } = breathAtElapsed(pattern, elapsedMs);
-  const to = step.target === 'open' ? growScale : 1;
-  const from =
-    step.phase === 'hold' ? to : step.target === 'open' ? 1 : growScale;
-  const t = step.phase === 'hold' ? 1 : easeInOutSin(progress);
-  return from + (to - from) * t;
+  return 1 + (growScale - 1) * opennessAtElapsed(pattern, elapsedMs);
 }

@@ -13,6 +13,7 @@ import type { HomeToolId } from '@/types';
 export type ActiveSessionControls = {
   close: () => void;
   trySomethingElse: () => void;
+  tryOfferedAlternatives: (intent: string) => void;
 };
 
 export function useActiveSession(tool: HomeToolId): ActiveSessionControls {
@@ -50,18 +51,34 @@ export function useActiveSession(tool: HomeToolId): ActiveSessionControls {
     router.replace('/');
   }, [navigation, router, tool]);
 
+  const leaveForAlternatives = useCallback(
+    (intent?: string) => {
+      if (leavingRef.current) {
+        return;
+      }
+      leavingRef.current = true;
+      const snapshot = consumeSession();
+      const closedTool = snapshot?.tool ?? tool;
+      router.replace({
+        pathname: '/session/alternatives',
+        params: intent
+          ? { feeling: 'same', tool: closedTool, intent }
+          : { feeling: 'same', tool: closedTool },
+      });
+    },
+    [router, tool],
+  );
+
   const trySomethingElse = useCallback(() => {
-    if (leavingRef.current) {
-      return;
-    }
-    leavingRef.current = true;
-    const snapshot = consumeSession();
-    const closedTool = snapshot?.tool ?? tool;
-    router.replace({
-      pathname: '/session/alternatives',
-      params: { feeling: 'same', tool: closedTool },
-    });
-  }, [router, tool]);
+    leaveForAlternatives();
+  }, [leaveForAlternatives]);
+
+  const tryOfferedAlternatives = useCallback(
+    (intent: string) => {
+      leaveForAlternatives(intent);
+    },
+    [leaveForAlternatives],
+  );
 
   useEffect(() => {
     const unsubscribe = navigation.addListener('beforeRemove', (event) => {
@@ -75,7 +92,7 @@ export function useActiveSession(tool: HomeToolId): ActiveSessionControls {
     return unsubscribe;
   }, [close, navigation]);
 
-  return { close, trySomethingElse };
+  return { close, trySomethingElse, tryOfferedAlternatives };
 }
 
 /** Bind AppState once at the root so background time is not counted as session time. */

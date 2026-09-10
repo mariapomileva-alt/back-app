@@ -3,7 +3,7 @@ import { ShapesPlay } from '@/components/distract/ShapesPlay';
 
 export default function DistractShapesScreen() {
   return (
-    <DistractActivityScreen activity="shapes">
+    <DistractActivityScreen activity="shapes" scroll>
       <ShapesPlay />
     </DistractActivityScreen>
   );

@@ -32,17 +32,20 @@ export function VolumeBar({ value, onChange }: Props) {
             accessibilityRole="button"
             accessibilityLabel={`${t('listen.volume')} ${Math.round(step * 100)}`}
             onPress={() => onChange(step)}
-            style={[
-              styles.step,
-              {
-                backgroundColor: active ? theme.colors.secondaryGreen : theme.colors.surfaceSecondary,
-                minHeight: touch.min / 2,
-              },
-            ]}
-          />
+            style={styles.step}
+          >
+            <View
+              style={[
+                styles.bar,
+                {
+                  backgroundColor: active ? theme.colors.secondaryGreen : theme.colors.surfaceSecondary,
+                },
+              ]}
+            />
+          </Pressable>
         );
       })}
-      <AppText variant="secondary" tone="secondary" style={styles.label}>
+      <AppText variant="body" tone="secondary" style={styles.label}>
         {t('listen.volume')}
       </AppText>
     </View>
@@ -58,6 +61,10 @@ const styles = StyleSheet.create({
   },
   step: {
     flex: 1,
+    minHeight: touch.min,
+    justifyContent: 'center',
+  },
+  bar: {
     height: 10,
     borderRadius: radius.circle,
   },

@@ -10,7 +10,7 @@ import { ScreenContainer } from '@/components/layout/ScreenContainer';
 import { ScreenHeader } from '@/components/navigation/ScreenHeader';
 import { AppText } from '@/components/typography/AppText';
 import { isHomeToolId } from '@/features/session/activeSession';
-import { alternativeTools } from '@/features/session/suggestions';
+import { alternativesForIntent } from '@/features/session/suggestions';
 import { useTheme } from '@/hooks/useTheme';
 import { t } from '@/locales/i18n';
 import { serif } from '@/theme/fonts';
@@ -19,9 +19,14 @@ import { spacing } from '@/theme/spacing';
 export default function SessionAlternativesScreen() {
   const router = useRouter();
   const { theme } = useTheme();
-  const { feeling, tool } = useLocalSearchParams<{ feeling?: string; tool?: string }>();
+  const { feeling, tool, intent } = useLocalSearchParams<{
+    feeling?: string;
+    tool?: string;
+    intent?: string | string[];
+  }>();
   const currentTool = isHomeToolId(tool) ? tool : undefined;
-  const suggestions = alternativeTools(currentTool);
+  const intentValue = Array.isArray(intent) ? intent[0] : intent;
+  const suggestions = alternativesForIntent(intentValue, currentTool);
 
   const title =
     feeling === 'better'

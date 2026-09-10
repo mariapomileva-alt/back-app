@@ -3,15 +3,14 @@ import type { ImageSourcePropType } from 'react-native';
 /**
  * TODO: REPLACE WITH FINAL PRODUCTION ARTWORK
  * Bundled locally so Ground, Listen, and Move work offline.
+ * Listen rain/ocean/forest are compressed local JPEGs. Fan and brown use graphics, not photos.
  * homeGround / homeMove are compressed Home-card JPEGs of groundFeet / moveHands.
  */
 export const exerciseImages = {
   groundFeet: require('../../assets/images/ground-feet-placeholder.png') as ImageSourcePropType,
-  listenOcean: require('../../assets/images/listen-ocean-placeholder.png') as ImageSourcePropType,
-  listenRain: require('../../assets/images/listen-rain-placeholder.png') as ImageSourcePropType,
-  listenForest: require('../../assets/images/listen-forest-placeholder.png') as ImageSourcePropType,
-  listenFan: require('../../assets/images/listen-fan-placeholder.png') as ImageSourcePropType,
-  listenBrown: require('../../assets/images/listen-brown-placeholder.png') as ImageSourcePropType,
+  listenOcean: require('../../assets/images/listen-ocean-placeholder.jpg') as ImageSourcePropType,
+  listenRain: require('../../assets/images/listen-rain-placeholder.jpg') as ImageSourcePropType,
+  listenForest: require('../../assets/images/listen-forest-placeholder.jpg') as ImageSourcePropType,
   moveFeet: require('../../assets/images/move-feet-placeholder.png') as ImageSourcePropType,
   moveHands: require('../../assets/images/move-hands-placeholder.png') as ImageSourcePropType,
   homeGround: require('../../assets/images/home-ground-placeholder.jpg') as ImageSourcePropType,
@@ -19,7 +18,8 @@ export const exerciseImages = {
 } as const;
 
 /**
- * TODO: replace placeholder with professionally recorded English grounding audio before store release
+ * PLACEHOLDER AUDIO — every file is a generated `-placeholder` loop, not a production mix.
+ * TODO: REPLACE WITH PROFESSIONALLY RECORDED BACK GROUNDING AUDIO BEFORE RELEASE
  * TODO: replace looping environment sounds with professionally mixed audio before store release
  */
 export const exerciseAudio = {

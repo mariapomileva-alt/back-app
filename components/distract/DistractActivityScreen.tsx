@@ -11,9 +11,10 @@ import { t } from '@/locales/i18n';
 type Props = {
   activity: DistractActivityId;
   children: ReactNode;
+  scroll?: boolean;
 };
 
-export function DistractActivityScreen({ activity, children }: Props) {
+export function DistractActivityScreen({ activity, children, scroll = false }: Props) {
   const router = useRouter();
   useRememberDistractActivity(activity);
 
@@ -29,10 +30,10 @@ export function DistractActivityScreen({ activity, children }: Props) {
     <ActiveSessionScreen
       tool="distract"
       title={t('home.tools.distract')}
-      scroll={false}
+      scroll={scroll}
       onChangeActivity={changeActivity}
     >
-      <View style={styles.body}>{children}</View>
+      <View style={scroll ? styles.scrollBody : styles.body}>{children}</View>
     </ActiveSessionScreen>
   );
 }
@@ -40,5 +41,10 @@ export function DistractActivityScreen({ activity, children }: Props) {
 const styles = StyleSheet.create({
   body: {
     flex: 1,
+    minHeight: 0,
+  },
+  scrollBody: {
+    flexGrow: 1,
   },
 });
+

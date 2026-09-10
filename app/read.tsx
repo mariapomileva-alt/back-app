@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { ActivityIndicator, StyleSheet, View } from 'react-native';
 
+import { ReadPauseControl } from '@/components/read/ReadPauseControl';
 import { ReadPlay } from '@/components/read/ReadPlay';
 import { ActiveSessionScreen } from '@/components/session/ActiveSessionScreen';
 import {
@@ -20,13 +21,19 @@ export default function ReadScreen() {
   const [memory, setMemory] = useState<ReadMemory | null>(null);
   const [session, setSession] = useState<ReadSession | null>(null);
   const [revealedCount, setRevealedCount] = useState(1);
+  const [paused, setPaused] = useState(false);
   const shownItems = useRef(new Set<string>());
   const sessionRef = useRef<ReadSession | null>(null);
+  const memoryRef = useRef<ReadMemory | null>(null);
   const revealedCountRef = useRef(1);
 
   useEffect(() => {
     sessionRef.current = session;
   }, [session]);
+
+  useEffect(() => {
+    memoryRef.current = memory;
+  }, [memory]);
 
   useEffect(() => {
     let cancelled = false;
@@ -39,6 +46,8 @@ export default function ReadScreen() {
       const first = nextSession.fragments[0];
       shownItems.current = new Set(first ? [first.itemId] : []);
       const withFirst = first ? rememberShownId(started, first.itemId, first.storyId) : started;
+      memoryRef.current = withFirst;
+      sessionRef.current = nextSession;
       setMemory(withFirst);
       setSession(nextSession);
       revealedCountRef.current = 1;
@@ -60,6 +69,7 @@ export default function ReadScreen() {
         return current;
       }
       const next = rememberShownId(current, itemId, storyId);
+      memoryRef.current = next;
       void saveReadMemory(next);
       return next;
     });
@@ -67,7 +77,7 @@ export default function ReadScreen() {
 
   const onReveal = useCallback(() => {
     const liveSession = sessionRef.current;
-    const liveMemory = memory;
+    const liveMemory = memoryRef.current;
     if (!liveSession) {
       return;
     }
@@ -84,18 +94,26 @@ export default function ReadScreen() {
     }
 
     const next = Math.min(current + 1, sessionNow.fragments.length);
+    if (next === current) {
+      return;
+    }
     revealedCountRef.current = next;
     const fragment = sessionNow.fragments[next - 1];
     if (fragment) {
       persistItem(fragment.itemId, fragment.storyId);
     }
     setRevealedCount(next);
-  }, [memory, persistItem]);
+  }, [persistItem]);
 
   const fragments = session?.fragments;
 
   return (
-    <ActiveSessionScreen tool="read" title={t('home.tools.read')} scroll={false}>
+    <ActiveSessionScreen
+      tool="read"
+      title={t('home.tools.read')}
+      scroll={false}
+      extraActions={<ReadPauseControl paused={paused} onPress={() => setPaused((value) => !value)} />}
+    >
       {!session || !memory || !fragments || fragments.length === 0 ? (
         <View style={styles.loading}>
           <ActivityIndicator color={theme.colors.primary} />
@@ -106,6 +124,7 @@ export default function ReadScreen() {
           speed={memory.revealSpeed}
           revealedCount={revealedCount}
           onReveal={onReveal}
+          paused={paused}
         />
       )}
     </ActiveSessionScreen>

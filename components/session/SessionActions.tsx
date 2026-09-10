@@ -11,6 +11,7 @@ type Props = {
   onTrySomethingElse: () => void;
   onChangeActivity?: () => void;
   changeActivityLabel?: string;
+  changeActivityHint?: string;
   extra?: ReactNode;
 };
 
@@ -19,13 +20,18 @@ export function SessionActions({
   onTrySomethingElse,
   onChangeActivity,
   changeActivityLabel,
+  changeActivityHint,
   extra,
 }: Props) {
   return (
     <View style={styles.actions}>
       <SessionExitAction onPress={onOkay} />
       {onChangeActivity ? (
-        <ActivitySwitcher onPress={onChangeActivity} label={changeActivityLabel} />
+        <ActivitySwitcher
+          onPress={onChangeActivity}
+          label={changeActivityLabel}
+          accessibilityHint={changeActivityHint}
+        />
       ) : null}
       <TrySomethingElse onPress={onTrySomethingElse} />
       {extra}
@@ -37,6 +43,7 @@ const styles = StyleSheet.create({
   actions: {
     width: '100%',
     alignItems: 'stretch',
-    paddingTop: spacing.sm,
+    flexShrink: 0,
+    paddingTop: spacing.md,
   },
 });

@@ -1432,5 +1432,75 @@
       "language"
     ],
     "difficulty": 1
+  },
+  {
+    "id": "en-curious-116",
+    "type": "curious",
+    "fragments": [
+      "A sunflower head",
+      "is not one flower.",
+      "It is hundreds of small ones",
+      "agreeing to face the same way."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-curious-117",
+    "type": "curious",
+    "fragments": [
+      "The color we call sky blue",
+      "is scattered light.",
+      "The air keeps the blue",
+      "and lets the rest go on."
+    ],
+    "topics": [
+      "sky"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-curious-118",
+    "type": "curious",
+    "fragments": [
+      "Octopuses taste",
+      "with their arms.",
+      "A reaching thing",
+      "can also be a knowing thing."
+    ],
+    "topics": [
+      "water",
+      "nature"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-curious-119",
+    "type": "curious",
+    "fragments": [
+      "A pencil can write",
+      "about forty-five thousand words",
+      "before it is only wood again."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-curious-120",
+    "type": "curious",
+    "fragments": [
+      "Honeycombs use hexagons",
+      "because six sides",
+      "hold a lot",
+      "with very little wall."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1
   }
 ]

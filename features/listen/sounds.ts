@@ -1,15 +1,21 @@
+import type { ImageSourcePropType } from 'react-native';
+
 import { exerciseAudio, exerciseImages } from '@/features/media/catalog';
 
 export type ListenSoundId = 'rain' | 'ocean' | 'fan' | 'forest' | 'brown';
 
-export const listenSounds: Array<{
+export type ListenSound = {
   id: ListenSoundId;
   nameKey: string;
   imageLabelKey: string;
   audio: number;
-  image: (typeof exerciseImages)[keyof typeof exerciseImages];
+  image?: ImageSourcePropType;
   treatment: 'photo' | 'abstract';
-}> = [
+  /** Bundled Listen loops are generated placeholders until production mixes land. */
+  placeholderAudio: boolean;
+};
+
+export const listenSounds: ListenSound[] = [
   {
     id: 'rain',
     nameKey: 'listen.sounds.rain',
@@ -17,6 +23,7 @@ export const listenSounds: Array<{
     audio: exerciseAudio.softRain,
     image: exerciseImages.listenRain,
     treatment: 'photo',
+    placeholderAudio: true,
   },
   {
     id: 'ocean',
@@ -25,6 +32,7 @@ export const listenSounds: Array<{
     audio: exerciseAudio.ocean,
     image: exerciseImages.listenOcean,
     treatment: 'photo',
+    placeholderAudio: true,
   },
   {
     id: 'forest',
@@ -33,23 +41,28 @@ export const listenSounds: Array<{
     audio: exerciseAudio.forest,
     image: exerciseImages.listenForest,
     treatment: 'photo',
+    placeholderAudio: true,
   },
   {
     id: 'fan',
     nameKey: 'listen.sounds.fan',
     imageLabelKey: 'listen.images.fan',
     audio: exerciseAudio.fan,
-    image: exerciseImages.listenFan,
     treatment: 'abstract',
+    placeholderAudio: true,
   },
   {
     id: 'brown',
     nameKey: 'listen.sounds.brown',
     imageLabelKey: 'listen.images.brown',
     audio: exerciseAudio.brownNoise,
-    image: exerciseImages.listenBrown,
     treatment: 'abstract',
+    placeholderAudio: true,
   },
 ];
 
 export const defaultListenSoundId: ListenSoundId = 'rain';
+
+export function isListenSoundId(value: string | null): value is ListenSoundId {
+  return listenSounds.some((item) => item.id === value);
+}

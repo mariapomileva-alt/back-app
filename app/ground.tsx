@@ -1,64 +1,107 @@
 import { useState } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { Pressable, StyleSheet, View } from 'react-native';
 
-import { PrimaryButton } from '@/components/buttons/PrimaryButton';
-import { ProgressDots } from '@/components/feedback/ProgressDots';
-import { GroundMark } from '@/components/marks';
+import { AudioControl } from '@/components/audio/AudioControl';
+import { GroundStage } from '@/components/ground/GroundStage';
 import { ActiveSessionScreen } from '@/components/session/ActiveSessionScreen';
 import { AppText } from '@/components/typography/AppText';
-import { groundSteps } from '@/features/ground/steps';
-import { useHaptics } from '@/hooks/useHaptics';
+import { GROUND_AUDIO_PLACEHOLDER_TODO, groundAudio } from '@/features/ground/audio';
+import { useGroundSequence } from '@/features/ground/useGroundSequence';
+import { useGuidedAudio } from '@/hooks/useGuidedAudio';
 import { t } from '@/locales/i18n';
 import { serif } from '@/theme/fonts';
 import { spacing } from '@/theme/spacing';
 
 export default function GroundScreen() {
-  const haptics = useHaptics();
-  const [step, setStep] = useState(0);
-  const last = step >= groundSteps.length - 1;
-  const instruction = t(groundSteps[step] ?? groundSteps[0]!);
+  const audio = useGuidedAudio({
+    source: groundAudio.source,
+    autoPlay: groundAudio.ready,
+  });
+  const [paused, setPaused] = useState(false);
+  const { instructionKey, last, next, reset } = useGroundSequence(paused);
+  const instruction = t(instructionKey);
 
-  const next = () => {
-    haptics.light();
-    if (!last) {
-      setStep((current) => current + 1);
+  const onPlayPause = () => {
+    if (paused) {
+      setPaused(false);
+      if (groundAudio.ready) {
+        audio.play();
+      }
+      return;
     }
+    setPaused(true);
+    audio.pause();
+  };
+
+  const replay = () => {
+    reset();
+    setPaused(false);
+    audio.replay();
   };
 
   return (
     <ActiveSessionScreen tool="ground" title={t('home.tools.ground')}>
-      <View style={styles.mark} accessible={false}>
-        <GroundMark />
+      <View style={styles.stage}>
+        <GroundStage />
+        <Pressable
+          accessibilityRole={last ? 'text' : 'button'}
+          accessibilityLabel={instruction}
+          accessibilityHint={last ? undefined : t('ground.continueHint')}
+          onPress={last ? undefined : next}
+          style={styles.instructionHit}
+        >
+          <AppText
+            variant="instruction"
+            accessibilityLiveRegion="polite"
+            accessible={false}
+            style={styles.instruction}
+          >
+            {instruction}
+          </AppText>
+        </Pressable>
+        <AudioControl
+          isPlaying={!paused}
+          muted={audio.muted}
+          onPlayPause={onPlayPause}
+          onMute={audio.toggleMute}
+          onReplay={replay}
+        />
+        {groundAudio.ready ? null : (
+          <AppText variant="secondary" tone="secondary" style={styles.placeholder}>
+            {GROUND_AUDIO_PLACEHOLDER_TODO}
+          </AppText>
+        )}
       </View>
-      <AppText variant="instruction" style={styles.instruction}>
-        {instruction}
-      </AppText>
-      <ProgressDots count={groundSteps.length} index={step} />
-      {last ? null : (
-        <View style={styles.footer}>
-          <PrimaryButton label={t('common.next')} onPress={next} />
-        </View>
-      )}
     </ActiveSessionScreen>
   );
 }
 
 const styles = StyleSheet.create({
-  mark: {
-    width: 168,
-    height: 100,
-    marginTop: spacing.md,
-    alignSelf: 'center',
+  stage: {
+    flexGrow: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingBottom: spacing.md,
+  },
+  instructionHit: {
+    width: '100%',
+    alignItems: 'center',
   },
   instruction: {
     fontFamily: serif,
+    fontSize: 36,
+    lineHeight: 44,
     fontWeight: '500',
+    textAlign: 'center',
     marginTop: spacing.lg,
-    marginBottom: spacing.lg,
+    marginBottom: spacing.xl,
     maxWidth: 340,
+    paddingHorizontal: spacing.sm,
   },
-  footer: {
-    marginTop: 'auto',
-    paddingTop: spacing.lg,
+  placeholder: {
+    textAlign: 'center',
+    marginTop: spacing.md,
+    maxWidth: 280,
+    opacity: 0.72,
   },
 });
