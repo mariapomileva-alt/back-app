@@ -66,13 +66,6 @@
     "softBeige": "Soft Sage",
     "selectHint": "Applies this look immediately"
   },
-  "placeholders": {
-    "tool": "Support will begin here.",
-    "settings": "This section will be ready in a later stage.",
-    "voice": "Voice and sound settings will arrive later. Listen is already available from Home.",
-    "patterns": "A quieter view of your patterns will arrive later. Choices you make in the tools already stay on this device.",
-    "subscription": "There is nothing to buy here yet. Subscription will arrive later."
-  },
   "patterns": {
     "intro": "This stays on this device. Back never uploads it.",
     "breathe": "Last Breathe pattern",
