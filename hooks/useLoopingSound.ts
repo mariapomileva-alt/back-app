@@ -8,6 +8,7 @@ import {
   type AudioSource,
 } from 'expo-audio';
 
+import { attemptPlayback } from '@/features/audio/playback';
 import { DEFAULT_SOUND_VOLUME } from '@/storage/preferences';
 
 const FADE_MS = 1400;
@@ -20,6 +21,8 @@ type Options = {
   initialVolume?: number;
   lockScreenTitle?: string;
 };
+
+export type LoopingPlayback = 'playing' | 'paused' | 'blocked';
 
 function applyVolume(player: { volume: number }, value: number) {
   try {
@@ -56,7 +59,7 @@ export function useLoopingSound({
     keepAudioSessionActive: true,
   });
   const status = useAudioPlayerStatus(player);
-  const [isPlaying, setIsPlaying] = useState(autoPlay);
+  const [playback, setPlayback] = useState<LoopingPlayback>(autoPlay ? 'paused' : 'paused');
   const [muted, setMuted] = useState(initialMuted);
   const [volume, setVolume] = useState(initialVolume);
 
@@ -77,7 +80,10 @@ export function useLoopingSound({
   const fadeTarget = useRef(initialVolume);
   const wantsPlay = useRef(autoPlay);
   const suppressToggle = useRef(true);
-  wantsPlay.current = isPlaying;
+  const playerRef = useRef(player);
+  playerRef.current = player;
+
+  const isPlaying = playback === 'playing';
 
   const stopFade = useCallback(() => {
     if (fadeFrame.current != null) {
@@ -133,6 +139,35 @@ export function useLoopingSound({
     }
   }, [player]);
 
+  const startPlayback = useCallback(async (): Promise<boolean> => {
+    wantsPlay.current = true;
+    await configureListenAudioSession();
+    const started = await attemptPlayback(playerRef.current);
+    if (!started) {
+      wantsPlay.current = false;
+      setPlayback('blocked');
+      return false;
+    }
+    if (muted) {
+      applyVolume(playerRef.current, 0);
+    } else {
+      fadeIn(volume);
+    }
+    setPlayback('playing');
+    return true;
+  }, [fadeIn, muted, volume]);
+
+  const stopPlayback = useCallback(() => {
+    wantsPlay.current = false;
+    stopFade();
+    try {
+      playerRef.current.pause();
+    } catch {
+      // Ignore a released player.
+    }
+    setPlayback((current) => (current === 'blocked' ? 'blocked' : 'paused'));
+  }, [stopFade]);
+
   useEffect(() => {
     let cancelled = false;
     suppressToggle.current = true;
@@ -157,22 +192,27 @@ export function useLoopingSound({
         }
         applyVolume(player, muted ? 0 : volume);
         suppressToggle.current = false;
+        setPlayback('paused');
         return;
       }
       attachLockScreen();
-      if (isPlaying) {
-        applyVolume(player, 0);
-        try {
-          player.play();
-        } catch {
-          setIsPlaying(false);
-          suppressToggle.current = false;
+      if (wantsPlay.current || autoPlay) {
+        const started = await attemptPlayback(player);
+        if (cancelled) {
           return;
         }
-        if (muted) {
-          applyVolume(player, 0);
+        if (started) {
+          if (muted) {
+            applyVolume(player, 0);
+          } else {
+            fadeIn(volume);
+          }
+          wantsPlay.current = true;
+          setPlayback('playing');
         } else {
-          fadeIn(volume);
+          wantsPlay.current = false;
+          applyVolume(player, muted ? 0 : volume);
+          setPlayback('blocked');
         }
       } else {
         try {
@@ -181,6 +221,7 @@ export function useLoopingSound({
           // Ignore.
         }
         applyVolume(player, muted ? 0 : volume);
+        setPlayback((current) => (current === 'playing' ? 'paused' : current));
       }
       suppressToggle.current = false;
     }
@@ -224,18 +265,15 @@ export function useLoopingSound({
     if (!enabled || suppressToggle.current) {
       return;
     }
-    try {
-      if (isPlaying) {
-        player.play();
-      } else {
-        player.pause();
-      }
-    } catch {
-      if (isPlaying) {
-        setIsPlaying(false);
-      }
+    if (playback === 'playing') {
+      return;
     }
-  }, [enabled, isPlaying, player]);
+    try {
+      player.pause();
+    } catch {
+      // Ignore.
+    }
+  }, [enabled, playback, player]);
 
   useEffect(() => {
     if (!enabled || !status.isLoaded) {
@@ -249,7 +287,14 @@ export function useLoopingSound({
   }, [enabled, player, status.isLoaded]);
 
   useEffect(() => {
-    if (!enabled || !isPlaying || !status.didJustFinish) {
+    if (status.playing && playback !== 'playing') {
+      setPlayback('playing');
+      wantsPlay.current = true;
+    }
+  }, [playback, status.playing]);
+
+  useEffect(() => {
+    if (!enabled || playback !== 'playing' || !status.didJustFinish) {
       return;
     }
     try {
@@ -262,7 +307,7 @@ export function useLoopingSound({
     } catch {
       // Native loop usually prevents didJustFinish; this is a web/fallback path.
     }
-  }, [enabled, isPlaying, player, status.didJustFinish]);
+  }, [enabled, playback, player, status.didJustFinish]);
 
   useEffect(() => {
     const onChange = (next: AppStateStatus) => {
@@ -273,11 +318,12 @@ export function useLoopingSound({
       if (!enabled || !wantsPlay.current) {
         return;
       }
-      try {
-        player.play();
-      } catch {
-        // Ignore.
-      }
+      void attemptPlayback(player).then((started) => {
+        if (!started) {
+          wantsPlay.current = false;
+          setPlayback('blocked');
+        }
+      });
     };
     const sub = AppState.addEventListener('change', onChange);
     return () => sub.remove();
@@ -292,15 +338,26 @@ export function useLoopingSound({
 
   return {
     isPlaying,
+    playback,
     muted,
     volume,
-    play: () => setIsPlaying(true),
-    pause: () => setIsPlaying(false),
-    toggle: () => setIsPlaying((value) => !value),
+    play: () => {
+      void startPlayback();
+    },
+    pause: stopPlayback,
+    toggle: () => {
+      if (playback === 'playing') {
+        stopPlayback();
+        return;
+      }
+      void startPlayback();
+    },
     toggleMute: () => setMuted((value) => !value),
     setVolume,
     replay: () => {
-      void player.seekTo(0).then(() => setIsPlaying(true));
+      void player.seekTo(0).then(() => {
+        void startPlayback();
+      });
     },
   };
 }

@@ -6,6 +6,8 @@ import {
   type AudioSource,
 } from 'expo-audio';
 
+import { attemptPlayback } from '@/features/audio/playback';
+
 type Options = {
   source: AudioSource;
   autoPlay?: boolean;
@@ -56,7 +58,10 @@ export function useGuidedAudio({ source, autoPlay = false, initialMuted = false 
         player.loop = false;
         applyVolume();
         if (isPlaying) {
-          player.play();
+          const started = await attemptPlayback(player);
+          if (!started) {
+            setIsPlaying(false);
+          }
         } else {
           player.pause();
         }
@@ -84,12 +89,16 @@ export function useGuidedAudio({ source, autoPlay = false, initialMuted = false 
   }, [applyVolume]);
 
   useEffect(() => {
+    if (isPlaying) {
+      void attemptPlayback(player).then((started) => {
+        if (!started) {
+          setIsPlaying(false);
+        }
+      });
+      return;
+    }
     try {
-      if (isPlaying) {
-        player.play();
-      } else {
-        player.pause();
-      }
+      player.pause();
     } catch {
       // Ignore.
     }

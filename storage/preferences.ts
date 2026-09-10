@@ -74,15 +74,26 @@ export async function saveReduceMotionOverride(enabled: boolean): Promise<void> 
   }
 }
 
+let lastSoundIdCache: string | null | undefined;
+
+/** Sync last Listen sound after the first load so playback can start without waiting. */
+export function peekLastSoundId(): string | null | undefined {
+  return lastSoundIdCache;
+}
+
 export async function loadLastSoundId(): Promise<string | null> {
   try {
-    return await AsyncStorage.getItem(storageKeys.lastSoundId);
+    const value = await AsyncStorage.getItem(storageKeys.lastSoundId);
+    lastSoundIdCache = value;
+    return value;
   } catch {
+    lastSoundIdCache = lastSoundIdCache ?? null;
     return null;
   }
 }
 
 export async function saveLastSoundId(id: string): Promise<void> {
+  lastSoundIdCache = id;
   try {
     await AsyncStorage.setItem(storageKeys.lastSoundId, id);
   } catch {
@@ -223,6 +234,7 @@ const rememberedPreferenceKeys = [
 
 /** Clears My patterns preference keys only. Leaves contact and Read memory alone. */
 export async function clearRememberedPreferences(): Promise<void> {
+  lastSoundIdCache = undefined;
   try {
     await AsyncStorage.multiRemove([...rememberedPreferenceKeys]);
   } catch {
