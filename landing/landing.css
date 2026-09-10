@@ -515,7 +515,7 @@ button {
 }
 
 .tool {
-  min-height: 260px;
+  min-height: 0;
   padding: 26px 26px 28px;
   border: 1px solid color-mix(in srgb, var(--divider) 48%, var(--ivory));
   border-radius: 28px;
