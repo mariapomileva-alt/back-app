@@ -1,18 +1,37 @@
+import { useCallback, useState } from 'react';
 import { StyleSheet, View } from 'react-native';
-import { useRouter } from 'expo-router';
+import { useFocusEffect, useRouter } from 'expo-router';
 
 import { ScreenContainer } from '@/components/layout/ScreenContainer';
 import { ScreenHeader } from '@/components/navigation/ScreenHeader';
 import { SettingsRow } from '@/components/settings/SettingsRow';
 import { SettingsSection } from '@/components/settings/SettingsSection';
+import { getEmergencyByCountryCode } from '@/features/emergency/numbers';
 import { useTheme } from '@/hooks/useTheme';
 import { t } from '@/locales/i18n';
+import { loadEmergencyCountryCode } from '@/storage/emergencyCountry';
 import { spacing } from '@/theme/spacing';
 
 export default function SettingsScreen() {
   const router = useRouter();
   const { themeName, hapticsEnabled, reduceMotionOverride, setHapticsEnabled, setReduceMotionOverride } =
     useTheme();
+  const [emergencyCountry, setEmergencyCountry] = useState<string | null>(null);
+
+  useFocusEffect(
+    useCallback(() => {
+      let active = true;
+      void loadEmergencyCountryCode().then((code) => {
+        if (!active) {
+          return;
+        }
+        setEmergencyCountry(getEmergencyByCountryCode(code)?.countryName ?? null);
+      });
+      return () => {
+        active = false;
+      };
+    }, []),
+  );
 
   return (
     <ScreenContainer>
@@ -68,6 +87,7 @@ export default function SettingsScreen() {
         <SettingsSection title={t('settings.groups.safetyLegal')}>
           <SettingsRow
             label={t('settings.emergency')}
+            value={emergencyCountry ?? undefined}
             onPress={() => router.push('/settings/emergency')}
           />
           <SettingsRow

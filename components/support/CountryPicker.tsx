@@ -1,4 +1,5 @@
-import { Pressable, StyleSheet, View } from 'react-native';
+import { useRef } from 'react';
+import { Pressable, ScrollView, StyleSheet, View } from 'react-native';
 
 import { AppText } from '@/components/typography/AppText';
 import { listEmergencyCountries } from '@/features/emergency/numbers';
@@ -15,9 +16,26 @@ export function CountryPicker({ onSelect, selectedCountryCode }: Props) {
   const { theme } = useTheme();
   const countries = listEmergencyCountries();
   const selected = selectedCountryCode?.toUpperCase() ?? null;
+  const scrollRef = useRef<ScrollView>(null);
+  const selectedOffset = useRef<number | null>(null);
+
+  const scrollToLastCountry = () => {
+    const offset = selectedOffset.current;
+    if (offset == null) {
+      return;
+    }
+    scrollRef.current?.scrollTo({ y: Math.max(0, offset - spacing.md), animated: false });
+  };
 
   return (
-    <View style={styles.list}>
+    <ScrollView
+      ref={scrollRef}
+      style={styles.list}
+      contentContainerStyle={styles.content}
+      keyboardShouldPersistTaps="handled"
+      showsVerticalScrollIndicator={false}
+      onContentSizeChange={scrollToLastCountry}
+    >
       {countries.map((country) => {
         const isSelected = country.countryCode === selected;
 
@@ -28,6 +46,11 @@ export function CountryPicker({ onSelect, selectedCountryCode }: Props) {
             accessibilityLabel={country.countryName}
             accessibilityState={{ selected: isSelected }}
             onPress={() => onSelect(country.countryCode)}
+            onLayout={(event) => {
+              if (isSelected) {
+                selectedOffset.current = event.nativeEvent.layout.y;
+              }
+            }}
             style={({ pressed }) => [
               styles.row,
               {
@@ -47,13 +70,19 @@ export function CountryPicker({ onSelect, selectedCountryCode }: Props) {
           </Pressable>
         );
       })}
-    </View>
+      <View style={styles.bottom} />
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   list: {
+    flex: 1,
+    minHeight: 0,
     marginTop: spacing.sm,
+  },
+  content: {
+    paddingBottom: spacing.lg,
   },
   row: {
     minHeight: touch.min,
@@ -66,5 +95,8 @@ const styles = StyleSheet.create({
   },
   name: {
     flex: 1,
+  },
+  bottom: {
+    height: spacing.md,
   },
 });

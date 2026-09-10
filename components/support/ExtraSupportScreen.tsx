@@ -77,6 +77,7 @@ export function ExtraSupportScreen() {
     : null;
 
   const record = resolution?.status === 'ready' ? resolution.record : null;
+  const countrySource = resolution?.status === 'ready' ? resolution.source : null;
   const shownContact = contact ?? (previewPerson ? PREVIEW_CONTACT : null);
   const canMessage = canPlaceLocalCall(shownContact?.phoneNumber);
   const canCallPerson = canPlaceLocalCall(shownContact?.phoneNumber);
@@ -94,7 +95,7 @@ export function ExtraSupportScreen() {
     return (
       <View style={[styles.root, { backgroundColor: theme.colors.background }]}>
         <PaperGrain opacity={0.1} />
-        <ScreenContainer style={styles.transparent}>
+        <ScreenContainer scroll={false} style={styles.transparent} contentStyle={styles.pickerBody}>
           <ScreenHeader
             title={t('extraSupport.chooseCountry')}
             onClose={() => setPickingCountry(false)}
@@ -119,7 +120,7 @@ export function ExtraSupportScreen() {
 
         <View style={[styles.steps, compact && styles.stepsCompact]}>
           {STEP_KEYS.map((key) => (
-            <AppText key={key} variant="body" style={styles.step}>
+            <AppText key={key} variant="body" style={[styles.step, compact && styles.stepCompact]}>
               {t(`extraSupport.steps.${key}`)}
             </AppText>
           ))}
@@ -156,10 +157,14 @@ export function ExtraSupportScreen() {
 
         <View style={[styles.separator, compact && styles.separatorCompact, { backgroundColor: theme.colors.border }]} />
 
-        <AppText variant="section" style={styles.urgentTitle}>
+        <AppText variant="section" style={[styles.urgentTitle, compact && styles.urgentTitleCompact]}>
           {t('extraSupport.urgentTitle')}
         </AppText>
-        <AppText variant="body" tone="secondary" style={styles.urgentBody}>
+        <AppText
+          variant="body"
+          tone="secondary"
+          style={[styles.urgentBody, compact && styles.urgentBodyCompact]}
+        >
           {t('extraSupport.urgentBody')}
         </AppText>
 
@@ -175,6 +180,7 @@ export function ExtraSupportScreen() {
             }}
             style={({ pressed }) => [
               styles.emergencyButton,
+              compact && styles.emergencyButtonCompact,
               {
                 backgroundColor: mixHex(theme.colors.surfaceSecondary, theme.colors.forest, 0.12),
                 borderColor: mixHex(theme.colors.border, theme.colors.forest, 0.28),
@@ -201,12 +207,33 @@ export function ExtraSupportScreen() {
           </View>
         ) : null}
 
+        {record && countrySource === 'deviceRegion' ? (
+          <SecondaryButton
+            label={t('extraSupport.keepCountry')}
+            accessibilityHint={t('extraSupport.keepCountryHint')}
+            onPress={() => {
+              void onSelectCountry(record.countryCode);
+            }}
+            style={styles.keepCountry}
+          />
+        ) : null}
+
         {record ? (
           <TextButton
-            label={t('extraSupport.chooseCountry')}
+            label={
+              countrySource === 'stored'
+                ? t('extraSupport.changeCountry')
+                : t('extraSupport.chooseCountry')
+            }
             onPress={() => setPickingCountry(true)}
             style={styles.changeCountry}
           />
+        ) : null}
+
+        {record && countrySource === 'stored' ? (
+          <AppText variant="secondary" tone="secondary" style={styles.savedCountry}>
+            {t('extraSupport.savedCountry')}
+          </AppText>
         ) : null}
       </ScreenContainer>
     </View>
@@ -220,6 +247,10 @@ const styles = StyleSheet.create({
   transparent: {
     backgroundColor: 'transparent',
   },
+  pickerBody: {
+    flex: 1,
+    minHeight: 0,
+  },
   heading: {
     fontFamily: serif,
     fontSize: 26,
@@ -230,7 +261,9 @@ const styles = StyleSheet.create({
     maxWidth: 320,
   },
   headingCompact: {
-    marginBottom: spacing.md,
+    fontSize: 22,
+    lineHeight: 28,
+    marginBottom: spacing.sm,
   },
   steps: {
     gap: spacing.md,
@@ -238,12 +271,16 @@ const styles = StyleSheet.create({
     marginBottom: spacing.xl,
   },
   stepsCompact: {
-    gap: spacing.sm,
-    marginBottom: spacing.md,
+    gap: spacing.xs,
+    marginBottom: spacing.sm,
   },
   step: {
     fontSize: 17,
     lineHeight: 24,
+  },
+  stepCompact: {
+    fontSize: 16,
+    lineHeight: 22,
   },
   human: {
     gap: spacing.sm,
@@ -261,9 +298,15 @@ const styles = StyleSheet.create({
   urgentTitle: {
     marginBottom: spacing.sm,
   },
+  urgentTitleCompact: {
+    marginBottom: spacing.xs,
+  },
   urgentBody: {
     marginBottom: spacing.md,
     maxWidth: 340,
+  },
+  urgentBodyCompact: {
+    marginBottom: spacing.sm,
   },
   emergencyButton: {
     minHeight: touch.comfortable,
@@ -275,6 +318,9 @@ const styles = StyleSheet.create({
     paddingVertical: spacing.md,
     gap: spacing.xxs,
   },
+  emergencyButtonCompact: {
+    paddingVertical: spacing.sm,
+  },
   emergencyCountry: {
     textAlign: 'center',
   },
@@ -284,9 +330,15 @@ const styles = StyleSheet.create({
   findLocal: {
     fontWeight: '600',
   },
+  keepCountry: {
+    marginTop: spacing.sm,
+  },
   changeCountry: {
     marginTop: spacing.sm,
     alignSelf: 'flex-start',
     paddingHorizontal: 0,
+  },
+  savedCountry: {
+    marginTop: spacing.xxs,
   },
 });

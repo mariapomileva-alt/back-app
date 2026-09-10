@@ -101,6 +101,9 @@
     "worseBody": "Let’s get more support.",
     "done": "Done",
     "share": "Share Back",
+    "shareMessage": "Back is quiet support for the next minute. Six tools, on this device.",
+    "shareHint": "Opens the system share sheet. Nothing is sent until you choose where.",
+    "shareUnavailable": "Sharing isn’t available here.",
     "callPerson": "Call my person",
     "emergency": "Extra support",
     "returnTools": "Return to tools",
@@ -129,7 +132,11 @@
     "urgentInCountry": "Urgent help in {country}",
     "emergencyHint": "Opens the phone app. The call starts only if you confirm.",
     "findLocal": "Find local emergency help",
-    "chooseCountry": "Choose country"
+    "chooseCountry": "Choose country",
+    "changeCountry": "Change country",
+    "keepCountry": "Keep this country",
+    "keepCountryHint": "Saves this country on this device for next time",
+    "savedCountry": "Saved on this device"
   },
   "supportSetup": {
     "title": "Someone I trust",
@@ -386,6 +393,7 @@
   "notFound": {
     "title": "This page isn’t here",
     "body": "Return to Back whenever you need.",
-    "home": "Go to Back"
+    "home": "Go to Back",
+    "homeHint": "Returns to the six tools"
   }
 }

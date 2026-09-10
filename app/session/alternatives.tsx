@@ -1,4 +1,5 @@
-import { Share, StyleSheet, View } from 'react-native';
+import { useState } from 'react';
+import { StyleSheet, View } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 
 import { PrimaryButton } from '@/components/buttons/PrimaryButton';
@@ -10,6 +11,7 @@ import { ScreenContainer } from '@/components/layout/ScreenContainer';
 import { ScreenHeader } from '@/components/navigation/ScreenHeader';
 import { AppText } from '@/components/typography/AppText';
 import { isHomeToolId } from '@/features/session/activeSession';
+import { shareBack } from '@/features/session/shareBack';
 import { alternativesForIntent } from '@/features/session/suggestions';
 import { useTheme } from '@/hooks/useTheme';
 import { t } from '@/locales/i18n';
@@ -19,6 +21,7 @@ import { spacing } from '@/theme/spacing';
 export default function SessionAlternativesScreen() {
   const router = useRouter();
   const { theme } = useTheme();
+  const [shareUnavailable, setShareUnavailable] = useState(false);
   const { feeling, tool, intent } = useLocalSearchParams<{
     feeling?: string;
     tool?: string;
@@ -55,15 +58,18 @@ export default function SessionAlternativesScreen() {
             <PrimaryButton label={t('session.done')} onPress={() => router.replace('/')} />
             <SecondaryButton
               label={t('session.share')}
+              accessibilityHint={t('session.shareHint')}
               onPress={() => {
-                void Share.share({
-                  title: t('session.share'),
-                  message: t('about.body'),
-                }).catch(() => {
-                  // Share can be unavailable on desktop web or cancelled.
+                void shareBack().then((result) => {
+                  setShareUnavailable(result === 'unavailable');
                 });
               }}
             />
+            {shareUnavailable ? (
+              <AppText variant="secondary" tone="secondary">
+                {t('session.shareUnavailable')}
+              </AppText>
+            ) : null}
           </View>
         ) : (
           <View style={styles.grid}>
