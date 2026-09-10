@@ -133,3 +133,70 @@ export async function saveLastDistractActivity(id: string): Promise<void> {
     // Keep the in-memory selection if local storage is unavailable.
   }
 }
+
+export type RememberedChoices = {
+  lastBreathPattern: string | null;
+  lastDistractActivity: string | null;
+  lastSoundId: string | null;
+  themeName: ThemeName | null;
+  hapticsEnabled: boolean | null;
+  reduceMotionOverride: boolean | null;
+};
+
+function readOptionalBoolean(value: string | null): boolean | null {
+  if (value === null) {
+    return null;
+  }
+  return value === 'true';
+}
+
+/** What My patterns can show. Missing keys stay empty — defaults are not invented here. */
+export async function loadRememberedChoices(): Promise<RememberedChoices> {
+  try {
+    const [lastBreathPattern, lastDistractActivity, lastSoundId, themeName, haptics, reduceMotion] =
+      await Promise.all([
+        AsyncStorage.getItem(storageKeys.lastBreathPattern),
+        AsyncStorage.getItem(storageKeys.lastDistractActivity),
+        AsyncStorage.getItem(storageKeys.lastSoundId),
+        AsyncStorage.getItem(storageKeys.theme),
+        AsyncStorage.getItem(storageKeys.hapticsEnabled),
+        AsyncStorage.getItem(storageKeys.reduceMotionOverride),
+      ]);
+
+    return {
+      lastBreathPattern,
+      lastDistractActivity,
+      lastSoundId,
+      themeName: isThemeName(themeName) ? themeName : null,
+      hapticsEnabled: readOptionalBoolean(haptics),
+      reduceMotionOverride: readOptionalBoolean(reduceMotion),
+    };
+  } catch {
+    return {
+      lastBreathPattern: null,
+      lastDistractActivity: null,
+      lastSoundId: null,
+      themeName: null,
+      hapticsEnabled: null,
+      reduceMotionOverride: null,
+    };
+  }
+}
+
+const rememberedPreferenceKeys = [
+  storageKeys.theme,
+  storageKeys.hapticsEnabled,
+  storageKeys.reduceMotionOverride,
+  storageKeys.lastSoundId,
+  storageKeys.lastBreathPattern,
+  storageKeys.lastDistractActivity,
+] as const;
+
+/** Clears My patterns preference keys only. Leaves contact and Read memory alone. */
+export async function clearRememberedPreferences(): Promise<void> {
+  try {
+    await AsyncStorage.multiRemove([...rememberedPreferenceKeys]);
+  } catch {
+    // Keep going if local storage is unavailable.
+  }
+}

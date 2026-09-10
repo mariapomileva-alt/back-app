@@ -73,6 +73,23 @@
     "patterns": "A quieter view of your patterns will arrive later. Choices you make in the tools already stay on this device.",
     "subscription": "There is nothing to buy here yet. Subscription will arrive later."
   },
+  "patterns": {
+    "intro": "This stays on this device. Back never uploads it.",
+    "breathe": "Last Breathe pattern",
+    "distract": "Last Distract activity",
+    "listen": "Last Listen sound",
+    "theme": "Last theme",
+    "haptics": "Haptics",
+    "reduceMotion": "Reduce motion",
+    "empty": "Not saved yet",
+    "recent": "Recent tools",
+    "recentItem": "Recently: {tool} · {duration}",
+    "durationShort": "a short while",
+    "durationMinute": "about a minute",
+    "durationFew": "a few minutes",
+    "forget": "Forget this",
+    "forgetHint": "Removes these remembered choices and recent tools from this device"
+  },
   "session": {
     "outcome": "How do you feel now?",
     "alternatives": "We can try something different.",
@@ -330,7 +347,7 @@
   },
   "privacy": {
     "onDevice": "Everything Back uses for the six tools stays on this device. There is no account and no cloud.",
-    "stored": "That can include a support contact you save, Read memory, and preferences such as appearance and motion.",
+    "stored": "That can include a support contact you save, Read memory, preferences such as appearance and motion, and a short local list of recent tools.",
     "notSent": "None of this is sent to Back or anyone else. If you call or message, your phone app opens, and it starts only if you confirm.",
     "emergency": "Extra support can help you reach someone nearby. Back does not place the call for you.",
     "extraSupport": "Extra support",

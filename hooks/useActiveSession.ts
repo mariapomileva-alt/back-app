@@ -9,6 +9,7 @@ import {
   shouldOfferSessionOutcome,
   startOrContinueSession,
 } from '@/features/session/activeSession';
+import { recordClosedSession } from '@/storage/history';
 import type { HomeToolId } from '@/types';
 
 export type ActiveSessionControls = {
@@ -37,12 +38,13 @@ export function useActiveSession(
     const snapshot = consumeSession();
     const elapsedMs = snapshot?.elapsedMs ?? 0;
     const closedTool = snapshot?.tool ?? tool;
+    const { id: sessionId } = recordClosedSession({ tool: closedTool, durationMs: elapsedMs });
 
     // Never route to a paywall from an active session.
     if (shouldOfferSessionOutcome(elapsedMs)) {
       router.replace({
         pathname: '/session/outcome',
-        params: { tool: closedTool, durationMs: String(elapsedMs) },
+        params: { tool: closedTool, durationMs: String(elapsedMs), sessionId },
       });
       return;
     }

@@ -10,14 +10,35 @@ import { AppText } from '@/components/typography/AppText';
 import { isHomeToolId } from '@/features/session/activeSession';
 import { useTheme } from '@/hooks/useTheme';
 import { t } from '@/locales/i18n';
+import { saveSessionOutcome } from '@/storage/history';
 import { serif } from '@/theme/fonts';
 import { spacing } from '@/theme/spacing';
+import type { SessionOutcome } from '@/types';
+
+function firstParam(value: string | string[] | undefined): string | undefined {
+  return Array.isArray(value) ? value[0] : value;
+}
 
 export default function SessionOutcomeScreen() {
   const router = useRouter();
   const { theme } = useTheme();
-  const { tool } = useLocalSearchParams<{ tool?: string }>();
-  const closedTool = isHomeToolId(tool) ? tool : undefined;
+  const params = useLocalSearchParams<{ tool?: string; durationMs?: string; sessionId?: string }>();
+  const toolParam = firstParam(params.tool);
+  const closedTool = isHomeToolId(toolParam) ? toolParam : undefined;
+  const sessionId = firstParam(params.sessionId);
+  const durationMs = Number(firstParam(params.durationMs));
+
+  const chooseOutcome = (outcome: SessionOutcome) => {
+    void saveSessionOutcome(
+      sessionId,
+      outcome,
+      closedTool && Number.isFinite(durationMs) ? { tool: closedTool, durationMs } : undefined,
+    );
+    router.replace({
+      pathname: '/session/alternatives',
+      params: { feeling: outcome, ...(closedTool ? { tool: closedTool } : {}) },
+    });
+  };
 
   return (
     <View style={[styles.root, { backgroundColor: theme.colors.background }]}>
@@ -38,33 +59,9 @@ export default function SessionOutcomeScreen() {
         </View>
         <AppText style={styles.title}>{t('session.outcome')}</AppText>
         <View style={styles.list}>
-          <SupportCard
-            title={t('session.better')}
-            onPress={() =>
-              router.replace({
-                pathname: '/session/alternatives',
-                params: { feeling: 'better', ...(closedTool ? { tool: closedTool } : {}) },
-              })
-            }
-          />
-          <SupportCard
-            title={t('session.same')}
-            onPress={() =>
-              router.replace({
-                pathname: '/session/alternatives',
-                params: { feeling: 'same', ...(closedTool ? { tool: closedTool } : {}) },
-              })
-            }
-          />
-          <SupportCard
-            title={t('session.worse')}
-            onPress={() =>
-              router.replace({
-                pathname: '/session/alternatives',
-                params: { feeling: 'worse', ...(closedTool ? { tool: closedTool } : {}) },
-              })
-            }
-          />
+          <SupportCard title={t('session.better')} onPress={() => chooseOutcome('better')} />
+          <SupportCard title={t('session.same')} onPress={() => chooseOutcome('same')} />
+          <SupportCard title={t('session.worse')} onPress={() => chooseOutcome('worse')} />
         </View>
       </ScreenContainer>
     </View>

@@ -29,6 +29,7 @@ type ThemeContextValue = {
   setThemeName: (name: ThemeName) => void;
   setHapticsEnabled: (enabled: boolean) => void;
   setReduceMotionOverride: (enabled: boolean) => void;
+  reloadPreferences: () => Promise<void>;
 };
 
 const ThemeContext = createContext<ThemeContextValue | null>(null);
@@ -101,6 +102,13 @@ export function ThemeProvider({ children }: Props) {
     void saveReduceMotionOverride(enabled);
   }, []);
 
+  const reloadPreferences = useCallback(async () => {
+    const preferences = await loadPreferences();
+    setThemeNameState(preferences.themeName);
+    setHapticsEnabledState(preferences.hapticsEnabled);
+    setReduceMotionOverrideState(preferences.reduceMotionOverride);
+  }, []);
+
   const value = useMemo<ThemeContextValue>(
     () => ({
       theme,
@@ -112,6 +120,7 @@ export function ThemeProvider({ children }: Props) {
       setThemeName,
       setHapticsEnabled,
       setReduceMotionOverride,
+      reloadPreferences,
     }),
     [
       theme,
@@ -122,6 +131,7 @@ export function ThemeProvider({ children }: Props) {
       setThemeName,
       setHapticsEnabled,
       setReduceMotionOverride,
+      reloadPreferences,
     ],
   );
 
