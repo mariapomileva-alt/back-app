@@ -170,9 +170,6 @@
       "box": "Box 4-4-4-4"
     }
   },
-  "focus": {
-    "instruction": "Find the matching shape."
-  },
   "distract": {
     "choose": "Choose something simple.",
     "menu": "Distract menu",

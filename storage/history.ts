@@ -14,7 +14,6 @@ const TOOL_IDS = new Set<string>([
   'move',
   'listen',
   'read',
-  'focus',
   'call',
 ]);
 

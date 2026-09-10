@@ -36,10 +36,6 @@ export function DistractIcon({ color, size = 32 }: IconProps) {
   );
 }
 
-export function FocusIcon({ color, size = 32 }: IconProps) {
-  return <DistractIcon color={color} size={size} />;
-}
-
 export function GroundIcon({ color, size = 32 }: IconProps) {
   const stroke = useIconColor(color);
   return (
@@ -170,7 +166,6 @@ export function SettingsIcon({ color, size = 18 }: IconProps) {
 const toolIcons = {
   breathe: BreatheIcon,
   distract: DistractIcon,
-  focus: FocusIcon,
   ground: GroundIcon,
   move: MoveIcon,
   listen: ListenIcon,
