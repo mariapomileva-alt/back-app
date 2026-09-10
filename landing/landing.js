@@ -1,8 +1,8 @@
 const labels = {
-  soon: "Coming soon",
+  soon: "",
   getFile: "download .apk",
   store: "open store",
-  missing: "Coming soon",
+  missing: "",
 };
 
 const releases = window.BACK_RELEASES || {

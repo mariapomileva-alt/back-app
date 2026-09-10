@@ -251,7 +251,6 @@
   },
   "ground": {
     "continueHint": "Shows the next grounding instruction",
-    "audioPlaceholder": "TODO: REPLACE WITH PROFESSIONALLY RECORDED BACK GROUNDING AUDIO BEFORE RELEASE",
     "menu": "Grounding menu",
     "menuHint": "Opens the quiet grounding list",
     "tryAnotherHint": "Opens the quiet grounding list",
@@ -326,7 +325,8 @@
     "menu": "Sounds",
     "menuHint": "Opens the quiet sound list",
     "tryAnotherHint": "Opens the quiet sound list",
-    "placeholderAudio": "Placeholder audio",
+    "nowPlaying": "{name} playing",
+    "tapToPlay": "Tap to play",
     "sounds": {
       "rain": "Soft rain",
       "ocean": "Ocean",
@@ -361,7 +361,7 @@
     "openWeb": "Open web page"
   },
   "voice": {
-    "notShipped": "Guided voice is not shipped yet. Ground still uses on-screen instructions. Listen and Ground audio you hear now are placeholders, not production recordings.",
+    "intro": "Ground uses on-screen instructions. Listen can play quiet sound on this device.",
     "lastSound": "Last Listen sound",
     "lastSoundEmpty": "Not saved yet",
     "lastSoundNote": "Listen remembers the last sound you choose. That stays on this device.",
@@ -375,8 +375,7 @@
   "subscription": {
     "available": "The six tools stay available on this device.",
     "noPaywall": "Back does not sell access during or right after a session.",
-    "mock": "There is nothing to buy here. If a subscription is offered later, it will be explained on this screen.",
-    "later": "If a subscription is offered, it will be explained on this screen.",
+    "purchasingOff": "There is nothing to buy here.",
     "settings": "Settings",
     "settingsHint": "Returns to Settings"
   },

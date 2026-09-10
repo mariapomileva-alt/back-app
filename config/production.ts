@@ -11,7 +11,8 @@ export const productionConfig = {
   iosBundleIdentifier: 'app.back.selfhelp',
   androidPackage: 'app.back.selfhelp',
 
-  // TODO: add RevenueCat public SDK keys. Until then, subscription uses a local mock.
+  // Development mode: purchasing is disabled. Do not implement RevenueCat in this pass.
+  // TODO: add RevenueCat public SDK keys only when a real store product exists.
   revenueCatIosApiKey: null as string | null,
   revenueCatAndroidApiKey: null as string | null,
 

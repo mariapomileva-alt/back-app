@@ -47,7 +47,7 @@ export default function VoiceSettingsScreen() {
     <ScreenContainer>
       <ScreenHeader title={t('settings.voice')} />
       <View style={styles.body}>
-        <AppText variant="body">{t('voice.notShipped')}</AppText>
+        <AppText variant="body">{t('voice.intro')}</AppText>
         <View style={styles.block}>
           <AppText variant="secondary" tone="secondary">
             {t('voice.lastSound')}

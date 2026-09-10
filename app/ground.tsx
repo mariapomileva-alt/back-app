@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Pressable, StyleSheet, View, useWindowDimensions } from 'react-native';
 
 import { AudioControl } from '@/components/audio/AudioControl';
@@ -6,7 +6,7 @@ import { GroundStage } from '@/components/ground/GroundStage';
 import { ActiveSessionScreen } from '@/components/session/ActiveSessionScreen';
 import { SessionChoiceSheet } from '@/components/session/SessionChoiceSheet';
 import { AppText } from '@/components/typography/AppText';
-import { GROUND_AUDIO_PLACEHOLDER_TODO, groundAudio } from '@/features/ground/audio';
+import { groundAudio } from '@/features/ground/audio';
 import {
   defaultGroundSequenceId,
   groundSequenceIds,
@@ -24,9 +24,10 @@ export default function GroundScreen() {
   const { height, fontScale } = useWindowDimensions();
   const compact = height < 700 || fontScale > 1.35;
   const [soundMuted, setSoundMuted] = useState(false);
+  const narrationReady = groundAudio.ready;
   const audio = useGuidedAudio({
     source: groundAudio.source,
-    autoPlay: groundAudio.ready,
+    autoPlay: narrationReady,
     initialMuted: soundMuted,
   });
   const [paused, setPaused] = useState(false);
@@ -34,6 +35,7 @@ export default function GroundScreen() {
   const [chooserOpen, setChooserOpen] = useState(false);
   const { instructionKey, last, next, reset } = useGroundSequence(paused, sequenceId);
   const instruction = t(instructionKey);
+  const skipSequenceAudioReset = useRef(true);
 
   useEffect(() => {
     let cancelled = false;
@@ -47,10 +49,24 @@ export default function GroundScreen() {
     };
   }, []);
 
+  useEffect(() => {
+    if (skipSequenceAudioReset.current) {
+      skipSequenceAudioReset.current = false;
+      return;
+    }
+    if (!narrationReady) {
+      audio.pause();
+      return;
+    }
+    audio.replay();
+    // Restart narration with the new grounding list only.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [sequenceId]);
+
   const onPlayPause = () => {
     if (paused) {
       setPaused(false);
-      if (groundAudio.ready) {
+      if (narrationReady) {
         audio.play();
       }
       return;
@@ -62,7 +78,9 @@ export default function GroundScreen() {
   const replay = () => {
     reset();
     setPaused(false);
-    audio.replay();
+    if (narrationReady) {
+      audio.replay();
+    }
   };
 
   const openChooser = () => setChooserOpen(true);
@@ -74,68 +92,71 @@ export default function GroundScreen() {
   };
 
   return (
-    <>
-      <ActiveSessionScreen
-        tool="ground"
-        title={t('home.tools.ground')}
-        onTryAnother={openChooser}
-        tryAnotherHint={t('ground.tryAnotherHint')}
-        onBack={openChooser}
-        backLabel={t('ground.menu')}
-        backHint={t('ground.menuHint')}
-      >
-        <View style={[styles.stage, compact && styles.stageCompact]}>
-          <GroundStage />
-          <Pressable
-            accessibilityRole={last ? 'text' : 'button'}
-            accessibilityLabel={instruction}
-            accessibilityHint={last ? undefined : t('ground.continueHint')}
-            onPress={last ? undefined : next}
-            style={styles.instructionHit}
-          >
-            <AppText
-              variant="instruction"
-              accessibilityLiveRegion="polite"
-              accessible={false}
-              style={[styles.instruction, compact && styles.instructionCompact]}
+    <ActiveSessionScreen
+      tool="ground"
+      title={t('home.tools.ground')}
+      onTryAnother={openChooser}
+      tryAnotherHint={t('ground.tryAnotherHint')}
+      onBack={openChooser}
+      backLabel={t('ground.menu')}
+      backHint={t('ground.menuHint')}
+      backNavigates={!chooserOpen}
+    >
+      {(controls) => (
+        <>
+          <View style={[styles.stage, compact && styles.stageCompact]}>
+            <GroundStage />
+            <Pressable
+              accessibilityRole={last ? 'text' : 'button'}
+              accessibilityLabel={instruction}
+              accessibilityHint={last ? undefined : t('ground.continueHint')}
+              onPress={last ? undefined : next}
+              style={styles.instructionHit}
             >
-              {instruction}
-            </AppText>
-          </Pressable>
-          <AudioControl
-            isPlaying={!paused}
-            muted={audio.muted}
-            onPlayPause={onPlayPause}
-            onMute={() => {
-              const nextMuted = !audio.muted;
-              void saveSoundMuted(nextMuted);
-              audio.toggleMute();
+              <AppText
+                variant="instruction"
+                accessibilityLiveRegion="polite"
+                accessible={false}
+                style={[styles.instruction, compact && styles.instructionCompact]}
+              >
+                {instruction}
+              </AppText>
+            </Pressable>
+            <AudioControl
+              isPlaying={!paused}
+              muted={audio.muted}
+              onPlayPause={onPlayPause}
+              onMute={
+                narrationReady
+                  ? () => {
+                      const nextMuted = !audio.muted;
+                      void saveSoundMuted(nextMuted);
+                      audio.toggleMute();
+                    }
+                  : undefined
+              }
+              onReplay={replay}
+            />
+          </View>
+          <SessionChoiceSheet
+            visible={chooserOpen}
+            title={t('ground.menu')}
+            selectedId={sequenceId}
+            options={groundSequenceIds.map((id) => ({
+              id,
+              label: t(`ground.sequences.${id}`),
+            }))}
+            onSelect={(id) => {
+              if (isGroundSequenceId(id)) {
+                selectSequence(id);
+              }
             }}
-            onReplay={replay}
+            onDismiss={() => setChooserOpen(false)}
+            onHardwareBack={controls.close}
           />
-          {groundAudio.ready ? null : (
-            <AppText variant="secondary" tone="secondary" style={styles.placeholder}>
-              {GROUND_AUDIO_PLACEHOLDER_TODO}
-            </AppText>
-          )}
-        </View>
-      </ActiveSessionScreen>
-      <SessionChoiceSheet
-        visible={chooserOpen}
-        title={t('ground.menu')}
-        selectedId={sequenceId}
-        options={groundSequenceIds.map((id) => ({
-          id,
-          label: t(`ground.sequences.${id}`),
-        }))}
-        onSelect={(id) => {
-          if (isGroundSequenceId(id)) {
-            selectSequence(id);
-          }
-        }}
-        onDismiss={() => setChooserOpen(false)}
-      />
-    </>
+        </>
+      )}
+    </ActiveSessionScreen>
   );
 }
 
@@ -169,11 +190,5 @@ const styles = StyleSheet.create({
     lineHeight: 34,
     marginTop: spacing.md,
     marginBottom: spacing.md,
-  },
-  placeholder: {
-    textAlign: 'center',
-    marginTop: spacing.md,
-    maxWidth: 280,
-    opacity: 0.72,
   },
 });

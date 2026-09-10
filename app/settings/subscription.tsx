@@ -5,7 +5,6 @@ import { TextButton } from '@/components/buttons/TextButton';
 import { ScreenContainer } from '@/components/layout/ScreenContainer';
 import { ScreenHeader } from '@/components/navigation/ScreenHeader';
 import { AppText } from '@/components/typography/AppText';
-import { hasRevenueCatConfig } from '@/config/production';
 import { t } from '@/locales/i18n';
 import { spacing } from '@/theme/spacing';
 
@@ -18,9 +17,7 @@ export default function SubscriptionScreen() {
       <View style={styles.body}>
         <AppText variant="body">{t('subscription.available')}</AppText>
         <AppText variant="body">{t('subscription.noPaywall')}</AppText>
-        <AppText variant="body">
-          {hasRevenueCatConfig() ? t('subscription.later') : t('subscription.mock')}
-        </AppText>
+        <AppText variant="body">{t('subscription.purchasingOff')}</AppText>
         <TextButton
           label={t('subscription.settings')}
           accessibilityHint={t('subscription.settingsHint')}
