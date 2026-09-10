@@ -1,37 +1,48 @@
-import Svg, { G, Path } from 'react-native-svg';
+import Svg, { Circle, G, Path } from 'react-native-svg';
 
 import { useTheme } from '@/hooks/useTheme';
 
 import { MarkFrame } from './MarkFrame';
-import { markViewBox, strokeRegular } from './markLanguage';
+import { markViewBox } from './markLanguage';
 
-const leftHand =
-  'M22 56c-1.4-7.2 2.4-11.2 10-11.2h1V27.2c0-3.6 4.6-3.8 4.8.2V24c0-3.8 4.8-3.8 5 .4v-.6c0-4 5-3.8 5 .8v2c0-3.2 4.6-2.6 4.6 2.2V44.8h1.2c5.6.4 7.6 5.6 4.6 11-4 7.2-20 9-31.2 4.8C23.4 59.4 22.4 58 22 56Z';
+function HumanFootprint({ fill, opacity }: { fill: string; opacity: number }) {
+  return (
+    <G fill={fill} opacity={opacity}>
+      <Path d="M-4.4 15.6C-7.4 15.4-8.6 11.2-7.2 7C-5.4 1.2-4.2-6.2 0.2-10.4C3.6-14 11-14.2 13.2-9.8C15-6.2 13.2 1.4 10.6 7.4C9 12.4 6.4 16 1.2 16.2C-1.6 16.4-2.8 15.8-4.4 15.6Z" />
+      <Circle cx={-4.8} cy={-13} r={1.85} />
+      <Circle cx={-1.2} cy={-15.4} r={2.1} />
+      <Circle cx={2.8} cy={-16.2} r={2.25} />
+      <Circle cx={6.8} cy={-15} r={2.4} />
+      <Circle cx={10.6} cy={-11.8} r={2.75} />
+    </G>
+  );
+}
 
-const leftThumb = 'M32.5 45.2c-6-1.8-9.8-7-6.6-11.2 2.8-3.8 9.4-1 10.6 5.2';
+function CatPaw({ fill, opacity }: { fill: string; opacity: number }) {
+  return (
+    <G fill={fill} opacity={opacity}>
+      <Path d="M-7.2 2C-8.6 6.4-4.6 10.2 0 10.4C4.6 10.2 8.6 6.4 7.2 2C6-1.2 2.4 0 0 2.6C-2.4 0-6-1.2-7.2 2Z" />
+      <Circle cx={-8.2} cy={-5} r={2.55} />
+      <Circle cx={-2.8} cy={-8} r={2.75} />
+      <Circle cx={2.8} cy={-8} r={2.75} />
+      <Circle cx={8.2} cy={-5} r={2.55} />
+    </G>
+  );
+}
 
 export function MoveMark() {
   const { theme } = useTheme();
-  const ink = theme.colors.markSecondary;
+  const human = theme.colors.markSecondary;
+  const paw = theme.colors.markPrimary;
 
   return (
     <MarkFrame>
       <Svg width="100%" height="100%" viewBox={markViewBox} preserveAspectRatio="xMidYMid meet">
-        <G opacity={0.78} fill="none" stroke={ink} strokeWidth={strokeRegular} strokeLinejoin="round" strokeLinecap="round">
-          <Path d={leftHand} />
-          <Path d={leftThumb} />
+        <G transform="translate(36 50) rotate(-16)">
+          <HumanFootprint fill={human} opacity={0.56} />
         </G>
-        <G
-          opacity={0.78}
-          fill="none"
-          stroke={ink}
-          strokeWidth={strokeRegular}
-          strokeLinejoin="round"
-          strokeLinecap="round"
-          transform="matrix(-1 0 0 1 120 0)"
-        >
-          <Path d={leftHand} />
-          <Path d={leftThumb} />
+        <G transform="translate(82 24) rotate(12) scale(1.12)">
+          <CatPaw fill={paw} opacity={0.46} />
         </G>
       </Svg>
     </MarkFrame>
