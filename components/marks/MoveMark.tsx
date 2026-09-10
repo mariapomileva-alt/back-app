@@ -18,31 +18,19 @@ function HumanFootprint({ fill, opacity }: { fill: string; opacity: number }) {
   );
 }
 
-function CatPaw({ fill, opacity }: { fill: string; opacity: number }) {
-  return (
-    <G fill={fill} opacity={opacity}>
-      <Path d="M-7.2 2C-8.6 6.4-4.6 10.2 0 10.4C4.6 10.2 8.6 6.4 7.2 2C6-1.2 2.4 0 0 2.6C-2.4 0-6-1.2-7.2 2Z" />
-      <Circle cx={-8.2} cy={-5} r={2.55} />
-      <Circle cx={-2.8} cy={-8} r={2.75} />
-      <Circle cx={2.8} cy={-8} r={2.75} />
-      <Circle cx={8.2} cy={-5} r={2.55} />
-    </G>
-  );
-}
-
 export function MoveMark() {
   const { theme } = useTheme();
-  const human = theme.colors.markSecondary;
-  const paw = theme.colors.markPrimary;
+  const planted = theme.colors.markSecondary;
+  const stepping = theme.colors.markPrimary;
 
   return (
     <MarkFrame>
       <Svg width="100%" height="100%" viewBox={markViewBox} preserveAspectRatio="xMidYMid meet">
-        <G transform="translate(36 50) rotate(-16)">
-          <HumanFootprint fill={human} opacity={0.56} />
+        <G transform="translate(38 50) rotate(-16) scale(-1 1)">
+          <HumanFootprint fill={planted} opacity={0.56} />
         </G>
-        <G transform="translate(82 24) rotate(12) scale(1.12)">
-          <CatPaw fill={paw} opacity={0.46} />
+        <G transform="translate(80 26) rotate(14)">
+          <HumanFootprint fill={stepping} opacity={0.42} />
         </G>
       </Svg>
     </MarkFrame>
