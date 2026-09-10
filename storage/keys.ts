@@ -4,6 +4,7 @@ export const storageKeys = {
   reduceMotionOverride: 'back.reduceMotionOverride',
   lastSoundId: 'back.lastSoundId',
   soundMuted: 'back.soundMuted',
+  soundVolume: 'back.soundVolume',
   lastBreathPattern: 'back.lastBreathPattern',
   lastDistractActivity: 'back.lastDistractActivity',
   firstLaunchSeen: 'back.firstLaunchSeen',

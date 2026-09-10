@@ -102,6 +102,35 @@ export async function saveSoundMuted(muted: boolean): Promise<void> {
   }
 }
 
+export const DEFAULT_SOUND_VOLUME = 0.7;
+
+function clampSoundVolume(value: number): number {
+  if (!Number.isFinite(value)) {
+    return DEFAULT_SOUND_VOLUME;
+  }
+  return Math.min(1, Math.max(0, value));
+}
+
+export async function loadSoundVolume(): Promise<number> {
+  try {
+    const value = await AsyncStorage.getItem(storageKeys.soundVolume);
+    if (value === null) {
+      return DEFAULT_SOUND_VOLUME;
+    }
+    return clampSoundVolume(Number.parseFloat(value));
+  } catch {
+    return DEFAULT_SOUND_VOLUME;
+  }
+}
+
+export async function saveSoundVolume(volume: number): Promise<void> {
+  try {
+    await AsyncStorage.setItem(storageKeys.soundVolume, String(clampSoundVolume(volume)));
+  } catch {
+    // Keep the in-memory volume if local storage is unavailable.
+  }
+}
+
 export async function loadLastBreathPattern(): Promise<string | null> {
   try {
     return await AsyncStorage.getItem(storageKeys.lastBreathPattern);

@@ -8,14 +8,16 @@ import {
   type AudioSource,
 } from 'expo-audio';
 
+import { DEFAULT_SOUND_VOLUME } from '@/storage/preferences';
+
 const FADE_MS = 1400;
-const DEFAULT_VOLUME = 0.7;
 
 type Options = {
   source: AudioSource;
   autoPlay?: boolean;
   enabled?: boolean;
   initialMuted?: boolean;
+  initialVolume?: number;
   lockScreenTitle?: string;
 };
 
@@ -46,6 +48,7 @@ export function useLoopingSound({
   autoPlay = true,
   enabled = true,
   initialMuted = false,
+  initialVolume = DEFAULT_SOUND_VOLUME,
   lockScreenTitle,
 }: Options) {
   const player = useAudioPlayer(source, {
@@ -55,7 +58,7 @@ export function useLoopingSound({
   const status = useAudioPlayerStatus(player);
   const [isPlaying, setIsPlaying] = useState(autoPlay);
   const [muted, setMuted] = useState(initialMuted);
-  const [volume, setVolume] = useState(DEFAULT_VOLUME);
+  const [volume, setVolume] = useState(initialVolume);
 
   const [prevInitialMuted, setPrevInitialMuted] = useState(initialMuted);
   if (initialMuted !== prevInitialMuted) {
@@ -63,9 +66,15 @@ export function useLoopingSound({
     setMuted(initialMuted);
   }
 
+  const [prevInitialVolume, setPrevInitialVolume] = useState(initialVolume);
+  if (initialVolume !== prevInitialVolume) {
+    setPrevInitialVolume(initialVolume);
+    setVolume(initialVolume);
+  }
+
   const fadeFrame = useRef<number | null>(null);
   const fading = useRef(false);
-  const fadeTarget = useRef(DEFAULT_VOLUME);
+  const fadeTarget = useRef(initialVolume);
   const wantsPlay = useRef(autoPlay);
   const suppressToggle = useRef(true);
   wantsPlay.current = isPlaying;

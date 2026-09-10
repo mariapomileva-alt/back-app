@@ -17,7 +17,14 @@ import {
 import { useLoopingSound } from '@/hooks/useLoopingSound';
 import { useTheme } from '@/hooks/useTheme';
 import { t } from '@/locales/i18n';
-import { loadLastSoundId, loadSoundMuted, saveLastSoundId } from '@/storage/preferences';
+import {
+  DEFAULT_SOUND_VOLUME,
+  loadLastSoundId,
+  loadSoundMuted,
+  loadSoundVolume,
+  saveLastSoundId,
+  saveSoundVolume,
+} from '@/storage/preferences';
 import { serif } from '@/theme/fonts';
 import { radius } from '@/theme/radius';
 import { spacing, touch } from '@/theme/spacing';
@@ -42,20 +49,24 @@ export default function ListenScreen() {
   const [soundId, setSoundId] = useState<ListenSoundId>(defaultListenSoundId);
   const [playbackReady, setPlaybackReady] = useState(false);
   const [soundMuted, setSoundMuted] = useState(false);
+  const [soundVolume, setSoundVolume] = useState(DEFAULT_SOUND_VOLUME);
   const [chooserOpen, setChooserOpen] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
-    void Promise.all([loadLastSoundId(), loadSoundMuted()]).then(([stored, muted]) => {
-      if (cancelled) {
-        return;
-      }
-      if (isListenSoundId(stored)) {
-        setSoundId(stored);
-      }
-      setSoundMuted(muted);
-      setPlaybackReady(true);
-    });
+    void Promise.all([loadLastSoundId(), loadSoundMuted(), loadSoundVolume()]).then(
+      ([stored, muted, volume]) => {
+        if (cancelled) {
+          return;
+        }
+        if (isListenSoundId(stored)) {
+          setSoundId(stored);
+        }
+        setSoundMuted(muted);
+        setSoundVolume(volume);
+        setPlaybackReady(true);
+      },
+    );
     return () => {
       cancelled = true;
     };
@@ -69,6 +80,7 @@ export default function ListenScreen() {
     enabled: playbackReady,
     autoPlay: true,
     initialMuted: soundMuted,
+    initialVolume: soundVolume,
     lockScreenTitle: t(selected.nameKey),
   });
   const visualHeight = visualHeightForWindow(windowHeight);
@@ -159,7 +171,13 @@ export default function ListenScreen() {
               </Svg>
             </AccessiblePressable>
           </View>
-          <VolumeBar value={audio.volume} onChange={audio.setVolume} />
+          <VolumeBar
+            value={audio.volume}
+            onChange={(value) => {
+              audio.setVolume(value);
+              void saveSoundVolume(value);
+            }}
+          />
         </View>
         <ScrollView
           horizontal

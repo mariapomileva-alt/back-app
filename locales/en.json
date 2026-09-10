@@ -375,6 +375,14 @@
     "body": "Back is rapid local support for the next minute, with six tools on this device.",
     "disclaimer": "Back is not a medical device and is not therapy."
   },
+  "subscription": {
+    "available": "The six tools stay available on this device.",
+    "noPaywall": "Back does not sell access during or right after a session.",
+    "mock": "There is nothing to buy here. If a subscription is offered later, it will be explained on this screen.",
+    "later": "If a subscription is offered, it will be explained on this screen.",
+    "settings": "Settings",
+    "settingsHint": "Returns to Settings"
+  },
   "notFound": {
     "title": "This page isn’t here",
     "body": "Return to Back whenever you need.",
