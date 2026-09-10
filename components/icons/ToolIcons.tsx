@@ -126,22 +126,6 @@ export function ReadIcon({ color, size = 32 }: IconProps) {
   );
 }
 
-export function CallIcon({ color, size = 32 }: IconProps) {
-  const stroke = useIconColor(color);
-  return (
-    <Svg width={size} height={size} viewBox="0 0 32 32">
-      <Circle cx="16" cy="11.2" r="4.1" fill="none" stroke={stroke} strokeWidth={strokeWidth} />
-      <Path
-        d="M8.8 24.2c.8-4.4 3.5-6.6 7.2-6.6s6.4 2.2 7.2 6.6"
-        fill="none"
-        stroke={stroke}
-        strokeWidth={strokeWidth}
-        strokeLinecap="round"
-      />
-    </Svg>
-  );
-}
-
 export function SettingsIcon({ color, size = 18 }: IconProps) {
   const stroke = useIconColor(color);
   return (
@@ -170,7 +154,6 @@ const toolIcons = {
   move: MoveIcon,
   listen: ListenIcon,
   read: ReadIcon,
-  call: CallIcon,
 } as const;
 
 export function ToolIcon({ name, color, size = 32 }: IconProps & { name: ToolId }) {

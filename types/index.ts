@@ -1,6 +1,6 @@
 export type HomeToolId = 'breathe' | 'distract' | 'ground' | 'move' | 'listen' | 'read';
 
-export type ToolId = HomeToolId | 'call';
+export type ToolId = HomeToolId;
 
 export type SessionOutcome = 'better' | 'same' | 'worse';
 
