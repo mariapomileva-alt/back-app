@@ -7,6 +7,7 @@ import {
   useActiveSession,
   type ActiveSessionControls,
 } from '@/hooks/useActiveSession';
+import { t } from '@/locales/i18n';
 import type { HomeToolId } from '@/types';
 
 type Props = {
@@ -16,10 +17,17 @@ type Props = {
   scroll?: boolean;
   right?: ReactNode;
   showSessionActions?: boolean;
-  onChangeActivity?: () => void;
-  changeActivityLabel?: string;
-  changeActivityHint?: string;
+  onTryAnother?: () => void;
+  tryAnotherLabel?: string;
+  tryAnotherHint?: string;
   extraActions?: ReactNode | ((controls: ActiveSessionControls) => ReactNode);
+  onClose?: () => void;
+  closeLabel?: string;
+  closeHint?: string;
+  onBack?: () => void;
+  backLabel?: string;
+  backHint?: string;
+  backNavigates?: boolean;
 };
 
 export function ActiveSessionScreen({
@@ -29,26 +37,42 @@ export function ActiveSessionScreen({
   scroll,
   right,
   showSessionActions = true,
-  onChangeActivity,
-  changeActivityLabel,
-  changeActivityHint,
+  onTryAnother,
+  tryAnotherLabel,
+  tryAnotherHint,
   extraActions,
+  onClose,
+  closeLabel,
+  closeHint,
+  onBack,
+  backLabel,
+  backHint,
+  backNavigates = false,
 }: Props) {
-  const controls = useActiveSession(tool);
+  const controls = useActiveSession(tool, backNavigates ? onBack : undefined);
   const body = typeof children === 'function' ? children(controls) : children;
   const extra = typeof extraActions === 'function' ? extraActions(controls) : extraActions;
 
   return (
-    <ExerciseShell title={title} onClose={controls.close} right={right} scroll={scroll}>
+    <ExerciseShell
+      title={title}
+      onClose={onClose ?? controls.close}
+      right={right}
+      scroll={scroll}
+      closeLabel={closeLabel ?? t('exercise.closeSession')}
+      closeHint={closeHint}
+      onBack={onBack}
+      backLabel={backLabel ?? (onBack ? t('common.back') : undefined)}
+      backHint={backHint}
+    >
       {scroll === false ? <View style={styles.body}>{body}</View> : body}
       {showSessionActions ? (
         <View style={styles.footer}>
           <SessionActions
             onOkay={controls.close}
-            onTrySomethingElse={controls.trySomethingElse}
-            onChangeActivity={onChangeActivity}
-            changeActivityLabel={changeActivityLabel}
-            changeActivityHint={changeActivityHint}
+            onTryAnother={onTryAnother}
+            tryAnotherLabel={tryAnotherLabel}
+            tryAnotherHint={tryAnotherHint}
             extra={extra}
           />
         </View>

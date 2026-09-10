@@ -1,4 +1,4 @@
-import { type ReactNode } from 'react';
+import { type ReactNode, useCallback } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { useRouter } from 'expo-router';
 
@@ -18,20 +18,25 @@ export function DistractActivityScreen({ activity, children, scroll = false }: P
   const router = useRouter();
   useRememberDistractActivity(activity);
 
-  const changeActivity = () => {
+  const goToChooser = useCallback(() => {
     beginInternalSessionNavigation();
     router.replace({
       pathname: '/distract',
       params: { choose: '1' },
     });
-  };
+  }, [router]);
 
   return (
     <ActiveSessionScreen
       tool="distract"
       title={t('home.tools.distract')}
       scroll={scroll}
-      onChangeActivity={changeActivity}
+      onTryAnother={goToChooser}
+      tryAnotherHint={t('distract.tryAnotherHint')}
+      onBack={goToChooser}
+      backLabel={t('distract.menu')}
+      backHint={t('distract.menuHint')}
+      backNavigates
     >
       <View style={scroll ? styles.scrollBody : styles.body}>{children}</View>
     </ActiveSessionScreen>
@@ -47,4 +52,3 @@ const styles = StyleSheet.create({
     flexGrow: 1,
   },
 });
-

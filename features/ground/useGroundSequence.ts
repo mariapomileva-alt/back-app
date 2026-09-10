@@ -1,7 +1,12 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { AppState, Platform, type AppStateStatus } from 'react-native';
 
-import { GROUND_STEP_MS, groundSteps } from '@/features/ground/steps';
+import {
+  GROUND_STEP_MS,
+  defaultGroundSequenceId,
+  stepsForGroundSequence,
+  type GroundSequenceId,
+} from '@/features/ground/steps';
 import { useHaptics } from '@/hooks/useHaptics';
 
 function isForeground(state: AppStateStatus): boolean {
@@ -11,13 +16,25 @@ function isForeground(state: AppStateStatus): boolean {
   return state === 'active';
 }
 
-export function useGroundSequence(paused: boolean) {
+export function useGroundSequence(
+  paused: boolean,
+  sequenceId: GroundSequenceId = defaultGroundSequenceId,
+) {
   const haptics = useHaptics();
+  const steps = stepsForGroundSequence(sequenceId);
   const [index, setIndex] = useState(0);
-  const last = index >= groundSteps.length - 1;
-  const instructionKey = groundSteps[index] ?? groundSteps[0]!;
+  const [activeId, setActiveId] = useState(sequenceId);
+  if (activeId !== sequenceId) {
+    setActiveId(sequenceId);
+    setIndex(0);
+  }
+  const last = index >= steps.length - 1;
+  const instructionKey = steps[index] ?? steps[0]!;
   const lightRef = useRef(haptics.light);
-  lightRef.current = haptics.light;
+
+  useEffect(() => {
+    lightRef.current = haptics.light;
+  }, [haptics.light]);
 
   useEffect(() => {
     if (paused || last) {
@@ -44,7 +61,7 @@ export function useGroundSequence(paused: boolean) {
           return;
         }
         lightRef.current();
-        setIndex((current) => Math.min(current + 1, groundSteps.length - 1));
+        setIndex((current) => Math.min(current + 1, steps.length - 1));
       }, remaining);
     };
 
@@ -74,17 +91,17 @@ export function useGroundSequence(paused: boolean) {
       clear();
       subscription.remove();
     };
-  }, [index, last, paused]);
+  }, [index, last, paused, steps.length]);
 
   const next = useCallback(() => {
     setIndex((current) => {
-      if (current >= groundSteps.length - 1) {
+      if (current >= steps.length - 1) {
         return current;
       }
       lightRef.current();
       return current + 1;
     });
-  }, []);
+  }, [steps.length]);
 
   const reset = useCallback(() => {
     setIndex(0);

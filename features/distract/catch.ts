@@ -1,4 +1,4 @@
-export type CatchTone = 'forest' | 'sage' | 'sand' | 'cool' | 'pale';
+export type CatchTone = 'forest' | 'sage' | 'sand' | 'cool';
 
 export type CatchStyle = 'rings' | 'filled' | 'soft';
 
@@ -13,8 +13,11 @@ export type CatchTarget = {
   delayMs: number;
 };
 
-const tones: CatchTone[] = ['forest', 'sage', 'sand', 'cool', 'pale'];
+const tones: CatchTone[] = ['forest', 'sage', 'sand', 'cool'];
 const styles: CatchStyle[] = ['rings', 'filled', 'soft'];
+
+const MIN_SIZE = 92;
+const MAX_SIZE = 136;
 
 function between(min: number, max: number): number {
   return min + Math.random() * (max - min);
@@ -29,10 +32,10 @@ function quadrant(x: number, y: number, width: number, height: number): string {
 }
 
 function sizeBucket(size: number): string {
-  if (size < 88) {
+  if (size < 104) {
     return 's';
   }
-  if (size < 118) {
+  if (size < 122) {
     return 'm';
   }
   return 'l';
@@ -49,6 +52,19 @@ function similar(next: CatchTarget, previous: CatchTarget, width: number, height
   return (samePlace && sameLook) || (sameLook && sameSize && samePlace);
 }
 
+export function targetFitsField(target: CatchTarget, width: number, height: number): boolean {
+  const padX = target.size / 2;
+  const padY = (target.size * target.stretch) / 2;
+  return (
+    width >= target.size &&
+    height >= target.size * target.stretch &&
+    target.x >= padX &&
+    target.x <= width - padX &&
+    target.y >= padY &&
+    target.y <= height - padY
+  );
+}
+
 export function nextCatchTarget(
   width: number,
   height: number,
@@ -56,20 +72,24 @@ export function nextCatchTarget(
 ): CatchTarget {
   const previous = recent[recent.length - 1];
   const lastThree = recent.slice(-3);
+  const sizeMax = Math.min(MAX_SIZE, Math.max(MIN_SIZE, Math.min(width, height) * 0.42));
+  const sizeMin = Math.min(MIN_SIZE, sizeMax);
   let chosen: CatchTarget | null = null;
 
   for (let attempt = 0; attempt < 24; attempt += 1) {
-    const size = between(76, 146);
-    const pad = size * 0.55;
+    const size = between(sizeMin, sizeMax);
+    const stretch = between(0.94, 1.06);
+    const padX = size / 2;
+    const padY = (size * stretch) / 2;
     const candidate: CatchTarget = {
       id: (previous?.id ?? 0) + 1,
-      x: between(pad, Math.max(pad, width - pad)),
-      y: between(pad, Math.max(pad, height - pad)),
+      x: between(padX, Math.max(padX, width - padX)),
+      y: between(padY, Math.max(padY, height - padY)),
       size,
       tone: pick(tones),
-      stretch: between(0.86, 1.14),
+      stretch,
       style: pick(styles),
-      delayMs: Math.round(between(0, 720)),
+      delayMs: Math.round(between(0, 180)),
     };
 
     const repeatsRecent = lastThree.some((item) => similar(candidate, item, width, height));
@@ -80,14 +100,16 @@ export function nextCatchTarget(
     chosen = candidate;
   }
 
-  return chosen ?? {
-    id: (previous?.id ?? 0) + 1,
-    x: width / 2,
-    y: height / 2,
-    size: 108,
-    tone: 'sage',
-    stretch: 1,
-    style: 'rings',
-    delayMs: 0,
-  };
+  return (
+    chosen ?? {
+      id: (previous?.id ?? 0) + 1,
+      x: width / 2,
+      y: height / 2,
+      size: Math.min(108, sizeMax),
+      tone: 'sage',
+      stretch: 1,
+      style: 'filled',
+      delayMs: 0,
+    }
+  );
 }

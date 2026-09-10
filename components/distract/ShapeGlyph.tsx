@@ -17,10 +17,16 @@ export function ShapeGlyph({ shape, color, size }: Props) {
     overflow: 'visible' as const,
   };
 
+  const hide = {
+    accessible: false as const,
+    accessibilityElementsHidden: true,
+    importantForAccessibility: 'no-hide-descendants' as const,
+  };
+
   if (shape === 'circle') {
     return (
       <View
-        accessible={false}
+        {...hide}
         style={[
           box,
           {
@@ -35,7 +41,7 @@ export function ShapeGlyph({ shape, color, size }: Props) {
   if (shape === 'square') {
     return (
       <View
-        accessible={false}
+        {...hide}
         style={[
           box,
           {
@@ -49,8 +55,8 @@ export function ShapeGlyph({ shape, color, size }: Props) {
 
   if (shape === 'triangle') {
     return (
-      <View accessible={false} style={box}>
-        <Svg width={size} height={size} viewBox="0 0 100 100" overflow="visible">
+      <View {...hide} style={box}>
+        <Svg width={size} height={size} viewBox="0 0 100 100">
           <Polygon points="50,8 94,90 6,90" fill={color} />
         </Svg>
       </View>
@@ -58,8 +64,8 @@ export function ShapeGlyph({ shape, color, size }: Props) {
   }
 
   return (
-    <View accessible={false} style={box}>
-      <Svg width={size} height={size} viewBox="0 0 100 100" overflow="visible">
+    <View {...hide} style={box}>
+      <Svg width={size} height={size} viewBox="0 0 100 100">
         <Path d="M12 88 A76 76 0 0 1 88 12 L88 88 Z" fill={color} />
       </Svg>
     </View>

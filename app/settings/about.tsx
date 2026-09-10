@@ -18,6 +18,9 @@ export default function AboutScreen() {
         <AppText variant="body" style={styles.copy}>
           {t('about.body')}
         </AppText>
+        <AppText variant="body" tone="secondary" style={styles.copy}>
+          {t('about.disclaimer')}
+        </AppText>
         <AppText variant="secondary" tone="secondary" style={styles.version}>
           {version}
         </AppText>

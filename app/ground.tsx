@@ -1,11 +1,18 @@
 import { useState } from 'react';
-import { Pressable, StyleSheet, View } from 'react-native';
+import { Pressable, StyleSheet, View, useWindowDimensions } from 'react-native';
 
 import { AudioControl } from '@/components/audio/AudioControl';
 import { GroundStage } from '@/components/ground/GroundStage';
 import { ActiveSessionScreen } from '@/components/session/ActiveSessionScreen';
+import { SessionChoiceSheet } from '@/components/session/SessionChoiceSheet';
 import { AppText } from '@/components/typography/AppText';
 import { GROUND_AUDIO_PLACEHOLDER_TODO, groundAudio } from '@/features/ground/audio';
+import {
+  defaultGroundSequenceId,
+  groundSequenceIds,
+  isGroundSequenceId,
+  type GroundSequenceId,
+} from '@/features/ground/steps';
 import { useGroundSequence } from '@/features/ground/useGroundSequence';
 import { useGuidedAudio } from '@/hooks/useGuidedAudio';
 import { t } from '@/locales/i18n';
@@ -13,12 +20,16 @@ import { serif } from '@/theme/fonts';
 import { spacing } from '@/theme/spacing';
 
 export default function GroundScreen() {
+  const { height, fontScale } = useWindowDimensions();
+  const compact = height < 700 || fontScale > 1.35;
   const audio = useGuidedAudio({
     source: groundAudio.source,
     autoPlay: groundAudio.ready,
   });
   const [paused, setPaused] = useState(false);
-  const { instructionKey, last, next, reset } = useGroundSequence(paused);
+  const [sequenceId, setSequenceId] = useState<GroundSequenceId>(defaultGroundSequenceId);
+  const [chooserOpen, setChooserOpen] = useState(false);
+  const { instructionKey, last, next, reset } = useGroundSequence(paused, sequenceId);
   const instruction = t(instructionKey);
 
   const onPlayPause = () => {
@@ -39,40 +50,73 @@ export default function GroundScreen() {
     audio.replay();
   };
 
+  const openChooser = () => setChooserOpen(true);
+
+  const selectSequence = (id: GroundSequenceId) => {
+    setSequenceId(id);
+    setPaused(false);
+    setChooserOpen(false);
+  };
+
   return (
-    <ActiveSessionScreen tool="ground" title={t('home.tools.ground')}>
-      <View style={styles.stage}>
-        <GroundStage />
-        <Pressable
-          accessibilityRole={last ? 'text' : 'button'}
-          accessibilityLabel={instruction}
-          accessibilityHint={last ? undefined : t('ground.continueHint')}
-          onPress={last ? undefined : next}
-          style={styles.instructionHit}
-        >
-          <AppText
-            variant="instruction"
-            accessibilityLiveRegion="polite"
-            accessible={false}
-            style={styles.instruction}
+    <>
+      <ActiveSessionScreen
+        tool="ground"
+        title={t('home.tools.ground')}
+        onTryAnother={openChooser}
+        tryAnotherHint={t('ground.tryAnotherHint')}
+        onBack={openChooser}
+        backLabel={t('ground.menu')}
+        backHint={t('ground.menuHint')}
+      >
+        <View style={[styles.stage, compact && styles.stageCompact]}>
+          <GroundStage />
+          <Pressable
+            accessibilityRole={last ? 'text' : 'button'}
+            accessibilityLabel={instruction}
+            accessibilityHint={last ? undefined : t('ground.continueHint')}
+            onPress={last ? undefined : next}
+            style={styles.instructionHit}
           >
-            {instruction}
-          </AppText>
-        </Pressable>
-        <AudioControl
-          isPlaying={!paused}
-          muted={audio.muted}
-          onPlayPause={onPlayPause}
-          onMute={audio.toggleMute}
-          onReplay={replay}
-        />
-        {groundAudio.ready ? null : (
-          <AppText variant="secondary" tone="secondary" style={styles.placeholder}>
-            {GROUND_AUDIO_PLACEHOLDER_TODO}
-          </AppText>
-        )}
-      </View>
-    </ActiveSessionScreen>
+            <AppText
+              variant="instruction"
+              accessibilityLiveRegion="polite"
+              accessible={false}
+              style={[styles.instruction, compact && styles.instructionCompact]}
+            >
+              {instruction}
+            </AppText>
+          </Pressable>
+          <AudioControl
+            isPlaying={!paused}
+            muted={audio.muted}
+            onPlayPause={onPlayPause}
+            onMute={audio.toggleMute}
+            onReplay={replay}
+          />
+          {groundAudio.ready ? null : (
+            <AppText variant="secondary" tone="secondary" style={styles.placeholder}>
+              {GROUND_AUDIO_PLACEHOLDER_TODO}
+            </AppText>
+          )}
+        </View>
+      </ActiveSessionScreen>
+      <SessionChoiceSheet
+        visible={chooserOpen}
+        title={t('ground.menu')}
+        selectedId={sequenceId}
+        options={groundSequenceIds.map((id) => ({
+          id,
+          label: t(`ground.sequences.${id}`),
+        }))}
+        onSelect={(id) => {
+          if (isGroundSequenceId(id)) {
+            selectSequence(id);
+          }
+        }}
+        onDismiss={() => setChooserOpen(false)}
+      />
+    </>
   );
 }
 
@@ -82,6 +126,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     paddingBottom: spacing.md,
+  },
+  stageCompact: {
+    paddingBottom: spacing.xs,
   },
   instructionHit: {
     width: '100%',
@@ -97,6 +144,12 @@ const styles = StyleSheet.create({
     marginBottom: spacing.xl,
     maxWidth: 340,
     paddingHorizontal: spacing.sm,
+  },
+  instructionCompact: {
+    fontSize: 28,
+    lineHeight: 34,
+    marginTop: spacing.md,
+    marginBottom: spacing.md,
   },
   placeholder: {
     textAlign: 'center',

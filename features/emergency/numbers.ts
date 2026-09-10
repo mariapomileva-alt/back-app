@@ -1,6 +1,7 @@
 import bundledNumbers from '@/content/emergency/emergencyNumbers.json';
 
-import type { EmergencyNumberRecord } from './types';
+import type { DeviceRegionSignal } from './deviceRegion';
+import type { EmergencyNumberRecord, EmergencyResolution } from './types';
 
 const UNKNOWN_REGION_CODES = new Set(['ZZ', 'XX', 'UNKNOWN']);
 
@@ -72,21 +73,38 @@ export function listEmergencyCountries(): EmergencyNumberRecord[] {
   return [...records].sort((a, b) => a.countryName.localeCompare(b.countryName));
 }
 
-export function resolveEmergencyRecord(input: {
+/**
+ * Resolve a bundled emergency number.
+ * Never guesses a global default (112 / 911 / 999).
+ * Language is never treated as a country.
+ * A number is shown only from a stored (confirmed) country, a high-confidence
+ * device region that exists in the reviewed dataset, or an explicit preview
+ * when nothing has been confirmed yet.
+ */
+export function resolveEmergencyNumber(input: {
   previewRegion?: string | null;
   storedCountryCode?: string | null;
-  deviceRegionCode?: string | null;
-}): EmergencyNumberRecord | null {
-  if (input.previewRegion != null && input.previewRegion !== '') {
-    const preview = input.previewRegion.trim().toUpperCase();
-    if (UNKNOWN_REGION_CODES.has(preview)) {
-      return null;
-    }
-    return getEmergencyByCountryCode(preview);
+  deviceRegion?: DeviceRegionSignal | null;
+}): EmergencyResolution {
+  const stored = getEmergencyByCountryCode(input.storedCountryCode);
+  if (stored) {
+    return { status: 'ready', record: stored, source: 'stored' };
   }
 
-  return (
-    getEmergencyByCountryCode(input.storedCountryCode) ??
-    getEmergencyByCountryCode(input.deviceRegionCode)
-  );
+  if (input.previewRegion != null && input.previewRegion !== '') {
+    const preview = getEmergencyByCountryCode(input.previewRegion);
+    if (!preview) {
+      return { status: 'needsCountry' };
+    }
+    return { status: 'ready', record: preview, source: 'preview' };
+  }
+
+  if (input.deviceRegion?.confidence === 'high') {
+    const fromDevice = getEmergencyByCountryCode(input.deviceRegion.countryCode);
+    if (fromDevice) {
+      return { status: 'ready', record: fromDevice, source: 'deviceRegion' };
+    }
+  }
+
+  return { status: 'needsCountry' };
 }

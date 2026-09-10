@@ -9,3 +9,16 @@ export type EmergencyNumberRecord = {
   sourceUrl: string;
   lastVerified: string;
 };
+
+export type EmergencyResolutionSource = 'preview' | 'stored' | 'deviceRegion';
+
+export type EmergencyResolution =
+  | {
+      status: 'ready';
+      record: EmergencyNumberRecord;
+      source: EmergencyResolutionSource;
+    }
+  | {
+      status: 'needsCountry';
+    };
+

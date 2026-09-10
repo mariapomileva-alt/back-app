@@ -2,6 +2,7 @@ import { useCallback, useEffect, useRef } from 'react';
 import { useNavigation, useRouter } from 'expo-router';
 
 import {
+  beginInternalSessionNavigation,
   bindSessionAppState,
   consumeInternalSessionNavigation,
   consumeSession,
@@ -16,7 +17,10 @@ export type ActiveSessionControls = {
   tryOfferedAlternatives: (intent: string) => void;
 };
 
-export function useActiveSession(tool: HomeToolId): ActiveSessionControls {
+export function useActiveSession(
+  tool: HomeToolId,
+  onCategoryBack?: () => void,
+): ActiveSessionControls {
   const router = useRouter();
   const navigation = useNavigation();
   const leavingRef = useRef(false);
@@ -43,7 +47,7 @@ export function useActiveSession(tool: HomeToolId): ActiveSessionControls {
       return;
     }
 
-    if (navigation.canGoBack()) {
+    if (router.canGoBack() && navigation.canGoBack()) {
       router.back();
       return;
     }
@@ -86,11 +90,16 @@ export function useActiveSession(tool: HomeToolId): ActiveSessionControls {
         return;
       }
       event.preventDefault();
+      if (onCategoryBack) {
+        beginInternalSessionNavigation();
+        onCategoryBack();
+        return;
+      }
       close();
     });
 
     return unsubscribe;
-  }, [close, navigation]);
+  }, [close, navigation, onCategoryBack]);
 
   return { close, trySomethingElse, tryOfferedAlternatives };
 }

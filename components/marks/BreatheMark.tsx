@@ -7,9 +7,9 @@ import { markViewBox } from './markLanguage';
 
 export function BreatheMark() {
   const { theme } = useTheme();
-  const core = theme.name === 'deepGreen' ? theme.colors.text : theme.colors.forest;
-  const mid = theme.colors.secondaryGreen;
-  const outer = theme.colors.muted;
+  const core = theme.colors.markPrimary;
+  const mid = theme.colors.markSecondary;
+  const outer = theme.colors.markMuted;
 
   return (
     <MarkFrame>

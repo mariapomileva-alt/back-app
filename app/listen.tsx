@@ -6,6 +6,7 @@ import { AccessiblePressable } from '@/components/accessibility/AccessiblePressa
 import { VolumeBar } from '@/components/audio/VolumeBar';
 import { ListenSoundVisual } from '@/components/listen/ListenSoundVisual';
 import { ActiveSessionScreen } from '@/components/session/ActiveSessionScreen';
+import { SessionChoiceSheet } from '@/components/session/SessionChoiceSheet';
 import { AppText } from '@/components/typography/AppText';
 import {
   defaultListenSoundId,
@@ -40,6 +41,7 @@ export default function ListenScreen() {
   const compact = windowHeight < 740;
   const [soundId, setSoundId] = useState<ListenSoundId>(defaultListenSoundId);
   const [playbackReady, setPlaybackReady] = useState(false);
+  const [chooserOpen, setChooserOpen] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
@@ -72,7 +74,10 @@ export default function ListenScreen() {
   const select = (id: ListenSoundId) => {
     setSoundId(id);
     void saveLastSoundId(id);
+    setChooserOpen(false);
   };
+
+  const openChooser = () => setChooserOpen(true);
 
   const shift = (delta: number) => {
     const index = listenSounds.findIndex((item) => item.id === soundId);
@@ -83,7 +88,17 @@ export default function ListenScreen() {
   };
 
   return (
-    <ActiveSessionScreen tool="listen" title={t('home.tools.listen')} scroll={false}>
+    <>
+    <ActiveSessionScreen
+      tool="listen"
+      title={t('home.tools.listen')}
+      scroll={false}
+      onTryAnother={openChooser}
+      tryAnotherHint={t('listen.tryAnotherHint')}
+      onBack={openChooser}
+      backLabel={t('listen.menu')}
+      backHint={t('listen.menuHint')}
+    >
       <View style={styles.stage}>
         <View style={{ marginBottom: gap }}>
           <AppText
@@ -116,6 +131,7 @@ export default function ListenScreen() {
             <AccessiblePressable
               accessibilityRole="button"
               accessibilityLabel={audio.isPlaying ? t('common.pause') : t('common.play')}
+              accessibilityState={{ selected: audio.isPlaying }}
               onPress={audio.toggle}
               style={[styles.play, { backgroundColor: theme.colors.buttonBackground }]}
             >
@@ -157,7 +173,9 @@ export default function ListenScreen() {
                 key={item.id}
                 accessibilityRole="radio"
                 accessibilityState={{ selected: active }}
-                accessibilityLabel={t(item.nameKey)}
+                accessibilityLabel={
+                  active ? `${t(item.nameKey)}, ${t('common.selected')}` : t(item.nameKey)
+                }
                 onPress={() => select(item.id)}
                 style={[
                   styles.chip,
@@ -174,6 +192,22 @@ export default function ListenScreen() {
         </ScrollView>
       </View>
     </ActiveSessionScreen>
+    <SessionChoiceSheet
+      visible={chooserOpen}
+      title={t('listen.menu')}
+      selectedId={soundId}
+      options={listenSounds.map((item) => ({
+        id: item.id,
+        label: t(item.nameKey),
+      }))}
+      onSelect={(id) => {
+        if (isListenSoundId(id)) {
+          select(id);
+        }
+      }}
+      onDismiss={() => setChooserOpen(false)}
+    />
+    </>
   );
 }
 
@@ -200,6 +234,8 @@ const styles = StyleSheet.create({
   },
   playback: {
     flexShrink: 0,
+    width: '100%',
+    maxWidth: '100%',
   },
   transport: {
     flexDirection: 'row',

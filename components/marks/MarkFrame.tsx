@@ -9,9 +9,9 @@ export function MarkFrame({ children }: Props) {
   return (
     <View
       accessible={false}
-      importantForAccessibility="no"
-      pointerEvents="none"
-      style={styles.frame}
+      importantForAccessibility="no-hide-descendants"
+      accessibilityElementsHidden
+      style={[styles.frame, { pointerEvents: 'none' }]}
     >
       {children}
     </View>

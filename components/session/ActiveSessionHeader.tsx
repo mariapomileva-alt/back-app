@@ -9,16 +9,34 @@ type Props = {
   right?: ReactNode;
   closeLabel?: string;
   closeHint?: string;
+  onBack?: () => void;
+  backLabel?: string;
+  backHint?: string;
 };
 
-export function ActiveSessionHeader({ title, onClose, right, closeLabel, closeHint }: Props) {
+export function ActiveSessionHeader({
+  title,
+  onClose,
+  right,
+  closeLabel,
+  closeHint,
+  onBack,
+  backLabel,
+  backHint,
+}: Props) {
+  const resolvedCloseLabel = closeLabel ?? t('exercise.closeSession');
+  const resolvedCloseHint = closeHint ?? t('exercise.closeHint');
+
   return (
     <ScreenHeader
       title={title}
       onClose={onClose}
       closeVariant="close"
-      closeLabel={closeLabel}
-      closeHint={closeHint ?? t('exercise.closeHint')}
+      closeLabel={resolvedCloseLabel}
+      closeHint={resolvedCloseHint}
+      onBack={onBack}
+      backLabel={backLabel}
+      backHint={backHint}
       right={right}
     />
   );

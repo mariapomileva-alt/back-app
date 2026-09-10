@@ -105,6 +105,27 @@ export default function ReadScreen() {
     setRevealedCount(next);
   }, [persistItem]);
 
+  const tryAnother = useCallback(() => {
+    const liveMemory = memoryRef.current;
+    if (!liveMemory) {
+      return;
+    }
+
+    const nextSession = createReadSession(loadReadPack(), liveMemory);
+    const started = beginReadSession(liveMemory, nextSession);
+    const first = nextSession.fragments[0];
+    shownItems.current = new Set(first ? [first.itemId] : []);
+    const withFirst = first ? rememberShownId(started, first.itemId, first.storyId) : started;
+    memoryRef.current = withFirst;
+    sessionRef.current = nextSession;
+    revealedCountRef.current = 1;
+    setMemory(withFirst);
+    setSession(nextSession);
+    setRevealedCount(1);
+    setPaused(false);
+    void saveReadMemory(withFirst);
+  }, []);
+
   const fragments = session?.fragments;
 
   return (
@@ -112,6 +133,8 @@ export default function ReadScreen() {
       tool="read"
       title={t('home.tools.read')}
       scroll={false}
+      onTryAnother={tryAnother}
+      tryAnotherHint={t('read.tryAnotherHint')}
       extraActions={<ReadPauseControl paused={paused} onPress={() => setPaused((value) => !value)} />}
     >
       {!session || !memory || !fragments || fragments.length === 0 ? (

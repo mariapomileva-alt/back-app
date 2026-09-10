@@ -79,7 +79,7 @@ export default function DistractMenuScreen() {
                 key={id}
                 label={t(`distract.activities.${id}`)}
                 visual={
-                  <View pointerEvents="none" style={styles.mark} accessible={false}>
+                  <View accessible={false} style={[styles.mark, { pointerEvents: 'none' }]}>
                     <DistractActivityMark id={id} />
                   </View>
                 }

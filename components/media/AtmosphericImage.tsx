@@ -47,15 +47,11 @@ export function AtmosphericImage({
         fadeDuration={0}
       />
       {reduceTransparency ? (
-        <View
-          pointerEvents="none"
-          style={[styles.solidEdge, { borderColor: theme.colors.border }]}
-        />
+        <View style={[styles.solidEdge, { borderColor: theme.colors.border, pointerEvents: 'none' }]} />
       ) : (
         <>
           <View
-            pointerEvents="none"
-            style={[StyleSheet.absoluteFill, { backgroundColor: fade, opacity: wash }]}
+            style={[StyleSheet.absoluteFill, { backgroundColor: fade, opacity: wash, pointerEvents: 'none' }]}
           />
           <LinearGradient
             colors={[fade, clear]}

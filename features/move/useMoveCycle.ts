@@ -34,7 +34,10 @@ export function useMoveCycle() {
   const [pressed, setPressed] = useState(false);
   const holdStartedAt = useRef<number | null>(null);
   const lightRef = useRef(haptics.light);
-  lightRef.current = haptics.light;
+
+  useEffect(() => {
+    lightRef.current = haptics.light;
+  }, [haptics.light]);
 
   const sequence = sequenceById(sequenceId);
   const instructionKey = instructionKeyFor(sequence, phase);
@@ -155,13 +158,24 @@ export function useMoveCycle() {
     lightRef.current();
   }, []);
 
+  const selectSequence = useCallback((id: MoveSequenceId) => {
+    holdStartedAt.current = null;
+    setPressed(false);
+    phaseRef.current = 'press';
+    setSequenceId(id);
+    setPhase('press');
+    lightRef.current();
+  }, []);
+
   return {
     sequence,
+    sequenceId,
     phase,
     pressed,
     instructionKey,
     onPressIn,
     onPressOut,
     tryAnother,
+    selectSequence,
   };
 }

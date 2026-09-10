@@ -1,6 +1,7 @@
 /**
  * Regional emergency information.
  * Numbers come from the bundled offline map only — never fetched, never guessed.
+ * Do not pass a language code. Use a confirmed country or a device region signal.
  */
 
 import {
@@ -36,8 +37,8 @@ function toRegion(record: EmergencyNumberRecord): EmergencyRegion {
   };
 }
 
-export function getEmergencyRegion(localeRegion?: string): EmergencyRegion | null {
-  const record = getEmergencyByCountryCode(localeRegion);
+export function getEmergencyRegion(countryCode?: string): EmergencyRegion | null {
+  const record = getEmergencyByCountryCode(countryCode);
   return record ? toRegion(record) : null;
 }
 

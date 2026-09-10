@@ -44,15 +44,30 @@ export function ToolCard({ label, icon, visual, onPress, accessibilityHint, styl
         style,
       ]}
     >
-      {visual ? <View style={styles.visual}>{visual}</View> : null}
+      {visual ? (
+        <View
+          accessible={false}
+          accessibilityElementsHidden
+          importantForAccessibility="no-hide-descendants"
+          style={[styles.visual, { pointerEvents: 'none' }]}
+        >
+          {visual}
+        </View>
+      ) : null}
       {icon ? (
-        <View style={styles.icon} accessible={false}>
+        <View
+          style={styles.icon}
+          accessible={false}
+          accessibilityElementsHidden
+          importantForAccessibility="no-hide-descendants"
+        >
           {icon}
         </View>
       ) : null}
       <AppText
         variant="button"
         numberOfLines={1}
+        accessible={false}
         style={[styles.label, withVisual ? styles.labelUnderMark : null]}
       >
         {label}

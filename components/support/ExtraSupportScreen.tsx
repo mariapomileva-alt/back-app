@@ -1,5 +1,5 @@
 import { useCallback, useState } from 'react';
-import { Pressable, StyleSheet, View } from 'react-native';
+import { Pressable, StyleSheet, View, useWindowDimensions } from 'react-native';
 import { useFocusEffect, useLocalSearchParams, useRouter } from 'expo-router';
 
 import { PrimaryButton } from '@/components/buttons/PrimaryButton';
@@ -10,10 +10,9 @@ import { ScreenContainer } from '@/components/layout/ScreenContainer';
 import { ScreenHeader } from '@/components/navigation/ScreenHeader';
 import { CountryPicker } from '@/components/support/CountryPicker';
 import { AppText } from '@/components/typography/AppText';
-import { getDeviceRegionCode } from '@/features/emergency/deviceRegion';
+import { getDeviceRegionSignal } from '@/features/emergency/deviceRegion';
 import { canPlaceLocalCall, openPhoneCall, openSmsMessage } from '@/features/emergency/dial';
-import { resolveEmergencyRecord } from '@/features/emergency/numbers';
-import type { EmergencyNumberRecord } from '@/features/emergency/types';
+import { resolveEmergencyNumber } from '@/features/emergency/numbers';
 import { useTheme } from '@/hooks/useTheme';
 import { t } from '@/locales/i18n';
 import { loadEmergencyCountryCode, saveEmergencyCountryCode } from '@/storage/emergencyCountry';
@@ -42,12 +41,15 @@ function firstParam(value: string | string[] | undefined): string | undefined {
 export function ExtraSupportScreen() {
   const router = useRouter();
   const { theme } = useTheme();
+  const { height, fontScale } = useWindowDimensions();
+  const compact = height < 740 || fontScale > 1.35;
   const params = useLocalSearchParams<{ region?: string; person?: string }>();
   const previewRegion = firstParam(params.region);
   const previewPerson = firstParam(params.person) === '1';
 
   const [pickingCountry, setPickingCountry] = useState(false);
   const [storedCountryCode, setStoredCountryCode] = useState<string | null>(null);
+  const [countryReady, setCountryReady] = useState(Boolean(previewRegion));
   const [contact, setContact] = useState<SupportContact | null>(null);
 
   const loadLocalState = useCallback(async () => {
@@ -57,6 +59,7 @@ export function ExtraSupportScreen() {
     ]);
     setStoredCountryCode(countryCode);
     setContact(savedContact);
+    setCountryReady(true);
   }, []);
 
   useFocusEffect(
@@ -65,12 +68,15 @@ export function ExtraSupportScreen() {
     }, [loadLocalState]),
   );
 
-  const record: EmergencyNumberRecord | null = resolveEmergencyRecord({
-    previewRegion,
-    storedCountryCode,
-    deviceRegionCode: getDeviceRegionCode(),
-  });
+  const resolution = countryReady
+    ? resolveEmergencyNumber({
+        previewRegion,
+        storedCountryCode,
+        deviceRegion: getDeviceRegionSignal(),
+      })
+    : null;
 
+  const record = resolution?.status === 'ready' ? resolution.record : null;
   const shownContact = contact ?? (previewPerson ? PREVIEW_CONTACT : null);
   const canMessage = canPlaceLocalCall(shownContact?.phoneNumber);
   const canCallPerson = canPlaceLocalCall(shownContact?.phoneNumber);
@@ -79,6 +85,9 @@ export function ExtraSupportScreen() {
     await saveEmergencyCountryCode(countryCode);
     setStoredCountryCode(countryCode);
     setPickingCountry(false);
+    if (previewRegion) {
+      router.replace('/settings/emergency');
+    }
   };
 
   if (pickingCountry) {
@@ -91,7 +100,10 @@ export function ExtraSupportScreen() {
             onClose={() => setPickingCountry(false)}
             closeVariant="close"
           />
-          <CountryPicker onSelect={onSelectCountry} />
+          <CountryPicker
+            onSelect={onSelectCountry}
+            selectedCountryCode={storedCountryCode ?? record?.countryCode}
+          />
         </ScreenContainer>
       </View>
     );
@@ -103,9 +115,9 @@ export function ExtraSupportScreen() {
       <ScreenContainer style={styles.transparent}>
         <ScreenHeader title={t('extraSupport.title')} />
 
-        <AppText style={styles.heading}>{t('extraSupport.heading')}</AppText>
+        <AppText style={[styles.heading, compact && styles.headingCompact]}>{t('extraSupport.heading')}</AppText>
 
-        <View style={styles.steps}>
+        <View style={[styles.steps, compact && styles.stepsCompact]}>
           {STEP_KEYS.map((key) => (
             <AppText key={key} variant="body" style={styles.step}>
               {t(`extraSupport.steps.${key}`)}
@@ -142,7 +154,7 @@ export function ExtraSupportScreen() {
           )}
         </View>
 
-        <View style={[styles.separator, { backgroundColor: theme.colors.border }]} />
+        <View style={[styles.separator, compact && styles.separatorCompact, { backgroundColor: theme.colors.border }]} />
 
         <AppText variant="section" style={styles.urgentTitle}>
           {t('extraSupport.urgentTitle')}
@@ -154,9 +166,9 @@ export function ExtraSupportScreen() {
         {record ? (
           <Pressable
             accessibilityRole="button"
-            accessibilityLabel={t('extraSupport.emergencyHelp', {
-              number: record.generalEmergency,
-            })}
+            accessibilityLabel={`${t('extraSupport.urgentInCountry', {
+              country: record.countryName,
+            })}. ${t('extraSupport.emergencyHelp', { number: record.generalEmergency })}`}
             accessibilityHint={t('extraSupport.emergencyHint')}
             onPress={() => {
               void openPhoneCall(record.generalEmergency);
@@ -170,11 +182,14 @@ export function ExtraSupportScreen() {
               },
             ]}
           >
+            <AppText variant="secondary" tone="secondary" style={styles.emergencyCountry}>
+              {t('extraSupport.urgentInCountry', { country: record.countryName })}
+            </AppText>
             <AppText variant="button" style={{ color: theme.colors.text }}>
               {t('extraSupport.emergencyHelp', { number: record.generalEmergency })}
             </AppText>
           </Pressable>
-        ) : (
+        ) : countryReady ? (
           <View style={styles.unknown}>
             <AppText variant="body" style={styles.findLocal}>
               {t('extraSupport.findLocal')}
@@ -184,7 +199,7 @@ export function ExtraSupportScreen() {
               onPress={() => setPickingCountry(true)}
             />
           </View>
-        )}
+        ) : null}
 
         {record ? (
           <TextButton
@@ -214,10 +229,17 @@ const styles = StyleSheet.create({
     marginBottom: spacing.lg,
     maxWidth: 320,
   },
+  headingCompact: {
+    marginBottom: spacing.md,
+  },
   steps: {
     gap: spacing.md,
     maxWidth: 340,
     marginBottom: spacing.xl,
+  },
+  stepsCompact: {
+    gap: spacing.sm,
+    marginBottom: spacing.md,
   },
   step: {
     fontSize: 17,
@@ -231,6 +253,10 @@ const styles = StyleSheet.create({
     marginTop: spacing.xl,
     marginBottom: spacing.lg,
     opacity: 0.9,
+  },
+  separatorCompact: {
+    marginTop: spacing.md,
+    marginBottom: spacing.md,
   },
   urgentTitle: {
     marginBottom: spacing.sm,
@@ -247,6 +273,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     paddingHorizontal: spacing.lg,
     paddingVertical: spacing.md,
+    gap: spacing.xxs,
+  },
+  emergencyCountry: {
+    textAlign: 'center',
   },
   unknown: {
     gap: spacing.md,

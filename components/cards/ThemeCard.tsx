@@ -1,9 +1,11 @@
 import { Pressable, StyleSheet, View } from 'react-native';
+import Svg, { Circle } from 'react-native-svg';
 
 import { AppText } from '@/components/typography/AppText';
 import { useHaptics } from '@/hooks/useHaptics';
 import { useTheme } from '@/hooks/useTheme';
 import { t } from '@/locales/i18n';
+import { serif } from '@/theme/fonts';
 import { radius } from '@/theme/radius';
 import { spacing, touch } from '@/theme/spacing';
 import { themes, type ThemeName } from '@/theme/themes';
@@ -44,11 +46,32 @@ export function ThemeCard({ themeName, selected, onPress }: Props) {
         style={[styles.preview, { backgroundColor: preview.colors.background }]}
         accessible={false}
       >
-        <View style={[styles.surface, { backgroundColor: preview.colors.surface }]} />
-        <View style={[styles.dot, { backgroundColor: preview.colors.buttonBackground }]} />
+        <View style={[styles.surface, { backgroundColor: preview.colors.surface }]}>
+          <Svg width={40} height={28} viewBox="0 0 40 28" preserveAspectRatio="xMidYMid meet">
+            <Circle cx="20" cy="14" r="12" fill={preview.colors.markMuted} opacity={0.34} />
+            <Circle cx="20" cy="14" r="8" fill={preview.colors.markSecondary} opacity={0.42} />
+            <Circle cx="20" cy="14" r="4.2" fill={preview.colors.markPrimary} opacity={0.88} />
+          </Svg>
+          <AppText
+            variant="secondary"
+            numberOfLines={1}
+            style={[styles.sample, { color: preview.colors.text }]}
+          >
+            {t('app.name')}
+          </AppText>
+        </View>
       </View>
       <View style={styles.meta}>
-        <AppText variant="button">{label}</AppText>
+        <View style={styles.labelRow}>
+          <AppText variant="button" style={styles.label}>
+            {label}
+          </AppText>
+          {selected ? (
+            <AppText variant="body" tone="secondary" accessibilityElementsHidden>
+              ✓
+            </AppText>
+          ) : null}
+        </View>
         {selected ? (
           <AppText variant="secondary" tone="secondary">
             {t('common.selected')}
@@ -66,26 +89,38 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
   },
   preview: {
-    height: 88,
+    height: 84,
     padding: spacing.md,
     justifyContent: 'flex-end',
   },
   surface: {
-    position: 'absolute',
-    right: spacing.md,
-    top: spacing.md,
-    width: 72,
-    height: 48,
+    flexDirection: 'row',
+    alignItems: 'center',
+    alignSelf: 'flex-start',
+    gap: spacing.sm,
+    paddingVertical: spacing.xs,
+    paddingHorizontal: spacing.sm,
     borderRadius: radius.button,
+    minHeight: 44,
   },
-  dot: {
-    width: 28,
-    height: 28,
-    borderRadius: radius.circle,
+  sample: {
+    fontFamily: serif,
+    fontSize: 15,
+    lineHeight: 20,
+    fontWeight: '500',
   },
   meta: {
     paddingHorizontal: spacing.md,
     paddingVertical: spacing.md,
     gap: spacing.xxs,
+  },
+  labelRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    gap: spacing.sm,
+  },
+  label: {
+    flex: 1,
   },
 });

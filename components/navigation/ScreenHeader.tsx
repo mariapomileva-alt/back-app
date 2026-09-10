@@ -12,6 +12,9 @@ type Props = {
   closeVariant?: 'close' | 'back';
   closeLabel?: string;
   closeHint?: string;
+  onBack?: () => void;
+  backLabel?: string;
+  backHint?: string;
   right?: ReactNode;
 };
 
@@ -22,12 +25,22 @@ export function ScreenHeader({
   closeVariant = 'close',
   closeLabel,
   closeHint,
+  onBack,
+  backLabel,
+  backHint,
   right,
 }: Props) {
   return (
     <View style={styles.header}>
       <View style={styles.side}>
-        {showClose ? (
+        {onBack ? (
+          <CloseButton
+            variant="back"
+            onPress={onBack}
+            accessibilityLabel={backLabel}
+            accessibilityHint={backHint}
+          />
+        ) : showClose ? (
           <CloseButton
             variant={closeVariant}
             onPress={onClose}
@@ -55,6 +68,9 @@ const styles = StyleSheet.create({
   },
   side: {
     width: touch.min,
+    minWidth: touch.min,
+    flexShrink: 0,
+    overflow: 'visible',
     alignItems: 'center',
     justifyContent: 'center',
   },

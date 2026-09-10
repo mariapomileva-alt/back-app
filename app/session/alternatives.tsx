@@ -1,4 +1,4 @@
-import { StyleSheet, View } from 'react-native';
+import { Share, StyleSheet, View } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 
 import { PrimaryButton } from '@/components/buttons/PrimaryButton';
@@ -43,8 +43,9 @@ export default function SessionAlternativesScreen() {
         <AppText style={styles.title}>{title}</AppText>
         {feeling === 'worse' ? (
           <View style={styles.actions}>
-            <PrimaryButton
-              label={t('extraSupport.title')}
+            <PrimaryButton label={t('session.callPerson')} onPress={() => router.push('/support')} />
+            <SecondaryButton
+              label={t('session.emergency')}
               onPress={() => router.push('/settings/emergency')}
             />
             <SecondaryButton label={t('session.returnTools')} onPress={() => router.replace('/')} />
@@ -52,6 +53,17 @@ export default function SessionAlternativesScreen() {
         ) : feeling === 'better' ? (
           <View style={styles.actions}>
             <PrimaryButton label={t('session.done')} onPress={() => router.replace('/')} />
+            <SecondaryButton
+              label={t('session.share')}
+              onPress={() => {
+                void Share.share({
+                  title: t('session.share'),
+                  message: t('about.body'),
+                }).catch(() => {
+                  // Share can be unavailable on desktop web or cancelled.
+                });
+              }}
+            />
           </View>
         ) : (
           <View style={styles.grid}>

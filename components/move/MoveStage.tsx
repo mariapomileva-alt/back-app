@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Animated, Easing, Pressable, StyleSheet, View } from 'react-native';
+import { Animated, Easing, Platform, Pressable, StyleSheet, View } from 'react-native';
 import Svg, { Ellipse, Path } from 'react-native-svg';
 
 import { MoveMark } from '@/components/marks';
@@ -26,7 +26,7 @@ export function MoveStage({ pressed, instruction, hint, onPressIn, onPressOut }:
       toValue: pressed ? 1 : 0,
       duration: reduceMotion ? 1 : 220,
       easing: Easing.out(Easing.quad),
-      useNativeDriver: true,
+      useNativeDriver: Platform.OS !== 'web',
     }).start();
   }, [contact, pressed, reduceMotion]);
 

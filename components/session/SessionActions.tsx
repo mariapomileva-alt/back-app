@@ -3,37 +3,33 @@ import { StyleSheet, View } from 'react-native';
 
 import { ActivitySwitcher } from '@/components/session/ActivitySwitcher';
 import { SessionExitAction } from '@/components/session/SessionExitAction';
-import { TrySomethingElse } from '@/components/session/TrySomethingElse';
 import { spacing } from '@/theme/spacing';
 
 type Props = {
   onOkay: () => void;
-  onTrySomethingElse: () => void;
-  onChangeActivity?: () => void;
-  changeActivityLabel?: string;
-  changeActivityHint?: string;
+  onTryAnother?: () => void;
+  tryAnotherLabel?: string;
+  tryAnotherHint?: string;
   extra?: ReactNode;
 };
 
 export function SessionActions({
   onOkay,
-  onTrySomethingElse,
-  onChangeActivity,
-  changeActivityLabel,
-  changeActivityHint,
+  onTryAnother,
+  tryAnotherLabel,
+  tryAnotherHint,
   extra,
 }: Props) {
   return (
     <View style={styles.actions}>
       <SessionExitAction onPress={onOkay} />
-      {onChangeActivity ? (
+      {onTryAnother ? (
         <ActivitySwitcher
-          onPress={onChangeActivity}
-          label={changeActivityLabel}
-          accessibilityHint={changeActivityHint}
+          onPress={onTryAnother}
+          label={tryAnotherLabel}
+          accessibilityHint={tryAnotherHint}
         />
       ) : null}
-      <TrySomethingElse onPress={onTrySomethingElse} />
       {extra}
     </View>
   );

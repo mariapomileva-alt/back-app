@@ -7,8 +7,8 @@ import { markViewBox } from './markLanguage';
 
 export function ListenMark() {
   const { theme } = useTheme();
-  const cool = theme.colors.cool;
-  const sage = theme.colors.secondaryGreen;
+  const cool = theme.colors.markLine;
+  const sage = theme.colors.markSecondary;
 
   const waves = [
     { d: 'M18 18 C36 12 52 24 70 18 S100 12 106 18', color: cool, opacity: 0.4, width: 1.05 },

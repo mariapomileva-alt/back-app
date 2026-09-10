@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, useWindowDimensions } from 'react-native';
 
 import { AccessiblePressable } from '@/components/accessibility/AccessiblePressable';
 import { AppText } from '@/components/typography/AppText';
@@ -19,6 +19,9 @@ const OPTION_SIZE = 46;
 export function ShapesPlay() {
   const { theme } = useTheme();
   const haptics = useHaptics();
+  const { height, fontScale } = useWindowDimensions();
+  const compact = height < 700 || fontScale > 1.35;
+  const targetSize = compact ? 92 : TARGET_SIZE;
   const [deck, setDeck] = useState(createShapeDeck);
   const [faded, setFaded] = useState<number | null>(null);
   const round = deck.round;
@@ -36,16 +39,23 @@ export function ShapesPlay() {
 
   return (
     <View style={styles.root}>
-      <AppText style={styles.instruction}>{t('distract.shapes.instruction')}</AppText>
-      <View style={styles.target} accessible={false} importantForAccessibility="no">
-        <ShapeGlyph shape={round.shape} color={palette[round.colorKey]} size={TARGET_SIZE} />
+      <AppText style={[styles.instruction, compact && styles.instructionCompact]}>
+        {t('distract.shapes.instruction')}
+      </AppText>
+      <View
+        style={[styles.target, compact && styles.targetCompact]}
+        accessible={false}
+        accessibilityElementsHidden
+        importantForAccessibility="no-hide-descendants"
+      >
+        <ShapeGlyph shape={round.shape} color={palette[round.colorKey]} size={targetSize} />
       </View>
       <View style={styles.options}>
         {round.options.map((option, index) => (
           <AccessiblePressable
             key={`${option.shape}-${option.colorKey}-${index}-${round.shape}-${round.colorKey}`}
             accessibilityRole="button"
-            accessibilityLabel={t(`distract.shapes.names.${option.shape}`)}
+            accessibilityLabel={`${t(`distract.shapes.colors.${option.colorKey}`)} ${t(`distract.shapes.names.${option.shape}`)}`}
             onPress={() => {
               if (option.correct) {
                 haptics.light();
@@ -86,12 +96,21 @@ const styles = StyleSheet.create({
     marginBottom: spacing.lg,
     maxWidth: 320,
   },
+  instructionCompact: {
+    fontSize: 24,
+    lineHeight: 30,
+    marginBottom: spacing.md,
+  },
   target: {
     minHeight: 150,
     alignItems: 'center',
     justifyContent: 'center',
     marginBottom: spacing.lg,
     overflow: 'visible',
+  },
+  targetCompact: {
+    minHeight: 108,
+    marginBottom: spacing.md,
   },
   options: {
     flexDirection: 'row',

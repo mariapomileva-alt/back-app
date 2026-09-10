@@ -7,10 +7,10 @@ import { markViewBox } from './markLanguage';
 
 export function DistractMark() {
   const { theme } = useTheme();
-  const sage = theme.colors.secondaryGreen;
-  const forest = theme.colors.forest;
-  const pale = theme.colors.muted;
-  const clay = theme.colors.clay;
+  const sage = theme.colors.markSecondary;
+  const forest = theme.colors.markPrimary;
+  const pale = theme.colors.markMuted;
+  const clay = theme.colors.markWarmAccent;
 
   return (
     <MarkFrame>

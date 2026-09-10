@@ -12,13 +12,13 @@ type Props = {
 };
 
 export function ActivitySwitcher({ onPress, label, accessibilityHint }: Props) {
-  const resolved = label ?? t('distract.change');
+  const resolved = label ?? t('exercise.tryAnother');
 
   return (
     <AccessiblePressable
       accessibilityRole="button"
       accessibilityLabel={resolved}
-      accessibilityHint={accessibilityHint ?? t('distract.changeHint')}
+      accessibilityHint={accessibilityHint ?? t('exercise.tryAnotherHint')}
       onPress={onPress}
       style={styles.action}
     >

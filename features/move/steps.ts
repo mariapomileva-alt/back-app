@@ -40,6 +40,10 @@ export function instructionKeyFor(sequence: MoveSequence, phase: MovePhase): str
   return movePhaseKeys[phase];
 }
 
+export function isMoveSequenceId(value: string | null | undefined): value is MoveSequenceId {
+  return moveSequenceIds.some((id) => id === value);
+}
+
 export function nextMoveSequenceId(current: MoveSequenceId): MoveSequenceId {
   const index = moveSequences.findIndex((item) => item.id === current);
   const next = moveSequences[(index + 1) % moveSequences.length];

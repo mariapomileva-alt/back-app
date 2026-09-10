@@ -12,7 +12,7 @@ const leftThumb = 'M32.5 45.2c-6-1.8-9.8-7-6.6-11.2 2.8-3.8 9.4-1 10.6 5.2';
 
 export function MoveMark() {
   const { theme } = useTheme();
-  const ink = theme.colors.secondaryGreen;
+  const ink = theme.colors.markSecondary;
 
   return (
     <MarkFrame>

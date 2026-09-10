@@ -37,21 +37,26 @@
   },
   "settings": {
     "title": "Settings",
-    "theme": "Theme",
+    "theme": "Appearance",
     "themeHint": "Choose the look of Back",
     "voice": "Voice and sound",
     "haptics": "Haptics",
     "hapticsHint": "Turns gentle haptic feedback on or off",
     "reduceMotion": "Reduce motion",
     "reduceMotionHint": "Uses calmer motion even if your system allows animation",
-    "read": "Read",
+    "read": "Read preferences",
     "readHint": "Choose how quickly lines appear",
     "supportContact": "Support contact",
     "patterns": "My patterns",
     "subscription": "Subscription",
     "privacy": "Privacy",
     "emergency": "Extra support",
-    "about": "About Back"
+    "about": "About Back",
+    "groups": {
+      "experience": "Experience",
+      "personal": "Personal",
+      "safetyLegal": "Safety & Legal"
+    }
   },
   "themes": {
     "title": "Theme",
@@ -62,7 +67,10 @@
   },
   "placeholders": {
     "tool": "Support will begin here.",
-    "settings": "This section will be ready in a later stage."
+    "settings": "This section will be ready in a later stage.",
+    "voice": "Voice and sound settings will arrive later. Listen is already available from Home.",
+    "patterns": "A quieter view of your patterns will arrive later. Choices you make in the tools already stay on this device.",
+    "subscription": "There is nothing to buy here yet. Subscription will arrive later."
   },
   "session": {
     "outcome": "How do you feel now?",
@@ -100,6 +108,7 @@
     "urgentTitle": "Need urgent help?",
     "urgentBody": "If you think you may need urgent medical help,\ncontact your local emergency service.",
     "emergencyHelp": "Emergency help · {number}",
+    "urgentInCountry": "Urgent help in {country}",
     "emergencyHint": "Opens the phone app. The call starts only if you confirm.",
     "findLocal": "Find local emergency help",
     "chooseCountry": "Choose country"
@@ -121,8 +130,10 @@
     "elapsed": "Elapsed time",
     "okay": "I’m okay for now",
     "okayHint": "Ends this support. After about 20 seconds, asks how you feel.",
+    "closeSession": "Close session",
     "closeHint": "Ends this support and returns home, or asks how you feel after a short session.",
     "tryAnother": "Try another",
+    "tryAnotherHint": "Chooses another activity here, without ending this support.",
     "breatheUncomfortable": "Breathing feels uncomfortable",
     "moveUncomfortable": "Movement doesn’t feel right"
   },
@@ -132,6 +143,9 @@
     "hold": "Hold",
     "circle": "Breathing circle",
     "patternHint": "Changes the breathing rhythm",
+    "menu": "Breathing patterns",
+    "menuHint": "Opens the quiet pattern list",
+    "tryAnotherHint": "Opens the breathing pattern list",
     "patterns": {
       "gentle": "Gentle 4/6",
       "equal": "Equal 4/4",
@@ -147,6 +161,7 @@
     "menuHint": "Returns to the activity list",
     "change": "Change activity",
     "changeHint": "Opens the quiet activity list",
+    "tryAnotherHint": "Opens the quiet activity list",
     "activities": {
       "shapes": "Shapes",
       "blocks": "Blocks",
@@ -160,12 +175,34 @@
         "square": "Square",
         "triangle": "Triangle",
         "quarter": "Quarter circle"
+      },
+      "colors": {
+        "forest": "Forest",
+        "sage": "Sage",
+        "sand": "Sand",
+        "clay": "Clay",
+        "cool": "Cool"
       }
     },
     "blocks": {
-      "instruction": "Fill the space in any way.",
-      "empty": "Empty square",
-      "filled": "Filled square"
+      "instruction": "Place a shape. A full line fades away.",
+      "empty": "Empty space",
+      "filled": "Filled space",
+      "tray": "Shapes to place",
+      "selectHint": "Selects this shape. Then choose a space on the grid, or drag it there.",
+      "placeHint": "Selected. Double tap a space on the grid to place it, or double tap again to turn it.",
+      "turn": "Turn",
+      "turnHint": "Rotates the selected shape",
+      "cellEmpty": "Row {row}, column {col}, empty",
+      "cellFilled": "Row {row}, column {col}, filled",
+      "cellPlace": "Place {piece} at row {row}, column {col}",
+      "pieces": {
+        "twin": "Pair",
+        "bar": "Bar",
+        "elbow": "Corner",
+        "tile": "Tile",
+        "arch": "Arch"
+      }
     },
     "snake": {
       "instruction": "Guide the snake and collect.",
@@ -177,7 +214,8 @@
     },
     "catch": {
       "instruction": "Tap the circle as it appears.",
-      "target": "Circle"
+      "target": "Circle",
+      "targetHint": "The circle you can tap"
     }
   },
   "read": {
@@ -188,6 +226,7 @@
     "pauseHint": "Stops lines from appearing on their own. You can still tap to continue.",
     "continue": "Continue the lines",
     "continueHint": "Lets lines appear on their own again.",
+    "tryAnotherHint": "Starts a fresh reading thread here",
     "speedHint": "How quickly each line appears. Tap anywhere to show the next line immediately.",
     "speeds": {
       "unhurried": "Unhurried",
@@ -198,6 +237,15 @@
   "ground": {
     "continueHint": "Shows the next grounding instruction",
     "audioPlaceholder": "TODO: REPLACE WITH PROFESSIONALLY RECORDED BACK GROUNDING AUDIO BEFORE RELEASE",
+    "menu": "Grounding menu",
+    "menuHint": "Opens the quiet grounding list",
+    "tryAnotherHint": "Opens the quiet grounding list",
+    "sequences": {
+      "feetBody": "Feet & Body",
+      "fiveSenses": "5–4–3–2–1",
+      "lookAround": "Look Around",
+      "texture": "Texture & Temperature"
+    },
     "steps": {
       "feet": "Feel where your feet meet the floor.",
       "toes": "Gently move your toes.",
@@ -206,13 +254,41 @@
       "hands": "Notice your hands.",
       "shoulders": "Let your shoulders soften.",
       "stay": "Stay here for one more moment."
+    },
+    "fiveSenses": {
+      "see": "Look around. Name five things you can see.",
+      "touch": "Notice four things you can touch.",
+      "hear": "Name three sounds you can hear.",
+      "smell": "Notice two smells, if any are there.",
+      "taste": "Notice one taste, or just the feeling in your mouth."
+    },
+    "lookAround": {
+      "see": "Look around and name three things you can see.",
+      "farthest": "Notice the farthest thing you can see from here.",
+      "still": "Look for something that is still.",
+      "object": "Look at one still object near you."
+    },
+    "texture": {
+      "notice": "Notice one texture you are not touching.",
+      "find": "Find something with a little texture.",
+      "cool": "Find a surface that looks cool to the touch.",
+      "temp": "Notice a temperature difference, even a small one."
     }
   },
   "move": {
     "hold": "Hold.",
     "release": "Release.",
     "notice": "Notice the difference.",
-    "tryAnotherHint": "Tries a different gentle movement",
+    "menu": "Movement menu",
+    "menuHint": "Opens the quiet movement list",
+    "tryAnotherHint": "Opens the quiet movement list",
+    "activities": {
+      "feet": "Press Feet",
+      "palms": "Press Palms",
+      "tense": "Tense & Release",
+      "shoulders": "Shoulders",
+      "hands": "Hands"
+    },
     "hints": {
       "press": "Press and hold here while you follow the instruction",
       "hold": "Keep holding until you are asked to release",
@@ -232,6 +308,9 @@
     "previous": "Previous sound",
     "next": "Next sound",
     "chooseSound": "Choose a sound",
+    "menu": "Sounds",
+    "menuHint": "Opens the quiet sound list",
+    "tryAnotherHint": "Opens the quiet sound list",
     "placeholderAudio": "Placeholder audio",
     "sounds": {
       "rain": "Soft rain",
@@ -248,8 +327,18 @@
       "brown": "Warm brown texture"
     }
   },
+  "privacy": {
+    "onDevice": "Everything Back uses for the six tools stays on this device. There is no account and no cloud.",
+    "stored": "That can include a support contact you save, Read memory, and preferences such as appearance and motion.",
+    "notSent": "None of this is sent to Back or anyone else. If you call or message, your phone app opens, and it starts only if you confirm.",
+    "emergency": "Extra support can help you reach someone nearby. Back does not place the call for you.",
+    "extraSupport": "Extra support",
+    "extraSupportHint": "Opens Extra support",
+    "policy": "Privacy policy"
+  },
   "about": {
-    "body": "Back is a private self-help tool for the next minute."
+    "body": "Back is rapid local support for the next minute, with six tools on this device.",
+    "disclaimer": "Back is not a medical device and is not therapy."
   },
   "notFound": {
     "title": "This page isn’t here",

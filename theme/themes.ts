@@ -26,6 +26,12 @@ export type ThemeColors = {
   secondaryButtonText: string;
   icon: string;
   overlay: string;
+  markPrimary: string;
+  markSecondary: string;
+  markMuted: string;
+  markWarmAccent: string;
+  markSurface: string;
+  markLine: string;
 };
 
 export type AppTheme = {
@@ -60,6 +66,12 @@ export const themes: Record<ThemeName, AppTheme> = {
       secondaryButtonText: '#153C32',
       icon: brand.deepForest,
       overlay: hexToRgba(brand.deepForest, 0.28),
+      markPrimary: brand.forestGreen,
+      markSecondary: brand.sage,
+      markMuted: brand.paleSage,
+      markWarmAccent: brand.camel,
+      markSurface: '#E7DDCE',
+      markLine: brand.blueSage,
     },
   },
   deepGreen: {
@@ -87,6 +99,12 @@ export const themes: Record<ThemeName, AppTheme> = {
       secondaryButtonText: '#F3EDE1',
       icon: '#F3EDE1',
       overlay: hexToRgba(brand.deepForest, 0.4),
+      markPrimary: '#D2E0D0',
+      markSecondary: '#A3C0A6',
+      markMuted: '#8AAF9A',
+      markWarmAccent: '#D1A96C',
+      markSurface: '#3D6658',
+      markLine: '#C5D4CC',
     },
   },
   softBeige: {
@@ -114,6 +132,12 @@ export const themes: Record<ThemeName, AppTheme> = {
       secondaryButtonText: '#173B32',
       icon: '#17483A',
       overlay: hexToRgba(brand.deepForest, 0.28),
+      markPrimary: brand.forestGreen,
+      markSecondary: brand.sage,
+      markMuted: brand.paleSage,
+      markWarmAccent: '#B89467',
+      markSurface: '#D8DFD5',
+      markLine: '#8FAAA4',
     },
   },
 };
