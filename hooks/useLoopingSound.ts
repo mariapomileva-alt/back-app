@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { AppState, type AppStateStatus } from 'react-native';
+import { AppState, Platform, type AppStateStatus } from 'react-native';
 import {
   setAudioModeAsync,
   setIsAudioActiveAsync,
@@ -295,9 +295,11 @@ export function useLoopingSound({
     if (playback === 'playing') {
       return;
     }
-    if (audible === true || (audible === null && status.playing)) {
+    if (!wantsPlay.current) {
+      return;
+    }
+    if (audible === true || (audible === null && status.playing && Platform.OS !== 'web')) {
       setPlayback('playing');
-      wantsPlay.current = true;
     }
   }, [playback, player, status.playing]);
 
