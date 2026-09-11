@@ -1,6 +1,7 @@
 import { Modal, Pressable, StyleSheet, View } from 'react-native';
 
 import { AccessiblePressable } from '@/components/accessibility/AccessiblePressable';
+import { CloseButton } from '@/components/buttons/CloseButton';
 import { AppText } from '@/components/typography/AppText';
 import { useReduceMotion } from '@/hooks/useReduceMotion';
 import { useTheme } from '@/hooks/useTheme';
@@ -45,8 +46,8 @@ export function SessionChoiceSheet({
     >
       <View style={[styles.overlay, { backgroundColor: theme.colors.overlay }]}>
         <Pressable
-          accessibilityRole="button"
-          accessibilityLabel={t('common.close')}
+          accessibilityElementsHidden
+          importantForAccessibility="no"
           onPress={onDismiss}
           style={StyleSheet.absoluteFill}
         />
@@ -60,9 +61,16 @@ export function SessionChoiceSheet({
             },
           ]}
         >
-          <AppText variant="section" accessibilityRole="header" style={styles.title}>
-            {title}
-          </AppText>
+          <View style={styles.titleRow}>
+            <AppText variant="section" accessibilityRole="header" style={styles.title}>
+              {title}
+            </AppText>
+            <CloseButton
+              onPress={onHardwareBack ?? onDismiss}
+              accessibilityLabel={t('exercise.closeSession')}
+              accessibilityHint={t('exercise.closeHint')}
+            />
+          </View>
           <View accessibilityRole="radiogroup" accessibilityLabel={title}>
             {options.map((option) => {
               const selected = option.id === selectedId;
@@ -120,8 +128,16 @@ const styles = StyleSheet.create({
     paddingBottom: spacing.xl,
     maxHeight: '72%',
   },
-  title: {
+  titleRow: {
+    minHeight: touch.min,
+    flexDirection: 'row',
+    alignItems: 'center',
     marginBottom: spacing.sm,
+    marginHorizontal: -spacing.sm,
+  },
+  title: {
+    flex: 1,
+    paddingHorizontal: spacing.sm,
   },
   row: {
     minHeight: touch.min,

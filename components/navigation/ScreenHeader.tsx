@@ -30,6 +30,17 @@ export function ScreenHeader({
   backHint,
   right,
 }: Props) {
+  const closeControl = showClose ? (
+    <CloseButton
+      variant={closeVariant}
+      onPress={onClose}
+      accessibilityLabel={closeLabel}
+      accessibilityHint={closeHint}
+    />
+  ) : (
+    <View style={styles.spacer} />
+  );
+
   return (
     <View style={styles.header}>
       <View style={styles.side}>
@@ -40,21 +51,26 @@ export function ScreenHeader({
             accessibilityLabel={backLabel}
             accessibilityHint={backHint}
           />
-        ) : showClose ? (
-          <CloseButton
-            variant={closeVariant}
-            onPress={onClose}
-            accessibilityLabel={closeLabel}
-            accessibilityHint={closeHint}
-          />
         ) : (
-          <View style={styles.spacer} />
+          closeControl
         )}
       </View>
       <AppText variant="section" style={styles.title} numberOfLines={2} accessibilityRole="header">
         {title}
       </AppText>
-      <View style={styles.side}>{right ?? <View style={styles.spacer} />}</View>
+      <View style={styles.side}>
+        {right ??
+          (onBack && showClose ? (
+            <CloseButton
+              variant={closeVariant}
+              onPress={onClose}
+              accessibilityLabel={closeLabel}
+              accessibilityHint={closeHint}
+            />
+          ) : (
+            <View style={styles.spacer} />
+          ))}
+      </View>
     </View>
   );
 }
