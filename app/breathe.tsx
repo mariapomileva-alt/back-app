@@ -32,14 +32,10 @@ export default function BreatheScreen() {
   const [patternId, setPatternId] = useState<BreathPatternId>(defaultBreathPatternId);
   const [chooserOpen, setChooserOpen] = useState(false);
   const pattern = getBreathPattern(patternId);
-  const restSize = Math.min(REST_SIZE, Math.round(width * 0.48), Math.round(height * (compact ? 0.2 : 0.24)));
+  const restSize = Math.min(REST_SIZE, Math.round(width * 0.48));
   const openSize = Math.max(
-    restSize + (compact ? 72 : 100),
-    Math.min(
-      reduceMotion ? REDUCE_OPEN_SIZE : OPEN_SIZE,
-      Math.round(width * 0.84),
-      Math.round(height * (compact ? 0.32 : 0.4)),
-    ),
+    restSize + 100,
+    Math.min(reduceMotion ? REDUCE_OPEN_SIZE : OPEN_SIZE, Math.round(width * 0.84)),
   );
   const { phase, openness } = useBreathCycle(pattern);
   const cue = t(cueKeyForPhase(phase));
