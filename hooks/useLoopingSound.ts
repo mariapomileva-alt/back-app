@@ -8,7 +8,7 @@ import {
   type AudioSource,
 } from 'expo-audio';
 
-import { attemptPlayback } from '@/features/audio/playback';
+import { attemptPlayback, isAudiblePlayback } from '@/features/audio/playback';
 import { DEFAULT_SOUND_VOLUME } from '@/storage/preferences';
 
 const FADE_MS = 1400;
@@ -287,11 +287,19 @@ export function useLoopingSound({
   }, [enabled, player, status.isLoaded]);
 
   useEffect(() => {
-    if (status.playing && playback !== 'playing') {
+    const audible = isAudiblePlayback(player);
+    if (audible === false && playback === 'playing') {
+      setPlayback(wantsPlay.current ? 'blocked' : 'paused');
+      return;
+    }
+    if (playback === 'playing') {
+      return;
+    }
+    if (audible === true || (audible === null && status.playing)) {
       setPlayback('playing');
       wantsPlay.current = true;
     }
-  }, [playback, status.playing]);
+  }, [playback, player, status.playing]);
 
   useEffect(() => {
     if (!enabled || playback !== 'playing' || !status.didJustFinish) {

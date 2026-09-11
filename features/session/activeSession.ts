@@ -15,6 +15,15 @@ let session: ActiveSession | null = null;
 let appState: AppStateStatus = AppState.currentState;
 let allowInternalNavigation = false;
 let appStateBound = false;
+let visibleToolScreens = 0;
+
+function pauseSessionClock(): void {
+  if (!session || session.segmentStartedAt === null) {
+    return;
+  }
+  session.accumulatedMs += Date.now() - session.segmentStartedAt;
+  session.segmentStartedAt = null;
+}
 
 function isForeground(state: AppStateStatus): boolean {
   if (Platform.OS === 'web') {
@@ -91,12 +100,26 @@ export function shouldOfferSessionOutcome(elapsedMs = getSessionElapsedMs()): bo
 }
 
 export function consumeSession(): { tool: HomeToolId; elapsedMs: number } | null {
+  visibleToolScreens = 0;
   if (!session) {
     return null;
   }
   const snapshot = { tool: session.tool, elapsedMs: getSessionElapsedMs() };
   session = null;
   return snapshot;
+}
+
+/** Count a visible tool screen so Home / leftover mounts cannot keep the clock running. */
+export function retainSessionVisibility(tool: HomeToolId): void {
+  startOrContinueSession(tool);
+  visibleToolScreens += 1;
+}
+
+export function releaseSessionVisibility(): void {
+  visibleToolScreens = Math.max(0, visibleToolScreens - 1);
+  if (visibleToolScreens === 0) {
+    pauseSessionClock();
+  }
 }
 
 /**

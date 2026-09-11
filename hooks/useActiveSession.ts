@@ -6,8 +6,9 @@ import {
   bindSessionAppState,
   consumeInternalSessionNavigation,
   consumeSession,
+  releaseSessionVisibility,
+  retainSessionVisibility,
   shouldOfferSessionOutcome,
-  startOrContinueSession,
 } from '@/features/session/activeSession';
 import { recordClosedSession } from '@/storage/history';
 import type { HomeToolId } from '@/types';
@@ -27,7 +28,10 @@ export function useActiveSession(
   const leavingRef = useRef(false);
 
   useEffect(() => {
-    startOrContinueSession(tool);
+    retainSessionVisibility(tool);
+    return () => {
+      releaseSessionVisibility();
+    };
   }, [tool]);
 
   const close = useCallback(() => {
