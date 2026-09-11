@@ -21,6 +21,8 @@ import { loadLastBreathPattern, saveLastBreathPattern } from '@/storage/preferen
 import { serif } from '@/theme/fonts';
 import { spacing } from '@/theme/spacing';
 
+// User-approved orb: 180 rest → 320 open. Do not shrink, height-cap for “compact”,
+// or replace with scale-only / Reduce-Motion-as-default. Size via width/height.
 const REST_SIZE = 180;
 const OPEN_SIZE = 320;
 const REDUCE_OPEN_SIZE = 280;

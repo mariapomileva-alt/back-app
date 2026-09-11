@@ -24,6 +24,7 @@ export function BreathingCircle({
   const rawId = useId().replace(/[^a-zA-Z0-9_-]/g, '');
   const gradientId = `breathFill${rawId}`;
   const t = Math.min(1, Math.max(0, openness));
+  // Real width/height (not Reanimated/CSS scale). Reduce Motion only dims fill.
   const diameter = restSize + (openSize - restSize) * t;
   const forest = theme.colors.forest;
   const sage = theme.colors.secondaryGreen;
