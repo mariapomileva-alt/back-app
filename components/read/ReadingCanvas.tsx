@@ -1,5 +1,5 @@
-import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
-import { Pressable, StyleSheet, View } from 'react-native';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { Platform, Pressable, StyleSheet, View } from 'react-native';
 import Animated, { Easing, useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated';
 
 import { AppText } from '@/components/typography/AppText';
@@ -10,17 +10,39 @@ import { t } from '@/locales/i18n';
 import { serif } from '@/theme/fonts';
 import { spacing, touch } from '@/theme/spacing';
 
-const FADE_MS = 860;
-const MOVE_MS = 980;
-const RISE_PX = 8;
-const ANCHOR = 0.7;
+const FADE_IN_MS = 320;
+const FADE_OUT_MS = 400;
+const REDUCE_FADE_MS = 220;
+const ENTER_RISE_PX = 8;
+const ESTIMATED_LINE = 52;
+const MAX_ON_CANVAS = 8;
+const TOP_RATIO = 0.22;
+const BOTTOM_RATIO = 0.88;
 const EASE_OUT = Easing.bezier(0.4, 0, 0.2, 1);
+const CSS_EASE = 'cubic-bezier(0.4, 0, 0.2, 1)';
+const USE_CSS_FADE = Platform.OS === 'web';
 
 type Props = {
   fragments: RevealFragment[];
   revealedCount: number;
   onReveal: () => void;
   speed: ReadRevealSpeed;
+  paused?: boolean;
+};
+
+type PlacedFragment = {
+  fragment: RevealFragment;
+  top: number;
+  recency: number;
+  leaving: boolean;
+};
+
+type LineMotion = {
+  fragment: RevealFragment;
+  recency: number;
+  newest: boolean;
+  reduceMotion: boolean;
+  leaving: boolean;
 };
 
 function recencyOpacity(indexFromNewest: number): number {
@@ -28,91 +50,241 @@ function recencyOpacity(indexFromNewest: number): number {
     return 1;
   }
   if (indexFromNewest === 1) {
-    return 0.82;
+    return 0.9;
   }
   if (indexFromNewest === 2) {
-    return 0.62;
+    return 0.74;
   }
   if (indexFromNewest === 3) {
-    return 0.42;
+    return 0.54;
+  }
+  if (indexFromNewest === 4) {
+    return 0.38;
   }
   return 0.24;
+}
+
+function recencyShiftY(indexFromNewest: number, leaving: boolean): number {
+  if (leaving) {
+    return -8;
+  }
+  if (indexFromNewest <= 0) {
+    return 0;
+  }
+  return -Math.min(4 + (indexFromNewest - 1) * 2, 10);
+}
+
+function fadeDurationMs(leaving: boolean, newest: boolean, reduceMotion: boolean): number {
+  if (reduceMotion) {
+    return REDUCE_FADE_MS;
+  }
+  if (leaving || !newest) {
+    return FADE_OUT_MS;
+  }
+  return FADE_IN_MS;
+}
+
+function lineHeight(heights: Record<string, number>, id: string): number {
+  return heights[id] ?? ESTIMATED_LINE;
+}
+
+function pickVisible(
+  fragments: RevealFragment[],
+  revealedCount: number,
+  heights: Record<string, number>,
+  canvasHeight: number,
+): { items: RevealFragment[]; filled: boolean } {
+  const revealed = fragments.slice(0, Math.min(Math.max(revealedCount, 1), fragments.length));
+  if (canvasHeight <= 0) {
+    return { items: revealed.slice(-1), filled: false };
+  }
+
+  const available = canvasHeight * (BOTTOM_RATIO - TOP_RATIO);
+  const items: RevealFragment[] = [];
+  let used = 0;
+
+  for (let index = revealed.length - 1; index >= 0; index -= 1) {
+    const fragment = revealed[index];
+    if (!fragment) {
+      continue;
+    }
+    const height = lineHeight(heights, fragment.id);
+    if (items.length > 0 && (used + height > available || items.length >= MAX_ON_CANVAS)) {
+      break;
+    }
+    items.unshift(fragment);
+    used += height;
+  }
+
+  return { items, filled: items.length < revealed.length };
+}
+
+function cssFadeStyle(opacity: number, translateY: number, durationMs: number, move: boolean) {
+  return {
+    opacity,
+    transform: [{ translateY }],
+    transitionProperty: move ? 'opacity, transform' : 'opacity',
+    transitionDuration: `${durationMs}ms`,
+    transitionTimingFunction: CSS_EASE,
+  };
+}
+
+function LineCopy({ fragment, newest, leaving }: { fragment: RevealFragment; newest: boolean; leaving: boolean }) {
+  const focal = isFocalWord(fragment.text);
+  return (
+    <AppText
+      variant="instruction"
+      accessibilityLiveRegion={newest && !leaving ? 'polite' : 'none'}
+      style={[styles.phrase, focal ? styles.focal : null]}
+    >
+      {fragment.text}
+    </AppText>
+  );
+}
+
+function WebFade({ fragment, recency, newest, reduceMotion, leaving }: LineMotion) {
+  const targetOpacity = leaving ? 0 : recencyOpacity(recency);
+  const targetY = reduceMotion ? 0 : recencyShiftY(recency, leaving);
+  const duration = fadeDurationMs(leaving, newest, reduceMotion);
+  const [painted, setPainted] = useState(false);
+
+  useEffect(() => {
+    let inner = 0;
+    const outer = requestAnimationFrame(() => {
+      inner = requestAnimationFrame(() => setPainted(true));
+    });
+    return () => {
+      cancelAnimationFrame(outer);
+      cancelAnimationFrame(inner);
+    };
+  }, []);
+
+  const opacity = painted ? targetOpacity : newest && !leaving ? 0 : targetOpacity;
+  const translateY = painted || reduceMotion ? targetY : newest && !leaving ? ENTER_RISE_PX : targetY;
+
+  return (
+    <View style={cssFadeStyle(opacity, translateY, duration, !reduceMotion)}>
+      <LineCopy fragment={fragment} newest={newest} leaving={leaving} />
+    </View>
+  );
+}
+
+function NativeFade({ fragment, recency, newest, reduceMotion, leaving }: LineMotion) {
+  const opacity = useSharedValue(0);
+  const shift = useSharedValue(reduceMotion || !newest ? 0 : ENTER_RISE_PX);
+
+  useEffect(() => {
+    const target = leaving ? 0 : recencyOpacity(recency);
+    const duration = fadeDurationMs(leaving, newest, reduceMotion);
+    opacity.value = withTiming(target, { duration, easing: EASE_OUT });
+    shift.value = withTiming(reduceMotion ? 0 : recencyShiftY(recency, leaving), {
+      duration,
+      easing: EASE_OUT,
+    });
+  }, [leaving, newest, opacity, recency, reduceMotion, shift]);
+
+  const style = useAnimatedStyle(() => ({
+    opacity: opacity.value,
+    transform: [{ translateY: shift.value }],
+  }));
+
+  return (
+    <Animated.View style={style}>
+      <LineCopy fragment={fragment} newest={newest} leaving={leaving} />
+    </Animated.View>
+  );
 }
 
 function ReadLine({
   fragment,
   recency,
   top,
+  newest,
   reduceMotion,
+  leaving,
   onHeight,
-}: {
-  fragment: RevealFragment;
-  recency: number;
+}: LineMotion & {
   top: number;
-  reduceMotion: boolean;
   onHeight: (id: string, height: number) => void;
 }) {
-  const opacity = useSharedValue(reduceMotion ? recencyOpacity(recency) : 0);
-  const rise = useSharedValue(reduceMotion ? 0 : RISE_PX);
-  const entered = useRef(false);
-
-  useEffect(() => {
-    const target = recencyOpacity(recency);
-    if (reduceMotion) {
-      opacity.value = target;
-      rise.value = 0;
-      entered.current = true;
-      return;
-    }
-    opacity.value = withTiming(target, { duration: FADE_MS, easing: EASE_OUT });
-    if (!entered.current) {
-      rise.value = withTiming(0, { duration: FADE_MS, easing: EASE_OUT });
-      entered.current = true;
-    }
-  }, [opacity, recency, reduceMotion, rise]);
-
-  const style = useAnimatedStyle(() => ({
-    opacity: opacity.value,
-    transform: [{ translateY: rise.value }],
-  }));
-  const focal = isFocalWord(fragment.text);
-
   return (
     <View
       collapsable={false}
       style={[styles.line, { top }]}
       onLayout={(event) => onHeight(fragment.id, event.nativeEvent.layout.height)}
     >
-      <Animated.View style={style}>
-        <AppText variant="instruction" style={[styles.phrase, focal ? styles.focal : null]}>
-          {fragment.text}
-        </AppText>
-      </Animated.View>
+      {USE_CSS_FADE ? (
+        <WebFade
+          fragment={fragment}
+          recency={recency}
+          newest={newest}
+          reduceMotion={reduceMotion}
+          leaving={leaving}
+        />
+      ) : (
+        <NativeFade
+          fragment={fragment}
+          recency={recency}
+          newest={newest}
+          reduceMotion={reduceMotion}
+          leaving={leaving}
+        />
+      )}
     </View>
   );
 }
 
-export function ReadingCanvas({ fragments, revealedCount, onReveal, speed }: Props) {
+export function ReadingCanvas({ fragments, revealedCount, onReveal, speed, paused = false }: Props) {
   const reduceMotion = useReduceMotion();
   const [canvasHeight, setCanvasHeight] = useState(0);
   const [heights, setHeights] = useState<Record<string, number>>({});
-  const placed = useRef(false);
-  const shown = useSharedValue(0);
-  const offset = useSharedValue(0);
+  const [departing, setDeparting] = useState<PlacedFragment[]>([]);
+  const previousIds = useRef<string[]>([]);
+  const previousTops = useRef<Record<string, number>>({});
   const visibleCount = Math.min(Math.max(revealedCount, 1), fragments.length);
-  const visible = fragments.slice(0, visibleCount);
-  const current = visible[visible.length - 1];
-  const complete = visibleCount >= fragments.length;
+  const current = fragments[visibleCount - 1];
+
+  const fitted = useMemo(
+    () => pickVisible(fragments, visibleCount, heights, canvasHeight),
+    [canvasHeight, fragments, heights, visibleCount],
+  );
 
   const layout = useMemo(() => {
     const tops: Record<string, number> = {};
-    let y = 0;
-    for (const fragment of visible) {
+    const topEdge = canvasHeight * TOP_RATIO;
+    let y = topEdge;
+    for (const fragment of fitted.items) {
       tops[fragment.id] = y;
-      y += heights[fragment.id] ?? 0;
+      y += lineHeight(heights, fragment.id);
     }
-    return { tops, total: y };
-  }, [heights, visible]);
+    return { tops, topEdge };
+  }, [canvasHeight, fitted.items, heights]);
+
+  useEffect(() => {
+    const nextIds = fitted.items.map((item) => item.id);
+    const left = previousIds.current.filter((id) => !nextIds.includes(id));
+    const leftTops = previousTops.current;
+    previousIds.current = nextIds;
+    previousTops.current = layout.tops;
+    if (left.length === 0) {
+      return;
+    }
+
+    setDeparting(
+      left.map((id) => {
+        const fragment = fragments.find((item) => item.id === id);
+        return {
+          fragment: fragment ?? { id, itemId: id, kind: 'observation' as const, text: '' },
+          top: leftTops[id] ?? layout.topEdge,
+          recency: 6,
+          leaving: true,
+        };
+      }),
+    );
+    const hold = (reduceMotion ? REDUCE_FADE_MS : FADE_OUT_MS) + 40;
+    const timer = setTimeout(() => setDeparting([]), hold);
+    return () => clearTimeout(timer);
+  }, [fitted.items, fragments, layout.topEdge, layout.tops, reduceMotion]);
 
   const onHeight = useCallback((id: string, height: number) => {
     setHeights((currentHeights) => {
@@ -125,39 +297,31 @@ export function ReadingCanvas({ fragments, revealedCount, onReveal, speed }: Pro
   }, []);
 
   useEffect(() => {
-    if (complete || !current) {
+    if (paused || !current || visibleCount >= fragments.length) {
       return;
     }
     const delay = fragmentDelayMs(current.text, speed, current.kind);
     const wait = reduceMotion ? Math.round(delay * 0.55) : delay;
-    const id = setTimeout(onReveal, wait);
-    return () => clearTimeout(id);
-  }, [complete, current, onReveal, reduceMotion, speed, visibleCount]);
+    const timer = setTimeout(onReveal, wait);
+    return () => clearTimeout(timer);
+  }, [current, fragments.length, onReveal, paused, reduceMotion, speed, visibleCount]);
 
-  useLayoutEffect(() => {
-    if (canvasHeight <= 0 || layout.total <= 0) {
-      return;
-    }
-    const target = canvasHeight * ANCHOR - layout.total;
-    if (reduceMotion || !placed.current) {
-      offset.value = target;
-      shown.value = 1;
-      placed.current = true;
-      return;
-    }
-    offset.value = withTiming(target, { duration: MOVE_MS, easing: EASE_OUT });
-  }, [canvasHeight, layout.total, offset, reduceMotion, shown]);
-
-  const columnStyle = useAnimatedStyle(() => ({
-    opacity: shown.value,
-    transform: [{ translateY: offset.value }],
-  }));
+  const visibleIds = new Set(fitted.items.map((item) => item.id));
+  const placed: PlacedFragment[] = [
+    ...departing.filter((item) => !visibleIds.has(item.fragment.id)),
+    ...fitted.items.map((fragment, index) => ({
+      fragment,
+      top: layout.tops[fragment.id] ?? layout.topEdge,
+      recency: fitted.items.length - 1 - index,
+      leaving: false,
+    })),
+  ];
 
   return (
     <Pressable
       accessibilityRole="button"
-      accessibilityLabel={current?.text ?? t('home.tools.read')}
-      accessibilityHint={t('read.revealHint')}
+      accessibilityLabel={t('read.canvas')}
+      accessibilityHint={paused ? t('read.pausedHint') : t('read.revealHint')}
       onPress={onReveal}
       onLayout={(event) => {
         const next = event.nativeEvent.layout.height;
@@ -165,39 +329,20 @@ export function ReadingCanvas({ fragments, revealedCount, onReveal, speed }: Pro
       }}
       style={styles.stage}
     >
-      <Animated.View
-        accessible={false}
-        pointerEvents="box-none"
-        style={[styles.stack, { height: layout.total }, columnStyle]}
-      >
-        {visible.map((fragment, index) => (
+      <View accessible={false} style={styles.stack}>
+        {placed.map((item) => (
           <ReadLine
-            key={fragment.id}
-            fragment={fragment}
-            recency={visible.length - 1 - index}
-            top={layout.tops[fragment.id] ?? 0}
+            key={item.fragment.id}
+            fragment={item.fragment}
+            recency={item.recency}
+            top={item.top}
+            newest={!item.leaving && item.recency === 0}
             reduceMotion={reduceMotion}
+            leaving={item.leaving}
             onHeight={onHeight}
           />
         ))}
-        {current?.kind === 'choice' && current.options && current.options.length > 0 ? (
-          <View style={[styles.choices, { top: layout.total }]}>
-            {current.options.map((option) => (
-              <Pressable
-                key={option}
-                accessibilityRole="button"
-                accessibilityLabel={option}
-                onPress={onReveal}
-                style={({ pressed }) => [styles.choice, { opacity: pressed ? 0.7 : 0.82 }]}
-              >
-                <AppText variant="secondary" tone="secondary" style={styles.choiceLabel}>
-                  {option}
-                </AppText>
-              </Pressable>
-            ))}
-          </View>
-        ) : null}
-      </Animated.View>
+      </View>
     </Pressable>
   );
 }
@@ -206,18 +351,21 @@ const styles = StyleSheet.create({
   stage: {
     flex: 1,
     overflow: 'hidden',
+    minHeight: touch.min,
   },
   stack: {
-    position: 'relative',
-    overflow: 'visible',
+    ...StyleSheet.absoluteFill,
     width: '100%',
-    maxWidth: 332,
+    maxWidth: 340,
+    paddingRight: spacing.sm,
+    pointerEvents: 'none',
   },
   line: {
     position: 'absolute',
     left: 0,
     right: 0,
     paddingBottom: spacing.sm,
+    pointerEvents: 'none',
   },
   phrase: {
     fontFamily: serif,
@@ -232,23 +380,5 @@ const styles = StyleSheet.create({
     letterSpacing: 1.4,
     marginTop: spacing.xs,
     marginBottom: spacing.xs,
-  },
-  choices: {
-    position: 'absolute',
-    left: 0,
-    right: 0,
-    gap: spacing.xs,
-    alignItems: 'flex-start',
-  },
-  choice: {
-    minHeight: touch.min - 8,
-    justifyContent: 'center',
-    paddingVertical: spacing.xs,
-    paddingRight: spacing.md,
-  },
-  choiceLabel: {
-    fontFamily: serif,
-    fontSize: 18,
-    lineHeight: 24,
   },
 });

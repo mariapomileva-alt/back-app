@@ -14,6 +14,9 @@ type Props = {
   scroll?: boolean;
   closeLabel?: string;
   closeHint?: string;
+  onBack?: () => void;
+  backLabel?: string;
+  backHint?: string;
 };
 
 export function ExerciseShell({
@@ -24,6 +27,9 @@ export function ExerciseShell({
   scroll,
   closeLabel,
   closeHint,
+  onBack,
+  backLabel,
+  backHint,
 }: Props) {
   const { theme } = useTheme();
 
@@ -40,6 +46,9 @@ export function ExerciseShell({
           onClose={onClose}
           closeLabel={closeLabel}
           closeHint={closeHint}
+          onBack={onBack}
+          backLabel={backLabel}
+          backHint={backHint}
           right={right}
         />
         {children}
@@ -63,5 +72,6 @@ const styles = StyleSheet.create({
   },
   fill: {
     flex: 1,
+    minHeight: 0,
   },
 });

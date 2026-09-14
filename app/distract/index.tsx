@@ -1,17 +1,12 @@
-import { useEffect, useState } from 'react';
 import { StyleSheet, View } from 'react-native';
-import { useLocalSearchParams, useRouter } from 'expo-router';
+import { useEffect, useState } from 'react';
+import { useRouter } from 'expo-router';
 
 import { ToolCard } from '@/components/cards/ToolCard';
 import { DistractActivityMark } from '@/components/distract/ActivityMarks';
 import { ActiveSessionScreen } from '@/components/session/ActiveSessionScreen';
 import { AppText } from '@/components/typography/AppText';
-import {
-  distractActivityHref,
-  distractActivityIds,
-  isDistractActivityId,
-  wantsDistractChooser,
-} from '@/features/distract/activities';
+import { distractActivityHref, distractActivityIds } from '@/features/distract/activities';
 import { homeCardBorder } from '@/features/home/surfaces';
 import { beginInternalSessionNavigation } from '@/features/session/activeSession';
 import { useTheme } from '@/hooks/useTheme';
@@ -23,48 +18,25 @@ import { spacing } from '@/theme/spacing';
 export default function DistractMenuScreen() {
   const router = useRouter();
   const { theme } = useTheme();
-  const params = useLocalSearchParams<{ choose?: string | string[] }>();
-  const [ready, setReady] = useState(false);
-  const choose = wantsDistractChooser(params.choose);
+  const [lastActivity, setLastActivity] = useState<string | null>(null);
 
   useEffect(() => {
     let cancelled = false;
-
     void loadLastDistractActivity().then((stored) => {
-      if (cancelled) {
-        return;
+      if (!cancelled) {
+        setLastActivity(stored);
       }
-      if (!choose && isDistractActivityId(stored)) {
-        beginInternalSessionNavigation();
-        router.replace(distractActivityHref(stored));
-        return;
-      }
-      setReady(true);
     });
-
     return () => {
       cancelled = true;
     };
-  }, [choose, router]);
+  }, []);
 
   const openActivity = (id: (typeof distractActivityIds)[number]) => {
     void saveLastDistractActivity(id);
     beginInternalSessionNavigation();
     router.replace(distractActivityHref(id));
   };
-
-  if (!ready) {
-    return (
-      <ActiveSessionScreen
-        tool="distract"
-        title={t('home.tools.distract')}
-        scroll={false}
-        showSessionActions={false}
-      >
-        <View style={styles.body} />
-      </ActiveSessionScreen>
-    );
-  }
 
   const rows = [distractActivityIds.slice(0, 2), distractActivityIds.slice(2, 4)];
 
@@ -78,15 +50,16 @@ export default function DistractMenuScreen() {
               <ToolCard
                 key={id}
                 label={t(`distract.activities.${id}`)}
+                selected={id === lastActivity}
                 visual={
-                  <View pointerEvents="none" style={styles.mark} accessible={false}>
+                  <View accessible={false} style={[styles.mark, { pointerEvents: 'none' }]}>
                     <DistractActivityMark id={id} />
                   </View>
                 }
                 onPress={() => openActivity(id)}
                 style={{
                   backgroundColor: theme.colors.surface,
-                  borderColor: homeCardBorder(theme),
+                  borderColor: id === lastActivity ? theme.colors.primary : homeCardBorder(theme),
                 }}
               />
             ))}
@@ -98,9 +71,6 @@ export default function DistractMenuScreen() {
 }
 
 const styles = StyleSheet.create({
-  body: {
-    flex: 1,
-  },
   choose: {
     fontFamily: serif,
     fontSize: 28,

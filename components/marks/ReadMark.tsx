@@ -8,8 +8,8 @@ import { markViewBox } from './markLanguage';
 
 export function ReadMark() {
   const { theme } = useTheme();
-  const letter = theme.colors.clay;
-  const rule = theme.colors.primary;
+  const letter = theme.colors.markWarmAccent;
+  const rule = theme.colors.markPrimary;
 
   return (
     <MarkFrame>

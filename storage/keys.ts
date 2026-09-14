@@ -3,6 +3,8 @@ export const storageKeys = {
   hapticsEnabled: 'back.hapticsEnabled',
   reduceMotionOverride: 'back.reduceMotionOverride',
   lastSoundId: 'back.lastSoundId',
+  soundMuted: 'back.soundMuted',
+  soundVolume: 'back.soundVolume',
   lastBreathPattern: 'back.lastBreathPattern',
   lastDistractActivity: 'back.lastDistractActivity',
   firstLaunchSeen: 'back.firstLaunchSeen',

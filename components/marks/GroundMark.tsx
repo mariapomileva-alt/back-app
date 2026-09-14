@@ -7,8 +7,8 @@ import { markViewBox, strokeRegular, strokeThin } from './markLanguage';
 
 export function GroundMark() {
   const { theme } = useTheme();
-  const mound = theme.colors.organic;
-  const sage = theme.colors.secondaryGreen;
+  const mound = theme.colors.markSurface;
+  const sage = theme.colors.markSecondary;
 
   return (
     <MarkFrame>

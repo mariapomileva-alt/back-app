@@ -12,6 +12,9 @@ type Props = {
   closeVariant?: 'close' | 'back';
   closeLabel?: string;
   closeHint?: string;
+  onBack?: () => void;
+  backLabel?: string;
+  backHint?: string;
   right?: ReactNode;
 };
 
@@ -22,26 +25,52 @@ export function ScreenHeader({
   closeVariant = 'close',
   closeLabel,
   closeHint,
+  onBack,
+  backLabel,
+  backHint,
   right,
 }: Props) {
+  const closeControl = showClose ? (
+    <CloseButton
+      variant={closeVariant}
+      onPress={onClose}
+      accessibilityLabel={closeLabel}
+      accessibilityHint={closeHint}
+    />
+  ) : (
+    <View style={styles.spacer} />
+  );
+
   return (
     <View style={styles.header}>
       <View style={styles.side}>
-        {showClose ? (
+        {onBack ? (
           <CloseButton
-            variant={closeVariant}
-            onPress={onClose}
-            accessibilityLabel={closeLabel}
-            accessibilityHint={closeHint}
+            variant="back"
+            onPress={onBack}
+            accessibilityLabel={backLabel}
+            accessibilityHint={backHint}
           />
         ) : (
-          <View style={styles.spacer} />
+          closeControl
         )}
       </View>
       <AppText variant="section" style={styles.title} numberOfLines={2} accessibilityRole="header">
         {title}
       </AppText>
-      <View style={styles.side}>{right ?? <View style={styles.spacer} />}</View>
+      <View style={styles.side}>
+        {right ??
+          (onBack && showClose ? (
+            <CloseButton
+              variant={closeVariant}
+              onPress={onClose}
+              accessibilityLabel={closeLabel}
+              accessibilityHint={closeHint}
+            />
+          ) : (
+            <View style={styles.spacer} />
+          ))}
+      </View>
     </View>
   );
 }
@@ -55,6 +84,9 @@ const styles = StyleSheet.create({
   },
   side: {
     width: touch.min,
+    minWidth: touch.min,
+    flexShrink: 0,
+    overflow: 'visible',
     alignItems: 'center',
     justifyContent: 'center',
   },

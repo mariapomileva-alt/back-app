@@ -44,7 +44,12 @@ export function HomeCardVisual({ id }: Props) {
   }
 
   return (
-    <View pointerEvents="none" style={styles.wrap} accessible={false}>
+    <View
+      style={[styles.wrap, { pointerEvents: 'none' }]}
+      accessible={false}
+      accessibilityElementsHidden
+      importantForAccessibility="no-hide-descendants"
+    >
       {content}
       <LinearGradient
         colors={[hexToRgba(theme.colors.surface, 0), theme.colors.surface]}

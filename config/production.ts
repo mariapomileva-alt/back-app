@@ -11,7 +11,8 @@ export const productionConfig = {
   iosBundleIdentifier: 'app.back.selfhelp',
   androidPackage: 'app.back.selfhelp',
 
-  // TODO: add RevenueCat public SDK keys. Until then, subscription uses a local mock.
+  // Development mode: purchasing is disabled. Do not implement RevenueCat in this pass.
+  // TODO: add RevenueCat public SDK keys only when a real store product exists.
   revenueCatIosApiKey: null as string | null,
   revenueCatAndroidApiKey: null as string | null,
 
@@ -21,15 +22,23 @@ export const productionConfig = {
   entitlementId: 'back_annual',
 
   // TODO: replace with the live Terms of Use URL before store release.
+  // In-app Terms: app/settings/terms.tsx. Do not invent a domain.
   termsUrl: null as string | null,
 
   // TODO: replace with the live Privacy Policy URL before store release.
+  // In-app Privacy: app/settings/privacy.tsx. Do not invent a domain.
   privacyUrl: null as string | null,
 
-  // TODO: add professionally recorded English grounding audio before store release.
-  groundingAudioReady: false, // TODO: REPLACE WITH FINAL PRODUCTION ARTWORK / professionally recorded English grounding audio
+  // TODO: REPLACE WITH PROFESSIONALLY RECORDED BACK GROUNDING AUDIO BEFORE RELEASE
+  // Drop audio/grounding/english.wav (or .m4a), point the require() in
+  // features/media/catalog.ts at that file, then set this true.
+  // Until then keep english-placeholder.wav and this flag false.
+  groundingAudioReady: false,
 
   // TODO: add professionally mixed looping environment sounds before store release.
+  // Drop audio/sounds/{soft-rain,ocean,fan,forest,brown-noise}.wav (or .m4a),
+  // point the require() paths in features/media/catalog.ts at those files, then set this true.
+  // Until then keep the *-placeholder.wav files and this flag false.
   environmentAudioReady: false,
 
   // TODO: export final app icon at required store sizes from the master artwork.

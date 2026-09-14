@@ -15,10 +15,11 @@ type Props = {
   visual?: ReactNode;
   onPress: () => void;
   accessibilityHint?: string;
+  selected?: boolean;
   style?: StyleProp<ViewStyle>;
 };
 
-export function ToolCard({ label, icon, visual, onPress, accessibilityHint, style }: Props) {
+export function ToolCard({ label, icon, visual, onPress, accessibilityHint, selected = false, style }: Props) {
   const { theme } = useTheme();
   const haptics = useHaptics();
   const withVisual = Boolean(visual);
@@ -26,7 +27,8 @@ export function ToolCard({ label, icon, visual, onPress, accessibilityHint, styl
   return (
     <Pressable
       accessibilityRole="button"
-      accessibilityLabel={label}
+      accessibilityLabel={selected ? `${label}, ${t('common.selected')}` : label}
+      accessibilityState={{ selected }}
       accessibilityHint={accessibilityHint ?? t('home.startToolHint')}
       onPress={() => {
         haptics.light();
@@ -44,15 +46,30 @@ export function ToolCard({ label, icon, visual, onPress, accessibilityHint, styl
         style,
       ]}
     >
-      {visual ? <View style={styles.visual}>{visual}</View> : null}
+      {visual ? (
+        <View
+          accessible={false}
+          accessibilityElementsHidden
+          importantForAccessibility="no-hide-descendants"
+          style={[styles.visual, { pointerEvents: 'none' }]}
+        >
+          {visual}
+        </View>
+      ) : null}
       {icon ? (
-        <View style={styles.icon} accessible={false}>
+        <View
+          style={styles.icon}
+          accessible={false}
+          accessibilityElementsHidden
+          importantForAccessibility="no-hide-descendants"
+        >
           {icon}
         </View>
       ) : null}
       <AppText
         variant="button"
         numberOfLines={1}
+        accessible={false}
         style={[styles.label, withVisual ? styles.labelUnderMark : null]}
       >
         {label}

@@ -3,9 +3,13 @@
     "id": "en-stories-001",
     "type": "micro_story",
     "fragments": [
-      "A small boat sat still on the lake.",
-      "The water held the sky without asking.",
-      "A bird crossed once, then the quiet returned."
+      "On a still lake",
+      "a small boat sat",
+      "as if it had forgotten to leave.",
+      "The water held the sky",
+      "without asking.",
+      "A bird crossed once.",
+      "Then the quiet returned."
     ],
     "topics": [
       "water"
@@ -16,8 +20,10 @@
     "id": "en-stories-002",
     "type": "micro_story",
     "fragments": [
-      "The chair remembered the shape of waiting.",
-      "Afternoon collected itself in a square of floor.",
+      "The chair",
+      "remembered the shape of waiting.",
+      "Afternoon collected itself",
+      "in a square of floor.",
       "Nothing needed to happen next."
     ],
     "topics": [
@@ -46,8 +52,10 @@
     "id": "en-stories-004",
     "type": "micro_story",
     "fragments": [
-      "Clouds stacked themselves without hurry.",
-      "The street darkened a little, then paused.",
+      "Clouds stacked themselves",
+      "without hurry.",
+      "The street darkened a little,",
+      "then paused.",
       "Rain decided later."
     ],
     "topics": [
@@ -59,8 +67,10 @@
     "id": "en-stories-005",
     "type": "micro_story",
     "fragments": [
-      "Someone had left a page open on the table.",
-      "The sentence in the middle was unfinished.",
+      "Someone had left a page open",
+      "on the table.",
+      "The sentence in the middle",
+      "was unfinished.",
       "It could wait.",
       "Paper is patient."
     ],
@@ -895,6 +905,250 @@
     ],
     "topics": [
       "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-stories-065",
+    "type": "micro_story",
+    "fragments": [
+      "At the end of a quiet street",
+      "there was a small bakery",
+      "with three round tables.",
+      "The table beside the window",
+      "had a blue cup on it.",
+      "Keep the color blue in mind.",
+      "Look around.",
+      "Can you find something blue?"
+    ],
+    "topics": [
+      "room",
+      "home"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-stories-066",
+    "type": "micro_story",
+    "fragments": [
+      "The harbor was still waking.",
+      "A rope made a slow circle in the water.",
+      "Then another.",
+      "Gulls argued about nothing important.",
+      "Keep the circles in mind.",
+      "If anything nearby is round,",
+      "let your eyes rest there."
+    ],
+    "topics": [
+      "coast",
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-stories-067",
+    "type": "micro_story",
+    "fragments": [
+      "On the kitchen table",
+      "a bowl held three lemons.",
+      "One had a small leaf still attached.",
+      "The yellow was almost too sure of itself.",
+      "Hold that yellow for a moment.",
+      "Look around.",
+      "Is anything near you that bright?"
+    ],
+    "topics": [
+      "home",
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-stories-068",
+    "type": "micro_story",
+    "fragments": [
+      "Halfway down the lane",
+      "a yellow door waited",
+      "as if someone might still come back for a key.",
+      "Paint had thinned on the handle.",
+      "The rest of the street stayed ordinary.",
+      "Notice one worn thing near you."
+    ],
+    "topics": [
+      "home"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-stories-069",
+    "type": "micro_story",
+    "fragments": [
+      "The river arranged its stones",
+      "without asking which should be on top.",
+      "Water found the same path",
+      "it had found yesterday.",
+      "A darker stone sat a little apart.",
+      "Keep that darker color.",
+      "Find something nearby that is not shiny."
+    ],
+    "topics": [
+      "water",
+      "stone"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-stories-070",
+    "type": "micro_story",
+    "fragments": [
+      "Under the market awning",
+      "shade made a soft rectangle.",
+      "A crate of oranges caught the leftover light.",
+      "Someone counted them without speaking.",
+      "Count one small group of things near you.",
+      "No need to get it exact."
+    ],
+    "topics": [
+      "home",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-stories-071",
+    "type": "micro_story",
+    "fragments": [
+      "Snow sat on the fence rail",
+      "as if it had been invited.",
+      "Each post wore the same quiet hat.",
+      "The field behind it was only field.",
+      "Look for a straight line nearby.",
+      "A frame. An edge. A rail of some kind."
+    ],
+    "topics": [
+      "weather",
+      "earth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-stories-072",
+    "type": "micro_story",
+    "fragments": [
+      "The bookstore stair turned twice",
+      "before it reached the quiet floor.",
+      "A window there held a pot of thyme.",
+      "The books leaned the way old friends lean.",
+      "Find a word printed near you.",
+      "Even a small one."
+    ],
+    "topics": [
+      "paper",
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-stories-073",
+    "type": "micro_story",
+    "fragments": [
+      "In the kitchen drawer",
+      "a wooden spoon had learned the shape of soup.",
+      "It lay beside a whisk",
+      "that was only geometry until someone needed it.",
+      "Look at one ordinary object near you.",
+      "Let it be enough."
+    ],
+    "topics": [
+      "home",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-stories-074",
+    "type": "micro_story",
+    "fragments": [
+      "The garden path",
+      "knew two kinds of green.",
+      "Moss between the stones.",
+      "And the taller green that moved when the air did.",
+      "Keep one of those greens.",
+      "Look around.",
+      "Can you find a green of your own?"
+    ],
+    "topics": [
+      "plants",
+      "forest"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-stories-075",
+    "type": "micro_story",
+    "fragments": [
+      "Late in the room",
+      "the window kept a square of night.",
+      "A lamp made a smaller square on the table.",
+      "Between them, the air did very little.",
+      "Notice where the light is coming from.",
+      "You can stay with that."
+    ],
+    "topics": [
+      "night",
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-stories-076",
+    "type": "micro_story",
+    "fragments": [
+      "From the window",
+      "fields arrived in long pale strips.",
+      "A single tree kept its place",
+      "as the rest of the view changed its mind.",
+      "Keep that tree.",
+      "Find something nearby that stands still",
+      "while other things can move."
+    ],
+    "topics": [
+      "earth",
+      "sky"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-stories-077",
+    "type": "micro_story",
+    "fragments": [
+      "An envelope waited on the shelf",
+      "with no hurry to be opened.",
+      "The paper had a faint blue lining.",
+      "Someone had written only the first word of an address.",
+      "Notice one piece of paper near you.",
+      "Even a label counts."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-stories-078",
+    "type": "micro_story",
+    "fragments": [
+      "The hallway tiles",
+      "were almost white",
+      "except for one that had decided to be blue.",
+      "It sat there like a quiet fact.",
+      "Keep that blue.",
+      "Look down, or around.",
+      "Is there a color that stands a little apart?"
+    ],
+    "topics": [
+      "room",
+      "home"
     ],
     "difficulty": 1
   }

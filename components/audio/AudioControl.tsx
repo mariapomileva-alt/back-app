@@ -34,6 +34,7 @@ export function AudioControl({
     <AccessiblePressable
       accessibilityRole="button"
       accessibilityLabel={isPlaying ? t('common.pause') : t('common.play')}
+      accessibilityState={{ selected: isPlaying }}
       onPress={onPlayPause}
       style={[styles.control, stacked && styles.stackControl]}
     >
@@ -136,6 +137,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   stackControl: {
-    height: 48,
+    minHeight: touch.min,
   },
 });

@@ -6,9 +6,8 @@ export type SnakePoint = {
 export type SnakeDir = 'up' | 'down' | 'left' | 'right';
 
 export const SNAKE_COLS = 10;
-export const SNAKE_ROWS = 12;
+export const SNAKE_ROWS = 16;
 export const SNAKE_MAX_LENGTH = 16;
-export const SNAKE_DOT_COUNT = 5;
 const RECENT_LIMIT = 10;
 
 const delta: Record<SnakeDir, SnakePoint> = {
@@ -49,7 +48,7 @@ export function occupied(cells: SnakePoint[], point: SnakePoint): boolean {
   return cells.some((cell) => sameCell(cell, point));
 }
 
-export function spawnDot(
+export function spawnFood(
   blocked: SnakePoint[],
   recent: SnakePoint[] = [],
   cols = SNAKE_COLS,
@@ -77,32 +76,26 @@ export function spawnDot(
 }
 
 export function initialSnake(): SnakePoint[] {
-  const startX = 2 + Math.floor(Math.random() * 4);
-  const startY = 3 + Math.floor(Math.random() * 6);
+  const startX = 4 + Math.floor(Math.random() * 4);
+  const startY = 6 + Math.floor(Math.random() * 5);
   return [
     { x: startX, y: startY },
     { x: startX - 1, y: startY },
     { x: startX - 2, y: startY },
+    { x: startX - 3, y: startY },
+    { x: startX - 4, y: startY },
   ];
-}
-
-export function initialDots(snake: SnakePoint[]): SnakePoint[] {
-  const dots: SnakePoint[] = [];
-  for (let i = 0; i < SNAKE_DOT_COUNT; i += 1) {
-    dots.push(spawnDot([...snake, ...dots]));
-  }
-  return dots;
 }
 
 export type SnakeGame = {
   snake: SnakePoint[];
-  dots: SnakePoint[];
+  food: SnakePoint;
   recent: SnakePoint[];
 };
 
 export function createSnakeGame(): SnakeGame {
   const snake = initialSnake();
-  return { snake, dots: initialDots(snake), recent: [] };
+  return { snake, food: spawnFood(snake), recent: [] };
 }
 
 export function advanceSnake(game: SnakeGame, dir: SnakeDir): SnakeGame {
@@ -112,16 +105,14 @@ export function advanceSnake(game: SnakeGame, dir: SnakeDir): SnakeGame {
   }
 
   const nextHead = stepHead(head, dir);
-  const collected = game.dots.find((dot) => sameCell(dot, nextHead));
-  const grew = Boolean(collected) && game.snake.length < SNAKE_MAX_LENGTH;
+  const collected = sameCell(game.food, nextHead);
+  const grew = collected && game.snake.length < SNAKE_MAX_LENGTH;
   const nextSnake = grew ? [nextHead, ...game.snake] : [nextHead, ...game.snake.slice(0, -1)];
-  const remaining = game.dots.filter((dot) => !sameCell(dot, nextHead));
 
   if (!collected) {
-    return { snake: nextSnake, dots: remaining, recent: game.recent };
+    return { snake: nextSnake, food: game.food, recent: game.recent };
   }
 
-  const recent = [...game.recent, collected].slice(-RECENT_LIMIT);
-  remaining.push(spawnDot([...nextSnake, ...remaining], recent));
-  return { snake: nextSnake, dots: remaining, recent };
+  const recent = [...game.recent, game.food].slice(-RECENT_LIMIT);
+  return { snake: nextSnake, food: spawnFood(nextSnake, recent), recent };
 }

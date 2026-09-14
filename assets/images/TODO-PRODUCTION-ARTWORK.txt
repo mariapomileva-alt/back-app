@@ -1,12 +1,13 @@
 TODO: REPLACE WITH FINAL PRODUCTION ARTWORK
 
+Internal status lives in assets/docs/production-asset-manifest.txt.
 These files are development placeholders for the Warm Earth exercise imagery.
 The UI is already designed around them. Do not remove the slots.
 
 - ground-feet-placeholder.png
-- listen-ocean-placeholder.png
-- listen-rain-placeholder.png
-- listen-forest-placeholder.png
+- listen-ocean-placeholder.jpg
+- listen-rain-placeholder.jpg
+- listen-forest-placeholder.jpg
 - listen-fan-placeholder.png
 - listen-brown-placeholder.png
 - move-feet-placeholder.png

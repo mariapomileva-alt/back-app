@@ -1,4 +1,4 @@
-import { type ReactNode } from 'react';
+import { type ReactNode, useCallback } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { useRouter } from 'expo-router';
 
@@ -11,28 +11,34 @@ import { t } from '@/locales/i18n';
 type Props = {
   activity: DistractActivityId;
   children: ReactNode;
+  scroll?: boolean;
 };
 
-export function DistractActivityScreen({ activity, children }: Props) {
+export function DistractActivityScreen({ activity, children, scroll = false }: Props) {
   const router = useRouter();
   useRememberDistractActivity(activity);
 
-  const changeActivity = () => {
+  const goToChooser = useCallback(() => {
     beginInternalSessionNavigation();
     router.replace({
       pathname: '/distract',
       params: { choose: '1' },
     });
-  };
+  }, [router]);
 
   return (
     <ActiveSessionScreen
       tool="distract"
       title={t('home.tools.distract')}
-      scroll={false}
-      onChangeActivity={changeActivity}
+      scroll={scroll}
+      onTryAnother={goToChooser}
+      tryAnotherHint={t('distract.tryAnotherHint')}
+      onBack={goToChooser}
+      backLabel={t('distract.menu')}
+      backHint={t('distract.menuHint')}
+      backNavigates
     >
-      <View style={styles.body}>{children}</View>
+      <View style={scroll ? styles.scrollBody : styles.body}>{children}</View>
     </ActiveSessionScreen>
   );
 }
@@ -40,5 +46,9 @@ export function DistractActivityScreen({ activity, children }: Props) {
 const styles = StyleSheet.create({
   body: {
     flex: 1,
+    minHeight: 0,
+  },
+  scrollBody: {
+    flexGrow: 1,
   },
 });

@@ -14,6 +14,7 @@ type Props = {
   switchValue?: boolean;
   onSwitchChange?: (value: boolean) => void;
   right?: ReactNode;
+  showDivider?: boolean;
 };
 
 function QuietToggle({ on }: { on: boolean }) {
@@ -50,6 +51,7 @@ export function SettingsRow({
   switchValue,
   onSwitchChange,
   right,
+  showDivider = true,
 }: Props) {
   const { theme } = useTheme();
   const isSwitch = typeof switchValue === 'boolean' && onSwitchChange;
@@ -88,6 +90,7 @@ export function SettingsRow({
           styles.pressable,
           {
             borderBottomColor: theme.colors.border,
+            borderBottomWidth: showDivider ? StyleSheet.hairlineWidth : 0,
             opacity: pressed ? 0.86 : 1,
           },
         ]}
@@ -107,6 +110,7 @@ export function SettingsRow({
         styles.pressable,
         {
           borderBottomColor: theme.colors.border,
+          borderBottomWidth: showDivider ? StyleSheet.hairlineWidth : 0,
           opacity: pressed ? 0.86 : 1,
         },
       ]}
@@ -119,7 +123,6 @@ export function SettingsRow({
 const styles = StyleSheet.create({
   pressable: {
     minHeight: touch.min,
-    borderBottomWidth: StyleSheet.hairlineWidth,
     paddingVertical: spacing.sm,
   },
   row: {

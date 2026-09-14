@@ -1,71 +1,97 @@
 import { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 
-import { PrimaryButton } from '@/components/buttons/PrimaryButton';
 import { TextButton } from '@/components/buttons/TextButton';
-import { ProgressDots } from '@/components/feedback/ProgressDots';
-import { MoveMark } from '@/components/marks';
+import { MoveStage } from '@/components/move/MoveStage';
 import { ActiveSessionScreen } from '@/components/session/ActiveSessionScreen';
+import { SessionChoiceSheet } from '@/components/session/SessionChoiceSheet';
 import { AppText } from '@/components/typography/AppText';
-import { moveSteps } from '@/features/move/steps';
-import { useHaptics } from '@/hooks/useHaptics';
+import { isMoveSequenceId, moveSequenceIds } from '@/features/move/steps';
+import { useMoveCycle } from '@/features/move/useMoveCycle';
+import { MOVE_UNCOMFORTABLE_INTENT } from '@/features/session/suggestions';
 import { t } from '@/locales/i18n';
 import { serif } from '@/theme/fonts';
 import { spacing } from '@/theme/spacing';
 
 export default function MoveScreen() {
-  const haptics = useHaptics();
-  const [step, setStep] = useState(0);
-  const last = step >= moveSteps.length - 1;
-  const current = moveSteps[step] ?? moveSteps[0]!;
-
-  const next = () => {
-    haptics.light();
-    if (!last) {
-      setStep((value) => value + 1);
-    }
-  };
+  const { phase, pressed, instructionKey, sequenceId, onPressIn, onPressOut, selectSequence } =
+    useMoveCycle();
+  const [chooserOpen, setChooserOpen] = useState(false);
+  const instruction = t(instructionKey);
+  const hint = t(`move.hints.${phase}`);
+  const openChooser = () => setChooserOpen(true);
 
   return (
-    <ActiveSessionScreen
-      tool="move"
-      title={t('home.tools.move')}
-      extraActions={({ trySomethingElse }) => (
-        <TextButton label={t('exercise.moveUncomfortable')} onPress={trySomethingElse} />
-      )}
-    >
-      <View style={styles.mark} accessible={false}>
-        <MoveMark />
-      </View>
-      <AppText variant="instruction" style={styles.instruction}>
-        {t(current.textKey)}
-      </AppText>
-      <ProgressDots count={moveSteps.length} index={step} />
-      {last ? null : (
-        <View style={styles.footer}>
-          <PrimaryButton label={t('common.next')} onPress={next} />
-        </View>
-      )}
-    </ActiveSessionScreen>
+    <>
+      <ActiveSessionScreen
+        tool="move"
+        title={t('home.tools.move')}
+        onTryAnother={openChooser}
+        tryAnotherHint={t('move.tryAnotherHint')}
+        onBack={openChooser}
+        backLabel={t('move.menu')}
+        backHint={t('move.menuHint')}
+        backNavigates={!chooserOpen}
+        extraActions={({ tryOfferedAlternatives }) => (
+          <TextButton
+            label={t('exercise.moveUncomfortable')}
+            onPress={() => tryOfferedAlternatives(MOVE_UNCOMFORTABLE_INTENT)}
+          />
+        )}
+      >
+        {(controls) => (
+          <>
+            <View style={styles.stage}>
+              <MoveStage
+                pressed={pressed}
+                instruction={instruction}
+                hint={hint}
+                onPressIn={onPressIn}
+                onPressOut={onPressOut}
+              />
+              <AppText variant="instruction" accessibilityLiveRegion="polite" style={styles.instruction}>
+                {instruction}
+              </AppText>
+            </View>
+            <SessionChoiceSheet
+              visible={chooserOpen}
+              title={t('move.menu')}
+              selectedId={sequenceId}
+              options={moveSequenceIds.map((id) => ({
+                id,
+                label: t(`move.activities.${id}`),
+              }))}
+              onSelect={(id) => {
+                if (isMoveSequenceId(id)) {
+                  selectSequence(id);
+                  setChooserOpen(false);
+                }
+              }}
+              onDismiss={() => setChooserOpen(false)}
+              onHardwareBack={controls.close}
+            />
+          </>
+        )}
+      </ActiveSessionScreen>
+    </>
   );
 }
 
 const styles = StyleSheet.create({
-  mark: {
-    width: 168,
-    height: 100,
-    marginTop: spacing.md,
-    alignSelf: 'center',
+  stage: {
+    flexGrow: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   instruction: {
     fontFamily: serif,
+    fontSize: 34,
+    lineHeight: 42,
     fontWeight: '500',
-    marginTop: spacing.lg,
+    textAlign: 'center',
+    marginTop: spacing.md,
     marginBottom: spacing.lg,
-    maxWidth: 340,
-  },
-  footer: {
-    marginTop: 'auto',
-    paddingTop: spacing.lg,
+    maxWidth: 320,
+    paddingHorizontal: spacing.sm,
   },
 });
