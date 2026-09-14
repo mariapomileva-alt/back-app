@@ -4,8 +4,7 @@
  */
 
 export const productionConfig = {
-  // TODO: replace with the EAS project ID after running `eas init`.
-  easProjectId: null as string | null,
+  easProjectId: '045267b8-b0b8-472e-b5eb-78123328d6b7',
 
   // TODO: confirm production bundle identifiers with App Store Connect / Play Console.
   iosBundleIdentifier: 'app.back.selfhelp',

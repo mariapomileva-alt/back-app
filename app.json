@@ -11,13 +11,17 @@
     "ios": {
       "supportsTablet": false,
       "bundleIdentifier": "app.back.selfhelp",
+      "buildNumber": "1",
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false,
-        "UIBackgroundModes": ["audio"]
+        "UIBackgroundModes": [
+          "audio"
+        ]
       }
     },
     "android": {
       "package": "app.back.selfhelp",
+      "versionCode": 1,
       "adaptiveIcon": {
         "backgroundColor": "#F3EDE1",
         "foregroundImage": "./assets/images/android-icon-foreground.png",
@@ -43,10 +47,25 @@
         }
       ],
       "expo-localization",
-      "expo-av"
+      [
+        "expo-audio",
+        {
+          "microphonePermission": false,
+          "recordAudioAndroid": false,
+          "enableBackgroundPlayback": true,
+          "enableBackgroundRecording": false
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "045267b8-b0b8-472e-b5eb-78123328d6b7"
+      }
+    },
+    "owner": "tana161990"
   }
 }
