@@ -7,6 +7,7 @@ export const brand = {
   forestGreen: '#315E4D',
   sage: '#6D9773',
   paleSage: '#D7E0D5',
+  softSage: '#17483A',
   blueSage: '#9EB6B0',
   camel: '#BB8A52',
   mutedGold: '#C9A65B',

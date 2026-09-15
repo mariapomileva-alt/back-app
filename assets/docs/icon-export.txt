@@ -1,11 +1,17 @@
-Back app icon — production export checklist
+Back app icon — production export
 
-Master: store/ios/icon-1024.png
-Expo iOS slot: assets/images/icon.png (same 1024×1024 RGB opaque PNG)
-Splash: assets/images/splash-icon.png
+Master: assets/brand/app-icon-master.png
+Copied to: assets/images/icon.png and store/ios/icon-1024.png
+Splash mark: assets/images/splash-icon.png (object only, no wordmark)
+Android: assets/images/android-icon-{foreground,background,monochrome}.png
 
 Design:
-- Ivory field #F3EDE1, no transparency, no rounded corners (Apple applies the mask)
-- Serif wordmark “Back” in forest
-- Quiet forest circle with sage inner light, clay hairline
-- Not a medical cross
+- Ivory field #F3EDE1, opaque RGB, no transparency, no rounded corners (Apple applies the mask)
+- ONE centered breathing object (~62% of canvas), forest + sage, matte clay lighting
+- No word Back, no letter B, no gold underline, no symbols
+- Soft contact shadow only; no dark vignette, no target/bullseye rings
+- Regenerate with: python3 scripts/export-brand-assets.py
+- Compare at 1024, 180, 120, 60, 40, and 29 in assets/brand/comparison-board.html
+
+App Store Connect upload: store/ios/icon-1024.png
+Verified (sips/file): 1024×1024 PNG, RGB, hasAlpha=no, no ICC, square ivory corners #F3EDE1, object ~62%. 40px and 29px stay a readable forest disc on ivory.

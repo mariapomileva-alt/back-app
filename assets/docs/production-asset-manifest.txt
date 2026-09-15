@@ -13,7 +13,7 @@ Move feet still | assets/images/move-feet-placeholder.png | PNG | Exercise slot 
 Move hands still | assets/images/move-hands-placeholder.png | PNG | Exercise slot | Decorative / stage | Unknown — bundled placeholder | Design | Keep slot
 Home Ground card | assets/images/home-ground-placeholder.jpg | JPEG | Compressed card crop | Home tool label covers it | Unknown — bundled placeholder | Design | Keep slot; Home layout is frozen
 Home Move card | assets/images/home-move-placeholder.jpg | JPEG | Compressed card crop | Home tool label covers it | Unknown — bundled placeholder | Design | Keep slot; Home layout is frozen
-App icon | assets/docs/icon-export.txt | — | Store sizes listed there | App name | Unknown | Design | productionIconReady stays false until export
+App icon | assets/brand/app-icon-master.png | PNG | 1024 RGB opaque, breathing object, no type | App name via wordmark, not icon | Original in-repo identity | Design | productionIconReady true
 
 Listen fan/brown placeholder PNG names may still appear in older notes. Current Listen fan and brown use in-app graphics, not those photos.
 

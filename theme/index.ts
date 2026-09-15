@@ -1,4 +1,13 @@
 export { brand, hexToRgba, mixHex } from './colors';
+export {
+  brandIdentity,
+  breathingStops,
+  resolveWordmarkColor,
+  wordmarkColorForTheme,
+  type BreathingMarkVariant,
+  type WordmarkVariant,
+} from './brandIdentity';
+export { serif, sans } from './fonts';
 export { motion } from './motion';
 export { radius } from './radius';
 export { shadows } from './shadows';

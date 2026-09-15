@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Back brand comparison board</title>
+  <style>
+    :root {
+      --ivory: #F3EDE1;
+      --forest: #0C3B2E;
+      --grove: #315E4D;
+      --sage: #6D9773;
+      --soft: #17483A;
+      --ink: #153C32;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--ivory);
+      color: var(--ink);
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      padding: 32px 24px 80px;
+    }
+    h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 500;
+      font-size: 32px;
+      margin: 0 0 8px;
+    }
+    .lede { color: #65736C; max-width: 42rem; line-height: 1.45; margin-bottom: 36px; }
+    section { margin: 36px 0 48px; }
+    h2 {
+      font-size: 13px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--soft);
+      margin: 0 0 16px;
+    }
+    .row { display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-end; }
+    figure {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: center;
+    }
+    figcaption {
+      font-size: 12px;
+      color: #65736C;
+      text-align: center;
+    }
+    .card {
+      background: var(--ivory);
+      border: 1px solid #D8CFC0;
+      padding: 28px 32px;
+      min-width: 160px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .card.forest { background: var(--forest); border-color: var(--forest); }
+    .wm { height: 44px; width: auto; }
+    .wm.small { height: 14px; }
+    .icon { image-rendering: auto; display: block; }
+    .phone {
+      width: 180px;
+      background: #1c1c1e;
+      border-radius: 28px;
+      padding: 18px 14px 22px;
+    }
+    .phone.light { background: #e8e4dc; }
+    .phone-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px 8px;
+      justify-items: center;
+    }
+    .phone-grid img {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+    }
+    .android {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(12, 59, 46, 0.12);
+    }
+    .android img { width: 72px; height: 72px; display: block; }
+    .px40 {
+      width: 40px;
+      height: 40px;
+      border-radius: 9px;
+      box-shadow: 0 0 0 1px rgba(12,59,46,0.12);
+    }
+    .lockup { width: min(280px, 70vw); height: auto; border: 1px solid #D8CFC0; }
+    .note { font-size: 13px; color: #65736C; max-width: 46rem; }
+  </style>
+</head>
+<body>
+  <h1>Back — three-asset identity</h1>
+  <p class="lede">
+    Wordmark, app icon, and lockup are separate. Official marketing is Warm Earth
+    (forest on ivory). Open this file locally in a browser. Do not approve from 1024 alone —
+    the 40px icon is mandatory.
+  </p>
+
+  <section>
+    <h2>A. Wordmark</h2>
+    <div class="row">
+      <figure>
+        <div class="card">
+          <img class="wm" src="back-wordmark-dark.svg" alt="Back wordmark, Warm Earth" />
+        </div>
+        <figcaption>Warm Earth · #0C3B2E on #F3EDE1</figcaption>
+      </figure>
+      <figure>
+        <div class="card forest">
+          <img class="wm" src="back-wordmark-light.svg" alt="Back wordmark, Forest" />
+        </div>
+        <figcaption>Forest · ivory on #0C3B2E</figcaption>
+      </figure>
+      <figure>
+        <div class="card">
+          <img class="wm" src="back-wordmark-soft-sage.svg" alt="Back wordmark, Soft Sage" />
+        </div>
+        <figcaption>Soft Sage · #17483A</figcaption>
+      </figure>
+      <figure>
+        <div class="card">
+          <img class="wm small" src="back-wordmark-dark.svg" alt="Back wordmark at small size" />
+        </div>
+        <figcaption>Small-size · 14px height</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section>
+    <h2>B. App icon — no text</h2>
+    <div class="row">
+      <figure>
+        <img class="icon" src="app-icon-master.png" width="220" height="220" alt="App icon at 1024" />
+        <figcaption>1024 master (square, no mask)</figcaption>
+      </figure>
+      <figure>
+        <div class="phone light">
+          <div class="phone-grid">
+            <img src="previews/icon-60.png" alt="" />
+            <img src="previews/icon-60.png" alt="" />
+            <img src="previews/icon-60.png" alt="" />
+            <img src="previews/icon-60.png" alt="" />
+          </div>
+        </div>
+        <figcaption>Simulated iPhone home · light</figcaption>
+      </figure>
+      <figure>
+        <div class="phone">
+          <div class="phone-grid">
+            <img src="previews/icon-60.png" alt="" />
+            <img src="previews/icon-60.png" alt="" />
+            <img src="previews/icon-60.png" alt="" />
+            <img src="previews/icon-60.png" alt="" />
+          </div>
+        </div>
+        <figcaption>Simulated iPhone home · dark wallpaper</figcaption>
+      </figure>
+      <figure>
+        <div class="android">
+          <img src="previews/icon-180.png" alt="Android launcher circle crop" />
+        </div>
+        <figcaption>Android launcher (circle)</figcaption>
+      </figure>
+      <figure>
+        <img class="px40" src="previews/icon-40.png" width="40" height="40" alt="App icon at 40 pixels" />
+        <figcaption><strong>40 px (mandatory)</strong></figcaption>
+      </figure>
+      <figure>
+        <img src="previews/icon-29.png" width="29" height="29" alt="App icon at 29 pixels" style="border-radius:6px" />
+        <figcaption>29 px settings</figcaption>
+      </figure>
+      <figure>
+        <img src="previews/icon-120.png" width="120" height="120" alt="App icon at 120 pixels" />
+        <figcaption>120 px</figcaption>
+      </figure>
+    </div>
+    <p class="note">Ivory field, one breathing object, no word Back, no letter, no gold line. Apple applies the squircle — this file stays square.</p>
+  </section>
+
+  <section>
+    <h2>C. Lockup</h2>
+    <div class="row">
+      <figure>
+        <img class="lockup" src="back-lockup-warm-earth.svg" alt="Warm Earth lockup" />
+        <figcaption>Splash / quiet mark · Warm Earth</figcaption>
+      </figure>
+      <figure>
+        <img class="lockup" src="back-lockup-warm-earth-tagline.svg" alt="Marketing lockup with tagline" />
+        <figcaption>App Store / website · with tagline</figcaption>
+      </figure>
+      <figure>
+        <img class="lockup" src="back-lockup-forest.svg" alt="Forest lockup" />
+        <figcaption>Forest alternative</figcaption>
+      </figure>
+      <figure>
+        <img class="lockup" src="back-lockup-horizontal.svg" alt="Horizontal lockup" />
+        <figcaption>Horizontal lockup</figcaption>
+      </figure>
+    </div>
+  </section>
+</body>
+</html>
