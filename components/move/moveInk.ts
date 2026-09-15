@@ -1,0 +1,30 @@
+import { useTheme } from '@/hooks/useTheme';
+
+export const MOVE_VIEWBOX = '0 0 280 200';
+export const MOVE_STROKE = 1.25;
+export const MOVE_STROKE_FINE = 1.1;
+
+export type MoveInk = {
+  line: string;
+  wash: string;
+  ground: string;
+  surface: string;
+  lineOpacity: number;
+  washOpacity: number;
+  groundOpacity: number;
+};
+
+export function useMoveInk(): MoveInk {
+  const { theme } = useTheme();
+  const forest = theme.name === 'deepGreen';
+
+  return {
+    line: theme.colors.markPrimary,
+    wash: theme.colors.markSecondary,
+    ground: theme.colors.markMuted,
+    surface: theme.colors.markSurface,
+    lineOpacity: forest ? 0.98 : 0.92,
+    washOpacity: forest ? 0.42 : 0.22,
+    groundOpacity: forest ? 0.55 : 0.44,
+  };
+}

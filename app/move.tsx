@@ -14,7 +14,7 @@ import { serif } from '@/theme/fonts';
 import { spacing } from '@/theme/spacing';
 
 export default function MoveScreen() {
-  const { phase, pressed, instructionKey, sequenceId, onPressIn, onPressOut, selectSequence } =
+  const { phase, instructionKey, sequenceId, stepId, onPressIn, onPressOut, selectSequence } =
     useMoveCycle();
   const [chooserOpen, setChooserOpen] = useState(false);
   const instruction = t(instructionKey);
@@ -43,7 +43,9 @@ export default function MoveScreen() {
           <>
             <View style={styles.stage}>
               <MoveStage
-                pressed={pressed}
+                activityId={sequenceId}
+                stepId={stepId}
+                phase={phase}
                 instruction={instruction}
                 hint={hint}
                 onPressIn={onPressIn}
