@@ -45,9 +45,25 @@ export function ShouldersIllustration({ variant, reduceMotion }: Props) {
       />
       <G opacity={ink.lineOpacity} transform={`translate(0 ${p.lift})`}>
         <Path
-          d="M58 98
-             C86 78 114 86 140 90
-             C166 86 194 78 222 98"
+          d="M140 86
+             C128 82 118 84 112 92
+             L108 118
+             C106 132 118 142 140 144
+             C162 142 174 132 172 118
+             L168 92
+             C162 84 152 82 140 86
+             Z"
+          fill={ink.wash}
+          fillOpacity={fillOpacity * 0.75}
+          stroke={ink.line}
+          strokeWidth={strokeWidth}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <Path
+          d="M68 96
+             C92 82 118 88 140 92
+             C162 88 188 82 212 96"
           fill="none"
           stroke={ink.line}
           strokeWidth={strokeWidth}
@@ -55,7 +71,7 @@ export function ShouldersIllustration({ variant, reduceMotion }: Props) {
           strokeLinejoin="round"
         />
         <Path
-          d="M72 98 C78 88 84 84 92 84"
+          d="M76 96 C84 88 92 86 100 88"
           fill={ink.wash}
           fillOpacity={fillOpacity}
           stroke={ink.line}
@@ -64,18 +80,9 @@ export function ShouldersIllustration({ variant, reduceMotion }: Props) {
           strokeLinejoin="round"
         />
         <Path
-          d="M208 98 C202 88 196 84 188 84"
+          d="M204 96 C196 88 188 86 180 88"
           fill={ink.wash}
           fillOpacity={fillOpacity}
-          stroke={ink.line}
-          strokeWidth={strokeWidth}
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <Path
-          d="M96 108 C112 138 168 138 184 108"
-          fill={ink.wash}
-          fillOpacity={fillOpacity * 0.85}
           stroke={ink.line}
           strokeWidth={strokeWidth}
           strokeLinecap="round"
@@ -83,12 +90,12 @@ export function ShouldersIllustration({ variant, reduceMotion }: Props) {
         />
         {p.roll ? (
           <Path
-            d="M168 74 C184 66 200 70 208 82 C214 90 210 98 198 102"
+            d="M176 78 C192 70 208 74 214 86 C218 94 214 102 204 106"
             fill="none"
             stroke={ink.wash}
             strokeWidth={MOVE_STROKE_FINE}
             strokeLinecap="round"
-            opacity={0.55}
+            opacity={0.58}
           />
         ) : null}
         {variant === 'noticeShoulders' ? (
