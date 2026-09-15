@@ -1,5 +1,5 @@
 import { type ReactNode } from 'react';
-import { StyleSheet, useWindowDimensions, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 
 import { hideFromA11yTree } from '@/components/accessibility/hideFromA11y';
 
@@ -7,15 +7,13 @@ type Props = {
   children?: ReactNode;
 };
 
+/** Compact kinetic stage — sits just above instruction copy. */
 export function MoveVisualFrame({ children }: Props) {
-  const { height: windowHeight } = useWindowDimensions();
-  const frameHeight = Math.round(Math.min(280, Math.max(148, windowHeight * 0.38)));
-
   return (
     <View
       {...hideFromA11yTree()}
       pointerEvents="none"
-      style={[styles.frame, { height: frameHeight, maxHeight: frameHeight }]}
+      style={styles.frame}
     >
       {children}
     </View>
@@ -25,10 +23,13 @@ export function MoveVisualFrame({ children }: Props) {
 const styles = StyleSheet.create({
   frame: {
     width: '82%',
-    maxWidth: 320,
+    maxWidth: 220,
+    height: 132,
+    maxHeight: 140,
     alignSelf: 'center',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'flex-end',
     overflow: 'visible',
+    marginBottom: 4,
   },
 });

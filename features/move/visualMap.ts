@@ -1,99 +1,64 @@
-import { allMoveStepIds, isMoveStepId, type MoveStepId } from '@/features/move/steps';
+import {
+  allMoveStepIds,
+  isMoveStepId,
+  moveStepId,
+  type MovePhase,
+  type MoveSequenceId,
+  type MoveStepId,
+} from '@/features/move/steps';
 
-export const moveIllustrationVariants = [
+export type MoveKineticAction = 'pressFeet' | 'pressPalms' | 'shoulders' | 'tenseRelease' | 'hands';
+
+export const moveKineticActions = [
   'pressFeet',
-  'holdFeet',
-  'releaseFeet',
-  'noticeFeet',
   'pressPalms',
-  'holdPalms',
-  'releasePalms',
-  'noticePalms',
-  'tenseHands',
-  'holdTenseHands',
-  'releaseHands',
-  'noticeHands',
-  'riseShoulders',
-  'rollShoulders',
-  'settleShoulders',
-  'noticeShoulders',
-  'pressLegs',
-  'holdLegs',
-  'releaseLegs',
-  'noticeLegs',
-] as const;
+  'shoulders',
+  'tenseRelease',
+  'hands',
+] as const satisfies readonly MoveKineticAction[];
 
-export type MoveIllustrationVariant = (typeof moveIllustrationVariants)[number];
-
-export const moveAnimationVariants = [
-  'compress',
-  'deepen',
-  'soften',
-  'ripple',
-  'meet',
-  'still',
-  'separate',
-  'rest',
-  'curl',
-  'open',
-  'rise',
-  'roll',
-  'settle',
-  'plant',
-  'lift',
-] as const;
-
-export type MoveAnimationVariant = (typeof moveAnimationVariants)[number];
+export const MOVE_KINETIC_ACTION_BY_SEQUENCE: Record<MoveSequenceId, MoveKineticAction> = {
+  feet: 'pressFeet',
+  palms: 'pressPalms',
+  shoulders: 'shoulders',
+  tense: 'tenseRelease',
+  hands: 'hands',
+};
 
 export type MoveVisualSpec = {
-  illustration: MoveIllustrationVariant;
-  animation: MoveAnimationVariant;
+  action: MoveKineticAction;
+  phase: MovePhase;
 };
 
 /**
- * Strict stepId → illustration → animation. Every Move phase has its own visual.
- * Never keyed off translated copy. Missing keys fail at compile time.
+ * Step → kinetic action + phase. Never keyed off translated copy.
  */
-export const MOVE_VISUAL_MAP: Record<MoveStepId, MoveVisualSpec> = {
-  'feet.press': { illustration: 'pressFeet', animation: 'compress' },
-  'feet.hold': { illustration: 'holdFeet', animation: 'deepen' },
-  'feet.release': { illustration: 'releaseFeet', animation: 'soften' },
-  'feet.notice': { illustration: 'noticeFeet', animation: 'ripple' },
-  'palms.press': { illustration: 'pressPalms', animation: 'meet' },
-  'palms.hold': { illustration: 'holdPalms', animation: 'still' },
-  'palms.release': { illustration: 'releasePalms', animation: 'separate' },
-  'palms.notice': { illustration: 'noticePalms', animation: 'rest' },
-  'tense.press': { illustration: 'tenseHands', animation: 'curl' },
-  'tense.hold': { illustration: 'holdTenseHands', animation: 'deepen' },
-  'tense.release': { illustration: 'releaseHands', animation: 'open' },
-  'tense.notice': { illustration: 'noticeHands', animation: 'rest' },
-  'shoulders.press': { illustration: 'riseShoulders', animation: 'rise' },
-  'shoulders.hold': { illustration: 'rollShoulders', animation: 'roll' },
-  'shoulders.release': { illustration: 'settleShoulders', animation: 'settle' },
-  'shoulders.notice': { illustration: 'noticeShoulders', animation: 'rest' },
-  'hands.press': { illustration: 'pressLegs', animation: 'plant' },
-  'hands.hold': { illustration: 'holdLegs', animation: 'deepen' },
-  'hands.release': { illustration: 'releaseLegs', animation: 'lift' },
-  'hands.notice': { illustration: 'noticeLegs', animation: 'rest' },
-};
+export const MOVE_VISUAL_MAP: Record<MoveStepId, MoveVisualSpec> = Object.fromEntries(
+  allMoveStepIds().map((stepId) => {
+    const [sequenceId, phase] = stepId.split('.') as [MoveSequenceId, MovePhase];
+    return [
+      stepId,
+      {
+        action: MOVE_KINETIC_ACTION_BY_SEQUENCE[sequenceId],
+        phase,
+      },
+    ] satisfies [MoveStepId, MoveVisualSpec];
+  }),
+) as Record<MoveStepId, MoveVisualSpec>;
 
 function assertMoveVisualCoverage(): void {
   if (!__DEV__) {
     return;
   }
 
-  const used = new Set<MoveIllustrationVariant>();
   for (const stepId of allMoveStepIds()) {
     const spec = MOVE_VISUAL_MAP[stepId];
     if (!spec) {
       throw new Error(`Missing Move visual mapping for stepId "${stepId}"`);
     }
-    used.add(spec.illustration);
-  }
-
-  for (const variant of moveIllustrationVariants) {
-    if (!used.has(variant)) {
-      throw new Error(`Move illustration variant "${variant}" is unused`);
+    const expected = moveStepId(stepId.split('.')[0] as MoveSequenceId, spec.phase);
+    if (expected !== stepId) {
+      throw new Error(`Move visual phase mismatch for "${stepId}"`);
     }
   }
 }

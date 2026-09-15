@@ -92,7 +92,7 @@ const styles = StyleSheet.create({
     lineHeight: 42,
     fontWeight: '500',
     textAlign: 'center',
-    marginTop: spacing.sm,
+    marginTop: spacing.xs,
     marginBottom: spacing.lg,
     maxWidth: 320,
     paddingHorizontal: spacing.sm,

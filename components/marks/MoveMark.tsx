@@ -5,45 +5,48 @@ import { useTheme } from '@/hooks/useTheme';
 import { MarkFrame } from './MarkFrame';
 import { markViewBox, strokeRegular } from './markLanguage';
 
+/** Three short organic arcs — compression/release rhythm, denser than Listen. */
 export function MoveMark() {
   const { theme } = useTheme();
-  const stroke = theme.colors.markPrimary;
-  const fill = theme.colors.markSecondary;
+  const primary = theme.colors.markPrimary;
+  const sage = theme.colors.markSecondary;
+  const sand = theme.colors.markSurface;
+
+  const arcs = [
+    {
+      d: 'M20 44 C38 34 52 48 68 40 S92 32 102 40',
+      stroke: primary,
+      opacity: 0.78,
+      width: strokeRegular,
+    },
+    {
+      d: 'M16 54 C42 46 64 58 88 50 S108 44 112 50',
+      stroke: sage,
+      opacity: 0.5,
+      width: 1.15,
+    },
+    {
+      d: 'M26 32 C48 26 62 36 78 30 S94 26 98 32',
+      stroke: sand,
+      opacity: 0.62,
+      width: 1.05,
+    },
+  ];
 
   return (
     <MarkFrame>
       <Svg width="100%" height="100%" viewBox={markViewBox} preserveAspectRatio="xMidYMid meet">
-        <Path
-          d="M76 20 C86 12 98 14 106 24"
-          fill="none"
-          stroke={stroke}
-          strokeWidth={strokeRegular}
-          strokeLinecap="round"
-          opacity={0.44}
-        />
-        <Path
-          d="M34 54
-             C26 46 24 34 32 24
-             C38 16 48 12 58 16
-             L62 6
-             C64 2 68 2 70 6
-             L72 16
-             C74 12 78 12 80 16
-             L82 4
-             C84 0 88 0 90 4
-             L88 18
-             C92 22 92 30 86 38
-             C78 48 62 56 42 56
-             C38 56 36 55 34 54
-             Z"
-          fill={fill}
-          fillOpacity={0.52}
-          stroke={stroke}
-          strokeWidth={strokeRegular}
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          transform="rotate(-10 60 36)"
-        />
+        {arcs.map((arc) => (
+          <Path
+            key={arc.d}
+            d={arc.d}
+            fill="none"
+            stroke={arc.stroke}
+            strokeWidth={arc.width}
+            strokeLinecap="round"
+            opacity={arc.opacity}
+          />
+        ))}
       </Svg>
     </MarkFrame>
   );

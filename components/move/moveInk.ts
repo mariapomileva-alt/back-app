@@ -1,20 +1,14 @@
 import { useTheme } from '@/hooks/useTheme';
 
-/** Cropped top margin so artwork sits nearer instruction text on phones. */
-export const MOVE_VIEWBOX = '0 28 280 172';
-export const MOVE_STROKE = 1.85;
-export const MOVE_STROKE_FINE = 1.5;
+export const MOVE_KINETIC_VIEWBOX = '0 0 200 120';
 
 export type MoveInk = {
-  line: string;
-  wash: string;
-  ground: string;
-  surface: string;
-  contact: string;
-  lineOpacity: number;
-  washOpacity: number;
-  groundOpacity: number;
-  contactOpacity: number;
+  primary: string;
+  sage: string;
+  sand: string;
+  primaryOpacity: number;
+  sageOpacity: number;
+  sandOpacity: number;
 };
 
 export function useMoveInk(): MoveInk {
@@ -22,14 +16,11 @@ export function useMoveInk(): MoveInk {
   const forest = theme.name === 'deepGreen';
 
   return {
-    line: theme.colors.markPrimary,
-    wash: theme.colors.markSecondary,
-    ground: theme.colors.markMuted,
-    surface: theme.colors.markSurface,
-    contact: theme.colors.markSurface,
-    lineOpacity: forest ? 0.98 : 0.92,
-    washOpacity: forest ? 0.42 : 0.22,
-    groundOpacity: forest ? 0.55 : 0.44,
-    contactOpacity: forest ? 0.38 : 0.52,
+    primary: theme.colors.markPrimary,
+    sage: theme.colors.markSecondary,
+    sand: theme.colors.markSurface,
+    primaryOpacity: forest ? 0.96 : 0.9,
+    sageOpacity: forest ? 0.52 : 0.38,
+    sandOpacity: forest ? 0.44 : 0.58,
   };
 }
