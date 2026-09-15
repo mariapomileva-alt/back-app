@@ -1,7 +1,7 @@
 import { G, Path } from 'react-native-svg';
 
 import { MOVE_STROKE, MOVE_STROKE_FINE, useMoveInk } from '@/components/move/moveInk';
-import { MoveContactMarks, MoveFloorLine, MoveSvgRoot } from '@/components/move/movePrimitives';
+import { MoveFloorLine, MoveSoleCompression, MoveSvgRoot } from '@/components/move/movePrimitives';
 import type { MoveIllustrationVariant } from '@/features/move/visualMap';
 
 type LegsVariant = Extract<MoveIllustrationVariant, 'pressLegs' | 'holdLegs' | 'releaseLegs' | 'noticeLegs'>;
@@ -14,9 +14,15 @@ type Props = {
 function pose(variant: LegsVariant, reduceMotion: boolean) {
   switch (variant) {
     case 'pressLegs':
-      return { drop: reduceMotion ? 2 : 4, contact: 0.5, fillBoost: 0.05, motion: 1, strokeBoost: 0 };
+      return { drop: reduceMotion ? 2 : 3, contact: 0.52, fillBoost: 0.05, motion: 1, strokeBoost: 0 };
     case 'holdLegs':
-      return { drop: reduceMotion ? 2.5 : 5, contact: 0.78, fillBoost: 0.09, motion: 1, strokeBoost: reduceMotion ? 0.12 : 0 };
+      return {
+        drop: reduceMotion ? 2 : 3,
+        contact: 0.76,
+        fillBoost: 0.09,
+        motion: 1,
+        strokeBoost: reduceMotion ? 0.12 : 0,
+      };
     case 'releaseLegs':
       return { drop: reduceMotion ? 0 : -2, contact: 0, fillBoost: 0, motion: 0, strokeBoost: 0 };
     case 'noticeLegs':
@@ -31,8 +37,8 @@ function Thigh({ flip }: { flip: boolean }) {
     <G transform={`scale(${sx} 1)`}>
       <Path
         d="M0 0
-           C18 8 28 28 30 52
-           C32 72 24 88 12 96"
+           C16 6 26 24 28 46
+           C30 64 22 78 10 86"
         fill="none"
         stroke={ink.line}
         strokeWidth={MOVE_STROKE}
@@ -83,10 +89,13 @@ export function PressLegsIllustration({ variant, reduceMotion }: Props) {
   const strokeWidth = MOVE_STROKE + p.strokeBoost;
   const leftCenter = 96;
   const rightCenter = 184;
+  const floorY = 172;
 
   return (
     <MoveSvgRoot>
-      <MoveFloorLine emphasis={p.contact > 0 ? 1.25 : 1} />
+      <MoveFloorLine emphasis={p.contact > 0 ? 1.28 : 1} />
+      <MoveSoleCompression x={leftCenter} soleY={floorY - p.drop} strength={p.contact} />
+      <MoveSoleCompression x={rightCenter} soleY={floorY - p.drop} strength={p.contact * 0.92} />
       <G opacity={ink.lineOpacity * 0.9}>
         <G transform={`translate(${leftCenter} 78)`}>
           <Thigh flip={false} />
@@ -103,8 +112,6 @@ export function PressLegsIllustration({ variant, reduceMotion }: Props) {
           <RestingHand flip fillOpacity={fillOpacity} strokeWidth={strokeWidth} />
         </G>
       </G>
-      <MoveContactMarks x={leftCenter} strength={p.contact} />
-      <MoveContactMarks x={rightCenter} strength={p.contact * 0.92} />
       {p.motion > 0 ? (
         <G opacity={0.16 + p.motion * 0.07}>
           <Path
@@ -117,15 +124,6 @@ export function PressLegsIllustration({ variant, reduceMotion }: Props) {
           {p.motion > 1 ? (
             <Path
               d={`M${leftCenter - 18} 140 C${leftCenter - 4} 146 ${leftCenter + 12} 146 ${leftCenter + 26} 140`}
-              fill="none"
-              stroke={ink.wash}
-              strokeWidth={MOVE_STROKE_FINE * 0.9}
-              strokeLinecap="round"
-            />
-          ) : null}
-          {p.motion > 1 ? (
-            <Path
-              d={`M${rightCenter - 26} 140 C${rightCenter - 12} 146 ${rightCenter + 4} 146 ${rightCenter + 18} 140`}
               fill="none"
               stroke={ink.wash}
               strokeWidth={MOVE_STROKE_FINE * 0.9}

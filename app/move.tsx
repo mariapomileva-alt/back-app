@@ -83,7 +83,8 @@ const styles = StyleSheet.create({
   stage: {
     flexGrow: 1,
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
+    paddingTop: spacing.xs,
   },
   instruction: {
     fontFamily: serif,
@@ -91,7 +92,7 @@ const styles = StyleSheet.create({
     lineHeight: 42,
     fontWeight: '500',
     textAlign: 'center',
-    marginTop: spacing.md,
+    marginTop: spacing.sm,
     marginBottom: spacing.lg,
     maxWidth: 320,
     paddingHorizontal: spacing.sm,

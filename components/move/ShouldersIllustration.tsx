@@ -45,14 +45,6 @@ export function ShouldersIllustration({ variant, reduceMotion }: Props) {
       />
       <G opacity={ink.lineOpacity} transform={`translate(0 ${p.lift})`}>
         <Path
-          d="M140 72 L140 92"
-          fill="none"
-          stroke={ink.line}
-          strokeWidth={strokeWidth * 0.7}
-          strokeLinecap="round"
-          opacity={0.35}
-        />
-        <Path
           d="M58 98
              C86 78 114 86 140 90
              C166 86 194 78 222 98"
@@ -91,7 +83,7 @@ export function ShouldersIllustration({ variant, reduceMotion }: Props) {
         />
         {p.roll ? (
           <Path
-            d="M168 76 C182 68 196 72 204 84 C210 92 206 102 196 106"
+            d="M168 74 C184 66 200 70 208 82 C214 90 210 98 198 102"
             fill="none"
             stroke={ink.wash}
             strokeWidth={MOVE_STROKE_FINE}

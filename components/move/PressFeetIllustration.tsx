@@ -1,7 +1,7 @@
 import { G, Path } from 'react-native-svg';
 
-import { MOVE_STROKE, useMoveInk } from '@/components/move/moveInk';
-import { MoveContactMarks, MoveFloorLine, MoveSvgRoot } from '@/components/move/movePrimitives';
+import { MOVE_STROKE, MOVE_STROKE_FINE, useMoveInk } from '@/components/move/moveInk';
+import { MoveFloorLine, MoveSoleCompression, MoveSvgRoot } from '@/components/move/movePrimitives';
 import type { MoveIllustrationVariant } from '@/features/move/visualMap';
 
 type FeetVariant = Extract<
@@ -14,23 +14,28 @@ type Props = {
   reduceMotion: boolean;
 };
 
+const FLOOR_Y = 172;
+const LEG_ANCHOR_Y = 100;
+const LEFT_X = 96;
+const RIGHT_X = 188;
+
 function pose(variant: FeetVariant, reduceMotion: boolean) {
   switch (variant) {
     case 'pressFeet':
       return {
-        drop: reduceMotion ? 2 : 4,
-        contact: 0.55,
-        floor: 1.15,
+        drop: reduceMotion ? 2 : 3,
+        contact: 0.62,
+        floor: 1.2,
         fillBoost: 0.06,
         strokeBoost: 0,
       };
     case 'holdFeet':
       return {
-        drop: reduceMotion ? 2.5 : 5,
-        contact: 0.85,
-        floor: 1.35,
+        drop: reduceMotion ? 2 : 3,
+        contact: 0.78,
+        floor: 1.32,
         fillBoost: 0.1,
-        strokeBoost: reduceMotion ? 0.15 : 0,
+        strokeBoost: reduceMotion ? 0.12 : 0,
       };
     case 'releaseFeet':
       return {
@@ -51,25 +56,35 @@ function pose(variant: FeetVariant, reduceMotion: boolean) {
   }
 }
 
-/** Side-view lower leg + foot planted on the floor line. */
-function LegAndFoot({ flip, fillOpacity, strokeWidth }: { flip: boolean; fillOpacity: number; strokeWidth: number }) {
+/** Side-view shin, ankle, and socked foot — heel, sole, rounded toe. */
+function LegAndSockFoot({
+  flip,
+  fillOpacity,
+  strokeWidth,
+}: {
+  flip: boolean;
+  fillOpacity: number;
+  strokeWidth: number;
+}) {
   const ink = useMoveInk();
   const sx = flip ? -1 : 1;
+
   return (
     <G transform={`scale(${sx} 1)`}>
       <Path
-        d="M0 0
-           L0 58
-           C0 64 4 68 10 68
-           L34 68
-           C42 68 48 72 48 78
-           L48 82
-           C48 88 42 92 34 92
-           L6 92
-           C-2 92 -8 88 -8 82
-           L-8 78
-           C-8 72 -2 68 6 68
-           L0 68
+        d="M7 0
+           L15 0
+           L15 6
+           L14 44
+           C13 49 11 52 9 53
+           L-1 56
+           C-7 58 -9 64 -7 69
+           L-7 71
+           L33 71
+           C42 71 47 65 45 58
+           C43 52 36 50 26 50
+           L11 48
+           L7 0
            Z"
         fill={ink.wash}
         fillOpacity={fillOpacity}
@@ -79,12 +94,36 @@ function LegAndFoot({ flip, fillOpacity, strokeWidth }: { flip: boolean; fillOpa
         strokeLinejoin="round"
       />
       <Path
-        d="M0 18 L0 58"
+        d="M-7 69 L33 71"
         fill="none"
         stroke={ink.line}
-        strokeWidth={strokeWidth * 0.65}
+        strokeWidth={strokeWidth * 0.5}
         strokeLinecap="round"
-        opacity={0.22}
+        opacity={0.26}
+      />
+      <Path
+        d="M9 10 L11 40"
+        fill="none"
+        stroke={ink.line}
+        strokeWidth={MOVE_STROKE_FINE * 0.65}
+        strokeLinecap="round"
+        opacity={0.18}
+      />
+      <Path
+        d="M6 44 L16 44"
+        fill="none"
+        stroke={ink.line}
+        strokeWidth={MOVE_STROKE_FINE * 0.75}
+        strokeLinecap="round"
+        opacity={0.34}
+      />
+      <Path
+        d="M42 58 C44 62 42 66 38 68"
+        fill="none"
+        stroke={ink.line}
+        strokeWidth={MOVE_STROKE_FINE * 0.7}
+        strokeLinecap="round"
+        opacity={0.3}
       />
     </G>
   );
@@ -95,36 +134,27 @@ export function PressFeetIllustration({ variant, reduceMotion }: Props) {
   const p = pose(variant, reduceMotion);
   const fillOpacity = Math.max(0.14, ink.washOpacity + p.fillBoost);
   const strokeWidth = MOVE_STROKE + p.strokeBoost;
-  const leftFootX = 98;
-  const rightFootX = 182;
 
   return (
     <MoveSvgRoot>
       <MoveFloorLine emphasis={p.floor} />
+      <MoveSoleCompression x={LEFT_X + 18} soleY={FLOOR_Y - p.drop} strength={p.contact} />
+      <MoveSoleCompression x={RIGHT_X - 18} soleY={FLOOR_Y - p.drop} strength={p.contact * 0.95} />
       <G opacity={ink.lineOpacity} transform={`translate(0 ${p.drop})`}>
-        <G transform={`translate(${leftFootX} 80)`}>
-          <LegAndFoot flip={false} fillOpacity={fillOpacity} strokeWidth={strokeWidth} />
+        <G transform={`translate(${LEFT_X} ${LEG_ANCHOR_Y})`}>
+          <LegAndSockFoot flip={false} fillOpacity={fillOpacity} strokeWidth={strokeWidth} />
         </G>
-        <G transform={`translate(${rightFootX} 80)`}>
-          <LegAndFoot flip fillOpacity={fillOpacity} strokeWidth={strokeWidth} />
+        <G transform={`translate(${RIGHT_X} ${LEG_ANCHOR_Y})`}>
+          <LegAndSockFoot flip fillOpacity={fillOpacity} strokeWidth={strokeWidth} />
         </G>
       </G>
-      <MoveContactMarks x={leftFootX} strength={p.contact} />
-      <MoveContactMarks x={rightFootX} strength={p.contact * 0.95} />
       {variant === 'noticeFeet' ? (
-        <G opacity={0.2 + (reduceMotion ? 0.14 : 0.08)}>
+        <G opacity={0.22 + (reduceMotion ? 0.12 : 0.06)}>
           <Path
-            d="M118 148 C128 142 152 142 162 148"
+            d="M118 148 C138 142 162 142 182 148"
             fill="none"
             stroke={ink.wash}
-            strokeWidth={MOVE_STROKE * 0.75}
-            strokeLinecap="round"
-          />
-          <Path
-            d="M118 154 C128 160 152 160 162 154"
-            fill="none"
-            stroke={ink.wash}
-            strokeWidth={MOVE_STROKE * 0.65}
+            strokeWidth={MOVE_STROKE_FINE * 0.75}
             strokeLinecap="round"
           />
         </G>

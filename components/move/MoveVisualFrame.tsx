@@ -1,5 +1,5 @@
 import { type ReactNode } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, useWindowDimensions, View } from 'react-native';
 
 import { hideFromA11yTree } from '@/components/accessibility/hideFromA11y';
 
@@ -8,8 +8,15 @@ type Props = {
 };
 
 export function MoveVisualFrame({ children }: Props) {
+  const { height: windowHeight } = useWindowDimensions();
+  const frameHeight = Math.round(Math.min(280, Math.max(148, windowHeight * 0.38)));
+
   return (
-    <View {...hideFromA11yTree()} pointerEvents="none" style={styles.frame}>
+    <View
+      {...hideFromA11yTree()}
+      pointerEvents="none"
+      style={[styles.frame, { height: frameHeight, maxHeight: frameHeight }]}
+    >
       {children}
     </View>
   );
@@ -17,10 +24,8 @@ export function MoveVisualFrame({ children }: Props) {
 
 const styles = StyleSheet.create({
   frame: {
-    width: '78%',
-    maxWidth: 300,
-    height: 200,
-    maxHeight: 240,
+    width: '82%',
+    maxWidth: 320,
     alignSelf: 'center',
     alignItems: 'center',
     justifyContent: 'center',

@@ -35,33 +35,41 @@ export function MoveFloorLine({ emphasis = 1 }: { emphasis?: number }) {
 
 type CompressionProps = {
   x: number;
+  soleY?: number;
   strength: number;
 };
 
-/** Short contact marks under a foot — press/hold only. */
-export function MoveContactMarks({ x, strength }: CompressionProps) {
+/** Soft sage + warm sand contact under a planted sole — press/hold only. */
+export function MoveSoleCompression({ x, soleY = 171.5, strength }: CompressionProps) {
   const ink = useMoveInk();
   if (strength <= 0) {
     return null;
   }
 
-  const opacity = 0.18 + strength * 0.32;
+  const spread = 20 + strength * 6;
+  const depth = 2.5 + strength * 2.5;
+  const washOpacity = 0.12 + strength * 0.22;
+  const sandOpacity = ink.contactOpacity * (0.35 + strength * 0.45);
+
   return (
-    <G opacity={opacity}>
+    <G>
       <Path
-        d={`M${x - 14} 173.5 L${x + 14} 173.5`}
-        fill="none"
-        stroke={ink.line}
-        strokeWidth={MOVE_STROKE_FINE}
-        strokeLinecap="round"
+        d={`M${x - spread} ${soleY}
+           Q${x} ${soleY + depth} ${x + spread} ${soleY}
+           L${x + spread - 2} ${soleY + 0.6}
+           Q${x} ${soleY + depth - 0.8} ${x - spread + 2} ${soleY + 0.6}
+           Z`}
+        fill={ink.wash}
+        fillOpacity={washOpacity}
+        stroke="none"
       />
       <Path
-        d={`M${x - 9} 176 L${x + 9} 176`}
+        d={`M${x - spread + 4} ${soleY + 0.4} L${x + spread - 4} ${soleY + 0.4}`}
         fill="none"
-        stroke={ink.line}
-        strokeWidth={MOVE_STROKE_FINE * 0.9}
+        stroke={ink.contact}
+        strokeWidth={MOVE_STROKE_FINE * 0.85}
         strokeLinecap="round"
-        opacity={0.75}
+        opacity={sandOpacity}
       />
     </G>
   );

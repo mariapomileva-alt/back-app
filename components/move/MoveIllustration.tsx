@@ -22,10 +22,10 @@ import {
   type MoveVisualSpec,
 } from '@/features/move/visualMap';
 
-const FADE_OUT_MS = 220;
-const FADE_IN_MS = 320;
-const FADE_OUT_REDUCED_MS = 180;
-const FADE_IN_REDUCED_MS = 250;
+const FADE_OUT_MS = 420;
+const FADE_IN_MS = 580;
+const FADE_OUT_REDUCED_MS = 400;
+const FADE_IN_REDUCED_MS = 520;
 const CSS_EASE = 'cubic-bezier(0.4, 0, 0.2, 1)';
 const USE_CSS_FADE = Platform.OS === 'web';
 

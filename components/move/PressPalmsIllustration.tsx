@@ -17,41 +17,50 @@ type Props = {
 function pose(variant: PalmsVariant, reduceMotion: boolean) {
   switch (variant) {
     case 'pressPalms':
-      return { inset: reduceMotion ? 3 : 6, contact: 0.45, fillBoost: 0.05, gap: 0 };
+      return { inset: reduceMotion ? 2 : 4, contact: 0.5, fillBoost: 0.05, gap: 0 };
     case 'holdPalms':
-      return { inset: reduceMotion ? 2 : 3, contact: 0.62, fillBoost: 0.09, gap: 0 };
+      return { inset: reduceMotion ? 1 : 2, contact: 0.68, fillBoost: 0.09, gap: 0 };
     case 'releasePalms':
-      return { inset: 14, contact: 0, fillBoost: 0, gap: 1 };
+      return { inset: 12, contact: 0, fillBoost: 0, gap: 1 };
     case 'noticePalms':
-      return { inset: 20, contact: 0, fillBoost: -0.02, gap: 1 };
+      return { inset: 18, contact: 0, fillBoost: -0.02, gap: 1 };
   }
 }
 
-/** Side profile — palms meeting, not prayer pose. */
-function PalmSide({ flip, fillOpacity }: { flip: boolean; fillOpacity: number }) {
+/** Side profile — wrist, palm, and grouped fingers meeting center. */
+function PalmProfile({ flip, fillOpacity, strokeWidth }: { flip: boolean; fillOpacity: number; strokeWidth: number }) {
   const ink = useMoveInk();
   return (
     <G transform={flip ? 'scale(-1 1)' : undefined}>
       <Path
-        d="M-6 36
-           C-14 28 -16 12 -10 0
-           C-4 -10 8 -14 18 -10
-           C26 -6 30 4 28 16
-           C26 28 18 38 8 42
-           C0 44 -4 42 -6 36
+        d="M-4 48
+           L-8 38
+           C-10 32 -8 26 -2 24
+           C4 22 10 26 12 32
+           L14 28
+           C16 22 22 20 26 24
+           C28 26 28 30 26 34
+           L28 18
+           C30 12 36 10 40 14
+           C42 18 40 22 36 24
+           L34 8
+           C36 2 42 0 46 4
+           C48 8 46 12 42 14
+           C34 20 22 26 14 32
+           C6 38 0 44 -4 48
            Z"
         fill={ink.wash}
         fillOpacity={fillOpacity}
         stroke={ink.line}
-        strokeWidth={MOVE_STROKE}
+        strokeWidth={strokeWidth}
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <Path
-        d="M4 -6 C10 2 12 12 10 22"
+        d="M4 26 C8 30 10 36 8 42"
         fill="none"
         stroke={ink.line}
-        strokeWidth={MOVE_STROKE_FINE * 0.85}
+        strokeWidth={MOVE_STROKE_FINE * 0.75}
         strokeLinecap="round"
         opacity={0.24}
       />
@@ -63,7 +72,8 @@ export function PressPalmsIllustration({ variant, reduceMotion }: Props) {
   const ink = useMoveInk();
   const p = pose(variant, reduceMotion);
   const fillOpacity = Math.max(0.14, ink.washOpacity + p.fillBoost);
-  const centerY = 108;
+  const centerY = 106;
+  const meetX = 140;
 
   return (
     <MoveSvgRoot>
@@ -78,25 +88,25 @@ export function PressPalmsIllustration({ variant, reduceMotion }: Props) {
       <G opacity={ink.lineOpacity}>
         {p.contact > 0 ? (
           <Path
-            d={`M${140 - p.inset} ${centerY} L${140 + p.inset} ${centerY}`}
+            d={`M${meetX - 6} ${centerY - 2} L${meetX + 6} ${centerY + 2}`}
             fill="none"
-            stroke={ink.line}
-            strokeWidth={MOVE_STROKE_FINE + p.contact * 0.6}
+            stroke={ink.contact}
+            strokeWidth={MOVE_STROKE_FINE + p.contact * 0.4}
             strokeLinecap="round"
-            opacity={p.contact}
+            opacity={ink.contactOpacity * p.contact}
           />
         ) : null}
-        <G transform={`translate(${140 - 52 - p.inset} ${centerY - 8})`}>
-          <PalmSide flip={false} fillOpacity={fillOpacity} />
+        <G transform={`translate(${meetX - 46 - p.inset} ${centerY - 6})`}>
+          <PalmProfile flip={false} fillOpacity={fillOpacity} strokeWidth={MOVE_STROKE} />
         </G>
-        <G transform={`translate(${140 + 52 + p.inset} ${centerY - 4})`}>
-          <PalmSide flip fillOpacity={fillOpacity} />
+        <G transform={`translate(${meetX + 46 + p.inset} ${centerY - 2})`}>
+          <PalmProfile flip fillOpacity={fillOpacity} strokeWidth={MOVE_STROKE} />
         </G>
       </G>
       {p.gap ? (
-        <G opacity={0.22}>
+        <G opacity={0.2}>
           <Path
-            d="M128 124 C136 118 144 118 152 124"
+            d="M126 118 C136 112 144 112 154 118"
             fill="none"
             stroke={ink.wash}
             strokeWidth={MOVE_STROKE_FINE * 0.9}

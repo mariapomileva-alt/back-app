@@ -9,9 +9,11 @@ export type MoveInk = {
   wash: string;
   ground: string;
   surface: string;
+  contact: string;
   lineOpacity: number;
   washOpacity: number;
   groundOpacity: number;
+  contactOpacity: number;
 };
 
 export function useMoveInk(): MoveInk {
@@ -23,8 +25,10 @@ export function useMoveInk(): MoveInk {
     wash: theme.colors.markSecondary,
     ground: theme.colors.markMuted,
     surface: theme.colors.markSurface,
+    contact: theme.colors.markSurface,
     lineOpacity: forest ? 0.98 : 0.92,
     washOpacity: forest ? 0.42 : 0.22,
     groundOpacity: forest ? 0.55 : 0.44,
+    contactOpacity: forest ? 0.38 : 0.52,
   };
 }
