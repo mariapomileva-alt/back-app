@@ -21,6 +21,7 @@ export default function PrivacyScreen() {
         <AppText variant="body">{t('privacy.stored')}</AppText>
         <AppText variant="body">{t('privacy.notSent')}</AppText>
         <AppText variant="body">{t('privacy.emergency')}</AppText>
+        <AppText variant="body">{t('privacy.notMedical')}</AppText>
         <TextButton
           label={t('privacy.extraSupport')}
           accessibilityHint={t('privacy.extraSupportHint')}
@@ -29,7 +30,7 @@ export default function PrivacyScreen() {
         />
         {privacyUrl ? (
           <TextButton
-            label={t('legal.openWeb')}
+            label={t('privacy.policy')}
             onPress={() => {
               void Linking.openURL(privacyUrl);
             }}

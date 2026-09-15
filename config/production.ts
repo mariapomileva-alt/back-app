@@ -25,9 +25,9 @@ export const productionConfig = {
   // In-app Terms: app/settings/terms.tsx. Do not invent a domain.
   termsUrl: null as string | null,
 
-  // TODO: replace with the live Privacy Policy URL before store release.
-  // In-app Privacy: app/settings/privacy.tsx. Do not invent a domain.
-  privacyUrl: null as string | null,
+  // Live Privacy Policy for App Store and in-app Privacy.
+  // In-app Privacy: app/settings/privacy.tsx.
+  privacyUrl: 'https://backapp.live/privacy.html',
 
   // TODO: REPLACE WITH PROFESSIONALLY RECORDED BACK GROUNDING AUDIO BEFORE RELEASE
   // Drop audio/grounding/english.wav (or .m4a), point the require() in
@@ -41,9 +41,8 @@ export const productionConfig = {
   // Until then keep the *-placeholder.wav files and this flag false.
   environmentAudioReady: false,
 
-  // TODO: export final app icon at required store sizes from the master artwork.
-  // Required sizes are listed in assets/docs/icon-export.txt
-  productionIconReady: false,
+  // Master artwork: store/ios/icon-1024.png (copied to assets/images/icon.png).
+  productionIconReady: true,
 } as const;
 
 export function hasRevenueCatConfig(): boolean {

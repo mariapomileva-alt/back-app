@@ -347,6 +347,7 @@
     "stored": "That can include a support contact you save, Read memory, preferences such as appearance and motion, and a short local list of recent tools.",
     "notSent": "None of this is sent to Back or anyone else. If you call or message, your phone app opens, and it starts only if you confirm.",
     "emergency": "Extra support can help you reach someone nearby. Back does not place the call for you.",
+    "notMedical": "Back is not a medical device. It does not create Health Records and it does not read Apple Health.",
     "extraSupport": "Extra support",
     "extraSupportHint": "Opens Extra support",
     "policy": "Privacy policy"

@@ -76,10 +76,6 @@ export default function SettingsScreen() {
           <SettingsRow
             label={t('settings.patterns')}
             onPress={() => router.push('/settings/patterns')}
-          />
-          <SettingsRow
-            label={t('settings.subscription')}
-            onPress={() => router.push('/settings/subscription')}
             showDivider={false}
           />
         </SettingsSection>

@@ -1,22 +1,11 @@
 Back app icon — production export checklist
 
-Master artwork is not yet present. Current PNGs in assets/images are development placeholders.
+Master: store/ios/icon-1024.png
+Expo iOS slot: assets/images/icon.png (same 1024×1024 RGB opaque PNG)
+Splash: assets/images/splash-icon.png
 
-Intended design:
-- Warm ivory background (#F4F0E6)
-- One deep forest green tactile circle, centered (#174E43)
-- Very subtle inner sage highlight
-- Extremely soft shadow
-- No text, letter, or symbol
-
-Required exports before store release:
-- 1024 x 1024 App Store icon (iOS)
-- 1024 x 1024 Play Store icon (Android)
-- iOS AppIcon set: 20, 29, 40, 58, 60, 76, 80, 87, 120, 152, 167, 180, 1024
-- Android adaptive icon foreground 1024 x 1024 (circle inside 66% safe zone)
-- Android adaptive icon background 1024 x 1024 (#F4F0E6)
-- Android monochrome 1024 x 1024
-- Web favicon 48 x 48 and 32 x 32
-- Splash mark ~88 pt on ivory
-
-TODO: replace placeholder PNGs with production artwork from the master file.
+Design:
+- Ivory field #F3EDE1, no transparency, no rounded corners (Apple applies the mask)
+- Serif wordmark “Back” in forest
+- Quiet forest circle with sage inner light, clay hairline
+- Not a medical cross
