@@ -17,23 +17,30 @@ type Props = {
 function pose(variant: FeetVariant) {
   switch (variant) {
     case 'pressFeet':
-      return { drop: 5, shadow: 0.36, shadowRx: 23, fillBoost: 0.05, ripple: 0 };
+      return { drop: 5, shadow: 0.36, shadowRx: 26, shadowRy: 7.5, fillBoost: 0.05, ripple: 0 };
     case 'holdFeet':
-      return { drop: 5, shadow: 0.42, shadowRx: 25, fillBoost: 0.09, ripple: 0 };
+      return { drop: 5, shadow: 0.42, shadowRx: 28, shadowRy: 8, fillBoost: 0.09, ripple: 0 };
     case 'releaseFeet':
-      return { drop: 1, shadow: 0.18, shadowRx: 18, fillBoost: 0, ripple: 0 };
+      return { drop: 1, shadow: 0.18, shadowRx: 20, shadowRy: 6, fillBoost: 0, ripple: 0 };
     case 'noticeFeet':
-      return { drop: 0, shadow: 0.15, shadowRx: 17, fillBoost: -0.02, ripple: 1 };
+      return { drop: 0, shadow: 0.15, shadowRx: 19, shadowRy: 5.5, fillBoost: -0.02, ripple: 1 };
   }
 }
 
+/** Top-down footprint: toes toward -Y, heel toward +Y — not upright ovals. */
 function Foot({ flip, fillOpacity }: { flip: boolean; fillOpacity: number }) {
   const ink = useMoveInk();
   const scale = flip ? -1 : 1;
   return (
     <G transform={`scale(${scale} 1)`}>
       <Path
-        d="M1.5-41 C16-40 24.5-27 24-7 C23.6 12 16.5 31 7 42 C2.8 47-5.2 46-9 38.5 C-18.5 24-22 5-20-14 C-18.2-32.5-12-42 1.5-41 Z"
+        d="M0 28
+           C-7 28-15 23-18 14
+           C-21 5-20-6-16-14
+           C-12-22-4-26 5-26
+           C14-26 21-20 23-11
+           C25-2 22 8 16 16
+           C11 22 5 28 0 28Z"
         fill={ink.wash}
         fillOpacity={fillOpacity}
         stroke={ink.line}
@@ -42,12 +49,12 @@ function Foot({ flip, fillOpacity }: { flip: boolean; fillOpacity: number }) {
         strokeLinejoin="round"
       />
       <Path
-        d="M-4.5-10 C-0.5 9 3.5 23 7.5 32"
+        d="M-5 4 C-1 10 2 10 6 4"
         fill="none"
         stroke={ink.line}
         strokeWidth={MOVE_STROKE_FINE}
         strokeLinecap="round"
-        opacity={0.22}
+        opacity={0.2}
       />
     </G>
   );
@@ -90,12 +97,26 @@ export function PressFeetIllustration({ variant, reduceMotion }: Props) {
       ) : null}
 
       <G opacity={ink.lineOpacity} transform={`translate(0 ${p.drop})`}>
-        <G transform="translate(102 118) rotate(-9)">
-          <Ellipse cx="0" cy="44" rx={p.shadowRx} ry="7.2" fill={ink.ground} opacity={p.shadow} />
+        <G transform="translate(96 128) rotate(-10)">
+          <Ellipse
+            cx="0"
+            cy="34"
+            rx={p.shadowRx}
+            ry={p.shadowRy}
+            fill={ink.ground}
+            opacity={p.shadow}
+          />
           <Foot flip={false} fillOpacity={fillOpacity} />
         </G>
-        <G transform="translate(178 122) rotate(12)">
-          <Ellipse cx="0" cy="44" rx={p.shadowRx - 1} ry="6.8" fill={ink.ground} opacity={p.shadow * 0.9} />
+        <G transform="translate(184 128) rotate(10)">
+          <Ellipse
+            cx="0"
+            cy="34"
+            rx={p.shadowRx - 1}
+            ry={p.shadowRy - 0.4}
+            fill={ink.ground}
+            opacity={p.shadow * 0.9}
+          />
           <Foot flip fillOpacity={fillOpacity} />
         </G>
       </G>
