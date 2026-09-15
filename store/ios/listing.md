@@ -2,20 +2,25 @@
 
 Upload these files in App Store Connect. This file is the listing copy and the fill-in checklist.
 
+Companion how-to (zip, where to paste, what they still click): **`store/ios/SHARE-WITH-COMPANION.md`**.
+
 **Copyright:** 2026 Tatjana Fedorkova  
 **Bundle ID:** `app.back.selfhelp`  
 **Version:** 1.0.0  
-**SKU suggestion:** `back-ios-1` (set once; cannot invent Apple IDs)
+**SKU suggestion:** `back-ios-1` (set once; cannot invent Apple IDs)  
+**Branch for this pack:** `cursor/active-session-foundation`
+
+**Audit:** 15 September 2026 (icon via `sips`; URLs via `curl --max-time 8`).
 
 ---
 
 ## Files
 
-| Asset | Path | Spec |
-| --- | --- | --- |
-| App icon (master) | `store/ios/icon-1024.png` | 1024×1024, RGB, opaque PNG, no rounded corners |
-| App icon (Expo slot) | `assets/images/icon.png` | Same file as master |
-| Screenshots | `store/ios/screenshots/` | iPhone **6.9"** portrait **1320×2868** |
+| Asset | Path | Spec | Audit |
+| --- | --- | --- | --- |
+| App icon (master) | `store/ios/icon-1024.png` | 1024×1024, RGB, opaque PNG, no rounded corners, no alpha, no pre-rounded mask | **Present.** Approved tactile forest disc. `sips`: 1024×1024, RGB, `hasAlpha: no`. Same bytes as `assets/images/icon.png`. |
+| App icon (Expo slot) | `assets/images/icon.png` | Same file as master | Present (identical hash). |
+| Screenshots | `store/ios/screenshots/` | iPhone **6.9"** portrait **1320×2868** | **Present.** Six PNGs, all 1320×2868 RGB opaque. Full-bleed app UI (status bar + Dynamic Island as the screen, not a 3D phone bezel). No lorem. |
 
 Screenshots (upload in this order, 6.9" well — not 6.5"):
 
@@ -32,16 +37,22 @@ No iPad, Watch, or preview video.
 
 ## URLs (paste in App Information)
 
+**Do not paste Privacy or Support URLs until they return HTTP 200.** GitHub Pages deploys from **`main`**. The HTML files exist on this branch (`landing/privacy.html`, `landing/support.html`) but **not** on `main`. Custom-domain HTTPS **is** issued.
+
+| URL | Live status (15 Sep 2026) |
+| --- | --- |
+| https://backapp.live/ | **Live.** HTTPS 200. DNS (Namecheap) → GitHub Pages (`185.199.x.x`). Certificate issued (`ssl_verify_result=0`). |
+| https://backapp.live/privacy.html | **Not live.** HTTPS 404 (GitHub Pages “Page not found”). File is in this repo, not on `main`. |
+| https://backapp.live/support.html | **Not live.** HTTPS 404. Same reason. |
+| https://mariapomileva-alt.github.io/back-app/privacy.html | **Not a fallback.** CNAME redirects to `backapp.live` — same 404. |
+
+After `landing/privacy.html` and `landing/support.html` are on `main` (merge, or run the Pages workflow against a branch that contains them), confirm 200 in a browser, then paste:
+
 - **Support URL:** https://backapp.live/support.html
 - **Privacy Policy URL:** https://backapp.live/privacy.html
 - **Marketing URL (optional):** https://backapp.live/
 
-If `backapp.live` DNS is not live yet, GitHub Pages fallback after the workflow runs:
-
-- Support: https://mariapomileva-alt.github.io/back-app/support.html
-- Privacy: https://mariapomileva-alt.github.io/back-app/privacy.html
-
-Use the custom domain in App Store Connect once the domain resolves. In-app Privacy already opens `https://backapp.live/privacy.html`.
+In-app Privacy already opens `https://backapp.live/privacy.html`. That in-app button will 404 until Pages is updated.
 
 No product email is in the repo. Support is GitHub Issues (stated on the support page). Do not invent a mailbox.
 
@@ -52,7 +63,7 @@ No product email is in the repo. Support is GitHub Issues (stated on the support
 ### Name
 Back: You're Here
 
-### Subtitle (26 / 30 characters)
+### Subtitle (25 / 30 characters)
 ```
 Quiet help for one minute
 ```
@@ -86,7 +97,7 @@ anxiety,panic,breathe,grounding,overload,stress,self-help,quiet,breathing,ground
 
 No competitor names. No “Calm”, “Headspace”, or similar.
 
-### Promotional text (optional, 69 / 170)
+### Promotional text (optional, 57 / 170)
 ```
 Six quiet tools for the next minute. Private. No account.
 ```
@@ -157,6 +168,8 @@ Privacy Policy: https://backapp.live/privacy.html
 Support: https://backapp.live/support.html
 ```
 
+Paste those two URLs in Review notes only after they 200 (see URLs above).
+
 ### Demo account
 None. Leave username/password blank.
 
@@ -196,8 +209,8 @@ Submit stays grey until a human does these in the UI:
 
 ## What changed in the app for this pack
 
-- Production icon in `assets/images/icon.png` and splash mark; `productionIconReady: true`.
-- Privacy screen links to https://backapp.live/privacy.html and states the app is not a medical device / not Health Records.
+- Production icon is the approved tactile forest disc in `store/ios/icon-1024.png` and `assets/images/icon.png`; `productionIconReady: true`.
+- Privacy screen links to https://backapp.live/privacy.html and states the app is not a medical device / not Health Records. (Page must be deployed from `main` before that URL 200s.)
 - Subscription row removed from Settings. No $9.99 promise in UI or listing. `/settings/subscription` remains a dormant “nothing to buy” screen if opened by URL.
 - Landing: `privacy.html`, `support.html`, footer links, copyright 2026 Tatjana Fedorkova.
 
@@ -221,6 +234,6 @@ Extra support disclaimer is in the app and in the listing. Keep it.
 
 ## Character counts
 
-- Subtitle: 26 / 30
+- Subtitle: 25 / 30
 - Keywords: 100 / 100
-- Promotional text: 69 / 170
+- Promotional text: 57 / 170
