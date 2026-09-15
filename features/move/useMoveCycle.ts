@@ -8,6 +8,7 @@ import {
   MOVE_RELEASE_MS,
   defaultMoveSequenceId,
   instructionKeyFor,
+  moveStepId,
   moveSequences,
   nextMoveSequenceId,
   type MovePhase,
@@ -41,6 +42,7 @@ export function useMoveCycle() {
 
   const sequence = sequenceById(sequenceId);
   const instructionKey = instructionKeyFor(sequence, phase);
+  const stepId = moveStepId(sequenceId, phase);
   const phaseRef = useRef<MovePhase>(phase);
 
   const goTo = useCallback((next: MovePhase) => {
@@ -171,6 +173,7 @@ export function useMoveCycle() {
     sequence,
     sequenceId,
     phase,
+    stepId,
     pressed,
     instructionKey,
     onPressIn,

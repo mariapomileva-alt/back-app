@@ -33,6 +33,20 @@ export const MOVE_HOLD_MS = 4_000;
 export const MOVE_RELEASE_MS = 2_400;
 export const MOVE_MIN_HOLD_MS = 900;
 
+export type MoveStepId = `${MoveSequenceId}.${MovePhase}`;
+
+export function moveStepId(sequenceId: MoveSequenceId, phase: MovePhase): MoveStepId {
+  return `${sequenceId}.${phase}`;
+}
+
+export function allMoveStepIds(): MoveStepId[] {
+  return moveSequenceIds.flatMap((sequenceId) => movePhases.map((phase) => moveStepId(sequenceId, phase)));
+}
+
+export function isMoveStepId(value: string | null | undefined): value is MoveStepId {
+  return allMoveStepIds().some((id) => id === value);
+}
+
 export function instructionKeyFor(sequence: MoveSequence, phase: MovePhase): string {
   if (phase === 'press') {
     return sequence.pressKey;
