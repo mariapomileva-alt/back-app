@@ -1,6 +1,8 @@
 import { StyleSheet, View } from 'react-native';
 import Svg, { Circle, Path, Rect } from 'react-native-svg';
 
+import { skipA11yNode } from '@/components/accessibility/hideFromA11y';
+
 import { useTheme } from '@/hooks/useTheme';
 import { hexToRgba } from '@/theme/colors';
 
@@ -15,7 +17,7 @@ export function ListenGraphic({ variant }: Props) {
 
   if (variant === 'brown') {
     return (
-      <View style={styles.frame} accessible={false} importantForAccessibility="no">
+      <View {...skipA11yNode()} style={styles.frame}>
         <Svg width="100%" height="100%" viewBox="0 0 220 120" preserveAspectRatio="xMidYMid meet">
           <Rect x="0" y="0" width="220" height="120" fill={hexToRgba(theme.colors.clay, 0.18)} />
           <Circle cx="58" cy="64" r="46" fill={hexToRgba(theme.colors.clay, 0.34)} />
@@ -31,7 +33,7 @@ export function ListenGraphic({ variant }: Props) {
   const sage = theme.colors.secondaryGreen;
 
   return (
-    <View style={styles.frame} accessible={false} importantForAccessibility="no">
+    <View {...skipA11yNode()} style={styles.frame}>
       <Svg width="100%" height="100%" viewBox="0 0 220 120" preserveAspectRatio="xMidYMid meet">
         <Path
           d="M18 28 C70 8 150 48 202 24"

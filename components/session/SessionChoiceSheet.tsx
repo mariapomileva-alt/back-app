@@ -1,6 +1,7 @@
 import { Modal, Pressable, StyleSheet, View } from 'react-native';
 
 import { AccessiblePressable } from '@/components/accessibility/AccessiblePressable';
+import { skipA11yNode } from '@/components/accessibility/hideFromA11y';
 import { CloseButton } from '@/components/buttons/CloseButton';
 import { AppText } from '@/components/typography/AppText';
 import { useReduceMotion } from '@/hooks/useReduceMotion';
@@ -46,8 +47,7 @@ export function SessionChoiceSheet({
     >
       <View style={[styles.overlay, { backgroundColor: theme.colors.overlay }]}>
         <Pressable
-          accessibilityElementsHidden
-          importantForAccessibility="no"
+          {...skipA11yNode()}
           onPress={onDismiss}
           style={StyleSheet.absoluteFill}
         />

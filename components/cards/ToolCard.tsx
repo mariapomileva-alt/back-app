@@ -1,6 +1,7 @@
 import { type ReactNode } from 'react';
 import { Platform, Pressable, StyleSheet, View, type StyleProp, type ViewStyle } from 'react-native';
 
+import { hideFromA11yTree } from '@/components/accessibility/hideFromA11y';
 import { AppText } from '@/components/typography/AppText';
 import { useHaptics } from '@/hooks/useHaptics';
 import { useTheme } from '@/hooks/useTheme';
@@ -47,22 +48,12 @@ export function ToolCard({ label, icon, visual, onPress, accessibilityHint, sele
       ]}
     >
       {visual ? (
-        <View
-          accessible={false}
-          accessibilityElementsHidden
-          importantForAccessibility="no-hide-descendants"
-          style={[styles.visual, { pointerEvents: 'none' }]}
-        >
+        <View {...hideFromA11yTree()} style={[styles.visual, { pointerEvents: 'none' }]}>
           {visual}
         </View>
       ) : null}
       {icon ? (
-        <View
-          style={styles.icon}
-          accessible={false}
-          accessibilityElementsHidden
-          importantForAccessibility="no-hide-descendants"
-        >
+        <View {...hideFromA11yTree()} style={styles.icon}>
           {icon}
         </View>
       ) : null}

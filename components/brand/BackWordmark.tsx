@@ -1,6 +1,7 @@
 import { PixelRatio, StyleSheet, View, type AccessibilityRole, type StyleProp, type ViewStyle } from 'react-native';
 import Svg, { Path } from 'react-native-svg';
 
+import { hideFromA11yTree } from '@/components/accessibility/hideFromA11y';
 import { useTheme } from '@/hooks/useTheme';
 import {
   resolveWordmarkColor,
@@ -37,20 +38,16 @@ export function BackWordmark({
 
   return (
     <View
-      accessible={!decorative}
-      accessibilityRole={decorative ? undefined : accessibilityRole}
-      accessibilityLabel={decorative ? undefined : accessibilityLabel}
-      accessibilityElementsHidden={decorative}
-      importantForAccessibility={decorative ? 'no-hide-descendants' : 'yes'}
+      {...(decorative
+        ? hideFromA11yTree()
+        : {
+            accessible: true,
+            accessibilityRole,
+            accessibilityLabel,
+          })}
       style={[styles.wrap, { width, height }, style]}
     >
-      <Svg
-        width="100%"
-        height="100%"
-        viewBox={wordmarkViewBox}
-        accessible={false}
-        importantForAccessibility="no"
-      >
+      <Svg width="100%" height="100%" viewBox={wordmarkViewBox}>
         <Path fill={fill} d={wordmarkPaths.B} />
         <Path fill={fill} d={wordmarkPaths.a} />
         <Path fill={fill} d={wordmarkPaths.c} />

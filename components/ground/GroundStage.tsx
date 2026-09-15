@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Animated, Easing, Platform, StyleSheet, View } from 'react-native';
 import Svg, { Ellipse, Path } from 'react-native-svg';
 
+import { skipA11yNode } from '@/components/accessibility/hideFromA11y';
 import { GroundMark } from '@/components/marks';
 import { useReduceMotion } from '@/hooks/useReduceMotion';
 import { useTheme } from '@/hooks/useTheme';
@@ -50,7 +51,7 @@ export function GroundStage() {
   });
 
   return (
-    <View style={styles.stage} accessible={false} importantForAccessibility="no">
+    <View {...skipA11yNode()} style={styles.stage}>
       <View style={styles.mark}>
         <GroundMark />
       </View>

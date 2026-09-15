@@ -2,6 +2,7 @@ import { useId } from 'react';
 import { StyleSheet, View } from 'react-native';
 import Svg, { Circle, Defs, RadialGradient, Stop } from 'react-native-svg';
 
+import { skipA11yNode } from '@/components/accessibility/hideFromA11y';
 import { useTheme } from '@/hooks/useTheme';
 import { mixHex } from '@/theme/colors';
 
@@ -45,8 +46,7 @@ export function BreathingCircle({
       <View
         testID="breath-orb"
         collapsable={false}
-        accessible={false}
-        importantForAccessibility="no"
+        {...skipA11yNode()}
         style={[styles.orb, { width: diameter, height: diameter, opacity: fillOpacity }]}
       >
         <Svg width={diameter} height={diameter} viewBox="0 0 100 100">

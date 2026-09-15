@@ -1,5 +1,6 @@
 import { StyleSheet, View, type StyleProp, type ViewStyle } from 'react-native';
 
+import { hideFromA11yTree, skipA11yNode } from '@/components/accessibility/hideFromA11y';
 import { AppText } from '@/components/typography/AppText';
 import { brandIdentity, type BreathingMarkVariant } from '@/theme/brandIdentity';
 import { brand } from '@/theme/colors';
@@ -40,11 +41,13 @@ export function BackBrandLockup({
 
   return (
     <View
-      accessible={!decorative}
-      accessibilityRole={decorative ? undefined : 'image'}
-      accessibilityLabel={decorative ? undefined : label}
-      accessibilityElementsHidden={decorative}
-      importantForAccessibility={decorative ? 'no-hide-descendants' : 'yes'}
+      {...(decorative
+        ? hideFromA11yTree()
+        : {
+            accessible: true,
+            accessibilityRole: 'image' as const,
+            accessibilityLabel: label,
+          })}
       style={[
         layout === 'horizontal' ? styles.horizontal : styles.stacked,
         { backgroundColor: background, minHeight: size },
@@ -56,8 +59,7 @@ export function BackBrandLockup({
         <BackWordmark size={wordSize} variant={wordmarkVariant} decorative />
         {showTagline ? (
           <AppText
-            accessible={false}
-            importantForAccessibility="no"
+            {...skipA11yNode()}
             style={[
               styles.tagline,
               {

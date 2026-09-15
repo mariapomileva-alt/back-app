@@ -2,6 +2,7 @@ import { useId } from 'react';
 import { StyleSheet, View, type StyleProp, type ViewStyle } from 'react-native';
 import Svg, { Circle, Defs, RadialGradient, Stop } from 'react-native-svg';
 
+import { hideFromA11yTree } from '@/components/accessibility/hideFromA11y';
 import { breathingStops, type BreathingMarkVariant } from '@/theme/brandIdentity';
 
 type Props = {
@@ -25,14 +26,16 @@ export function BackBreathingMark({
 
   return (
     <View
-      accessible={!decorative}
-      accessibilityRole={decorative ? undefined : 'image'}
-      accessibilityLabel={decorative ? undefined : accessibilityLabel}
-      accessibilityElementsHidden={decorative}
-      importantForAccessibility={decorative ? 'no-hide-descendants' : 'yes'}
+      {...(decorative
+        ? hideFromA11yTree()
+        : {
+            accessible: true,
+            accessibilityRole: 'image' as const,
+            accessibilityLabel,
+          })}
       style={[styles.wrap, { width: size, height: size }, style]}
     >
-      <Svg width={size} height={size} viewBox="0 0 100 100" accessible={false}>
+      <Svg width={size} height={size} viewBox="0 0 100 100">
         <Defs>
           <RadialGradient id={gradientId} cx="38%" cy="34%" r="68%" fx="34%" fy="30%">
             {stops.map((stop) => (

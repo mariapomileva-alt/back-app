@@ -1,6 +1,7 @@
 import { View } from 'react-native';
 import Svg, { Path, Polygon } from 'react-native-svg';
 
+import { hideFromA11yTree } from '@/components/accessibility/hideFromA11y';
 import type { ShapeKind } from '@/features/distract/shapes';
 
 type Props = {
@@ -17,11 +18,7 @@ export function ShapeGlyph({ shape, color, size }: Props) {
     overflow: 'visible' as const,
   };
 
-  const hide = {
-    accessible: false as const,
-    accessibilityElementsHidden: true,
-    importantForAccessibility: 'no-hide-descendants' as const,
-  };
+  const hide = hideFromA11yTree();
 
   if (shape === 'circle') {
     return (

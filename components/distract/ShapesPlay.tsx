@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react';
 import { StyleSheet, View, useWindowDimensions } from 'react-native';
 
 import { AccessiblePressable } from '@/components/accessibility/AccessiblePressable';
+import { hideFromA11yTree } from '@/components/accessibility/hideFromA11y';
 import { AppText } from '@/components/typography/AppText';
 import { createShapeDeck, drawShapeRound, type ShapeColorKey } from '@/features/distract/shapes';
 import { useHaptics } from '@/hooks/useHaptics';
@@ -42,12 +43,7 @@ export function ShapesPlay() {
       <AppText style={[styles.instruction, compact && styles.instructionCompact]}>
         {t('distract.shapes.instruction')}
       </AppText>
-      <View
-        style={[styles.target, compact && styles.targetCompact]}
-        accessible={false}
-        accessibilityElementsHidden
-        importantForAccessibility="no-hide-descendants"
-      >
+      <View {...hideFromA11yTree()} style={[styles.target, compact && styles.targetCompact]}>
         <ShapeGlyph shape={round.shape} color={palette[round.colorKey]} size={targetSize} />
       </View>
       <View style={styles.options}>
