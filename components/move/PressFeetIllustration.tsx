@@ -14,7 +14,7 @@ type Props = {
   reduceMotion: boolean;
 };
 
-const FLOOR_Y = 172;
+const FLOOR_Y = 144;
 const SOLE_LOCAL_Y = 46;
 const LEFT_X = 78;
 const RIGHT_X = 206;

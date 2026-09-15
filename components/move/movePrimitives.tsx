@@ -23,7 +23,7 @@ export function MoveFloorLine({ emphasis = 1 }: { emphasis?: number }) {
 
   return (
     <Path
-      d="M36 172 L244 172"
+      d="M36 144 L244 144"
       fill="none"
       stroke={ink.ground}
       strokeWidth={width}
@@ -40,7 +40,7 @@ type CompressionProps = {
 };
 
 /** Soft sage + warm sand contact under a planted sole — press/hold only. */
-export function MoveSoleCompression({ x, soleY = 171.5, strength }: CompressionProps) {
+export function MoveSoleCompression({ x, soleY = 143.5, strength }: CompressionProps) {
   const ink = useMoveInk();
   if (strength <= 0) {
     return null;

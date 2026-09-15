@@ -1,6 +1,7 @@
 import { useTheme } from '@/hooks/useTheme';
 
-export const MOVE_VIEWBOX = '0 0 280 200';
+/** Cropped top margin so artwork sits nearer instruction text on phones. */
+export const MOVE_VIEWBOX = '0 28 280 172';
 export const MOVE_STROKE = 1.85;
 export const MOVE_STROKE_FINE = 1.5;
 

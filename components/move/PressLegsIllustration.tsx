@@ -89,7 +89,7 @@ export function PressLegsIllustration({ variant, reduceMotion }: Props) {
   const strokeWidth = MOVE_STROKE + p.strokeBoost;
   const leftCenter = 96;
   const rightCenter = 184;
-  const floorY = 172;
+  const floorY = 144;
 
   return (
     <MoveSvgRoot>
