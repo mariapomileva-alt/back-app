@@ -3,7 +3,7 @@
 Three separate assets. Do not combine them where a platform requires only one.
 
 1. **Wordmark** — the name `Back`. Vector in-app (`BackWordmark`). Not the app icon.
-2. **App icon** — ivory field + one breathing object. No text, no letter, no underline.
+2. **App icon** — ivory field + one tactile forest disc (approved archive: `assets/_brand/icon-master.png`). No text, no letter, no underline. Do not swap in a flat generated circle.
 3. **Lockup** — object over the wordmark for splash/marketing/web. Not for the small icon.
 
 Official marketing color: forest `#0C3B2E` on ivory `#F3EDE1` (Warm Earth). Forest (ivory on deep forest) and Soft Sage `#17483A` are variants.

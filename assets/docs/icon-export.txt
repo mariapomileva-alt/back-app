@@ -1,17 +1,19 @@
 Back app icon — production export
 
-Master: assets/brand/app-icon-master.png
+Approved master (archive): assets/_brand/icon-master.png
+  Aug 21 tactile forest disc — Maria approved this look.
+Flattened copy: assets/brand/app-icon-master.png
 Copied to: assets/images/icon.png and store/ios/icon-1024.png
-Splash mark: assets/images/splash-icon.png (object only, no wordmark)
+Splash mark: assets/images/splash-icon.png (same object on ivory, no wordmark)
 Android: assets/images/android-icon-{foreground,background,monochrome}.png
 
 Design:
 - Ivory field #F3EDE1, opaque RGB, no transparency, no rounded corners (Apple applies the mask)
-- ONE centered breathing object (~62% of canvas), forest + sage, matte clay lighting
+- ONE centered tactile breathing object, matte forest, soft upper-left light, slight contact shadow
 - No word Back, no letter B, no gold underline, no symbols
-- Soft contact shadow only; no dark vignette, no target/bullseye rings
-- Regenerate with: python3 scripts/export-brand-assets.py
-- Compare at 1024, 180, 120, 60, 40, and 29 in assets/brand/comparison-board.html
+- Do not replace with a flat disc or a newly generated sphere
+- Regenerate wordmarks/lockups with: python3 scripts/export-brand-assets.py
+  (that script copies the approved master; it does not invent a new icon)
 
 App Store Connect upload: store/ios/icon-1024.png
-Verified (sips/file): 1024×1024 PNG, RGB, hasAlpha=no, no ICC, square ivory corners #F3EDE1, object ~62%. 40px and 29px stay a readable forest disc on ivory.
+Verified: 1024×1024 PNG, RGB, hasAlpha=no

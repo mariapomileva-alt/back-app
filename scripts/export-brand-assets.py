@@ -26,6 +26,7 @@ BRAND = ROOT / "assets" / "brand"
 PREVIEWS = BRAND / "previews"
 IMAGES = ROOT / "assets" / "images"
 STORE_ICON = ROOT / "store" / "ios" / "icon-1024.png"
+APPROVED_ICON = ROOT / "assets" / "_brand" / "icon-master.png"
 COMPONENTS = ROOT / "components" / "brand"
 LANDING = ROOT / "landing"
 GEORGIA = Path("/System/Library/Fonts/Supplemental/Georgia.ttf")
@@ -373,6 +374,46 @@ def flatten_rgb(img: Image.Image, bg: str = IVORY) -> Image.Image:
     return img.convert("RGB")
 
 
+def load_approved_icon() -> Image.Image:
+    """Maria-approved tactile forest disc. Do not replace with a generated sphere."""
+    if not APPROVED_ICON.exists():
+        raise FileNotFoundError(
+            f"Approved icon missing: {APPROVED_ICON}. "
+            "Do not invent a new sphere."
+        )
+    ivory = np.array(hex_rgb(IVORY), dtype=np.float32)
+    arr = np.array(Image.open(APPROVED_ICON).convert("RGB")).astype(np.float32)
+    h, w, _ = arr.shape
+    if (w, h) != (MASTER, MASTER):
+        raise ValueError(f"Approved icon must be {MASTER}×{MASTER}, got {w}×{h}")
+    corners = np.stack(
+        [arr[2, 2], arr[2, -3], arr[-3, 2], arr[-3, -3], arr[20, 20], arr[20, -21]]
+    )
+    bg = corners.mean(axis=0)
+    dist_bg = np.linalg.norm(arr - bg[None, None, :], axis=2)
+    w_field = 1.0 - np.clip((dist_bg - 10.0) / 36.0, 0.0, 1.0)
+    w_field = w_field * w_field * (3.0 - 2.0 * w_field)
+    out = np.clip(arr + w_field[:, :, None] * (ivory - bg)[None, None, :], 0, 255)
+    yy, xx = np.mgrid[0:h, 0:w].astype(np.float32)
+    cx = cy = (w - 1) / 2.0
+    dist = np.sqrt((xx - cx) ** 2 + (yy - cy) ** 2)
+    out[dist > w * 0.48] = ivory
+    out[:2] = ivory
+    out[-2:] = ivory
+    out[:, :2] = ivory
+    out[:, -2:] = ivory
+    return Image.fromarray(out.astype(np.uint8))
+
+
+def adaptive_foreground(master: Image.Image) -> Image.Image:
+    ivory = np.array(hex_rgb(IVORY), dtype=np.float32)
+    arr = np.array(master.convert("RGB")).astype(np.float32)
+    d_iv = np.linalg.norm(arr - ivory, axis=2)
+    alpha = np.clip((d_iv - 3.0) / 12.0, 0.0, 1.0)
+    alpha = alpha * alpha * (3.0 - 2.0 * alpha) * 255.0
+    return Image.fromarray(np.dstack([arr, alpha]).astype(np.uint8))
+
+
 def downscale(master: Image.Image, px: int) -> Image.Image:
     img = master.resize((px, px), Image.Resampling.LANCZOS)
     if px <= 60:
@@ -679,15 +720,14 @@ def main() -> None:
         BRAND / "back-wordmark-small.png"
     )
 
-    master = flatten_rgb(render_breathing_object(MASTER))
+    master = load_approved_icon()
     master.save(BRAND / "app-icon-master.png")
 
     for px in (180, 120, 60, 40, 29):
         downscale(master, px).save(PREVIEWS / f"icon-{px}.png")
 
-    splash = flatten_rgb(render_breathing_object(MASTER, diameter_ratio=0.72))
-
-    fg = render_breathing_object(MASTER, transparent=True)
+    splash = master
+    fg = adaptive_foreground(master)
     bg = Image.new("RGB", (MASTER, MASTER), hex_rgb(IVORY))
     mono = monochrome_icon()
     favicon = downscale(master, 48)
