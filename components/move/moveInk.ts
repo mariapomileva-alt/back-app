@@ -1,8 +1,8 @@
 import { useTheme } from '@/hooks/useTheme';
 
 export const MOVE_VIEWBOX = '0 0 280 200';
-export const MOVE_STROKE = 1.25;
-export const MOVE_STROKE_FINE = 1.1;
+export const MOVE_STROKE = 1.85;
+export const MOVE_STROKE_FINE = 1.5;
 
 export type MoveInk = {
   line: string;

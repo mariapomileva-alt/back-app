@@ -1,7 +1,7 @@
-import Svg, { Ellipse, G, Path } from 'react-native-svg';
+import { G, Path } from 'react-native-svg';
 
-import { MOVE_STROKE, MOVE_STROKE_FINE, MOVE_VIEWBOX, useMoveInk } from '@/components/move/moveInk';
-import { useMoveLoop } from '@/components/move/useMoveLoop';
+import { MOVE_STROKE, MOVE_STROKE_FINE, useMoveInk } from '@/components/move/moveInk';
+import { MoveSvgRoot } from '@/components/move/movePrimitives';
 import type { MoveIllustrationVariant } from '@/features/move/visualMap';
 
 type HandsVariant = Extract<
@@ -14,37 +14,44 @@ type Props = {
   reduceMotion: boolean;
 };
 
-function pose(variant: HandsVariant) {
+function pose(variant: HandsVariant, reduceMotion: boolean) {
   switch (variant) {
     case 'tenseHands':
-      return { compact: 0.9, fillBoost: 0.06, open: 0 };
+      return { tense: true, fillBoost: 0.06, motion: 0, strokeBoost: 0 };
     case 'holdTenseHands':
-      return { compact: 0.87, fillBoost: 0.1, open: 0 };
+      return { tense: true, fillBoost: 0.1, motion: 0, strokeBoost: reduceMotion ? 0.14 : 0 };
     case 'releaseHands':
-      return { compact: 1, fillBoost: 0, open: 1 };
+      return { tense: false, fillBoost: 0, motion: 1, strokeBoost: 0 };
     case 'noticeHands':
-      return { compact: 1.02, fillBoost: -0.02, open: 1 };
+      return { tense: false, fillBoost: -0.02, motion: 2, strokeBoost: reduceMotion ? 0.1 : 0 };
   }
 }
 
-function RelaxedHand({ fillOpacity }: { fillOpacity: number }) {
+function RelaxedHand({ fillOpacity, strokeWidth }: { fillOpacity: number; strokeWidth: number }) {
   const ink = useMoveInk();
   return (
     <>
       <Path
-        d="M-8 22 C-14 6 -6 -16 10 -24 C22 -30 36 -26 46 -14 C54 -24 68 -22 74 -8 C80 2 78 18 70 30 C60 44 44 50 28 48 C14 46 2 54 -6 46 C-14 38 -10 30 -8 22 Z"
+        d="M-8 20
+           C-14 4 -6 -14 10 -20
+           C22 -24 34 -18 42 -8
+           C50 -16 62 -14 68 -2
+           C74 8 70 22 58 30
+           C46 38 30 40 16 36
+           C4 32 -4 28 -8 20
+           Z"
         fill={ink.wash}
         fillOpacity={fillOpacity}
         stroke={ink.line}
-        strokeWidth={MOVE_STROKE}
+        strokeWidth={strokeWidth}
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <Path
-        d="M8 -8 C16 6 20 20 16 34"
+        d="M6 -10 C12 2 14 14 10 26"
         fill="none"
         stroke={ink.line}
-        strokeWidth={MOVE_STROKE_FINE}
+        strokeWidth={MOVE_STROKE_FINE * 0.85}
         strokeLinecap="round"
         opacity={0.22}
       />
@@ -52,52 +59,83 @@ function RelaxedHand({ fillOpacity }: { fillOpacity: number }) {
   );
 }
 
-function CurledHand({ fillOpacity }: { fillOpacity: number }) {
+function TenseHand({ fillOpacity, strokeWidth }: { fillOpacity: number; strokeWidth: number }) {
   const ink = useMoveInk();
   return (
     <>
       <Path
-        d="M-6 16 C-12 4 -6 -12 8 -16 C20 -20 32 -12 38 -2 C44 -12 56 -10 60 0 C64 8 60 20 50 28 C40 36 26 38 14 34 C4 30 -2 26 -6 16 Z"
+        d="M-6 14
+           C-12 2 -6 -12 8 -16
+           C18 -20 30 -12 36 -2
+           C42 -10 54 -8 58 2
+           C62 12 56 24 44 30
+           C32 36 18 36 8 32
+           C0 28 -4 22 -6 14
+           Z"
         fill={ink.wash}
         fillOpacity={fillOpacity}
         stroke={ink.line}
-        strokeWidth={MOVE_STROKE}
+        strokeWidth={strokeWidth}
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <Path
-        d="M8 -2 C14 8 16 18 12 26"
+        d="M6 -2 C10 6 12 16 8 24"
         fill="none"
         stroke={ink.line}
-        strokeWidth={MOVE_STROKE_FINE}
+        strokeWidth={MOVE_STROKE_FINE * 0.85}
         strokeLinecap="round"
-        opacity={0.26}
+        opacity={0.28}
       />
     </>
   );
 }
 
-export function HandsIllustration({ variant, reduceMotion }: Props) {
+function MotionLines({ level }: { level: number }) {
   const ink = useMoveInk();
-  const p = pose(variant);
-  const loop = useMoveLoop(!reduceMotion && variant === 'holdTenseHands');
-  const fillOpacity = Math.max(
-    0.12,
-    ink.washOpacity + p.fillBoost + (!reduceMotion && variant === 'holdTenseHands' ? loop * 0.05 : 0),
-  );
-  const open = p.open === 1;
+  if (level <= 0) {
+    return null;
+  }
 
   return (
-    <Svg width="100%" height="100%" viewBox={MOVE_VIEWBOX} preserveAspectRatio="xMidYMid meet">
-      <Ellipse cx="140" cy="172" rx="66" ry="10" fill={ink.surface} opacity={ink.groundOpacity * 0.65} />
+    <G opacity={0.18 + level * 0.08}>
+      <Path d="M118 118 C128 112 152 112 162 118" fill="none" stroke={ink.wash} strokeWidth={MOVE_STROKE_FINE} strokeLinecap="round" />
+      {level > 1 ? (
+        <Path d="M118 126 C128 132 152 132 162 126" fill="none" stroke={ink.wash} strokeWidth={MOVE_STROKE_FINE * 0.9} strokeLinecap="round" />
+      ) : null}
+      {level > 1 ? (
+        <Path d="M124 134 C136 128 148 128 156 134" fill="none" stroke={ink.wash} strokeWidth={MOVE_STROKE_FINE * 0.8} strokeLinecap="round" opacity={0.75} />
+      ) : null}
+    </G>
+  );
+}
+
+export function HandsIllustration({ variant, reduceMotion }: Props) {
+  const ink = useMoveInk();
+  const p = pose(variant, reduceMotion);
+  const fillOpacity = Math.max(0.14, ink.washOpacity + p.fillBoost);
+  const strokeWidth = MOVE_STROKE + p.strokeBoost;
+  const Hand = p.tense ? TenseHand : RelaxedHand;
+
+  return (
+    <MoveSvgRoot>
+      <Path
+        d="M80 168 C112 158 168 158 200 168"
+        fill="none"
+        stroke={ink.ground}
+        strokeWidth={MOVE_STROKE_FINE}
+        strokeLinecap="round"
+        opacity={ink.groundOpacity * 0.5}
+      />
       <G opacity={ink.lineOpacity}>
-        <G transform={`translate(90 108) rotate(-12) scale(${p.compact})`}>
-          {open ? <RelaxedHand fillOpacity={fillOpacity} /> : <CurledHand fillOpacity={fillOpacity} />}
+        <G transform="translate(88 108) rotate(-10)">
+          <Hand fillOpacity={fillOpacity} strokeWidth={strokeWidth} />
         </G>
-        <G transform={`translate(190 112) rotate(10) scale(${-p.compact} ${p.compact})`}>
-          {open ? <RelaxedHand fillOpacity={fillOpacity} /> : <CurledHand fillOpacity={fillOpacity} />}
+        <G transform="translate(192 112) rotate(8) scale(-1 1)">
+          <Hand fillOpacity={fillOpacity} strokeWidth={strokeWidth} />
         </G>
       </G>
-    </Svg>
+      <MotionLines level={p.motion} />
+    </MoveSvgRoot>
   );
 }

@@ -19,8 +19,8 @@ const styles = StyleSheet.create({
   frame: {
     width: '78%',
     maxWidth: 300,
-    height: 248,
-    maxHeight: 280,
+    height: 200,
+    maxHeight: 240,
     alignSelf: 'center',
     alignItems: 'center',
     justifyContent: 'center',

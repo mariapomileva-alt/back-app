@@ -1,7 +1,7 @@
-import Svg, { Ellipse, G, Path } from 'react-native-svg';
+import { G, Path } from 'react-native-svg';
 
-import { MOVE_STROKE, MOVE_STROKE_FINE, MOVE_VIEWBOX, useMoveInk } from '@/components/move/moveInk';
-import { useMoveLoop } from '@/components/move/useMoveLoop';
+import { MOVE_STROKE, useMoveInk } from '@/components/move/moveInk';
+import { MoveContactMarks, MoveFloorLine, MoveSvgRoot } from '@/components/move/movePrimitives';
 import type { MoveIllustrationVariant } from '@/features/move/visualMap';
 
 type FeetVariant = Extract<
@@ -14,47 +14,77 @@ type Props = {
   reduceMotion: boolean;
 };
 
-function pose(variant: FeetVariant) {
+function pose(variant: FeetVariant, reduceMotion: boolean) {
   switch (variant) {
     case 'pressFeet':
-      return { drop: 5, shadow: 0.36, shadowRx: 26, shadowRy: 7.5, fillBoost: 0.05, ripple: 0 };
+      return {
+        drop: reduceMotion ? 2 : 4,
+        contact: 0.55,
+        floor: 1.15,
+        fillBoost: 0.06,
+        strokeBoost: 0,
+      };
     case 'holdFeet':
-      return { drop: 5, shadow: 0.42, shadowRx: 28, shadowRy: 8, fillBoost: 0.09, ripple: 0 };
+      return {
+        drop: reduceMotion ? 2.5 : 5,
+        contact: 0.85,
+        floor: 1.35,
+        fillBoost: 0.1,
+        strokeBoost: reduceMotion ? 0.15 : 0,
+      };
     case 'releaseFeet':
-      return { drop: 1, shadow: 0.18, shadowRx: 20, shadowRy: 6, fillBoost: 0, ripple: 0 };
+      return {
+        drop: reduceMotion ? 0 : -2,
+        contact: 0,
+        floor: 1,
+        fillBoost: 0,
+        strokeBoost: 0,
+      };
     case 'noticeFeet':
-      return { drop: 0, shadow: 0.15, shadowRx: 19, shadowRy: 5.5, fillBoost: -0.02, ripple: 1 };
+      return {
+        drop: 0,
+        contact: 0,
+        floor: 1,
+        fillBoost: -0.03,
+        strokeBoost: reduceMotion ? 0.12 : 0,
+      };
   }
 }
 
-/** Top-down footprint: toes toward -Y, heel toward +Y — not upright ovals. */
-function Foot({ flip, fillOpacity }: { flip: boolean; fillOpacity: number }) {
+/** Side-view lower leg + foot planted on the floor line. */
+function LegAndFoot({ flip, fillOpacity, strokeWidth }: { flip: boolean; fillOpacity: number; strokeWidth: number }) {
   const ink = useMoveInk();
-  const scale = flip ? -1 : 1;
+  const sx = flip ? -1 : 1;
   return (
-    <G transform={`scale(${scale} 1)`}>
+    <G transform={`scale(${sx} 1)`}>
       <Path
-        d="M0 28
-           C-7 28-15 23-18 14
-           C-21 5-20-6-16-14
-           C-12-22-4-26 5-26
-           C14-26 21-20 23-11
-           C25-2 22 8 16 16
-           C11 22 5 28 0 28Z"
+        d="M0 0
+           L0 58
+           C0 64 4 68 10 68
+           L34 68
+           C42 68 48 72 48 78
+           L48 82
+           C48 88 42 92 34 92
+           L6 92
+           C-2 92 -8 88 -8 82
+           L-8 78
+           C-8 72 -2 68 6 68
+           L0 68
+           Z"
         fill={ink.wash}
         fillOpacity={fillOpacity}
         stroke={ink.line}
-        strokeWidth={MOVE_STROKE}
+        strokeWidth={strokeWidth}
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <Path
-        d="M-5 4 C-1 10 2 10 6 4"
+        d="M0 18 L0 58"
         fill="none"
         stroke={ink.line}
-        strokeWidth={MOVE_STROKE_FINE}
+        strokeWidth={strokeWidth * 0.65}
         strokeLinecap="round"
-        opacity={0.2}
+        opacity={0.22}
       />
     </G>
   );
@@ -62,64 +92,43 @@ function Foot({ flip, fillOpacity }: { flip: boolean; fillOpacity: number }) {
 
 export function PressFeetIllustration({ variant, reduceMotion }: Props) {
   const ink = useMoveInk();
-  const p = pose(variant);
-  const loop = useMoveLoop(!reduceMotion && (variant === 'holdFeet' || variant === 'noticeFeet'));
-  const fillOpacity = Math.max(
-    0.12,
-    ink.washOpacity + p.fillBoost + (variant === 'holdFeet' && !reduceMotion ? loop * 0.06 : 0),
-  );
-  const rippleT = variant === 'noticeFeet' && !reduceMotion ? loop : variant === 'noticeFeet' ? 0.45 : 0;
-  const rippleOpacity = p.ripple ? 0.1 + rippleT * 0.16 : 0;
-  const rippleRx = 78 + rippleT * 10;
+  const p = pose(variant, reduceMotion);
+  const fillOpacity = Math.max(0.14, ink.washOpacity + p.fillBoost);
+  const strokeWidth = MOVE_STROKE + p.strokeBoost;
+  const leftFootX = 98;
+  const rightFootX = 182;
 
   return (
-    <Svg width="100%" height="100%" viewBox={MOVE_VIEWBOX} preserveAspectRatio="xMidYMid meet">
-      <Ellipse cx="140" cy="174" rx="108" ry="17" fill={ink.surface} opacity={ink.groundOpacity} />
-      <Path
-        d="M42 170 C94 159 186 159 238 170"
-        fill="none"
-        stroke={ink.ground}
-        strokeWidth={MOVE_STROKE_FINE}
-        strokeLinecap="round"
-        opacity={0.58}
-      />
-      {p.ripple ? (
-        <Ellipse
-          cx="140"
-          cy="171"
-          rx={rippleRx}
-          ry={10 + rippleT * 2}
-          fill="none"
-          stroke={ink.wash}
-          strokeWidth={MOVE_STROKE_FINE}
-          opacity={rippleOpacity}
-        />
-      ) : null}
-
+    <MoveSvgRoot>
+      <MoveFloorLine emphasis={p.floor} />
       <G opacity={ink.lineOpacity} transform={`translate(0 ${p.drop})`}>
-        <G transform="translate(96 128) rotate(-10)">
-          <Ellipse
-            cx="0"
-            cy="34"
-            rx={p.shadowRx}
-            ry={p.shadowRy}
-            fill={ink.ground}
-            opacity={p.shadow}
-          />
-          <Foot flip={false} fillOpacity={fillOpacity} />
+        <G transform={`translate(${leftFootX} 80)`}>
+          <LegAndFoot flip={false} fillOpacity={fillOpacity} strokeWidth={strokeWidth} />
         </G>
-        <G transform="translate(184 128) rotate(10)">
-          <Ellipse
-            cx="0"
-            cy="34"
-            rx={p.shadowRx - 1}
-            ry={p.shadowRy - 0.4}
-            fill={ink.ground}
-            opacity={p.shadow * 0.9}
-          />
-          <Foot flip fillOpacity={fillOpacity} />
+        <G transform={`translate(${rightFootX} 80)`}>
+          <LegAndFoot flip fillOpacity={fillOpacity} strokeWidth={strokeWidth} />
         </G>
       </G>
-    </Svg>
+      <MoveContactMarks x={leftFootX} strength={p.contact} />
+      <MoveContactMarks x={rightFootX} strength={p.contact * 0.95} />
+      {variant === 'noticeFeet' ? (
+        <G opacity={0.2 + (reduceMotion ? 0.14 : 0.08)}>
+          <Path
+            d="M118 148 C128 142 152 142 162 148"
+            fill="none"
+            stroke={ink.wash}
+            strokeWidth={MOVE_STROKE * 0.75}
+            strokeLinecap="round"
+          />
+          <Path
+            d="M118 154 C128 160 152 160 162 154"
+            fill="none"
+            stroke={ink.wash}
+            strokeWidth={MOVE_STROKE * 0.65}
+            strokeLinecap="round"
+          />
+        </G>
+      ) : null}
+    </MoveSvgRoot>
   );
 }

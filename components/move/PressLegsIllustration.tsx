@@ -1,7 +1,7 @@
-import Svg, { Ellipse, G, Path } from 'react-native-svg';
+import { G, Path } from 'react-native-svg';
 
-import { MOVE_STROKE, MOVE_STROKE_FINE, MOVE_VIEWBOX, useMoveInk } from '@/components/move/moveInk';
-import { useMoveLoop } from '@/components/move/useMoveLoop';
+import { MOVE_STROKE, MOVE_STROKE_FINE, useMoveInk } from '@/components/move/moveInk';
+import { MoveContactMarks, MoveFloorLine, MoveSvgRoot } from '@/components/move/movePrimitives';
 import type { MoveIllustrationVariant } from '@/features/move/visualMap';
 
 type LegsVariant = Extract<MoveIllustrationVariant, 'pressLegs' | 'holdLegs' | 'releaseLegs' | 'noticeLegs'>;
@@ -11,37 +11,64 @@ type Props = {
   reduceMotion: boolean;
 };
 
-function pose(variant: LegsVariant) {
+function pose(variant: LegsVariant, reduceMotion: boolean) {
   switch (variant) {
     case 'pressLegs':
-      return { drop: 5, shadow: 0.32, fillBoost: 0.05 };
+      return { drop: reduceMotion ? 2 : 4, contact: 0.5, fillBoost: 0.05, motion: 1, strokeBoost: 0 };
     case 'holdLegs':
-      return { drop: 5, shadow: 0.38, fillBoost: 0.09 };
+      return { drop: reduceMotion ? 2.5 : 5, contact: 0.78, fillBoost: 0.09, motion: 1, strokeBoost: reduceMotion ? 0.12 : 0 };
     case 'releaseLegs':
-      return { drop: -2, shadow: 0.14, fillBoost: 0 };
+      return { drop: reduceMotion ? 0 : -2, contact: 0, fillBoost: 0, motion: 0, strokeBoost: 0 };
     case 'noticeLegs':
-      return { drop: 0, shadow: 0.12, fillBoost: -0.02 };
+      return { drop: 0, contact: 0, fillBoost: -0.02, motion: 2, strokeBoost: reduceMotion ? 0.1 : 0 };
   }
 }
 
-function RestingHand({ flip, fillOpacity }: { flip: boolean; fillOpacity: number }) {
+function Thigh({ flip }: { flip: boolean }) {
   const ink = useMoveInk();
+  const sx = flip ? -1 : 1;
   return (
-    <G transform={flip ? 'scale(-1 1)' : undefined}>
+    <G transform={`scale(${sx} 1)`}>
       <Path
-        d="M-10 12 C-14 -2 -4 -20 12 -24 C24 -28 38 -20 46 -8 C54 -14 66 -10 70 2 C74 14 68 26 54 32 C40 38 26 40 12 34 C0 28 -8 22 -10 12 Z"
-        fill={ink.wash}
-        fillOpacity={fillOpacity}
+        d="M0 0
+           C18 8 28 28 30 52
+           C32 72 24 88 12 96"
+        fill="none"
         stroke={ink.line}
         strokeWidth={MOVE_STROKE}
         strokeLinecap="round"
         strokeLinejoin="round"
+        opacity={0.55}
+      />
+    </G>
+  );
+}
+
+function RestingHand({ flip, fillOpacity, strokeWidth }: { flip: boolean; fillOpacity: number; strokeWidth: number }) {
+  const ink = useMoveInk();
+  return (
+    <G transform={flip ? 'scale(-1 1)' : undefined}>
+      <Path
+        d="M-10 10
+           C-14 -4 -4 -18 12 -22
+           C24 -26 38 -18 46 -6
+           C54 -12 66 -8 70 4
+           C74 16 66 28 52 34
+           C38 40 22 40 10 34
+           C0 28 -6 20 -10 10
+           Z"
+        fill={ink.wash}
+        fillOpacity={fillOpacity}
+        stroke={ink.line}
+        strokeWidth={strokeWidth}
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <Path
-        d="M8 -8 C14 4 16 16 12 26"
+        d="M6 -10 C12 2 14 14 10 26"
         fill="none"
         stroke={ink.line}
-        strokeWidth={MOVE_STROKE_FINE}
+        strokeWidth={MOVE_STROKE_FINE * 0.85}
         strokeLinecap="round"
         opacity={0.22}
       />
@@ -51,61 +78,62 @@ function RestingHand({ flip, fillOpacity }: { flip: boolean; fillOpacity: number
 
 export function PressLegsIllustration({ variant, reduceMotion }: Props) {
   const ink = useMoveInk();
-  const p = pose(variant);
-  const loop = useMoveLoop(!reduceMotion && variant === 'holdLegs');
-  const fillOpacity = Math.max(
-    0.12,
-    ink.washOpacity + p.fillBoost + (!reduceMotion && variant === 'holdLegs' ? loop * 0.05 : 0),
-  );
+  const p = pose(variant, reduceMotion);
+  const fillOpacity = Math.max(0.14, ink.washOpacity + p.fillBoost);
+  const strokeWidth = MOVE_STROKE + p.strokeBoost;
+  const leftCenter = 96;
+  const rightCenter = 184;
 
   return (
-    <Svg width="100%" height="100%" viewBox={MOVE_VIEWBOX} preserveAspectRatio="xMidYMid meet">
-      <Ellipse
-        cx="96"
-        cy="152"
-        rx="54"
-        ry="20"
-        fill={ink.surface}
-        stroke={ink.ground}
-        strokeWidth={MOVE_STROKE_FINE}
-        opacity={ink.groundOpacity + 0.12}
-      />
-      <Ellipse
-        cx="184"
-        cy="152"
-        rx="54"
-        ry="20"
-        fill={ink.surface}
-        stroke={ink.ground}
-        strokeWidth={MOVE_STROKE_FINE}
-        opacity={ink.groundOpacity + 0.12}
-      />
-      <Path
-        d="M52 148 C84 138 108 140 132 148"
-        fill="none"
-        stroke={ink.ground}
-        strokeWidth={MOVE_STROKE_FINE}
-        strokeLinecap="round"
-        opacity={0.45}
-      />
-      <Path
-        d="M148 148 C172 138 196 140 228 148"
-        fill="none"
-        stroke={ink.ground}
-        strokeWidth={MOVE_STROKE_FINE}
-        strokeLinecap="round"
-        opacity={0.45}
-      />
-      <G opacity={ink.lineOpacity} transform={`translate(0 ${p.drop})`}>
-        <G transform="translate(88 112) rotate(-12)">
-          <Ellipse cx="8" cy="28" rx="26" ry="7" fill={ink.ground} opacity={p.shadow} />
-          <RestingHand flip={false} fillOpacity={fillOpacity} />
+    <MoveSvgRoot>
+      <MoveFloorLine emphasis={p.contact > 0 ? 1.25 : 1} />
+      <G opacity={ink.lineOpacity * 0.9}>
+        <G transform={`translate(${leftCenter} 78)`}>
+          <Thigh flip={false} />
         </G>
-        <G transform="translate(192 114) rotate(10)">
-          <Ellipse cx="-8" cy="28" rx="24" ry="6.5" fill={ink.ground} opacity={p.shadow * 0.9} />
-          <RestingHand flip fillOpacity={fillOpacity} />
+        <G transform={`translate(${rightCenter} 78)`}>
+          <Thigh flip />
         </G>
       </G>
-    </Svg>
+      <G opacity={ink.lineOpacity} transform={`translate(0 ${p.drop})`}>
+        <G transform={`translate(${leftCenter - 4} 118) rotate(-14)`}>
+          <RestingHand flip={false} fillOpacity={fillOpacity} strokeWidth={strokeWidth} />
+        </G>
+        <G transform={`translate(${rightCenter + 4} 120) rotate(12) scale(-1 1)`}>
+          <RestingHand flip fillOpacity={fillOpacity} strokeWidth={strokeWidth} />
+        </G>
+      </G>
+      <MoveContactMarks x={leftCenter} strength={p.contact} />
+      <MoveContactMarks x={rightCenter} strength={p.contact * 0.92} />
+      {p.motion > 0 ? (
+        <G opacity={0.16 + p.motion * 0.07}>
+          <Path
+            d={`M${leftCenter - 22} 132 C${leftCenter - 8} 126 ${leftCenter + 8} 126 ${leftCenter + 22} 132`}
+            fill="none"
+            stroke={ink.wash}
+            strokeWidth={MOVE_STROKE_FINE}
+            strokeLinecap="round"
+          />
+          {p.motion > 1 ? (
+            <Path
+              d={`M${leftCenter - 18} 140 C${leftCenter - 4} 146 ${leftCenter + 12} 146 ${leftCenter + 26} 140`}
+              fill="none"
+              stroke={ink.wash}
+              strokeWidth={MOVE_STROKE_FINE * 0.9}
+              strokeLinecap="round"
+            />
+          ) : null}
+          {p.motion > 1 ? (
+            <Path
+              d={`M${rightCenter - 26} 140 C${rightCenter - 12} 146 ${rightCenter + 4} 146 ${rightCenter + 18} 140`}
+              fill="none"
+              stroke={ink.wash}
+              strokeWidth={MOVE_STROKE_FINE * 0.9}
+              strokeLinecap="round"
+            />
+          ) : null}
+        </G>
+      ) : null}
+    </MoveSvgRoot>
   );
 }

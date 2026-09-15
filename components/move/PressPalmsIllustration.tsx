@@ -1,6 +1,7 @@
-import Svg, { Ellipse, G, Path } from 'react-native-svg';
+import { G, Path } from 'react-native-svg';
 
-import { MOVE_STROKE, MOVE_STROKE_FINE, MOVE_VIEWBOX, useMoveInk } from '@/components/move/moveInk';
+import { MOVE_STROKE, MOVE_STROKE_FINE, useMoveInk } from '@/components/move/moveInk';
+import { MoveSvgRoot } from '@/components/move/movePrimitives';
 import type { MoveIllustrationVariant } from '@/features/move/visualMap';
 
 type PalmsVariant = Extract<
@@ -13,25 +14,32 @@ type Props = {
   reduceMotion: boolean;
 };
 
-function pose(variant: PalmsVariant) {
+function pose(variant: PalmsVariant, reduceMotion: boolean) {
   switch (variant) {
     case 'pressPalms':
-      return { gap: 6, contact: 0.3, fillBoost: 0.04 };
+      return { inset: reduceMotion ? 3 : 6, contact: 0.45, fillBoost: 0.05, gap: 0 };
     case 'holdPalms':
-      return { gap: 1.5, contact: 0.44, fillBoost: 0.08 };
+      return { inset: reduceMotion ? 2 : 3, contact: 0.62, fillBoost: 0.09, gap: 0 };
     case 'releasePalms':
-      return { gap: 18, contact: 0.08, fillBoost: 0 };
+      return { inset: 14, contact: 0, fillBoost: 0, gap: 1 };
     case 'noticePalms':
-      return { gap: 24, contact: 0, fillBoost: -0.02 };
+      return { inset: 20, contact: 0, fillBoost: -0.02, gap: 1 };
   }
 }
 
-function Hand({ flip, fillOpacity }: { flip: boolean; fillOpacity: number }) {
+/** Side profile — palms meeting, not prayer pose. */
+function PalmSide({ flip, fillOpacity }: { flip: boolean; fillOpacity: number }) {
   const ink = useMoveInk();
   return (
     <G transform={flip ? 'scale(-1 1)' : undefined}>
       <Path
-        d="M-8 28 C-14 12 -8 -8 8 -16 C18 -22 30 -18 38 -8 C46 -18 60 -20 70 -8 C78 -2 80 14 74 28 C68 42 54 52 38 54 C24 56 10 64 -2 58 C-12 52 -10 38 -8 28 Z"
+        d="M-6 36
+           C-14 28 -16 12 -10 0
+           C-4 -10 8 -14 18 -10
+           C26 -6 30 4 28 16
+           C26 28 18 38 8 42
+           C0 44 -4 42 -6 36
+           Z"
         fill={ink.wash}
         fillOpacity={fillOpacity}
         stroke={ink.line}
@@ -40,38 +48,62 @@ function Hand({ flip, fillOpacity }: { flip: boolean; fillOpacity: number }) {
         strokeLinejoin="round"
       />
       <Path
-        d="M14 -4 C24 10 28 26 26 40"
+        d="M4 -6 C10 2 12 12 10 22"
         fill="none"
         stroke={ink.line}
-        strokeWidth={MOVE_STROKE_FINE}
+        strokeWidth={MOVE_STROKE_FINE * 0.85}
         strokeLinecap="round"
-        opacity={0.22}
+        opacity={0.24}
       />
     </G>
   );
 }
 
 export function PressPalmsIllustration({ variant, reduceMotion }: Props) {
-  void reduceMotion;
   const ink = useMoveInk();
-  const p = pose(variant);
-  const fillOpacity = Math.max(0.12, ink.washOpacity + p.fillBoost);
-  const shift = 54 + p.gap / 2;
+  const p = pose(variant, reduceMotion);
+  const fillOpacity = Math.max(0.14, ink.washOpacity + p.fillBoost);
+  const centerY = 108;
 
   return (
-    <Svg width="100%" height="100%" viewBox={MOVE_VIEWBOX} preserveAspectRatio="xMidYMid meet">
-      <Ellipse cx="140" cy="170" rx="72" ry="11" fill={ink.surface} opacity={ink.groundOpacity * 0.7} />
+    <MoveSvgRoot>
+      <Path
+        d="M72 168 C112 158 168 158 208 168"
+        fill="none"
+        stroke={ink.ground}
+        strokeWidth={MOVE_STROKE_FINE}
+        strokeLinecap="round"
+        opacity={ink.groundOpacity * 0.55}
+      />
       <G opacity={ink.lineOpacity}>
         {p.contact > 0 ? (
-          <Ellipse cx="140" cy="108" rx="9" ry="20" fill={ink.wash} opacity={p.contact} />
+          <Path
+            d={`M${140 - p.inset} ${centerY} L${140 + p.inset} ${centerY}`}
+            fill="none"
+            stroke={ink.line}
+            strokeWidth={MOVE_STROKE_FINE + p.contact * 0.6}
+            strokeLinecap="round"
+            opacity={p.contact}
+          />
         ) : null}
-        <G transform={`translate(${140 - shift} 96)`}>
-          <Hand flip={false} fillOpacity={fillOpacity} />
+        <G transform={`translate(${140 - 52 - p.inset} ${centerY - 8})`}>
+          <PalmSide flip={false} fillOpacity={fillOpacity} />
         </G>
-        <G transform={`translate(${140 + shift} 100)`}>
-          <Hand flip fillOpacity={fillOpacity} />
+        <G transform={`translate(${140 + 52 + p.inset} ${centerY - 4})`}>
+          <PalmSide flip fillOpacity={fillOpacity} />
         </G>
       </G>
-    </Svg>
+      {p.gap ? (
+        <G opacity={0.22}>
+          <Path
+            d="M128 124 C136 118 144 118 152 124"
+            fill="none"
+            stroke={ink.wash}
+            strokeWidth={MOVE_STROKE_FINE * 0.9}
+            strokeLinecap="round"
+          />
+        </G>
+      ) : null}
+    </MoveSvgRoot>
   );
 }

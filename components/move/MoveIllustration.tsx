@@ -80,7 +80,7 @@ function MoveArtwork({ variant, reduceMotion }: { variant: MoveIllustrationVaria
   }
 }
 
-export function MoveIllustration({ activityId, stepId, phase, reduceMotion }: Props) {
+export function MoveExerciseIllustration({ activityId, stepId, phase, reduceMotion }: Props) {
   void phase;
   const incomingKey = visualKey(activityId, stepId);
   const incomingSpec = resolveMoveVisual(stepId);
@@ -226,6 +226,9 @@ function FadeStage({ children, style }: { children: ReactNode; style: object }) 
     </Animated.View>
   );
 }
+
+/** @deprecated Use MoveExerciseIllustration */
+export const MoveIllustration = MoveExerciseIllustration;
 
 const styles = StyleSheet.create({
   stage: {
