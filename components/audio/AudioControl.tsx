@@ -2,6 +2,7 @@ import { StyleSheet, View } from 'react-native';
 import Svg, { Circle, Path } from 'react-native-svg';
 
 import { AccessiblePressable } from '@/components/accessibility/AccessiblePressable';
+import { SfxMuteButton } from '@/components/audio/SfxMuteButton';
 import { AppText } from '@/components/typography/AppText';
 import { useTheme } from '@/hooks/useTheme';
 import { t } from '@/locales/i18n';
@@ -15,6 +16,8 @@ type Props = {
   onReplay?: () => void;
   onPrevious?: () => void;
   onNext?: () => void;
+  activitySfxMuted?: boolean;
+  onActivitySfxMute?: () => void;
   elapsed?: string;
   layout?: 'row' | 'stack';
 };
@@ -27,6 +30,8 @@ export function AudioControl({
   onReplay,
   onPrevious,
   onNext,
+  activitySfxMuted,
+  onActivitySfxMute,
   elapsed,
   layout = 'row',
 }: Props) {
@@ -116,6 +121,11 @@ export function AudioControl({
     </AccessiblePressable>
   ) : null;
 
+  const activitySfx =
+    onActivitySfxMute && layout !== 'stack' ? (
+      <SfxMuteButton muted={activitySfxMuted ?? false} onPress={onActivitySfxMute} />
+    ) : null;
+
   const mute = onMute ? (
     <AccessiblePressable
       accessibilityRole="button"
@@ -162,6 +172,7 @@ export function AudioControl({
       {replay}
       {playPause}
       {nextStep}
+      {activitySfx}
       {mute}
     </View>
   );

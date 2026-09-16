@@ -8,6 +8,7 @@ export const storageKeys = {
   lastBreathPattern: 'back.lastBreathPattern',
   lastDistractActivity: 'back.lastDistractActivity',
   distractSfxMuted: 'back.distractSfxMuted',
+  groundSfxMuted: 'back.groundSfxMuted',
   firstLaunchSeen: 'back.firstLaunchSeen',
   supportContact: 'back.supportContact',
   emergencyCountry: 'back.emergencyCountry',

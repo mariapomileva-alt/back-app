@@ -19,6 +19,7 @@ import {
   GROUND_INSTRUCTION_FADE_OUT_MS,
 } from '@/features/ground/transitions';
 import { useGroundSequence } from '@/features/ground/useGroundSequence';
+import { useGroundSfx } from '@/hooks/useGroundSfx';
 import { useGuidedAudio } from '@/hooks/useGuidedAudio';
 import { useReduceMotion } from '@/hooks/useReduceMotion';
 import { t } from '@/locales/i18n';
@@ -50,6 +51,7 @@ export default function GroundScreen() {
     stepEnter,
     finishForwardTransition,
   } = useGroundSequence(paused, sequenceId);
+  const groundSfx = useGroundSfx({ masterMuted: soundMuted || audio.muted });
   const instruction = t(instructionKey);
   const skipSequenceAudioReset = useRef(true);
   const [instructionOpacity] = useState(() => new Animated.Value(1));
@@ -107,6 +109,13 @@ export default function GroundScreen() {
       instructionOpacity.setValue(1);
     }
   }, [instructionKey, instructionOpacity, reduceMotion, stepEnter, useNativeDriver]);
+
+  useEffect(() => {
+    if (stepEnter !== 'forward') {
+      return;
+    }
+    groundSfx.playStep();
+  }, [groundSfx, instructionKey, stepEnter]);
 
   useEffect(() => {
     if (skipSequenceAudioReset.current) {
@@ -189,10 +198,13 @@ export default function GroundScreen() {
               onPlayPause={onPlayPause}
               onPrevious={prev}
               onNext={next}
+              activitySfxMuted={groundSfx.muted}
+              onActivitySfxMute={groundSfx.toggleMute}
               onMute={
                 narrationReady
                   ? () => {
                       const nextMuted = !audio.muted;
+                      setSoundMuted(nextMuted);
                       void saveSoundMuted(nextMuted);
                       audio.toggleMute();
                     }

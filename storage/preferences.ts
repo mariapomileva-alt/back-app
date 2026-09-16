@@ -186,6 +186,18 @@ export async function saveDistractSfxMuted(muted: boolean): Promise<void> {
   }
 }
 
+export async function loadGroundSfxMuted(): Promise<boolean> {
+  return readBoolean(storageKeys.groundSfxMuted, false);
+}
+
+export async function saveGroundSfxMuted(muted: boolean): Promise<void> {
+  try {
+    await AsyncStorage.setItem(storageKeys.groundSfxMuted, String(muted));
+  } catch {
+    // Keep the in-memory preference if local storage is unavailable.
+  }
+}
+
 export type RememberedChoices = {
   lastBreathPattern: string | null;
   lastDistractActivity: string | null;
