@@ -1,10 +1,10 @@
 [
   {
-    "id": "en-curious-001",
+    "id": "nl-curious-001",
     "type": "curious",
     "fragments": [
-      "Some butterflies",
-      "taste with their feet."
+      "Enkele vlinders",
+      "proeven met hun voeten."
     ],
     "topics": [
       "nature"
@@ -12,11 +12,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-002",
+    "id": "nl-curious-002",
     "type": "curious",
     "fragments": [
-      "A cloud can drift for days",
-      "without landing."
+      "Een wolk kan dagenlang ronddrijven",
+      "zonder te landen."
     ],
     "topics": [
       "sky"
@@ -24,11 +24,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-003",
+    "id": "nl-curious-003",
     "type": "curious",
     "fragments": [
-      "Honey stays itself",
-      "for a very long time."
+      "Honing blijft zichzelf",
+      "voor een hele lange tijd."
     ],
     "topics": [
       "food"
@@ -36,11 +36,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-004",
+    "id": "nl-curious-004",
     "type": "curious",
     "fragments": [
-      "Bananas are berries.",
-      "Strawberries are not."
+      "Bananen zijn bessen.",
+      "Aardbeien zijn dat niet."
     ],
     "topics": [
       "plants"
@@ -48,15 +48,15 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Now find something green around you."
+      "text": "Zoek nu iets groens om je heen."
     }
   },
   {
-    "id": "en-curious-005",
+    "id": "nl-curious-005",
     "type": "curious",
     "fragments": [
-      "The moon is slowly moving",
-      "farther from Earth."
+      "De maan beweegt langzaam",
+      "verder van de aarde."
     ],
     "topics": [
       "sky"
@@ -64,11 +64,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-006",
+    "id": "nl-curious-006",
     "type": "curious",
     "fragments": [
-      "There are more trees on Earth",
-      "than stars you can see on a clear night."
+      "Er zijn meer bomen op aarde",
+      "dan sterren die je op een heldere nacht kunt zien."
     ],
     "topics": [
       "plants"
@@ -76,11 +76,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-007",
+    "id": "nl-curious-007",
     "type": "curious",
     "fragments": [
-      "A snail can rest",
-      "for a long season and then continue."
+      "Een slak kan rusten",
+      "voor een lang seizoen en dan doorgaan."
     ],
     "topics": [
       "nature"
@@ -88,11 +88,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-008",
+    "id": "nl-curious-008",
     "type": "curious",
     "fragments": [
-      "Otters sometimes float",
-      "side by side while they sleep."
+      "Otters drijven soms",
+      "naast elkaar terwijl ze slapen."
     ],
     "topics": [
       "water"
@@ -100,11 +100,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-009",
+    "id": "nl-curious-009",
     "type": "curious",
     "fragments": [
-      "A day on Venus",
-      "lasts longer than its year."
+      "Een dag op Venus",
+      "duurt langer dan het jaar."
     ],
     "topics": [
       "sky"
@@ -112,11 +112,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-010",
+    "id": "nl-curious-010",
     "type": "curious",
     "fragments": [
-      "Moss can grow on stone,",
-      "wood, and quiet roofs."
+      "Mos kan op steen groeien,",
+      "hout en stille daken."
     ],
     "topics": [
       "plants"
@@ -124,11 +124,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-011",
+    "id": "nl-curious-011",
     "type": "curious",
     "fragments": [
-      "Raindrops are not teardrop shaped.",
-      "They are round as they fall."
+      "Regendruppels zijn niet traanvormig.",
+      "Ze zijn rond als ze vallen."
     ],
     "topics": [
       "weather"
@@ -136,11 +136,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-012",
+    "id": "nl-curious-012",
     "type": "curious",
     "fragments": [
-      "A paperclip can be unfolded",
-      "into a single thin line."
+      "Een paperclip kan worden uitgevouwen",
+      "in één dunne lijn."
     ],
     "topics": [
       "objects"
@@ -148,11 +148,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-013",
+    "id": "nl-curious-013",
     "type": "curious",
     "fragments": [
-      "Sunflowers turn toward light",
-      "when they are young."
+      "Zonnebloemen draaien naar licht",
+      "als ze jong zijn."
     ],
     "topics": [
       "plants"
@@ -160,11 +160,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-014",
+    "id": "nl-curious-014",
     "type": "curious",
     "fragments": [
-      "The quietest room on Earth",
-      "is still not fully silent."
+      "De stilste kamer op aarde",
+      "is nog steeds niet helemaal stil."
     ],
     "topics": [
       "quiet"
@@ -172,11 +172,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-015",
+    "id": "nl-curious-015",
     "type": "curious",
     "fragments": [
-      "Sea glass takes years",
-      "to become smooth."
+      "Zeeglas duurt jaren",
+      "glad worden."
     ],
     "topics": [
       "water"
@@ -184,15 +184,15 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Now find a reflection, even a small one."
+      "text": "Zoek nu een reflectie, zelfs een kleine."
     }
   },
   {
-    "id": "en-curious-016",
+    "id": "nl-curious-016",
     "type": "curious",
     "fragments": [
-      "A teaspoon of honey",
-      "is the work of many bees."
+      "Een theelepel honing",
+      "is het werk van veel bijen."
     ],
     "topics": [
       "nature"
@@ -200,11 +200,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-017",
+    "id": "nl-curious-017",
     "type": "curious",
     "fragments": [
-      "Snow is not one color.",
-      "It holds many tiny shadows."
+      "Sneeuw is niet één kleur.",
+      "Het bevat veel kleine schaduwen."
     ],
     "topics": [
       "weather"
@@ -212,11 +212,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-018",
+    "id": "nl-curious-018",
     "type": "curious",
     "fragments": [
-      "Some bamboo can grow",
-      "as fast as you can watch it."
+      "Sommige bamboe kan groeien",
+      "zo snel als je het kunt bekijken."
     ],
     "topics": [
       "plants"
@@ -224,11 +224,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-019",
+    "id": "nl-curious-019",
     "type": "curious",
     "fragments": [
-      "A compass needle is a small magnet",
-      "that listens to Earth."
+      "Een kompasnaald is een kleine magneet",
+      "die naar de aarde luistert."
     ],
     "topics": [
       "objects"
@@ -236,11 +236,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-020",
+    "id": "nl-curious-020",
     "type": "curious",
     "fragments": [
-      "Crows remember faces",
-      "they have met before."
+      "Kraaien onthouden gezichten",
+      "ze hebben elkaar eerder ontmoet."
     ],
     "topics": [
       "nature"
@@ -248,20 +248,20 @@
     "difficulty": 1,
     "followUp": {
       "type": "choice",
-      "text": "What color is closest to your hands?",
+      "text": "Welke kleur komt het dichtst bij jouw handen?",
       "options": [
         "warm",
-        "cool",
-        "something else"
+        "koel",
+        "iets anders"
       ]
     }
   },
   {
-    "id": "en-curious-021",
+    "id": "nl-curious-021",
     "type": "curious",
     "fragments": [
-      "The Sahara has areas of pale stone",
-      "as well as sand."
+      "De Sahara heeft gebieden met bleke steen",
+      "evenals zand."
     ],
     "topics": [
       "earth"
@@ -269,11 +269,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-022",
+    "id": "nl-curious-022",
     "type": "curious",
     "fragments": [
-      "A pebble in a river",
-      "is slowly being rounded."
+      "Een kiezelsteen in een rivier",
+      "wordt langzaam afgerond."
     ],
     "topics": [
       "water"
@@ -281,11 +281,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-023",
+    "id": "nl-curious-023",
     "type": "curious",
     "fragments": [
-      "Candle flames point up",
-      "because warm air rises."
+      "Kaarsvlammen wijzen naar boven",
+      "omdat warme lucht opstijgt."
     ],
     "topics": [
       "light"
@@ -293,11 +293,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-024",
+    "id": "nl-curious-024",
     "type": "curious",
     "fragments": [
-      "Ferns are older",
-      "than most flowering plants."
+      "Varens zijn ouder",
+      "dan de meeste bloeiende planten."
     ],
     "topics": [
       "plants"
@@ -305,11 +305,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-025",
+    "id": "nl-curious-025",
     "type": "curious",
     "fragments": [
-      "The sound of a seashell",
-      "is mostly the room around you."
+      "Het geluid van een schelp",
+      "is vooral de kamer om je heen."
     ],
     "topics": [
       "quiet"
@@ -317,11 +317,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-026",
+    "id": "nl-curious-026",
     "type": "curious",
     "fragments": [
-      "Owls can turn their heads",
-      "much farther than people can."
+      "Uilen kunnen hun hoofd draaien",
+      "veel verder dan mensen kunnen."
     ],
     "topics": [
       "nature"
@@ -329,15 +329,15 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Find something living, or the color of something living."
+      "text": "Zoek iets levends, of de kleur van iets levends."
     }
   },
   {
-    "id": "en-curious-027",
+    "id": "nl-curious-027",
     "type": "curious",
     "fragments": [
-      "Ink on paper",
-      "is a thin layer of dried color."
+      "Inkt op papier",
+      "is een dunne laag gedroogde kleur."
     ],
     "topics": [
       "paper"
@@ -345,11 +345,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-028",
+    "id": "nl-curious-028",
     "type": "curious",
     "fragments": [
-      "Morning light is often cooler",
-      "in color than evening light."
+      "Ochtendlicht is vaak koeler",
+      "in kleur dan avondlicht."
     ],
     "topics": [
       "light"
@@ -357,11 +357,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-029",
+    "id": "nl-curious-029",
     "type": "curious",
     "fragments": [
-      "A walnut looks a little",
-      "like a tiny brain, by chance."
+      "Een walnoot ziet er een beetje uit",
+      "als een klein brein, toevallig."
     ],
     "topics": [
       "plants"
@@ -369,11 +369,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-030",
+    "id": "nl-curious-030",
     "type": "curious",
     "fragments": [
-      "Some lichens live",
-      "on the same stone for decades."
+      "Sommige korstmossen leven",
+      "tientallen jaren op dezelfde steen."
     ],
     "topics": [
       "plants"
@@ -381,11 +381,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-031",
+    "id": "nl-curious-031",
     "type": "curious",
     "fragments": [
-      "Steam from a kettle",
-      "is water becoming air for a moment."
+      "Stoom uit een ketel",
+      "is water voor een moment lucht geworden."
     ],
     "topics": [
       "water"
@@ -393,11 +393,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-032",
+    "id": "nl-curious-032",
     "type": "curious",
     "fragments": [
-      "A library card catalogs more than books.",
-      "It catalogs returns."
+      "Een bibliotheekpas catalogiseert meer dan alleen boeken.",
+      "Het catalogiseert retourzendingen."
     ],
     "topics": [
       "paper"
@@ -405,11 +405,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-033",
+    "id": "nl-curious-033",
     "type": "curious",
     "fragments": [
-      "Moths drink",
-      "with a long coiled tongue."
+      "Motten drinken",
+      "met een lange opgerolde tong."
     ],
     "topics": [
       "nature"
@@ -417,11 +417,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-034",
+    "id": "nl-curious-034",
     "type": "curious",
     "fragments": [
-      "The North Star",
-      "barely appears to move."
+      "De Noordster",
+      "lijkt nauwelijks te bewegen."
     ],
     "topics": [
       "sky"
@@ -429,11 +429,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-035",
+    "id": "nl-curious-035",
     "type": "curious",
     "fragments": [
-      "Clay remembers the shape",
-      "of the hands that held it."
+      "Clay herinnert zich de vorm",
+      "van de handen die hem vasthielden."
     ],
     "topics": [
       "earth"
@@ -441,11 +441,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-036",
+    "id": "nl-curious-036",
     "type": "curious",
     "fragments": [
-      "A shadow is only the place",
-      "light did not reach."
+      "Een schaduw is slechts de plaats",
+      "het licht bereikte het niet."
     ],
     "topics": [
       "light"
@@ -453,11 +453,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-037",
+    "id": "nl-curious-037",
     "type": "curious",
     "fragments": [
-      "Pinecones open more",
-      "when the air is dry."
+      "Dennenappels gaan meer open",
+      "als de lucht droog is."
     ],
     "topics": [
       "plants"
@@ -465,15 +465,15 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Now find something green around you."
+      "text": "Zoek nu iets groens om je heen."
     }
   },
   {
-    "id": "en-curious-038",
+    "id": "nl-curious-038",
     "type": "curious",
     "fragments": [
-      "Glass is made mostly",
-      "from melted sand."
+      "Er wordt vooral glas gemaakt",
+      "uit gesmolten zand."
     ],
     "topics": [
       "objects"
@@ -481,11 +481,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-039",
+    "id": "nl-curious-039",
     "type": "curious",
     "fragments": [
-      "A cat’s whiskers",
-      "are about as wide as its body."
+      "De snorharen van een kat",
+      "zijn ongeveer net zo breed als zijn lichaam."
     ],
     "topics": [
       "nature"
@@ -493,11 +493,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-040",
+    "id": "nl-curious-040",
     "type": "curious",
     "fragments": [
-      "Fog is a cloud",
-      "that decided to stay low."
+      "Mist is een wolk",
+      "die besloot laag te blijven."
     ],
     "topics": [
       "weather"
@@ -505,11 +505,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-041",
+    "id": "nl-curious-041",
     "type": "curious",
     "fragments": [
-      "Paper was once mostly rags,",
-      "then mostly wood."
+      "Papier bestond ooit voornamelijk uit vodden,",
+      "dan vooral hout."
     ],
     "topics": [
       "paper"
@@ -517,11 +517,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-042",
+    "id": "nl-curious-042",
     "type": "curious",
     "fragments": [
-      "Tide pools keep a little ocean",
-      "for a few hours."
+      "Getijdenpoelen houden een kleine oceaan vast",
+      "voor een paar uur."
     ],
     "topics": [
       "water"
@@ -529,11 +529,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-043",
+    "id": "nl-curious-043",
     "type": "curious",
     "fragments": [
-      "A seed already contains",
-      "the idea of a leaf."
+      "Een zaadje bevat al",
+      "het idee van een blad."
     ],
     "topics": [
       "plants"
@@ -541,11 +541,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-044",
+    "id": "nl-curious-044",
     "type": "curious",
     "fragments": [
-      "Echoes are sound",
-      "arriving a second time."
+      "Echo's zijn geluid",
+      "een tweede keer arriveren."
     ],
     "topics": [
       "quiet"
@@ -553,11 +553,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-045",
+    "id": "nl-curious-045",
     "type": "curious",
     "fragments": [
-      "The color of deep ice",
-      "can look almost blue."
+      "De kleur van diep ijs",
+      "kan er bijna blauw uitzien."
     ],
     "topics": [
       "weather"
@@ -565,11 +565,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-046",
+    "id": "nl-curious-046",
     "type": "curious",
     "fragments": [
-      "Bees see patterns on flowers",
-      "that people miss."
+      "Bijen zien patronen op bloemen",
+      "die mensen missen."
     ],
     "topics": [
       "nature"
@@ -577,11 +577,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-047",
+    "id": "nl-curious-047",
     "type": "curious",
     "fragments": [
-      "A brick is just clay",
-      "that learned to be still."
+      "Een baksteen is gewoon klei",
+      "die leerde stil te zijn."
     ],
     "topics": [
       "earth"
@@ -589,11 +589,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-048",
+    "id": "nl-curious-048",
     "type": "curious",
     "fragments": [
-      "Wind has no color.",
-      "We see what it moves."
+      "Wind heeft geen kleur.",
+      "Wij zien wat het beweegt."
     ],
     "topics": [
       "weather"
@@ -601,15 +601,15 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Notice the air on your skin for a moment."
+      "text": "Let even op de lucht op je huid."
     }
   },
   {
-    "id": "en-curious-049",
+    "id": "nl-curious-049",
     "type": "curious",
     "fragments": [
-      "Some mushrooms glow faintly",
-      "in dark woods."
+      "Sommige paddenstoelen gloeien zwakjes",
+      "in donker bos."
     ],
     "topics": [
       "plants"
@@ -617,11 +617,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-050",
+    "id": "nl-curious-050",
     "type": "curious",
     "fragments": [
-      "A postage stamp",
-      "is a very small printed field."
+      "Een postzegel",
+      "is een heel klein gedrukt veld."
     ],
     "topics": [
       "paper"
@@ -629,11 +629,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-051",
+    "id": "nl-curious-051",
     "type": "curious",
     "fragments": [
-      "The Amazon river",
-      "can be wider than some cities."
+      "De Amazone-rivier",
+      "kan breder zijn dan sommige steden."
     ],
     "topics": [
       "water"
@@ -641,11 +641,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-052",
+    "id": "nl-curious-052",
     "type": "curious",
     "fragments": [
-      "Dandelion clocks are seeds",
-      "waiting for a breeze."
+      "Paardebloemklokken zijn zaden",
+      "wachtend op een briesje."
     ],
     "topics": [
       "plants"
@@ -653,11 +653,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-053",
+    "id": "nl-curious-053",
     "type": "curious",
     "fragments": [
-      "A mirror is glass",
-      "with a quiet metal behind it."
+      "Een spiegel is glas",
+      "met een stil metaal erachter."
     ],
     "topics": [
       "objects"
@@ -665,11 +665,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-054",
+    "id": "nl-curious-054",
     "type": "curious",
     "fragments": [
-      "Sparrows bathe in dust",
-      "as well as in water."
+      "Mussen baden in stof",
+      "evenals in water."
     ],
     "topics": [
       "nature"
@@ -677,10 +677,10 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-055",
+    "id": "nl-curious-055",
     "type": "curious",
     "fragments": [
-      "The smell of rain has a name:",
+      "De geur van regen heeft een naam:",
       "petrichor."
     ],
     "topics": [
@@ -689,11 +689,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-056",
+    "id": "nl-curious-056",
     "type": "curious",
     "fragments": [
-      "Coral is built by tiny animals",
-      "over a long time."
+      "Koraal wordt gebouwd door kleine dieren",
+      "over een lange tijd."
     ],
     "topics": [
       "water"
@@ -701,11 +701,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-057",
+    "id": "nl-curious-057",
     "type": "curious",
     "fragments": [
-      "A pencil writes",
-      "with a thin trail of carbon."
+      "Een potlood schrijft",
+      "met een dun spoor van koolstof."
     ],
     "topics": [
       "paper"
@@ -713,11 +713,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-058",
+    "id": "nl-curious-058",
     "type": "curious",
     "fragments": [
-      "Dew is water",
-      "that gathered from cool air."
+      "Dauw is water",
+      "dat uit koele lucht is verzameld."
     ],
     "topics": [
       "weather"
@@ -725,11 +725,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-059",
+    "id": "nl-curious-059",
     "type": "curious",
     "fragments": [
-      "An oak can live",
-      "longer than a house."
+      "Een eik kan leven",
+      "langer dan een huis."
     ],
     "topics": [
       "plants"
@@ -737,15 +737,15 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Now find something green around you."
+      "text": "Zoek nu iets groens om je heen."
     }
   },
   {
-    "id": "en-curious-060",
+    "id": "nl-curious-060",
     "type": "curious",
     "fragments": [
-      "The word alphabet",
-      "comes from two first letters."
+      "Het woord alfabet",
+      "komt uit twee eerste letters."
     ],
     "topics": [
       "language"
@@ -753,11 +753,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-061",
+    "id": "nl-curious-061",
     "type": "curious",
     "fragments": [
-      "Lava cools into stone",
-      "with different textures."
+      "Lava koelt af tot steen",
+      "met verschillende texturen."
     ],
     "topics": [
       "earth"
@@ -765,11 +765,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-062",
+    "id": "nl-curious-062",
     "type": "curious",
     "fragments": [
-      "A kettle whistle is steam",
-      "squeezing through a small hole."
+      "Een ketelfluit is stoom",
+      "door een klein gaatje knijpen."
     ],
     "topics": [
       "objects"
@@ -777,11 +777,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-063",
+    "id": "nl-curious-063",
     "type": "curious",
     "fragments": [
-      "Fireflies make light",
-      "without much heat."
+      "Vuurvliegjes maken licht",
+      "zonder veel warmte."
     ],
     "topics": [
       "nature"
@@ -789,11 +789,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-064",
+    "id": "nl-curious-064",
     "type": "curious",
     "fragments": [
-      "The Gobi has winters",
-      "of quiet snow."
+      "De Gobi heeft winters",
+      "van stille sneeuw."
     ],
     "topics": [
       "earth"
@@ -801,11 +801,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-065",
+    "id": "nl-curious-065",
     "type": "curious",
     "fragments": [
-      "A bookmark is a pause",
-      "you can hold."
+      "Een bladwijzer is een pauze",
+      "je kunt vasthouden."
     ],
     "topics": [
       "paper"
@@ -813,11 +813,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-066",
+    "id": "nl-curious-066",
     "type": "curious",
     "fragments": [
-      "Ripples travel,",
-      "but the water mostly stays."
+      "Rimpelingen reizen,",
+      "maar het water blijft meestal staan."
     ],
     "topics": [
       "water"
@@ -825,11 +825,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-067",
+    "id": "nl-curious-067",
     "type": "curious",
     "fragments": [
-      "Linen starts as",
-      "a tall blue-flowered plant."
+      "Linnen begint als",
+      "een hoge blauwbloemige plant."
     ],
     "topics": [
       "plants"
@@ -837,11 +837,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-068",
+    "id": "nl-curious-068",
     "type": "curious",
     "fragments": [
-      "The letter Q",
-      "almost always brings U along."
+      "De letter Q",
+      "brengt U bijna altijd mee."
     ],
     "topics": [
       "language"
@@ -849,11 +849,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-069",
+    "id": "nl-curious-069",
     "type": "curious",
     "fragments": [
-      "A terracotta pot",
-      "is earth shaped and fired."
+      "Een terracotta pot",
+      "is aardevormig en gebakken."
     ],
     "topics": [
       "earth"
@@ -861,11 +861,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-070",
+    "id": "nl-curious-070",
     "type": "curious",
     "fragments": [
-      "Clouds look slow",
-      "because they are very large."
+      "Wolken zien er langzaam uit",
+      "omdat ze erg groot zijn."
     ],
     "topics": [
       "sky"
@@ -873,15 +873,15 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Look up, even if only as far as the ceiling."
+      "text": "Kijk omhoog, al is het maar tot aan het plafond."
     }
   },
   {
-    "id": "en-curious-071",
+    "id": "nl-curious-071",
     "type": "curious",
     "fragments": [
-      "A moth’s wings can look like bark",
-      "in daylight."
+      "De vleugels van een mot kunnen op schors lijken",
+      "bij daglicht."
     ],
     "topics": [
       "nature"
@@ -889,11 +889,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-072",
+    "id": "nl-curious-072",
     "type": "curious",
     "fragments": [
-      "Salt crystals are tiny cubes",
-      "if you look closely."
+      "Zoutkristallen zijn kleine blokjes",
+      "als je goed kijkt."
     ],
     "topics": [
       "objects"
@@ -901,11 +901,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-073",
+    "id": "nl-curious-073",
     "type": "curious",
     "fragments": [
-      "The word serendipity",
-      "began as a story title."
+      "Het woord serendipiteit",
+      "begon als een verhaaltitel."
     ],
     "topics": [
       "language"
@@ -913,11 +913,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-074",
+    "id": "nl-curious-074",
     "type": "curious",
     "fragments": [
-      "A windowsill is a small stage",
-      "for light."
+      "Een vensterbank is een klein podium",
+      "voor licht."
     ],
     "topics": [
       "room"
@@ -925,11 +925,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-075",
+    "id": "nl-curious-075",
     "type": "curious",
     "fragments": [
-      "River stones knock together",
-      "until they agree."
+      "Rivierstenen kloppen tegen elkaar",
+      "totdat ze het eens zijn."
     ],
     "topics": [
       "water"
@@ -937,11 +937,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-076",
+    "id": "nl-curious-076",
     "type": "curious",
     "fragments": [
-      "Thyme keeps its smell",
-      "even when dried."
+      "Tijm behoudt zijn geur",
+      "zelfs als het gedroogd is."
     ],
     "topics": [
       "plants"
@@ -949,11 +949,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-077",
+    "id": "nl-curious-077",
     "type": "curious",
     "fragments": [
-      "The night sky is a map",
-      "that slowly turns."
+      "De nachtelijke hemel is een kaart",
+      "dat draait langzaam."
     ],
     "topics": [
       "sky"
@@ -961,11 +961,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-078",
+    "id": "nl-curious-078",
     "type": "curious",
     "fragments": [
-      "An envelope is a folded pause",
-      "between two rooms."
+      "Een envelop is een gevouwen pauze",
+      "tussen twee kamers."
     ],
     "topics": [
       "paper"
@@ -973,11 +973,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-079",
+    "id": "nl-curious-079",
     "type": "curious",
     "fragments": [
-      "Foam on a wave",
-      "is mostly air and water mixed."
+      "Schuim op een golf",
+      "bestaat voornamelijk uit lucht en water gemengd."
     ],
     "topics": [
       "water"
@@ -985,11 +985,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-080",
+    "id": "nl-curious-080",
     "type": "curious",
     "fragments": [
-      "Some apples stay crisp",
-      "if kept cool and still."
+      "Sommige appels blijven knapperig",
+      "als het koel en stil wordt bewaard."
     ],
     "topics": [
       "food"
@@ -997,11 +997,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-081",
+    "id": "nl-curious-081",
     "type": "curious",
     "fragments": [
-      "A hinge lets a door",
-      "change its mind gently."
+      "Een scharnier laat een deur door",
+      "zachtjes van gedachten veranderen."
     ],
     "topics": [
       "objects"
@@ -1009,15 +1009,15 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Rest your eyes on one object without naming it."
+      "text": "Laat uw ogen rusten op één object zonder het een naam te geven."
     }
   },
   {
-    "id": "en-curious-082",
+    "id": "nl-curious-082",
     "type": "curious",
     "fragments": [
-      "Lichen is often two lives",
-      "sharing one shape."
+      "Korstmos is vaak twee levens",
+      "één vorm delen."
     ],
     "topics": [
       "plants"
@@ -1025,11 +1025,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-083",
+    "id": "nl-curious-083",
     "type": "curious",
     "fragments": [
-      "The word lullaby",
-      "is older than most houses."
+      "Het woord slaapliedje",
+      "is ouder dan de meeste huizen."
     ],
     "topics": [
       "language"
@@ -1037,11 +1037,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-084",
+    "id": "nl-curious-084",
     "type": "curious",
     "fragments": [
-      "Warm bread smells stronger",
-      "than cool bread."
+      "Warm brood ruikt sterker",
+      "dan koel brood."
     ],
     "topics": [
       "food"
@@ -1049,11 +1049,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-085",
+    "id": "nl-curious-085",
     "type": "curious",
     "fragments": [
       "Petrichor",
-      "is the name for the smell of rain on dry ground."
+      "is de naam voor de geur van regen op droge grond."
     ],
     "topics": [
       "weather"
@@ -1061,11 +1061,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-086",
+    "id": "nl-curious-086",
     "type": "curious",
     "fragments": [
-      "Otters sometimes hold paws while they sleep",
-      "so they do not drift apart."
+      "Otters houden soms hun poten vast terwijl ze slapen",
+      "zodat ze niet uit elkaar drijven."
     ],
     "topics": [
       "nature"
@@ -1073,11 +1073,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-087",
+    "id": "nl-curious-087",
     "type": "curious",
     "fragments": [
-      "A jiffy is a real unit of time.",
-      "Very small."
+      "Een handomdraai is een echte tijdseenheid.",
+      "Heel klein."
     ],
     "topics": [
       "time"
@@ -1085,11 +1085,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-088",
+    "id": "nl-curious-088",
     "type": "curious",
     "fragments": [
-      "Peanuts are not nuts.",
-      "They grow underground."
+      "Pinda's zijn geen noten.",
+      "Ze groeien ondergronds."
     ],
     "topics": [
       "plants"
@@ -1097,11 +1097,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-089",
+    "id": "nl-curious-089",
     "type": "curious",
     "fragments": [
-      "The North Star barely moves.",
-      "The rest of the sky turns around it."
+      "De North Star beweegt nauwelijks.",
+      "De rest van de hemel draait er omheen."
     ],
     "topics": [
       "sky"
@@ -1109,11 +1109,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-090",
+    "id": "nl-curious-090",
     "type": "curious",
     "fragments": [
-      "Ice floats",
-      "because it is a little less dense than the water it came from."
+      "IJs drijft",
+      "omdat het iets minder dicht is dan het water waar het vandaan kwam."
     ],
     "topics": [
       "water"
@@ -1121,11 +1121,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-091",
+    "id": "nl-curious-091",
     "type": "curious",
     "fragments": [
-      "A group of owls",
-      "is called a parliament."
+      "Een groep uilen",
+      "heet een parlement."
     ],
     "topics": [
       "nature"
@@ -1133,11 +1133,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-092",
+    "id": "nl-curious-092",
     "type": "curious",
     "fragments": [
-      "Paper was once",
-      "mostly cloth rags."
+      "Papier was ooit",
+      "meestal stoffen vodden."
     ],
     "topics": [
       "paper"
@@ -1145,15 +1145,15 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Notice one piece of paper near you, even a label."
+      "text": "Let op een vel papier bij jou in de buurt, zelfs een etiket."
     }
   },
   {
-    "id": "en-curious-093",
+    "id": "nl-curious-093",
     "type": "curious",
     "fragments": [
-      "Some mosses can dry almost completely",
-      "and then drink themselves back."
+      "Sommige mossen kunnen bijna volledig uitdrogen",
+      "en dan zichzelf terugdrinken."
     ],
     "topics": [
       "plants"
@@ -1161,11 +1161,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-094",
+    "id": "nl-curious-094",
     "type": "curious",
     "fragments": [
-      "A compass needle",
-      "is a tiny traveler that prefers one direction."
+      "Een kompasnaald",
+      "is een kleine reiziger die de voorkeur geeft aan één richting."
     ],
     "topics": [
       "objects"
@@ -1173,11 +1173,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-095",
+    "id": "nl-curious-095",
     "type": "curious",
     "fragments": [
-      "Fog is a cloud",
-      "that decided to stay low."
+      "Mist is een wolk",
+      "die besloot laag te blijven."
     ],
     "topics": [
       "weather"
@@ -1185,11 +1185,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-096",
+    "id": "nl-curious-096",
     "type": "curious",
     "fragments": [
-      "The shortest complete sentence in English",
-      "is Go."
+      "De kortste volledige zin in het Engels",
+      "is Ga."
     ],
     "topics": [
       "language"
@@ -1197,11 +1197,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-097",
+    "id": "nl-curious-097",
     "type": "curious",
     "fragments": [
-      "Honeybees can recognize human faces.",
-      "They do not need to."
+      "Honingbijen kunnen menselijke gezichten herkennen.",
+      "Dat is niet nodig."
     ],
     "topics": [
       "nature"
@@ -1209,11 +1209,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-098",
+    "id": "nl-curious-098",
     "type": "curious",
     "fragments": [
-      "A shadow is only",
-      "the absence of light."
+      "Er is slechts een schaduw",
+      "de afwezigheid van licht."
     ],
     "topics": [
       "light"
@@ -1221,11 +1221,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-099",
+    "id": "nl-curious-099",
     "type": "curious",
     "fragments": [
-      "River stones get round",
-      "by patience, not by plan."
+      "Rivierstenen worden rond",
+      "door geduld, niet door plan."
     ],
     "topics": [
       "stone"
@@ -1233,11 +1233,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-100",
+    "id": "nl-curious-100",
     "type": "curious",
     "fragments": [
-      "Pineapples grow from the ground,",
-      "not from trees."
+      "Ananassen groeien uit de grond,",
+      "niet van bomen."
     ],
     "topics": [
       "plants"
@@ -1245,11 +1245,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-101",
+    "id": "nl-curious-101",
     "type": "curious",
     "fragments": [
-      "A day on Venus",
-      "is longer than its year."
+      "Een dag op Venus",
+      "is langer dan het jaar."
     ],
     "topics": [
       "sky"
@@ -1257,11 +1257,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-102",
+    "id": "nl-curious-102",
     "type": "curious",
     "fragments": [
-      "The quietest rooms are built",
-      "to swallow almost every sound."
+      "De stilste kamers zijn gebouwd",
+      "bijna elk geluid inslikken."
     ],
     "topics": [
       "quiet"
@@ -1269,20 +1269,20 @@
     "difficulty": 1,
     "followUp": {
       "type": "choice",
-      "text": "Is the sound around you more hush or more hum?",
+      "text": "Is het geluid om je heen meer stil of meer gezoem?",
       "options": [
-        "hush",
-        "hum",
-        "not sure"
+        "stilte",
+        "neuriën",
+        "niet zeker"
       ]
     }
   },
   {
-    "id": "en-curious-103",
+    "id": "nl-curious-103",
     "type": "curious",
     "fragments": [
-      "Waffles have pockets",
-      "because someone wanted more of whatever goes on top."
+      "Wafels hebben zakken",
+      "omdat iemand meer wilde van wat er bovenop komt."
     ],
     "topics": [
       "food"
@@ -1290,11 +1290,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-104",
+    "id": "nl-curious-104",
     "type": "curious",
     "fragments": [
-      "Koalas have fingerprints",
-      "that can look surprisingly like ours."
+      "Koala's hebben vingerafdrukken",
+      "die verrassend veel op de onze kan lijken."
     ],
     "topics": [
       "nature"
@@ -1302,11 +1302,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-105",
+    "id": "nl-curious-105",
     "type": "curious",
     "fragments": [
-      "Light from the sun",
-      "takes about eight minutes to arrive."
+      "Licht van de zon",
+      "het duurt ongeveer acht minuten om aan te komen."
     ],
     "topics": [
       "sky"
@@ -1314,11 +1314,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-106",
+    "id": "nl-curious-106",
     "type": "curious",
     "fragments": [
-      "A seed can wait years",
-      "and still know what to do."
+      "Een zaadje kan jaren wachten",
+      "en weet nog steeds wat te doen."
     ],
     "topics": [
       "plants"
@@ -1326,11 +1326,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-107",
+    "id": "nl-curious-107",
     "type": "curious",
     "fragments": [
-      "Soap lets water slip into cloth",
-      "by making it a little less shy."
+      "Zeep laat water in de stof glijden",
+      "door het wat minder verlegen te maken."
     ],
     "topics": [
       "home"
@@ -1338,11 +1338,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-108",
+    "id": "nl-curious-108",
     "type": "curious",
     "fragments": [
-      "The color of a flamingo",
-      "comes from what it eats."
+      "De kleur van een flamingo",
+      "komt van wat het eet."
     ],
     "topics": [
       "nature"
@@ -1350,11 +1350,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-109",
+    "id": "nl-curious-109",
     "type": "curious",
     "fragments": [
-      "Antarctica is a desert.",
-      "Very dry, and very wide."
+      "Antarctica is een woestijn.",
+      "Zeer droog en zeer breed."
     ],
     "topics": [
       "earth"
@@ -1362,11 +1362,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-110",
+    "id": "nl-curious-110",
     "type": "curious",
     "fragments": [
-      "A moment was once",
-      "a measured length of time."
+      "Een moment was ooit",
+      "een gemeten tijdsduur."
     ],
     "topics": [
       "time"
@@ -1374,11 +1374,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-111",
+    "id": "nl-curious-111",
     "type": "curious",
     "fragments": [
-      "Some trees communicate",
-      "through the soil, quietly."
+      "Sommige bomen communiceren",
+      "rustig door de grond."
     ],
     "topics": [
       "forest"
@@ -1386,11 +1386,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-112",
+    "id": "nl-curious-112",
     "type": "curious",
     "fragments": [
-      "Glass is cooled so fast",
-      "it never quite becomes a usual crystal."
+      "Glas wordt zo snel gekoeld",
+      "het wordt nooit helemaal een gewoon kristal."
     ],
     "topics": [
       "objects"
@@ -1398,11 +1398,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-113",
+    "id": "nl-curious-113",
     "type": "curious",
     "fragments": [
-      "Crows remember faces",
-      "and can hold a grudge or a favor."
+      "Kraaien onthouden gezichten",
+      "en kan wrok of een gunst koesteren."
     ],
     "topics": [
       "nature"
@@ -1410,11 +1410,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-114",
+    "id": "nl-curious-114",
     "type": "curious",
     "fragments": [
-      "The sea is louder at night",
-      "mostly because the rest of the world is quieter."
+      "De zee is 's nachts luider",
+      "vooral omdat de rest van de wereld stiller is."
     ],
     "topics": [
       "coast"
@@ -1422,11 +1422,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-115",
+    "id": "nl-curious-115",
     "type": "curious",
     "fragments": [
-      "The word serendipity",
-      "began as a fairy-tale accident."
+      "Het woord serendipiteit",
+      "begon als een sprookjesongeval."
     ],
     "topics": [
       "language"
@@ -1434,13 +1434,13 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-116",
+    "id": "nl-curious-116",
     "type": "curious",
     "fragments": [
-      "A sunflower head",
-      "is not one flower.",
-      "It is hundreds of small ones",
-      "agreeing to face the same way."
+      "Een zonnebloemhoofd",
+      "is niet één bloem.",
+      "Het zijn honderden kleintjes",
+      "ermee instemmen dezelfde kant op te gaan."
     ],
     "topics": [
       "plants"
@@ -1448,13 +1448,13 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-117",
+    "id": "nl-curious-117",
     "type": "curious",
     "fragments": [
-      "The color we call sky blue",
-      "is scattered light.",
-      "The air keeps the blue",
-      "and lets the rest go on."
+      "De kleur noemen we hemelsblauw",
+      "is verstrooid licht.",
+      "De lucht houdt het blauw",
+      "en laat de rest doorgaan."
     ],
     "topics": [
       "sky"
@@ -1462,13 +1462,13 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-118",
+    "id": "nl-curious-118",
     "type": "curious",
     "fragments": [
-      "Octopuses taste",
-      "with their arms.",
-      "A reaching thing",
-      "can also be a knowing thing."
+      "Octopussen smaken",
+      "met hun armen.",
+      "Een reikend iets",
+      "kan ook iets wetens zijn."
     ],
     "topics": [
       "water",
@@ -1477,12 +1477,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-119",
+    "id": "nl-curious-119",
     "type": "curious",
     "fragments": [
-      "A pencil can write",
-      "about forty-five thousand words",
-      "before it is only wood again."
+      "Een potlood kan schrijven",
+      "ongeveer vijfenveertigduizend woorden",
+      "voordat het weer alleen maar hout is."
     ],
     "topics": [
       "paper"
@@ -1490,13 +1490,13 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-120",
+    "id": "nl-curious-120",
     "type": "curious",
     "fragments": [
-      "Honeycombs use hexagons",
-      "because six sides",
-      "hold a lot",
-      "with very little wall."
+      "Honingraten gebruiken zeshoeken",
+      "omdat zes kanten",
+      "veel vasthouden",
+      "met heel weinig muur."
     ],
     "topics": [
       "nature"

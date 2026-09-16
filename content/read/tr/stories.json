@@ -1,15 +1,15 @@
 [
   {
-    "id": "en-stories-001",
+    "id": "tr-stories-001",
     "type": "micro_story",
     "fragments": [
-      "On a still lake",
-      "a small boat sat",
-      "as if it had forgotten to leave.",
-      "The water held the sky",
-      "without asking.",
-      "A bird crossed once.",
-      "Then the quiet returned."
+      "Durgun bir gölde",
+      "küçük bir tekne oturdu",
+      "sanki gitmeyi unutmuş gibi.",
+      "Su gökyüzünü tuttu",
+      "sormadan.",
+      "Bir keresinde bir kuş geçti.",
+      "Sonra sessizlik geri geldi."
     ],
     "topics": [
       "water"
@@ -17,14 +17,14 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-002",
+    "id": "tr-stories-002",
     "type": "micro_story",
     "fragments": [
-      "The chair",
-      "remembered the shape of waiting.",
-      "Afternoon collected itself",
-      "in a square of floor.",
-      "Nothing needed to happen next."
+      "Sandalye",
+      "beklemenin şeklini hatırladı.",
+      "Öğleden sonra kendini topladı",
+      "bir kare zeminde.",
+      "Bundan sonra hiçbir şeyin olmasına gerek yoktu."
     ],
     "topics": [
       "room"
@@ -32,16 +32,16 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Look at one still object near you."
+      "text": "Yakınınızdaki hareketsiz bir nesneye bakın."
     }
   },
   {
-    "id": "en-stories-003",
+    "id": "tr-stories-003",
     "type": "micro_story",
     "fragments": [
-      "A fern unrolled one slow new leaf.",
-      "The rest of the plant stayed as it was.",
-      "Green kept its own time."
+      "Bir eğrelti otu yavaş yavaş yeni bir yaprak açtı.",
+      "Bitkinin geri kalanı olduğu gibi kaldı.",
+      "Green kendi zamanını korudu."
     ],
     "topics": [
       "plants"
@@ -49,14 +49,14 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-004",
+    "id": "tr-stories-004",
     "type": "micro_story",
     "fragments": [
-      "Clouds stacked themselves",
-      "without hurry.",
-      "The street darkened a little,",
-      "then paused.",
-      "Rain decided later."
+      "Bulutlar kendi kendine yığıldı",
+      "acele etmeden.",
+      "Sokak biraz karardı",
+      "sonra duraklatıldı.",
+      "Rain daha sonra karar verdi."
     ],
     "topics": [
       "weather"
@@ -64,15 +64,15 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-005",
+    "id": "tr-stories-005",
     "type": "micro_story",
     "fragments": [
-      "Someone had left a page open",
-      "on the table.",
-      "The sentence in the middle",
-      "was unfinished.",
-      "It could wait.",
-      "Paper is patient."
+      "Birisi bir sayfayı açık bırakmıştı",
+      "masanın üzerinde.",
+      "Ortadaki cümle",
+      "bitmemişti.",
+      "Bekleyebilir.",
+      "Kağıt sabırlıdır."
     ],
     "topics": [
       "paper"
@@ -80,12 +80,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-006",
+    "id": "tr-stories-006",
     "type": "micro_story",
     "fragments": [
-      "The lamp made a small circle on the cloth.",
-      "Moths would have liked it, but none came.",
-      "The circle stayed, doing only that."
+      "Lamba kumaşın üzerinde küçük bir daire çizdi.",
+      "Güveler bundan hoşlanırdı ama hiçbiri gelmedi.",
+      "Çember sadece bunu yaparak kaldı."
     ],
     "topics": [
       "light"
@@ -93,12 +93,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-007",
+    "id": "tr-stories-007",
     "type": "micro_story",
     "fragments": [
-      "A path went between two fields of pale grass.",
-      "Stones kept the edges from wandering.",
-      "The path did not mind who used it."
+      "İki soluk çimen tarlasının arasından bir yol geçiyordu.",
+      "Taşlar kenarların dolaşmasını engelliyordu.",
+      "Yol, onu kimin kullandığını umursamadı."
     ],
     "topics": [
       "earth"
@@ -106,12 +106,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-008",
+    "id": "tr-stories-008",
     "type": "micro_story",
     "fragments": [
-      "Evening arrived as a change in the color of walls.",
-      "One star appeared, then pretended it had been there.",
-      "The rest of the sky took its time."
+      "Akşam, duvarların renginin değişmesiyle geldi.",
+      "Bir yıldız belirdi, sonra oradaymış gibi davrandı.",
+      "Gökyüzünün geri kalanı zamanını aldı."
     ],
     "topics": [
       "sky"
@@ -119,16 +119,16 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Look up, even if only as far as the ceiling."
+      "text": "Tavana kadar da olsa yukarıya bakın."
     }
   },
   {
-    "id": "en-stories-009",
+    "id": "tr-stories-009",
     "type": "micro_story",
     "fragments": [
-      "A cup sat in the exact center of the saucer.",
-      "It was empty, which was a kind of readiness.",
-      "The table held both without comment."
+      "Tabağın tam ortasında bir fincan duruyordu.",
+      "Boştu, bu da bir nevi hazır olma durumuydu.",
+      "Tablo her ikisini de yorum yapmadan tuttu."
     ],
     "topics": [
       "objects"
@@ -136,12 +136,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-010",
+    "id": "tr-stories-010",
     "type": "micro_story",
     "fragments": [
-      "Sparrows argued softly in a hedge.",
-      "Then they forgot the argument.",
-      "The hedge continued being a hedge."
+      "Serçeler bir çitin içinde usulca tartışıyordu.",
+      "Sonra tartışmayı unuttular.",
+      "Çit, çit olmaya devam etti."
     ],
     "topics": [
       "nature"
@@ -149,12 +149,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-011",
+    "id": "tr-stories-011",
     "type": "micro_story",
     "fragments": [
-      "Tide left a line of darker sand.",
-      "Shells kept their own small rooms.",
-      "The line would move again, and that was fine."
+      "Gelgit geride daha koyu bir kum çizgisi bıraktı.",
+      "Kabuklar kendi küçük odalarını tutuyordu.",
+      "Hat tekrar hareket edecekti ve bu iyiydi."
     ],
     "topics": [
       "water"
@@ -162,16 +162,16 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Now find a reflection, even a small one."
+      "text": "Şimdi bir yansıma bulun, küçük bile olsa."
     }
   },
   {
-    "id": "en-stories-012",
+    "id": "tr-stories-012",
     "type": "micro_story",
     "fragments": [
-      "The house made one wooden sound, then none.",
-      "A clock somewhere decided not to insist.",
-      "Listening became easier."
+      "Evden tek bir tahta sesi çıktı, sonra hiç ses çıkmadı.",
+      "Bir yerlerde bir saat ısrar etmemeye karar verdi.",
+      "Dinlemek kolaylaştı."
     ],
     "topics": [
       "quiet"
@@ -179,13 +179,13 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-013",
+    "id": "tr-stories-013",
     "type": "micro_story",
     "fragments": [
-      "Apples waited in a bowl as if they had all day.",
-      "One was greener.",
-      "None were in a rush.",
-      "The bowl was older than the fruit."
+      "Elmalar sanki bütün gün varmış gibi bir kapta bekledi.",
+      "Biri daha yeşildi.",
+      "Hiçbirinin acelesi yoktu.",
+      "Kase meyveden daha eskiydi."
     ],
     "topics": [
       "plants"
@@ -193,12 +193,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-014",
+    "id": "tr-stories-014",
     "type": "micro_story",
     "fragments": [
-      "A window held a square of ordinary street.",
-      "A bicycle passed through it and left.",
-      "The square remained ordinary, which helped."
+      "Bir pencere sıradan bir caddeyi kapsıyordu.",
+      "İçinden bir bisiklet geçti ve gitti.",
+      "Meydanın sıradan kalması da yardımcı oldu."
     ],
     "topics": [
       "room"
@@ -206,16 +206,16 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Look at one still object near you."
+      "text": "Yakınınızdaki hareketsiz bir nesneye bakın."
     }
   },
   {
-    "id": "en-stories-015",
+    "id": "tr-stories-015",
     "type": "micro_story",
     "fragments": [
-      "Dust showed up only where the sun insisted.",
-      "The rest of the air kept its secrets.",
-      "The sun moved on without taking the dust."
+      "Toz yalnızca güneşin ısrar ettiği yerde ortaya çıktı.",
+      "Havanın geri kalanı sırlarını sakladı.",
+      "Güneş toz almadan yoluna devam etti."
     ],
     "topics": [
       "light"
@@ -223,12 +223,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-016",
+    "id": "tr-stories-016",
     "type": "micro_story",
     "fragments": [
-      "A letter had been folded twice, carefully.",
-      "The handwriting leaned a little to the right.",
-      "No one needed to open it this minute."
+      "Bir mektup dikkatlice iki kez katlanmıştı.",
+      "El yazısı biraz sağa eğikti.",
+      "Bu dakikada kimsenin açmasına gerek yoktu."
     ],
     "topics": [
       "paper"
@@ -236,12 +236,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-017",
+    "id": "tr-stories-017",
     "type": "micro_story",
     "fragments": [
-      "Fog made the far trees into suggestions.",
-      "The near trees stayed specific.",
-      "Walking felt shorter than it was."
+      "Sis uzaktaki ağaçları öneriye dönüştürdü.",
+      "Yakındaki ağaçlar spesifik kaldı.",
+      "Yürümek olduğundan daha kısa sürüyordu."
     ],
     "topics": [
       "weather"
@@ -249,16 +249,16 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Notice the air on your skin for a moment."
+      "text": "Bir an için cildinizdeki havayı fark edin."
     }
   },
   {
-    "id": "en-stories-018",
+    "id": "tr-stories-018",
     "type": "micro_story",
     "fragments": [
-      "A kettle clicked as it finished its work.",
-      "Steam wrote a brief cloud and erased it.",
-      "The mug could wait a moment more."
+      "Bir çaydanlık işini bitirirken tık sesi çıkardı.",
+      "Steam kısa bir bulut yazıp onu sildi.",
+      "Kupa bir dakika daha bekleyebilirdi."
     ],
     "topics": [
       "water"
@@ -266,12 +266,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-019",
+    "id": "tr-stories-019",
     "type": "micro_story",
     "fragments": [
-      "Clay on the wheel rose, then rested.",
-      "Hands knew when to stop.",
-      "The shape would dry into itself."
+      "Çarkın üzerindeki kil yükseldi, sonra dinlendi.",
+      "Eller ne zaman duracağını biliyordu.",
+      "Şekil kendi kendine kuruyacaktı."
     ],
     "topics": [
       "earth"
@@ -279,12 +279,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-020",
+    "id": "tr-stories-020",
     "type": "micro_story",
     "fragments": [
-      "A moth opened on the inside of the lampshade.",
-      "Its wings were a map of quieter woods.",
-      "It stayed until the light felt enough."
+      "Abajurun iç tarafında bir güve açıldı.",
+      "Kanatları daha sessiz ormanların bir haritasıydı.",
+      "Işık yeterli hissedilene kadar orada kaldı."
     ],
     "topics": [
       "nature"
@@ -292,16 +292,16 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Find something living, or the color of something living."
+      "text": "Yaşayan bir şey bulun veya yaşayan bir şeyin rengini bulun."
     }
   },
   {
-    "id": "en-stories-021",
+    "id": "tr-stories-021",
     "type": "micro_story",
     "fragments": [
-      "Morning arrived first on the windowsill.",
-      "Then it found the spines of the books.",
-      "The rest of the room caught up slowly."
+      "Sabah ilk önce pencere pervazına geldi.",
+      "Daha sonra kitapların sırtlarını buldu.",
+      "Odanın geri kalanı yavaş yavaş onlara yetişti."
     ],
     "topics": [
       "sky"
@@ -309,12 +309,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-022",
+    "id": "tr-stories-022",
     "type": "micro_story",
     "fragments": [
-      "A button had come off and been placed in a dish.",
-      "It looked finished, even alone.",
-      "Mending could be another day’s quiet."
+      "Bir düğme çıkmış ve bir tabağa yerleştirilmişti.",
+      "Tek başına bile bitmiş görünüyordu.",
+      "Onarım başka bir günün sessizliği olabilir."
     ],
     "topics": [
       "objects"
@@ -322,12 +322,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-023",
+    "id": "tr-stories-023",
     "type": "micro_story",
     "fragments": [
-      "Snow made the street forget its usual noise.",
-      "Footsteps became careful punctuation.",
-      "Even the air seemed to read more slowly."
+      "Kar sokağa her zamanki gürültüyü unutturdu.",
+      "Ayak sesleri dikkatli noktalama işaretlerine dönüştü.",
+      "Hava bile daha yavaş okuyor gibiydi."
     ],
     "topics": [
       "quiet"
@@ -335,16 +335,16 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Find something green around you."
+      "text": "Etrafınızda yeşil bir şeyler bulun."
     }
   },
   {
-    "id": "en-stories-024",
+    "id": "tr-stories-024",
     "type": "micro_story",
     "fragments": [
-      "Moss took the north side of the stone without debate.",
-      "The stone did not mind being partly green.",
-      "Years passed in that arrangement."
+      "Moss tartışmasız taşın kuzey tarafını aldı.",
+      "Taşın kısmen yeşil olmasının bir sakıncası yoktu.",
+      "Bu düzenin içinde yıllar geçti."
     ],
     "topics": [
       "plants"
@@ -352,12 +352,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-025",
+    "id": "tr-stories-025",
     "type": "micro_story",
     "fragments": [
-      "Someone had aligned the books by height, almost.",
-      "One taller spine refused, politely.",
-      "The shelf held the disagreement."
+      "Birisi neredeyse kitapları boylarına göre hizalamıştı.",
+      "Daha uzun bir omurga kibarca reddetti.",
+      "Raf anlaşmazlığı sürdürdü."
     ],
     "topics": [
       "room"
@@ -365,12 +365,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-026",
+    "id": "tr-stories-026",
     "type": "micro_story",
     "fragments": [
-      "Rain wrote on the glass in temporary letters.",
-      "They ran into each other and became weather.",
-      "Inside, the table stayed dry on purpose."
+      "Rain camın üzerine geçici harflerle yazdı.",
+      "Birbirlerine çarpıp hava oldular.",
+      "İçeride masa bilerek kuru kaldı."
     ],
     "topics": [
       "water"
@@ -378,16 +378,16 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Now find a reflection, even a small one."
+      "text": "Şimdi bir yansıma bulun, küçük bile olsa."
     }
   },
   {
-    "id": "en-stories-027",
+    "id": "tr-stories-027",
     "type": "micro_story",
     "fragments": [
-      "A candle shortened itself without complaint.",
-      "Wax remembered the last hour in rings.",
-      "The room used the small light well."
+      "Bir mum şikayet etmeden kendi kendine kısaldı.",
+      "Wax halkalardaki son saati hatırladı.",
+      "Oda küçük ışığı iyi kullandı."
     ],
     "topics": [
       "light"
@@ -395,12 +395,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-028",
+    "id": "tr-stories-028",
     "type": "micro_story",
     "fragments": [
-      "The crossword had one square left empty.",
-      "The clue was kind, if you looked again.",
-      "Leaving it open was also an answer."
+      "Bulmacada bir kare boş kalmıştı.",
+      "Tekrar bakarsanız ipucu nazikti.",
+      "Açık bırakmak da bir cevaptı."
     ],
     "topics": [
       "language"
@@ -408,12 +408,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-029",
+    "id": "tr-stories-029",
     "type": "micro_story",
     "fragments": [
-      "A garden wall kept the hill from visiting the path.",
-      "Lichen signed the stones in pale green.",
-      "No one needed to translate it."
+      "Bir bahçe duvarı tepenin patikayı ziyaret etmesini engelliyordu.",
+      "Liken taşları soluk yeşil renkte imzaladı.",
+      "Kimsenin tercüme etmesine gerek yoktu."
     ],
     "topics": [
       "earth"
@@ -421,16 +421,16 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Find something with a little texture."
+      "text": "Biraz dokuya sahip bir şey bulun."
     }
   },
   {
-    "id": "en-stories-030",
+    "id": "tr-stories-030",
     "type": "micro_story",
     "fragments": [
-      "The afternoon had a middle, though clocks disagreed.",
-      "A fly chose a sunlit patch of wall.",
-      "Both stayed for a while, then didn’t."
+      "Saatler farklı olsa da öğleden sonranın ortası vardı.",
+      "Bir sinek duvarın güneşli bir kısmını seçti.",
+      "Her ikisi de bir süre kaldılar, sonra kalmadılar."
     ],
     "topics": [
       "time"
@@ -438,13 +438,13 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-031",
+    "id": "tr-stories-031",
     "type": "micro_story",
     "fragments": [
-      "A wooden spoon rested across a pot.",
-      "Soup could wait.",
-      "Stirring could wait.",
-      "The kitchen sounded like itself."
+      "Bir tencerenin üzerinde tahta bir kaşık duruyordu.",
+      "Çorba bekleyebilirdi.",
+      "Karıştırma bekleyebilir.",
+      "Mutfak kendi gibiydi."
     ],
     "topics": [
       "objects"
@@ -452,12 +452,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-032",
+    "id": "tr-stories-032",
     "type": "micro_story",
     "fragments": [
-      "Ducks drew the same slow comma on the pond.",
-      "Ripples signed it and let it go.",
-      "The far bank did not comment."
+      "Ördekler de gölete aynı virgülü yavaş yavaş çizdiler.",
+      "Ripples bunu imzaladı ve bıraktı.",
+      "Uzak banka yorum yapmadı."
     ],
     "topics": [
       "nature"
@@ -465,16 +465,16 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Find something living, or the color of something living."
+      "text": "Yaşayan bir şey bulun veya yaşayan bir şeyin rengini bulun."
     }
   },
   {
-    "id": "en-stories-033",
+    "id": "tr-stories-033",
     "type": "micro_story",
     "fragments": [
-      "A map was folded so the river met itself.",
-      "Creases became extra geography.",
-      "Unfolding could happen later."
+      "Nehir kendisiyle buluşacak şekilde bir harita katlanmıştı.",
+      "Kırışıklıklar ekstra coğrafya haline geldi.",
+      "Açığa çıkma daha sonra gerçekleşebilir."
     ],
     "topics": [
       "paper"
@@ -482,12 +482,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-034",
+    "id": "tr-stories-034",
     "type": "micro_story",
     "fragments": [
-      "Wind moved the dry leaves without choosing favorites.",
-      "They made a sound like distant paper.",
-      "The trees kept their places."
+      "Rüzgar kuru yaprakları favori seçmeden hareket ettirdi.",
+      "Uzaktaki kağıt gibi bir ses çıkardılar.",
+      "Ağaçlar yerlerini korudu."
     ],
     "topics": [
       "sky"
@@ -495,12 +495,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-035",
+    "id": "tr-stories-035",
     "type": "micro_story",
     "fragments": [
-      "A blanket kept the shape of the last person.",
-      "The sofa did not mind.",
-      "Evening could sit there too."
+      "Bir battaniye son kişinin şeklini koruyordu.",
+      "Kanepe umursamadı.",
+      "Akşam da orada oturabilirdi."
     ],
     "topics": [
       "room"
@@ -508,16 +508,16 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Look at one still object near you."
+      "text": "Yakınınızdaki hareketsiz bir nesneye bakın."
     }
   },
   {
-    "id": "en-stories-036",
+    "id": "tr-stories-036",
     "type": "micro_story",
     "fragments": [
-      "Somewhere in the building, a door closed softly.",
-      "Footsteps faded into a kind of weather.",
-      "This room returned to its own volume."
+      "Binanın bir yerinde bir kapı yavaşça kapandı.",
+      "Ayak sesleri bir tür havaya dönüştü.",
+      "Bu oda kendi hacmine döndü."
     ],
     "topics": [
       "quiet"
@@ -525,12 +525,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-037",
+    "id": "tr-stories-037",
     "type": "micro_story",
     "fragments": [
-      "Ice at the edge of the lake was thin and clear.",
-      "Pebbles showed through like quiet punctuation.",
-      "No one needed to step on it."
+      "Gölün kenarındaki buz ince ve berraktı.",
+      "Çakıl taşları sessiz bir noktalama işareti gibi görünüyordu.",
+      "Kimsenin üzerine basmasına gerek yoktu."
     ],
     "topics": [
       "water"
@@ -538,13 +538,13 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-038",
+    "id": "tr-stories-038",
     "type": "micro_story",
     "fragments": [
-      "A windowsill basil leaned toward the glass.",
-      "Someone turned the pot a quarter turn.",
-      "Tomorrow it would lean again.",
-      "That was the pact."
+      "Bir pencere pervazındaki fesleğen cama doğru eğilmişti.",
+      "Birisi potu çeyrek tur çevirdi.",
+      "Yarın tekrar eğilecekti.",
+      "Anlaşma buydu."
     ],
     "topics": [
       "plants"
@@ -552,16 +552,16 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Now find something green around you."
+      "text": "Şimdi etrafınızda yeşil bir şeyler bulun."
     }
   },
   {
-    "id": "en-stories-039",
+    "id": "tr-stories-039",
     "type": "micro_story",
     "fragments": [
-      "Keys lay in a small ceramic dish.",
-      "They were not needed for this hour.",
-      "The dish made them look considered."
+      "Anahtarlar küçük bir seramik tabakta yatıyordu.",
+      "Bu saat için onlara ihtiyaç yoktu.",
+      "Yemek onları dikkate almış gibi gösteriyordu."
     ],
     "topics": [
       "objects"
@@ -569,12 +569,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-040",
+    "id": "tr-stories-040",
     "type": "micro_story",
     "fragments": [
-      "Late sun found the grain in the wooden floor.",
-      "Each board kept a slightly different gold.",
-      "Then the gold went, and the wood remained."
+      "Geç güneş ahşap zemindeki tahılı buldu.",
+      "Her tahtada biraz farklı bir altın vardı.",
+      "Sonra altın gitti, odun kaldı."
     ],
     "topics": [
       "light"
@@ -582,12 +582,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-041",
+    "id": "tr-stories-041",
     "type": "micro_story",
     "fragments": [
-      "Tide.",
-      "It drew a thin line of foam.",
-      "Then took the line back."
+      "Gelgit.",
+      "İnce bir köpük çizgisi çizdi.",
+      "Daha sonra hattı geri aldı."
     ],
     "topics": [
       "coast"
@@ -595,12 +595,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-042",
+    "id": "tr-stories-042",
     "type": "micro_story",
     "fragments": [
-      "At the forest edge the light changed its mind.",
-      "One more tree.",
-      "Then a field."
+      "Orman kenarında ışık fikrini değiştirdi.",
+      "Bir ağaç daha.",
+      "Sonra bir alan."
     ],
     "topics": [
       "forest"
@@ -608,16 +608,16 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Find a leaf-shape, even in a pattern or a print."
+      "text": "Bir desen veya baskıda bile bir yaprak şekli bulun."
     }
   },
   {
-    "id": "en-stories-043",
+    "id": "tr-stories-043",
     "type": "micro_story",
     "fragments": [
-      "The night window held a streetlamp and a small moth of dust on the glass.",
-      "Outside, almost nothing moved.",
-      "Inside, the room kept its own dim."
+      "Gece penceresinde bir sokak lambası ve camın üzerinde küçük bir toz bulutu vardı.",
+      "Dışarıda neredeyse hiçbir şey hareket etmiyordu.",
+      "İçeride oda kendi loşluğunu koruyordu."
     ],
     "topics": [
       "night"
@@ -625,12 +625,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-044",
+    "id": "tr-stories-044",
     "type": "micro_story",
     "fragments": [
-      "A stone in the palm.",
-      "Cooler than expected.",
-      "It asked for nothing."
+      "Avuç içinde bir taş.",
+      "Beklenenden daha soğuk.",
+      "Hiçbir şey istemedi."
     ],
     "topics": [
       "stone"
@@ -638,11 +638,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-045",
+    "id": "tr-stories-045",
     "type": "micro_story",
     "fragments": [
-      "An envelope waited on the shelf, unopened on purpose.",
-      "Paper can hold a pause as well as a message."
+      "Rafta bilerek açılmamış bir zarf bekliyordu.",
+      "Kağıt bir mesajın yanı sıra bir duraklamayı da barındırabilir."
     ],
     "topics": [
       "paper"
@@ -650,16 +650,16 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Notice one piece of paper or cardboard near you."
+      "text": "Yakınınızdaki bir parça kağıt veya kartona dikkat edin."
     }
   },
   {
-    "id": "en-stories-046",
+    "id": "tr-stories-046",
     "type": "micro_story",
     "fragments": [
-      "Stairs remembered many feet and still offered the same two choices:",
-      "up, or down,",
-      "or sitting on a step for no reason."
+      "Merdivenler birçok ayağı hatırladı ve hâlâ aynı iki seçeneği sunuyordu:",
+      "yukarı veya aşağı,",
+      "ya da sebepsiz yere bir basamakta oturmak."
     ],
     "topics": [
       "room"
@@ -667,12 +667,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-047",
+    "id": "tr-stories-047",
     "type": "micro_story",
     "fragments": [
-      "Frost on the railing.",
-      "A thin white handwriting.",
-      "It would not last the morning."
+      "Korkulukta don.",
+      "İnce beyaz bir el yazısı.",
+      "Sabaha kadar sürmeyecekti."
     ],
     "topics": [
       "weather"
@@ -680,11 +680,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-048",
+    "id": "tr-stories-048",
     "type": "micro_story",
     "fragments": [
-      "The kite was only string and cloth until the air agreed.",
-      "Then it became a small opinion in a large sky."
+      "Hava kararana kadar uçurtma sadece ip ve kumaştan ibaretti.",
+      "Sonra büyük bir gökyüzünde küçük bir fikir haline geldi."
     ],
     "topics": [
       "sky"
@@ -692,12 +692,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-049",
+    "id": "tr-stories-049",
     "type": "micro_story",
     "fragments": [
-      "Between two dunes",
-      "the path forgot it was a path.",
-      "Sand kept the secret poorly."
+      "İki kum tepesi arasında",
+      "yol, yol olduğunu unuttu.",
+      "Sand sırrı çok az sakladı."
     ],
     "topics": [
       "coast"
@@ -705,12 +705,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-050",
+    "id": "tr-stories-050",
     "type": "micro_story",
     "fragments": [
-      "Ink.",
-      "A dark comma on the page.",
-      "The sentence around it could wait."
+      "Mürekkep.",
+      "Sayfada koyu bir virgül.",
+      "Etrafındaki cümle bekleyebilirdi."
     ],
     "topics": [
       "paper"
@@ -718,11 +718,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-051",
+    "id": "tr-stories-051",
     "type": "micro_story",
     "fragments": [
-      "In the quiet room the clock was less important",
-      "than the way the curtain almost did not move."
+      "Sessiz odada saatin önemi daha azdı",
+      "perde neredeyse hiç hareket etmiyordu."
     ],
     "topics": [
       "quiet"
@@ -730,20 +730,20 @@
     "difficulty": 1,
     "followUp": {
       "type": "choice",
-      "text": "Is the room you are in more still or more moving?",
+      "text": "Bulunduğunuz oda daha mı hareketsiz yoksa daha hareketli mi?",
       "options": [
-        "still",
-        "moving",
-        "in between"
+        "Hala",
+        "hareketli",
+        "arada"
       ]
     }
   },
   {
-    "id": "en-stories-052",
+    "id": "tr-stories-052",
     "type": "micro_story",
     "fragments": [
-      "Pine needles made a bronze carpet that did not mind being stepped on.",
-      "The trees kept their own conversation above it."
+      "Çam iğneleri, üzerine basılmasına aldırış etmeyen bronz bir halı oluşturuyordu.",
+      "Ağaçlar onun üzerinde kendi konuşmalarını sürdürüyorlardı."
     ],
     "topics": [
       "forest"
@@ -751,12 +751,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-053",
+    "id": "tr-stories-053",
     "type": "micro_story",
     "fragments": [
-      "A hinge.",
-      "It knew two positions.",
-      "Both were honest."
+      "Bir menteşe.",
+      "İki pozisyon biliyordu.",
+      "Her ikisi de dürüsttü."
     ],
     "topics": [
       "objects"
@@ -764,11 +764,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-054",
+    "id": "tr-stories-054",
     "type": "micro_story",
     "fragments": [
-      "Late light along the coast turned the water into hammered metal.",
-      "Then the metal went dull and was only water again."
+      "Sahildeki geç ışık, suyu dövülmüş metale dönüştürdü.",
+      "Daha sonra metal donuklaştı ve yeniden sadece suya dönüştü."
     ],
     "topics": [
       "coast"
@@ -776,11 +776,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-055",
+    "id": "tr-stories-055",
     "type": "micro_story",
     "fragments": [
-      "Someone had stacked firewood as if stacking were a kind of care.",
-      "The pile waited without hurry."
+      "Birisi yakacak odunları sanki istifleme bir bakım işiymiş gibi istiflemişti.",
+      "Yığın acele etmeden bekledi."
     ],
     "topics": [
       "home"
@@ -788,12 +788,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-056",
+    "id": "tr-stories-056",
     "type": "micro_story",
     "fragments": [
-      "Moon.",
-      "Not full.",
-      "Enough."
+      "Ay.",
+      "Dolu değil.",
+      "Yeterli."
     ],
     "topics": [
       "night"
@@ -801,11 +801,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-057",
+    "id": "tr-stories-057",
     "type": "micro_story",
     "fragments": [
-      "The library aisle smelled like dry paper and a little dust that had settled on purpose.",
-      "Books leaned on each other the way people do in a slow queue."
+      "Kütüphane koridoru kuru kağıt ve kasıtlı olarak yerleşmiş bir miktar toz gibi kokuyordu.",
+      "Kitaplar, insanların yavaş bir kuyrukta olduğu gibi birbirine yaslanıyordu."
     ],
     "topics": [
       "paper"
@@ -813,15 +813,15 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Find a straight line nearby — a shelf, a frame, an edge."
+      "text": "Yakında düz bir çizgi bulun; bir raf, bir çerçeve, bir kenar."
     }
   },
   {
-    "id": "en-stories-058",
+    "id": "tr-stories-058",
     "type": "micro_story",
     "fragments": [
-      "A pebble skipped once in memory,",
-      "then the lake went back to being a lake."
+      "Anılarda bir kez atlanan bir çakıl taşı,",
+      "daha sonra göl tekrar göl haline geldi."
     ],
     "topics": [
       "water"
@@ -829,11 +829,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-059",
+    "id": "tr-stories-059",
     "type": "micro_story",
     "fragments": [
-      "The greenhouse held a private summer while the path outside stayed ordinary.",
-      "Glass made the difference without making a speech."
+      "Seranın özel bir yaz tatili vardı, dışarıdaki yol ise sıradan kalıyordu.",
+      "Glass konuşma yapmadan fark yarattı."
     ],
     "topics": [
       "plants"
@@ -841,12 +841,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-060",
+    "id": "tr-stories-060",
     "type": "micro_story",
     "fragments": [
-      "String on a nail.",
-      "It had been useful once.",
-      "Now it was only a small hanging fact."
+      "Bir çiviye ip.",
+      "Bir zamanlar işe yaramıştı.",
+      "Artık bu sadece küçük bir gerçekti."
     ],
     "topics": [
       "objects"
@@ -854,11 +854,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-061",
+    "id": "tr-stories-061",
     "type": "micro_story",
     "fragments": [
-      "Fog took the far trees and left the near ones.",
-      "A fair trade, if you were standing still."
+      "Sis uzaktaki ağaçları alıp yakındakileri bıraktı.",
+      "Eğer hareketsiz durursan adil bir takas olur."
     ],
     "topics": [
       "weather"
@@ -866,16 +866,16 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Look at the farthest thing you can see from here."
+      "text": "Buradan görebildiğiniz en uzak şeye bakın."
     }
   },
   {
-    "id": "en-stories-062",
+    "id": "tr-stories-062",
     "type": "micro_story",
     "fragments": [
-      "The windowsill collected three objects that had not yet decided they belonged together:",
-      "a stone, a stamp,",
-      "a length of green thread."
+      "Pencere kenarında henüz birbirlerine ait olduklarına karar verilmemiş üç nesne toplandı:",
+      "bir taş, bir pul,",
+      "bir yeşil iplik uzunluğu."
     ],
     "topics": [
       "room"
@@ -883,12 +883,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-063",
+    "id": "tr-stories-063",
     "type": "micro_story",
     "fragments": [
-      "Harbor water.",
-      "Dark. Patient.",
-      "Boats nodded without speaking."
+      "Liman suyu.",
+      "Karanlık. Hasta.",
+      "Boats konuşmadan başlarını salladı."
     ],
     "topics": [
       "coast"
@@ -896,12 +896,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-064",
+    "id": "tr-stories-064",
     "type": "micro_story",
     "fragments": [
-      "At the end of the lane",
-      "a lamp came on earlier than the others.",
-      "It did not explain itself."
+      "Yolun sonunda",
+      "bir lamba diğerlerinden daha erken yandı.",
+      "Kendini açıklayamadı."
     ],
     "topics": [
       "light"
@@ -909,17 +909,17 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-065",
+    "id": "tr-stories-065",
     "type": "micro_story",
     "fragments": [
-      "At the end of a quiet street",
-      "there was a small bakery",
-      "with three round tables.",
-      "The table beside the window",
-      "had a blue cup on it.",
-      "Keep the color blue in mind.",
-      "Look around.",
-      "Can you find something blue?"
+      "Sessiz bir sokağın sonunda",
+      "küçük bir fırın vardı",
+      "üç yuvarlak masa ile.",
+      "Pencerenin yanındaki masa",
+      "Üzerinde mavi bir bardak vardı.",
+      "Mavi rengi aklınızda tutun.",
+      "Etrafınıza bakın.",
+      "Mavi bir şey bulabilir misin?"
     ],
     "topics": [
       "room",
@@ -928,16 +928,16 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-066",
+    "id": "tr-stories-066",
     "type": "micro_story",
     "fragments": [
-      "The harbor was still waking.",
-      "A rope made a slow circle in the water.",
-      "Then another.",
-      "Gulls argued about nothing important.",
-      "Keep the circles in mind.",
-      "If anything nearby is round,",
-      "let your eyes rest there."
+      "Liman hâlâ uyanıyordu.",
+      "Bir ip suyun içinde yavaş yavaş daireler çiziyordu.",
+      "Sonra bir tane daha.",
+      "Martılar önemli bir şey hakkında tartışmıyordu.",
+      "Daireleri aklınızda tutun.",
+      "Yakınlarda herhangi bir şey yuvarlaksa,",
+      "gözlerin orada dinlensin."
     ],
     "topics": [
       "coast",
@@ -946,16 +946,16 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-067",
+    "id": "tr-stories-067",
     "type": "micro_story",
     "fragments": [
-      "On the kitchen table",
-      "a bowl held three lemons.",
-      "One had a small leaf still attached.",
-      "The yellow was almost too sure of itself.",
-      "Hold that yellow for a moment.",
-      "Look around.",
-      "Is anything near you that bright?"
+      "Mutfak masasında",
+      "bir kasede üç limon vardı.",
+      "Birinin üzerinde hâlâ küçük bir yaprak vardı.",
+      "Sarı kendinden neredeyse fazlasıyla emindi.",
+      "Şu sarıyı bir süreliğine tut.",
+      "Etrafınıza bakın.",
+      "Yakınınızda bu kadar parlak bir şey var mı?"
     ],
     "topics": [
       "home",
@@ -964,15 +964,15 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-068",
+    "id": "tr-stories-068",
     "type": "micro_story",
     "fragments": [
-      "Halfway down the lane",
-      "a yellow door waited",
-      "as if someone might still come back for a key.",
-      "Paint had thinned on the handle.",
-      "The rest of the street stayed ordinary.",
-      "Notice one worn thing near you."
+      "Yolun yarısında",
+      "sarı bir kapı bekliyordu",
+      "sanki birisi hâlâ anahtar almak için geri gelebilirmiş gibi.",
+      "Saptaki boya incelmişti.",
+      "Sokağın geri kalanı sıradan kaldı.",
+      "Yakınınızdaki yıpranmış bir şeye dikkat edin."
     ],
     "topics": [
       "home"
@@ -980,16 +980,16 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-069",
+    "id": "tr-stories-069",
     "type": "micro_story",
     "fragments": [
-      "The river arranged its stones",
-      "without asking which should be on top.",
-      "Water found the same path",
-      "it had found yesterday.",
-      "A darker stone sat a little apart.",
-      "Keep that darker color.",
-      "Find something nearby that is not shiny."
+      "Nehir taşlarını düzenledi",
+      "Hangisinin en üstte olması gerektiğini sormadan.",
+      "Su da aynı yolu buldu",
+      "dün bulmuştu.",
+      "Daha koyu renkli bir taş biraz uzakta duruyordu.",
+      "Bu koyu rengi koruyun.",
+      "Yakınlarda parlak olmayan bir şey bulun."
     ],
     "topics": [
       "water",
@@ -998,15 +998,15 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-070",
+    "id": "tr-stories-070",
     "type": "micro_story",
     "fragments": [
-      "Under the market awning",
-      "shade made a soft rectangle.",
-      "A crate of oranges caught the leftover light.",
-      "Someone counted them without speaking.",
-      "Count one small group of things near you.",
-      "No need to get it exact."
+      "Pazar tentesinin altında",
+      "gölge yumuşak bir dikdörtgen oluşturdu.",
+      "Bir sandık portakal, kalan ışığı yakaladı.",
+      "Birisi konuşmadan onları saydı.",
+      "Yakınınızdaki küçük bir grup şeyi sayın.",
+      "Kesin olarak anlamaya gerek yok."
     ],
     "topics": [
       "home",
@@ -1015,15 +1015,15 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-071",
+    "id": "tr-stories-071",
     "type": "micro_story",
     "fragments": [
-      "Snow sat on the fence rail",
-      "as if it had been invited.",
-      "Each post wore the same quiet hat.",
-      "The field behind it was only field.",
-      "Look for a straight line nearby.",
-      "A frame. An edge. A rail of some kind."
+      "Kar çit rayına oturdu",
+      "sanki davet edilmiş gibi.",
+      "Her gönderi aynı sessiz şapkayı takıyordu.",
+      "Arkasındaki alan sadece alandı.",
+      "Yakınlarda düz bir çizgi arayın.",
+      "Bir çerçeve. Bir kenar. Bir çeşit ray."
     ],
     "topics": [
       "weather",
@@ -1032,15 +1032,15 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-072",
+    "id": "tr-stories-072",
     "type": "micro_story",
     "fragments": [
-      "The bookstore stair turned twice",
-      "before it reached the quiet floor.",
-      "A window there held a pot of thyme.",
-      "The books leaned the way old friends lean.",
-      "Find a word printed near you.",
-      "Even a small one."
+      "Kitapçının merdiveni iki kez döndü",
+      "sessiz kata ulaşmadan önce.",
+      "Oradaki pencerede bir tencere kekik vardı.",
+      "Kitaplar eski dostların eğildiği gibi eğiliyordu.",
+      "Yakınınızda basılmış bir kelime bulun.",
+      "Küçük bir tane bile."
     ],
     "topics": [
       "paper",
@@ -1049,15 +1049,15 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-073",
+    "id": "tr-stories-073",
     "type": "micro_story",
     "fragments": [
-      "In the kitchen drawer",
-      "a wooden spoon had learned the shape of soup.",
-      "It lay beside a whisk",
-      "that was only geometry until someone needed it.",
-      "Look at one ordinary object near you.",
-      "Let it be enough."
+      "Mutfak çekmecesinde",
+      "tahta kaşık çorbanın şeklini öğrenmişti.",
+      "Bir çırpma telinin yanında yatıyordu",
+      "Birisi ona ihtiyaç duyana kadar bu yalnızca geometriydi.",
+      "Yakınınızdaki sıradan bir nesneye bakın.",
+      "Yeterince olsun."
     ],
     "topics": [
       "home",
@@ -1066,16 +1066,16 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-074",
+    "id": "tr-stories-074",
     "type": "micro_story",
     "fragments": [
-      "The garden path",
-      "knew two kinds of green.",
-      "Moss between the stones.",
-      "And the taller green that moved when the air did.",
-      "Keep one of those greens.",
-      "Look around.",
-      "Can you find a green of your own?"
+      "Bahçe yolu",
+      "iki çeşit yeşil tanıyordu.",
+      "Taşların arasında yosun.",
+      "Ve hava hareket ettiğinde hareket eden daha uzun yeşil.",
+      "Şu yeşilliklerden birini sakla.",
+      "Etrafınıza bakın.",
+      "Kendinize ait bir yeşil bulabilir misiniz?"
     ],
     "topics": [
       "plants",
@@ -1084,15 +1084,15 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-075",
+    "id": "tr-stories-075",
     "type": "micro_story",
     "fragments": [
-      "Late in the room",
-      "the window kept a square of night.",
-      "A lamp made a smaller square on the table.",
-      "Between them, the air did very little.",
-      "Notice where the light is coming from.",
-      "You can stay with that."
+      "Geç saatte odaya",
+      "pencere gecenin bir karesini koruyordu.",
+      "Bir lamba masanın üzerinde daha küçük bir kare oluşturdu.",
+      "Aralarında hava çok az şey yaptı.",
+      "Işığın nereden geldiğine dikkat edin.",
+      "Bununla kalabilirsin."
     ],
     "topics": [
       "night",
@@ -1101,16 +1101,16 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-076",
+    "id": "tr-stories-076",
     "type": "micro_story",
     "fragments": [
-      "From the window",
-      "fields arrived in long pale strips.",
-      "A single tree kept its place",
-      "as the rest of the view changed its mind.",
-      "Keep that tree.",
-      "Find something nearby that stands still",
-      "while other things can move."
+      "Pencereden",
+      "tarlalar uzun soluk şeritler halinde geldi.",
+      "Tek bir ağaç yerini korudu",
+      "görüşün geri kalanı fikrini değiştirdiğinde.",
+      "O ağacı sakla.",
+      "Yakınınızda hareketsiz duran bir şey bulun",
+      "diğer şeyler hareket edebilirken."
     ],
     "topics": [
       "earth",
@@ -1119,15 +1119,15 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-077",
+    "id": "tr-stories-077",
     "type": "micro_story",
     "fragments": [
-      "An envelope waited on the shelf",
-      "with no hurry to be opened.",
-      "The paper had a faint blue lining.",
-      "Someone had written only the first word of an address.",
-      "Notice one piece of paper near you.",
-      "Even a label counts."
+      "Rafta bir zarf bekliyordu",
+      "açılmak için acele etmeyin.",
+      "Kağıdın soluk mavi bir astarı vardı.",
+      "Birisi adresin yalnızca ilk kelimesini yazmıştı.",
+      "Yakınınızda bir kağıt parçasına dikkat edin.",
+      "Bir etiket bile önemlidir."
     ],
     "topics": [
       "paper"
@@ -1135,16 +1135,16 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-078",
+    "id": "tr-stories-078",
     "type": "micro_story",
     "fragments": [
-      "The hallway tiles",
-      "were almost white",
-      "except for one that had decided to be blue.",
-      "It sat there like a quiet fact.",
-      "Keep that blue.",
-      "Look down, or around.",
-      "Is there a color that stands a little apart?"
+      "Koridor fayansları",
+      "neredeyse beyazdı",
+      "mavi olmaya karar veren biri hariç.",
+      "Sessiz bir gerçek gibi orada duruyordu.",
+      "Şunu mavi tut.",
+      "Aşağıya veya etrafına bak.",
+      "Biraz farklı duran bir renk var mı?"
     ],
     "topics": [
       "room",

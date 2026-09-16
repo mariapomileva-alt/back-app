@@ -1,10 +1,10 @@
 [
   {
-    "id": "en-notice-001",
+    "id": "nl-notice-001",
     "type": "observation",
     "fragments": [
-      "Find one word",
-      "you can see around you."
+      "Zoek één woord",
+      "je kunt om je heen kijken."
     ],
     "topics": [
       "room"
@@ -12,11 +12,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-002",
+    "id": "nl-notice-002",
     "type": "observation",
     "fragments": [
-      "Notice one color",
-      "near your hands."
+      "Let op één kleur",
+      "dichtbij uw handen."
     ],
     "topics": [
       "room"
@@ -24,11 +24,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-003",
+    "id": "nl-notice-003",
     "type": "observation",
     "fragments": [
-      "Find an edge",
-      "where two surfaces meet."
+      "Zoek een rand",
+      "waar twee oppervlakken elkaar ontmoeten."
     ],
     "topics": [
       "room"
@@ -36,11 +36,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-004",
+    "id": "nl-notice-004",
     "type": "observation",
     "fragments": [
-      "Look for something",
-      "that is still."
+      "Zoek iets",
+      "dat is nog steeds."
     ],
     "topics": [
       "room"
@@ -48,12 +48,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-005",
+    "id": "nl-notice-005",
     "type": "observation",
     "fragments": [
-      "Find one thing",
-      "that is slightly closer",
-      "than the rest."
+      "Zoek één ding",
+      "dat is iets dichterbij",
+      "dan de rest."
     ],
     "topics": [
       "room"
@@ -61,11 +61,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-006",
+    "id": "nl-notice-006",
     "type": "observation",
     "fragments": [
-      "Notice a shadow,",
-      "even a small one."
+      "Let op een schaduw,",
+      "zelfs een kleintje."
     ],
     "topics": [
       "light"
@@ -73,11 +73,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-007",
+    "id": "nl-notice-007",
     "type": "observation",
     "fragments": [
-      "Find a straight line",
-      "somewhere nearby."
+      "Zoek een rechte lijn",
+      "ergens in de buurt."
     ],
     "topics": [
       "room"
@@ -85,11 +85,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-008",
+    "id": "nl-notice-008",
     "type": "observation",
     "fragments": [
-      "Look for a curve",
-      "instead of a corner."
+      "Zoek naar een bocht",
+      "in plaats van een hoek."
     ],
     "topics": [
       "room"
@@ -97,11 +97,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-009",
+    "id": "nl-notice-009",
     "type": "observation",
     "fragments": [
-      "Notice one texture",
-      "you are not touching."
+      "Let op één textuur",
+      "je raakt niet aan."
     ],
     "topics": [
       "room"
@@ -109,11 +109,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-010",
+    "id": "nl-notice-010",
     "type": "observation",
     "fragments": [
-      "Find something that is matte,",
-      "not shiny."
+      "Zoek iets dat mat is,",
+      "niet glanzend."
     ],
     "topics": [
       "room"
@@ -121,11 +121,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-011",
+    "id": "nl-notice-011",
     "type": "observation",
     "fragments": [
-      "Look for a patch",
-      "of softer light."
+      "Zoek naar een pleister",
+      "van zachter licht."
     ],
     "topics": [
       "light"
@@ -133,11 +133,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-012",
+    "id": "nl-notice-012",
     "type": "observation",
     "fragments": [
-      "Find one object",
-      "that could fit in a pocket."
+      "Zoek één voorwerp",
+      "dat zou in een broekzak passen."
     ],
     "topics": [
       "objects"
@@ -145,11 +145,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-013",
+    "id": "nl-notice-013",
     "type": "observation",
     "fragments": [
-      "Notice the farthest thing",
-      "you can see from here."
+      "Let op het verste",
+      "je kunt vanaf hier zien."
     ],
     "topics": [
       "room"
@@ -157,11 +157,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-014",
+    "id": "nl-notice-014",
     "type": "observation",
     "fragments": [
-      "Find a word printed",
-      "somewhere nearby."
+      "Zoek een gedrukt woord",
+      "ergens in de buurt."
     ],
     "topics": [
       "paper"
@@ -169,11 +169,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-015",
+    "id": "nl-notice-015",
     "type": "observation",
     "fragments": [
-      "Look at the space",
-      "between two objects."
+      "Kijk naar de ruimte",
+      "tussen twee objecten."
     ],
     "topics": [
       "room"
@@ -181,11 +181,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-016",
+    "id": "nl-notice-016",
     "type": "observation",
     "fragments": [
-      "Notice something",
-      "that is mostly one color."
+      "Merk iets op",
+      "dat is meestal één kleur."
     ],
     "topics": [
       "room"
@@ -193,11 +193,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-017",
+    "id": "nl-notice-017",
     "type": "observation",
     "fragments": [
-      "Find a surface",
-      "that looks cool to the touch."
+      "Zoek een oppervlak",
+      "dat ziet er cool uit om aan te raken."
     ],
     "topics": [
       "room"
@@ -205,11 +205,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-018",
+    "id": "nl-notice-018",
     "type": "observation",
     "fragments": [
-      "Look for something",
-      "vertical."
+      "Zoek iets",
+      "verticaal."
     ],
     "topics": [
       "room"
@@ -217,11 +217,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-019",
+    "id": "nl-notice-019",
     "type": "observation",
     "fragments": [
-      "Notice a place",
-      "where dust might gather."
+      "Let op een plaats",
+      "waar stof zich kan verzamelen."
     ],
     "topics": [
       "room"
@@ -229,11 +229,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-020",
+    "id": "nl-notice-020",
     "type": "observation",
     "fragments": [
-      "Find one thing",
-      "made of paper or card."
+      "Zoek één ding",
+      "gemaakt van papier of karton."
     ],
     "topics": [
       "paper"
@@ -241,11 +241,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-021",
+    "id": "nl-notice-021",
     "type": "observation",
     "fragments": [
-      "Look for a reflection,",
-      "even a faint one."
+      "Zoek naar een reflectie,",
+      "zelfs een flauwe."
     ],
     "topics": [
       "light"
@@ -253,12 +253,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-022",
+    "id": "nl-notice-022",
     "type": "observation",
     "fragments": [
-      "Notice the weight",
-      "of what you are sitting",
-      "or standing on."
+      "Let op het gewicht",
+      "van wat je zit",
+      "of erop staan."
     ],
     "topics": [
       "room"
@@ -266,11 +266,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-023",
+    "id": "nl-notice-023",
     "type": "observation",
     "fragments": [
-      "Find a corner of the room",
-      "and rest your eyes there."
+      "Zoek een hoek van de kamer",
+      "en laat je ogen daar rusten."
     ],
     "topics": [
       "room"
@@ -278,11 +278,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-024",
+    "id": "nl-notice-024",
     "type": "observation",
     "fragments": [
-      "Look for something",
-      "older than this week."
+      "Zoek iets",
+      "ouder dan deze week."
     ],
     "topics": [
       "objects"
@@ -290,11 +290,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-025",
+    "id": "nl-notice-025",
     "type": "observation",
     "fragments": [
-      "Notice one sound,",
-      "then let it pass."
+      "Let op één geluid,",
+      "laat het dan voorbijgaan."
     ],
     "topics": [
       "quiet"
@@ -302,11 +302,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-026",
+    "id": "nl-notice-026",
     "type": "observation",
     "fragments": [
-      "Find a rectangle",
-      "somewhere around you."
+      "Zoek een rechthoek",
+      "ergens om je heen."
     ],
     "topics": [
       "room"
@@ -314,11 +314,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-027",
+    "id": "nl-notice-027",
     "type": "observation",
     "fragments": [
-      "Look at the ceiling",
-      "for one slow breath of looking."
+      "Kijk naar het plafond",
+      "voor één langzame adem van kijken."
     ],
     "topics": [
       "room"
@@ -326,11 +326,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-028",
+    "id": "nl-notice-028",
     "type": "observation",
     "fragments": [
-      "Notice whether the light",
-      "is even or patchy."
+      "Let op of het licht",
+      "gelijkmatig of fragmentarisch is."
     ],
     "topics": [
       "light"
@@ -338,11 +338,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-029",
+    "id": "nl-notice-029",
     "type": "observation",
     "fragments": [
-      "Find something",
-      "you could name in one word."
+      "Zoek iets",
+      "je zou het in één woord kunnen noemen."
     ],
     "topics": [
       "language"
@@ -350,11 +350,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-030",
+    "id": "nl-notice-030",
     "type": "observation",
     "fragments": [
-      "Look for a fold,",
-      "a seam, or a joint."
+      "Zoek een vouw,",
+      "een naad of een verbinding."
     ],
     "topics": [
       "objects"
@@ -362,11 +362,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-031",
+    "id": "nl-notice-031",
     "type": "observation",
     "fragments": [
-      "Notice one thing",
-      "that is empty on purpose."
+      "Let op één ding",
+      "dat is met opzet leeg."
     ],
     "topics": [
       "room"
@@ -374,12 +374,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-032",
+    "id": "nl-notice-032",
     "type": "observation",
     "fragments": [
-      "Find a plant,",
-      "or the idea of a plant",
-      "in a picture."
+      "Zoek een plant,",
+      "of het idee van een plant",
+      "op een foto."
     ],
     "topics": [
       "plants"
@@ -387,11 +387,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-033",
+    "id": "nl-notice-033",
     "type": "observation",
     "fragments": [
-      "Look at your own sleeve or cuff",
-      "for a moment."
+      "Kijk naar je eigen mouw of manchet",
+      "even."
     ],
     "topics": [
       "room"
@@ -399,11 +399,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-034",
+    "id": "nl-notice-034",
     "type": "observation",
     "fragments": [
-      "Notice a temperature difference,",
-      "even a small one."
+      "Merk een temperatuurverschil op,",
+      "zelfs een kleintje."
     ],
     "topics": [
       "room"
@@ -411,11 +411,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-035",
+    "id": "nl-notice-035",
     "type": "observation",
     "fragments": [
-      "Find a number",
-      "somewhere nearby."
+      "Zoek een nummer",
+      "ergens in de buurt."
     ],
     "topics": [
       "paper"
@@ -423,11 +423,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-036",
+    "id": "nl-notice-036",
     "type": "observation",
     "fragments": [
-      "Look for something that leans,",
-      "even slightly."
+      "Zoek iets dat leunt,",
+      "zelfs een beetje."
     ],
     "topics": [
       "room"
@@ -435,11 +435,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-037",
+    "id": "nl-notice-037",
     "type": "observation",
     "fragments": [
-      "Notice the path your eyes took",
-      "to get here."
+      "Let op het pad dat je ogen volgden",
+      "om hier te komen."
     ],
     "topics": [
       "room"
@@ -447,11 +447,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-038",
+    "id": "nl-notice-038",
     "type": "observation",
     "fragments": [
-      "Find a circle or an oval",
-      "in the room."
+      "Zoek een cirkel of een ovaal",
+      "in de kamer."
     ],
     "topics": [
       "room"
@@ -459,11 +459,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-039",
+    "id": "nl-notice-039",
     "type": "observation",
     "fragments": [
-      "Look at the floor",
-      "where it meets a wall."
+      "Kijk naar de vloer",
+      "waar het een muur ontmoet."
     ],
     "topics": [
       "room"
@@ -471,11 +471,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-040",
+    "id": "nl-notice-040",
     "type": "observation",
     "fragments": [
-      "Notice one thing",
-      "you have not used today."
+      "Let op één ding",
+      "die je vandaag niet hebt gebruikt."
     ],
     "topics": [
       "objects"
@@ -483,11 +483,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-041",
+    "id": "nl-notice-041",
     "type": "observation",
     "fragments": [
-      "Find a quiet color,",
-      "not a loud one."
+      "Zoek een rustige kleur,",
+      "niet luid."
     ],
     "topics": [
       "room"
@@ -495,11 +495,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-042",
+    "id": "nl-notice-042",
     "type": "observation",
     "fragments": [
-      "Look for writing",
-      "that is not a screen."
+      "Zoek naar schrijven",
+      "dat is geen scherm."
     ],
     "topics": [
       "paper"
@@ -507,11 +507,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-043",
+    "id": "nl-notice-043",
     "type": "observation",
     "fragments": [
-      "Notice how far your feet are",
-      "from each other."
+      "Merk op hoe ver je voeten zijn",
+      "van elkaar."
     ],
     "topics": [
       "room"
@@ -519,11 +519,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-044",
+    "id": "nl-notice-044",
     "type": "observation",
     "fragments": [
-      "Find something stacked,",
-      "even two things."
+      "Vind iets gestapeld,",
+      "zelfs twee dingen."
     ],
     "topics": [
       "objects"
@@ -531,11 +531,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-045",
+    "id": "nl-notice-045",
     "type": "observation",
     "fragments": [
-      "Look at a doorway",
-      "or the idea of a doorway."
+      "Kijk naar een deuropening",
+      "of het idee van een deuropening."
     ],
     "topics": [
       "room"
@@ -543,11 +543,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-046",
+    "id": "nl-notice-046",
     "type": "observation",
     "fragments": [
-      "Notice one thing",
-      "that is slightly worn."
+      "Let op één ding",
+      "dat is een beetje versleten."
     ],
     "topics": [
       "objects"
@@ -555,11 +555,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-047",
+    "id": "nl-notice-047",
     "type": "observation",
     "fragments": [
-      "Find the nearest source of daylight,",
-      "if there is one."
+      "Vind de dichtstbijzijnde daglichtbron,",
+      "als die er is."
     ],
     "topics": [
       "light"
@@ -567,11 +567,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-048",
+    "id": "nl-notice-048",
     "type": "observation",
     "fragments": [
-      "Look once more,",
-      "then choose one detail to keep."
+      "Kijk nog een keer,",
+      "kies vervolgens één detail dat u wilt behouden."
     ],
     "topics": [
       "room"
@@ -579,11 +579,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-049",
+    "id": "nl-notice-049",
     "type": "observation",
     "fragments": [
-      "Find a cool surface",
-      "and rest your attention there, not your hand."
+      "Zoek een koel oppervlak",
+      "en laat uw aandacht daarop rusten, niet uw hand."
     ],
     "topics": [
       "room"
@@ -591,12 +591,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-050",
+    "id": "nl-notice-050",
     "type": "observation",
     "fragments": [
-      "If there is a window,",
-      "notice what it frames.",
-      "If not, notice a wall."
+      "Als er een raam is,",
+      "let op wat het omlijst.",
+      "Als dat niet het geval is, let dan op een muur."
     ],
     "topics": [
       "room"
@@ -604,11 +604,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-051",
+    "id": "nl-notice-051",
     "type": "observation",
     "fragments": [
-      "Look for a straight line",
-      "that is not a letter."
+      "Zoek naar een rechte lijn",
+      "dat is geen brief."
     ],
     "topics": [
       "objects"
@@ -616,11 +616,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-052",
+    "id": "nl-notice-052",
     "type": "observation",
     "fragments": [
-      "Notice whether the light is even",
-      "or gathered in one place."
+      "Let op of het licht gelijkmatig is",
+      "of op één plek verzameld."
     ],
     "topics": [
       "light"
@@ -628,11 +628,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-053",
+    "id": "nl-notice-053",
     "type": "observation",
     "fragments": [
-      "Find something that has been folded",
-      "or could be folded."
+      "Zoek iets dat is opgevouwen",
+      "of kan worden opgevouwen."
     ],
     "topics": [
       "paper"
@@ -640,11 +640,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-054",
+    "id": "nl-notice-054",
     "type": "observation",
     "fragments": [
-      "A sound far away, if there is one.",
-      "You do not need to name it."
+      "Een geluid ver weg, als dat er is.",
+      "Je hoeft het niet te benoemen."
     ],
     "topics": [
       "quiet"
@@ -652,11 +652,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-055",
+    "id": "nl-notice-055",
     "type": "observation",
     "fragments": [
-      "Look at the floor",
-      "as if it were a landscape."
+      "Kijk naar de vloer",
+      "alsof het een landschap is."
     ],
     "topics": [
       "room"
@@ -664,11 +664,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-056",
+    "id": "nl-notice-056",
     "type": "observation",
     "fragments": [
-      "Find a round thing.",
-      "Even a button counts."
+      "Zoek een rond ding.",
+      "Zelfs een knop telt."
     ],
     "topics": [
       "objects"
@@ -676,11 +676,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-057",
+    "id": "nl-notice-057",
     "type": "observation",
     "fragments": [
-      "Notice one temperature difference",
-      "near you — a cooler edge, a warmer patch."
+      "Let op één temperatuurverschil",
+      "bij jou in de buurt – een koelere rand, een warmere plek."
     ],
     "topics": [
       "home"
@@ -688,12 +688,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-058",
+    "id": "nl-notice-058",
     "type": "observation",
     "fragments": [
-      "If you can see outdoors,",
-      "find the simplest shape in view.",
-      "If not, find one indoors."
+      "Als je naar buiten kunt kijken,",
+      "zoek de eenvoudigste vorm die je ziet.",
+      "Zo niet, zoek er dan een binnenshuis."
     ],
     "topics": [
       "sky"
@@ -701,11 +701,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-059",
+    "id": "nl-notice-059",
     "type": "observation",
     "fragments": [
-      "Keep one detail from the last minute.",
-      "You do not need to say it."
+      "Bewaar één detail van de laatste minuut.",
+      "Je hoeft het niet te zeggen."
     ],
     "topics": [
       "quiet"
@@ -713,11 +713,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-060",
+    "id": "nl-notice-060",
     "type": "observation",
     "fragments": [
-      "Find something that is not trying",
-      "to be looked at."
+      "Zoek iets dat niet probeert",
+      "naar gekeken worden."
     ],
     "topics": [
       "objects"

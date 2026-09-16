@@ -1,15 +1,15 @@
 [
   {
-    "id": "en-stories-001",
+    "id": "nl-stories-001",
     "type": "micro_story",
     "fragments": [
-      "On a still lake",
-      "a small boat sat",
-      "as if it had forgotten to leave.",
-      "The water held the sky",
-      "without asking.",
-      "A bird crossed once.",
-      "Then the quiet returned."
+      "Aan een stil meer",
+      "er zat een kleine boot",
+      "alsof hij vergeten was te vertrekken.",
+      "Het water hield de hemel vast",
+      "zonder te vragen.",
+      "Eén keer is er een vogel overgestoken.",
+      "Toen keerde de rust terug."
     ],
     "topics": [
       "water"
@@ -17,14 +17,14 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-002",
+    "id": "nl-stories-002",
     "type": "micro_story",
     "fragments": [
-      "The chair",
-      "remembered the shape of waiting.",
-      "Afternoon collected itself",
-      "in a square of floor.",
-      "Nothing needed to happen next."
+      "De stoel",
+      "herinnerde zich de vorm van wachten.",
+      "De middag verzamelde zich",
+      "in een vierkant vloer.",
+      "Er hoefde verder niets te gebeuren."
     ],
     "topics": [
       "room"
@@ -32,16 +32,16 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Look at one still object near you."
+      "text": "Kijk naar een stilstaand object bij jou in de buurt."
     }
   },
   {
-    "id": "en-stories-003",
+    "id": "nl-stories-003",
     "type": "micro_story",
     "fragments": [
-      "A fern unrolled one slow new leaf.",
-      "The rest of the plant stayed as it was.",
-      "Green kept its own time."
+      "Een varen rolde één langzaam nieuw blad uit.",
+      "De rest van de plant bleef zoals hij was.",
+      "Groen hield zijn eigen tijd."
     ],
     "topics": [
       "plants"
@@ -49,14 +49,14 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-004",
+    "id": "nl-stories-004",
     "type": "micro_story",
     "fragments": [
-      "Clouds stacked themselves",
-      "without hurry.",
-      "The street darkened a little,",
-      "then paused.",
-      "Rain decided later."
+      "Wolken stapelden zich op",
+      "zonder haast.",
+      "De straat werd een beetje donkerder,",
+      "pauzeerde toen.",
+      "Regen besliste later."
     ],
     "topics": [
       "weather"
@@ -64,15 +64,15 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-005",
+    "id": "nl-stories-005",
     "type": "micro_story",
     "fragments": [
-      "Someone had left a page open",
-      "on the table.",
-      "The sentence in the middle",
-      "was unfinished.",
-      "It could wait.",
-      "Paper is patient."
+      "Iemand had een pagina opengelaten",
+      "op tafel.",
+      "De zin in het midden",
+      "was onvoltooid.",
+      "Het kon wachten.",
+      "Papier is geduldig."
     ],
     "topics": [
       "paper"
@@ -80,12 +80,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-006",
+    "id": "nl-stories-006",
     "type": "micro_story",
     "fragments": [
-      "The lamp made a small circle on the cloth.",
-      "Moths would have liked it, but none came.",
-      "The circle stayed, doing only that."
+      "De lamp maakte een kleine cirkel op het doek.",
+      "Motten zouden het leuk hebben gevonden, maar er kwam niemand.",
+      "De cirkel bleef en deed alleen dat."
     ],
     "topics": [
       "light"
@@ -93,12 +93,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-007",
+    "id": "nl-stories-007",
     "type": "micro_story",
     "fragments": [
-      "A path went between two fields of pale grass.",
-      "Stones kept the edges from wandering.",
-      "The path did not mind who used it."
+      "Er liep een pad tussen twee velden met bleek gras.",
+      "Stenen zorgden ervoor dat de randen niet afdwaalden.",
+      "Het pad vond het niet erg wie het gebruikte."
     ],
     "topics": [
       "earth"
@@ -106,12 +106,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-008",
+    "id": "nl-stories-008",
     "type": "micro_story",
     "fragments": [
-      "Evening arrived as a change in the color of walls.",
-      "One star appeared, then pretended it had been there.",
-      "The rest of the sky took its time."
+      "De avond kwam als een verandering in de kleur van de muren.",
+      "Er verscheen één ster en deed vervolgens alsof hij er was.",
+      "De rest van de lucht nam zijn tijd."
     ],
     "topics": [
       "sky"
@@ -119,16 +119,16 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Look up, even if only as far as the ceiling."
+      "text": "Kijk omhoog, al is het maar tot aan het plafond."
     }
   },
   {
-    "id": "en-stories-009",
+    "id": "nl-stories-009",
     "type": "micro_story",
     "fragments": [
-      "A cup sat in the exact center of the saucer.",
-      "It was empty, which was a kind of readiness.",
-      "The table held both without comment."
+      "Een kopje zat precies in het midden van de schotel.",
+      "Het was leeg, wat een soort gereedheid was.",
+      "De tafel hield beide zonder commentaar vast."
     ],
     "topics": [
       "objects"
@@ -136,12 +136,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-010",
+    "id": "nl-stories-010",
     "type": "micro_story",
     "fragments": [
-      "Sparrows argued softly in a hedge.",
-      "Then they forgot the argument.",
-      "The hedge continued being a hedge."
+      "Mussen praatten zachtjes in een heg.",
+      "Toen vergaten ze het argument.",
+      "De haag bleef een haag."
     ],
     "topics": [
       "nature"
@@ -149,12 +149,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-011",
+    "id": "nl-stories-011",
     "type": "micro_story",
     "fragments": [
-      "Tide left a line of darker sand.",
-      "Shells kept their own small rooms.",
-      "The line would move again, and that was fine."
+      "Het getij liet een streep donkerder zand achter.",
+      "Shells hielden hun eigen kleine kamers.",
+      "De lijn zou weer bewegen, en dat was prima."
     ],
     "topics": [
       "water"
@@ -162,16 +162,16 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Now find a reflection, even a small one."
+      "text": "Zoek nu een reflectie, zelfs een kleine."
     }
   },
   {
-    "id": "en-stories-012",
+    "id": "nl-stories-012",
     "type": "micro_story",
     "fragments": [
-      "The house made one wooden sound, then none.",
-      "A clock somewhere decided not to insist.",
-      "Listening became easier."
+      "Het huis maakte één houten geluid, daarna geen.",
+      "Een klok ergens besloot niet aan te dringen.",
+      "Luisteren werd gemakkelijker."
     ],
     "topics": [
       "quiet"
@@ -179,13 +179,13 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-013",
+    "id": "nl-stories-013",
     "type": "micro_story",
     "fragments": [
-      "Apples waited in a bowl as if they had all day.",
-      "One was greener.",
-      "None were in a rush.",
-      "The bowl was older than the fruit."
+      "Appels wachtten in een kom alsof ze de hele dag hadden.",
+      "Eén was groener.",
+      "Niemand had haast.",
+      "De kom was ouder dan de vrucht."
     ],
     "topics": [
       "plants"
@@ -193,12 +193,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-014",
+    "id": "nl-stories-014",
     "type": "micro_story",
     "fragments": [
-      "A window held a square of ordinary street.",
-      "A bicycle passed through it and left.",
-      "The square remained ordinary, which helped."
+      "Een raam bevatte een vierkant van een gewone straat.",
+      "Er ging een fiets doorheen en vertrok.",
+      "Het plein bleef gewoon, wat hielp."
     ],
     "topics": [
       "room"
@@ -206,16 +206,16 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Look at one still object near you."
+      "text": "Kijk naar een stilstaand object bij jou in de buurt."
     }
   },
   {
-    "id": "en-stories-015",
+    "id": "nl-stories-015",
     "type": "micro_story",
     "fragments": [
-      "Dust showed up only where the sun insisted.",
-      "The rest of the air kept its secrets.",
-      "The sun moved on without taking the dust."
+      "Stof verscheen alleen waar de zon aandrong.",
+      "De rest van de lucht bewaarde zijn geheimen.",
+      "De zon ging verder zonder het stof op te nemen."
     ],
     "topics": [
       "light"
@@ -223,12 +223,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-016",
+    "id": "nl-stories-016",
     "type": "micro_story",
     "fragments": [
-      "A letter had been folded twice, carefully.",
-      "The handwriting leaned a little to the right.",
-      "No one needed to open it this minute."
+      "Een brief was zorgvuldig twee keer gevouwen.",
+      "Het handschrift leunde iets naar rechts.",
+      "Niemand hoefde het op dit moment te openen."
     ],
     "topics": [
       "paper"
@@ -236,12 +236,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-017",
+    "id": "nl-stories-017",
     "type": "micro_story",
     "fragments": [
-      "Fog made the far trees into suggestions.",
-      "The near trees stayed specific.",
-      "Walking felt shorter than it was."
+      "Mist maakte van de verre bomen suggesties.",
+      "De nabijgelegen bomen bleven specifiek.",
+      "Lopen voelde korter dan het was."
     ],
     "topics": [
       "weather"
@@ -249,16 +249,16 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Notice the air on your skin for a moment."
+      "text": "Let even op de lucht op je huid."
     }
   },
   {
-    "id": "en-stories-018",
+    "id": "nl-stories-018",
     "type": "micro_story",
     "fragments": [
-      "A kettle clicked as it finished its work.",
-      "Steam wrote a brief cloud and erased it.",
-      "The mug could wait a moment more."
+      "Een ketel klikte toen hij klaar was met zijn werk.",
+      "Steam schreef een korte wolk en wiste deze.",
+      "De mok kon nog even wachten."
     ],
     "topics": [
       "water"
@@ -266,12 +266,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-019",
+    "id": "nl-stories-019",
     "type": "micro_story",
     "fragments": [
-      "Clay on the wheel rose, then rested.",
-      "Hands knew when to stop.",
-      "The shape would dry into itself."
+      "Clay op het wiel kwam omhoog en rustte toen uit.",
+      "Handen wisten wanneer ze moesten stoppen.",
+      "De vorm zou in zichzelf opdrogen."
     ],
     "topics": [
       "earth"
@@ -279,12 +279,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-020",
+    "id": "nl-stories-020",
     "type": "micro_story",
     "fragments": [
-      "A moth opened on the inside of the lampshade.",
-      "Its wings were a map of quieter woods.",
-      "It stayed until the light felt enough."
+      "Aan de binnenkant van de lampenkap ging een mot open.",
+      "Zijn vleugels vormden een kaart van stillere bossen.",
+      "Het bleef zo ​​totdat het licht genoeg voelde."
     ],
     "topics": [
       "nature"
@@ -292,16 +292,16 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Find something living, or the color of something living."
+      "text": "Zoek iets levends, of de kleur van iets levends."
     }
   },
   {
-    "id": "en-stories-021",
+    "id": "nl-stories-021",
     "type": "micro_story",
     "fragments": [
-      "Morning arrived first on the windowsill.",
-      "Then it found the spines of the books.",
-      "The rest of the room caught up slowly."
+      "De ochtend arriveerde als eerste op de vensterbank.",
+      "Toen vond het de ruggen van de boeken.",
+      "De rest van de kamer haalde langzaam in."
     ],
     "topics": [
       "sky"
@@ -309,12 +309,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-022",
+    "id": "nl-stories-022",
     "type": "micro_story",
     "fragments": [
-      "A button had come off and been placed in a dish.",
-      "It looked finished, even alone.",
-      "Mending could be another day’s quiet."
+      "Er was een knop losgeraakt en in een schaal geplaatst.",
+      "Het zag er voltooid uit, zelfs alleen.",
+      "Het herstellen zou weer een dag stil kunnen zijn."
     ],
     "topics": [
       "objects"
@@ -322,12 +322,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-023",
+    "id": "nl-stories-023",
     "type": "micro_story",
     "fragments": [
-      "Snow made the street forget its usual noise.",
-      "Footsteps became careful punctuation.",
-      "Even the air seemed to read more slowly."
+      "Sneeuw deed de straat het gebruikelijke lawaai vergeten.",
+      "Voetstappen werden zorgvuldige interpunctie.",
+      "Zelfs de lucht leek langzamer te lezen."
     ],
     "topics": [
       "quiet"
@@ -335,16 +335,16 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Find something green around you."
+      "text": "Zoek iets groens om je heen."
     }
   },
   {
-    "id": "en-stories-024",
+    "id": "nl-stories-024",
     "type": "micro_story",
     "fragments": [
-      "Moss took the north side of the stone without debate.",
-      "The stone did not mind being partly green.",
-      "Years passed in that arrangement."
+      "Moss pakte zonder discussie de noordkant van de steen.",
+      "De steen vond het niet erg om gedeeltelijk groen te zijn.",
+      "Jaren gingen voorbij in die regeling."
     ],
     "topics": [
       "plants"
@@ -352,12 +352,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-025",
+    "id": "nl-stories-025",
     "type": "micro_story",
     "fragments": [
-      "Someone had aligned the books by height, almost.",
-      "One taller spine refused, politely.",
-      "The shelf held the disagreement."
+      "Iemand had de boeken bijna op hoogte uitgelijnd.",
+      "Eén langere ruggengraat weigerde beleefd.",
+      "De plank hield het meningsverschil vast."
     ],
     "topics": [
       "room"
@@ -365,12 +365,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-026",
+    "id": "nl-stories-026",
     "type": "micro_story",
     "fragments": [
-      "Rain wrote on the glass in temporary letters.",
-      "They ran into each other and became weather.",
-      "Inside, the table stayed dry on purpose."
+      "Regen schreef in tijdelijke letters op het glas.",
+      "Ze kwamen elkaar tegen en werden weer.",
+      "Binnen bleef de tafel expres droog."
     ],
     "topics": [
       "water"
@@ -378,16 +378,16 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Now find a reflection, even a small one."
+      "text": "Zoek nu een reflectie, zelfs een kleine."
     }
   },
   {
-    "id": "en-stories-027",
+    "id": "nl-stories-027",
     "type": "micro_story",
     "fragments": [
-      "A candle shortened itself without complaint.",
-      "Wax remembered the last hour in rings.",
-      "The room used the small light well."
+      "Een kaars verkortte zichzelf zonder klachten.",
+      "Wax herinnerde zich het laatste uur in ringen.",
+      "De kamer maakte goed gebruik van het kleine licht."
     ],
     "topics": [
       "light"
@@ -395,12 +395,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-028",
+    "id": "nl-stories-028",
     "type": "micro_story",
     "fragments": [
-      "The crossword had one square left empty.",
-      "The clue was kind, if you looked again.",
-      "Leaving it open was also an answer."
+      "Bij het kruiswoordraadsel was één vakje leeg gelaten.",
+      "De aanwijzing was vriendelijk, als je nog eens keek.",
+      "Open laten was ook een oplossing."
     ],
     "topics": [
       "language"
@@ -408,12 +408,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-029",
+    "id": "nl-stories-029",
     "type": "micro_story",
     "fragments": [
-      "A garden wall kept the hill from visiting the path.",
-      "Lichen signed the stones in pale green.",
-      "No one needed to translate it."
+      "Een tuinmuur weerhield de heuvel ervan het pad te bezoeken.",
+      "Lichen signeerde de stenen in lichtgroen.",
+      "Niemand hoefde het te vertalen."
     ],
     "topics": [
       "earth"
@@ -421,16 +421,16 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Find something with a little texture."
+      "text": "Zoek iets met een beetje textuur."
     }
   },
   {
-    "id": "en-stories-030",
+    "id": "nl-stories-030",
     "type": "micro_story",
     "fragments": [
-      "The afternoon had a middle, though clocks disagreed.",
-      "A fly chose a sunlit patch of wall.",
-      "Both stayed for a while, then didn’t."
+      "De middag had een midden, hoewel de klokken het daar niet mee eens waren.",
+      "Een vlieg koos een zonovergoten stukje muur.",
+      "Beiden bleven een tijdje en daarna niet meer."
     ],
     "topics": [
       "time"
@@ -438,13 +438,13 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-031",
+    "id": "nl-stories-031",
     "type": "micro_story",
     "fragments": [
-      "A wooden spoon rested across a pot.",
-      "Soup could wait.",
-      "Stirring could wait.",
-      "The kitchen sounded like itself."
+      "Een houten lepel rustte op een pot.",
+      "Soep kon wachten.",
+      "Het roeren kon wachten.",
+      "De keuken klonk als zichzelf."
     ],
     "topics": [
       "objects"
@@ -452,12 +452,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-032",
+    "id": "nl-stories-032",
     "type": "micro_story",
     "fragments": [
-      "Ducks drew the same slow comma on the pond.",
-      "Ripples signed it and let it go.",
-      "The far bank did not comment."
+      "Eenden tekenden dezelfde langzame komma op de vijver.",
+      "Ripples ondertekende het en liet het los.",
+      "De verre oever gaf geen commentaar."
     ],
     "topics": [
       "nature"
@@ -465,16 +465,16 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Find something living, or the color of something living."
+      "text": "Zoek iets levends, of de kleur van iets levends."
     }
   },
   {
-    "id": "en-stories-033",
+    "id": "nl-stories-033",
     "type": "micro_story",
     "fragments": [
-      "A map was folded so the river met itself.",
-      "Creases became extra geography.",
-      "Unfolding could happen later."
+      "Er werd een kaart opgevouwen zodat de rivier zichzelf ontmoette.",
+      "Vouwen werden extra geografie.",
+      "Het ontvouwen kan later gebeuren."
     ],
     "topics": [
       "paper"
@@ -482,12 +482,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-034",
+    "id": "nl-stories-034",
     "type": "micro_story",
     "fragments": [
-      "Wind moved the dry leaves without choosing favorites.",
-      "They made a sound like distant paper.",
-      "The trees kept their places."
+      "De wind verplaatste de droge bladeren zonder favorieten te kiezen.",
+      "Ze maakten een geluid als papier in de verte.",
+      "De bomen behielden hun plaats."
     ],
     "topics": [
       "sky"
@@ -495,12 +495,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-035",
+    "id": "nl-stories-035",
     "type": "micro_story",
     "fragments": [
-      "A blanket kept the shape of the last person.",
-      "The sofa did not mind.",
-      "Evening could sit there too."
+      "Een deken behield de vorm van de laatste persoon.",
+      "De bank vond het niet erg.",
+      "Avond zou daar ook kunnen zitten."
     ],
     "topics": [
       "room"
@@ -508,16 +508,16 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Look at one still object near you."
+      "text": "Kijk naar een stilstaand object bij jou in de buurt."
     }
   },
   {
-    "id": "en-stories-036",
+    "id": "nl-stories-036",
     "type": "micro_story",
     "fragments": [
-      "Somewhere in the building, a door closed softly.",
-      "Footsteps faded into a kind of weather.",
-      "This room returned to its own volume."
+      "Ergens in het gebouw ging een deur zachtjes dicht.",
+      "Voetstappen vervaagden tot een soort weer.",
+      "Deze kamer keerde terug naar zijn eigen volume."
     ],
     "topics": [
       "quiet"
@@ -525,12 +525,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-037",
+    "id": "nl-stories-037",
     "type": "micro_story",
     "fragments": [
-      "Ice at the edge of the lake was thin and clear.",
-      "Pebbles showed through like quiet punctuation.",
-      "No one needed to step on it."
+      "Het ijs aan de rand van het meer was dun en helder.",
+      "Kiezelstenen kwamen door als stille interpunctie.",
+      "Niemand hoefde erop te trappen."
     ],
     "topics": [
       "water"
@@ -538,13 +538,13 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-038",
+    "id": "nl-stories-038",
     "type": "micro_story",
     "fragments": [
-      "A windowsill basil leaned toward the glass.",
-      "Someone turned the pot a quarter turn.",
-      "Tomorrow it would lean again.",
-      "That was the pact."
+      "Een vensterbankbasilicum leunde naar het glas.",
+      "Iemand heeft de pot een kwartslag gedraaid.",
+      "Morgen zou het weer leunen.",
+      "Dat was het pact."
     ],
     "topics": [
       "plants"
@@ -552,16 +552,16 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Now find something green around you."
+      "text": "Zoek nu iets groens om je heen."
     }
   },
   {
-    "id": "en-stories-039",
+    "id": "nl-stories-039",
     "type": "micro_story",
     "fragments": [
-      "Keys lay in a small ceramic dish.",
-      "They were not needed for this hour.",
-      "The dish made them look considered."
+      "De sleutels lagen in een klein keramieken schaaltje.",
+      "Ze waren dit uur niet nodig.",
+      "Het gerecht zorgde ervoor dat ze er bedachtzaam uitzagen."
     ],
     "topics": [
       "objects"
@@ -569,12 +569,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-040",
+    "id": "nl-stories-040",
     "type": "micro_story",
     "fragments": [
-      "Late sun found the grain in the wooden floor.",
-      "Each board kept a slightly different gold.",
-      "Then the gold went, and the wood remained."
+      "De late zon vond het graan in de houten vloer.",
+      "Elk bord bewaarde een iets ander goud.",
+      "Toen verdween het goud en bleef het hout over."
     ],
     "topics": [
       "light"
@@ -582,12 +582,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-041",
+    "id": "nl-stories-041",
     "type": "micro_story",
     "fragments": [
-      "Tide.",
-      "It drew a thin line of foam.",
-      "Then took the line back."
+      "Getijde.",
+      "Het trok een dun lijntje schuim.",
+      "Vervolgens nam de lijn terug."
     ],
     "topics": [
       "coast"
@@ -595,12 +595,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-042",
+    "id": "nl-stories-042",
     "type": "micro_story",
     "fragments": [
-      "At the forest edge the light changed its mind.",
-      "One more tree.",
-      "Then a field."
+      "Aan de bosrand veranderde het licht van gedachten.",
+      "Nog een boom.",
+      "Dan een veld."
     ],
     "topics": [
       "forest"
@@ -608,16 +608,16 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Find a leaf-shape, even in a pattern or a print."
+      "text": "Zoek een bladvorm, zelfs in een patroon of print."
     }
   },
   {
-    "id": "en-stories-043",
+    "id": "nl-stories-043",
     "type": "micro_story",
     "fragments": [
-      "The night window held a streetlamp and a small moth of dust on the glass.",
-      "Outside, almost nothing moved.",
-      "Inside, the room kept its own dim."
+      "In het nachtraam stond een straatlantaarn en een klein stofmotje op het glas.",
+      "Buiten bewoog bijna niets.",
+      "Binnen behield de kamer zijn eigen schemer."
     ],
     "topics": [
       "night"
@@ -625,12 +625,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-044",
+    "id": "nl-stories-044",
     "type": "micro_story",
     "fragments": [
-      "A stone in the palm.",
-      "Cooler than expected.",
-      "It asked for nothing."
+      "Een steen in de handpalm.",
+      "Koeler dan verwacht.",
+      "Het vroeg om niets."
     ],
     "topics": [
       "stone"
@@ -638,11 +638,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-045",
+    "id": "nl-stories-045",
     "type": "micro_story",
     "fragments": [
-      "An envelope waited on the shelf, unopened on purpose.",
-      "Paper can hold a pause as well as a message."
+      "Er lag een envelop op de plank, die met opzet ongeopend was.",
+      "Papier kan zowel een pauze als een boodschap bevatten."
     ],
     "topics": [
       "paper"
@@ -650,16 +650,16 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Notice one piece of paper or cardboard near you."
+      "text": "Let op een stuk papier of karton bij u in de buurt."
     }
   },
   {
-    "id": "en-stories-046",
+    "id": "nl-stories-046",
     "type": "micro_story",
     "fragments": [
-      "Stairs remembered many feet and still offered the same two choices:",
-      "up, or down,",
-      "or sitting on a step for no reason."
+      "Trappen herinnerden zich vele voeten en boden nog steeds dezelfde twee keuzes:",
+      "omhoog of omlaag,",
+      "of zonder reden op een trede zitten."
     ],
     "topics": [
       "room"
@@ -667,12 +667,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-047",
+    "id": "nl-stories-047",
     "type": "micro_story",
     "fragments": [
-      "Frost on the railing.",
-      "A thin white handwriting.",
-      "It would not last the morning."
+      "Vorst op de reling.",
+      "Een dun wit handschrift.",
+      "Het zou de ochtend niet duren."
     ],
     "topics": [
       "weather"
@@ -680,11 +680,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-048",
+    "id": "nl-stories-048",
     "type": "micro_story",
     "fragments": [
-      "The kite was only string and cloth until the air agreed.",
-      "Then it became a small opinion in a large sky."
+      "De vlieger bestond alleen maar uit touw en stof totdat de lucht ermee instemde.",
+      "Toen werd het een kleine mening in een grote lucht."
     ],
     "topics": [
       "sky"
@@ -692,12 +692,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-049",
+    "id": "nl-stories-049",
     "type": "micro_story",
     "fragments": [
-      "Between two dunes",
-      "the path forgot it was a path.",
-      "Sand kept the secret poorly."
+      "Tussen twee duinen",
+      "het pad vergat dat het een pad was.",
+      "Sand bewaarde het geheim slecht."
     ],
     "topics": [
       "coast"
@@ -705,12 +705,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-050",
+    "id": "nl-stories-050",
     "type": "micro_story",
     "fragments": [
-      "Ink.",
-      "A dark comma on the page.",
-      "The sentence around it could wait."
+      "Inkt.",
+      "Een donkere komma op de pagina.",
+      "De zin eromheen kon wachten."
     ],
     "topics": [
       "paper"
@@ -718,11 +718,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-051",
+    "id": "nl-stories-051",
     "type": "micro_story",
     "fragments": [
-      "In the quiet room the clock was less important",
-      "than the way the curtain almost did not move."
+      "In de stille kamer was de klok minder belangrijk",
+      "dan de manier waarop het gordijn bijna niet bewoog."
     ],
     "topics": [
       "quiet"
@@ -730,20 +730,20 @@
     "difficulty": 1,
     "followUp": {
       "type": "choice",
-      "text": "Is the room you are in more still or more moving?",
+      "text": "Is de kamer waarin u zich bevindt stiller of meer in beweging?",
       "options": [
-        "still",
-        "moving",
-        "in between"
+        "nog steeds",
+        "bewegen",
+        "tussenin"
       ]
     }
   },
   {
-    "id": "en-stories-052",
+    "id": "nl-stories-052",
     "type": "micro_story",
     "fragments": [
-      "Pine needles made a bronze carpet that did not mind being stepped on.",
-      "The trees kept their own conversation above it."
+      "Dennennaalden vormden een bronzen tapijt waar je niet op trapte.",
+      "De bomen hielden hun eigen gesprek erboven."
     ],
     "topics": [
       "forest"
@@ -751,12 +751,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-053",
+    "id": "nl-stories-053",
     "type": "micro_story",
     "fragments": [
-      "A hinge.",
-      "It knew two positions.",
-      "Both were honest."
+      "Een scharnier.",
+      "Het kende twee posities.",
+      "Beiden waren eerlijk."
     ],
     "topics": [
       "objects"
@@ -764,11 +764,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-054",
+    "id": "nl-stories-054",
     "type": "micro_story",
     "fragments": [
-      "Late light along the coast turned the water into hammered metal.",
-      "Then the metal went dull and was only water again."
+      "Het late licht langs de kust veranderde het water in gehamerd metaal.",
+      "Toen werd het metaal dof en was het weer alleen maar water."
     ],
     "topics": [
       "coast"
@@ -776,11 +776,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-055",
+    "id": "nl-stories-055",
     "type": "micro_story",
     "fragments": [
-      "Someone had stacked firewood as if stacking were a kind of care.",
-      "The pile waited without hurry."
+      "Iemand had brandhout gestapeld alsof stapelen een soort zorg was.",
+      "De stapel wachtte zonder haast."
     ],
     "topics": [
       "home"
@@ -788,12 +788,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-056",
+    "id": "nl-stories-056",
     "type": "micro_story",
     "fragments": [
-      "Moon.",
-      "Not full.",
-      "Enough."
+      "Maan.",
+      "Niet vol.",
+      "Genoeg."
     ],
     "topics": [
       "night"
@@ -801,11 +801,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-057",
+    "id": "nl-stories-057",
     "type": "micro_story",
     "fragments": [
-      "The library aisle smelled like dry paper and a little dust that had settled on purpose.",
-      "Books leaned on each other the way people do in a slow queue."
+      "Het gangpad van de bibliotheek rook naar droog papier en een beetje stof dat met opzet was neergedaald.",
+      "Boeken leunden tegen elkaar aan, zoals mensen dat doen in een langzame rij."
     ],
     "topics": [
       "paper"
@@ -813,15 +813,15 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Find a straight line nearby — a shelf, a frame, an edge."
+      "text": "Zoek een rechte lijn in de buurt: een plank, een frame, een rand."
     }
   },
   {
-    "id": "en-stories-058",
+    "id": "nl-stories-058",
     "type": "micro_story",
     "fragments": [
-      "A pebble skipped once in memory,",
-      "then the lake went back to being a lake."
+      "Een steentje dat een keer in de herinnering is overgeslagen,",
+      "Toen werd het meer weer een meer."
     ],
     "topics": [
       "water"
@@ -829,11 +829,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-059",
+    "id": "nl-stories-059",
     "type": "micro_story",
     "fragments": [
-      "The greenhouse held a private summer while the path outside stayed ordinary.",
-      "Glass made the difference without making a speech."
+      "De kas hield een privézomer, terwijl het pad buiten gewoon bleef.",
+      "Glass maakte het verschil zonder een toespraak te houden."
     ],
     "topics": [
       "plants"
@@ -841,12 +841,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-060",
+    "id": "nl-stories-060",
     "type": "micro_story",
     "fragments": [
-      "String on a nail.",
-      "It had been useful once.",
-      "Now it was only a small hanging fact."
+      "Snaar aan een spijker.",
+      "Het was ooit nuttig geweest.",
+      "Nu was het nog maar een klein, hangend feit."
     ],
     "topics": [
       "objects"
@@ -854,11 +854,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-061",
+    "id": "nl-stories-061",
     "type": "micro_story",
     "fragments": [
-      "Fog took the far trees and left the near ones.",
-      "A fair trade, if you were standing still."
+      "De mist nam de verre bomen mee en liet de dichtbij gelegen bomen achter.",
+      "Een eerlijke handel, als je stilstond."
     ],
     "topics": [
       "weather"
@@ -866,16 +866,16 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Look at the farthest thing you can see from here."
+      "text": "Kijk naar het verste wat je vanaf hier kunt zien."
     }
   },
   {
-    "id": "en-stories-062",
+    "id": "nl-stories-062",
     "type": "micro_story",
     "fragments": [
-      "The windowsill collected three objects that had not yet decided they belonged together:",
-      "a stone, a stamp,",
-      "a length of green thread."
+      "De vensterbank verzamelde drie voorwerpen waarvan nog niet was besloten dat ze bij elkaar hoorden:",
+      "een steen, een stempel,",
+      "een stuk groene draad."
     ],
     "topics": [
       "room"
@@ -883,12 +883,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-063",
+    "id": "nl-stories-063",
     "type": "micro_story",
     "fragments": [
-      "Harbor water.",
-      "Dark. Patient.",
-      "Boats nodded without speaking."
+      "Havenwater.",
+      "Donker. Geduldig.",
+      "Boten knikten zonder iets te zeggen."
     ],
     "topics": [
       "coast"
@@ -896,12 +896,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-064",
+    "id": "nl-stories-064",
     "type": "micro_story",
     "fragments": [
-      "At the end of the lane",
-      "a lamp came on earlier than the others.",
-      "It did not explain itself."
+      "Aan het einde van de baan",
+      "een lamp ging eerder aan dan de andere.",
+      "Het verklaarde zichzelf niet."
     ],
     "topics": [
       "light"
@@ -909,17 +909,17 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-065",
+    "id": "nl-stories-065",
     "type": "micro_story",
     "fragments": [
-      "At the end of a quiet street",
-      "there was a small bakery",
-      "with three round tables.",
-      "The table beside the window",
-      "had a blue cup on it.",
-      "Keep the color blue in mind.",
-      "Look around.",
-      "Can you find something blue?"
+      "Aan het einde van een rustige straat",
+      "er was een kleine bakkerij",
+      "met drie ronde tafels.",
+      "De tafel naast het raam",
+      "er zat een blauw kopje op.",
+      "Houd rekening met de kleur blauw.",
+      "Kijk rond.",
+      "Kun je iets blauws vinden?"
     ],
     "topics": [
       "room",
@@ -928,16 +928,16 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-066",
+    "id": "nl-stories-066",
     "type": "micro_story",
     "fragments": [
-      "The harbor was still waking.",
-      "A rope made a slow circle in the water.",
-      "Then another.",
-      "Gulls argued about nothing important.",
-      "Keep the circles in mind.",
-      "If anything nearby is round,",
-      "let your eyes rest there."
+      "De haven was nog steeds wakker.",
+      "Een touw maakte een langzame cirkel in het water.",
+      "Dan nog een.",
+      "Meeuwen maakten ruzie over niets belangrijks.",
+      "Houd de cirkels in gedachten.",
+      "Als iets in de buurt rond is,",
+      "laat je ogen daar rusten."
     ],
     "topics": [
       "coast",
@@ -946,16 +946,16 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-067",
+    "id": "nl-stories-067",
     "type": "micro_story",
     "fragments": [
-      "On the kitchen table",
-      "a bowl held three lemons.",
-      "One had a small leaf still attached.",
-      "The yellow was almost too sure of itself.",
-      "Hold that yellow for a moment.",
-      "Look around.",
-      "Is anything near you that bright?"
+      "Op de keukentafel",
+      "een kom bevatte drie citroenen.",
+      "Aan één ervan zat nog een klein blaadje vast.",
+      "Het geel was bijna te zeker van zichzelf.",
+      "Houd dat geel even vast.",
+      "Kijk rond.",
+      "Is er iets bij jou in de buurt dat zo helder is?"
     ],
     "topics": [
       "home",
@@ -964,15 +964,15 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-068",
+    "id": "nl-stories-068",
     "type": "micro_story",
     "fragments": [
-      "Halfway down the lane",
-      "a yellow door waited",
-      "as if someone might still come back for a key.",
-      "Paint had thinned on the handle.",
-      "The rest of the street stayed ordinary.",
-      "Notice one worn thing near you."
+      "Halverwege de baan",
+      "een gele deur wachtte",
+      "alsof er misschien nog iemand terugkomt voor een sleutel.",
+      "De verf op het handvat was verdund.",
+      "De rest van de straat bleef gewoon.",
+      "Let op een versleten ding bij jou in de buurt."
     ],
     "topics": [
       "home"
@@ -980,16 +980,16 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-069",
+    "id": "nl-stories-069",
     "type": "micro_story",
     "fragments": [
-      "The river arranged its stones",
-      "without asking which should be on top.",
-      "Water found the same path",
-      "it had found yesterday.",
-      "A darker stone sat a little apart.",
-      "Keep that darker color.",
-      "Find something nearby that is not shiny."
+      "De rivier rangschikte zijn stenen",
+      "zonder te vragen welke bovenaan moet staan.",
+      "Water vond hetzelfde pad",
+      "het was gisteren gevonden.",
+      "Een donkerdere steen zat een beetje uit elkaar.",
+      "Bewaar die donkerdere kleur.",
+      "Zoek iets in de buurt dat niet glanst."
     ],
     "topics": [
       "water",
@@ -998,15 +998,15 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-070",
+    "id": "nl-stories-070",
     "type": "micro_story",
     "fragments": [
-      "Under the market awning",
-      "shade made a soft rectangle.",
-      "A crate of oranges caught the leftover light.",
-      "Someone counted them without speaking.",
-      "Count one small group of things near you.",
-      "No need to get it exact."
+      "Onder de luifel van de markt",
+      "schaduw vormde een zachte rechthoek.",
+      "Een krat sinaasappelen ving het overgebleven licht op.",
+      "Iemand telde ze zonder iets te zeggen.",
+      "Tel een kleine groep dingen bij jou in de buurt.",
+      "Het is niet nodig om het precies te krijgen."
     ],
     "topics": [
       "home",
@@ -1015,15 +1015,15 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-071",
+    "id": "nl-stories-071",
     "type": "micro_story",
     "fragments": [
-      "Snow sat on the fence rail",
-      "as if it had been invited.",
-      "Each post wore the same quiet hat.",
-      "The field behind it was only field.",
-      "Look for a straight line nearby.",
-      "A frame. An edge. A rail of some kind."
+      "Er lag sneeuw op de hekrail",
+      "alsof het was uitgenodigd.",
+      "Elke post droeg dezelfde stille hoed.",
+      "Het veld daarachter was alleen maar veld.",
+      "Zoek naar een rechte lijn in de buurt.",
+      "Een kader. Een rand. Een soort rail."
     ],
     "topics": [
       "weather",
@@ -1032,15 +1032,15 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-072",
+    "id": "nl-stories-072",
     "type": "micro_story",
     "fragments": [
-      "The bookstore stair turned twice",
-      "before it reached the quiet floor.",
-      "A window there held a pot of thyme.",
-      "The books leaned the way old friends lean.",
-      "Find a word printed near you.",
-      "Even a small one."
+      "De trap van de boekwinkel draaide twee keer",
+      "voordat het de stille verdieping bereikte.",
+      "In een raam stond een pot tijm.",
+      "De boeken leunden zoals oude vrienden leunen.",
+      "Zoek een gedrukt woord bij u in de buurt.",
+      "Zelfs een kleintje."
     ],
     "topics": [
       "paper",
@@ -1049,15 +1049,15 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-073",
+    "id": "nl-stories-073",
     "type": "micro_story",
     "fragments": [
-      "In the kitchen drawer",
-      "a wooden spoon had learned the shape of soup.",
-      "It lay beside a whisk",
-      "that was only geometry until someone needed it.",
-      "Look at one ordinary object near you.",
-      "Let it be enough."
+      "In de keukenla",
+      "een houten lepel had de vorm van soep geleerd.",
+      "Het lag naast een garde",
+      "dat was alleen maar geometrie totdat iemand het nodig had.",
+      "Kijk naar een gewoon object bij jou in de buurt.",
+      "Laat het genoeg zijn."
     ],
     "topics": [
       "home",
@@ -1066,16 +1066,16 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-074",
+    "id": "nl-stories-074",
     "type": "micro_story",
     "fragments": [
-      "The garden path",
-      "knew two kinds of green.",
-      "Moss between the stones.",
-      "And the taller green that moved when the air did.",
-      "Keep one of those greens.",
-      "Look around.",
-      "Can you find a green of your own?"
+      "Het tuinpad",
+      "kende twee soorten groen.",
+      "Mos tussen de stenen.",
+      "En het hogere groen dat bewoog als de lucht dat deed.",
+      "Bewaar een van die groenten.",
+      "Kijk rond.",
+      "Kun jij zelf een groene vinden?"
     ],
     "topics": [
       "plants",
@@ -1084,15 +1084,15 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-075",
+    "id": "nl-stories-075",
     "type": "micro_story",
     "fragments": [
-      "Late in the room",
-      "the window kept a square of night.",
-      "A lamp made a smaller square on the table.",
-      "Between them, the air did very little.",
-      "Notice where the light is coming from.",
-      "You can stay with that."
+      "Laat in de kamer",
+      "het raam hield een vierkant van nacht.",
+      "Een lamp maakte een kleiner vierkant op de tafel.",
+      "Tussen hen deed de lucht heel weinig.",
+      "Merk op waar het licht vandaan komt.",
+      "Daar kun je bij blijven."
     ],
     "topics": [
       "night",
@@ -1101,16 +1101,16 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-076",
+    "id": "nl-stories-076",
     "type": "micro_story",
     "fragments": [
-      "From the window",
-      "fields arrived in long pale strips.",
-      "A single tree kept its place",
-      "as the rest of the view changed its mind.",
-      "Keep that tree.",
-      "Find something nearby that stands still",
-      "while other things can move."
+      "Vanuit het raam",
+      "velden arriveerden in lange, bleke stroken.",
+      "Eén enkele boom behield zijn plaats",
+      "terwijl de rest van het standpunt van gedachten veranderde.",
+      "Houd die boom.",
+      "Zoek iets in de buurt dat stilstaat",
+      "terwijl andere dingen kunnen bewegen."
     ],
     "topics": [
       "earth",
@@ -1119,15 +1119,15 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-077",
+    "id": "nl-stories-077",
     "type": "micro_story",
     "fragments": [
-      "An envelope waited on the shelf",
-      "with no hurry to be opened.",
-      "The paper had a faint blue lining.",
-      "Someone had written only the first word of an address.",
-      "Notice one piece of paper near you.",
-      "Even a label counts."
+      "Er wachtte een envelop op de plank",
+      "zonder haast om geopend te worden.",
+      "Het papier had een vage blauwe rand.",
+      "Iemand had alleen het eerste woord van een adres geschreven.",
+      "Let op een stuk papier bij jou in de buurt.",
+      "Zelfs een label telt."
     ],
     "topics": [
       "paper"
@@ -1135,16 +1135,16 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-078",
+    "id": "nl-stories-078",
     "type": "micro_story",
     "fragments": [
-      "The hallway tiles",
-      "were almost white",
-      "except for one that had decided to be blue.",
-      "It sat there like a quiet fact.",
-      "Keep that blue.",
-      "Look down, or around.",
-      "Is there a color that stands a little apart?"
+      "De gangtegels",
+      "waren bijna wit",
+      "behalve één die besloten had blauw te zijn.",
+      "Het bleef daar liggen als een stil feit.",
+      "Houd dat blauw.",
+      "Kijk naar beneden, of om je heen.",
+      "Is er een kleur die een beetje uit elkaar staat?"
     ],
     "topics": [
       "room",

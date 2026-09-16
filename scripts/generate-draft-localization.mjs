@@ -82,10 +82,16 @@ async function translateStrings(uniqueStrings, locale) {
   const chunkSize = 40;
   for (let index = 0; index < uniqueStrings.length; index += chunkSize) {
     const chunk = uniqueStrings.slice(index, index + chunkSize);
-    const result = await translate(chunk, { from: 'en', to, forceBatch: true });
+    const result = await translate(chunk, {
+      from: 'en',
+      to,
+      forceBatch: true,
+      rejectOnPartialFail: false,
+    });
     const rows = Array.isArray(result) ? result : [result];
     rows.forEach((row, offset) => {
-      lookup.set(chunk[offset], row.text ?? chunk[offset]);
+      const source = chunk[offset];
+      lookup.set(source, row?.text && row.text !== source ? row.text : source);
     });
     console.log(`  batch ${Math.floor(index / chunkSize) + 1}/${Math.ceil(uniqueStrings.length / chunkSize)}`);
     await new Promise((resolve) => setTimeout(resolve, 250));

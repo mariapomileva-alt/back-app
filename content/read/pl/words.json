@@ -1,10 +1,10 @@
 [
   {
-    "id": "en-words-001",
+    "id": "pl-words-001",
     "type": "word",
     "fragments": [
-      "MOSS",
-      "Notice how little it needs."
+      "MECH",
+      "Zauważ, jak niewiele potrzeba."
     ],
     "topics": [
       "plants",
@@ -13,12 +13,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-002",
+    "id": "pl-words-002",
     "type": "word",
     "fragments": [
-      "This one.",
-      "LINEN",
-      "Follow the line of the L."
+      "Ten.",
+      "BIELIZNA",
+      "Podążaj za linią L."
     ],
     "topics": [
       "room",
@@ -27,11 +27,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-003",
+    "id": "pl-words-003",
     "type": "word",
     "fragments": [
-      "ELEPHANT",
-      "Notice only the vowels."
+      "SŁOŃ",
+      "Zwróć uwagę tylko na samogłoski."
     ],
     "topics": [
       "nature"
@@ -39,12 +39,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-004",
+    "id": "pl-words-004",
     "type": "word",
     "fragments": [
-      "Look at this word.",
-      "WINDOW",
-      "Count the letters without naming them."
+      "Spójrz na to słowo.",
+      "OKNO",
+      "Policz litery, nie nazywając ich."
     ],
     "topics": [
       "room"
@@ -52,12 +52,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-005",
+    "id": "pl-words-005",
     "type": "word",
     "fragments": [
-      "QUIET",
-      "First letter.",
-      "Then the last."
+      "CICHY",
+      "Pierwsza litera.",
+      "Potem ostatni."
     ],
     "topics": [
       "room",
@@ -66,12 +66,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-006",
+    "id": "pl-words-006",
     "type": "word",
     "fragments": [
-      "A small word.",
-      "CLOUD",
-      "Follow the curve of the C."
+      "Małe słowo.",
+      "CHMURA",
+      "Podążaj za krzywą C."
     ],
     "topics": [
       "sky"
@@ -79,11 +79,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-007",
+    "id": "pl-words-007",
     "type": "word",
     "fragments": [
-      "Notice the weight of the O.",
-      "STONE"
+      "Zwróć uwagę na wagę O.",
+      "KAMIEŃ"
     ],
     "topics": [
       "stone"
@@ -91,20 +91,20 @@
     "difficulty": 1,
     "followUp": {
       "type": "choice",
-      "text": "If you can see a jacket or sweater, what color is it?",
+      "text": "Jeśli widzisz kurtkę lub sweter, jakiego jest koloru?",
       "options": [
-        "blue",
-        "black",
-        "another color"
+        "niebieski",
+        "czarny",
+        "inny kolor"
       ]
     }
   },
   {
-    "id": "en-words-008",
+    "id": "pl-words-008",
     "type": "word",
     "fragments": [
-      "RIVER",
-      "Let it sit."
+      "RZEKA",
+      "Niech siedzi."
     ],
     "topics": [
       "water"
@@ -112,11 +112,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-009",
+    "id": "pl-words-009",
     "type": "word",
     "fragments": [
-      "AMBER",
-      "Notice the warm shape of A."
+      "BURSZTYN",
+      "Zwróć uwagę na ciepły kształt A."
     ],
     "topics": [
       "light"
@@ -124,12 +124,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-010",
+    "id": "pl-words-010",
     "type": "word",
     "fragments": [
-      "This one.",
-      "FEATHER",
-      "Let your eyes rest on the TH."
+      "Ten.",
+      "PIÓRO",
+      "Niech twój wzrok spocznie na TH."
     ],
     "topics": [
       "nature"
@@ -137,11 +137,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-011",
+    "id": "pl-words-011",
     "type": "word",
     "fragments": [
-      "MEADOW",
-      "Notice only the vowels."
+      "ŁĄKA",
+      "Zwróć uwagę tylko na samogłoski."
     ],
     "topics": [
       "plants"
@@ -149,12 +149,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-012",
+    "id": "pl-words-012",
     "type": "word",
     "fragments": [
-      "Look at this word.",
-      "SILVER",
-      "Follow the S as it turns."
+      "Spójrz na to słowo.",
+      "SREBRNY",
+      "Podążaj za S, gdy się zakręci."
     ],
     "topics": [
       "light"
@@ -162,12 +162,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-013",
+    "id": "pl-words-013",
     "type": "word",
     "fragments": [
-      "LANTERN",
-      "First letter.",
-      "Then the last."
+      "LATARNIA",
+      "Pierwsza litera.",
+      "Potem ostatni."
     ],
     "topics": [
       "light"
@@ -175,12 +175,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-014",
+    "id": "pl-words-014",
     "type": "word",
     "fragments": [
-      "A small word.",
-      "KETTLE",
-      "The double T stands like a quiet gate."
+      "Małe słowo.",
+      "CZAJNIK",
+      "Podwójne T stoi jak cicha brama."
     ],
     "topics": [
       "room",
@@ -189,11 +189,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-015",
+    "id": "pl-words-015",
     "type": "word",
     "fragments": [
-      "Notice how V repeats, then rests.",
-      "VELVET"
+      "Zwróć uwagę, jak V powtarza się, a następnie odpoczywa.",
+      "AKSAMIT"
     ],
     "topics": [
       "room",
@@ -202,11 +202,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-016",
+    "id": "pl-words-016",
     "type": "word",
     "fragments": [
-      "PAPER",
-      "Let it sit."
+      "PAPIER",
+      "Niech siedzi."
     ],
     "topics": [
       "paper"
@@ -214,11 +214,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-017",
+    "id": "pl-words-017",
     "type": "word",
     "fragments": [
-      "HONEY",
-      "Notice only the O."
+      "MIÓD",
+      "Zwróć uwagę tylko na O."
     ],
     "topics": [
       "plants",
@@ -227,12 +227,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-018",
+    "id": "pl-words-018",
     "type": "word",
     "fragments": [
-      "This one.",
-      "BLANKET",
-      "Let the word take up its space."
+      "Ten.",
+      "KOC",
+      "Niech słowo zajmie swoją przestrzeń."
     ],
     "topics": [
       "room",
@@ -241,11 +241,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-019",
+    "id": "pl-words-019",
     "type": "word",
     "fragments": [
-      "GARDEN",
-      "Notice only the vowels."
+      "OGRÓD",
+      "Zwróć uwagę tylko na samogłoski."
     ],
     "topics": [
       "plants"
@@ -253,12 +253,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-020",
+    "id": "pl-words-020",
     "type": "word",
     "fragments": [
-      "Look at this word.",
-      "CANDLE",
-      "Follow the word from left to right, once."
+      "Spójrz na to słowo.",
+      "ŚWIECA",
+      "Podążaj raz za słowem od lewej do prawej."
     ],
     "topics": [
       "light"
@@ -266,12 +266,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-021",
+    "id": "pl-words-021",
     "type": "word",
     "fragments": [
-      "BUTTON",
-      "First letter.",
-      "Then the last."
+      "PRZYCISK",
+      "Pierwsza litera.",
+      "Potem ostatni."
     ],
     "topics": [
       "room",
@@ -280,12 +280,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-022",
+    "id": "pl-words-022",
     "type": "word",
     "fragments": [
-      "A small word.",
-      "WILLOW",
-      "Notice the W opening twice."
+      "Małe słowo.",
+      "WIERZBA",
+      "Zwróć uwagę na otwarcie W dwukrotnie."
     ],
     "topics": [
       "plants",
@@ -294,11 +294,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-023",
+    "id": "pl-words-023",
     "type": "word",
     "fragments": [
-      "Look at the shape, not the meaning.",
-      "MARBLE"
+      "Spójrz na kształt, a nie na znaczenie.",
+      "MARMUR"
     ],
     "topics": [
       "stone"
@@ -306,11 +306,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-024",
+    "id": "pl-words-024",
     "type": "word",
     "fragments": [
-      "COTTON",
-      "Let it sit."
+      "BAWEŁNA",
+      "Niech siedzi."
     ],
     "topics": [
       "room",
@@ -319,11 +319,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-025",
+    "id": "pl-words-025",
     "type": "word",
     "fragments": [
-      "SAUCER",
-      "Notice the curve of S and C."
+      "SPODEK",
+      "Zwróć uwagę na krzywą S i C."
     ],
     "topics": [
       "room",
@@ -332,12 +332,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-026",
+    "id": "pl-words-026",
     "type": "word",
     "fragments": [
-      "This one.",
-      "ORANGE",
-      "Find the vowels and leave the rest."
+      "Ten.",
+      "POMARAŃCZOWY",
+      "Znajdź samogłoski i zostaw resztę."
     ],
     "topics": [
       "plants",
@@ -346,11 +346,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-027",
+    "id": "pl-words-027",
     "type": "word",
     "fragments": [
-      "MIRROR",
-      "Notice only the vowels."
+      "LUSTRO",
+      "Zwróć uwagę tylko na samogłoski."
     ],
     "topics": [
       "room"
@@ -358,12 +358,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-028",
+    "id": "pl-words-028",
     "type": "word",
     "fragments": [
-      "Look at this word.",
-      "SHELL",
-      "Notice how small the word stays."
+      "Spójrz na to słowo.",
+      "POWŁOKA",
+      "Zwróć uwagę, jak małe jest to słowo."
     ],
     "topics": [
       "coast"
@@ -371,12 +371,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-029",
+    "id": "pl-words-029",
     "type": "word",
     "fragments": [
-      "TABLE",
-      "First letter.",
-      "Then the last."
+      "TABELA",
+      "Pierwsza litera.",
+      "Potem ostatni."
     ],
     "topics": [
       "room",
@@ -385,12 +385,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-030",
+    "id": "pl-words-030",
     "type": "word",
     "fragments": [
-      "A small word.",
-      "BREEZE",
-      "Follow the double E."
+      "Małe słowo.",
+      "BRYZA",
+      "Podążaj za podwójnym E."
     ],
     "topics": [
       "sky",
@@ -399,11 +399,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-031",
+    "id": "pl-words-031",
     "type": "word",
     "fragments": [
-      "Notice the round O.",
-      "POCKET"
+      "Zwróć uwagę na okrągłe O.",
+      "KIESZEŃ"
     ],
     "topics": [
       "room",
@@ -412,11 +412,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-032",
+    "id": "pl-words-032",
     "type": "word",
     "fragments": [
-      "THREAD",
-      "Let it sit."
+      "NITKA",
+      "Niech siedzi."
     ],
     "topics": [
       "paper",
@@ -425,11 +425,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-033",
+    "id": "pl-words-033",
     "type": "word",
     "fragments": [
-      "LADDER",
-      "The double D is a quiet pair."
+      "DRABINA",
+      "Podwójne D to spokojna para."
     ],
     "topics": [
       "room",
@@ -438,12 +438,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-034",
+    "id": "pl-words-034",
     "type": "word",
     "fragments": [
-      "This one.",
-      "CURTAIN",
-      "Let the word stay. You do not have to hold it."
+      "Ten.",
+      "KURTYNA",
+      "Niech słowo pozostanie. Nie musisz go trzymać."
     ],
     "topics": [
       "room"
@@ -451,11 +451,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-035",
+    "id": "pl-words-035",
     "type": "word",
     "fragments": [
-      "PEBBLE",
-      "Notice only the vowels."
+      "KAMYK",
+      "Zwróć uwagę tylko na samogłoski."
     ],
     "topics": [
       "stone",
@@ -464,12 +464,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-036",
+    "id": "pl-words-036",
     "type": "word",
     "fragments": [
-      "Look at this word.",
-      "YELLOW",
-      "Follow Y as it branches."
+      "Spójrz na to słowo.",
+      "ŻÓŁTY",
+      "Podążaj za Y, gdy się rozgałęzia."
     ],
     "topics": [
       "light"
@@ -477,16 +477,16 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Now find something yellow around you."
+      "text": "Teraz znajdź wokół siebie coś żółtego."
     }
   },
   {
-    "id": "en-words-037",
+    "id": "pl-words-037",
     "type": "word",
     "fragments": [
-      "FOREST",
-      "First letter.",
-      "Then the last."
+      "LAS",
+      "Pierwsza litera.",
+      "Potem ostatni."
     ],
     "topics": [
       "forest"
@@ -494,12 +494,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-038",
+    "id": "pl-words-038",
     "type": "word",
     "fragments": [
-      "A small word.",
-      "PILLOW",
-      "Soft letters. Double L."
+      "Małe słowo.",
+      "PODUSZKA",
+      "Miękkie litery. Podwójne L."
     ],
     "topics": [
       "room",
@@ -508,11 +508,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-039",
+    "id": "pl-words-039",
     "type": "word",
     "fragments": [
-      "Count the letters with your eyes only.",
-      "MAPLE"
+      "Licz litery tylko oczami.",
+      "KLON"
     ],
     "topics": [
       "plants",
@@ -521,11 +521,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-040",
+    "id": "pl-words-040",
     "type": "word",
     "fragments": [
-      "SHADOW",
-      "Let it sit."
+      "CIEŃ",
+      "Niech siedzi."
     ],
     "topics": [
       "light"
@@ -533,11 +533,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-041",
+    "id": "pl-words-041",
     "type": "word",
     "fragments": [
-      "CERAMIC",
-      "Follow the C at both ends."
+      "CERAMICZNY",
+      "Podążaj za literą C na obu końcach."
     ],
     "topics": [
       "room",
@@ -546,12 +546,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-042",
+    "id": "pl-words-042",
     "type": "word",
     "fragments": [
-      "This one.",
-      "NEEDLE",
-      "Double E in the middle."
+      "Ten.",
+      "IGŁA",
+      "Podwójne E w środku."
     ],
     "topics": [
       "plants",
@@ -560,11 +560,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-043",
+    "id": "pl-words-043",
     "type": "word",
     "fragments": [
-      "BASKET",
-      "Notice only the vowels."
+      "KOSZYK",
+      "Zwróć uwagę tylko na samogłoski."
     ],
     "topics": [
       "room",
@@ -573,12 +573,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-044",
+    "id": "pl-words-044",
     "type": "word",
     "fragments": [
-      "Look at this word.",
-      "RAIN",
-      "Four letters. Plenty."
+      "Spójrz na to słowo.",
+      "DESZCZ",
+      "Cztery litery. Mnóstwo."
     ],
     "topics": [
       "sky",
@@ -587,12 +587,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-045",
+    "id": "pl-words-045",
     "type": "word",
     "fragments": [
-      "WOOL",
-      "First letter.",
-      "Then the last."
+      "WEŁNA",
+      "Pierwsza litera.",
+      "Potem ostatni."
     ],
     "topics": [
       "room",
@@ -601,12 +601,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-046",
+    "id": "pl-words-046",
     "type": "word",
     "fragments": [
-      "A small word.",
-      "GINGER",
-      "Soft G twice."
+      "Małe słowo.",
+      "OŻYWIĆ",
+      "Miękkie G dwa razy."
     ],
     "topics": [
       "plants",
@@ -615,11 +615,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-047",
+    "id": "pl-words-047",
     "type": "word",
     "fragments": [
-      "Let your eyes rest on TH.",
-      "CLOTH"
+      "Pozwól swoim oczom spocząć na TH.",
+      "PŁÓTNO"
     ],
     "topics": [
       "room",
@@ -628,11 +628,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-048",
+    "id": "pl-words-048",
     "type": "word",
     "fragments": [
-      "BASIL",
-      "Let it sit."
+      "BAZYLIA",
+      "Niech siedzi."
     ],
     "topics": [
       "plants"
@@ -640,11 +640,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-049",
+    "id": "pl-words-049",
     "type": "word",
     "fragments": [
-      "DRIFT",
-      "The word is already moving. You can stay."
+      "DRYF",
+      "Słowo już porusza. Możesz zostać."
     ],
     "topics": [
       "coast",
@@ -653,21 +653,21 @@
     "difficulty": 1,
     "followUp": {
       "type": "choice",
-      "text": "Are you sitting, standing, or somewhere in between?",
+      "text": "Siedzisz, stoisz, czy gdzieś pomiędzy?",
       "options": [
-        "sitting",
-        "standing",
-        "in between"
+        "posiedzenie",
+        "na stojąco",
+        "pomiędzy"
       ]
     }
   },
   {
-    "id": "en-words-050",
+    "id": "pl-words-050",
     "type": "word",
     "fragments": [
-      "This one.",
-      "QUILT",
-      "Notice Q and U traveling together."
+      "Ten.",
+      "KOŁDRA",
+      "Zwróć uwagę, że Q i U podróżują razem."
     ],
     "topics": [
       "room",
@@ -676,11 +676,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-051",
+    "id": "pl-words-051",
     "type": "word",
     "fragments": [
-      "STITCH",
-      "Notice only the vowels."
+      "ŚCIEG",
+      "Zwróć uwagę tylko na samogłoski."
     ],
     "topics": [
       "room",
@@ -689,12 +689,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-052",
+    "id": "pl-words-052",
     "type": "word",
     "fragments": [
-      "Look at this word.",
+      "Spójrz na to słowo.",
       "OCEAN",
-      "Three vowels waiting."
+      "Trzy samogłoski czekają."
     ],
     "topics": [
       "coast",
@@ -703,12 +703,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-053",
+    "id": "pl-words-053",
     "type": "word",
     "fragments": [
-      "LEMON",
-      "First letter.",
-      "Then the last."
+      "CYTRYNOWY",
+      "Pierwsza litera.",
+      "Potem ostatni."
     ],
     "topics": [
       "plants",
@@ -717,12 +717,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-054",
+    "id": "pl-words-054",
     "type": "word",
     "fragments": [
-      "A small word.",
-      "BRANCH",
-      "Look at the A as a small roof."
+      "Małe słowo.",
+      "ODDZIAŁ",
+      "Spójrz na A jak na mały dach."
     ],
     "topics": [
       "forest",
@@ -731,11 +731,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-055",
+    "id": "pl-words-055",
     "type": "word",
     "fragments": [
-      "Five letters, round at the start.",
-      "PEARL"
+      "Pięć liter, okrągłych na początku.",
+      "PERŁA"
     ],
     "topics": [
       "coast"
@@ -743,11 +743,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-056",
+    "id": "pl-words-056",
     "type": "word",
     "fragments": [
-      "HUMBLE",
-      "Let it sit."
+      "POKORNY",
+      "Niech siedzi."
     ],
     "topics": [
       "room"
@@ -755,11 +755,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-057",
+    "id": "pl-words-057",
     "type": "word",
     "fragments": [
-      "COPPER",
-      "Follow the double P."
+      "MIEDŹ",
+      "Podążaj za podwójnym P."
     ],
     "topics": [
       "light",
@@ -768,12 +768,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-058",
+    "id": "pl-words-058",
     "type": "word",
     "fragments": [
-      "This one.",
-      "IVORY",
-      "Notice only the vowels."
+      "Ten.",
+      "KOŚĆ SŁONIOWA",
+      "Zwróć uwagę tylko na samogłoski."
     ],
     "topics": [
       "light"
@@ -781,11 +781,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-059",
+    "id": "pl-words-059",
     "type": "word",
     "fragments": [
-      "GLASS",
-      "Notice only the vowels."
+      "SZKŁO",
+      "Zwróć uwagę tylko na samogłoski."
     ],
     "topics": [
       "room",
@@ -794,12 +794,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-060",
+    "id": "pl-words-060",
     "type": "word",
     "fragments": [
-      "Look at this word.",
-      "THYME",
-      "A small word. Let it sit."
+      "Spójrz na to słowo.",
+      "TYMIANEK",
+      "Małe słowo. Niech siedzi."
     ],
     "topics": [
       "plants"
@@ -807,12 +807,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-061",
+    "id": "pl-words-061",
     "type": "word",
     "fragments": [
-      "NICKEL",
-      "First letter.",
-      "Then the last."
+      "NIKIEL",
+      "Pierwsza litera.",
+      "Potem ostatni."
     ],
     "topics": [
       "stone",
@@ -821,12 +821,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-062",
+    "id": "pl-words-062",
     "type": "word",
     "fragments": [
-      "A small word.",
-      "FLOUR",
-      "Follow the word once, slowly."
+      "Małe słowo.",
+      "MĄKA",
+      "Podążaj za słowem raz, powoli."
     ],
     "topics": [
       "room",
@@ -835,11 +835,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-063",
+    "id": "pl-words-063",
     "type": "word",
     "fragments": [
-      "Notice the C, then the rest of the shape.",
-      "CEDAR"
+      "Zwróć uwagę na literę C, a następnie na resztę kształtu.",
+      "CEDR"
     ],
     "topics": [
       "forest"
@@ -847,11 +847,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-064",
+    "id": "pl-words-064",
     "type": "word",
     "fragments": [
-      "PLUM",
-      "Let it sit."
+      "ŚLIWKA",
+      "Niech siedzi."
     ],
     "topics": [
       "plants",
@@ -860,11 +860,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-065",
+    "id": "pl-words-065",
     "type": "word",
     "fragments": [
-      "TIDE",
-      "In. Out. The letters stay."
+      "FALA",
+      "W. Na zewnątrz. Litery zostają."
     ],
     "topics": [
       "coast",
@@ -873,11 +873,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-066",
+    "id": "pl-words-066",
     "type": "word",
     "fragments": [
-      "FOAM",
-      "Notice how light the letters feel."
+      "PIANA",
+      "Zwróć uwagę na lekkość liter."
     ],
     "topics": [
       "coast"
@@ -885,12 +885,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-067",
+    "id": "pl-words-067",
     "type": "word",
     "fragments": [
-      "One word.",
-      "PINE",
-      "Notice the I standing in the middle."
+      "Jedno słowo.",
+      "SOSNA",
+      "Zwróć uwagę na „ja” stojące pośrodku."
     ],
     "topics": [
       "forest"
@@ -898,11 +898,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-068",
+    "id": "pl-words-068",
     "type": "word",
     "fragments": [
-      "HAZE",
-      "Follow H into the rest."
+      "MGŁA",
+      "Podążaj za H do reszty."
     ],
     "topics": [
       "sky"
@@ -910,12 +910,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-069",
+    "id": "pl-words-069",
     "type": "word",
     "fragments": [
-      "PANE",
-      "First letter.",
-      "Then the last."
+      "SZKŁO",
+      "Pierwsza litera.",
+      "Potem ostatni."
     ],
     "topics": [
       "room",
@@ -924,11 +924,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-070",
+    "id": "pl-words-070",
     "type": "word",
     "fragments": [
-      "INK",
-      "Three letters. Plenty."
+      "ATRAMENT",
+      "Trzy litery. Mnóstwo."
     ],
     "topics": [
       "paper"
@@ -936,11 +936,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-071",
+    "id": "pl-words-071",
     "type": "word",
     "fragments": [
-      "KITE",
-      "Notice only the vowels."
+      "LATAWIEC",
+      "Zwróć uwagę tylko na samogłoski."
     ],
     "topics": [
       "sky"
@@ -948,11 +948,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-072",
+    "id": "pl-words-072",
     "type": "word",
     "fragments": [
-      "GRANITE",
-      "Notice the weight of the word."
+      "GRANIT",
+      "Zwróć uwagę na wagę tego słowa."
     ],
     "topics": [
       "stone"
@@ -960,11 +960,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-073",
+    "id": "pl-words-073",
     "type": "word",
     "fragments": [
-      "LAMP",
-      "Let it sit."
+      "LAMPA",
+      "Niech siedzi."
     ],
     "topics": [
       "light"
@@ -972,11 +972,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-074",
+    "id": "pl-words-074",
     "type": "word",
     "fragments": [
-      "FROST",
-      "Soft at the edges."
+      "MRÓZ",
+      "Miękkie na krawędziach."
     ],
     "topics": [
       "sky",
@@ -985,12 +985,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-075",
+    "id": "pl-words-075",
     "type": "word",
     "fragments": [
-      "HULL",
-      "First letter.",
-      "Then the last."
+      "KADŁUB",
+      "Pierwsza litera.",
+      "Potem ostatni."
     ],
     "topics": [
       "coast"
@@ -998,15 +998,15 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "If a color from the last word is nearby, rest on it for a moment."
+      "text": "Jeśli w pobliżu znajduje się kolor z ostatniego słowa, zatrzymaj się na nim na chwilę."
     }
   },
   {
-    "id": "en-words-076",
+    "id": "pl-words-076",
     "type": "word",
     "fragments": [
-      "IVY",
-      "Three letters climbing."
+      "BLUSZCZ",
+      "Trzy litery wspinające się."
     ],
     "topics": [
       "plants"
@@ -1014,11 +1014,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-077",
+    "id": "pl-words-077",
     "type": "word",
     "fragments": [
-      "DUSK",
-      "Notice only the U."
+      "ZMIERZCH",
+      "Zwróć uwagę tylko na U."
     ],
     "topics": [
       "light",
@@ -1027,11 +1027,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-078",
+    "id": "pl-words-078",
     "type": "word",
     "fragments": [
-      "TWINE",
-      "Notice the W in the middle."
+      "SZPAGAT",
+      "Zwróć uwagę na W pośrodku."
     ],
     "topics": [
       "paper",
@@ -1040,11 +1040,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-079",
+    "id": "pl-words-079",
     "type": "word",
     "fragments": [
-      "QUAY",
-      "Let it sit."
+      "NADBRZEŻE",
+      "Niech siedzi."
     ],
     "topics": [
       "coast"
@@ -1052,11 +1052,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-080",
+    "id": "pl-words-080",
     "type": "word",
     "fragments": [
-      "EMBER",
-      "Let it sit."
+      "NIEDOPAŁEK",
+      "Niech siedzi."
     ],
     "topics": [
       "light"
@@ -1064,11 +1064,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-081",
+    "id": "pl-words-081",
     "type": "word",
     "fragments": [
-      "SPINE",
-      "First letter. Then the last."
+      "KRĘGOSŁUP",
+      "Pierwsza litera. Potem ostatni."
     ],
     "topics": [
       "paper"
@@ -1076,11 +1076,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-082",
+    "id": "pl-words-082",
     "type": "word",
     "fragments": [
-      "MOSSY",
-      "Let it sit."
+      "OMSZONY",
+      "Niech siedzi."
     ],
     "topics": [
       "forest",
@@ -1089,11 +1089,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-083",
+    "id": "pl-words-083",
     "type": "word",
     "fragments": [
-      "GULL",
-      "Let it sit."
+      "FRAJER",
+      "Niech siedzi."
     ],
     "topics": [
       "coast"
@@ -1101,11 +1101,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-084",
+    "id": "pl-words-084",
     "type": "word",
     "fragments": [
-      "LINTEL",
-      "A quiet architectural word."
+      "NADPROŻE",
+      "Ciche słowo architektoniczne."
     ],
     "topics": [
       "room"
@@ -1113,11 +1113,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-085",
+    "id": "pl-words-085",
     "type": "word",
     "fragments": [
-      "CIDER",
-      "Let it sit."
+      "CYDR",
+      "Niech siedzi."
     ],
     "topics": [
       "plants",
@@ -1126,11 +1126,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-086",
+    "id": "pl-words-086",
     "type": "word",
     "fragments": [
-      "FLINT",
-      "Let it sit."
+      "KRZEMIEŃ",
+      "Niech siedzi."
     ],
     "topics": [
       "stone"
@@ -1138,11 +1138,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-087",
+    "id": "pl-words-087",
     "type": "word",
     "fragments": [
-      "THISTLE",
-      "Let it sit."
+      "OSET",
+      "Niech siedzi."
     ],
     "topics": [
       "plants"
@@ -1150,11 +1150,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-088",
+    "id": "pl-words-088",
     "type": "word",
     "fragments": [
-      "HARBOR",
-      "Let it sit."
+      "PORT",
+      "Niech siedzi."
     ],
     "topics": [
       "coast"

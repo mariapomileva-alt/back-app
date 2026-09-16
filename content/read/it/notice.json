@@ -1,10 +1,10 @@
 [
   {
-    "id": "en-notice-001",
+    "id": "it-notice-001",
     "type": "observation",
     "fragments": [
-      "Find one word",
-      "you can see around you."
+      "Trova una parola",
+      "puoi vedere intorno a te."
     ],
     "topics": [
       "room"
@@ -12,11 +12,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-002",
+    "id": "it-notice-002",
     "type": "observation",
     "fragments": [
-      "Notice one color",
-      "near your hands."
+      "Nota un colore",
+      "vicino alle tue mani."
     ],
     "topics": [
       "room"
@@ -24,11 +24,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-003",
+    "id": "it-notice-003",
     "type": "observation",
     "fragments": [
-      "Find an edge",
-      "where two surfaces meet."
+      "Trova un vantaggio",
+      "dove due superfici si incontrano."
     ],
     "topics": [
       "room"
@@ -36,11 +36,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-004",
+    "id": "it-notice-004",
     "type": "observation",
     "fragments": [
-      "Look for something",
-      "that is still."
+      "Cerca qualcosa",
+      "quello è ancora."
     ],
     "topics": [
       "room"
@@ -48,12 +48,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-005",
+    "id": "it-notice-005",
     "type": "observation",
     "fragments": [
-      "Find one thing",
-      "that is slightly closer",
-      "than the rest."
+      "Trova una cosa",
+      "quello è leggermente più vicino",
+      "rispetto al resto."
     ],
     "topics": [
       "room"
@@ -61,11 +61,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-006",
+    "id": "it-notice-006",
     "type": "observation",
     "fragments": [
-      "Notice a shadow,",
-      "even a small one."
+      "Nota un'ombra,",
+      "anche piccolo."
     ],
     "topics": [
       "light"
@@ -73,11 +73,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-007",
+    "id": "it-notice-007",
     "type": "observation",
     "fragments": [
-      "Find a straight line",
-      "somewhere nearby."
+      "Trova una linea retta",
+      "da qualche parte nelle vicinanze."
     ],
     "topics": [
       "room"
@@ -85,11 +85,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-008",
+    "id": "it-notice-008",
     "type": "observation",
     "fragments": [
-      "Look for a curve",
-      "instead of a corner."
+      "Cerca una curva",
+      "invece di un angolo."
     ],
     "topics": [
       "room"
@@ -97,11 +97,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-009",
+    "id": "it-notice-009",
     "type": "observation",
     "fragments": [
-      "Notice one texture",
-      "you are not touching."
+      "Notare una trama",
+      "non stai toccando."
     ],
     "topics": [
       "room"
@@ -109,11 +109,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-010",
+    "id": "it-notice-010",
     "type": "observation",
     "fragments": [
-      "Find something that is matte,",
-      "not shiny."
+      "Trova qualcosa che sia opaco,",
+      "non lucido."
     ],
     "topics": [
       "room"
@@ -121,11 +121,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-011",
+    "id": "it-notice-011",
     "type": "observation",
     "fragments": [
-      "Look for a patch",
-      "of softer light."
+      "Cerca una patch",
+      "di luce più morbida."
     ],
     "topics": [
       "light"
@@ -133,11 +133,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-012",
+    "id": "it-notice-012",
     "type": "observation",
     "fragments": [
-      "Find one object",
-      "that could fit in a pocket."
+      "Trova un oggetto",
+      "che potrebbe stare in una tasca."
     ],
     "topics": [
       "objects"
@@ -145,11 +145,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-013",
+    "id": "it-notice-013",
     "type": "observation",
     "fragments": [
-      "Notice the farthest thing",
-      "you can see from here."
+      "Nota la cosa più lontana",
+      "puoi vedere da qui."
     ],
     "topics": [
       "room"
@@ -157,11 +157,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-014",
+    "id": "it-notice-014",
     "type": "observation",
     "fragments": [
-      "Find a word printed",
-      "somewhere nearby."
+      "Trova una parola stampata",
+      "da qualche parte nelle vicinanze."
     ],
     "topics": [
       "paper"
@@ -169,11 +169,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-015",
+    "id": "it-notice-015",
     "type": "observation",
     "fragments": [
-      "Look at the space",
-      "between two objects."
+      "Guarda lo spazio",
+      "tra due oggetti."
     ],
     "topics": [
       "room"
@@ -181,11 +181,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-016",
+    "id": "it-notice-016",
     "type": "observation",
     "fragments": [
-      "Notice something",
-      "that is mostly one color."
+      "Nota qualcosa",
+      "questo è principalmente un colore."
     ],
     "topics": [
       "room"
@@ -193,11 +193,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-017",
+    "id": "it-notice-017",
     "type": "observation",
     "fragments": [
-      "Find a surface",
-      "that looks cool to the touch."
+      "Trova una superficie",
+      "sembra bello al tatto."
     ],
     "topics": [
       "room"
@@ -205,11 +205,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-018",
+    "id": "it-notice-018",
     "type": "observation",
     "fragments": [
-      "Look for something",
-      "vertical."
+      "Cerca qualcosa",
+      "verticale."
     ],
     "topics": [
       "room"
@@ -217,11 +217,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-019",
+    "id": "it-notice-019",
     "type": "observation",
     "fragments": [
-      "Notice a place",
-      "where dust might gather."
+      "Nota un luogo",
+      "dove potrebbe accumularsi la polvere."
     ],
     "topics": [
       "room"
@@ -229,11 +229,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-020",
+    "id": "it-notice-020",
     "type": "observation",
     "fragments": [
-      "Find one thing",
-      "made of paper or card."
+      "Trova una cosa",
+      "fatto di carta o cartoncino."
     ],
     "topics": [
       "paper"
@@ -241,11 +241,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-021",
+    "id": "it-notice-021",
     "type": "observation",
     "fragments": [
-      "Look for a reflection,",
-      "even a faint one."
+      "Cerca un riflesso,",
+      "anche un debole."
     ],
     "topics": [
       "light"
@@ -253,12 +253,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-022",
+    "id": "it-notice-022",
     "type": "observation",
     "fragments": [
-      "Notice the weight",
-      "of what you are sitting",
-      "or standing on."
+      "Notare il peso",
+      "di ciò su cui sei seduto",
+      "o in piedi."
     ],
     "topics": [
       "room"
@@ -266,11 +266,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-023",
+    "id": "it-notice-023",
     "type": "observation",
     "fragments": [
-      "Find a corner of the room",
-      "and rest your eyes there."
+      "Trova un angolo della stanza",
+      "e riposa lì i tuoi occhi."
     ],
     "topics": [
       "room"
@@ -278,11 +278,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-024",
+    "id": "it-notice-024",
     "type": "observation",
     "fragments": [
-      "Look for something",
-      "older than this week."
+      "Cerca qualcosa",
+      "più vecchio di questa settimana."
     ],
     "topics": [
       "objects"
@@ -290,11 +290,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-025",
+    "id": "it-notice-025",
     "type": "observation",
     "fragments": [
-      "Notice one sound,",
-      "then let it pass."
+      "Nota un suono,",
+      "poi lascialo passare."
     ],
     "topics": [
       "quiet"
@@ -302,11 +302,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-026",
+    "id": "it-notice-026",
     "type": "observation",
     "fragments": [
-      "Find a rectangle",
-      "somewhere around you."
+      "Trova un rettangolo",
+      "da qualche parte intorno a te."
     ],
     "topics": [
       "room"
@@ -314,11 +314,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-027",
+    "id": "it-notice-027",
     "type": "observation",
     "fragments": [
-      "Look at the ceiling",
-      "for one slow breath of looking."
+      "Guarda il soffitto",
+      "per un lento respiro di sguardo."
     ],
     "topics": [
       "room"
@@ -326,11 +326,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-028",
+    "id": "it-notice-028",
     "type": "observation",
     "fragments": [
-      "Notice whether the light",
-      "is even or patchy."
+      "Notare se la luce",
+      "è uniforme o irregolare."
     ],
     "topics": [
       "light"
@@ -338,11 +338,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-029",
+    "id": "it-notice-029",
     "type": "observation",
     "fragments": [
-      "Find something",
-      "you could name in one word."
+      "Trova qualcosa",
+      "potresti nominarlo in una parola."
     ],
     "topics": [
       "language"
@@ -350,11 +350,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-030",
+    "id": "it-notice-030",
     "type": "observation",
     "fragments": [
-      "Look for a fold,",
-      "a seam, or a joint."
+      "Cerca una piega,",
+      "una cucitura o un giunto."
     ],
     "topics": [
       "objects"
@@ -362,11 +362,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-031",
+    "id": "it-notice-031",
     "type": "observation",
     "fragments": [
-      "Notice one thing",
-      "that is empty on purpose."
+      "Nota una cosa",
+      "è vuoto apposta."
     ],
     "topics": [
       "room"
@@ -374,12 +374,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-032",
+    "id": "it-notice-032",
     "type": "observation",
     "fragments": [
-      "Find a plant,",
-      "or the idea of a plant",
-      "in a picture."
+      "Trova una pianta,",
+      "o l'idea di una pianta",
+      "in una foto."
     ],
     "topics": [
       "plants"
@@ -387,11 +387,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-033",
+    "id": "it-notice-033",
     "type": "observation",
     "fragments": [
-      "Look at your own sleeve or cuff",
-      "for a moment."
+      "Guarda la tua manica o il tuo polsino",
+      "per un momento."
     ],
     "topics": [
       "room"
@@ -399,11 +399,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-034",
+    "id": "it-notice-034",
     "type": "observation",
     "fragments": [
-      "Notice a temperature difference,",
-      "even a small one."
+      "Notare una differenza di temperatura,",
+      "anche piccolo."
     ],
     "topics": [
       "room"
@@ -411,11 +411,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-035",
+    "id": "it-notice-035",
     "type": "observation",
     "fragments": [
-      "Find a number",
-      "somewhere nearby."
+      "Trova un numero",
+      "da qualche parte nelle vicinanze."
     ],
     "topics": [
       "paper"
@@ -423,11 +423,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-036",
+    "id": "it-notice-036",
     "type": "observation",
     "fragments": [
-      "Look for something that leans,",
-      "even slightly."
+      "Cerca qualcosa che si appoggi,",
+      "anche leggermente."
     ],
     "topics": [
       "room"
@@ -435,11 +435,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-037",
+    "id": "it-notice-037",
     "type": "observation",
     "fragments": [
-      "Notice the path your eyes took",
-      "to get here."
+      "Nota il percorso seguito dai tuoi occhi",
+      "per arrivare qui."
     ],
     "topics": [
       "room"
@@ -447,11 +447,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-038",
+    "id": "it-notice-038",
     "type": "observation",
     "fragments": [
-      "Find a circle or an oval",
-      "in the room."
+      "Trova un cerchio o un ovale",
+      "nella stanza."
     ],
     "topics": [
       "room"
@@ -459,11 +459,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-039",
+    "id": "it-notice-039",
     "type": "observation",
     "fragments": [
-      "Look at the floor",
-      "where it meets a wall."
+      "Guarda il pavimento",
+      "dove incontra un muro."
     ],
     "topics": [
       "room"
@@ -471,11 +471,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-040",
+    "id": "it-notice-040",
     "type": "observation",
     "fragments": [
-      "Notice one thing",
-      "you have not used today."
+      "Nota una cosa",
+      "non hai usato oggi."
     ],
     "topics": [
       "objects"
@@ -483,11 +483,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-041",
+    "id": "it-notice-041",
     "type": "observation",
     "fragments": [
-      "Find a quiet color,",
-      "not a loud one."
+      "Trova un colore tranquillo,",
+      "non rumoroso."
     ],
     "topics": [
       "room"
@@ -495,11 +495,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-042",
+    "id": "it-notice-042",
     "type": "observation",
     "fragments": [
-      "Look for writing",
-      "that is not a screen."
+      "Cerca la scrittura",
+      "quello non è uno schermo."
     ],
     "topics": [
       "paper"
@@ -507,11 +507,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-043",
+    "id": "it-notice-043",
     "type": "observation",
     "fragments": [
-      "Notice how far your feet are",
-      "from each other."
+      "Nota quanto sono lontani i tuoi piedi",
+      "l'uno dall'altro."
     ],
     "topics": [
       "room"
@@ -519,11 +519,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-044",
+    "id": "it-notice-044",
     "type": "observation",
     "fragments": [
-      "Find something stacked,",
-      "even two things."
+      "Trova qualcosa impilato,",
+      "anche due cose."
     ],
     "topics": [
       "objects"
@@ -531,11 +531,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-045",
+    "id": "it-notice-045",
     "type": "observation",
     "fragments": [
-      "Look at a doorway",
-      "or the idea of a doorway."
+      "Guarda una porta",
+      "o l'idea di una porta."
     ],
     "topics": [
       "room"
@@ -543,11 +543,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-046",
+    "id": "it-notice-046",
     "type": "observation",
     "fragments": [
-      "Notice one thing",
-      "that is slightly worn."
+      "Nota una cosa",
+      "che è leggermente usurato."
     ],
     "topics": [
       "objects"
@@ -555,11 +555,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-047",
+    "id": "it-notice-047",
     "type": "observation",
     "fragments": [
-      "Find the nearest source of daylight,",
-      "if there is one."
+      "Trova la fonte di luce del giorno più vicina,",
+      "se ce n'è uno."
     ],
     "topics": [
       "light"
@@ -567,11 +567,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-048",
+    "id": "it-notice-048",
     "type": "observation",
     "fragments": [
-      "Look once more,",
-      "then choose one detail to keep."
+      "Guarda ancora una volta,",
+      "quindi scegli un dettaglio da conservare."
     ],
     "topics": [
       "room"
@@ -579,11 +579,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-049",
+    "id": "it-notice-049",
     "type": "observation",
     "fragments": [
-      "Find a cool surface",
-      "and rest your attention there, not your hand."
+      "Trova una superficie fresca",
+      "e poggia lì la tua attenzione, non la tua mano."
     ],
     "topics": [
       "room"
@@ -591,12 +591,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-050",
+    "id": "it-notice-050",
     "type": "observation",
     "fragments": [
-      "If there is a window,",
-      "notice what it frames.",
-      "If not, notice a wall."
+      "Se c'è una finestra,",
+      "nota cosa incornicia.",
+      "In caso contrario, nota un muro."
     ],
     "topics": [
       "room"
@@ -604,11 +604,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-051",
+    "id": "it-notice-051",
     "type": "observation",
     "fragments": [
-      "Look for a straight line",
-      "that is not a letter."
+      "Cerca una linea retta",
+      "quella non è una lettera."
     ],
     "topics": [
       "objects"
@@ -616,11 +616,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-052",
+    "id": "it-notice-052",
     "type": "observation",
     "fragments": [
-      "Notice whether the light is even",
-      "or gathered in one place."
+      "Nota se la luce è uniforme",
+      "o riuniti in un unico luogo."
     ],
     "topics": [
       "light"
@@ -628,11 +628,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-053",
+    "id": "it-notice-053",
     "type": "observation",
     "fragments": [
-      "Find something that has been folded",
-      "or could be folded."
+      "Trova qualcosa che è stato piegato",
+      "o potrebbe essere piegato."
     ],
     "topics": [
       "paper"
@@ -640,11 +640,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-054",
+    "id": "it-notice-054",
     "type": "observation",
     "fragments": [
-      "A sound far away, if there is one.",
-      "You do not need to name it."
+      "Un suono lontano, se ce n'è uno.",
+      "Non è necessario nominarlo."
     ],
     "topics": [
       "quiet"
@@ -652,11 +652,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-055",
+    "id": "it-notice-055",
     "type": "observation",
     "fragments": [
-      "Look at the floor",
-      "as if it were a landscape."
+      "Guarda il pavimento",
+      "come se fosse un paesaggio."
     ],
     "topics": [
       "room"
@@ -664,11 +664,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-056",
+    "id": "it-notice-056",
     "type": "observation",
     "fragments": [
-      "Find a round thing.",
-      "Even a button counts."
+      "Trova una cosa rotonda.",
+      "Anche un pulsante conta."
     ],
     "topics": [
       "objects"
@@ -676,11 +676,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-057",
+    "id": "it-notice-057",
     "type": "observation",
     "fragments": [
-      "Notice one temperature difference",
-      "near you — a cooler edge, a warmer patch."
+      "Notare una differenza di temperatura",
+      "vicino a te: un bordo più fresco, una zona più calda."
     ],
     "topics": [
       "home"
@@ -688,12 +688,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-058",
+    "id": "it-notice-058",
     "type": "observation",
     "fragments": [
-      "If you can see outdoors,",
-      "find the simplest shape in view.",
-      "If not, find one indoors."
+      "Se riesci a vedere all'aperto,",
+      "trova la forma più semplice in vista.",
+      "In caso contrario, trovane uno in casa."
     ],
     "topics": [
       "sky"
@@ -701,11 +701,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-059",
+    "id": "it-notice-059",
     "type": "observation",
     "fragments": [
-      "Keep one detail from the last minute.",
-      "You do not need to say it."
+      "Mantieni un dettaglio dell'ultimo minuto.",
+      "Non c'è bisogno di dirlo."
     ],
     "topics": [
       "quiet"
@@ -713,11 +713,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-notice-060",
+    "id": "it-notice-060",
     "type": "observation",
     "fragments": [
-      "Find something that is not trying",
-      "to be looked at."
+      "Trova qualcosa che non sta provando",
+      "essere guardato."
     ],
     "topics": [
       "objects"

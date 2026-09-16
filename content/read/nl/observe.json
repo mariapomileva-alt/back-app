@@ -1,11 +1,11 @@
 [
   {
-    "id": "en-observe-001",
+    "id": "nl-observe-001",
     "type": "observation",
     "fragments": [
-      "Watch the space",
-      "between these letters.",
-      "quiet"
+      "Houd de ruimte in de gaten",
+      "tussen deze brieven.",
+      "rustig"
     ],
     "topics": [
       "language"
@@ -13,12 +13,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-002",
+    "id": "nl-observe-002",
     "type": "observation",
     "fragments": [
-      "Follow this word",
-      "as it settles.",
-      "still"
+      "Volg dit woord",
+      "zoals het zich vestigt.",
+      "nog steeds"
     ],
     "topics": [
       "language"
@@ -26,13 +26,13 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-003",
+    "id": "nl-observe-003",
     "type": "observation",
     "fragments": [
-      "Let your eyes rest",
-      "on the last word",
-      "a moment longer.",
-      "still"
+      "Laat je ogen rusten",
+      "op het laatste woord",
+      "nog even.",
+      "nog steeds"
     ],
     "topics": [
       "language"
@@ -40,11 +40,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-004",
+    "id": "nl-observe-004",
     "type": "observation",
     "fragments": [
-      "Notice the shape",
-      "of the letter S.",
+      "Let op de vorm",
+      "van de letter S.",
       "S"
     ],
     "topics": [
@@ -53,11 +53,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-005",
+    "id": "nl-observe-005",
     "type": "observation",
     "fragments": [
-      "Watch how O",
-      "is a small enclosed room.",
+      "Kijk hoe O",
+      "is een kleine afgesloten ruimte.",
       "O"
     ],
     "topics": [
@@ -66,24 +66,24 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-006",
+    "id": "nl-observe-006",
     "type": "observation",
     "fragments": [
-      "The word here can stay.",
-      "You do not have to hold it.",
-      "here"
+      "Het woord hier mag blijven.",
+      "Je hoeft het niet vast te houden.",
+      "hier"
     ],
     "topics": [
-      "quiet"
+      "rustig"
     ],
     "difficulty": 1
   },
   {
-    "id": "en-observe-007",
+    "id": "nl-observe-007",
     "type": "observation",
     "fragments": [
-      "Look at the tall line",
-      "in the letter L.",
+      "Kijk naar de hoge lijn",
+      "in de letter L.",
       "L"
     ],
     "topics": [
@@ -92,25 +92,25 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-008",
+    "id": "nl-observe-008",
     "type": "observation",
     "fragments": [
-      "A pause is also",
-      "a kind of sentence.",
-      "pause"
+      "Een pauze is dat ook",
+      "een soort zin.",
+      "pauze"
     ],
     "topics": [
-      "quiet"
+      "rustig"
     ],
     "difficulty": 1
   },
   {
-    "id": "en-observe-009",
+    "id": "nl-observe-009",
     "type": "observation",
     "fragments": [
-      "Watch the word slow appear",
-      "without hurrying it.",
-      "slow"
+      "Kijk hoe het woord langzaam verschijnt",
+      "zonder er haast mee te maken.",
+      "langzaam"
     ],
     "topics": [
       "language"
@@ -118,11 +118,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-010",
+    "id": "nl-observe-010",
     "type": "observation",
     "fragments": [
-      "The letter M",
-      "has two small peaks.",
+      "De letter M",
+      "heeft twee kleine pieken.",
       "M"
     ],
     "topics": [
@@ -131,24 +131,24 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-011",
+    "id": "nl-observe-011",
     "type": "observation",
     "fragments": [
-      "Let this line of text",
-      "be enough.",
-      "enough"
+      "Laat deze regel tekst",
+      "genoeg zijn.",
+      "genoeg"
     ],
     "topics": [
-      "quiet"
+      "rustig"
     ],
     "difficulty": 1
   },
   {
-    "id": "en-observe-012",
+    "id": "nl-observe-012",
     "type": "observation",
     "fragments": [
-      "Notice how T",
-      "stands like a small table.",
+      "Merk op hoe T",
+      "staat als een kleine tafel.",
       "T"
     ],
     "topics": [
@@ -157,11 +157,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-013",
+    "id": "nl-observe-013",
     "type": "observation",
     "fragments": [
-      "Follow the curve",
-      "in the letter C.",
+      "Volg de bocht",
+      "in de letter C.",
       "C"
     ],
     "topics": [
@@ -170,12 +170,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-014",
+    "id": "nl-observe-014",
     "type": "observation",
     "fragments": [
-      "The word now",
-      "is already leaving.",
-      "now"
+      "Het woord nu",
+      "vertrekt al.",
+      "nu"
     ],
     "topics": [
       "time"
@@ -183,11 +183,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-015",
+    "id": "nl-observe-015",
     "type": "observation",
     "fragments": [
-      "Watch the gap",
-      "under the letter E.",
+      "Let op de kloof",
+      "onder de letter E.",
       "E"
     ],
     "topics": [
@@ -196,11 +196,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-016",
+    "id": "nl-observe-016",
     "type": "observation",
     "fragments": [
-      "A period is a very small",
-      "full stop of looking.",
+      "Een periode is heel klein",
+      "volledige stop met kijken.",
       "."
     ],
     "topics": [
@@ -209,12 +209,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-017",
+    "id": "nl-observe-017",
     "type": "observation",
     "fragments": [
-      "Let the word soft",
-      "take its time.",
-      "soft"
+      "Laat het woord zacht zijn",
+      "neem de tijd.",
+      "zacht"
     ],
     "topics": [
       "language"
@@ -222,11 +222,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-018",
+    "id": "nl-observe-018",
     "type": "observation",
     "fragments": [
-      "The letter W",
-      "is two valleys.",
+      "De letter W",
+      "zijn twee valleien.",
       "W"
     ],
     "topics": [
@@ -235,23 +235,23 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-019",
+    "id": "nl-observe-019",
     "type": "observation",
     "fragments": [
-      "Stay with this sentence",
-      "until it feels complete."
+      "Blijf bij deze zin",
+      "totdat het compleet voelt."
     ],
     "topics": [
-      "quiet"
+      "rustig"
     ],
     "difficulty": 1
   },
   {
-    "id": "en-observe-020",
+    "id": "nl-observe-020",
     "type": "observation",
     "fragments": [
-      "Notice the open space",
-      "inside the letter A.",
+      "Let op de open ruimte",
+      "binnen de letter A.",
       "A"
     ],
     "topics": [
@@ -260,12 +260,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-021",
+    "id": "nl-observe-021",
     "type": "observation",
     "fragments": [
-      "The word quiet has five letters",
-      "and room around them.",
-      "quiet"
+      "Het woord stil heeft vijf letters",
+      "en ruimte om hen heen.",
+      "rustig"
     ],
     "topics": [
       "language"
@@ -273,12 +273,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-022",
+    "id": "nl-observe-022",
     "type": "observation",
     "fragments": [
-      "Watch the word linger",
-      "without adding more.",
-      "linger"
+      "Kijk hoe het woord blijft hangen",
+      "zonder meer toe te voegen.",
+      "treuzelen"
     ],
     "topics": [
       "language"
@@ -286,11 +286,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-023",
+    "id": "nl-observe-023",
     "type": "observation",
     "fragments": [
-      "The letter I",
-      "is a single thin presence.",
+      "De letter I",
+      "is een enkele dunne aanwezigheid.",
       "I"
     ],
     "topics": [
@@ -299,12 +299,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-024",
+    "id": "nl-observe-024",
     "type": "observation",
     "fragments": [
-      "Let your gaze travel",
-      "from the first word",
-      "to the last."
+      "Laat je blik reizen",
+      "vanaf het eerste woord",
+      "tot het laatst."
     ],
     "topics": [
       "language"
@@ -312,11 +312,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-025",
+    "id": "nl-observe-025",
     "type": "observation",
     "fragments": [
-      "The comma is a small breath",
-      "on the line."
+      "De komma is een kleine ademhaling",
+      "aan de lijn."
     ],
     "topics": [
       "language"
@@ -324,11 +324,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-026",
+    "id": "nl-observe-026",
     "type": "observation",
     "fragments": [
-      "Notice how H",
-      "has a little window.",
+      "Merk op hoe H",
+      "heeft een klein raam.",
       "H"
     ],
     "topics": [
@@ -337,12 +337,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-027",
+    "id": "nl-observe-027",
     "type": "observation",
     "fragments": [
-      "The word still can mean not moving,",
-      "or even so.",
-      "still"
+      "Het woord kan nog steeds betekenen dat je niet beweegt,",
+      "of zelfs zo.",
+      "nog steeds"
     ],
     "topics": [
       "language"
@@ -350,23 +350,23 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-028",
+    "id": "nl-observe-028",
     "type": "observation",
     "fragments": [
-      "Watch this phrase arrive,",
-      "then rest."
+      "Kijk hoe deze zin arriveert,",
+      "rust dan uit."
     ],
     "topics": [
-      "quiet"
+      "rustig"
     ],
     "difficulty": 1
   },
   {
-    "id": "en-observe-029",
+    "id": "nl-observe-029",
     "type": "observation",
     "fragments": [
-      "The letter U",
-      "is a small bowl.",
+      "De letter U",
+      "is een kleine kom.",
       "U"
     ],
     "topics": [
@@ -375,12 +375,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-030",
+    "id": "nl-observe-030",
     "type": "observation",
     "fragments": [
-      "Let the word gentle sit",
-      "in the middle of the screen.",
-      "gentle"
+      "Laat het woord zacht zitten",
+      "in het midden van het scherm.",
+      "teder"
     ],
     "topics": [
       "language"
@@ -388,11 +388,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-031",
+    "id": "nl-observe-031",
     "type": "observation",
     "fragments": [
-      "Notice the foot",
-      "of the letter R.",
+      "Let op de voet",
+      "van de letter R.",
       "R"
     ],
     "topics": [
@@ -401,24 +401,24 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-032",
+    "id": "nl-observe-032",
     "type": "observation",
     "fragments": [
-      "A blank line",
-      "is also readable."
+      "Een lege regel",
+      "is ook leesbaar."
     ],
     "topics": [
-      "quiet"
+      "rustig"
     ],
     "difficulty": 1
   },
   {
-    "id": "en-observe-033",
+    "id": "nl-observe-033",
     "type": "observation",
     "fragments": [
-      "The word paper has two p’s",
-      "standing near each other.",
-      "paper"
+      "Het woord papier heeft twee p’s",
+      "dicht bij elkaar staan.",
+      "papier"
     ],
     "topics": [
       "language"
@@ -426,11 +426,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-034",
+    "id": "nl-observe-034",
     "type": "observation",
     "fragments": [
-      "Watch the letter Y",
-      "as a small fork.",
+      "Let op de letter Y",
+      "als een kleine vork.",
       "Y"
     ],
     "topics": [
@@ -439,23 +439,23 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-035",
+    "id": "nl-observe-035",
     "type": "observation",
     "fragments": [
-      "Let this be a slow looking,",
-      "not a task."
+      "Laat dit langzaam lijken,",
+      "geen taak."
     ],
     "topics": [
-      "quiet"
+      "rustig"
     ],
     "difficulty": 1
   },
   {
-    "id": "en-observe-036",
+    "id": "nl-observe-036",
     "type": "observation",
     "fragments": [
-      "The letter N",
-      "is a gate with a diagonal.",
+      "De letter N",
+      "is een poort met een diagonaal.",
       "N"
     ],
     "topics": [
@@ -464,12 +464,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-037",
+    "id": "nl-observe-037",
     "type": "observation",
     "fragments": [
-      "Notice the roundness",
-      "in the word moon.",
-      "moon"
+      "Let op de ronding",
+      "in het woord maan.",
+      "maan"
     ],
     "topics": [
       "language"
@@ -477,12 +477,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-038",
+    "id": "nl-observe-038",
     "type": "observation",
     "fragments": [
-      "The word room contains",
-      "another room: oo.",
-      "room"
+      "Het woord kamer bevat",
+      "een andere kamer: oo.",
+      "kamer"
     ],
     "topics": [
       "language"
@@ -490,23 +490,23 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-039",
+    "id": "nl-observe-039",
     "type": "observation",
     "fragments": [
-      "Stay with the last phrase",
-      "after it appears."
+      "Blijf bij de laatste zin",
+      "nadat het verschijnt."
     ],
     "topics": [
-      "quiet"
+      "rustig"
     ],
     "difficulty": 1
   },
   {
-    "id": "en-observe-040",
+    "id": "nl-observe-040",
     "type": "observation",
     "fragments": [
-      "The letter B",
-      "has two small enclosed gardens.",
+      "De letter B",
+      "heeft twee kleine omheinde tuinen.",
       "B"
     ],
     "topics": [
@@ -515,11 +515,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-041",
+    "id": "nl-observe-041",
     "type": "observation",
     "fragments": [
-      "Let the word open",
-      "do only what it says.",
+      "Laat het woord opengaan",
+      "doe alleen wat er staat.",
       "open"
     ],
     "topics": [
@@ -528,11 +528,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-042",
+    "id": "nl-observe-042",
     "type": "observation",
     "fragments": [
-      "Watch how serif letters",
-      "have tiny feet."
+      "Kijk hoe schreefletters",
+      "kleine voetjes hebben."
     ],
     "topics": [
       "language"
@@ -540,12 +540,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-043",
+    "id": "nl-observe-043",
     "type": "observation",
     "fragments": [
-      "The word leaf is four letters",
-      "and a shape.",
-      "leaf"
+      "Het woord blad bestaat uit vier letters",
+      "en een vorm.",
+      "blad"
     ],
     "topics": [
       "plants"
@@ -553,23 +553,23 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-044",
+    "id": "nl-observe-044",
     "type": "observation",
     "fragments": [
-      "Notice the silence",
-      "after a short sentence."
+      "Let op de stilte",
+      "na een korte zin."
     ],
     "topics": [
-      "quiet"
+      "rustig"
     ],
     "difficulty": 1
   },
   {
-    "id": "en-observe-045",
+    "id": "nl-observe-045",
     "type": "observation",
     "fragments": [
-      "The letter G almost closes,",
-      "then doesn’t.",
+      "De letter G gaat bijna dicht,",
+      "dan niet.",
       "G"
     ],
     "topics": [
@@ -578,25 +578,25 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-046",
+    "id": "nl-observe-046",
     "type": "observation",
     "fragments": [
-      "Let the word here be a place,",
-      "not a demand.",
-      "here"
+      "Laat het woord hier een plaats zijn,",
+      "geen eis.",
+      "hier"
     ],
     "topics": [
-      "quiet"
+      "rustig"
     ],
     "difficulty": 1
   },
   {
-    "id": "en-observe-047",
+    "id": "nl-observe-047",
     "type": "observation",
     "fragments": [
-      "Watch the word dusk",
-      "as if it were light leaving.",
-      "dusk"
+      "Let op het woord schemering",
+      "alsof het licht is om weg te gaan.",
+      "schemering"
     ],
     "topics": [
       "light"
@@ -604,23 +604,23 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-048",
+    "id": "nl-observe-048",
     "type": "observation",
     "fragments": [
-      "This line can end.",
-      "You can stay a second more."
+      "Deze lijn kan eindigen.",
+      "Je kunt nog een seconde blijven."
     ],
     "topics": [
-      "quiet"
+      "rustig"
     ],
     "difficulty": 1
   },
   {
-    "id": "en-observe-049",
+    "id": "nl-observe-049",
     "type": "observation",
     "fragments": [
-      "Let this word be enough.",
-      "HARVEST"
+      "Laat dit woord genoeg zijn.",
+      "OOGST"
     ],
     "topics": [
       "language"
@@ -628,10 +628,10 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-050",
+    "id": "nl-observe-050",
     "type": "observation",
     "fragments": [
-      "One letter is a gate.",
+      "Eén letter is een poort.",
       "H"
     ],
     "topics": [
@@ -640,23 +640,23 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-051",
+    "id": "nl-observe-051",
     "type": "observation",
     "fragments": [
-      "Read this once.",
-      "Then let your eyes rest past it."
+      "Lees dit eens.",
+      "Laat je ogen er dan langs rusten."
     ],
     "topics": [
-      "quiet"
+      "rustig"
     ],
     "difficulty": 1
   },
   {
-    "id": "en-observe-052",
+    "id": "nl-observe-052",
     "type": "observation",
     "fragments": [
-      "WIDE",
-      "Notice how the word takes space."
+      "BREED",
+      "Merk op hoe het woord ruimte in beslag neemt."
     ],
     "topics": [
       "language"
@@ -664,23 +664,23 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-053",
+    "id": "nl-observe-053",
     "type": "observation",
     "fragments": [
-      "The last word can be small.",
-      "ok"
+      "Het laatste woord kan klein zijn.",
+      "OK"
     ],
     "topics": [
-      "quiet"
+      "rustig"
     ],
     "difficulty": 1
   },
   {
-    "id": "en-observe-054",
+    "id": "nl-observe-054",
     "type": "observation",
     "fragments": [
-      "Follow the descenders —",
-      "the letters that dip below the line.",
+      "Volg de afstammelingen —",
+      "de letters die onder de lijn duiken.",
       "g p y"
     ],
     "topics": [
@@ -689,12 +689,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-055",
+    "id": "nl-observe-055",
     "type": "observation",
     "fragments": [
-      "Hold this shape.",
+      "Houd deze vorm vast.",
       "O",
-      "A room with no furniture."
+      "Een kamer zonder meubilair."
     ],
     "topics": [
       "language"
@@ -702,11 +702,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-056",
+    "id": "nl-observe-056",
     "type": "observation",
     "fragments": [
-      "A longer line can still be gentle:",
-      "the light on the wall is only visiting."
+      "Een langere lijn kan nog steeds zacht zijn:",
+      "het licht aan de muur is alleen maar op bezoek."
     ],
     "topics": [
       "light"
@@ -714,12 +714,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-057",
+    "id": "nl-observe-057",
     "type": "observation",
     "fragments": [
-      "Count nothing.",
-      "Just look at the word until it becomes marks.",
-      "RIVER"
+      "Tel niets.",
+      "Kijk gewoon naar het woord totdat het markeringen worden.",
+      "RIVIER"
     ],
     "topics": [
       "water"
@@ -727,12 +727,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-058",
+    "id": "nl-observe-058",
     "type": "observation",
     "fragments": [
-      "Soft.",
-      "Then the word under it.",
-      "LINEN"
+      "Zacht.",
+      "Dan het woord eronder.",
+      "LINNEN"
     ],
     "topics": [
       "cloth"
@@ -740,11 +740,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-059",
+    "id": "nl-observe-059",
     "type": "observation",
     "fragments": [
-      "Let the next word arrive without preparing a face for it.",
-      "STONE"
+      "Laat het volgende woord arriveren zonder er een gezicht op voor te bereiden.",
+      "STEEN"
     ],
     "topics": [
       "stone"
@@ -752,12 +752,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-060",
+    "id": "nl-observe-060",
     "type": "observation",
     "fragments": [
-      "Stay on the comma,",
-      "if there is one,",
-      "or on the pause where a comma could be."
+      "Blijf bij de komma,",
+      "als er een is,",
+      "of op de pauze waar een komma zou kunnen staan."
     ],
     "topics": [
       "language"
