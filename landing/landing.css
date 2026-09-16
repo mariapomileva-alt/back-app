@@ -117,7 +117,7 @@ button {
 .brand {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   font-family: var(--serif);
   font-size: 23px;
   font-weight: 500;
@@ -126,8 +126,8 @@ button {
 
 .mark {
   flex-shrink: 0;
-  width: 22px;
-  height: 22px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   background-color: var(--ivory);
   background-image: url("logo-mark.png");
