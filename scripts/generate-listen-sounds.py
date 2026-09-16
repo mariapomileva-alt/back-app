@@ -13,6 +13,7 @@ Outputs (45 s, mono 16-bit PCM @ 22050 Hz):
   audio/sounds/fan-placeholder.wav
   audio/sounds/brown-noise-placeholder.wav
   audio/sounds/soft-white-noise-placeholder.wav
+  audio/sounds/soft-melody-placeholder.wav
 """
 
 from __future__ import annotations
@@ -345,6 +346,55 @@ def brown_warm(rng: np.random.Generator) -> np.ndarray:
     return normalize(x, rms_scale=1.05)
 
 
+def soft_sine(freq: float, t: np.ndarray, phase: float = 0.0) -> np.ndarray:
+    return np.sin(2.0 * np.pi * freq * t + phase)
+
+
+def soft_melody_pad(rng: np.random.Generator) -> np.ndarray:
+    """Calm A-minor tonal bed with a single slow monotonous voice — not a song arc."""
+    t = np.arange(N, dtype=np.float64) / RATE
+
+    swell = 0.86 + 0.14 * np.sin(2.0 * np.pi * t / DURATION_S + 0.35)
+
+    root = 110.0  # A2
+    fifth = root * 1.498
+    octave = root * 2.0
+    detune_cents = 5.5
+
+    def detuned(freq: float, cents: float, phase: float) -> np.ndarray:
+        f = freq * (2.0 ** (cents / 1200.0))
+        return soft_sine(f, t, phase)
+
+    p0 = float(rng.uniform(0.0, 2.0 * np.pi))
+    p1 = float(rng.uniform(0.0, 2.0 * np.pi))
+    p2 = float(rng.uniform(0.0, 2.0 * np.pi))
+
+    bed = (
+        0.40 * (detuned(root, -detune_cents, p0) + detuned(root, detune_cents, p0 + 0.35))
+        + 0.18 * (detuned(fifth, -detune_cents * 0.55, p1) + detuned(fifth, detune_cents * 0.55, p1 + 0.25))
+        + 0.10 * soft_sine(octave, t, p2)
+    )
+
+    shimmer_freq = root * 3.02
+    shimmer = 0.045 * soft_sine(shimmer_freq, t, p2 + 0.9)
+    shimmer *= 0.5 + 0.5 * np.sin(2.0 * np.pi * t / DURATION_S + 1.1)
+    bed += shimmer
+
+    # One repeating pentatonic tone — same pitch each loop, gentle breath only.
+    melody_hz = 440.0  # A4
+    melody_env = 0.42 + 0.58 * (0.5 + 0.5 * np.sin(2.0 * np.pi * t / DURATION_S + 0.2))
+    melody_env *= 0.55 + 0.45 * (0.5 + 0.5 * np.sin(2.0 * np.pi * t / 18.0 + 1.05))
+    melody = 0.14 * soft_sine(melody_hz, t, p1 + 0.6) * melody_env
+    melody += 0.06 * soft_sine(melody_hz * 2.0, t, p1 + 1.2) * melody_env * 0.35
+    melody = one_pole_lowpass(melody, 920.0)
+
+    x = (bed + melody) * swell
+    kernel = np.ones(5, dtype=np.float64) / 5.0
+    x = np.convolve(x, kernel, mode="same")
+    x = seamless_crossfade(x, fade_ms=240.0)
+    return normalize(x, rms_scale=0.9)
+
+
 def soft_white_noise(rng: np.random.Generator) -> np.ndarray:
     t = np.arange(N, dtype=np.float64) / RATE
     x = bandpass(white_noise(rng, N), 180.0, 6800.0)
@@ -374,6 +424,7 @@ def main() -> None:
         ("fan", ROOT / "fan-placeholder.wav", np.random.default_rng(2026091706), fan_hum),
         ("brown", ROOT / "brown-noise-placeholder.wav", np.random.default_rng(2026091707), brown_warm),
         ("white", ROOT / "soft-white-noise-placeholder.wav", np.random.default_rng(2026091708), soft_white_noise),
+        ("melody", ROOT / "soft-melody-placeholder.wav", np.random.default_rng(2026091709), soft_melody_pad),
     ]
     for label, path, rng, fn in jobs:
         samples = fn(rng)

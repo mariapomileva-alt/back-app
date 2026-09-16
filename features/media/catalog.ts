@@ -3,7 +3,7 @@ import type { ImageSourcePropType } from 'react-native';
 /**
  * TODO: REPLACE WITH FINAL PRODUCTION ARTWORK
  * Bundled locally so Ground, Listen, and Move work offline.
- * Listen rain/ocean/forest are compressed local JPEGs. Fan and brown use graphics, not photos.
+ * Listen rain/ocean/forest are compressed local JPEGs. Other Listen sounds use graphics, not photos.
  * homeGround / homeMove are compressed Home-card JPEGs of groundFeet / moveHands.
  */
 export const exerciseImages = {
@@ -27,9 +27,13 @@ export const productionAudioFiles = {
   groundingEnglish: 'audio/grounding/english.wav',
   softRain: 'audio/sounds/soft-rain.wav',
   ocean: 'audio/sounds/ocean.wav',
-  fan: 'audio/sounds/fan.wav',
+  gentleStream: 'audio/sounds/gentle-stream.wav',
   forest: 'audio/sounds/forest.wav',
+  distantBirds: 'audio/sounds/distant-birds.wav',
+  fan: 'audio/sounds/fan.wav',
   brownNoise: 'audio/sounds/brown-noise.wav',
+  softWhiteNoise: 'audio/sounds/soft-white-noise.wav',
+  softMelody: 'audio/sounds/soft-melody.wav',
 } as const;
 
 /**
@@ -40,18 +44,26 @@ export const productionAudioFiles = {
  * TODO: replace looping environment sounds with professionally mixed audio before store release
  *
  * Drop-in map (placeholder file → productionAudioFiles name):
- *   audio/grounding/english-placeholder.wav  →  audio/grounding/english.wav
- *   audio/sounds/soft-rain-placeholder.wav   →  audio/sounds/soft-rain.wav
- *   audio/sounds/ocean-placeholder.wav       →  audio/sounds/ocean.wav
- *   audio/sounds/fan-placeholder.wav         →  audio/sounds/fan.wav
- *   audio/sounds/forest-placeholder.wav      →  audio/sounds/forest.wav
- *   audio/sounds/brown-noise-placeholder.wav →  audio/sounds/brown-noise.wav
+ *   audio/grounding/english-placeholder.wav       →  audio/grounding/english.wav
+ *   audio/sounds/soft-rain-placeholder.wav        →  audio/sounds/soft-rain.wav
+ *   audio/sounds/ocean-placeholder.wav            →  audio/sounds/ocean.wav
+ *   audio/sounds/gentle-stream-placeholder.wav    →  audio/sounds/gentle-stream.wav
+ *   audio/sounds/forest-placeholder.wav           →  audio/sounds/forest.wav
+ *   audio/sounds/distant-birds-placeholder.wav    →  audio/sounds/distant-birds.wav
+ *   audio/sounds/fan-placeholder.wav              →  audio/sounds/fan.wav
+ *   audio/sounds/brown-noise-placeholder.wav      →  audio/sounds/brown-noise.wav
+ *   audio/sounds/soft-white-noise-placeholder.wav →  audio/sounds/soft-white-noise.wav
+ *   audio/sounds/soft-melody-placeholder.wav      →  audio/sounds/soft-melody.wav
  */
 export const exerciseAudio = {
   groundingEnglish: require('../../audio/grounding/english-placeholder.wav'),
   softRain: require('../../audio/sounds/soft-rain-placeholder.wav'),
   ocean: require('../../audio/sounds/ocean-placeholder.wav'),
-  fan: require('../../audio/sounds/fan-placeholder.wav'),
+  gentleStream: require('../../audio/sounds/gentle-stream-placeholder.wav'),
   forest: require('../../audio/sounds/forest-placeholder.wav'),
+  distantBirds: require('../../audio/sounds/distant-birds-placeholder.wav'),
+  fan: require('../../audio/sounds/fan-placeholder.wav'),
   brownNoise: require('../../audio/sounds/brown-noise-placeholder.wav'),
+  softWhiteNoise: require('../../audio/sounds/soft-white-noise-placeholder.wav'),
+  softMelody: require('../../audio/sounds/soft-melody-placeholder.wav'),
 } as const;

@@ -36,7 +36,7 @@ export const productionConfig = {
   groundingAudioReady: false,
 
   // TODO: add professionally mixed looping environment sounds before store release.
-  // Drop audio/sounds/{soft-rain,ocean,fan,forest,brown-noise}.wav (or .m4a),
+  // Drop audio/sounds/{soft-rain,ocean,gentle-stream,forest,distant-birds,fan,brown-noise,soft-white-noise,soft-melody}.wav (or .m4a),
   // point the require() paths in features/media/catalog.ts at those files, then set this true.
   // Until then keep the *-placeholder.wav files and this flag false.
   environmentAudioReady: false,

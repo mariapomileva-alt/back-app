@@ -8,6 +8,7 @@ import { ListenSoundPicker } from '@/components/listen/ListenSoundPicker';
 import { ListenSoundVisual } from '@/components/listen/ListenSoundVisual';
 import { ActiveSessionScreen } from '@/components/session/ActiveSessionScreen';
 import { AppText } from '@/components/typography/AppText';
+import { listenEffectiveVolume } from '@/features/listen/playback';
 import {
   defaultListenSoundId,
   isListenSoundId,
@@ -78,14 +79,24 @@ export default function ListenScreen() {
   const selected = useMemo(() => {
     return listenSounds.find((item) => item.id === soundId) ?? listenSounds[0]!;
   }, [soundId]);
+  const playbackVolume = listenEffectiveVolume(soundVolume, soundId);
   const audio = useLoopingSound({
     source: selected.audio,
     enabled: true,
     autoPlay: true,
     initialMuted: soundMuted,
-    initialVolume: soundVolume,
+    initialVolume: playbackVolume,
     lockScreenTitle: t(selected.nameKey),
   });
+
+  useEffect(() => {
+    if (soundMuted) {
+      return;
+    }
+    audio.setVolume(listenEffectiveVolume(soundVolume, soundId));
+    // Re-apply trim when the sound chip changes; `setVolume` is stable on the loop hook.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [soundId, soundMuted, soundVolume]);
   const visualHeight = visualHeightForWindow(windowHeight);
   const gap = compact ? spacing.xs : spacing.md;
   const soundName = t(selected.nameKey);
@@ -180,9 +191,10 @@ export default function ListenScreen() {
                 </AccessiblePressable>
               </View>
               <VolumeBar
-                value={audio.volume}
+                value={soundVolume}
                 onChange={(value) => {
-                  audio.setVolume(value);
+                  setSoundVolume(value);
+                  audio.setVolume(listenEffectiveVolume(value, soundId));
                   void saveSoundVolume(value);
                 }}
               />

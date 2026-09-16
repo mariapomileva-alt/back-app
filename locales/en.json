@@ -340,19 +340,31 @@
     "tryAnotherHint": "Opens the quiet sound list",
     "nowPlaying": "{name} playing",
     "tapToPlay": "Tap to play",
+    "groups": {
+      "nature": "Nature",
+      "steady": "Steady"
+    },
     "sounds": {
       "rain": "Soft rain",
       "ocean": "Ocean",
-      "fan": "Steady fan",
+      "stream": "Gentle stream",
       "forest": "Quiet forest",
-      "brown": "Brown noise"
+      "birds": "Distant birds",
+      "fan": "Steady fan",
+      "brown": "Brown noise",
+      "white": "Soft white noise",
+      "melody": "Soft melody"
     },
     "images": {
       "rain": "Quiet rain on leaves",
       "ocean": "Calm ocean water",
+      "stream": "Soft flowing water",
       "forest": "Muted forest",
+      "birds": "Open sky with distant birds",
       "fan": "Soft abstract air",
-      "brown": "Warm brown texture"
+      "brown": "Warm brown texture",
+      "white": "Light even texture",
+      "melody": "Soft warm tones"
     }
   },
   "privacy": {

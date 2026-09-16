@@ -11,7 +11,7 @@ import Animated, {
 import { ListenGraphic } from '@/components/listen/ListenGraphic';
 import { ListenVisualAmbientMotion } from '@/components/listen/ListenVisualAmbientMotion';
 import { AtmosphericImage } from '@/components/media/AtmosphericImage';
-import type { ListenSound } from '@/features/listen/sounds';
+import { listenGraphicVariantFor, type ListenSound } from '@/features/listen/sounds';
 import { useReduceMotion } from '@/hooks/useReduceMotion';
 import { t } from '@/locales/i18n';
 
@@ -66,7 +66,7 @@ export function ListenSoundVisual({ sound, height, motionActive = true }: Props)
       style={[styles.frame, styles.graphic, { height }, crossfadeStyle]}
     >
       <ListenVisualAmbientMotion active={motionActive} style={styles.fill}>
-        <ListenGraphic variant={sound.id === 'brown' ? 'brown' : 'fan'} motionActive={motionActive} />
+        <ListenGraphic variant={listenGraphicVariantFor(sound)} motionActive={motionActive} />
       </ListenVisualAmbientMotion>
     </Animated.View>
   );

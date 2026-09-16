@@ -22,7 +22,7 @@ import { hexToRgba } from '@/theme/colors';
 const AnimatedPath = Animated.createAnimatedComponent(Path);
 const AnimatedCircle = Animated.createAnimatedComponent(Circle);
 
-type Variant = 'fan' | 'brown';
+type Variant = 'fan' | 'brown' | 'stream' | 'birds' | 'white' | 'melody';
 
 type Props = {
   variant: Variant;
@@ -130,6 +130,145 @@ export function ListenGraphic({ variant, motionActive = true }: Props) {
       ],
     };
   });
+
+  if (variant === 'melody') {
+    const highlight = theme.colors.highlight;
+    const clay = theme.colors.clay;
+    const surface = theme.colors.surfaceSecondary;
+
+    return (
+      <View {...skipA11yNode()} style={styles.frame}>
+        <Animated.View style={[styles.svgWrap, svgMotion]}>
+          <Svg width="100%" height="100%" viewBox="0 0 220 120" preserveAspectRatio="xMidYMid meet">
+            <Rect x="0" y="0" width="220" height="120" fill={hexToRgba(surface, 0.32)} />
+            <BrownBlob
+              cx={88}
+              cy={56}
+              r={50}
+              fill={hexToRgba(clay, 0.2)}
+              staticOpacity={0.2}
+              driver={swell}
+              motionActive={motionActiveSv}
+            />
+            <BrownBlob
+              cx={132}
+              cy={48}
+              r={40}
+              fill={hexToRgba(highlight, 0.18)}
+              staticOpacity={0.18}
+              driver={wave}
+              motionActive={motionActiveSv}
+            />
+            <BrownBlob
+              cx={108}
+              cy={82}
+              r={34}
+              fill={hexToRgba(highlight, 0.14)}
+              staticOpacity={0.14}
+              driver={swell}
+              motionActive={motionActiveSv}
+            />
+          </Svg>
+        </Animated.View>
+      </View>
+    );
+  }
+
+  if (variant === 'white') {
+    const cool = theme.colors.cool;
+    const surface = theme.colors.surfaceSecondary;
+
+    return (
+      <View {...skipA11yNode()} style={styles.frame}>
+        <Animated.View style={[styles.svgWrap, svgMotion]}>
+          <Svg width="100%" height="100%" viewBox="0 0 220 120" preserveAspectRatio="xMidYMid meet">
+            <Rect x="0" y="0" width="220" height="120" fill={hexToRgba(surface, 0.35)} />
+            <BrownBlob
+              cx={70}
+              cy={58}
+              r={52}
+              fill={hexToRgba(cool, 0.16)}
+              staticOpacity={0.16}
+              driver={swell}
+              motionActive={motionActiveSv}
+            />
+            <BrownBlob
+              cx={138}
+              cy={52}
+              r={44}
+              fill={hexToRgba(cool, 0.12)}
+              staticOpacity={0.12}
+              driver={wave}
+              motionActive={motionActiveSv}
+            />
+            <BrownBlob
+              cx={112}
+              cy={78}
+              r={36}
+              fill={hexToRgba(surface, 0.28)}
+              staticOpacity={0.28}
+              driver={swell}
+              motionActive={motionActiveSv}
+            />
+          </Svg>
+        </Animated.View>
+      </View>
+    );
+  }
+
+  if (variant === 'birds') {
+    const sage = theme.colors.secondaryGreen;
+    const cool = theme.colors.cool;
+    const sky = hexToRgba(theme.colors.surface, 0.2);
+
+    return (
+      <View {...skipA11yNode()} style={styles.frame}>
+        <Animated.View style={[styles.svgWrap, svgMotion]}>
+          <Svg width="100%" height="100%" viewBox="0 0 220 120" preserveAspectRatio="xMidYMid meet">
+            <Rect x="0" y="0" width="220" height="120" fill={sky} />
+            <Path d="M0 88 C60 72 120 96 220 80" stroke={hexToRgba(sage, 0.28)} strokeWidth={1.2} fill="none" />
+            <Path d="M42 36 c8 -6 16 -6 24 0" stroke={hexToRgba(cool, 0.55)} strokeWidth={1.4} fill="none" strokeLinecap="round" />
+            <Path d="M98 28 c10 -7 20 -7 30 0" stroke={hexToRgba(sage, 0.5)} strokeWidth={1.3} fill="none" strokeLinecap="round" />
+            <Path d="M152 42 c7 -5 14 -5 21 0" stroke={hexToRgba(cool, 0.45)} strokeWidth={1.2} fill="none" strokeLinecap="round" />
+            <Circle cx={54} cy={92} r={3} fill={hexToRgba(sage, 0.35)} />
+            <Circle cx={168} cy={86} r={2.5} fill={hexToRgba(cool, 0.3)} />
+          </Svg>
+        </Animated.View>
+      </View>
+    );
+  }
+
+  if (variant === 'stream') {
+    const cool = theme.colors.cool;
+    const sage = theme.colors.secondaryGreen;
+    const streams = [
+      { d: 'M8 52 C70 38 150 66 212 48', width: 1.5, base: 0.5 },
+      { d: 'M12 72 C78 58 142 82 208 68', width: 1.8, base: 0.62 },
+      { d: 'M16 92 C82 84 138 98 204 90', width: 1.2, base: 0.38 },
+    ] as const;
+
+    return (
+      <View {...skipA11yNode()} style={styles.frame}>
+        <Animated.View style={[styles.svgWrap, svgMotion]}>
+          <Svg width="100%" height="100%" viewBox="0 0 220 120" preserveAspectRatio="xMidYMid meet">
+            {streams.map((item, index) => (
+              <FanWavePath
+                key={item.d}
+                d={item.d}
+                width={item.width}
+                stroke={index % 2 === 0 ? cool : sage}
+                base={item.base}
+                useWave={index !== 1}
+                wave={wave}
+                swell={swell}
+                motionActive={motionActiveSv}
+              />
+            ))}
+          </Svg>
+        </Animated.View>
+      </View>
+    );
+  }
 
   if (variant === 'brown') {
     const clay = theme.colors.clay;
