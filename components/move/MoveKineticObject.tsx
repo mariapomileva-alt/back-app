@@ -11,18 +11,20 @@ import Animated, {
   withTiming,
   type SharedValue,
 } from 'react-native-reanimated';
-import Svg, { Path } from 'react-native-svg';
+import Svg, { G, Path } from 'react-native-svg';
 
 import { MOVE_KINETIC_VIEWBOX, useMoveInk } from '@/components/move/moveInk';
 import type { MoveKineticAction } from '@/features/move/visualMap';
 import type { MovePhase } from '@/features/move/steps';
 
-const AnimatedPath = Animated.createAnimatedComponent(Path);
+const AnimatedG = Animated.createAnimatedComponent(G);
 
 const RELEASE_MS = 560;
 const PRESS_MS = 340;
+/** Always-on idle wave — independent of press/hold morph and step transitions. */
 const ARC_DRIFT_MS = 12_500;
-const ARC_SHIMMER_MS = 8_400;
+const ARC_SHIMMER_MS = 9_200;
+const ARC_SWELL_MS = 14_000;
 const OBJECT_W = 208;
 const OBJECT_H = 124;
 
@@ -54,27 +56,44 @@ type ArcBandProps = {
   phaseOffset: number;
   drift: SharedValue<number>;
   shimmer: SharedValue<number>;
+  swell: SharedValue<number>;
   motionActive: SharedValue<number>;
 };
 
-function ArcBand({ d, width, stroke, baseOpacity, phaseOffset, drift, shimmer, motionActive }: ArcBandProps) {
+function ArcBand({
+  d,
+  width,
+  stroke,
+  baseOpacity,
+  phaseOffset,
+  drift,
+  shimmer,
+  swell,
+  motionActive,
+}: ArcBandProps) {
   const animatedProps = useAnimatedProps(() => {
     if (motionActive.value === 0) {
-      return { opacity: baseOpacity };
+      return {
+        opacity: baseOpacity,
+        transform: [{ translateX: 0 }, { translateY: 0 }],
+      };
     }
+    const t = drift.value - 0.5;
+    const s = shimmer.value - 0.5;
+    const w = swell.value - 0.5;
     const mix = drift.value * (1 - phaseOffset * 0.35) + shimmer.value * phaseOffset * 0.65;
-    return { opacity: baseOpacity * (0.82 + mix * 0.28) };
+    const bandX = t * (5.5 + phaseOffset * 2.8) + w * phaseOffset * 1.6;
+    const bandY = s * (3.2 + phaseOffset * 1.8) - w * (1.2 - phaseOffset * 0.4);
+    return {
+      opacity: baseOpacity * (0.8 + mix * 0.32),
+      transform: [{ translateX: bandX }, { translateY: bandY }],
+    };
   });
 
   return (
-    <AnimatedPath
-      d={d}
-      fill="none"
-      stroke={stroke}
-      strokeWidth={width}
-      strokeLinecap="round"
-      animatedProps={animatedProps}
-    />
+    <AnimatedG animatedProps={animatedProps}>
+      <Path d={d} fill="none" stroke={stroke} strokeWidth={width} strokeLinecap="round" />
+    </AnimatedG>
   );
 }
 
@@ -87,6 +106,7 @@ export function MoveKineticObject({ action, phase, reduceMotion }: Props) {
   const handsUnwind = useSharedValue(0);
   const arcDrift = useSharedValue(0.5);
   const arcShimmer = useSharedValue(0.5);
+  const arcSwell = useSharedValue(0.5);
   const motionActiveSv = useSharedValue(reduceMotion ? 0 : 1);
 
   useEffect(() => {
@@ -149,9 +169,11 @@ export function MoveKineticObject({ action, phase, reduceMotion }: Props) {
   useEffect(() => {
     cancelAnimation(arcDrift);
     cancelAnimation(arcShimmer);
+    cancelAnimation(arcSwell);
     if (reduceMotion) {
       arcDrift.value = 0.5;
       arcShimmer.value = 0.5;
+      arcSwell.value = 0.5;
       return;
     }
     const timing = (duration: number) =>
@@ -163,21 +185,21 @@ export function MoveKineticObject({ action, phase, reduceMotion }: Props) {
 
     arcDrift.value = withRepeat(timing(ARC_DRIFT_MS), -1, true);
     arcShimmer.value = withRepeat(timing(ARC_SHIMMER_MS), -1, true);
-  }, [arcDrift, arcShimmer, reduceMotion]);
+    arcSwell.value = withRepeat(timing(ARC_SWELL_MS), -1, true);
+  }, [arcDrift, arcShimmer, arcSwell, reduceMotion]);
 
-  const arcFloatStyle = useAnimatedStyle(() => {
+  const arcIdleStyle = useAnimatedStyle(() => {
     if (motionActiveSv.value === 0) {
       return { transform: [{ translateX: 0 }, { translateY: 0 }] };
     }
+    const t = arcDrift.value - 0.5;
+    const s = arcShimmer.value - 0.5;
     return {
-      transform: [
-        { translateX: (arcDrift.value - 0.5) * 11 },
-        { translateY: (arcShimmer.value - 0.5) * 8 },
-      ],
+      transform: [{ translateX: t * 10 }, { translateY: s * 7 }],
     };
   });
 
-  const animatedStyle = useAnimatedStyle(() => {
+  const morphStyle = useAnimatedStyle(() => {
     const c = compress.value;
     const vert =
       action === 'pressFeet' || action === 'tenseRelease'
@@ -241,8 +263,8 @@ export function MoveKineticObject({ action, phase, reduceMotion }: Props) {
 
   return (
     <View style={styles.shell}>
-      <Animated.View style={[styles.object, animatedStyle]}>
-        <Animated.View style={[styles.svgFloat, arcFloatStyle]}>
+      <Animated.View style={[styles.idleLayer, arcIdleStyle]}>
+        <Animated.View style={[styles.morphLayer, morphStyle]}>
           <Svg width="100%" height="100%" viewBox={MOVE_KINETIC_VIEWBOX} preserveAspectRatio="xMidYMid meet">
             {BANDS.map((band, index) => (
               <ArcBand
@@ -254,6 +276,7 @@ export function MoveKineticObject({ action, phase, reduceMotion }: Props) {
                 phaseOffset={index / BANDS.length}
                 drift={arcDrift}
                 shimmer={arcShimmer}
+                swell={arcSwell}
                 motionActive={motionActiveSv}
               />
             ))}
@@ -271,16 +294,20 @@ const styles = StyleSheet.create({
     maxWidth: '100%',
     alignItems: 'center',
     justifyContent: 'center',
+    overflow: 'visible',
   },
-  object: {
+  idleLayer: {
     width: OBJECT_W,
     height: OBJECT_H,
     alignItems: 'center',
     justifyContent: 'center',
+    overflow: 'visible',
   },
-  svgFloat: {
-    flex: 1,
-    width: '100%',
-    height: '100%',
+  morphLayer: {
+    width: OBJECT_W,
+    height: OBJECT_H,
+    alignItems: 'center',
+    justifyContent: 'center',
+    overflow: 'visible',
   },
 });
