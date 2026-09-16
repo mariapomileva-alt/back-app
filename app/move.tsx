@@ -11,11 +11,13 @@ import { isMoveSequenceId, moveSequenceIds } from '@/features/move/steps';
 import { useMoveCycle } from '@/features/move/useMoveCycle';
 import { MOVE_UNCOMFORTABLE_INTENT } from '@/features/session/suggestions';
 import { useMoveAmbient } from '@/hooks/useMoveAmbient';
+import { usePaidToolGate } from '@/hooks/usePaidToolGate';
 import { t } from '@/locales/i18n';
 import { serif } from '@/theme/fonts';
 import { spacing } from '@/theme/spacing';
 
 export default function MoveScreen() {
+  usePaidToolGate();
   const { height, fontScale } = useWindowDimensions();
   const compact = height < 700 || fontScale > 1.35;
   const { phase, instructionKey, sequenceId, stepId, onPressIn, onPressOut, selectSequence } =

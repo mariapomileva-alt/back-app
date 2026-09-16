@@ -10,6 +10,7 @@ import { isBreathPatternId } from '@/features/breathe/patterns';
 import { isDistractActivityId } from '@/features/distract/activities';
 import { isListenSoundId, listenSounds } from '@/features/listen/sounds';
 import { isHomeToolId } from '@/features/session/activeSession';
+import { usePaidToolGate } from '@/hooks/usePaidToolGate';
 import { useTheme } from '@/hooks/useTheme';
 import { t } from '@/locales/i18n';
 import { clearHistory, loadHistory } from '@/storage/history';
@@ -85,6 +86,7 @@ function PatternFact({ label, value }: { label: string; value: string }) {
 }
 
 export default function PatternsScreen() {
+  usePaidToolGate();
   const { reloadPreferences } = useTheme();
   const [choices, setChoices] = useState<RememberedChoices>(emptyChoices);
   const [recent, setRecent] = useState<SessionRecord[]>([]);

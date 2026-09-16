@@ -1,21 +1,23 @@
 /**
- * Back Plus — subscription information (S1/S2). No purchase activation here (S3).
+ * Back Plus — subscription model (information + access boundaries). No purchase activation here (S3).
+ *
+ * Access model:
+ * - Paid: Breathe, Distract, Ground, Move, Listen, Read, My patterns, themes, and related content
+ *   require active trial OR active subscription (verified via store / RevenueCat when S3 is live).
+ * - No permanent free product tier for core tools.
  *
  * Ethical rules (do not bypass in UI or copy):
- * - Never paywall the six core tools, Extra support, Call my person, or emergency flows.
- * - Never interrupt an active exercise with a paywall.
+ * - Never interrupt an active exercise with a paywall; finish the session first.
+ * - Never show a paywall after the user reports “Worse” on session outcome.
+ * - Never gate Extra support, emergency info, Call/Message my person, Privacy, Terms, Subscription
+ *   info, Restore, Manage subscription, Support, or accessibility needed for those screens.
+ * - Do not describe safety routes as a “free plan.”
  * - Never show live store prices in the app until Product / Offerings come from the store SDK.
  * - Do not advertise a free trial as available until products and trial are configured in the stores.
  * - subscriptionsPubliclyAvailable must stay false until Apple/Google products and RevenueCat are live.
+ * - Never unlock Back from localStorage, install date, or an unverified boolean alone.
  *
- * S1 audit summary (see also docs/subscription-audit.md):
- * - landing/subscriptions.html was 1.0 free-only placeholder; replaced in S2.
- * - app/settings/subscription.tsx was dormant informational stub; no Settings row (removed per store/ios/listing.md).
- * - RevenueCat: not integrated; production.ts holds null API keys and null annualProductId.
- * - No Apple/Google product IDs in repo (annualProductId null; no monthly id).
- * - Entitlement id placeholder: back_annual in production.ts — not wired to runtime checks.
- * - locales: en.json only; subscription keys expanded in S2.
- * - Terms/Support link to subscriptions.html; copy aligned in S2 (no “nothing to buy” vs “Back Plus preparing” clash).
+ * S1 audit: docs/subscription-audit.md
  */
 
 import { hasRevenueCatConfig, productionConfig } from '@/config/production';
@@ -31,26 +33,73 @@ export type BackPlusBenefit = {
 export const subscriptionsPubliclyAvailable = false;
 
 /**
- * Dev-only preview of an active subscriber UI. Never affects production entitlements.
- * Toggle locally to preview the active state in __DEV__ only.
+ * __DEV__ only: preview subscription UI states. Never affects production entitlements.
+ * Set to `trialActive`, `subscribed`, `expired`, or `none` to preview Settings / paywall copy.
  */
+export const devPreviewEntitlement: 'none' | 'trialActive' | 'subscribed' | 'expired' | null =
+  __DEV__ ? 'none' : null;
+
+/** @deprecated use devPreviewEntitlement */
 export const devPreviewActiveSubscription = false;
 
 export const backPlusProductName = 'Back Plus';
 
-/** Always free — never gated behind Back Plus in app logic. */
-export const backPlusFreeForeverIds = [
-  'sixTools',
-  'extraSupport',
-  'callMyPerson',
-  'localPrivacy',
+/** Core tools and experience surfaces that require trial or subscription. */
+export const paidToolIds = [
+  'breathe',
+  'distract',
+  'ground',
+  'move',
+  'listen',
+  'read',
 ] as const;
 
+export type PaidToolId = (typeof paidToolIds)[number];
+
+/** Settings / routes that require Back Plus (same entitlement as paid tools). */
+export const paidExperienceRouteIds = ['patterns', 'themes'] as const;
+
 /**
- * Back Plus benefits. Only `released` items may be shown as “included” in UI.
- * Planned items appear as “in development”, not as current entitlements.
+ * Safety and account-management routes — never subscription-gated.
+ * (Not labeled as a “free plan” in copy.)
+ */
+export const freeForeverRouteIds = [
+  'extraSupport',
+  'emergency',
+  'callMyPerson',
+  'messageMyPerson',
+  'privacy',
+  'terms',
+  'subscription',
+  'restorePurchases',
+  'manageSubscription',
+  'support',
+  'settingsRoot',
+] as const;
+
+export type FreeForeverRouteId = (typeof freeForeverRouteIds)[number];
+
+export type BackPlusAccessState =
+  | 'loading'
+  | 'unavailable'
+  | 'trialActive'
+  | 'subscribed'
+  | 'expired'
+  | 'none';
+
+export type BackPlusPlanKind = 'annual' | 'monthly';
+
+/**
+ * Back Plus benefits for marketing lists. Only `released` items are “included today”.
+ * Planned items may appear as in development, not as current entitlements.
  */
 export const backPlusBenefits: BackPlusBenefit[] = [
+  { id: 'sixTools', status: 'released' },
+  { id: 'offlineSounds', status: 'released' },
+  { id: 'allExercises', status: 'released' },
+  { id: 'readExperience', status: 'released' },
+  { id: 'patterns', status: 'released' },
+  { id: 'themes', status: 'released' },
   { id: 'expandedSounds', status: 'planned' },
   { id: 'additionalThemes', status: 'planned' },
   { id: 'readLibrary', status: 'planned' },
@@ -64,7 +113,7 @@ export const backPlusBenefits: BackPlusBenefit[] = [
 export const backPlusPlannedPricingReference = {
   monthlyEur: 2.99,
   annualEur: 19.99,
-  /** Shown on static site when store data is unavailable */
+  /** Shown on static site when store data is unavailable (State A). */
   regionalVariationNote:
     'Prices vary by region and currency. Final prices appear in the App Store or Google Play when Back Plus is available.',
 } as const;
@@ -77,6 +126,7 @@ export const backPlusLegalUrls = {
   websiteHome: 'https://backapp.live/',
 } as const;
 
+/** @deprecated use BackPlusAccessState via useBackPlusAccess */
 export type BackPlusDisplayState = 'store_unavailable' | 'inactive' | 'active';
 
 export function releasedBackPlusBenefits(): BackPlusBenefit[] {
@@ -96,6 +146,11 @@ export function hasConfiguredStoreProducts(): boolean {
   );
 }
 
+export function hasPaidToolAccess(state: BackPlusAccessState): boolean {
+  return state === 'trialActive' || state === 'subscribed';
+}
+
+/** @deprecated use useBackPlusAccess */
 export function getBackPlusDisplayState(): BackPlusDisplayState {
   if (__DEV__ && devPreviewActiveSubscription) {
     return 'active';
@@ -103,6 +158,5 @@ export function getBackPlusDisplayState(): BackPlusDisplayState {
   if (!hasConfiguredStoreProducts()) {
     return 'store_unavailable';
   }
-  // S3: resolve from RevenueCat entitlement; until then treat as inactive when store exists.
   return 'inactive';
 }

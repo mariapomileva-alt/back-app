@@ -6,25 +6,44 @@ import { ScreenContainer } from '@/components/layout/ScreenContainer';
 import { ScreenHeader } from '@/components/navigation/ScreenHeader';
 import { SettingsRow } from '@/components/settings/SettingsRow';
 import { SettingsSection } from '@/components/settings/SettingsSection';
-import { getBackPlusDisplayState } from '@/config/backPlus';
 import { getEmergencyByCountryCode } from '@/features/emergency/numbers';
+import { formatBackPlusDate } from '@/features/subscription/formatBackPlusDate';
+import { openBackPlusPaywall } from '@/features/subscription/openBackPlusPaywall';
+import { useBackPlusAccess } from '@/features/subscription/useBackPlusAccess';
 import { useTheme } from '@/hooks/useTheme';
 import { t } from '@/locales/i18n';
 import { loadEmergencyCountryCode } from '@/storage/emergencyCountry';
 import { spacing } from '@/theme/spacing';
+
+function backPlusSubtitle(access: ReturnType<typeof useBackPlusAccess>): string {
+  const { accessState, plan, renewalOrExpirationDate } = access;
+  const date =
+    renewalOrExpirationDate !== null ? formatBackPlusDate(renewalOrExpirationDate) : null;
+
+  if (accessState === 'unavailable') {
+    return t('settings.backPlusSubtitleUnavailable');
+  }
+  if (accessState === 'trialActive' && date) {
+    return t('settings.backPlusSubtitleTrial', { date });
+  }
+  if (accessState === 'subscribed' && date) {
+    return plan === 'monthly'
+      ? t('settings.backPlusSubtitleMonthly', { date })
+      : t('settings.backPlusSubtitleAnnual', { date });
+  }
+  if (accessState === 'expired' || accessState === 'none') {
+    return t('settings.backPlusSubtitleRequired');
+  }
+  return t('settings.backPlusSubtitleRequired');
+}
 
 export default function SettingsScreen() {
   const router = useRouter();
   const { themeName, hapticsEnabled, reduceMotionOverride, setHapticsEnabled, setReduceMotionOverride } =
     useTheme();
   const [emergencyCountry, setEmergencyCountry] = useState<string | null>(null);
-  const backPlusState = getBackPlusDisplayState();
-  const backPlusSubtitleKey =
-    backPlusState === 'active'
-      ? 'settings.backPlusSubtitleActive'
-      : backPlusState === 'store_unavailable'
-        ? 'settings.backPlusSubtitleUnavailable'
-        : 'settings.backPlusSubtitleInactive';
+  const backPlusAccess = useBackPlusAccess();
+  const { hasPaidAccess } = backPlusAccess;
 
   useFocusEffect(
     useCallback(() => {
@@ -41,6 +60,14 @@ export default function SettingsScreen() {
     }, []),
   );
 
+  const openPaidExperience = (path: '/settings/patterns' | '/settings/themes') => {
+    if (!hasPaidAccess) {
+      openBackPlusPaywall(router);
+      return;
+    }
+    router.push(path);
+  };
+
   return (
     <ScreenContainer>
       <ScreenHeader title={t('settings.title')} />
@@ -50,7 +77,7 @@ export default function SettingsScreen() {
             label={t('settings.theme')}
             value={t(`themes.${themeName}`)}
             accessibilityHint={t('settings.themeHint')}
-            onPress={() => router.push('/settings/themes')}
+            onPress={() => openPaidExperience('/settings/themes')}
           />
           <SettingsRow
             label={t('settings.voice')}
@@ -79,7 +106,7 @@ export default function SettingsScreen() {
         <SettingsSection title={t('settings.groups.personal')}>
           <SettingsRow
             label={t('settings.backPlus')}
-            value={t(backPlusSubtitleKey)}
+            value={backPlusSubtitle(backPlusAccess)}
             accessibilityHint={t('settings.backPlusHint')}
             onPress={() => router.push('/settings/subscription')}
           />
@@ -89,7 +116,7 @@ export default function SettingsScreen() {
           />
           <SettingsRow
             label={t('settings.patterns')}
-            onPress={() => router.push('/settings/patterns')}
+            onPress={() => openPaidExperience('/settings/patterns')}
             showDivider={false}
           />
         </SettingsSection>

@@ -1,3 +1,4 @@
+/** Call / message my person — never subscription-gated (safety route). */
 import { useCallback, useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { useFocusEffect, useRouter } from 'expo-router';

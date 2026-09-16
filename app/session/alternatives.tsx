@@ -13,6 +13,8 @@ import { AppText } from '@/components/typography/AppText';
 import { isHomeToolId } from '@/features/session/activeSession';
 import { shareBack } from '@/features/session/shareBack';
 import { alternativesForIntent } from '@/features/session/suggestions';
+import { openBackPlusPaywall } from '@/features/subscription/openBackPlusPaywall';
+import { useBackPlusAccess } from '@/features/subscription/useBackPlusAccess';
 import { useTheme } from '@/hooks/useTheme';
 import { t } from '@/locales/i18n';
 import { serif } from '@/theme/fonts';
@@ -29,7 +31,16 @@ export default function SessionAlternativesScreen() {
   }>();
   const currentTool = isHomeToolId(tool) ? tool : undefined;
   const intentValue = Array.isArray(intent) ? intent[0] : intent;
+  const { hasPaidAccess } = useBackPlusAccess();
   const suggestions = alternativesForIntent(intentValue, currentTool);
+
+  const openSuggestion = (href: (typeof suggestions)[number]['href']) => {
+    if (!hasPaidAccess) {
+      openBackPlusPaywall(router);
+      return;
+    }
+    router.replace(href);
+  };
 
   const title =
     feeling === 'better'
@@ -78,7 +89,7 @@ export default function SessionAlternativesScreen() {
                 key={tool.id}
                 label={t(`home.tools.${tool.id}`)}
                 icon={<ToolIcon name={tool.id} size={28} />}
-                onPress={() => router.replace(tool.href)}
+                onPress={() => openSuggestion(tool.href)}
               />
             ))}
           </View>

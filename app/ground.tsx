@@ -21,6 +21,7 @@ import {
 } from '@/features/ground/transitions';
 import { useGroundSequence } from '@/features/ground/useGroundSequence';
 import { useGroundAmbient } from '@/hooks/useGroundAmbient';
+import { usePaidToolGate } from '@/hooks/usePaidToolGate';
 import { useGuidedAudio } from '@/hooks/useGuidedAudio';
 import { useReduceMotion } from '@/hooks/useReduceMotion';
 import { t } from '@/locales/i18n';
@@ -29,6 +30,7 @@ import { serif } from '@/theme/fonts';
 import { spacing } from '@/theme/spacing';
 
 export default function GroundScreen() {
+  usePaidToolGate();
   const reduceMotion = useReduceMotion();
   const { height, fontScale } = useWindowDimensions();
   const compact = height < 700 || fontScale > 1.35;

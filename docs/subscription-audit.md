@@ -1,54 +1,51 @@
-# Back Plus subscription audit (S1)
+# Back Plus subscription audit
 
-Date: 17 September 2026. Scope: information architecture only (S1 + S2). **No purchase activation (S3).**
+Date: 17 September 2026. Scope: correct subscription model (S2). **No purchase activation (S3).**
 
-## landing/subscriptions.html (before S2)
+## Business model (final)
 
-- Placeholder for Back 1.0: free app, no IAP, future “Back+” mentioned generically.
-- Footer and Warm Earth / `legal-main` pattern matched other legal pages.
-- Meta description stated no in-app purchase.
+- **No permanent free tier** for Breathe, Distract, Ground, Move, Listen, Read, My patterns, or themes.
+- **Annual:** 7-day store trial when eligible; then renews at localized annual price unless cancelled.
+- **Monthly:** no trial; renews until cancelled.
+- **Safety / account routes** never gated: Extra support, emergency info, Call/Message my person, Privacy, Terms, Subscription info, Restore, Manage subscription, Support, and accessibility needed for those screens.
 
-## App: settings & route
+## Central config
 
-- `app/settings/subscription.tsx`: minimal stub (`subscription.available`, `noPaywall`, `purchasingOff`); route `/settings/subscription` exists via expo-router file layout.
-- `app/settings/index.tsx`: **no** Back Plus / Subscription row (intentionally removed per `store/ios/listing.md` for 1.0 App Store).
-- S2 re-adds informational **Back Plus** row only — no purchase.
+- `config/backPlus.ts`: `subscriptionsPubliclyAvailable: false`, `paidToolIds`, `freeForeverRouteIds`, `devPreviewEntitlement`, planned EUR reference for website State A only.
+- `landing/subscriptions-config.js`: mirror of `subscriptionsPubliclyAvailable`.
 
-## RevenueCat / IAP / billing
+## Entitlement layer (S2 stub)
 
-- **No** `react-native-purchases` / RevenueCat SDK in dependencies.
-- `config/production.ts`: `revenueCatIosApiKey`, `revenueCatAndroidApiKey`, and `annualProductId` are `null`; `entitlementId: 'back_annual'` is a placeholder only.
-- `hasRevenueCatConfig()` returns false until both API keys are set.
-- Store docs (`store/ios/listing.md`, `SHARE-WITH-COMPANION.md`): IAP disabled for 1.0.
+- `features/subscription/resolveBackPlusAccess.ts` + `useBackPlusAccess.ts`
+- Production without RevenueCat / products: `unavailable` for store UI, **tools locked** (`hasPaidAccess: false`).
+- `__DEV__`: `devPreviewEntitlement` fixtures (`none` | `trialActive` | `subscribed` | `expired`).
+- `entitlementCache.ts`: structure for last verified entitlement — **does not unlock** without store verification.
 
-## Entitlement boundaries (free tools)
+## Routing
 
-- Grep found **no** runtime paywall / premium checks on the six home tools.
-- `hooks/useActiveSession.ts` explicitly avoids routing to a paywall from an active session.
-- Extra support, Call my person, and emergency flows are not subscription-gated in code.
+- Home: six cards unchanged visually; tap without entitlement → `/settings/subscription`.
+- Paid tool screens: `usePaidToolGate()` (not on safety routes).
+- Active session: no paywall on close; no paywall after “Worse” (`useActiveSession`, session alternatives).
 
-## Locales
+## RevenueCat / IAP
 
-- Only `locales/en.json` is loaded (`locales/i18n.ts`); other languages fall back to English.
+- No `react-native-purchases` in dependencies.
+- `config/production.ts`: null API keys, null `annualProductId` / `monthlyProductId`.
 
-## Legal copy consistency
+## Production TODOs (S3+)
 
-- `landing/terms.html` and `landing/support.html` link to `subscriptions.html` for billing.
-- Pre-S2 app copy said “nothing to buy”; website said 1.0 free — aligned on free 1.0, but did not yet describe Back Plus preparation. S2 aligns on **Back Plus being prepared** while **core tools stay free**.
+- Create App Store / Play subscription products; set product IDs in `production.ts`.
+- RevenueCat project, entitlements, public SDK keys.
+- Wire `resolveBackPlusAccess` to CustomerInfo; populate entitlement cache after verification.
+- Legal review of regional pricing and trial disclosures.
+- Monitored support email on `landing/support.html`.
+- Set `subscriptionsPubliclyAvailable: true` only when products are approved and `hasConfiguredStoreProducts()` is true.
 
-## Apple / Google product IDs in repo
+## Consistency test (website + app)
 
-- **None configured.** `annualProductId` is null; no monthly product id field populated.
-
-## Central config (S2)
-
-- `config/backPlus.ts`: `subscriptionsPubliclyAvailable: false`, benefits released vs planned, planned EUR reference prices for website planning only, ethical rules in comments.
-- `landing/subscriptions-config.js`: mirror flag for static site State A/B.
-
-## Production TODOs (S3+, not this pass)
-
-- Create App Store / Play subscription products; set `annualProductId` (+ monthly if offered).
-- RevenueCat project, entitlements, public SDK keys in `production.ts`.
-- Legal review of Back Plus copy and regional pricing disclosures.
-- Monitored support email on `landing/support.html` (existing TODO).
-- Enable purchases only when `hasConfiguredStoreProducts()` is true and products are approved.
+| Claim | Status |
+| --- | --- |
+| No permanent free tier for six tools | Yes |
+| Annual 7-day trial when eligible | Yes (copy; store not live) |
+| Subscription required after trial for six tools | Yes |
+| Safety routes without payment | Yes |

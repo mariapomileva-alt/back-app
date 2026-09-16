@@ -14,10 +14,12 @@ import {
 import { loadReadPack } from '@/features/read/packs';
 import { loadReadMemory, saveReadMemory } from '@/features/read/storage';
 import type { ReadMemory, ReadSession } from '@/features/read/types';
+import { usePaidToolGate } from '@/hooks/usePaidToolGate';
 import { useTheme } from '@/hooks/useTheme';
 import { t } from '@/locales/i18n';
 
 export default function ReadScreen() {
+  usePaidToolGate();
   const { theme } = useTheme();
   const [memory, setMemory] = useState<ReadMemory | null>(null);
   const [session, setSession] = useState<ReadSession | null>(null);

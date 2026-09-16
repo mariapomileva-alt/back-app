@@ -1,5 +1,17 @@
 import { Stack } from 'expo-router';
 
+import { usePaidToolGate } from '@/hooks/usePaidToolGate';
+
+function DistractPaidAccessGate() {
+  usePaidToolGate();
+  return null;
+}
+
 export default function DistractLayout() {
-  return <Stack screenOptions={{ headerShown: false }} />;
+  return (
+    <>
+      <DistractPaidAccessGate />
+      <Stack screenOptions={{ headerShown: false }} />
+    </>
+  );
 }

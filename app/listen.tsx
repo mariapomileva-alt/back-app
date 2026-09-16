@@ -16,6 +16,7 @@ import {
   type ListenSoundId,
 } from '@/features/listen/sounds';
 import { useLoopingSound } from '@/hooks/useLoopingSound';
+import { usePaidToolGate } from '@/hooks/usePaidToolGate';
 import { useTheme } from '@/hooks/useTheme';
 import { t } from '@/locales/i18n';
 import {
@@ -50,6 +51,7 @@ function initialSoundId(): ListenSoundId {
 }
 
 export default function ListenScreen() {
+  usePaidToolGate();
   const { theme } = useTheme();
   const { height: windowHeight } = useWindowDimensions();
   const compact = windowHeight < 740;

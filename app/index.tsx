@@ -1,6 +1,7 @@
 import { StyleSheet, View } from 'react-native';
 import { useRouter } from 'expo-router';
 
+import { BackWordmark } from '@/components/brand/BackWordmark';
 import { ToolCard } from '@/components/cards/ToolCard';
 import { CallMyPersonAction } from '@/components/home/CallMyPersonAction';
 import { HomeCardVisual } from '@/components/home/HomeCardVisual';
@@ -10,6 +11,8 @@ import { ScreenContainer } from '@/components/layout/ScreenContainer';
 import { AppText } from '@/components/typography/AppText';
 import { homeCardBorder } from '@/features/home/surfaces';
 import { homeTools } from '@/features/home/tools';
+import { openBackPlusPaywall } from '@/features/subscription/openBackPlusPaywall';
+import { useBackPlusAccess } from '@/features/subscription/useBackPlusAccess';
 import { useTheme } from '@/hooks/useTheme';
 import { t } from '@/locales/i18n';
 import { serif } from '@/theme/fonts';
@@ -24,15 +27,30 @@ const toolRows = [
 export default function HomeScreen() {
   const router = useRouter();
   const { theme } = useTheme();
+  const { accessState, hasPaidAccess } = useBackPlusAccess();
+
+  const openTool = (href: (typeof homeTools)[number]['href']) => {
+    if (accessState === 'loading') {
+      return;
+    }
+    if (!hasPaidAccess) {
+      openBackPlusPaywall(router);
+      return;
+    }
+    router.push(href);
+  };
 
   return (
     <View style={[styles.root, { backgroundColor: theme.colors.background }]}>
       <PaperGrain opacity={0.12} />
       <ScreenContainer scroll={false} style={styles.transparent} contentStyle={styles.content}>
         <View style={styles.top}>
-          <AppText variant="brand" accessibilityRole="header" style={styles.brand}>
-            {t('app.name')}
-          </AppText>
+          <BackWordmark
+            size={22}
+            variant="theme"
+            accessibilityRole="header"
+            accessibilityLabel={t('app.name')}
+          />
           <HomeSettingsButton onPress={() => router.push('/settings')} />
         </View>
 
@@ -53,7 +71,7 @@ export default function HomeScreen() {
                   key={tool.id}
                   label={t(`home.tools.${tool.id}`)}
                   visual={<HomeCardVisual id={tool.id} />}
-                  onPress={() => router.push(tool.href)}
+                  onPress={() => openTool(tool.href)}
                   style={{
                     backgroundColor: theme.colors.surface,
                     borderColor: homeCardBorder(theme),
@@ -93,11 +111,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-  },
-  brand: {
-    fontFamily: serif,
-    fontWeight: '500',
-    letterSpacing: 0.15,
   },
   hero: {
     marginTop: spacing.sm,

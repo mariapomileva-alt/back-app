@@ -10,13 +10,15 @@ type PlanId = 'monthly' | 'annual';
 
 type Props = {
   planId: PlanId;
+  highlight?: boolean;
 };
 
-export function BackPlusPlanPlaceholder({ planId }: Props) {
+export function BackPlusPlanPlaceholder({ planId, highlight }: Props) {
   const { theme } = useTheme();
   const titleKey = planId === 'monthly' ? 'subscription.planMonthly' : 'subscription.planAnnual';
   const labelKey =
     planId === 'monthly' ? 'subscription.planMonthlyLabel' : 'subscription.planAnnualLabel';
+  const trialKey = planId === 'annual' ? 'subscription.planAnnualTrial' : 'subscription.planMonthlyNoTrial';
 
   return (
     <View
@@ -25,14 +27,23 @@ export function BackPlusPlanPlaceholder({ planId }: Props) {
       accessibilityLabel={`${t(titleKey)}. ${t('subscription.planUnavailableA11y')}`}
       style={[
         styles.card,
+        highlight ? styles.cardHighlight : null,
         {
           backgroundColor: theme.colors.surface,
-          borderColor: theme.colors.border,
+          borderColor: highlight ? theme.colors.primary : theme.colors.border,
         },
       ]}
     >
+      {highlight ? (
+        <AppText variant="secondary" tone="secondary" style={styles.badge}>
+          {t('subscription.bestValue')}
+        </AppText>
+      ) : null}
       <AppText variant="body" style={styles.title}>
         {t(titleKey)}
+      </AppText>
+      <AppText variant="secondary" tone="secondary">
+        {t(trialKey)}
       </AppText>
       <AppText variant="secondary" tone="secondary">
         {t('subscription.planUnavailable')}
@@ -50,6 +61,15 @@ const styles = StyleSheet.create({
     borderWidth: StyleSheet.hairlineWidth,
     padding: spacing.lg,
     gap: spacing.xs,
+  },
+  cardHighlight: {
+    borderWidth: 1.5,
+  },
+  badge: {
+    fontWeight: '600',
+    textTransform: 'uppercase',
+    letterSpacing: 0.6,
+    fontSize: 11,
   },
   title: {
     fontWeight: '600',
