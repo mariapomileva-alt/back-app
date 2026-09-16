@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { Animated, Easing, Platform, Pressable, StyleSheet, View, useWindowDimensions } from 'react-native';
+import { Animated, Easing, Platform, Pressable, StyleSheet, useWindowDimensions } from 'react-native';
 
 import { AudioControl } from '@/components/audio/AudioControl';
 import { GroundStage } from '@/components/ground/GroundStage';
@@ -146,14 +146,15 @@ export default function GroundScreen() {
   }, [sequenceId]);
 
   const onPlayPause = () => {
-    unlockFromUserGesture();
     if (paused) {
+      unlockFromUserGesture();
       setPaused(false);
       if (narrationReady) {
         audio.play();
       }
       return;
     }
+    unlockFromUserGesture();
     setPaused(true);
     audio.pause();
   };
@@ -191,7 +192,12 @@ export default function GroundScreen() {
     >
       {(controls) => (
         <>
-          <View style={[styles.stage, compact && styles.stageCompact]}>
+          <Pressable
+            accessibilityRole="none"
+            importantForAccessibility="no-hide-descendants"
+            onPress={unlockFromUserGesture}
+            style={[styles.stage, compact && styles.stageCompact]}
+          >
             <GroundStage stepKey={instructionKey} paused={paused} />
             <Pressable
               accessibilityRole={last ? 'text' : 'button'}
@@ -235,7 +241,7 @@ export default function GroundScreen() {
               }
               onReplay={replay}
             />
-          </View>
+          </Pressable>
           <SessionChoiceSheet
             visible={chooserOpen}
             title={t('ground.menu')}

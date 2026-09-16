@@ -66,12 +66,12 @@ export function useGroundAmbient({ paused = false, masterMuted = false }: Option
   }, [ambientMuted, paused, prefLoaded]);
 
   const unlockFromUserGesture = useCallback(() => {
-    if (paused || ambientMuted) {
+    if (ambientMuted) {
       return;
     }
-    // Always re-attempt on tap so web NotAllowedError unlocks even when paused === false.
+    // Re-sync on user gesture. Do not gate on session pause — Play/resume runs while paused is still true.
     loopRef.current.play(true);
-  }, [ambientMuted, paused]);
+  }, [ambientMuted]);
 
   const toggleMute = useCallback(() => {
     setGroundMuted((current) => {

@@ -6,4 +6,4 @@ export const groundAmbient = {
 } as const;
 
 /** Very low calm drone — quieter than Listen environment beds. */
-export const GROUND_AMBIENT_VOLUME = 0.09;
+export const GROUND_AMBIENT_VOLUME = 0.13;
