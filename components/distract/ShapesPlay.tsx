@@ -17,7 +17,11 @@ import { ShapeGlyph } from './ShapeGlyph';
 const TARGET_SIZE = 118;
 const OPTION_SIZE = 46;
 
-export function ShapesPlay() {
+type Props = {
+  onCorrectAdvance?: () => void;
+};
+
+export function ShapesPlay({ onCorrectAdvance }: Props) {
   const { theme } = useTheme();
   const haptics = useHaptics();
   const { height, fontScale } = useWindowDimensions();
@@ -55,6 +59,7 @@ export function ShapesPlay() {
             onPress={() => {
               if (option.correct) {
                 haptics.light();
+                onCorrectAdvance?.();
                 setFaded(null);
                 setDeck((current) => drawShapeRound(current.remaining, current.round));
                 return;

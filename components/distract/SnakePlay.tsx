@@ -207,7 +207,11 @@ function Collectible({
   );
 }
 
-export function SnakePlay() {
+type Props = {
+  onSnakeFood?: () => void;
+};
+
+export function SnakePlay({ onSnakeFood }: Props) {
   const { theme } = useTheme();
   const reduceMotion = useReduceMotion();
   const { height: windowHeight } = useWindowDimensions();
@@ -232,12 +236,18 @@ export function SnakePlay() {
   useEffect(() => {
     const id = setInterval(
       () => {
-        setGame((current) => advanceSnake(current, dirRef.current));
+        setGame((current) => {
+          const next = advanceSnake(current, dirRef.current);
+          if (next.food.x !== current.food.x || next.food.y !== current.food.y) {
+            onSnakeFood?.();
+          }
+          return next;
+        });
       },
       reduceMotion ? TICK_REDUCED_MS : TICK_MS,
     );
     return () => clearInterval(id);
-  }, [reduceMotion]);
+  }, [onSnakeFood, reduceMotion]);
 
   const beginDrag = (event: GestureResponderEvent) => {
     setDrag({ x: event.nativeEvent.pageX, y: event.nativeEvent.pageY });
