@@ -6,6 +6,7 @@ import { ScreenContainer } from '@/components/layout/ScreenContainer';
 import { ScreenHeader } from '@/components/navigation/ScreenHeader';
 import { SettingsRow } from '@/components/settings/SettingsRow';
 import { SettingsSection } from '@/components/settings/SettingsSection';
+import { getBackPlusDisplayState } from '@/config/backPlus';
 import { getEmergencyByCountryCode } from '@/features/emergency/numbers';
 import { useTheme } from '@/hooks/useTheme';
 import { t } from '@/locales/i18n';
@@ -17,6 +18,13 @@ export default function SettingsScreen() {
   const { themeName, hapticsEnabled, reduceMotionOverride, setHapticsEnabled, setReduceMotionOverride } =
     useTheme();
   const [emergencyCountry, setEmergencyCountry] = useState<string | null>(null);
+  const backPlusState = getBackPlusDisplayState();
+  const backPlusSubtitleKey =
+    backPlusState === 'active'
+      ? 'settings.backPlusSubtitleActive'
+      : backPlusState === 'store_unavailable'
+        ? 'settings.backPlusSubtitleUnavailable'
+        : 'settings.backPlusSubtitleInactive';
 
   useFocusEffect(
     useCallback(() => {
@@ -69,6 +77,12 @@ export default function SettingsScreen() {
         </SettingsSection>
 
         <SettingsSection title={t('settings.groups.personal')}>
+          <SettingsRow
+            label={t('settings.backPlus')}
+            value={t(backPlusSubtitleKey)}
+            accessibilityHint={t('settings.backPlusHint')}
+            onPress={() => router.push('/settings/subscription')}
+          />
           <SettingsRow
             label={t('settings.supportContact')}
             onPress={() => router.push('/support/setup')}

@@ -16,9 +16,12 @@ export const productionConfig = {
   revenueCatIosApiKey: null as string | null,
   revenueCatAndroidApiKey: null as string | null,
 
-  // TODO: add the App Store / Play product identifier for Back Annual.
-  // Target: USD $9.99 / year with a 7-day trial. Never hard-code a displayed price.
+  // TODO (S3): App Store / Play product identifiers — do not invent IDs in repo.
+  // Planned Back Plus reference pricing (EUR, website planning only): see config/backPlus.ts.
+  // Display prices only from store / RevenueCat Offerings in app UI.
   annualProductId: null as string | null,
+  // TODO (S3): monthly product id if monthly plan is offered.
+  monthlyProductId: null as string | null,
   entitlementId: 'back_annual',
 
   // TODO: replace with the live Terms of Use URL before store release.
