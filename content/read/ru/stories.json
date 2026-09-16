@@ -1,15 +1,15 @@
 [
   {
-    "id": "en-stories-001",
+    "id": "ru-stories-001",
     "type": "micro_story",
     "fragments": [
-      "On a still lake",
-      "a small boat sat",
-      "as if it had forgotten to leave.",
-      "The water held the sky",
-      "without asking.",
-      "A bird crossed once.",
-      "Then the quiet returned."
+      "На тихом озере",
+      "маленькая лодка стояла",
+      "как будто забыл уйти.",
+      "Вода держала небо",
+      "не спрашивая.",
+      "Однажды птица пересекла дорогу.",
+      "Затем тишина вернулась."
     ],
     "topics": [
       "water"
@@ -17,14 +17,14 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-002",
+    "id": "ru-stories-002",
     "type": "micro_story",
     "fragments": [
-      "The chair",
-      "remembered the shape of waiting.",
-      "Afternoon collected itself",
-      "in a square of floor.",
-      "Nothing needed to happen next."
+      "Стул",
+      "вспомнил форму ожидания.",
+      "Полдень собрался сам",
+      "в квадрате пола.",
+      "Дальше ничего не должно было случиться."
     ],
     "topics": [
       "room"
@@ -32,16 +32,16 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Look at one still object near you."
+      "text": "Посмотрите на один неподвижный объект рядом с вами."
     }
   },
   {
-    "id": "en-stories-003",
+    "id": "ru-stories-003",
     "type": "micro_story",
     "fragments": [
-      "A fern unrolled one slow new leaf.",
-      "The rest of the plant stayed as it was.",
-      "Green kept its own time."
+      "Папоротник медленно развернул новый лист.",
+      "В остальном завод остался прежним.",
+      "Грин держал свое время."
     ],
     "topics": [
       "plants"
@@ -49,14 +49,14 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-004",
+    "id": "ru-stories-004",
     "type": "micro_story",
     "fragments": [
-      "Clouds stacked themselves",
-      "without hurry.",
-      "The street darkened a little,",
-      "then paused.",
-      "Rain decided later."
+      "Облака складывались сами собой",
+      "не торопясь.",
+      "На улице немного потемнело,",
+      "затем сделал паузу.",
+      "Дождь решил позже."
     ],
     "topics": [
       "weather"
@@ -64,15 +64,15 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-005",
+    "id": "ru-stories-005",
     "type": "micro_story",
     "fragments": [
-      "Someone had left a page open",
-      "on the table.",
-      "The sentence in the middle",
-      "was unfinished.",
-      "It could wait.",
-      "Paper is patient."
+      "Кто-то оставил страницу открытой",
+      "на столе.",
+      "Предложение в середине",
+      "был незавершенным.",
+      "Это могло подождать.",
+      "Бумага терпелива."
     ],
     "topics": [
       "paper"
@@ -80,12 +80,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-006",
+    "id": "ru-stories-006",
     "type": "micro_story",
     "fragments": [
-      "The lamp made a small circle on the cloth.",
-      "Moths would have liked it, but none came.",
-      "The circle stayed, doing only that."
+      "Лампа очертила на ткани небольшой круг.",
+      "Мотылькам это понравилось бы, но никто не пришел.",
+      "Круг остался, занимаясь только этим."
     ],
     "topics": [
       "light"
@@ -93,12 +93,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-007",
+    "id": "ru-stories-007",
     "type": "micro_story",
     "fragments": [
-      "A path went between two fields of pale grass.",
-      "Stones kept the edges from wandering.",
-      "The path did not mind who used it."
+      "Тропа шла между двумя полями бледной травы.",
+      "Камни не давали краям смещаться.",
+      "Путь не имел значения, кто его использовал."
     ],
     "topics": [
       "earth"
@@ -106,12 +106,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-008",
+    "id": "ru-stories-008",
     "type": "micro_story",
     "fragments": [
-      "Evening arrived as a change in the color of walls.",
-      "One star appeared, then pretended it had been there.",
-      "The rest of the sky took its time."
+      "Вечер наступил как изменение цвета стен.",
+      "Появилась одна звезда, а затем притворилась, что она была там.",
+      "Остальная часть неба не торопилась."
     ],
     "topics": [
       "sky"
@@ -119,16 +119,16 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Look up, even if only as far as the ceiling."
+      "text": "Посмотрите вверх, хотя бы до потолка."
     }
   },
   {
-    "id": "en-stories-009",
+    "id": "ru-stories-009",
     "type": "micro_story",
     "fragments": [
-      "A cup sat in the exact center of the saucer.",
-      "It was empty, which was a kind of readiness.",
-      "The table held both without comment."
+      "Чашка стояла точно в центре блюдца.",
+      "Там было пусто, что было своего рода готовностью.",
+      "В таблице выдержаны оба мнения без комментариев."
     ],
     "topics": [
       "objects"
@@ -136,12 +136,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-010",
+    "id": "ru-stories-010",
     "type": "micro_story",
     "fragments": [
-      "Sparrows argued softly in a hedge.",
-      "Then they forgot the argument.",
-      "The hedge continued being a hedge."
+      "Воробьи тихо спорили в живой изгороди.",
+      "Потом они забыли о споре.",
+      "Изгородь продолжала оставаться изгородью."
     ],
     "topics": [
       "nature"
@@ -149,12 +149,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-011",
+    "id": "ru-stories-011",
     "type": "micro_story",
     "fragments": [
-      "Tide left a line of darker sand.",
-      "Shells kept their own small rooms.",
-      "The line would move again, and that was fine."
+      "Прилив оставил полосу темного песка.",
+      "У снарядов были свои маленькие комнаты.",
+      "Очередь снова переместилась, и это было нормально."
     ],
     "topics": [
       "water"
@@ -162,16 +162,16 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Now find a reflection, even a small one."
+      "text": "Теперь найдите отражение, хотя бы маленькое."
     }
   },
   {
-    "id": "en-stories-012",
+    "id": "ru-stories-012",
     "type": "micro_story",
     "fragments": [
-      "The house made one wooden sound, then none.",
-      "A clock somewhere decided not to insist.",
-      "Listening became easier."
+      "Дом издал один деревянный звук, а затем ничего.",
+      "Часы где-то решили не настаивать.",
+      "Слушать стало легче."
     ],
     "topics": [
       "quiet"
@@ -179,13 +179,13 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-013",
+    "id": "ru-stories-013",
     "type": "micro_story",
     "fragments": [
-      "Apples waited in a bowl as if they had all day.",
-      "One was greener.",
-      "None were in a rush.",
-      "The bowl was older than the fruit."
+      "Яблоки ждали в миске, как будто целый день.",
+      "Один был зеленее.",
+      "Никто не торопился.",
+      "Миска была старше фруктов."
     ],
     "topics": [
       "plants"
@@ -193,12 +193,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-014",
+    "id": "ru-stories-014",
     "type": "micro_story",
     "fragments": [
-      "A window held a square of ordinary street.",
-      "A bicycle passed through it and left.",
-      "The square remained ordinary, which helped."
+      "Окно представляло собой квадрат обычной улицы.",
+      "Велосипед проехал через него и уехал.",
+      "Площадь осталась обычной, и это помогло."
     ],
     "topics": [
       "room"
@@ -206,16 +206,16 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Look at one still object near you."
+      "text": "Посмотрите на один неподвижный объект рядом с вами."
     }
   },
   {
-    "id": "en-stories-015",
+    "id": "ru-stories-015",
     "type": "micro_story",
     "fragments": [
-      "Dust showed up only where the sun insisted.",
-      "The rest of the air kept its secrets.",
-      "The sun moved on without taking the dust."
+      "Пыль появлялась только там, где настаивало солнце.",
+      "Остальной воздух хранил свои тайны.",
+      "Солнце двинулось дальше, не забрав пыль."
     ],
     "topics": [
       "light"
@@ -223,12 +223,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-016",
+    "id": "ru-stories-016",
     "type": "micro_story",
     "fragments": [
-      "A letter had been folded twice, carefully.",
-      "The handwriting leaned a little to the right.",
-      "No one needed to open it this minute."
+      "Письмо было тщательно сложено дважды.",
+      "Почерк слегка наклонился вправо.",
+      "Никому не нужно было открывать его в эту минуту."
     ],
     "topics": [
       "paper"
@@ -236,12 +236,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-017",
+    "id": "ru-stories-017",
     "type": "micro_story",
     "fragments": [
-      "Fog made the far trees into suggestions.",
-      "The near trees stayed specific.",
-      "Walking felt shorter than it was."
+      "Туман превратил далекие деревья в предложения.",
+      "Ближайшие деревья оставались особенными.",
+      "Ходьба казалась короче, чем была."
     ],
     "topics": [
       "weather"
@@ -249,16 +249,16 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Notice the air on your skin for a moment."
+      "text": "Обратите на мгновение внимание на воздух на вашей коже."
     }
   },
   {
-    "id": "en-stories-018",
+    "id": "ru-stories-018",
     "type": "micro_story",
     "fragments": [
-      "A kettle clicked as it finished its work.",
-      "Steam wrote a brief cloud and erased it.",
-      "The mug could wait a moment more."
+      "Чайник щелкнул, закончив свою работу.",
+      "Стим написал краткое облако и стер его.",
+      "Кружка могла бы подождать еще немного."
     ],
     "topics": [
       "water"
@@ -266,12 +266,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-019",
+    "id": "ru-stories-019",
     "type": "micro_story",
     "fragments": [
-      "Clay on the wheel rose, then rested.",
-      "Hands knew when to stop.",
-      "The shape would dry into itself."
+      "Клэй на колесе поднялся и остановился.",
+      "Хэндс знал, когда остановиться.",
+      "Форма высохнет сама по себе."
     ],
     "topics": [
       "earth"
@@ -279,12 +279,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-020",
+    "id": "ru-stories-020",
     "type": "micro_story",
     "fragments": [
-      "A moth opened on the inside of the lampshade.",
-      "Its wings were a map of quieter woods.",
-      "It stayed until the light felt enough."
+      "На внутренней стороне абажура открылась моль.",
+      "Его крылья представляли собой карту более тихого леса.",
+      "Так оставалось до тех пор, пока света не стало достаточно."
     ],
     "topics": [
       "nature"
@@ -292,16 +292,16 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Find something living, or the color of something living."
+      "text": "Найдите что-нибудь живое или цвет чего-то живого."
     }
   },
   {
-    "id": "en-stories-021",
+    "id": "ru-stories-021",
     "type": "micro_story",
     "fragments": [
-      "Morning arrived first on the windowsill.",
-      "Then it found the spines of the books.",
-      "The rest of the room caught up slowly."
+      "Утро первым наступило на подоконнике.",
+      "Затем он нашел корешки книг.",
+      "Остальная часть комнаты медленно догоняла ситуацию."
     ],
     "topics": [
       "sky"
@@ -309,12 +309,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-022",
+    "id": "ru-stories-022",
     "type": "micro_story",
     "fragments": [
-      "A button had come off and been placed in a dish.",
-      "It looked finished, even alone.",
-      "Mending could be another day’s quiet."
+      "Пуговица оторвалась и была помещена в блюдо.",
+      "Он выглядел законченным, даже одиноким.",
+      "Исправление может означать еще один день тишины."
     ],
     "topics": [
       "objects"
@@ -322,12 +322,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-023",
+    "id": "ru-stories-023",
     "type": "micro_story",
     "fragments": [
-      "Snow made the street forget its usual noise.",
-      "Footsteps became careful punctuation.",
-      "Even the air seemed to read more slowly."
+      "Снег заставил улицу забыть свой обычный шум.",
+      "Шаги превратились в тщательную пунктуацию.",
+      "Даже воздух, казалось, читался медленнее."
     ],
     "topics": [
       "quiet"
@@ -335,16 +335,16 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Find something green around you."
+      "text": "Найдите что-нибудь зеленое вокруг себя."
     }
   },
   {
-    "id": "en-stories-024",
+    "id": "ru-stories-024",
     "type": "micro_story",
     "fragments": [
-      "Moss took the north side of the stone without debate.",
-      "The stone did not mind being partly green.",
-      "Years passed in that arrangement."
+      "Мосс без колебаний занял северную сторону камня.",
+      "Камень не возражал против того, чтобы быть частично зеленым.",
+      "В таком порядке прошли годы."
     ],
     "topics": [
       "plants"
@@ -352,12 +352,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-025",
+    "id": "ru-stories-025",
     "type": "micro_story",
     "fragments": [
-      "Someone had aligned the books by height, almost.",
-      "One taller spine refused, politely.",
-      "The shelf held the disagreement."
+      "Кто-то почти выровнял книги по высоте.",
+      "Один, более высокий, вежливо отказался.",
+      "На полке хранились разногласия."
     ],
     "topics": [
       "room"
@@ -365,12 +365,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-026",
+    "id": "ru-stories-026",
     "type": "micro_story",
     "fragments": [
-      "Rain wrote on the glass in temporary letters.",
-      "They ran into each other and became weather.",
-      "Inside, the table stayed dry on purpose."
+      "Дождь писал на стекле временными буквами.",
+      "Они столкнулись друг с другом и стали погодой.",
+      "Внутри стол намеренно оставался сухим."
     ],
     "topics": [
       "water"
@@ -378,16 +378,16 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Now find a reflection, even a small one."
+      "text": "Теперь найдите отражение, хотя бы маленькое."
     }
   },
   {
-    "id": "en-stories-027",
+    "id": "ru-stories-027",
     "type": "micro_story",
     "fragments": [
-      "A candle shortened itself without complaint.",
-      "Wax remembered the last hour in rings.",
-      "The room used the small light well."
+      "Свеча укоротилась безропотно.",
+      "Вакс вспомнил последний час в кольцах.",
+      "В комнате хорошо использовался небольшой свет."
     ],
     "topics": [
       "light"
@@ -395,12 +395,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-028",
+    "id": "ru-stories-028",
     "type": "micro_story",
     "fragments": [
-      "The crossword had one square left empty.",
-      "The clue was kind, if you looked again.",
-      "Leaving it open was also an answer."
+      "В кроссворде остался один пустой квадрат.",
+      "Подсказка была доброй, если вы посмотрите еще раз.",
+      "Оставить его открытым тоже было ответом."
     ],
     "topics": [
       "language"
@@ -408,12 +408,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-029",
+    "id": "ru-stories-029",
     "type": "micro_story",
     "fragments": [
-      "A garden wall kept the hill from visiting the path.",
-      "Lichen signed the stones in pale green.",
-      "No one needed to translate it."
+      "Садовая стена не позволяла холму зайти на тропу.",
+      "Лишайник окрасил камни в бледно-зеленый цвет.",
+      "Никому не нужно было это переводить."
     ],
     "topics": [
       "earth"
@@ -421,16 +421,16 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Find something with a little texture."
+      "text": "Найдите что-нибудь с небольшой текстурой."
     }
   },
   {
-    "id": "en-stories-030",
+    "id": "ru-stories-030",
     "type": "micro_story",
     "fragments": [
-      "The afternoon had a middle, though clocks disagreed.",
-      "A fly chose a sunlit patch of wall.",
-      "Both stayed for a while, then didn’t."
+      "Во второй половине дня была середина, хотя часы расходились.",
+      "Муха выбрала освещенный солнцем участок стены.",
+      "Оба оставались какое-то время, а затем расстались."
     ],
     "topics": [
       "time"
@@ -438,13 +438,13 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-031",
+    "id": "ru-stories-031",
     "type": "micro_story",
     "fragments": [
-      "A wooden spoon rested across a pot.",
-      "Soup could wait.",
-      "Stirring could wait.",
-      "The kitchen sounded like itself."
+      "Деревянная ложка лежала на горшке.",
+      "Суп мог подождать.",
+      "Перемешивание могло подождать.",
+      "Кухня звучала сама по себе."
     ],
     "topics": [
       "objects"
@@ -452,12 +452,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-032",
+    "id": "ru-stories-032",
     "type": "micro_story",
     "fragments": [
-      "Ducks drew the same slow comma on the pond.",
-      "Ripples signed it and let it go.",
-      "The far bank did not comment."
+      "Утки рисовали на пруду такую ​​же медленную запятую.",
+      "Ripple подписал его и отпустил.",
+      "Дальний банк не прокомментировал ситуацию."
     ],
     "topics": [
       "nature"
@@ -465,16 +465,16 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Find something living, or the color of something living."
+      "text": "Найдите что-нибудь живое или цвет чего-то живого."
     }
   },
   {
-    "id": "en-stories-033",
+    "id": "ru-stories-033",
     "type": "micro_story",
     "fragments": [
-      "A map was folded so the river met itself.",
-      "Creases became extra geography.",
-      "Unfolding could happen later."
+      "Карта была сложена так, что река встречалась сама с собой.",
+      "Складки стали дополнительной географией.",
+      "Развертывание может произойти позже."
     ],
     "topics": [
       "paper"
@@ -482,12 +482,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-034",
+    "id": "ru-stories-034",
     "type": "micro_story",
     "fragments": [
-      "Wind moved the dry leaves without choosing favorites.",
-      "They made a sound like distant paper.",
-      "The trees kept their places."
+      "Ветер шевелил сухие листья, не выбирая фаворитов.",
+      "Они издавали звук, похожий на далёкую бумагу.",
+      "Деревья остались на своих местах."
     ],
     "topics": [
       "sky"
@@ -495,12 +495,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-035",
+    "id": "ru-stories-035",
     "type": "micro_story",
     "fragments": [
-      "A blanket kept the shape of the last person.",
-      "The sofa did not mind.",
-      "Evening could sit there too."
+      "Одеяло сохранило форму последнего человека.",
+      "Диван не возражал.",
+      "Вечер тоже мог посидеть там."
     ],
     "topics": [
       "room"
@@ -508,16 +508,16 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Look at one still object near you."
+      "text": "Посмотрите на один неподвижный объект рядом с вами."
     }
   },
   {
-    "id": "en-stories-036",
+    "id": "ru-stories-036",
     "type": "micro_story",
     "fragments": [
-      "Somewhere in the building, a door closed softly.",
-      "Footsteps faded into a kind of weather.",
-      "This room returned to its own volume."
+      "Где-то в здании тихо закрылась дверь.",
+      "Шаги затихли, превратившись в непогоду.",
+      "Эта комната вернулась в свой объем."
     ],
     "topics": [
       "quiet"
@@ -525,12 +525,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-037",
+    "id": "ru-stories-037",
     "type": "micro_story",
     "fragments": [
-      "Ice at the edge of the lake was thin and clear.",
-      "Pebbles showed through like quiet punctuation.",
-      "No one needed to step on it."
+      "Лед на берегу озера был тонким и прозрачным.",
+      "Камешки проступали как тихие знаки препинания.",
+      "Никому не нужно было наступать на него."
     ],
     "topics": [
       "water"
@@ -538,13 +538,13 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-038",
+    "id": "ru-stories-038",
     "type": "micro_story",
     "fragments": [
-      "A windowsill basil leaned toward the glass.",
-      "Someone turned the pot a quarter turn.",
-      "Tomorrow it would lean again.",
-      "That was the pact."
+      "Василий на подоконнике наклонился к стеклу.",
+      "Кто-то повернул кастрюлю на четверть оборота.",
+      "Завтра он снова наклонится.",
+      "Таков был договор."
     ],
     "topics": [
       "plants"
@@ -552,16 +552,16 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Now find something green around you."
+      "text": "Теперь найдите что-нибудь зеленое вокруг себя."
     }
   },
   {
-    "id": "en-stories-039",
+    "id": "ru-stories-039",
     "type": "micro_story",
     "fragments": [
-      "Keys lay in a small ceramic dish.",
-      "They were not needed for this hour.",
-      "The dish made them look considered."
+      "Ключи лежали в небольшом керамическом блюде.",
+      "В этот час они были не нужны.",
+      "Блюдо придавало им солидный вид."
     ],
     "topics": [
       "objects"
@@ -569,12 +569,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-040",
+    "id": "ru-stories-040",
     "type": "micro_story",
     "fragments": [
-      "Late sun found the grain in the wooden floor.",
-      "Each board kept a slightly different gold.",
-      "Then the gold went, and the wood remained."
+      "Позднее солнце обнаружило зерна на деревянном полу.",
+      "На каждой доске было немного разное золото.",
+      "Потом золото ушло, а дерево осталось."
     ],
     "topics": [
       "light"
@@ -582,12 +582,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-041",
+    "id": "ru-stories-041",
     "type": "micro_story",
     "fragments": [
-      "Tide.",
-      "It drew a thin line of foam.",
-      "Then took the line back."
+      "Прилив.",
+      "Он нарисовал тонкую линию пены.",
+      "Потом снова взял трубку."
     ],
     "topics": [
       "coast"
@@ -595,12 +595,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-042",
+    "id": "ru-stories-042",
     "type": "micro_story",
     "fragments": [
-      "At the forest edge the light changed its mind.",
-      "One more tree.",
-      "Then a field."
+      "На опушке леса свет передумал.",
+      "Еще одно дерево.",
+      "Потом поле."
     ],
     "topics": [
       "forest"
@@ -608,16 +608,16 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Find a leaf-shape, even in a pattern or a print."
+      "text": "Найдите форму листа, даже в узоре или принте."
     }
   },
   {
-    "id": "en-stories-043",
+    "id": "ru-stories-043",
     "type": "micro_story",
     "fragments": [
-      "The night window held a streetlamp and a small moth of dust on the glass.",
-      "Outside, almost nothing moved.",
-      "Inside, the room kept its own dim."
+      "В ночном окне горел фонарь и на стекле виднелась маленькая мотылька пыли.",
+      "Снаружи почти ничего не двигалось.",
+      "Внутри комната оставалась темной."
     ],
     "topics": [
       "night"
@@ -625,12 +625,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-044",
+    "id": "ru-stories-044",
     "type": "micro_story",
     "fragments": [
-      "A stone in the palm.",
-      "Cooler than expected.",
-      "It asked for nothing."
+      "Камень в ладони.",
+      "Холоднее, чем ожидалось.",
+      "Оно ничего не просило."
     ],
     "topics": [
       "stone"
@@ -638,11 +638,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-045",
+    "id": "ru-stories-045",
     "type": "micro_story",
     "fragments": [
-      "An envelope waited on the shelf, unopened on purpose.",
-      "Paper can hold a pause as well as a message."
+      "На полке ждал конверт, намеренно нераспечатанный.",
+      "Бумага может содержать как паузу, так и сообщение."
     ],
     "topics": [
       "paper"
@@ -650,16 +650,16 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Notice one piece of paper or cardboard near you."
+      "text": "Обратите внимание на один лист бумаги или картона рядом с вами."
     }
   },
   {
-    "id": "en-stories-046",
+    "id": "ru-stories-046",
     "type": "micro_story",
     "fragments": [
-      "Stairs remembered many feet and still offered the same two choices:",
-      "up, or down,",
-      "or sitting on a step for no reason."
+      "Лестница помнила много футов и по-прежнему предлагала те же два варианта:",
+      "вверх или вниз,",
+      "или сидеть на ступеньке без причины."
     ],
     "topics": [
       "room"
@@ -667,12 +667,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-047",
+    "id": "ru-stories-047",
     "type": "micro_story",
     "fragments": [
-      "Frost on the railing.",
-      "A thin white handwriting.",
-      "It would not last the morning."
+      "Иней на перилах.",
+      "Тонкий белый почерк.",
+      "Это не продлится до утра."
     ],
     "topics": [
       "weather"
@@ -680,11 +680,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-048",
+    "id": "ru-stories-048",
     "type": "micro_story",
     "fragments": [
-      "The kite was only string and cloth until the air agreed.",
-      "Then it became a small opinion in a large sky."
+      "Змей представлял собой всего лишь веревку и ткань, пока воздух не согласился.",
+      "Потом это стало маленьким мнением в большом небе."
     ],
     "topics": [
       "sky"
@@ -692,12 +692,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-049",
+    "id": "ru-stories-049",
     "type": "micro_story",
     "fragments": [
-      "Between two dunes",
-      "the path forgot it was a path.",
-      "Sand kept the secret poorly."
+      "Между двумя дюнами",
+      "путь забыл, что это путь.",
+      "Сэнд плохо хранил тайну."
     ],
     "topics": [
       "coast"
@@ -705,12 +705,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-050",
+    "id": "ru-stories-050",
     "type": "micro_story",
     "fragments": [
-      "Ink.",
-      "A dark comma on the page.",
-      "The sentence around it could wait."
+      "Чернила.",
+      "На странице темная запятая.",
+      "Приговор вокруг него мог подождать."
     ],
     "topics": [
       "paper"
@@ -718,11 +718,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-051",
+    "id": "ru-stories-051",
     "type": "micro_story",
     "fragments": [
-      "In the quiet room the clock was less important",
-      "than the way the curtain almost did not move."
+      "В тихой комнате часы были менее важны",
+      "чем кстати занавеска почти не двигалась."
     ],
     "topics": [
       "quiet"
@@ -730,20 +730,20 @@
     "difficulty": 1,
     "followUp": {
       "type": "choice",
-      "text": "Is the room you are in more still or more moving?",
+      "text": "Комната, в которой вы находитесь, более спокойная или более динамичная?",
       "options": [
-        "still",
-        "moving",
-        "in between"
+        "все еще",
+        "движущийся",
+        "между"
       ]
     }
   },
   {
-    "id": "en-stories-052",
+    "id": "ru-stories-052",
     "type": "micro_story",
     "fragments": [
-      "Pine needles made a bronze carpet that did not mind being stepped on.",
-      "The trees kept their own conversation above it."
+      "Сосновые иголки образовывали бронзовый ковер, который не прочь наступить на него.",
+      "Деревья вели над ним свой разговор."
     ],
     "topics": [
       "forest"
@@ -751,12 +751,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-053",
+    "id": "ru-stories-053",
     "type": "micro_story",
     "fragments": [
-      "A hinge.",
-      "It knew two positions.",
-      "Both were honest."
+      "Шарнир.",
+      "Он знал две позиции.",
+      "Оба были честными."
     ],
     "topics": [
       "objects"
@@ -764,11 +764,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-054",
+    "id": "ru-stories-054",
     "type": "micro_story",
     "fragments": [
-      "Late light along the coast turned the water into hammered metal.",
-      "Then the metal went dull and was only water again."
+      "Вечерний свет вдоль побережья превратил воду в чеканный металл.",
+      "Потом металл потускнел и снова превратился в воду."
     ],
     "topics": [
       "coast"
@@ -776,11 +776,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-055",
+    "id": "ru-stories-055",
     "type": "micro_story",
     "fragments": [
-      "Someone had stacked firewood as if stacking were a kind of care.",
-      "The pile waited without hurry."
+      "Кто-то сложил дрова так, будто это была своего рода забота.",
+      "Куча ждала, не торопясь."
     ],
     "topics": [
       "home"
@@ -788,12 +788,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-056",
+    "id": "ru-stories-056",
     "type": "micro_story",
     "fragments": [
-      "Moon.",
-      "Not full.",
-      "Enough."
+      "Луна.",
+      "Не полный.",
+      "Достаточно."
     ],
     "topics": [
       "night"
@@ -801,11 +801,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-057",
+    "id": "ru-stories-057",
     "type": "micro_story",
     "fragments": [
-      "The library aisle smelled like dry paper and a little dust that had settled on purpose.",
-      "Books leaned on each other the way people do in a slow queue."
+      "В библиотечном проходе пахло сухой бумагой и специально осевшей пылью.",
+      "Книги опирались друг на друга, как это делают люди, выстроившиеся в медленную очередь."
     ],
     "topics": [
       "paper"
@@ -813,15 +813,15 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Find a straight line nearby — a shelf, a frame, an edge."
+      "text": "Найдите рядом прямую линию — полку, раму, кромку."
     }
   },
   {
-    "id": "en-stories-058",
+    "id": "ru-stories-058",
     "type": "micro_story",
     "fragments": [
-      "A pebble skipped once in memory,",
-      "then the lake went back to being a lake."
+      "Камешек проскочил однажды в памяти,",
+      "затем озеро снова стало озером."
     ],
     "topics": [
       "water"
@@ -829,11 +829,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-059",
+    "id": "ru-stories-059",
     "type": "micro_story",
     "fragments": [
-      "The greenhouse held a private summer while the path outside stayed ordinary.",
-      "Glass made the difference without making a speech."
+      "Лето в теплице было уединенным, а дорожка снаружи оставалась обычной.",
+      "Гласс изменил ситуацию, не произнеся речи."
     ],
     "topics": [
       "plants"
@@ -841,12 +841,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-060",
+    "id": "ru-stories-060",
     "type": "micro_story",
     "fragments": [
-      "String on a nail.",
-      "It had been useful once.",
-      "Now it was only a small hanging fact."
+      "Нитка на гвоздь.",
+      "Когда-то это было полезно.",
+      "Теперь это был лишь небольшой висячий факт."
     ],
     "topics": [
       "objects"
@@ -854,11 +854,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-061",
+    "id": "ru-stories-061",
     "type": "micro_story",
     "fragments": [
-      "Fog took the far trees and left the near ones.",
-      "A fair trade, if you were standing still."
+      "Туман поглотил дальние деревья и оставил ближайшие.",
+      "Справедливая сделка, если бы вы стояли на месте."
     ],
     "topics": [
       "weather"
@@ -866,16 +866,16 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Look at the farthest thing you can see from here."
+      "text": "Посмотрите на самое дальнее, что вы можете увидеть отсюда."
     }
   },
   {
-    "id": "en-stories-062",
+    "id": "ru-stories-062",
     "type": "micro_story",
     "fragments": [
-      "The windowsill collected three objects that had not yet decided they belonged together:",
-      "a stone, a stamp,",
-      "a length of green thread."
+      "На подоконнике собрались три предмета, которые еще не определились, что они принадлежат друг другу:",
+      "камень, штамп,",
+      "длинная зеленая нить."
     ],
     "topics": [
       "room"
@@ -883,12 +883,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-063",
+    "id": "ru-stories-063",
     "type": "micro_story",
     "fragments": [
-      "Harbor water.",
-      "Dark. Patient.",
-      "Boats nodded without speaking."
+      "Портовая вода.",
+      "Темный. Пациент.",
+      "Ботс молча кивнул."
     ],
     "topics": [
       "coast"
@@ -896,12 +896,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-064",
+    "id": "ru-stories-064",
     "type": "micro_story",
     "fragments": [
-      "At the end of the lane",
-      "a lamp came on earlier than the others.",
-      "It did not explain itself."
+      "В конце переулка",
+      "лампа загорелась раньше остальных.",
+      "Это не объяснило себя."
     ],
     "topics": [
       "light"
@@ -909,17 +909,17 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-065",
+    "id": "ru-stories-065",
     "type": "micro_story",
     "fragments": [
-      "At the end of a quiet street",
-      "there was a small bakery",
-      "with three round tables.",
-      "The table beside the window",
-      "had a blue cup on it.",
-      "Keep the color blue in mind.",
-      "Look around.",
-      "Can you find something blue?"
+      "В конце тихой улицы",
+      "была небольшая пекарня",
+      "с тремя круглыми столами.",
+      "Стол возле окна",
+      "на нем была синяя чашка.",
+      "Помните о синем цвете.",
+      "Посмотрите вокруг.",
+      "Сможете ли вы найти что-нибудь синее?"
     ],
     "topics": [
       "room",
@@ -928,16 +928,16 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-066",
+    "id": "ru-stories-066",
     "type": "micro_story",
     "fragments": [
-      "The harbor was still waking.",
-      "A rope made a slow circle in the water.",
-      "Then another.",
-      "Gulls argued about nothing important.",
-      "Keep the circles in mind.",
-      "If anything nearby is round,",
-      "let your eyes rest there."
+      "Гавань все еще просыпалась.",
+      "Веревка медленно делала круг в воде.",
+      "Потом еще один.",
+      "Чайки спорили ни о чем важном.",
+      "Помните о кругах.",
+      "Если что-то рядом круглое,",
+      "позвольте вашим глазам отдохнуть там."
     ],
     "topics": [
       "coast",
@@ -946,16 +946,16 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-067",
+    "id": "ru-stories-067",
     "type": "micro_story",
     "fragments": [
-      "On the kitchen table",
-      "a bowl held three lemons.",
-      "One had a small leaf still attached.",
-      "The yellow was almost too sure of itself.",
-      "Hold that yellow for a moment.",
-      "Look around.",
-      "Is anything near you that bright?"
+      "На кухонном столе",
+      "в миске было три лимона.",
+      "На одном из них все еще был прикреплен маленький лист.",
+      "Желтый был почти слишком уверен в себе.",
+      "Подержите этот желтый цвет на мгновение.",
+      "Посмотрите вокруг.",
+      "Есть ли что-нибудь рядом с вами такое яркое?"
     ],
     "topics": [
       "home",
@@ -964,15 +964,15 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-068",
+    "id": "ru-stories-068",
     "type": "micro_story",
     "fragments": [
-      "Halfway down the lane",
-      "a yellow door waited",
-      "as if someone might still come back for a key.",
-      "Paint had thinned on the handle.",
-      "The rest of the street stayed ordinary.",
-      "Notice one worn thing near you."
+      "На полпути вниз по переулку",
+      "желтая дверь ждала",
+      "как будто кто-то еще может вернуться за ключом.",
+      "Краска на ручке истончилась.",
+      "Остальная часть улицы осталась обычной.",
+      "Обратите внимание на одну изношенную вещь рядом с вами."
     ],
     "topics": [
       "home"
@@ -980,16 +980,16 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-069",
+    "id": "ru-stories-069",
     "type": "micro_story",
     "fragments": [
-      "The river arranged its stones",
-      "without asking which should be on top.",
-      "Water found the same path",
-      "it had found yesterday.",
-      "A darker stone sat a little apart.",
-      "Keep that darker color.",
-      "Find something nearby that is not shiny."
+      "Река расставила свои камни",
+      "не спрашивая, что должно быть сверху.",
+      "Вода нашла тот же путь",
+      "оно было найдено вчера.",
+      "Чуть поодаль стоял более темный камень.",
+      "Сохраните этот более темный цвет.",
+      "Найдите поблизости что-нибудь не блестящее."
     ],
     "topics": [
       "water",
@@ -998,15 +998,15 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-070",
+    "id": "ru-stories-070",
     "type": "micro_story",
     "fragments": [
-      "Under the market awning",
-      "shade made a soft rectangle.",
-      "A crate of oranges caught the leftover light.",
-      "Someone counted them without speaking.",
-      "Count one small group of things near you.",
-      "No need to get it exact."
+      "Под навесом рынка",
+      "оттенок составил мягкий прямоугольник.",
+      "Оставшийся свет поймал ящик апельсинов.",
+      "Кто-то молча пересчитал их.",
+      "Посчитайте одну небольшую группу вещей рядом с вами.",
+      "Нет необходимости уточнять это."
     ],
     "topics": [
       "home",
@@ -1015,15 +1015,15 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-071",
+    "id": "ru-stories-071",
     "type": "micro_story",
     "fragments": [
-      "Snow sat on the fence rail",
-      "as if it had been invited.",
-      "Each post wore the same quiet hat.",
-      "The field behind it was only field.",
-      "Look for a straight line nearby.",
-      "A frame. An edge. A rail of some kind."
+      "Снег сел на перила забора",
+      "как будто его пригласили.",
+      "На каждом посту была одна и та же тихая шляпа.",
+      "Поле за ним было всего лишь полем.",
+      "Ищите прямую линию поблизости.",
+      "Рамка. Край. Рельс какой-то."
     ],
     "topics": [
       "weather",
@@ -1032,15 +1032,15 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-072",
+    "id": "ru-stories-072",
     "type": "micro_story",
     "fragments": [
-      "The bookstore stair turned twice",
-      "before it reached the quiet floor.",
-      "A window there held a pot of thyme.",
-      "The books leaned the way old friends lean.",
-      "Find a word printed near you.",
-      "Even a small one."
+      "Лестница книжного магазина повернулась дважды",
+      "прежде чем он достиг тихого пола.",
+      "На окне стоял горшок с тимьяном.",
+      "Книги склонялись так же, как склоняются старые друзья.",
+      "Найдите слово, напечатанное рядом с вами.",
+      "Даже маленький."
     ],
     "topics": [
       "paper",
@@ -1049,15 +1049,15 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-073",
+    "id": "ru-stories-073",
     "type": "micro_story",
     "fragments": [
-      "In the kitchen drawer",
-      "a wooden spoon had learned the shape of soup.",
-      "It lay beside a whisk",
-      "that was only geometry until someone needed it.",
-      "Look at one ordinary object near you.",
-      "Let it be enough."
+      "В кухонном ящике",
+      "деревянная ложка выучила форму супа.",
+      "Он лежал рядом с венчиком",
+      "это была всего лишь геометрия, пока она кому-то не понадобилась.",
+      "Посмотрите на один обычный предмет рядом с вами.",
+      "Пусть этого будет достаточно."
     ],
     "topics": [
       "home",
@@ -1066,16 +1066,16 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-074",
+    "id": "ru-stories-074",
     "type": "micro_story",
     "fragments": [
-      "The garden path",
-      "knew two kinds of green.",
-      "Moss between the stones.",
-      "And the taller green that moved when the air did.",
-      "Keep one of those greens.",
-      "Look around.",
-      "Can you find a green of your own?"
+      "Садовая дорожка",
+      "знал два вида зеленого цвета.",
+      "Мох между камнями.",
+      "И более высокий зеленый цвет, который двигался вместе с воздухом.",
+      "Сохраните одну из этих зелени.",
+      "Посмотрите вокруг.",
+      "Сможете ли вы найти свою зелень?"
     ],
     "topics": [
       "plants",
@@ -1084,15 +1084,15 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-075",
+    "id": "ru-stories-075",
     "type": "micro_story",
     "fragments": [
-      "Late in the room",
-      "the window kept a square of night.",
-      "A lamp made a smaller square on the table.",
-      "Between them, the air did very little.",
-      "Notice where the light is coming from.",
-      "You can stay with that."
+      "Поздно в комнате",
+      "окно сохраняло квадрат ночи.",
+      "Лампа занимала на столе квадрат поменьше.",
+      "Между ними воздух делал очень мало.",
+      "Обратите внимание, откуда исходит свет.",
+      "Ты можешь остаться с этим."
     ],
     "topics": [
       "night",
@@ -1101,16 +1101,16 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-076",
+    "id": "ru-stories-076",
     "type": "micro_story",
     "fragments": [
-      "From the window",
-      "fields arrived in long pale strips.",
-      "A single tree kept its place",
-      "as the rest of the view changed its mind.",
-      "Keep that tree.",
-      "Find something nearby that stands still",
-      "while other things can move."
+      "Из окна",
+      "поля приходили длинными бледными полосами.",
+      "Единственное дерево сохранило свое место",
+      "поскольку остальная часть мнения передумала.",
+      "Держи это дерево.",
+      "Найдите поблизости что-нибудь, что стоит на месте",
+      "в то время как другие вещи могут двигаться."
     ],
     "topics": [
       "earth",
@@ -1119,15 +1119,15 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-077",
+    "id": "ru-stories-077",
     "type": "micro_story",
     "fragments": [
-      "An envelope waited on the shelf",
-      "with no hurry to be opened.",
-      "The paper had a faint blue lining.",
-      "Someone had written only the first word of an address.",
-      "Notice one piece of paper near you.",
-      "Even a label counts."
+      "Конверт ждал на полке",
+      "не торопясь открывать.",
+      "Бумага имела бледно-голубую подкладку.",
+      "Кто-то написал только первое слово адреса.",
+      "Обратите внимание на один лист бумаги рядом с вами.",
+      "Даже этикетка имеет значение."
     ],
     "topics": [
       "paper"
@@ -1135,16 +1135,16 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-078",
+    "id": "ru-stories-078",
     "type": "micro_story",
     "fragments": [
-      "The hallway tiles",
-      "were almost white",
-      "except for one that had decided to be blue.",
-      "It sat there like a quiet fact.",
-      "Keep that blue.",
-      "Look down, or around.",
-      "Is there a color that stands a little apart?"
+      "Плитка в коридоре",
+      "были почти белыми",
+      "кроме одного, который решил стать синим.",
+      "Это сидело там, как тихий факт.",
+      "Оставь это синее.",
+      "Посмотрите вниз или вокруг.",
+      "Есть ли цвет, который стоит немного особняком?"
     ],
     "topics": [
       "room",
