@@ -2,6 +2,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import { Animated, Easing, Platform, Pressable, StyleSheet, useWindowDimensions } from 'react-native';
 
 import { AudioControl } from '@/components/audio/AudioControl';
+import { GroundSfxMuteButton } from '@/components/ground/GroundSfxMuteButton';
 import { GroundStage } from '@/components/ground/GroundStage';
 import { ActiveSessionScreen } from '@/components/session/ActiveSessionScreen';
 import { SessionChoiceSheet } from '@/components/session/SessionChoiceSheet';
@@ -23,7 +24,7 @@ import { useGroundAmbient } from '@/hooks/useGroundAmbient';
 import { useGuidedAudio } from '@/hooks/useGuidedAudio';
 import { useReduceMotion } from '@/hooks/useReduceMotion';
 import { t } from '@/locales/i18n';
-import { loadSoundMuted, saveSoundMuted } from '@/storage/preferences';
+import { loadSoundMuted } from '@/storage/preferences';
 import { serif } from '@/theme/fonts';
 import { spacing } from '@/theme/spacing';
 
@@ -46,7 +47,6 @@ export default function GroundScreen() {
     last,
     next,
     prev,
-    reset,
     forwardTransition,
     stepEnter,
     finishForwardTransition,
@@ -159,15 +159,6 @@ export default function GroundScreen() {
     audio.pause();
   };
 
-  const replay = () => {
-    unlockFromUserGesture();
-    reset();
-    setPaused(false);
-    if (narrationReady) {
-      audio.replay();
-    }
-  };
-
   const goNext = useCallback(() => withSfxUnlock(next), [next, withSfxUnlock]);
   const goPrev = useCallback(() => withSfxUnlock(prev), [prev, withSfxUnlock]);
 
@@ -183,6 +174,15 @@ export default function GroundScreen() {
     <ActiveSessionScreen
       tool="ground"
       title={t('home.tools.ground')}
+      right={
+        <GroundSfxMuteButton
+          muted={activitySfxMuted}
+          onPress={() => {
+            unlockFromUserGesture();
+            toggleActivitySfxMute();
+          }}
+        />
+      }
       onTryAnother={openChooser}
       tryAnotherHint={t('ground.tryAnotherHint')}
       backClosesSession
@@ -217,27 +217,9 @@ export default function GroundScreen() {
             </Pressable>
             <AudioControl
               isPlaying={!paused}
-              muted={audio.muted}
               onPlayPause={onPlayPause}
               onPrevious={goPrev}
               onNext={goNext}
-              activitySfxMuted={activitySfxMuted}
-              onActivitySfxMute={() => {
-                unlockFromUserGesture();
-                toggleActivitySfxMute();
-              }}
-              onMute={
-                narrationReady
-                  ? () => {
-                      unlockFromUserGesture();
-                      const nextMuted = !audio.muted;
-                      setSoundMuted(nextMuted);
-                      void saveSoundMuted(nextMuted);
-                      audio.toggleMute();
-                    }
-                  : undefined
-              }
-              onReplay={replay}
             />
           </Pressable>
           <SessionChoiceSheet
