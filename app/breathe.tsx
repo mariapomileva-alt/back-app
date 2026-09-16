@@ -89,10 +89,9 @@ export default function BreatheScreen() {
         }
         onTryAnother={openChooser}
         tryAnotherHint={t('breathe.tryAnotherHint')}
-        onBack={openChooser}
-        backLabel={t('breathe.menu')}
-        backHint={t('breathe.menuHint')}
-        backNavigates={!chooserOpen}
+        backClosesSession
+        backNavigates={chooserOpen}
+        onBack={chooserOpen ? () => setChooserOpen(false) : undefined}
         extraActions={({ trySomethingElse }) => (
           <>
             <PatternPicker
@@ -144,7 +143,6 @@ export default function BreatheScreen() {
                 }
               }}
               onDismiss={() => setChooserOpen(false)}
-              onHardwareBack={controls.close}
             />
           </>
         )}

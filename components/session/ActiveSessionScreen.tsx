@@ -28,6 +28,8 @@ type Props = {
   backLabel?: string;
   backHint?: string;
   backNavigates?: boolean;
+  /** When set, show a header back control that ends the session (same as close) if `onBack` is unset. */
+  backClosesSession?: boolean;
 };
 
 export function ActiveSessionScreen({
@@ -48,8 +50,10 @@ export function ActiveSessionScreen({
   backLabel,
   backHint,
   backNavigates = false,
+  backClosesSession = false,
 }: Props) {
   const controls = useActiveSession(tool, backNavigates ? onBack : undefined);
+  const headerBack = onBack ?? (backClosesSession ? controls.close : undefined);
   const body = typeof children === 'function' ? children(controls) : children;
   const extra = typeof extraActions === 'function' ? extraActions(controls) : extraActions;
 
@@ -61,8 +65,8 @@ export function ActiveSessionScreen({
       scroll={scroll}
       closeLabel={closeLabel ?? t('exercise.closeSession')}
       closeHint={closeHint}
-      onBack={onBack}
-      backLabel={backLabel ?? (onBack ? t('common.back') : undefined)}
+      onBack={headerBack}
+      backLabel={backLabel ?? (headerBack ? t('common.back') : undefined)}
       backHint={backHint}
     >
       {scroll === false ? <View style={styles.body}>{body}</View> : body}
