@@ -1,4 +1,12 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import {
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+  useMemo,
+  useRef,
+  useState,
+  type ReactNode,
+} from 'react';
 import { Platform, Pressable, StyleSheet, View } from 'react-native';
 import Animated, { Easing, useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated';
 
@@ -10,11 +18,12 @@ import { t } from '@/locales/i18n';
 import { serif } from '@/theme/fonts';
 import { spacing, touch } from '@/theme/spacing';
 
-const FADE_IN_MS = 320;
-const FADE_OUT_MS = 400;
-const REDUCE_FADE_MS = 220;
-const ENTER_RISE_PX = 8;
-const ESTIMATED_LINE = 52;
+const FADE_IN_MS = 380;
+const FADE_OUT_MS = 480;
+const REDUCE_FADE_MS = 200;
+const SCROLL_MS = 520;
+const ENTER_RISE_PX = 6;
+const ESTIMATED_LINE = 48;
 const MAX_ON_CANVAS = 8;
 const TOP_RATIO = 0.22;
 const BOTTOM_RATIO = 0.88;
@@ -82,6 +91,21 @@ function fadeDurationMs(leaving: boolean, newest: boolean, reduceMotion: boolean
     return FADE_OUT_MS;
   }
   return FADE_IN_MS;
+}
+
+function scrollDurationMs(reduceMotion: boolean): number {
+  return reduceMotion ? 0 : SCROLL_MS;
+}
+
+function cssScrollStyle(durationMs: number) {
+  if (durationMs <= 0) {
+    return null;
+  }
+  return {
+    transitionProperty: 'top',
+    transitionDuration: `${durationMs}ms`,
+    transitionTimingFunction: CSS_EASE,
+  };
 }
 
 function lineHeight(heights: Record<string, number>, id: string): number {
@@ -195,6 +219,78 @@ function NativeFade({ fragment, recency, newest, reduceMotion, leaving }: LineMo
   );
 }
 
+function WebScrollLine({
+  top,
+  reduceMotion,
+  onHeight,
+  children,
+}: {
+  top: number;
+  reduceMotion: boolean;
+  onHeight: (height: number) => void;
+  children: ReactNode;
+}) {
+  const previousTop = useRef<number | null>(null);
+  const [scrollMs, setScrollMs] = useState(0);
+
+  useLayoutEffect(() => {
+    const duration =
+      previousTop.current !== null && previousTop.current !== top ? scrollDurationMs(reduceMotion) : 0;
+    previousTop.current = top;
+    setScrollMs(duration);
+  }, [reduceMotion, top]);
+
+  return (
+    <View
+      collapsable={false}
+      style={[styles.line, { top }, cssScrollStyle(scrollMs)]}
+      onLayout={(event) => onHeight(event.nativeEvent.layout.height)}
+    >
+      {children}
+    </View>
+  );
+}
+
+function NativeScrollLine({
+  top,
+  reduceMotion,
+  onHeight,
+  children,
+}: {
+  top: number;
+  reduceMotion: boolean;
+  onHeight: (height: number) => void;
+  children: ReactNode;
+}) {
+  const animatedTop = useSharedValue(top);
+  const previousTop = useRef<number | null>(null);
+
+  useEffect(() => {
+    const duration =
+      previousTop.current !== null && previousTop.current !== top ? scrollDurationMs(reduceMotion) : 0;
+    previousTop.current = top;
+    if (duration <= 0) {
+      animatedTop.value = top;
+      return;
+    }
+    animatedTop.value = withTiming(top, { duration, easing: EASE_OUT });
+  }, [animatedTop, reduceMotion, top]);
+
+  const scrollStyle = useAnimatedStyle(() => ({
+    top: animatedTop.value,
+  }));
+
+  return (
+    <Animated.View
+      collapsable={false}
+      style={[styles.line, scrollStyle]}
+      onLayout={(event) => onHeight(event.nativeEvent.layout.height)}
+    >
+      {children}
+    </Animated.View>
+  );
+}
+
 function ReadLine({
   fragment,
   recency,
@@ -207,30 +303,41 @@ function ReadLine({
   top: number;
   onHeight: (id: string, height: number) => void;
 }) {
+  const fade = USE_CSS_FADE ? (
+    <WebFade
+      fragment={fragment}
+      recency={recency}
+      newest={newest}
+      reduceMotion={reduceMotion}
+      leaving={leaving}
+    />
+  ) : (
+    <NativeFade
+      fragment={fragment}
+      recency={recency}
+      newest={newest}
+      reduceMotion={reduceMotion}
+      leaving={leaving}
+    />
+  );
+
+  const onLineHeight = useCallback(
+    (height: number) => onHeight(fragment.id, height),
+    [fragment.id, onHeight],
+  );
+
+  if (USE_CSS_FADE) {
+    return (
+      <WebScrollLine top={top} reduceMotion={reduceMotion} onHeight={onLineHeight}>
+        {fade}
+      </WebScrollLine>
+    );
+  }
+
   return (
-    <View
-      collapsable={false}
-      style={[styles.line, { top }]}
-      onLayout={(event) => onHeight(fragment.id, event.nativeEvent.layout.height)}
-    >
-      {USE_CSS_FADE ? (
-        <WebFade
-          fragment={fragment}
-          recency={recency}
-          newest={newest}
-          reduceMotion={reduceMotion}
-          leaving={leaving}
-        />
-      ) : (
-        <NativeFade
-          fragment={fragment}
-          recency={recency}
-          newest={newest}
-          reduceMotion={reduceMotion}
-          leaving={leaving}
-        />
-      )}
-    </View>
+    <NativeScrollLine top={top} reduceMotion={reduceMotion} onHeight={onLineHeight}>
+      {fade}
+    </NativeScrollLine>
   );
 }
 
@@ -301,7 +408,7 @@ export function ReadingCanvas({ fragments, revealedCount, onReveal, speed, pause
       return;
     }
     const delay = fragmentDelayMs(current.text, speed, current.kind);
-    const wait = reduceMotion ? Math.round(delay * 0.55) : delay;
+    const wait = reduceMotion ? Math.round(delay * 0.65) : delay;
     const timer = setTimeout(onReveal, wait);
     return () => clearTimeout(timer);
   }, [current, fragments.length, onReveal, paused, reduceMotion, speed, visibleCount]);
