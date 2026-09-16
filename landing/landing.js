@@ -1,14 +1,7 @@
-const labels = {
-  soon: "",
-  getFile: "download .apk",
-  store: "open store",
-  missing: "",
-};
-
 const releases = window.BACK_RELEASES || {
   version: "1.0.0",
   ios: "",
-  android: "downloads/back.apk",
+  android: "",
   androidStore: "",
 };
 
@@ -16,69 +9,126 @@ function isStoreUrl(url) {
   return /^https?:\/\//i.test(url) && !/\.(apk|ipa|aab)(\?|$)/i.test(url);
 }
 
+function isIosStoreUrl(url) {
+  return isStoreUrl(url) && /apps\.apple\.com|testflight\.apple\.com/i.test(url);
+}
+
+function isPlayStoreUrl(url) {
+  return isStoreUrl(url) && /play\.google\.com/i.test(url);
+}
+
 async function fileExists(url) {
-  if (!url) {
-    return false;
-  }
-  if (isStoreUrl(url)) {
-    return true;
+  if (!url || isStoreUrl(url)) {
+    return Boolean(url && isStoreUrl(url));
   }
   try {
     const response = await fetch(url, { method: "HEAD" });
-    return response.ok ? true : false;
+    return response.ok;
   } catch {
     return null;
   }
 }
 
-async function wireDownloads() {
-  const ios = document.getElementById("dl-ios");
-  const android = document.getElementById("dl-android");
-  const iosState = document.getElementById("ios-state");
-  const androidState = document.getElementById("android-state");
-  const version = document.getElementById("file-version");
-  if (version) {
-    version.textContent = releases.version;
-  }
+function renderComingSoon(slot, label) {
+  slot.replaceChildren();
+  const panel = document.createElement("div");
+  panel.className = "avail-soon";
+  panel.setAttribute("role", "group");
+  panel.setAttribute("aria-label", `${label}, coming soon`);
 
-  const iosUrl = releases.ios;
-  if (ios && iosState) {
-    if (iosUrl) {
-      ios.href = iosUrl;
-      ios.classList.remove("is-disabled");
-      ios.removeAttribute("aria-disabled");
-      iosState.textContent = isStoreUrl(iosUrl) ? labels.store : labels.getFile;
+  const name = document.createElement("span");
+  name.className = "avail-label";
+  name.textContent = label;
+
+  const state = document.createElement("span");
+  state.className = "avail-state";
+  state.textContent = "Coming soon";
+
+  panel.append(name, state);
+  slot.append(panel);
+}
+
+function renderStoreLink(slot, label, href, caption, variant) {
+  slot.replaceChildren();
+  const link = document.createElement("a");
+  link.className = `btn ${variant} avail-link`;
+  link.href = href;
+  link.rel = "noopener noreferrer";
+
+  const name = document.createElement("span");
+  name.textContent = label;
+
+  const small = document.createElement("small");
+  small.textContent = caption;
+
+  link.append(name, small);
+  slot.append(link);
+}
+
+function renderApkLink(slot, href) {
+  slot.replaceChildren();
+  const link = document.createElement("a");
+  link.className = "btn clay avail-link";
+  link.href = href;
+  link.setAttribute("download", "Back.apk");
+
+  const name = document.createElement("span");
+  name.textContent = "Android";
+
+  const small = document.createElement("small");
+  small.textContent = "Download .apk";
+
+  link.append(name, small);
+  slot.append(link);
+}
+
+async function wireAvailability() {
+  const iosSlot = document.getElementById("avail-ios");
+  const androidSlot = document.getElementById("avail-android");
+
+  const iosUrl = (releases.ios || "").trim();
+  if (iosSlot) {
+    if (iosUrl && isIosStoreUrl(iosUrl)) {
+      renderStoreLink(
+        iosSlot,
+        "iPhone",
+        iosUrl,
+        "Download on the App Store",
+        "forest"
+      );
+    } else if (iosUrl && isStoreUrl(iosUrl)) {
+      renderStoreLink(iosSlot, "iPhone", iosUrl, "Open store", "forest");
     } else {
-      ios.href = "#download";
-      ios.classList.add("is-disabled");
-      ios.setAttribute("aria-disabled", "true");
-      iosState.textContent = labels.soon;
+      renderComingSoon(iosSlot, "iPhone");
     }
   }
 
-  const androidUrl = releases.androidStore || releases.android;
-  if (android && androidState) {
-    const ready = androidUrl ? await fileExists(androidUrl) : false;
-    if (ready) {
-      android.href = androidUrl;
-      android.classList.remove("is-disabled");
-      android.removeAttribute("aria-disabled");
-      androidState.textContent = isStoreUrl(androidUrl) ? labels.store : labels.getFile;
-      if (!isStoreUrl(androidUrl)) {
-        android.setAttribute("download", "Back.apk");
+  const androidStore = (releases.androidStore || "").trim();
+  const androidFile = (releases.android || "").trim();
+  const androidUrl = androidStore || androidFile;
+
+  if (androidSlot) {
+    if (androidStore && isPlayStoreUrl(androidStore)) {
+      renderStoreLink(
+        androidSlot,
+        "Android",
+        androidStore,
+        "Get it on Google Play",
+        "clay"
+      );
+    } else if (androidUrl && isStoreUrl(androidUrl)) {
+      renderStoreLink(androidSlot, "Android", androidUrl, "Open store", "clay");
+    } else if (androidFile) {
+      const ready = await fileExists(androidFile);
+      if (ready) {
+        renderApkLink(androidSlot, androidFile);
+      } else if (ready === null) {
+        renderApkLink(androidSlot, androidFile);
       } else {
-        android.removeAttribute("download");
+        renderComingSoon(androidSlot, "Android");
       }
-    } else if (ready === null && androidUrl && !isStoreUrl(androidUrl)) {
-      android.href = androidUrl;
-      android.classList.remove("is-disabled");
-      android.setAttribute("download", "Back.apk");
-      androidState.textContent = labels.getFile;
     } else {
-      android.href = "#download";
-      android.classList.add("is-disabled");
-      android.setAttribute("aria-disabled", "true");
-      androidState.textContent = labels.missing;
+      renderComingSoon(androidSlot, "Android");
     }
   }
 }
@@ -88,4 +138,4 @@ if (year) {
   year.textContent = String(new Date().getFullYear());
 }
 
-wireDownloads();
+wireAvailability();
