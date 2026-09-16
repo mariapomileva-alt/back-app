@@ -1,14 +1,9 @@
-import { useEffect, useMemo, useRef } from 'react';
-import { ScrollView, StyleSheet, View } from 'react-native';
+import { useEffect, useRef } from 'react';
+import { ScrollView, StyleSheet } from 'react-native';
 
 import { AccessiblePressable } from '@/components/accessibility/AccessiblePressable';
 import { AppText } from '@/components/typography/AppText';
-import {
-  listenSoundGroups,
-  listenSounds,
-  type ListenSoundGroup,
-  type ListenSoundId,
-} from '@/features/listen/sounds';
+import { listenSounds, type ListenSoundId } from '@/features/listen/sounds';
 import { useTheme } from '@/hooks/useTheme';
 import { t } from '@/locales/i18n';
 import { radius } from '@/theme/radius';
@@ -20,30 +15,10 @@ type Props = {
   marginTop?: number;
 };
 
-const groupLabelKey: Record<ListenSoundGroup, string> = Object.fromEntries(
-  listenSoundGroups.map((group) => [group.id, group.labelKey]),
-) as Record<ListenSoundGroup, string>;
-
 export function ListenSoundPicker({ soundId, onSelect, marginTop }: Props) {
   const { theme } = useTheme();
   const scrollRef = useRef<ScrollView>(null);
   const chipX = useRef<Partial<Record<ListenSoundId, number>>>({});
-
-  const rows = useMemo(() => {
-    const items: (
-      | { type: 'label'; group: ListenSoundGroup; key: string }
-      | { type: 'chip'; id: ListenSoundId; nameKey: string; key: string }
-    )[] = [];
-    let lastGroup: ListenSoundGroup | null = null;
-    for (const sound of listenSounds) {
-      if (sound.group !== lastGroup) {
-        items.push({ type: 'label', group: sound.group, key: `label-${sound.group}` });
-        lastGroup = sound.group;
-      }
-      items.push({ type: 'chip', id: sound.id, nameKey: sound.nameKey, key: sound.id });
-    }
-    return items;
-  }, []);
 
   const revealSelectedChip = (id: ListenSoundId, animated = true) => {
     const x = chipX.current[id];
@@ -67,30 +42,21 @@ export function ListenSoundPicker({ soundId, onSelect, marginTop }: Props) {
       contentContainerStyle={[styles.content, marginTop != null ? { marginTop } : undefined]}
       style={styles.scroll}
     >
-      {rows.map((row) => {
-        if (row.type === 'label') {
-          return (
-            <View key={row.key} style={styles.groupLabelWrap} accessible={false} importantForAccessibility="no">
-              <AppText variant="secondary" tone="secondary" style={styles.groupLabel}>
-                {t(groupLabelKey[row.group])}
-              </AppText>
-            </View>
-          );
-        }
-        const active = row.id === soundId;
+      {listenSounds.map((sound) => {
+        const active = sound.id === soundId;
         return (
           <AccessiblePressable
-            key={row.key}
+            key={sound.id}
             accessibilityRole="radio"
             accessibilityState={{ selected: active }}
             accessibilityLabel={
-              active ? `${t(row.nameKey)}, ${t('common.selected')}` : t(row.nameKey)
+              active ? `${t(sound.nameKey)}, ${t('common.selected')}` : t(sound.nameKey)
             }
-            onPress={() => onSelect(row.id)}
+            onPress={() => onSelect(sound.id)}
             onLayout={(event) => {
-              chipX.current[row.id] = event.nativeEvent.layout.x;
-              if (row.id === soundId) {
-                revealSelectedChip(row.id, false);
+              chipX.current[sound.id] = event.nativeEvent.layout.x;
+              if (sound.id === soundId) {
+                revealSelectedChip(sound.id, false);
               }
             }}
             style={[
@@ -101,7 +67,7 @@ export function ListenSoundPicker({ soundId, onSelect, marginTop }: Props) {
               },
             ]}
           >
-            <AppText variant="body">{t(row.nameKey)}</AppText>
+            <AppText variant="body">{t(sound.nameKey)}</AppText>
           </AccessiblePressable>
         );
       })}
@@ -120,14 +86,6 @@ const styles = StyleSheet.create({
     gap: spacing.sm,
     paddingVertical: spacing.xxs,
     paddingHorizontal: spacing.xxs,
-  },
-  groupLabelWrap: {
-    justifyContent: 'center',
-    paddingRight: spacing.xxs,
-  },
-  groupLabel: {
-    letterSpacing: 0.6,
-    textTransform: 'uppercase',
   },
   chip: {
     minHeight: touch.min,
