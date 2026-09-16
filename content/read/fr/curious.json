@@ -1,10 +1,10 @@
 [
   {
-    "id": "en-curious-001",
+    "id": "fr-curious-001",
     "type": "curious",
     "fragments": [
-      "Some butterflies",
-      "taste with their feet."
+      "Quelques papillons",
+      "goûter avec leurs pieds."
     ],
     "topics": [
       "nature"
@@ -12,11 +12,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-002",
+    "id": "fr-curious-002",
     "type": "curious",
     "fragments": [
-      "A cloud can drift for days",
-      "without landing."
+      "Un nuage peut dériver pendant des jours",
+      "sans atterrir."
     ],
     "topics": [
       "sky"
@@ -24,11 +24,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-003",
+    "id": "fr-curious-003",
     "type": "curious",
     "fragments": [
-      "Honey stays itself",
-      "for a very long time."
+      "Le miel reste lui-même",
+      "depuis très longtemps."
     ],
     "topics": [
       "food"
@@ -36,11 +36,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-004",
+    "id": "fr-curious-004",
     "type": "curious",
     "fragments": [
-      "Bananas are berries.",
-      "Strawberries are not."
+      "Les bananes sont des baies.",
+      "Les fraises ne le sont pas."
     ],
     "topics": [
       "plants"
@@ -48,15 +48,15 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Now find something green around you."
+      "text": "Maintenant, trouvez quelque chose de vert autour de vous."
     }
   },
   {
-    "id": "en-curious-005",
+    "id": "fr-curious-005",
     "type": "curious",
     "fragments": [
-      "The moon is slowly moving",
-      "farther from Earth."
+      "La lune bouge lentement",
+      "plus loin de la Terre."
     ],
     "topics": [
       "sky"
@@ -64,11 +64,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-006",
+    "id": "fr-curious-006",
     "type": "curious",
     "fragments": [
-      "There are more trees on Earth",
-      "than stars you can see on a clear night."
+      "Il y a plus d'arbres sur Terre",
+      "que les étoiles que l'on peut voir par une nuit claire."
     ],
     "topics": [
       "plants"
@@ -76,11 +76,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-007",
+    "id": "fr-curious-007",
     "type": "curious",
     "fragments": [
-      "A snail can rest",
-      "for a long season and then continue."
+      "Un escargot peut se reposer",
+      "pendant une longue saison et ensuite continuer."
     ],
     "topics": [
       "nature"
@@ -88,11 +88,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-008",
+    "id": "fr-curious-008",
     "type": "curious",
     "fragments": [
-      "Otters sometimes float",
-      "side by side while they sleep."
+      "Les loutres flottent parfois",
+      "côte à côte pendant leur sommeil."
     ],
     "topics": [
       "water"
@@ -100,11 +100,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-009",
+    "id": "fr-curious-009",
     "type": "curious",
     "fragments": [
-      "A day on Venus",
-      "lasts longer than its year."
+      "Une journée sur Vénus",
+      "dure plus longtemps que son année."
     ],
     "topics": [
       "sky"
@@ -112,11 +112,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-010",
+    "id": "fr-curious-010",
     "type": "curious",
     "fragments": [
-      "Moss can grow on stone,",
-      "wood, and quiet roofs."
+      "La mousse peut pousser sur la pierre,",
+      "bois et toits silencieux."
     ],
     "topics": [
       "plants"
@@ -124,11 +124,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-011",
+    "id": "fr-curious-011",
     "type": "curious",
     "fragments": [
-      "Raindrops are not teardrop shaped.",
-      "They are round as they fall."
+      "Les gouttes de pluie n’ont pas la forme d’une larme.",
+      "Ils sont ronds en tombant."
     ],
     "topics": [
       "weather"
@@ -136,11 +136,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-012",
+    "id": "fr-curious-012",
     "type": "curious",
     "fragments": [
-      "A paperclip can be unfolded",
-      "into a single thin line."
+      "Un trombone peut être déplié",
+      "en une seule ligne fine."
     ],
     "topics": [
       "objects"
@@ -148,11 +148,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-013",
+    "id": "fr-curious-013",
     "type": "curious",
     "fragments": [
-      "Sunflowers turn toward light",
-      "when they are young."
+      "Les tournesols se tournent vers la lumière",
+      "quand ils sont jeunes."
     ],
     "topics": [
       "plants"
@@ -160,11 +160,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-014",
+    "id": "fr-curious-014",
     "type": "curious",
     "fragments": [
-      "The quietest room on Earth",
-      "is still not fully silent."
+      "La pièce la plus calme du monde",
+      "n’est toujours pas totalement silencieux."
     ],
     "topics": [
       "quiet"
@@ -172,11 +172,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-015",
+    "id": "fr-curious-015",
     "type": "curious",
     "fragments": [
-      "Sea glass takes years",
-      "to become smooth."
+      "Le verre de mer prend des années",
+      "pour devenir lisse."
     ],
     "topics": [
       "water"
@@ -184,15 +184,15 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Now find a reflection, even a small one."
+      "text": "Trouvez maintenant un reflet, même petit."
     }
   },
   {
-    "id": "en-curious-016",
+    "id": "fr-curious-016",
     "type": "curious",
     "fragments": [
-      "A teaspoon of honey",
-      "is the work of many bees."
+      "Une cuillère à café de miel",
+      "est l'œuvre de nombreuses abeilles."
     ],
     "topics": [
       "nature"
@@ -200,11 +200,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-017",
+    "id": "fr-curious-017",
     "type": "curious",
     "fragments": [
-      "Snow is not one color.",
-      "It holds many tiny shadows."
+      "La neige n'est pas d'une seule couleur.",
+      "Il contient de nombreuses petites ombres."
     ],
     "topics": [
       "weather"
@@ -212,11 +212,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-018",
+    "id": "fr-curious-018",
     "type": "curious",
     "fragments": [
-      "Some bamboo can grow",
-      "as fast as you can watch it."
+      "Certains bambous peuvent pousser",
+      "aussi vite que vous pouvez le regarder."
     ],
     "topics": [
       "plants"
@@ -224,11 +224,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-019",
+    "id": "fr-curious-019",
     "type": "curious",
     "fragments": [
-      "A compass needle is a small magnet",
-      "that listens to Earth."
+      "L'aiguille d'une boussole est un petit aimant",
+      "qui écoute la Terre."
     ],
     "topics": [
       "objects"
@@ -236,11 +236,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-020",
+    "id": "fr-curious-020",
     "type": "curious",
     "fragments": [
-      "Crows remember faces",
-      "they have met before."
+      "Les corbeaux se souviennent des visages",
+      "ils se sont déjà rencontrés."
     ],
     "topics": [
       "nature"
@@ -248,20 +248,20 @@
     "difficulty": 1,
     "followUp": {
       "type": "choice",
-      "text": "What color is closest to your hands?",
+      "text": "Quelle couleur est la plus proche de vos mains ?",
       "options": [
-        "warm",
+        "chaude",
         "cool",
-        "something else"
+        "autre chose"
       ]
     }
   },
   {
-    "id": "en-curious-021",
+    "id": "fr-curious-021",
     "type": "curious",
     "fragments": [
-      "The Sahara has areas of pale stone",
-      "as well as sand."
+      "Le Sahara présente des zones de pierre pâle",
+      "ainsi que du sable."
     ],
     "topics": [
       "earth"
@@ -269,11 +269,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-022",
+    "id": "fr-curious-022",
     "type": "curious",
     "fragments": [
-      "A pebble in a river",
-      "is slowly being rounded."
+      "Un caillou dans une rivière",
+      "s'arrondit lentement."
     ],
     "topics": [
       "water"
@@ -281,11 +281,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-023",
+    "id": "fr-curious-023",
     "type": "curious",
     "fragments": [
-      "Candle flames point up",
-      "because warm air rises."
+      "Les flammes des bougies pointent vers le haut",
+      "parce que l'air chaud monte."
     ],
     "topics": [
       "light"
@@ -293,11 +293,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-024",
+    "id": "fr-curious-024",
     "type": "curious",
     "fragments": [
-      "Ferns are older",
-      "than most flowering plants."
+      "Les fougères sont plus vieilles",
+      "que la plupart des plantes à fleurs."
     ],
     "topics": [
       "plants"
@@ -305,11 +305,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-025",
+    "id": "fr-curious-025",
     "type": "curious",
     "fragments": [
-      "The sound of a seashell",
-      "is mostly the room around you."
+      "Le bruit d'un coquillage",
+      "est principalement la pièce autour de vous."
     ],
     "topics": [
       "quiet"
@@ -317,11 +317,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-026",
+    "id": "fr-curious-026",
     "type": "curious",
     "fragments": [
-      "Owls can turn their heads",
-      "much farther than people can."
+      "Les hiboux peuvent tourner la tête",
+      "beaucoup plus loin que les gens ne le peuvent."
     ],
     "topics": [
       "nature"
@@ -329,15 +329,15 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Find something living, or the color of something living."
+      "text": "Trouvez quelque chose de vivant, ou la couleur de quelque chose de vivant."
     }
   },
   {
-    "id": "en-curious-027",
+    "id": "fr-curious-027",
     "type": "curious",
     "fragments": [
-      "Ink on paper",
-      "is a thin layer of dried color."
+      "Encre sur papier",
+      "est une fine couche de couleur séchée."
     ],
     "topics": [
       "paper"
@@ -345,11 +345,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-028",
+    "id": "fr-curious-028",
     "type": "curious",
     "fragments": [
-      "Morning light is often cooler",
-      "in color than evening light."
+      "La lumière du matin est souvent plus fraîche",
+      "en couleur que la lumière du soir."
     ],
     "topics": [
       "light"
@@ -357,11 +357,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-029",
+    "id": "fr-curious-029",
     "type": "curious",
     "fragments": [
-      "A walnut looks a little",
-      "like a tiny brain, by chance."
+      "Une noix a l'air un peu",
+      "comme un petit cerveau, par hasard."
     ],
     "topics": [
       "plants"
@@ -369,11 +369,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-030",
+    "id": "fr-curious-030",
     "type": "curious",
     "fragments": [
-      "Some lichens live",
-      "on the same stone for decades."
+      "Certains lichens vivent",
+      "sur la même pierre depuis des décennies."
     ],
     "topics": [
       "plants"
@@ -381,11 +381,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-031",
+    "id": "fr-curious-031",
     "type": "curious",
     "fragments": [
-      "Steam from a kettle",
-      "is water becoming air for a moment."
+      "Vapeur d'une bouilloire",
+      "est-ce que l'eau devient de l'air pendant un instant."
     ],
     "topics": [
       "water"
@@ -393,11 +393,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-032",
+    "id": "fr-curious-032",
     "type": "curious",
     "fragments": [
-      "A library card catalogs more than books.",
-      "It catalogs returns."
+      "Une carte de bibliothèque catalogue bien plus que des livres.",
+      "Il catalogue les retours."
     ],
     "topics": [
       "paper"
@@ -405,11 +405,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-033",
+    "id": "fr-curious-033",
     "type": "curious",
     "fragments": [
-      "Moths drink",
-      "with a long coiled tongue."
+      "Les papillons boivent",
+      "avec une longue langue enroulée."
     ],
     "topics": [
       "nature"
@@ -417,11 +417,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-034",
+    "id": "fr-curious-034",
     "type": "curious",
     "fragments": [
-      "The North Star",
-      "barely appears to move."
+      "L'étoile du Nord",
+      "semble à peine bouger."
     ],
     "topics": [
       "sky"
@@ -429,11 +429,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-035",
+    "id": "fr-curious-035",
     "type": "curious",
     "fragments": [
-      "Clay remembers the shape",
-      "of the hands that held it."
+      "Clay se souvient de la forme",
+      "des mains qui le tenaient."
     ],
     "topics": [
       "earth"
@@ -441,11 +441,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-036",
+    "id": "fr-curious-036",
     "type": "curious",
     "fragments": [
-      "A shadow is only the place",
-      "light did not reach."
+      "Une ombre n'est que l'endroit",
+      "la lumière n'a pas atteint."
     ],
     "topics": [
       "light"
@@ -453,11 +453,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-037",
+    "id": "fr-curious-037",
     "type": "curious",
     "fragments": [
-      "Pinecones open more",
-      "when the air is dry."
+      "Les pommes de pin s'ouvrent davantage",
+      "quand l'air est sec."
     ],
     "topics": [
       "plants"
@@ -465,15 +465,15 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Now find something green around you."
+      "text": "Maintenant, trouvez quelque chose de vert autour de vous."
     }
   },
   {
-    "id": "en-curious-038",
+    "id": "fr-curious-038",
     "type": "curious",
     "fragments": [
-      "Glass is made mostly",
-      "from melted sand."
+      "Le verre est fabriqué principalement",
+      "à partir de sable fondu."
     ],
     "topics": [
       "objects"
@@ -481,11 +481,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-039",
+    "id": "fr-curious-039",
     "type": "curious",
     "fragments": [
-      "A cat’s whiskers",
-      "are about as wide as its body."
+      "Les moustaches d'un chat",
+      "sont à peu près aussi larges que son corps."
     ],
     "topics": [
       "nature"
@@ -493,11 +493,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-040",
+    "id": "fr-curious-040",
     "type": "curious",
     "fragments": [
-      "Fog is a cloud",
-      "that decided to stay low."
+      "Le brouillard est un nuage",
+      "qui a décidé de rester bas."
     ],
     "topics": [
       "weather"
@@ -505,11 +505,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-041",
+    "id": "fr-curious-041",
     "type": "curious",
     "fragments": [
-      "Paper was once mostly rags,",
-      "then mostly wood."
+      "Autrefois, le papier n'était que des chiffons,",
+      "puis surtout du bois."
     ],
     "topics": [
       "paper"
@@ -517,11 +517,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-042",
+    "id": "fr-curious-042",
     "type": "curious",
     "fragments": [
-      "Tide pools keep a little ocean",
-      "for a few hours."
+      "Les bassins de marée gardent un peu d'océan",
+      "pendant quelques heures."
     ],
     "topics": [
       "water"
@@ -529,11 +529,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-043",
+    "id": "fr-curious-043",
     "type": "curious",
     "fragments": [
-      "A seed already contains",
-      "the idea of a leaf."
+      "Une graine contient déjà",
+      "l'idée d'une feuille."
     ],
     "topics": [
       "plants"
@@ -541,11 +541,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-044",
+    "id": "fr-curious-044",
     "type": "curious",
     "fragments": [
-      "Echoes are sound",
-      "arriving a second time."
+      "Les échos sont sonores",
+      "arrivant une seconde fois."
     ],
     "topics": [
       "quiet"
@@ -553,11 +553,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-045",
+    "id": "fr-curious-045",
     "type": "curious",
     "fragments": [
-      "The color of deep ice",
-      "can look almost blue."
+      "La couleur de la glace profonde",
+      "peut paraître presque bleu."
     ],
     "topics": [
       "weather"
@@ -565,11 +565,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-046",
+    "id": "fr-curious-046",
     "type": "curious",
     "fragments": [
-      "Bees see patterns on flowers",
-      "that people miss."
+      "Les abeilles voient des motifs sur les fleurs",
+      "que les gens manquent."
     ],
     "topics": [
       "nature"
@@ -577,11 +577,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-047",
+    "id": "fr-curious-047",
     "type": "curious",
     "fragments": [
-      "A brick is just clay",
-      "that learned to be still."
+      "Une brique n'est que de l'argile",
+      "qui a appris à rester tranquille."
     ],
     "topics": [
       "earth"
@@ -589,11 +589,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-048",
+    "id": "fr-curious-048",
     "type": "curious",
     "fragments": [
-      "Wind has no color.",
-      "We see what it moves."
+      "Le vent n'a pas de couleur.",
+      "On voit ce que ça bouge."
     ],
     "topics": [
       "weather"
@@ -601,15 +601,15 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Notice the air on your skin for a moment."
+      "text": "Remarquez l'air sur votre peau pendant un instant."
     }
   },
   {
-    "id": "en-curious-049",
+    "id": "fr-curious-049",
     "type": "curious",
     "fragments": [
-      "Some mushrooms glow faintly",
-      "in dark woods."
+      "Certains champignons brillent faiblement",
+      "dans des bois sombres."
     ],
     "topics": [
       "plants"
@@ -617,11 +617,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-050",
+    "id": "fr-curious-050",
     "type": "curious",
     "fragments": [
-      "A postage stamp",
-      "is a very small printed field."
+      "Un timbre-poste",
+      "est un très petit champ imprimé."
     ],
     "topics": [
       "paper"
@@ -629,11 +629,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-051",
+    "id": "fr-curious-051",
     "type": "curious",
     "fragments": [
-      "The Amazon river",
-      "can be wider than some cities."
+      "Le fleuve Amazone",
+      "peut être plus large que certaines villes."
     ],
     "topics": [
       "water"
@@ -641,11 +641,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-052",
+    "id": "fr-curious-052",
     "type": "curious",
     "fragments": [
-      "Dandelion clocks are seeds",
-      "waiting for a breeze."
+      "Les horloges de pissenlit sont des graines",
+      "en attendant une brise."
     ],
     "topics": [
       "plants"
@@ -653,11 +653,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-053",
+    "id": "fr-curious-053",
     "type": "curious",
     "fragments": [
-      "A mirror is glass",
-      "with a quiet metal behind it."
+      "Un miroir est du verre",
+      "avec un métal silencieux derrière."
     ],
     "topics": [
       "objects"
@@ -665,11 +665,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-054",
+    "id": "fr-curious-054",
     "type": "curious",
     "fragments": [
-      "Sparrows bathe in dust",
-      "as well as in water."
+      "Les moineaux se baignent dans la poussière",
+      "ainsi que dans l'eau."
     ],
     "topics": [
       "nature"
@@ -677,11 +677,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-055",
+    "id": "fr-curious-055",
     "type": "curious",
     "fragments": [
-      "The smell of rain has a name:",
-      "petrichor."
+      "L'odeur de la pluie a un nom :",
+      "pétrichor."
     ],
     "topics": [
       "weather"
@@ -689,11 +689,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-056",
+    "id": "fr-curious-056",
     "type": "curious",
     "fragments": [
-      "Coral is built by tiny animals",
-      "over a long time."
+      "Le corail est construit par de minuscules animaux",
+      "sur une longue période."
     ],
     "topics": [
       "water"
@@ -701,11 +701,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-057",
+    "id": "fr-curious-057",
     "type": "curious",
     "fragments": [
-      "A pencil writes",
-      "with a thin trail of carbon."
+      "Un crayon écrit",
+      "avec une fine traînée de carbone."
     ],
     "topics": [
       "paper"
@@ -713,11 +713,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-058",
+    "id": "fr-curious-058",
     "type": "curious",
     "fragments": [
-      "Dew is water",
-      "that gathered from cool air."
+      "La rosée est de l'eau",
+      "qui s'est accumulée dans l'air frais."
     ],
     "topics": [
       "weather"
@@ -725,11 +725,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-059",
+    "id": "fr-curious-059",
     "type": "curious",
     "fragments": [
-      "An oak can live",
-      "longer than a house."
+      "Un chêne peut vivre",
+      "plus long qu'une maison."
     ],
     "topics": [
       "plants"
@@ -737,15 +737,15 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Now find something green around you."
+      "text": "Maintenant, trouvez quelque chose de vert autour de vous."
     }
   },
   {
-    "id": "en-curious-060",
+    "id": "fr-curious-060",
     "type": "curious",
     "fragments": [
-      "The word alphabet",
-      "comes from two first letters."
+      "Le mot alphabet",
+      "vient de deux premières lettres."
     ],
     "topics": [
       "language"
@@ -753,11 +753,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-061",
+    "id": "fr-curious-061",
     "type": "curious",
     "fragments": [
-      "Lava cools into stone",
-      "with different textures."
+      "La lave se transforme en pierre",
+      "avec des textures différentes."
     ],
     "topics": [
       "earth"
@@ -765,11 +765,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-062",
+    "id": "fr-curious-062",
     "type": "curious",
     "fragments": [
-      "A kettle whistle is steam",
-      "squeezing through a small hole."
+      "Un sifflet de bouilloire, c'est de la vapeur",
+      "en se faufilant à travers un petit trou."
     ],
     "topics": [
       "objects"
@@ -777,11 +777,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-063",
+    "id": "fr-curious-063",
     "type": "curious",
     "fragments": [
-      "Fireflies make light",
-      "without much heat."
+      "Les lucioles font la lumière",
+      "sans beaucoup de chaleur."
     ],
     "topics": [
       "nature"
@@ -789,11 +789,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-064",
+    "id": "fr-curious-064",
     "type": "curious",
     "fragments": [
-      "The Gobi has winters",
-      "of quiet snow."
+      "Le Gobi a des hivers",
+      "de neige tranquille."
     ],
     "topics": [
       "earth"
@@ -801,11 +801,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-065",
+    "id": "fr-curious-065",
     "type": "curious",
     "fragments": [
-      "A bookmark is a pause",
-      "you can hold."
+      "Un signet est une pause",
+      "tu peux tenir."
     ],
     "topics": [
       "paper"
@@ -813,11 +813,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-066",
+    "id": "fr-curious-066",
     "type": "curious",
     "fragments": [
-      "Ripples travel,",
-      "but the water mostly stays."
+      "Les ondulations voyagent,",
+      "mais l'eau reste en grande partie."
     ],
     "topics": [
       "water"
@@ -825,11 +825,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-067",
+    "id": "fr-curious-067",
     "type": "curious",
     "fragments": [
-      "Linen starts as",
-      "a tall blue-flowered plant."
+      "Le lin commence comme",
+      "une grande plante à fleurs bleues."
     ],
     "topics": [
       "plants"
@@ -837,11 +837,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-068",
+    "id": "fr-curious-068",
     "type": "curious",
     "fragments": [
-      "The letter Q",
-      "almost always brings U along."
+      "La lettre Q",
+      "vous amène presque toujours avec vous."
     ],
     "topics": [
       "language"
@@ -849,11 +849,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-069",
+    "id": "fr-curious-069",
     "type": "curious",
     "fragments": [
-      "A terracotta pot",
-      "is earth shaped and fired."
+      "Un pot en terre cuite",
+      "est façonné et cuit en terre."
     ],
     "topics": [
       "earth"
@@ -861,11 +861,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-070",
+    "id": "fr-curious-070",
     "type": "curious",
     "fragments": [
-      "Clouds look slow",
-      "because they are very large."
+      "Les nuages ​​semblent lents",
+      "car ils sont très grands."
     ],
     "topics": [
       "sky"
@@ -873,15 +873,15 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Look up, even if only as far as the ceiling."
+      "text": "Levez les yeux, ne serait-ce que jusqu'au plafond."
     }
   },
   {
-    "id": "en-curious-071",
+    "id": "fr-curious-071",
     "type": "curious",
     "fragments": [
-      "A moth’s wings can look like bark",
-      "in daylight."
+      "Les ailes d'un papillon peuvent ressembler à de l'écorce",
+      "en plein jour."
     ],
     "topics": [
       "nature"
@@ -889,11 +889,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-072",
+    "id": "fr-curious-072",
     "type": "curious",
     "fragments": [
-      "Salt crystals are tiny cubes",
-      "if you look closely."
+      "Les cristaux de sel sont de minuscules cubes",
+      "si vous regardez bien."
     ],
     "topics": [
       "objects"
@@ -901,11 +901,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-073",
+    "id": "fr-curious-073",
     "type": "curious",
     "fragments": [
-      "The word serendipity",
-      "began as a story title."
+      "Le mot hasard",
+      "a commencé comme un titre d’histoire."
     ],
     "topics": [
       "language"
@@ -913,11 +913,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-074",
+    "id": "fr-curious-074",
     "type": "curious",
     "fragments": [
-      "A windowsill is a small stage",
-      "for light."
+      "Un rebord de fenêtre est une petite scène",
+      "pour la lumière."
     ],
     "topics": [
       "room"
@@ -925,11 +925,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-075",
+    "id": "fr-curious-075",
     "type": "curious",
     "fragments": [
-      "River stones knock together",
-      "until they agree."
+      "Les pierres de la rivière s'entrechoquent",
+      "jusqu'à ce qu'ils soient d'accord."
     ],
     "topics": [
       "water"
@@ -937,11 +937,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-076",
+    "id": "fr-curious-076",
     "type": "curious",
     "fragments": [
-      "Thyme keeps its smell",
-      "even when dried."
+      "Le thym garde son odeur",
+      "même séché."
     ],
     "topics": [
       "plants"
@@ -949,11 +949,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-077",
+    "id": "fr-curious-077",
     "type": "curious",
     "fragments": [
-      "The night sky is a map",
-      "that slowly turns."
+      "Le ciel nocturne est une carte",
+      "ça tourne lentement."
     ],
     "topics": [
       "sky"
@@ -961,11 +961,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-078",
+    "id": "fr-curious-078",
     "type": "curious",
     "fragments": [
-      "An envelope is a folded pause",
-      "between two rooms."
+      "Une enveloppe est une pause pliée",
+      "entre deux pièces."
     ],
     "topics": [
       "paper"
@@ -973,11 +973,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-079",
+    "id": "fr-curious-079",
     "type": "curious",
     "fragments": [
-      "Foam on a wave",
-      "is mostly air and water mixed."
+      "Mousse sur une vague",
+      "est principalement de l’air et de l’eau mélangés."
     ],
     "topics": [
       "water"
@@ -985,11 +985,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-080",
+    "id": "fr-curious-080",
     "type": "curious",
     "fragments": [
-      "Some apples stay crisp",
-      "if kept cool and still."
+      "Certaines pommes restent croustillantes",
+      "s'il est conservé au frais et immobile."
     ],
     "topics": [
       "food"
@@ -997,11 +997,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-081",
+    "id": "fr-curious-081",
     "type": "curious",
     "fragments": [
-      "A hinge lets a door",
-      "change its mind gently."
+      "Une charnière laisse passer une porte",
+      "changer d'avis en douceur."
     ],
     "topics": [
       "objects"
@@ -1009,15 +1009,15 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Rest your eyes on one object without naming it."
+      "text": "Posez vos yeux sur un objet sans le nommer."
     }
   },
   {
-    "id": "en-curious-082",
+    "id": "fr-curious-082",
     "type": "curious",
     "fragments": [
-      "Lichen is often two lives",
-      "sharing one shape."
+      "Le lichen, c'est souvent deux vies",
+      "partageant une forme."
     ],
     "topics": [
       "plants"
@@ -1025,11 +1025,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-083",
+    "id": "fr-curious-083",
     "type": "curious",
     "fragments": [
-      "The word lullaby",
-      "is older than most houses."
+      "Le mot berceuse",
+      "est plus ancienne que la plupart des maisons."
     ],
     "topics": [
       "language"
@@ -1037,11 +1037,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-084",
+    "id": "fr-curious-084",
     "type": "curious",
     "fragments": [
-      "Warm bread smells stronger",
-      "than cool bread."
+      "Le pain chaud sent plus fort",
+      "que du pain frais."
     ],
     "topics": [
       "food"
@@ -1049,11 +1049,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-085",
+    "id": "fr-curious-085",
     "type": "curious",
     "fragments": [
-      "Petrichor",
-      "is the name for the smell of rain on dry ground."
+      "Pétrichor",
+      "est le nom de l'odeur de la pluie sur un sol sec."
     ],
     "topics": [
       "weather"
@@ -1061,11 +1061,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-086",
+    "id": "fr-curious-086",
     "type": "curious",
     "fragments": [
-      "Otters sometimes hold paws while they sleep",
-      "so they do not drift apart."
+      "Les loutres tiennent parfois leurs pattes pendant qu'elles dorment",
+      "pour qu'ils ne s'éloignent pas."
     ],
     "topics": [
       "nature"
@@ -1073,11 +1073,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-087",
+    "id": "fr-curious-087",
     "type": "curious",
     "fragments": [
-      "A jiffy is a real unit of time.",
-      "Very small."
+      "Un jiffy est une véritable unité de temps.",
+      "Très petit."
     ],
     "topics": [
       "time"
@@ -1085,11 +1085,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-088",
+    "id": "fr-curious-088",
     "type": "curious",
     "fragments": [
-      "Peanuts are not nuts.",
-      "They grow underground."
+      "Les cacahuètes ne sont pas des noix.",
+      "Ils poussent sous terre."
     ],
     "topics": [
       "plants"
@@ -1097,11 +1097,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-089",
+    "id": "fr-curious-089",
     "type": "curious",
     "fragments": [
-      "The North Star barely moves.",
-      "The rest of the sky turns around it."
+      "Le North Star bouge à peine.",
+      "Le reste du ciel tourne autour d'elle."
     ],
     "topics": [
       "sky"
@@ -1109,11 +1109,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-090",
+    "id": "fr-curious-090",
     "type": "curious",
     "fragments": [
-      "Ice floats",
-      "because it is a little less dense than the water it came from."
+      "Flotteurs de glace",
+      "car elle est un peu moins dense que l'eau dont elle est issue."
     ],
     "topics": [
       "water"
@@ -1121,11 +1121,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-091",
+    "id": "fr-curious-091",
     "type": "curious",
     "fragments": [
-      "A group of owls",
-      "is called a parliament."
+      "Un groupe de hiboux",
+      "s'appelle un parlement."
     ],
     "topics": [
       "nature"
@@ -1133,11 +1133,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-092",
+    "id": "fr-curious-092",
     "type": "curious",
     "fragments": [
-      "Paper was once",
-      "mostly cloth rags."
+      "Le papier était autrefois",
+      "principalement des chiffons en tissu."
     ],
     "topics": [
       "paper"
@@ -1145,15 +1145,15 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Notice one piece of paper near you, even a label."
+      "text": "Remarquez un morceau de papier près de chez vous, même une étiquette."
     }
   },
   {
-    "id": "en-curious-093",
+    "id": "fr-curious-093",
     "type": "curious",
     "fragments": [
-      "Some mosses can dry almost completely",
-      "and then drink themselves back."
+      "Certaines mousses peuvent sécher presque complètement",
+      "puis se désaltèrent."
     ],
     "topics": [
       "plants"
@@ -1161,11 +1161,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-094",
+    "id": "fr-curious-094",
     "type": "curious",
     "fragments": [
-      "A compass needle",
-      "is a tiny traveler that prefers one direction."
+      "Une aiguille de boussole",
+      "est un petit voyageur qui préfère une direction."
     ],
     "topics": [
       "objects"
@@ -1173,11 +1173,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-095",
+    "id": "fr-curious-095",
     "type": "curious",
     "fragments": [
-      "Fog is a cloud",
-      "that decided to stay low."
+      "Le brouillard est un nuage",
+      "qui a décidé de rester bas."
     ],
     "topics": [
       "weather"
@@ -1185,11 +1185,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-096",
+    "id": "fr-curious-096",
     "type": "curious",
     "fragments": [
-      "The shortest complete sentence in English",
-      "is Go."
+      "La phrase complète la plus courte en anglais",
+      "est Go."
     ],
     "topics": [
       "language"
@@ -1197,11 +1197,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-097",
+    "id": "fr-curious-097",
     "type": "curious",
     "fragments": [
-      "Honeybees can recognize human faces.",
-      "They do not need to."
+      "Les abeilles peuvent reconnaître les visages humains.",
+      "Ils n’en ont pas besoin."
     ],
     "topics": [
       "nature"
@@ -1209,11 +1209,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-098",
+    "id": "fr-curious-098",
     "type": "curious",
     "fragments": [
-      "A shadow is only",
-      "the absence of light."
+      "Une ombre est seulement",
+      "l'absence de lumière."
     ],
     "topics": [
       "light"
@@ -1221,11 +1221,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-099",
+    "id": "fr-curious-099",
     "type": "curious",
     "fragments": [
-      "River stones get round",
-      "by patience, not by plan."
+      "Les pierres de rivière circulent",
+      "par patience, pas par plan."
     ],
     "topics": [
       "stone"
@@ -1233,11 +1233,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-100",
+    "id": "fr-curious-100",
     "type": "curious",
     "fragments": [
-      "Pineapples grow from the ground,",
-      "not from trees."
+      "Les ananas poussent du sol,",
+      "pas des arbres."
     ],
     "topics": [
       "plants"
@@ -1245,11 +1245,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-101",
+    "id": "fr-curious-101",
     "type": "curious",
     "fragments": [
-      "A day on Venus",
-      "is longer than its year."
+      "Une journée sur Vénus",
+      "est plus long que son année."
     ],
     "topics": [
       "sky"
@@ -1257,11 +1257,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-102",
+    "id": "fr-curious-102",
     "type": "curious",
     "fragments": [
-      "The quietest rooms are built",
-      "to swallow almost every sound."
+      "Les pièces les plus calmes sont construites",
+      "pour avaler presque tous les sons."
     ],
     "topics": [
       "quiet"
@@ -1269,20 +1269,20 @@
     "difficulty": 1,
     "followUp": {
       "type": "choice",
-      "text": "Is the sound around you more hush or more hum?",
+      "text": "Le son autour de vous est-il plus silencieux ou plus bourdonnant ?",
       "options": [
-        "hush",
+        "faire taire",
         "hum",
-        "not sure"
+        "pas sûr"
       ]
     }
   },
   {
-    "id": "en-curious-103",
+    "id": "fr-curious-103",
     "type": "curious",
     "fragments": [
-      "Waffles have pockets",
-      "because someone wanted more of whatever goes on top."
+      "Les gaufres ont des poches",
+      "parce que quelqu'un voulait plus de tout ce qui se passe par-dessus."
     ],
     "topics": [
       "food"
@@ -1290,11 +1290,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-104",
+    "id": "fr-curious-104",
     "type": "curious",
     "fragments": [
-      "Koalas have fingerprints",
-      "that can look surprisingly like ours."
+      "Les koalas ont des empreintes digitales",
+      "qui peut ressembler étonnamment au nôtre."
     ],
     "topics": [
       "nature"
@@ -1302,11 +1302,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-105",
+    "id": "fr-curious-105",
     "type": "curious",
     "fragments": [
-      "Light from the sun",
-      "takes about eight minutes to arrive."
+      "Lumière du soleil",
+      "prend environ huit minutes pour arriver."
     ],
     "topics": [
       "sky"
@@ -1314,11 +1314,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-106",
+    "id": "fr-curious-106",
     "type": "curious",
     "fragments": [
-      "A seed can wait years",
-      "and still know what to do."
+      "Une graine peut attendre des années",
+      "et je sais toujours quoi faire."
     ],
     "topics": [
       "plants"
@@ -1326,11 +1326,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-107",
+    "id": "fr-curious-107",
     "type": "curious",
     "fragments": [
-      "Soap lets water slip into cloth",
-      "by making it a little less shy."
+      "Le savon laisse l’eau s’infiltrer dans le tissu",
+      "en le rendant un peu moins timide."
     ],
     "topics": [
       "home"
@@ -1338,11 +1338,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-108",
+    "id": "fr-curious-108",
     "type": "curious",
     "fragments": [
-      "The color of a flamingo",
-      "comes from what it eats."
+      "La couleur d'un flamant rose",
+      "vient de ce qu'il mange."
     ],
     "topics": [
       "nature"
@@ -1350,11 +1350,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-109",
+    "id": "fr-curious-109",
     "type": "curious",
     "fragments": [
-      "Antarctica is a desert.",
-      "Very dry, and very wide."
+      "L'Antarctique est un désert.",
+      "Très sec et très large."
     ],
     "topics": [
       "earth"
@@ -1362,11 +1362,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-110",
+    "id": "fr-curious-110",
     "type": "curious",
     "fragments": [
-      "A moment was once",
-      "a measured length of time."
+      "Un moment était une fois",
+      "une durée mesurée."
     ],
     "topics": [
       "time"
@@ -1374,11 +1374,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-111",
+    "id": "fr-curious-111",
     "type": "curious",
     "fragments": [
-      "Some trees communicate",
-      "through the soil, quietly."
+      "Certains arbres communiquent",
+      "à travers le sol, tranquillement."
     ],
     "topics": [
       "forest"
@@ -1386,11 +1386,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-112",
+    "id": "fr-curious-112",
     "type": "curious",
     "fragments": [
-      "Glass is cooled so fast",
-      "it never quite becomes a usual crystal."
+      "Le verre refroidit si vite",
+      "cela ne devient jamais tout à fait un cristal habituel."
     ],
     "topics": [
       "objects"
@@ -1398,11 +1398,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-113",
+    "id": "fr-curious-113",
     "type": "curious",
     "fragments": [
-      "Crows remember faces",
-      "and can hold a grudge or a favor."
+      "Les corbeaux se souviennent des visages",
+      "et peut garder rancune ou une faveur."
     ],
     "topics": [
       "nature"
@@ -1410,11 +1410,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-114",
+    "id": "fr-curious-114",
     "type": "curious",
     "fragments": [
-      "The sea is louder at night",
-      "mostly because the rest of the world is quieter."
+      "La mer est plus bruyante la nuit",
+      "principalement parce que le reste du monde est plus calme."
     ],
     "topics": [
       "coast"
@@ -1422,11 +1422,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-115",
+    "id": "fr-curious-115",
     "type": "curious",
     "fragments": [
-      "The word serendipity",
-      "began as a fairy-tale accident."
+      "Le mot hasard",
+      "a commencé comme un accident de conte de fées."
     ],
     "topics": [
       "language"
@@ -1434,13 +1434,13 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-116",
+    "id": "fr-curious-116",
     "type": "curious",
     "fragments": [
-      "A sunflower head",
-      "is not one flower.",
-      "It is hundreds of small ones",
-      "agreeing to face the same way."
+      "Une tête de tournesol",
+      "n'est pas une fleur.",
+      "Il y en a des centaines de petits",
+      "acceptant de faire face de la même manière."
     ],
     "topics": [
       "plants"
@@ -1448,13 +1448,13 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-117",
+    "id": "fr-curious-117",
     "type": "curious",
     "fragments": [
-      "The color we call sky blue",
-      "is scattered light.",
-      "The air keeps the blue",
-      "and lets the rest go on."
+      "La couleur que nous appelons bleu ciel",
+      "est la lumière diffusée.",
+      "L'air garde le bleu",
+      "et laisse le reste continuer."
     ],
     "topics": [
       "sky"
@@ -1462,13 +1462,13 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-118",
+    "id": "fr-curious-118",
     "type": "curious",
     "fragments": [
-      "Octopuses taste",
-      "with their arms.",
-      "A reaching thing",
-      "can also be a knowing thing."
+      "Goût des poulpes",
+      "avec leurs bras.",
+      "Une chose qui atteint",
+      "peut aussi être une chose de connaissance."
     ],
     "topics": [
       "water",
@@ -1477,12 +1477,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-119",
+    "id": "fr-curious-119",
     "type": "curious",
     "fragments": [
-      "A pencil can write",
-      "about forty-five thousand words",
-      "before it is only wood again."
+      "Un crayon peut écrire",
+      "environ quarante-cinq mille mots",
+      "avant, ce n'était plus que du bois."
     ],
     "topics": [
       "paper"
@@ -1490,13 +1490,13 @@
     "difficulty": 1
   },
   {
-    "id": "en-curious-120",
+    "id": "fr-curious-120",
     "type": "curious",
     "fragments": [
-      "Honeycombs use hexagons",
-      "because six sides",
-      "hold a lot",
-      "with very little wall."
+      "Les nids d'abeilles utilisent des hexagones",
+      "parce que six côtés",
+      "tenir beaucoup",
+      "avec très peu de mur."
     ],
     "topics": [
       "nature"

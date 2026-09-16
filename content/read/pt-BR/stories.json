@@ -1,15 +1,15 @@
 [
   {
-    "id": "en-stories-001",
+    "id": "pt-stories-001",
     "type": "micro_story",
     "fragments": [
-      "On a still lake",
-      "a small boat sat",
-      "as if it had forgotten to leave.",
-      "The water held the sky",
-      "without asking.",
-      "A bird crossed once.",
-      "Then the quiet returned."
+      "Em um lago calmo",
+      "um pequeno barco estava sentado",
+      "como se tivesse esquecido de sair.",
+      "A água segurou o céu",
+      "sem perguntar.",
+      "Um pássaro cruzou uma vez.",
+      "Então o silêncio voltou."
     ],
     "topics": [
       "water"
@@ -17,14 +17,14 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-002",
+    "id": "pt-stories-002",
     "type": "micro_story",
     "fragments": [
-      "The chair",
-      "remembered the shape of waiting.",
-      "Afternoon collected itself",
-      "in a square of floor.",
-      "Nothing needed to happen next."
+      "A cadeira",
+      "lembrei-me da forma de esperar.",
+      "A tarde se recompôs",
+      "em um quadrado de chão.",
+      "Nada precisava acontecer a seguir."
     ],
     "topics": [
       "room"
@@ -32,16 +32,16 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Look at one still object near you."
+      "text": "Olhe para um objeto parado perto de você."
     }
   },
   {
-    "id": "en-stories-003",
+    "id": "pt-stories-003",
     "type": "micro_story",
     "fragments": [
-      "A fern unrolled one slow new leaf.",
-      "The rest of the plant stayed as it was.",
-      "Green kept its own time."
+      "Uma samambaia desenrolou uma folha nova e lenta.",
+      "O resto da planta permaneceu como estava.",
+      "Green manteve seu próprio tempo."
     ],
     "topics": [
       "plants"
@@ -49,14 +49,14 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-004",
+    "id": "pt-stories-004",
     "type": "micro_story",
     "fragments": [
-      "Clouds stacked themselves",
-      "without hurry.",
-      "The street darkened a little,",
-      "then paused.",
-      "Rain decided later."
+      "Nuvens se empilharam",
+      "sem pressa.",
+      "A rua escureceu um pouco,",
+      "então fez uma pausa.",
+      "A chuva decidiu mais tarde."
     ],
     "topics": [
       "weather"
@@ -64,15 +64,15 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-005",
+    "id": "pt-stories-005",
     "type": "micro_story",
     "fragments": [
-      "Someone had left a page open",
-      "on the table.",
-      "The sentence in the middle",
-      "was unfinished.",
-      "It could wait.",
-      "Paper is patient."
+      "Alguém deixou uma página aberta",
+      "na mesa.",
+      "A frase do meio",
+      "estava inacabado.",
+      "Poderia esperar.",
+      "O papel é paciente."
     ],
     "topics": [
       "paper"
@@ -80,12 +80,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-006",
+    "id": "pt-stories-006",
     "type": "micro_story",
     "fragments": [
-      "The lamp made a small circle on the cloth.",
-      "Moths would have liked it, but none came.",
-      "The circle stayed, doing only that."
+      "A lâmpada fez um pequeno círculo no pano.",
+      "As mariposas teriam gostado, mas nenhuma apareceu.",
+      "O círculo permaneceu, fazendo apenas isso."
     ],
     "topics": [
       "light"
@@ -93,12 +93,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-007",
+    "id": "pt-stories-007",
     "type": "micro_story",
     "fragments": [
-      "A path went between two fields of pale grass.",
-      "Stones kept the edges from wandering.",
-      "The path did not mind who used it."
+      "Um caminho passava entre dois campos de grama clara.",
+      "As pedras impediam que as bordas se desviassem.",
+      "O caminho não se importava com quem o usava."
     ],
     "topics": [
       "earth"
@@ -106,12 +106,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-008",
+    "id": "pt-stories-008",
     "type": "micro_story",
     "fragments": [
-      "Evening arrived as a change in the color of walls.",
-      "One star appeared, then pretended it had been there.",
-      "The rest of the sky took its time."
+      "A noite chegou como uma mudança na cor das paredes.",
+      "Uma estrela apareceu e depois fingiu que estava ali.",
+      "O resto do céu demorou."
     ],
     "topics": [
       "sky"
@@ -119,16 +119,16 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Look up, even if only as far as the ceiling."
+      "text": "Olhe para cima, mesmo que seja apenas até o teto."
     }
   },
   {
-    "id": "en-stories-009",
+    "id": "pt-stories-009",
     "type": "micro_story",
     "fragments": [
-      "A cup sat in the exact center of the saucer.",
-      "It was empty, which was a kind of readiness.",
-      "The table held both without comment."
+      "Uma xícara estava exatamente no centro do pires.",
+      "Estava vazio, o que era uma espécie de prontidão.",
+      "A mesa continha ambos sem comentários."
     ],
     "topics": [
       "objects"
@@ -136,12 +136,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-010",
+    "id": "pt-stories-010",
     "type": "micro_story",
     "fragments": [
-      "Sparrows argued softly in a hedge.",
-      "Then they forgot the argument.",
-      "The hedge continued being a hedge."
+      "Pardais discutiam baixinho numa cerca viva.",
+      "Então eles esqueceram a discussão.",
+      "A cerca continuou sendo uma cerca."
     ],
     "topics": [
       "nature"
@@ -149,12 +149,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-011",
+    "id": "pt-stories-011",
     "type": "micro_story",
     "fragments": [
-      "Tide left a line of darker sand.",
-      "Shells kept their own small rooms.",
-      "The line would move again, and that was fine."
+      "A maré deixou uma linha de areia mais escura.",
+      "As conchas mantinham seus próprios quartos pequenos.",
+      "A linha se moveria novamente, e tudo bem."
     ],
     "topics": [
       "water"
@@ -162,16 +162,16 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Now find a reflection, even a small one."
+      "text": "Agora encontre um reflexo, mesmo que pequeno."
     }
   },
   {
-    "id": "en-stories-012",
+    "id": "pt-stories-012",
     "type": "micro_story",
     "fragments": [
-      "The house made one wooden sound, then none.",
-      "A clock somewhere decided not to insist.",
-      "Listening became easier."
+      "A casa emitiu um som de madeira, depois nenhum.",
+      "Um relógio em algum lugar decidiu não insistir.",
+      "Ouvir ficou mais fácil."
     ],
     "topics": [
       "quiet"
@@ -179,13 +179,13 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-013",
+    "id": "pt-stories-013",
     "type": "micro_story",
     "fragments": [
-      "Apples waited in a bowl as if they had all day.",
-      "One was greener.",
-      "None were in a rush.",
-      "The bowl was older than the fruit."
+      "As maçãs esperaram em uma tigela como se tivessem o dia todo.",
+      "Um era mais verde.",
+      "Nenhum deles estava com pressa.",
+      "A tigela era mais velha que a fruta."
     ],
     "topics": [
       "plants"
@@ -193,12 +193,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-014",
+    "id": "pt-stories-014",
     "type": "micro_story",
     "fragments": [
-      "A window held a square of ordinary street.",
-      "A bicycle passed through it and left.",
-      "The square remained ordinary, which helped."
+      "Uma janela exibia um quadrado de rua comum.",
+      "Uma bicicleta passou por lá e saiu.",
+      "A praça permaneceu normal, o que ajudou."
     ],
     "topics": [
       "room"
@@ -206,16 +206,16 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Look at one still object near you."
+      "text": "Olhe para um objeto parado perto de você."
     }
   },
   {
-    "id": "en-stories-015",
+    "id": "pt-stories-015",
     "type": "micro_story",
     "fragments": [
-      "Dust showed up only where the sun insisted.",
-      "The rest of the air kept its secrets.",
-      "The sun moved on without taking the dust."
+      "A poeira só aparecia onde o sol insistia.",
+      "O resto do ar manteve seus segredos.",
+      "O sol seguiu em frente sem tirar a poeira."
     ],
     "topics": [
       "light"
@@ -223,12 +223,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-016",
+    "id": "pt-stories-016",
     "type": "micro_story",
     "fragments": [
-      "A letter had been folded twice, carefully.",
-      "The handwriting leaned a little to the right.",
-      "No one needed to open it this minute."
+      "Uma carta havia sido dobrada duas vezes, com cuidado.",
+      "A caligrafia inclinou-se um pouco para a direita.",
+      "Ninguém precisava abri-lo neste minuto."
     ],
     "topics": [
       "paper"
@@ -236,12 +236,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-017",
+    "id": "pt-stories-017",
     "type": "micro_story",
     "fragments": [
-      "Fog made the far trees into suggestions.",
-      "The near trees stayed specific.",
-      "Walking felt shorter than it was."
+      "A neblina transformou as árvores distantes em sugestões.",
+      "As árvores próximas permaneceram específicas.",
+      "Caminhar parecia mais curto do que era."
     ],
     "topics": [
       "weather"
@@ -249,16 +249,16 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Notice the air on your skin for a moment."
+      "text": "Observe o ar em sua pele por um momento."
     }
   },
   {
-    "id": "en-stories-018",
+    "id": "pt-stories-018",
     "type": "micro_story",
     "fragments": [
-      "A kettle clicked as it finished its work.",
-      "Steam wrote a brief cloud and erased it.",
-      "The mug could wait a moment more."
+      "Uma chaleira estalou ao terminar seu trabalho.",
+      "O Steam escreveu uma breve nuvem e a apagou.",
+      "A caneca poderia esperar mais um momento."
     ],
     "topics": [
       "water"
@@ -266,12 +266,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-019",
+    "id": "pt-stories-019",
     "type": "micro_story",
     "fragments": [
-      "Clay on the wheel rose, then rested.",
-      "Hands knew when to stop.",
-      "The shape would dry into itself."
+      "Clay no volante levantou-se e depois descansou.",
+      "As mãos sabiam quando parar.",
+      "A forma secaria sozinha."
     ],
     "topics": [
       "earth"
@@ -279,12 +279,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-020",
+    "id": "pt-stories-020",
     "type": "micro_story",
     "fragments": [
-      "A moth opened on the inside of the lampshade.",
-      "Its wings were a map of quieter woods.",
-      "It stayed until the light felt enough."
+      "Uma mariposa se abriu no interior do abajur.",
+      "Suas asas eram um mapa de florestas mais tranquilas.",
+      "Permaneceu até que a luz parecesse suficiente."
     ],
     "topics": [
       "nature"
@@ -292,16 +292,16 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Find something living, or the color of something living."
+      "text": "Encontre algo vivo ou a cor de algo vivo."
     }
   },
   {
-    "id": "en-stories-021",
+    "id": "pt-stories-021",
     "type": "micro_story",
     "fragments": [
-      "Morning arrived first on the windowsill.",
-      "Then it found the spines of the books.",
-      "The rest of the room caught up slowly."
+      "A manhã chegou primeiro no parapeito da janela.",
+      "Então encontrou as lombadas dos livros.",
+      "O resto da sala alcançou lentamente."
     ],
     "topics": [
       "sky"
@@ -309,12 +309,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-022",
+    "id": "pt-stories-022",
     "type": "micro_story",
     "fragments": [
-      "A button had come off and been placed in a dish.",
-      "It looked finished, even alone.",
-      "Mending could be another day’s quiet."
+      "Um botão caiu e foi colocado em um prato.",
+      "Parecia acabado, mesmo sozinho.",
+      "Remendar poderia ser outro dia tranquilo."
     ],
     "topics": [
       "objects"
@@ -322,12 +322,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-023",
+    "id": "pt-stories-023",
     "type": "micro_story",
     "fragments": [
-      "Snow made the street forget its usual noise.",
-      "Footsteps became careful punctuation.",
-      "Even the air seemed to read more slowly."
+      "A neve fez a rua esquecer o barulho habitual.",
+      "Os passos tornaram-se uma pontuação cuidadosa.",
+      "Até o ar parecia ler mais devagar."
     ],
     "topics": [
       "quiet"
@@ -335,16 +335,16 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Find something green around you."
+      "text": "Encontre algo verde ao seu redor."
     }
   },
   {
-    "id": "en-stories-024",
+    "id": "pt-stories-024",
     "type": "micro_story",
     "fragments": [
-      "Moss took the north side of the stone without debate.",
-      "The stone did not mind being partly green.",
-      "Years passed in that arrangement."
+      "Moss tomou o lado norte da pedra sem debater.",
+      "A pedra não se importava de ser parcialmente verde.",
+      "Anos se passaram nesse arranjo."
     ],
     "topics": [
       "plants"
@@ -352,12 +352,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-025",
+    "id": "pt-stories-025",
     "type": "micro_story",
     "fragments": [
-      "Someone had aligned the books by height, almost.",
-      "One taller spine refused, politely.",
-      "The shelf held the disagreement."
+      "Alguém alinhou os livros pela altura, quase.",
+      "Um membro mais alto recusou, educadamente.",
+      "A prateleira continha a discordância."
     ],
     "topics": [
       "room"
@@ -365,12 +365,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-026",
+    "id": "pt-stories-026",
     "type": "micro_story",
     "fragments": [
-      "Rain wrote on the glass in temporary letters.",
-      "They ran into each other and became weather.",
-      "Inside, the table stayed dry on purpose."
+      "Rain escreveu no vidro em letras temporárias.",
+      "Eles se encontraram e se tornaram clima.",
+      "Lá dentro, a mesa ficou seca de propósito."
     ],
     "topics": [
       "water"
@@ -378,16 +378,16 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Now find a reflection, even a small one."
+      "text": "Agora encontre um reflexo, mesmo que pequeno."
     }
   },
   {
-    "id": "en-stories-027",
+    "id": "pt-stories-027",
     "type": "micro_story",
     "fragments": [
-      "A candle shortened itself without complaint.",
-      "Wax remembered the last hour in rings.",
-      "The room used the small light well."
+      "Uma vela encurtou-se sem reclamar.",
+      "Wax lembrou-se da última hora em anéis.",
+      "A sala aproveitava bem a pequena luz."
     ],
     "topics": [
       "light"
@@ -395,12 +395,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-028",
+    "id": "pt-stories-028",
     "type": "micro_story",
     "fragments": [
-      "The crossword had one square left empty.",
-      "The clue was kind, if you looked again.",
-      "Leaving it open was also an answer."
+      "As palavras cruzadas tinham um quadrado vazio.",
+      "A pista era gentil, se você olhasse novamente.",
+      "Deixá-lo aberto também foi uma resposta."
     ],
     "topics": [
       "language"
@@ -408,12 +408,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-029",
+    "id": "pt-stories-029",
     "type": "micro_story",
     "fragments": [
-      "A garden wall kept the hill from visiting the path.",
-      "Lichen signed the stones in pale green.",
-      "No one needed to translate it."
+      "Um muro de jardim impedia que a colina passasse pelo caminho.",
+      "Lichen assinou as pedras em verde claro.",
+      "Ninguém precisou traduzi-lo."
     ],
     "topics": [
       "earth"
@@ -421,16 +421,16 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Find something with a little texture."
+      "text": "Encontre algo com um pouco de textura."
     }
   },
   {
-    "id": "en-stories-030",
+    "id": "pt-stories-030",
     "type": "micro_story",
     "fragments": [
-      "The afternoon had a middle, though clocks disagreed.",
-      "A fly chose a sunlit patch of wall.",
-      "Both stayed for a while, then didn’t."
+      "A tarde teve meio, embora os relógios discordassem.",
+      "Uma mosca escolheu um pedaço de parede ensolarado.",
+      "Ambos ficaram por um tempo, depois não."
     ],
     "topics": [
       "time"
@@ -438,13 +438,13 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-031",
+    "id": "pt-stories-031",
     "type": "micro_story",
     "fragments": [
-      "A wooden spoon rested across a pot.",
-      "Soup could wait.",
-      "Stirring could wait.",
-      "The kitchen sounded like itself."
+      "Uma colher de pau repousava sobre uma panela.",
+      "A sopa poderia esperar.",
+      "A agitação poderia esperar.",
+      "A cozinha parecia ela mesma."
     ],
     "topics": [
       "objects"
@@ -452,12 +452,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-032",
+    "id": "pt-stories-032",
     "type": "micro_story",
     "fragments": [
-      "Ducks drew the same slow comma on the pond.",
-      "Ripples signed it and let it go.",
-      "The far bank did not comment."
+      "Os patos desenharam a mesma vírgula lenta no lago.",
+      "Ripples assinou e deixou passar.",
+      "A margem oposta não comentou."
     ],
     "topics": [
       "nature"
@@ -465,16 +465,16 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Find something living, or the color of something living."
+      "text": "Encontre algo vivo ou a cor de algo vivo."
     }
   },
   {
-    "id": "en-stories-033",
+    "id": "pt-stories-033",
     "type": "micro_story",
     "fragments": [
-      "A map was folded so the river met itself.",
-      "Creases became extra geography.",
-      "Unfolding could happen later."
+      "Um mapa foi dobrado para que o rio se encontrasse.",
+      "Os vincos tornaram-se uma geografia extra.",
+      "O desdobramento pode acontecer mais tarde."
     ],
     "topics": [
       "paper"
@@ -482,12 +482,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-034",
+    "id": "pt-stories-034",
     "type": "micro_story",
     "fragments": [
-      "Wind moved the dry leaves without choosing favorites.",
-      "They made a sound like distant paper.",
-      "The trees kept their places."
+      "O vento moveu as folhas secas sem escolher favoritas.",
+      "Eles fizeram um som como papel distante.",
+      "As árvores mantiveram seus lugares."
     ],
     "topics": [
       "sky"
@@ -495,12 +495,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-035",
+    "id": "pt-stories-035",
     "type": "micro_story",
     "fragments": [
-      "A blanket kept the shape of the last person.",
-      "The sofa did not mind.",
-      "Evening could sit there too."
+      "Um cobertor manteve a forma da última pessoa.",
+      "O sofá não se importou.",
+      "A noite também poderia ficar lá."
     ],
     "topics": [
       "room"
@@ -508,16 +508,16 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Look at one still object near you."
+      "text": "Olhe para um objeto parado perto de você."
     }
   },
   {
-    "id": "en-stories-036",
+    "id": "pt-stories-036",
     "type": "micro_story",
     "fragments": [
-      "Somewhere in the building, a door closed softly.",
-      "Footsteps faded into a kind of weather.",
-      "This room returned to its own volume."
+      "Em algum lugar do prédio, uma porta se fechou suavemente.",
+      "Passos desapareceram em uma espécie de clima.",
+      "Esta sala voltou ao seu próprio volume."
     ],
     "topics": [
       "quiet"
@@ -525,12 +525,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-037",
+    "id": "pt-stories-037",
     "type": "micro_story",
     "fragments": [
-      "Ice at the edge of the lake was thin and clear.",
-      "Pebbles showed through like quiet punctuation.",
-      "No one needed to step on it."
+      "O gelo na beira do lago era fino e claro.",
+      "Seixos apareciam como uma pontuação silenciosa.",
+      "Ninguém precisava pisar nisso."
     ],
     "topics": [
       "water"
@@ -538,13 +538,13 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-038",
+    "id": "pt-stories-038",
     "type": "micro_story",
     "fragments": [
-      "A windowsill basil leaned toward the glass.",
-      "Someone turned the pot a quarter turn.",
-      "Tomorrow it would lean again.",
-      "That was the pact."
+      "Um manjericão no peitoril da janela estava inclinado em direção ao vidro.",
+      "Alguém virou a panela um quarto de volta.",
+      "Amanhã ele se inclinaria novamente.",
+      "Esse foi o pacto."
     ],
     "topics": [
       "plants"
@@ -552,16 +552,16 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Now find something green around you."
+      "text": "Agora encontre algo verde ao seu redor."
     }
   },
   {
-    "id": "en-stories-039",
+    "id": "pt-stories-039",
     "type": "micro_story",
     "fragments": [
-      "Keys lay in a small ceramic dish.",
-      "They were not needed for this hour.",
-      "The dish made them look considered."
+      "As chaves estavam em um pequeno prato de cerâmica.",
+      "Eles não eram necessários para esta hora.",
+      "O prato os fez parecer considerados."
     ],
     "topics": [
       "objects"
@@ -569,12 +569,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-040",
+    "id": "pt-stories-040",
     "type": "micro_story",
     "fragments": [
-      "Late sun found the grain in the wooden floor.",
-      "Each board kept a slightly different gold.",
-      "Then the gold went, and the wood remained."
+      "O sol tardio encontrou os grãos no chão de madeira.",
+      "Cada tabuleiro manteve um ouro ligeiramente diferente.",
+      "Então o ouro foi embora e a madeira permaneceu."
     ],
     "topics": [
       "light"
@@ -582,12 +582,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-041",
+    "id": "pt-stories-041",
     "type": "micro_story",
     "fragments": [
-      "Tide.",
-      "It drew a thin line of foam.",
-      "Then took the line back."
+      "Maré.",
+      "Desenhou uma linha fina de espuma.",
+      "Então peguei a linha de volta."
     ],
     "topics": [
       "coast"
@@ -595,12 +595,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-042",
+    "id": "pt-stories-042",
     "type": "micro_story",
     "fragments": [
-      "At the forest edge the light changed its mind.",
-      "One more tree.",
-      "Then a field."
+      "Na orla da floresta a luz mudou de ideia.",
+      "Mais uma árvore.",
+      "Depois um campo."
     ],
     "topics": [
       "forest"
@@ -608,16 +608,16 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Find a leaf-shape, even in a pattern or a print."
+      "text": "Encontre um formato de folha, mesmo em um padrão ou estampa."
     }
   },
   {
-    "id": "en-stories-043",
+    "id": "pt-stories-043",
     "type": "micro_story",
     "fragments": [
-      "The night window held a streetlamp and a small moth of dust on the glass.",
-      "Outside, almost nothing moved.",
-      "Inside, the room kept its own dim."
+      "A janela noturna exibia um poste de luz e uma pequena mancha de poeira no vidro.",
+      "Lá fora, quase nada se movia.",
+      "Lá dentro, a sala mantinha-se na penumbra."
     ],
     "topics": [
       "night"
@@ -625,12 +625,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-044",
+    "id": "pt-stories-044",
     "type": "micro_story",
     "fragments": [
-      "A stone in the palm.",
-      "Cooler than expected.",
-      "It asked for nothing."
+      "Uma pedra na palma da mão.",
+      "Mais frio do que o esperado.",
+      "Não pediu nada."
     ],
     "topics": [
       "stone"
@@ -638,11 +638,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-045",
+    "id": "pt-stories-045",
     "type": "micro_story",
     "fragments": [
-      "An envelope waited on the shelf, unopened on purpose.",
-      "Paper can hold a pause as well as a message."
+      "Um envelope estava na prateleira, fechado de propósito.",
+      "O papel pode conter uma pausa e também uma mensagem."
     ],
     "topics": [
       "paper"
@@ -650,16 +650,16 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Notice one piece of paper or cardboard near you."
+      "text": "Observe um pedaço de papel ou papelão perto de você."
     }
   },
   {
-    "id": "en-stories-046",
+    "id": "pt-stories-046",
     "type": "micro_story",
     "fragments": [
-      "Stairs remembered many feet and still offered the same two choices:",
-      "up, or down,",
-      "or sitting on a step for no reason."
+      "As escadas lembravam muitos pés e ainda ofereciam as mesmas duas opções:",
+      "para cima ou para baixo,",
+      "ou sentado em um degrau sem motivo."
     ],
     "topics": [
       "room"
@@ -667,12 +667,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-047",
+    "id": "pt-stories-047",
     "type": "micro_story",
     "fragments": [
-      "Frost on the railing.",
-      "A thin white handwriting.",
-      "It would not last the morning."
+      "Geada na grade.",
+      "Uma caligrafia fina e branca.",
+      "Não duraria a manhã."
     ],
     "topics": [
       "weather"
@@ -680,11 +680,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-048",
+    "id": "pt-stories-048",
     "type": "micro_story",
     "fragments": [
-      "The kite was only string and cloth until the air agreed.",
-      "Then it became a small opinion in a large sky."
+      "A pipa era apenas barbante e pano até que o ar concordasse.",
+      "Depois tornou-se uma pequena opinião num grande céu."
     ],
     "topics": [
       "sky"
@@ -692,12 +692,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-049",
+    "id": "pt-stories-049",
     "type": "micro_story",
     "fragments": [
-      "Between two dunes",
-      "the path forgot it was a path.",
-      "Sand kept the secret poorly."
+      "Entre duas dunas",
+      "o caminho esqueceu que era um caminho.",
+      "Sand guardou mal o segredo."
     ],
     "topics": [
       "coast"
@@ -705,12 +705,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-050",
+    "id": "pt-stories-050",
     "type": "micro_story",
     "fragments": [
-      "Ink.",
-      "A dark comma on the page.",
-      "The sentence around it could wait."
+      "Tinta.",
+      "Uma vírgula escura na página.",
+      "A frase em torno disso poderia esperar."
     ],
     "topics": [
       "paper"
@@ -718,11 +718,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-051",
+    "id": "pt-stories-051",
     "type": "micro_story",
     "fragments": [
-      "In the quiet room the clock was less important",
-      "than the way the curtain almost did not move."
+      "Na sala silenciosa o relógio era menos importante",
+      "do que a maneira como a cortina quase não se movia."
     ],
     "topics": [
       "quiet"
@@ -730,20 +730,20 @@
     "difficulty": 1,
     "followUp": {
       "type": "choice",
-      "text": "Is the room you are in more still or more moving?",
+      "text": "A sala em que você está está mais parada ou mais em movimento?",
       "options": [
-        "still",
-        "moving",
-        "in between"
+        "ainda",
+        "em movimento",
+        "entre"
       ]
     }
   },
   {
-    "id": "en-stories-052",
+    "id": "pt-stories-052",
     "type": "micro_story",
     "fragments": [
-      "Pine needles made a bronze carpet that did not mind being stepped on.",
-      "The trees kept their own conversation above it."
+      "As agulhas dos pinheiros formavam um tapete de bronze que não se importava de ser pisado.",
+      "As árvores mantinham sua própria conversa acima dela."
     ],
     "topics": [
       "forest"
@@ -751,12 +751,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-053",
+    "id": "pt-stories-053",
     "type": "micro_story",
     "fragments": [
-      "A hinge.",
-      "It knew two positions.",
-      "Both were honest."
+      "Uma dobradiça.",
+      "Conhecia duas posições.",
+      "Ambos foram honestos."
     ],
     "topics": [
       "objects"
@@ -764,11 +764,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-054",
+    "id": "pt-stories-054",
     "type": "micro_story",
     "fragments": [
-      "Late light along the coast turned the water into hammered metal.",
-      "Then the metal went dull and was only water again."
+      "A luz tardia ao longo da costa transformou a água em metal martelado.",
+      "Então o metal ficou opaco e voltou a ser apenas água."
     ],
     "topics": [
       "coast"
@@ -776,11 +776,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-055",
+    "id": "pt-stories-055",
     "type": "micro_story",
     "fragments": [
-      "Someone had stacked firewood as if stacking were a kind of care.",
-      "The pile waited without hurry."
+      "Alguém empilhou lenha como se empilhar fosse uma espécie de cuidado.",
+      "A pilha esperou sem pressa."
     ],
     "topics": [
       "home"
@@ -788,12 +788,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-056",
+    "id": "pt-stories-056",
     "type": "micro_story",
     "fragments": [
-      "Moon.",
-      "Not full.",
-      "Enough."
+      "Lua.",
+      "Não está cheio.",
+      "Suficiente."
     ],
     "topics": [
       "night"
@@ -801,11 +801,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-057",
+    "id": "pt-stories-057",
     "type": "micro_story",
     "fragments": [
-      "The library aisle smelled like dry paper and a little dust that had settled on purpose.",
-      "Books leaned on each other the way people do in a slow queue."
+      "O corredor da biblioteca cheirava a papel seco e a um pouco de poeira acumulada propositalmente.",
+      "Os livros se apoiavam uns nos outros como as pessoas fazem em uma fila lenta."
     ],
     "topics": [
       "paper"
@@ -813,15 +813,15 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Find a straight line nearby — a shelf, a frame, an edge."
+      "text": "Encontre uma linha reta próxima – uma prateleira, uma moldura, uma borda."
     }
   },
   {
-    "id": "en-stories-058",
+    "id": "pt-stories-058",
     "type": "micro_story",
     "fragments": [
-      "A pebble skipped once in memory,",
-      "then the lake went back to being a lake."
+      "Uma pedra saltou uma vez na memória,",
+      "então o lago voltou a ser um lago."
     ],
     "topics": [
       "water"
@@ -829,11 +829,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-059",
+    "id": "pt-stories-059",
     "type": "micro_story",
     "fragments": [
-      "The greenhouse held a private summer while the path outside stayed ordinary.",
-      "Glass made the difference without making a speech."
+      "A estufa passou um verão privado enquanto o caminho lá fora permaneceu normal.",
+      "Glass fez a diferença sem fazer discurso."
     ],
     "topics": [
       "plants"
@@ -841,12 +841,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-060",
+    "id": "pt-stories-060",
     "type": "micro_story",
     "fragments": [
-      "String on a nail.",
-      "It had been useful once.",
-      "Now it was only a small hanging fact."
+      "Amarre um prego.",
+      "Já foi útil.",
+      "Agora era apenas um pequeno fato pendente."
     ],
     "topics": [
       "objects"
@@ -854,11 +854,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-061",
+    "id": "pt-stories-061",
     "type": "micro_story",
     "fragments": [
-      "Fog took the far trees and left the near ones.",
-      "A fair trade, if you were standing still."
+      "A neblina tomou as árvores distantes e deixou as próximas.",
+      "Um comércio justo, se você estivesse parado."
     ],
     "topics": [
       "weather"
@@ -866,16 +866,16 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Look at the farthest thing you can see from here."
+      "text": "Olhe para a coisa mais distante que você pode ver daqui."
     }
   },
   {
-    "id": "en-stories-062",
+    "id": "pt-stories-062",
     "type": "micro_story",
     "fragments": [
-      "The windowsill collected three objects that had not yet decided they belonged together:",
-      "a stone, a stamp,",
-      "a length of green thread."
+      "O parapeito da janela reuniu três objetos que ainda não haviam decidido que pertenciam um ao outro:",
+      "uma pedra, um selo,",
+      "um pedaço de linha verde."
     ],
     "topics": [
       "room"
@@ -883,12 +883,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-063",
+    "id": "pt-stories-063",
     "type": "micro_story",
     "fragments": [
-      "Harbor water.",
-      "Dark. Patient.",
-      "Boats nodded without speaking."
+      "Água do porto.",
+      "Escuro. Paciente.",
+      "Boats assentiu sem falar."
     ],
     "topics": [
       "coast"
@@ -896,12 +896,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-064",
+    "id": "pt-stories-064",
     "type": "micro_story",
     "fragments": [
-      "At the end of the lane",
-      "a lamp came on earlier than the others.",
-      "It did not explain itself."
+      "No final da pista",
+      "uma lâmpada acendeu mais cedo que as outras.",
+      "Não se explicou."
     ],
     "topics": [
       "light"
@@ -909,17 +909,17 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-065",
+    "id": "pt-stories-065",
     "type": "micro_story",
     "fragments": [
-      "At the end of a quiet street",
-      "there was a small bakery",
-      "with three round tables.",
-      "The table beside the window",
-      "had a blue cup on it.",
-      "Keep the color blue in mind.",
-      "Look around.",
-      "Can you find something blue?"
+      "No final de uma rua tranquila",
+      "havia uma pequena padaria",
+      "com três mesas redondas.",
+      "A mesa ao lado da janela",
+      "tinha um copo azul nele.",
+      "Lembre-se da cor azul.",
+      "Olhe ao redor.",
+      "Você consegue encontrar algo azul?"
     ],
     "topics": [
       "room",
@@ -928,16 +928,16 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-066",
+    "id": "pt-stories-066",
     "type": "micro_story",
     "fragments": [
-      "The harbor was still waking.",
-      "A rope made a slow circle in the water.",
-      "Then another.",
-      "Gulls argued about nothing important.",
-      "Keep the circles in mind.",
-      "If anything nearby is round,",
-      "let your eyes rest there."
+      "O porto ainda estava acordando.",
+      "Uma corda fazia um círculo lento na água.",
+      "Depois outro.",
+      "As gaivotas discutiam sobre nada importante.",
+      "Lembre-se dos círculos.",
+      "Se alguma coisa próxima for redonda,",
+      "deixe seus olhos descansarem lá."
     ],
     "topics": [
       "coast",
@@ -946,16 +946,16 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-067",
+    "id": "pt-stories-067",
     "type": "micro_story",
     "fragments": [
-      "On the kitchen table",
-      "a bowl held three lemons.",
-      "One had a small leaf still attached.",
-      "The yellow was almost too sure of itself.",
-      "Hold that yellow for a moment.",
-      "Look around.",
-      "Is anything near you that bright?"
+      "Na mesa da cozinha",
+      "uma tigela continha três limões.",
+      "Um deles ainda tinha uma pequena folha presa.",
+      "O amarelo era quase seguro demais.",
+      "Segure esse amarelo por um momento.",
+      "Olhe ao redor.",
+      "Há algo perto de você tão brilhante?"
     ],
     "topics": [
       "home",
@@ -964,15 +964,15 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-068",
+    "id": "pt-stories-068",
     "type": "micro_story",
     "fragments": [
-      "Halfway down the lane",
-      "a yellow door waited",
-      "as if someone might still come back for a key.",
-      "Paint had thinned on the handle.",
-      "The rest of the street stayed ordinary.",
-      "Notice one worn thing near you."
+      "No meio da pista",
+      "uma porta amarela esperava",
+      "como se alguém ainda pudesse voltar para pegar uma chave.",
+      "A tinta havia ficado mais fina no cabo.",
+      "O resto da rua permaneceu normal.",
+      "Observe uma coisa desgastada perto de você."
     ],
     "topics": [
       "home"
@@ -980,16 +980,16 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-069",
+    "id": "pt-stories-069",
     "type": "micro_story",
     "fragments": [
-      "The river arranged its stones",
-      "without asking which should be on top.",
-      "Water found the same path",
-      "it had found yesterday.",
-      "A darker stone sat a little apart.",
-      "Keep that darker color.",
-      "Find something nearby that is not shiny."
+      "O rio organizou suas pedras",
+      "sem perguntar qual deveria estar no topo.",
+      "A água encontrou o mesmo caminho",
+      "havia encontrado ontem.",
+      "Uma pedra mais escura estava um pouco afastada.",
+      "Mantenha essa cor mais escura.",
+      "Encontre algo próximo que não seja brilhante."
     ],
     "topics": [
       "water",
@@ -998,15 +998,15 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-070",
+    "id": "pt-stories-070",
     "type": "micro_story",
     "fragments": [
-      "Under the market awning",
-      "shade made a soft rectangle.",
-      "A crate of oranges caught the leftover light.",
-      "Someone counted them without speaking.",
-      "Count one small group of things near you.",
-      "No need to get it exact."
+      "Sob o toldo do mercado",
+      "sombra fez um retângulo suave.",
+      "Uma caixa de laranjas refletiu a luz que sobrou.",
+      "Alguém os contou sem falar.",
+      "Conte um pequeno grupo de coisas perto de você.",
+      "Não há necessidade de ser exato."
     ],
     "topics": [
       "home",
@@ -1015,15 +1015,15 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-071",
+    "id": "pt-stories-071",
     "type": "micro_story",
     "fragments": [
-      "Snow sat on the fence rail",
-      "as if it had been invited.",
-      "Each post wore the same quiet hat.",
-      "The field behind it was only field.",
-      "Look for a straight line nearby.",
-      "A frame. An edge. A rail of some kind."
+      "A neve sentou-se no trilho da cerca",
+      "como se tivesse sido convidado.",
+      "Cada postagem usava o mesmo chapéu silencioso.",
+      "O campo atrás dele era apenas campo.",
+      "Procure uma linha reta próxima.",
+      "Um quadro. Uma vantagem. Algum tipo de trilho."
     ],
     "topics": [
       "weather",
@@ -1032,15 +1032,15 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-072",
+    "id": "pt-stories-072",
     "type": "micro_story",
     "fragments": [
-      "The bookstore stair turned twice",
-      "before it reached the quiet floor.",
-      "A window there held a pot of thyme.",
-      "The books leaned the way old friends lean.",
-      "Find a word printed near you.",
-      "Even a small one."
+      "A escada da livraria girou duas vezes",
+      "antes de chegar ao chão silencioso.",
+      "Uma janela continha um vaso de tomilho.",
+      "Os livros inclinavam-se da mesma forma que velhos amigos inclinavam-se.",
+      "Encontre uma palavra impressa perto de você.",
+      "Mesmo um pequeno."
     ],
     "topics": [
       "paper",
@@ -1049,15 +1049,15 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-073",
+    "id": "pt-stories-073",
     "type": "micro_story",
     "fragments": [
-      "In the kitchen drawer",
-      "a wooden spoon had learned the shape of soup.",
-      "It lay beside a whisk",
-      "that was only geometry until someone needed it.",
-      "Look at one ordinary object near you.",
-      "Let it be enough."
+      "Na gaveta da cozinha",
+      "uma colher de pau aprendeu o formato da sopa.",
+      "Estava ao lado de um batedor",
+      "isso era apenas geometria até que alguém precisasse.",
+      "Olhe para um objeto comum perto de você.",
+      "Que seja o suficiente."
     ],
     "topics": [
       "home",
@@ -1066,16 +1066,16 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-074",
+    "id": "pt-stories-074",
     "type": "micro_story",
     "fragments": [
-      "The garden path",
-      "knew two kinds of green.",
-      "Moss between the stones.",
-      "And the taller green that moved when the air did.",
-      "Keep one of those greens.",
-      "Look around.",
-      "Can you find a green of your own?"
+      "O caminho do jardim",
+      "conhecia dois tipos de verde.",
+      "Musgo entre as pedras.",
+      "E o verde mais alto que se movia quando o ar o fazia.",
+      "Guarde uma dessas verduras.",
+      "Olhe ao redor.",
+      "Você consegue encontrar seu próprio verde?"
     ],
     "topics": [
       "plants",
@@ -1084,15 +1084,15 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-075",
+    "id": "pt-stories-075",
     "type": "micro_story",
     "fragments": [
-      "Late in the room",
-      "the window kept a square of night.",
-      "A lamp made a smaller square on the table.",
-      "Between them, the air did very little.",
-      "Notice where the light is coming from.",
-      "You can stay with that."
+      "Tarde no quarto",
+      "a janela mantinha um quadrado de noite.",
+      "Um abajur formava um quadrado menor sobre a mesa.",
+      "Entre eles, o ar fazia muito pouco.",
+      "Observe de onde vem a luz.",
+      "Você pode ficar com isso."
     ],
     "topics": [
       "night",
@@ -1101,16 +1101,16 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-076",
+    "id": "pt-stories-076",
     "type": "micro_story",
     "fragments": [
-      "From the window",
-      "fields arrived in long pale strips.",
-      "A single tree kept its place",
-      "as the rest of the view changed its mind.",
-      "Keep that tree.",
-      "Find something nearby that stands still",
-      "while other things can move."
+      "Da janela",
+      "os campos chegavam em longas faixas claras.",
+      "Uma única árvore manteve seu lugar",
+      "enquanto o resto da visão mudou de ideia.",
+      "Fique com essa árvore.",
+      "Encontre algo próximo que esteja parado",
+      "enquanto outras coisas podem se mover."
     ],
     "topics": [
       "earth",
@@ -1119,15 +1119,15 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-077",
+    "id": "pt-stories-077",
     "type": "micro_story",
     "fragments": [
-      "An envelope waited on the shelf",
-      "with no hurry to be opened.",
-      "The paper had a faint blue lining.",
-      "Someone had written only the first word of an address.",
-      "Notice one piece of paper near you.",
-      "Even a label counts."
+      "Um envelope esperava na prateleira",
+      "sem pressa para ser aberto.",
+      "O papel tinha um leve forro azul.",
+      "Alguém havia escrito apenas a primeira palavra de um endereço.",
+      "Observe um pedaço de papel perto de você.",
+      "Até um rótulo conta."
     ],
     "topics": [
       "paper"
@@ -1135,16 +1135,16 @@
     "difficulty": 1
   },
   {
-    "id": "en-stories-078",
+    "id": "pt-stories-078",
     "type": "micro_story",
     "fragments": [
-      "The hallway tiles",
-      "were almost white",
-      "except for one that had decided to be blue.",
-      "It sat there like a quiet fact.",
-      "Keep that blue.",
-      "Look down, or around.",
-      "Is there a color that stands a little apart?"
+      "Os azulejos do corredor",
+      "eram quase brancos",
+      "exceto por um que decidiu ser azul.",
+      "Ficou lá como um fato silencioso.",
+      "Mantenha esse azul.",
+      "Olhe para baixo ou ao redor.",
+      "Existe uma cor que se destaca um pouco?"
     ],
     "topics": [
       "room",

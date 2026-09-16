@@ -1,11 +1,11 @@
 [
   {
-    "id": "en-observe-001",
+    "id": "pt-observe-001",
     "type": "observation",
     "fragments": [
-      "Watch the space",
-      "between these letters.",
-      "quiet"
+      "Observe o espaço",
+      "entre essas letras.",
+      "quieta"
     ],
     "topics": [
       "language"
@@ -13,12 +13,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-002",
+    "id": "pt-observe-002",
     "type": "observation",
     "fragments": [
-      "Follow this word",
-      "as it settles.",
-      "still"
+      "Siga esta palavra",
+      "à medida que se estabelece.",
+      "ainda"
     ],
     "topics": [
       "language"
@@ -26,13 +26,13 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-003",
+    "id": "pt-observe-003",
     "type": "observation",
     "fragments": [
-      "Let your eyes rest",
-      "on the last word",
-      "a moment longer.",
-      "still"
+      "Deixe seus olhos descansar",
+      "na última palavra",
+      "mais um momento.",
+      "ainda"
     ],
     "topics": [
       "language"
@@ -40,11 +40,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-004",
+    "id": "pt-observe-004",
     "type": "observation",
     "fragments": [
-      "Notice the shape",
-      "of the letter S.",
+      "Observe a forma",
+      "da letra S.",
       "S"
     ],
     "topics": [
@@ -53,12 +53,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-005",
+    "id": "pt-observe-005",
     "type": "observation",
     "fragments": [
-      "Watch how O",
-      "is a small enclosed room.",
-      "O"
+      "Veja como O",
+      "é uma pequena sala fechada.",
+      "Ó"
     ],
     "topics": [
       "language"
@@ -66,51 +66,25 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-006",
+    "id": "pt-observe-006",
     "type": "observation",
     "fragments": [
-      "The word here can stay.",
-      "You do not have to hold it.",
-      "here"
+      "A palavra aqui pode ficar.",
+      "Você não precisa segurá-lo.",
+      "aqui"
     ],
     "topics": [
-      "quiet"
+      "quieta"
     ],
     "difficulty": 1
   },
   {
-    "id": "en-observe-007",
+    "id": "pt-observe-007",
     "type": "observation",
     "fragments": [
-      "Look at the tall line",
-      "in the letter L.",
-      "L"
-    ],
-    "topics": [
-      "language"
-    ],
-    "difficulty": 1
-  },
-  {
-    "id": "en-observe-008",
-    "type": "observation",
-    "fragments": [
-      "A pause is also",
-      "a kind of sentence.",
-      "pause"
-    ],
-    "topics": [
-      "quiet"
-    ],
-    "difficulty": 1
-  },
-  {
-    "id": "en-observe-009",
-    "type": "observation",
-    "fragments": [
-      "Watch the word slow appear",
-      "without hurrying it.",
-      "slow"
+      "Olhe para a linha alta",
+      "na letra L.",
+      "eu"
     ],
     "topics": [
       "language"
@@ -118,11 +92,37 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-010",
+    "id": "pt-observe-008",
     "type": "observation",
     "fragments": [
-      "The letter M",
-      "has two small peaks.",
+      "Uma pausa também é",
+      "uma espécie de frase.",
+      "pausa"
+    ],
+    "topics": [
+      "quieta"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-observe-009",
+    "type": "observation",
+    "fragments": [
+      "Observe a palavra lento aparecer",
+      "sem pressa.",
+      "lenta"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-observe-010",
+    "type": "observation",
+    "fragments": [
+      "A letra M",
+      "tem dois pequenos picos.",
       "M"
     ],
     "topics": [
@@ -131,24 +131,24 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-011",
+    "id": "pt-observe-011",
     "type": "observation",
     "fragments": [
-      "Let this line of text",
-      "be enough.",
-      "enough"
+      "Deixe esta linha de texto",
+      "seja suficiente.",
+      "suficiente"
     ],
     "topics": [
-      "quiet"
+      "quieta"
     ],
     "difficulty": 1
   },
   {
-    "id": "en-observe-012",
+    "id": "pt-observe-012",
     "type": "observation",
     "fragments": [
-      "Notice how T",
-      "stands like a small table.",
+      "Observe como T",
+      "fica como uma pequena mesa.",
       "T"
     ],
     "topics": [
@@ -157,11 +157,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-013",
+    "id": "pt-observe-013",
     "type": "observation",
     "fragments": [
-      "Follow the curve",
-      "in the letter C.",
+      "Siga a curva",
+      "na letra C.",
       "C"
     ],
     "topics": [
@@ -170,12 +170,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-014",
+    "id": "pt-observe-014",
     "type": "observation",
     "fragments": [
-      "The word now",
-      "is already leaving.",
-      "now"
+      "A palavra agora",
+      "já está indo embora.",
+      "agora"
     ],
     "topics": [
       "time"
@@ -183,11 +183,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-015",
+    "id": "pt-observe-015",
     "type": "observation",
     "fragments": [
-      "Watch the gap",
-      "under the letter E.",
+      "Observe a lacuna",
+      "sob a letra E.",
       "E"
     ],
     "topics": [
@@ -196,11 +196,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-016",
+    "id": "pt-observe-016",
     "type": "observation",
     "fragments": [
-      "A period is a very small",
-      "full stop of looking.",
+      "Um período é muito pequeno",
+      "ponto final de olhar.",
       "."
     ],
     "topics": [
@@ -209,12 +209,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-017",
+    "id": "pt-observe-017",
     "type": "observation",
     "fragments": [
-      "Let the word soft",
-      "take its time.",
-      "soft"
+      "Deixe a palavra suave",
+      "não tenha pressa.",
+      "macia"
     ],
     "topics": [
       "language"
@@ -222,12 +222,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-018",
+    "id": "pt-observe-018",
     "type": "observation",
     "fragments": [
-      "The letter W",
-      "is two valleys.",
-      "W"
+      "A letra W",
+      "são dois vales.",
+      "C"
     ],
     "topics": [
       "language"
@@ -235,37 +235,24 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-019",
+    "id": "pt-observe-019",
     "type": "observation",
     "fragments": [
-      "Stay with this sentence",
-      "until it feels complete."
+      "Fique com esta frase",
+      "até parecer completo."
     ],
     "topics": [
-      "quiet"
+      "quieta"
     ],
     "difficulty": 1
   },
   {
-    "id": "en-observe-020",
+    "id": "pt-observe-020",
     "type": "observation",
     "fragments": [
-      "Notice the open space",
-      "inside the letter A.",
-      "A"
-    ],
-    "topics": [
-      "language"
-    ],
-    "difficulty": 1
-  },
-  {
-    "id": "en-observe-021",
-    "type": "observation",
-    "fragments": [
-      "The word quiet has five letters",
-      "and room around them.",
-      "quiet"
+      "Observe o espaço aberto",
+      "dentro da letra A.",
+      "UMA"
     ],
     "topics": [
       "language"
@@ -273,12 +260,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-022",
+    "id": "pt-observe-021",
     "type": "observation",
     "fragments": [
-      "Watch the word linger",
-      "without adding more.",
-      "linger"
+      "A palavra silêncio tem cinco letras",
+      "e espaço ao seu redor.",
+      "quieta"
     ],
     "topics": [
       "language"
@@ -286,12 +273,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-023",
+    "id": "pt-observe-022",
     "type": "observation",
     "fragments": [
-      "The letter I",
-      "is a single thin presence.",
-      "I"
+      "Observe a palavra permanecer",
+      "sem adicionar mais.",
+      "permanecer"
     ],
     "topics": [
       "language"
@@ -299,12 +286,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-024",
+    "id": "pt-observe-023",
     "type": "observation",
     "fragments": [
-      "Let your gaze travel",
-      "from the first word",
-      "to the last."
+      "A carta eu",
+      "é uma única presença tênue.",
+      "EU"
     ],
     "topics": [
       "language"
@@ -312,11 +299,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-025",
+    "id": "pt-observe-024",
     "type": "observation",
     "fragments": [
-      "The comma is a small breath",
-      "on the line."
+      "Deixe seu olhar viajar",
+      "desde a primeira palavra",
+      "até o fim."
     ],
     "topics": [
       "language"
@@ -324,11 +312,23 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-026",
+    "id": "pt-observe-025",
     "type": "observation",
     "fragments": [
-      "Notice how H",
-      "has a little window.",
+      "A vírgula é um pequeno suspiro",
+      "na linha."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-observe-026",
+    "type": "observation",
+    "fragments": [
+      "Observe como H",
+      "tem uma pequena janela.",
       "H"
     ],
     "topics": [
@@ -337,12 +337,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-027",
+    "id": "pt-observe-027",
     "type": "observation",
     "fragments": [
-      "The word still can mean not moving,",
-      "or even so.",
-      "still"
+      "A palavra ainda pode significar não se mover,",
+      "ou mesmo assim.",
+      "ainda"
     ],
     "topics": [
       "language"
@@ -350,37 +350,24 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-028",
+    "id": "pt-observe-028",
     "type": "observation",
     "fragments": [
-      "Watch this phrase arrive,",
-      "then rest."
+      "Veja esta frase chegar,",
+      "então descanse."
     ],
     "topics": [
-      "quiet"
+      "quieta"
     ],
     "difficulty": 1
   },
   {
-    "id": "en-observe-029",
+    "id": "pt-observe-029",
     "type": "observation",
     "fragments": [
-      "The letter U",
-      "is a small bowl.",
-      "U"
-    ],
-    "topics": [
-      "language"
-    ],
-    "difficulty": 1
-  },
-  {
-    "id": "en-observe-030",
-    "type": "observation",
-    "fragments": [
-      "Let the word gentle sit",
-      "in the middle of the screen.",
-      "gentle"
+      "A letra U",
+      "é uma tigela pequena.",
+      "Você"
     ],
     "topics": [
       "language"
@@ -388,11 +375,24 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-031",
+    "id": "pt-observe-030",
     "type": "observation",
     "fragments": [
-      "Notice the foot",
-      "of the letter R.",
+      "Deixe a palavra gentil sentar",
+      "no meio da tela.",
+      "gentil"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-observe-031",
+    "type": "observation",
+    "fragments": [
+      "Observe o pé",
+      "da letra R.",
       "R"
     ],
     "topics": [
@@ -401,37 +401,24 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-032",
+    "id": "pt-observe-032",
     "type": "observation",
     "fragments": [
-      "A blank line",
-      "is also readable."
+      "Uma linha em branco",
+      "também é legível."
     ],
     "topics": [
-      "quiet"
+      "quieta"
     ],
     "difficulty": 1
   },
   {
-    "id": "en-observe-033",
+    "id": "pt-observe-033",
     "type": "observation",
     "fragments": [
-      "The word paper has two p’s",
-      "standing near each other.",
-      "paper"
-    ],
-    "topics": [
-      "language"
-    ],
-    "difficulty": 1
-  },
-  {
-    "id": "en-observe-034",
-    "type": "observation",
-    "fragments": [
-      "Watch the letter Y",
-      "as a small fork.",
-      "Y"
+      "A palavra papel tem dois p's",
+      "parados um perto do outro.",
+      "papel"
     ],
     "topics": [
       "language"
@@ -439,23 +426,36 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-035",
+    "id": "pt-observe-034",
     "type": "observation",
     "fragments": [
-      "Let this be a slow looking,",
-      "not a task."
+      "Observe a letra Y",
+      "como um pequeno garfo.",
+      "S"
     ],
     "topics": [
-      "quiet"
+      "language"
     ],
     "difficulty": 1
   },
   {
-    "id": "en-observe-036",
+    "id": "pt-observe-035",
     "type": "observation",
     "fragments": [
-      "The letter N",
-      "is a gate with a diagonal.",
+      "Que isto seja um olhar lento,",
+      "não é uma tarefa."
+    ],
+    "topics": [
+      "quieta"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-observe-036",
+    "type": "observation",
+    "fragments": [
+      "A letra N",
+      "é um portão com diagonal.",
       "N"
     ],
     "topics": [
@@ -464,12 +464,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-037",
+    "id": "pt-observe-037",
     "type": "observation",
     "fragments": [
-      "Notice the roundness",
-      "in the word moon.",
-      "moon"
+      "Observe a redondeza",
+      "na palavra lua.",
+      "lua"
     ],
     "topics": [
       "language"
@@ -477,12 +477,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-038",
+    "id": "pt-observe-038",
     "type": "observation",
     "fragments": [
-      "The word room contains",
-      "another room: oo.",
-      "room"
+      "A palavra sala contém",
+      "outro quarto: oh.",
+      "sala"
     ],
     "topics": [
       "language"
@@ -490,23 +490,23 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-039",
+    "id": "pt-observe-039",
     "type": "observation",
     "fragments": [
-      "Stay with the last phrase",
-      "after it appears."
+      "Fique com a última frase",
+      "depois que ele aparecer."
     ],
     "topics": [
-      "quiet"
+      "quieta"
     ],
     "difficulty": 1
   },
   {
-    "id": "en-observe-040",
+    "id": "pt-observe-040",
     "type": "observation",
     "fragments": [
-      "The letter B",
-      "has two small enclosed gardens.",
+      "A letra B",
+      "tem dois pequenos jardins fechados.",
       "B"
     ],
     "topics": [
@@ -515,12 +515,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-041",
+    "id": "pt-observe-041",
     "type": "observation",
     "fragments": [
-      "Let the word open",
-      "do only what it says.",
-      "open"
+      "Deixe a palavra abrir",
+      "faça apenas o que ele diz.",
+      "abrir"
     ],
     "topics": [
       "language"
@@ -528,11 +528,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-042",
+    "id": "pt-observe-042",
     "type": "observation",
     "fragments": [
-      "Watch how serif letters",
-      "have tiny feet."
+      "Veja como as letras serifadas",
+      "tem pés minúsculos."
     ],
     "topics": [
       "language"
@@ -540,12 +540,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-043",
+    "id": "pt-observe-043",
     "type": "observation",
     "fragments": [
-      "The word leaf is four letters",
-      "and a shape.",
-      "leaf"
+      "A palavra folha tem quatro letras",
+      "e uma forma.",
+      "folha"
     ],
     "topics": [
       "plants"
@@ -553,23 +553,23 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-044",
+    "id": "pt-observe-044",
     "type": "observation",
     "fragments": [
-      "Notice the silence",
-      "after a short sentence."
+      "Observe o silêncio",
+      "depois de uma frase curta."
     ],
     "topics": [
-      "quiet"
+      "quieta"
     ],
     "difficulty": 1
   },
   {
-    "id": "en-observe-045",
+    "id": "pt-observe-045",
     "type": "observation",
     "fragments": [
-      "The letter G almost closes,",
-      "then doesn’t.",
+      "A letra G quase fecha,",
+      "então não.",
       "G"
     ],
     "topics": [
@@ -578,25 +578,25 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-046",
+    "id": "pt-observe-046",
     "type": "observation",
     "fragments": [
-      "Let the word here be a place,",
-      "not a demand.",
-      "here"
+      "Deixe a palavra aqui ser um lugar,",
+      "não é uma demanda.",
+      "aqui"
     ],
     "topics": [
-      "quiet"
+      "quieta"
     ],
     "difficulty": 1
   },
   {
-    "id": "en-observe-047",
+    "id": "pt-observe-047",
     "type": "observation",
     "fragments": [
-      "Watch the word dusk",
-      "as if it were light leaving.",
-      "dusk"
+      "Cuidado com a palavra crepúsculo",
+      "como se fosse luz saindo.",
+      "crepúsculo"
     ],
     "topics": [
       "light"
@@ -604,23 +604,23 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-048",
+    "id": "pt-observe-048",
     "type": "observation",
     "fragments": [
-      "This line can end.",
-      "You can stay a second more."
+      "Esta linha pode acabar.",
+      "Você pode ficar mais um segundo."
     ],
     "topics": [
-      "quiet"
+      "quieta"
     ],
     "difficulty": 1
   },
   {
-    "id": "en-observe-049",
+    "id": "pt-observe-049",
     "type": "observation",
     "fragments": [
-      "Let this word be enough.",
-      "HARVEST"
+      "Deixe esta palavra ser suficiente.",
+      "COLHEITA"
     ],
     "topics": [
       "language"
@@ -628,10 +628,10 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-050",
+    "id": "pt-observe-050",
     "type": "observation",
     "fragments": [
-      "One letter is a gate.",
+      "Uma letra é um portão.",
       "H"
     ],
     "topics": [
@@ -640,48 +640,23 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-051",
+    "id": "pt-observe-051",
     "type": "observation",
     "fragments": [
-      "Read this once.",
-      "Then let your eyes rest past it."
+      "Leia isto uma vez.",
+      "Então deixe seus olhos descansarem além dele."
     ],
     "topics": [
-      "quiet"
+      "quieta"
     ],
     "difficulty": 1
   },
   {
-    "id": "en-observe-052",
+    "id": "pt-observe-052",
     "type": "observation",
     "fragments": [
-      "WIDE",
-      "Notice how the word takes space."
-    ],
-    "topics": [
-      "language"
-    ],
-    "difficulty": 1
-  },
-  {
-    "id": "en-observe-053",
-    "type": "observation",
-    "fragments": [
-      "The last word can be small.",
-      "ok"
-    ],
-    "topics": [
-      "quiet"
-    ],
-    "difficulty": 1
-  },
-  {
-    "id": "en-observe-054",
-    "type": "observation",
-    "fragments": [
-      "Follow the descenders —",
-      "the letters that dip below the line.",
-      "g p y"
+      "LARGA",
+      "Observe como a palavra ocupa espaço."
     ],
     "topics": [
       "language"
@@ -689,12 +664,24 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-055",
+    "id": "pt-observe-053",
     "type": "observation",
     "fragments": [
-      "Hold this shape.",
-      "O",
-      "A room with no furniture."
+      "A última palavra pode ser pequena.",
+      "OK"
+    ],
+    "topics": [
+      "quieta"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-observe-054",
+    "type": "observation",
+    "fragments": [
+      "Siga os descendentes -",
+      "as letras que ficam abaixo da linha.",
+      "g p e"
     ],
     "topics": [
       "language"
@@ -702,11 +689,24 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-056",
+    "id": "pt-observe-055",
     "type": "observation",
     "fragments": [
-      "A longer line can still be gentle:",
-      "the light on the wall is only visiting."
+      "Mantenha esta forma.",
+      "Ó",
+      "Um quarto sem mobília."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-observe-056",
+    "type": "observation",
+    "fragments": [
+      "Uma linha mais longa ainda pode ser suave:",
+      "a luz na parede é apenas uma visita."
     ],
     "topics": [
       "light"
@@ -714,12 +714,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-057",
+    "id": "pt-observe-057",
     "type": "observation",
     "fragments": [
-      "Count nothing.",
-      "Just look at the word until it becomes marks.",
-      "RIVER"
+      "Não conte nada.",
+      "Basta olhar para a palavra até que ela vire marcas.",
+      "RIO"
     ],
     "topics": [
       "water"
@@ -727,12 +727,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-058",
+    "id": "pt-observe-058",
     "type": "observation",
     "fragments": [
-      "Soft.",
-      "Then the word under it.",
-      "LINEN"
+      "Macia.",
+      "Então a palavra abaixo dela.",
+      "LINHO"
     ],
     "topics": [
       "cloth"
@@ -740,11 +740,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-059",
+    "id": "pt-observe-059",
     "type": "observation",
     "fragments": [
-      "Let the next word arrive without preparing a face for it.",
-      "STONE"
+      "Deixe a próxima palavra chegar sem preparar um rosto para ela.",
+      "PEDRA"
     ],
     "topics": [
       "stone"
@@ -752,12 +752,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-060",
+    "id": "pt-observe-060",
     "type": "observation",
     "fragments": [
-      "Stay on the comma,",
-      "if there is one,",
-      "or on the pause where a comma could be."
+      "Fique na vírgula,",
+      "se houver um,",
+      "ou na pausa onde poderia estar uma vírgula."
     ],
     "topics": [
       "language"

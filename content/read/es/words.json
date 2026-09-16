@@ -1,10 +1,10 @@
 [
   {
-    "id": "en-words-001",
+    "id": "es-words-001",
     "type": "word",
     "fragments": [
-      "MOSS",
-      "Notice how little it needs."
+      "MUSGO",
+      "Observe lo poco que necesita."
     ],
     "topics": [
       "plants",
@@ -13,12 +13,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-002",
+    "id": "es-words-002",
     "type": "word",
     "fragments": [
-      "This one.",
-      "LINEN",
-      "Follow the line of the L."
+      "Éste.",
+      "LINO",
+      "Siga la línea de la L."
     ],
     "topics": [
       "room",
@@ -27,11 +27,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-003",
+    "id": "es-words-003",
     "type": "word",
     "fragments": [
-      "ELEPHANT",
-      "Notice only the vowels."
+      "ELEFANTE",
+      "Observe sólo las vocales."
     ],
     "topics": [
       "nature"
@@ -39,12 +39,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-004",
+    "id": "es-words-004",
     "type": "word",
     "fragments": [
-      "Look at this word.",
-      "WINDOW",
-      "Count the letters without naming them."
+      "Mira esta palabra.",
+      "VENTANA",
+      "Cuenta las letras sin nombrarlas."
     ],
     "topics": [
       "room"
@@ -52,12 +52,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-005",
+    "id": "es-words-005",
     "type": "word",
     "fragments": [
-      "QUIET",
-      "First letter.",
-      "Then the last."
+      "TRANQUILA",
+      "Primera carta.",
+      "Luego el último."
     ],
     "topics": [
       "room",
@@ -66,12 +66,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-006",
+    "id": "es-words-006",
     "type": "word",
     "fragments": [
-      "A small word.",
-      "CLOUD",
-      "Follow the curve of the C."
+      "Una pequeña palabra.",
+      "NUBE",
+      "Sigue la curva de la C."
     ],
     "topics": [
       "sky"
@@ -79,11 +79,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-007",
+    "id": "es-words-007",
     "type": "word",
     "fragments": [
-      "Notice the weight of the O.",
-      "STONE"
+      "Observe el peso de la O.",
+      "PIEDRA"
     ],
     "topics": [
       "stone"
@@ -91,20 +91,20 @@
     "difficulty": 1,
     "followUp": {
       "type": "choice",
-      "text": "If you can see a jacket or sweater, what color is it?",
+      "text": "Si puedes ver una chaqueta o un suéter, ¿de qué color es?",
       "options": [
-        "blue",
-        "black",
-        "another color"
+        "azul",
+        "negra",
+        "otro color"
       ]
     }
   },
   {
-    "id": "en-words-008",
+    "id": "es-words-008",
     "type": "word",
     "fragments": [
-      "RIVER",
-      "Let it sit."
+      "RÍO",
+      "Déjalo reposar."
     ],
     "topics": [
       "water"
@@ -112,11 +112,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-009",
+    "id": "es-words-009",
     "type": "word",
     "fragments": [
-      "AMBER",
-      "Notice the warm shape of A."
+      "ÁMBAR",
+      "Observe la cálida forma de A."
     ],
     "topics": [
       "light"
@@ -124,12 +124,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-010",
+    "id": "es-words-010",
     "type": "word",
     "fragments": [
-      "This one.",
-      "FEATHER",
-      "Let your eyes rest on the TH."
+      "Éste.",
+      "PLUMA",
+      "Deja que tus ojos descansen en la TH."
     ],
     "topics": [
       "nature"
@@ -137,11 +137,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-011",
+    "id": "es-words-011",
     "type": "word",
     "fragments": [
-      "MEADOW",
-      "Notice only the vowels."
+      "PRADO",
+      "Observe sólo las vocales."
     ],
     "topics": [
       "plants"
@@ -149,12 +149,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-012",
+    "id": "es-words-012",
     "type": "word",
     "fragments": [
-      "Look at this word.",
-      "SILVER",
-      "Follow the S as it turns."
+      "Mira esta palabra.",
+      "PLATA",
+      "Siga la S mientras gira."
     ],
     "topics": [
       "light"
@@ -162,12 +162,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-013",
+    "id": "es-words-013",
     "type": "word",
     "fragments": [
-      "LANTERN",
-      "First letter.",
-      "Then the last."
+      "LINTERNA",
+      "Primera carta.",
+      "Luego el último."
     ],
     "topics": [
       "light"
@@ -175,12 +175,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-014",
+    "id": "es-words-014",
     "type": "word",
     "fragments": [
-      "A small word.",
-      "KETTLE",
-      "The double T stands like a quiet gate."
+      "Una pequeña palabra.",
+      "PAVA",
+      "La doble T se alza como una puerta silenciosa."
     ],
     "topics": [
       "room",
@@ -189,11 +189,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-015",
+    "id": "es-words-015",
     "type": "word",
     "fragments": [
-      "Notice how V repeats, then rests.",
-      "VELVET"
+      "Observe cómo V repite y luego descansa.",
+      "TERCIOPELO"
     ],
     "topics": [
       "room",
@@ -202,11 +202,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-016",
+    "id": "es-words-016",
     "type": "word",
     "fragments": [
-      "PAPER",
-      "Let it sit."
+      "PAPEL",
+      "Déjalo reposar."
     ],
     "topics": [
       "paper"
@@ -214,11 +214,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-017",
+    "id": "es-words-017",
     "type": "word",
     "fragments": [
-      "HONEY",
-      "Notice only the O."
+      "MIEL",
+      "Observe sólo la O."
     ],
     "topics": [
       "plants",
@@ -227,12 +227,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-018",
+    "id": "es-words-018",
     "type": "word",
     "fragments": [
-      "This one.",
-      "BLANKET",
-      "Let the word take up its space."
+      "Éste.",
+      "FRAZADA",
+      "Deja que la palabra ocupe su espacio."
     ],
     "topics": [
       "room",
@@ -241,11 +241,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-019",
+    "id": "es-words-019",
     "type": "word",
     "fragments": [
-      "GARDEN",
-      "Notice only the vowels."
+      "JARDÍN",
+      "Observe sólo las vocales."
     ],
     "topics": [
       "plants"
@@ -253,12 +253,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-020",
+    "id": "es-words-020",
     "type": "word",
     "fragments": [
-      "Look at this word.",
-      "CANDLE",
-      "Follow the word from left to right, once."
+      "Mira esta palabra.",
+      "VELA",
+      "Sigue la palabra de izquierda a derecha, una vez."
     ],
     "topics": [
       "light"
@@ -266,12 +266,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-021",
+    "id": "es-words-021",
     "type": "word",
     "fragments": [
-      "BUTTON",
-      "First letter.",
-      "Then the last."
+      "BOTÓN",
+      "Primera carta.",
+      "Luego el último."
     ],
     "topics": [
       "room",
@@ -280,12 +280,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-022",
+    "id": "es-words-022",
     "type": "word",
     "fragments": [
-      "A small word.",
-      "WILLOW",
-      "Notice the W opening twice."
+      "Una pequeña palabra.",
+      "SAUCE",
+      "Observe la apertura W dos veces."
     ],
     "topics": [
       "plants",
@@ -294,11 +294,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-023",
+    "id": "es-words-023",
     "type": "word",
     "fragments": [
-      "Look at the shape, not the meaning.",
-      "MARBLE"
+      "Mire la forma, no el significado.",
+      "MÁRMOL"
     ],
     "topics": [
       "stone"
@@ -306,11 +306,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-024",
+    "id": "es-words-024",
     "type": "word",
     "fragments": [
-      "COTTON",
-      "Let it sit."
+      "ALGODÓN",
+      "Déjalo reposar."
     ],
     "topics": [
       "room",
@@ -319,11 +319,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-025",
+    "id": "es-words-025",
     "type": "word",
     "fragments": [
-      "SAUCER",
-      "Notice the curve of S and C."
+      "PLATILLO",
+      "Observe la curva de S y C."
     ],
     "topics": [
       "room",
@@ -332,12 +332,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-026",
+    "id": "es-words-026",
     "type": "word",
     "fragments": [
-      "This one.",
-      "ORANGE",
-      "Find the vowels and leave the rest."
+      "Éste.",
+      "NARANJA",
+      "Encuentra las vocales y deja el resto."
     ],
     "topics": [
       "plants",
@@ -346,11 +346,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-027",
+    "id": "es-words-027",
     "type": "word",
     "fragments": [
-      "MIRROR",
-      "Notice only the vowels."
+      "ESPEJO",
+      "Observe sólo las vocales."
     ],
     "topics": [
       "room"
@@ -358,12 +358,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-028",
+    "id": "es-words-028",
     "type": "word",
     "fragments": [
-      "Look at this word.",
-      "SHELL",
-      "Notice how small the word stays."
+      "Mira esta palabra.",
+      "CAPARAZÓN",
+      "Observe lo pequeña que queda la palabra."
     ],
     "topics": [
       "coast"
@@ -371,12 +371,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-029",
+    "id": "es-words-029",
     "type": "word",
     "fragments": [
-      "TABLE",
-      "First letter.",
-      "Then the last."
+      "MESA",
+      "Primera carta.",
+      "Luego el último."
     ],
     "topics": [
       "room",
@@ -385,12 +385,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-030",
+    "id": "es-words-030",
     "type": "word",
     "fragments": [
-      "A small word.",
-      "BREEZE",
-      "Follow the double E."
+      "Una pequeña palabra.",
+      "BRISA",
+      "Sigue la doble E."
     ],
     "topics": [
       "sky",
@@ -399,11 +399,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-031",
+    "id": "es-words-031",
     "type": "word",
     "fragments": [
-      "Notice the round O.",
-      "POCKET"
+      "Observe la ronda O.",
+      "BOLSILLO"
     ],
     "topics": [
       "room",
@@ -412,11 +412,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-032",
+    "id": "es-words-032",
     "type": "word",
     "fragments": [
-      "THREAD",
-      "Let it sit."
+      "HILO",
+      "Déjalo reposar."
     ],
     "topics": [
       "paper",
@@ -425,11 +425,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-033",
+    "id": "es-words-033",
     "type": "word",
     "fragments": [
-      "LADDER",
-      "The double D is a quiet pair."
+      "ESCALERA",
+      "La doble D es una pareja tranquila."
     ],
     "topics": [
       "room",
@@ -438,12 +438,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-034",
+    "id": "es-words-034",
     "type": "word",
     "fragments": [
-      "This one.",
-      "CURTAIN",
-      "Let the word stay. You do not have to hold it."
+      "Éste.",
+      "CORTINA",
+      "Que quede la palabra. No es necesario que lo sostengas."
     ],
     "topics": [
       "room"
@@ -451,11 +451,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-035",
+    "id": "es-words-035",
     "type": "word",
     "fragments": [
-      "PEBBLE",
-      "Notice only the vowels."
+      "GUIJARRO",
+      "Observe sólo las vocales."
     ],
     "topics": [
       "stone",
@@ -464,12 +464,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-036",
+    "id": "es-words-036",
     "type": "word",
     "fragments": [
-      "Look at this word.",
-      "YELLOW",
-      "Follow Y as it branches."
+      "Mira esta palabra.",
+      "AMARILLA",
+      "Siga Y mientras se bifurca."
     ],
     "topics": [
       "light"
@@ -477,16 +477,16 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Now find something yellow around you."
+      "text": "Ahora encuentra algo amarillo a tu alrededor."
     }
   },
   {
-    "id": "en-words-037",
+    "id": "es-words-037",
     "type": "word",
     "fragments": [
-      "FOREST",
-      "First letter.",
-      "Then the last."
+      "BOSQUE",
+      "Primera carta.",
+      "Luego el último."
     ],
     "topics": [
       "forest"
@@ -494,12 +494,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-038",
+    "id": "es-words-038",
     "type": "word",
     "fragments": [
-      "A small word.",
-      "PILLOW",
-      "Soft letters. Double L."
+      "Una pequeña palabra.",
+      "ALMOHADA",
+      "Letras suaves. Doble L."
     ],
     "topics": [
       "room",
@@ -508,11 +508,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-039",
+    "id": "es-words-039",
     "type": "word",
     "fragments": [
-      "Count the letters with your eyes only.",
-      "MAPLE"
+      "Cuenta las letras sólo con tus ojos.",
+      "ARCE"
     ],
     "topics": [
       "plants",
@@ -521,11 +521,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-040",
+    "id": "es-words-040",
     "type": "word",
     "fragments": [
-      "SHADOW",
-      "Let it sit."
+      "SOMBRA",
+      "Déjalo reposar."
     ],
     "topics": [
       "light"
@@ -533,11 +533,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-041",
+    "id": "es-words-041",
     "type": "word",
     "fragments": [
-      "CERAMIC",
-      "Follow the C at both ends."
+      "CERÁMICA",
+      "Siga la C en ambos extremos."
     ],
     "topics": [
       "room",
@@ -546,12 +546,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-042",
+    "id": "es-words-042",
     "type": "word",
     "fragments": [
-      "This one.",
-      "NEEDLE",
-      "Double E in the middle."
+      "Éste.",
+      "AGUJA",
+      "Doble E en el medio."
     ],
     "topics": [
       "plants",
@@ -560,11 +560,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-043",
+    "id": "es-words-043",
     "type": "word",
     "fragments": [
-      "BASKET",
-      "Notice only the vowels."
+      "CESTA",
+      "Observe sólo las vocales."
     ],
     "topics": [
       "room",
@@ -573,12 +573,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-044",
+    "id": "es-words-044",
     "type": "word",
     "fragments": [
-      "Look at this word.",
-      "RAIN",
-      "Four letters. Plenty."
+      "Mira esta palabra.",
+      "LLUVIA",
+      "Cuatro letras. Infinidad."
     ],
     "topics": [
       "sky",
@@ -587,12 +587,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-045",
+    "id": "es-words-045",
     "type": "word",
     "fragments": [
-      "WOOL",
-      "First letter.",
-      "Then the last."
+      "LANA",
+      "Primera carta.",
+      "Luego el último."
     ],
     "topics": [
       "room",
@@ -601,12 +601,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-046",
+    "id": "es-words-046",
     "type": "word",
     "fragments": [
-      "A small word.",
-      "GINGER",
-      "Soft G twice."
+      "Una pequeña palabra.",
+      "JENGIBRE",
+      "Suave G dos veces."
     ],
     "topics": [
       "plants",
@@ -615,11 +615,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-047",
+    "id": "es-words-047",
     "type": "word",
     "fragments": [
-      "Let your eyes rest on TH.",
-      "CLOTH"
+      "Deja que tus ojos descansen en TH.",
+      "PAÑO"
     ],
     "topics": [
       "room",
@@ -628,11 +628,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-048",
+    "id": "es-words-048",
     "type": "word",
     "fragments": [
-      "BASIL",
-      "Let it sit."
+      "ALBAHACA",
+      "Déjalo reposar."
     ],
     "topics": [
       "plants"
@@ -640,11 +640,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-049",
+    "id": "es-words-049",
     "type": "word",
     "fragments": [
-      "DRIFT",
-      "The word is already moving. You can stay."
+      "DERIVA",
+      "La palabra ya se está moviendo. Puedes quedarte."
     ],
     "topics": [
       "coast",
@@ -653,21 +653,21 @@
     "difficulty": 1,
     "followUp": {
       "type": "choice",
-      "text": "Are you sitting, standing, or somewhere in between?",
+      "text": "¿Estás sentado, de pie o en algún punto intermedio?",
       "options": [
-        "sitting",
-        "standing",
-        "in between"
+        "sesión",
+        "de pie",
+        "entre"
       ]
     }
   },
   {
-    "id": "en-words-050",
+    "id": "es-words-050",
     "type": "word",
     "fragments": [
-      "This one.",
-      "QUILT",
-      "Notice Q and U traveling together."
+      "Éste.",
+      "COLCHA",
+      "Observe que Q y U viajan juntos."
     ],
     "topics": [
       "room",
@@ -676,11 +676,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-051",
+    "id": "es-words-051",
     "type": "word",
     "fragments": [
-      "STITCH",
-      "Notice only the vowels."
+      "PUNTADA",
+      "Observe sólo las vocales."
     ],
     "topics": [
       "room",
@@ -689,12 +689,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-052",
+    "id": "es-words-052",
     "type": "word",
     "fragments": [
-      "Look at this word.",
-      "OCEAN",
-      "Three vowels waiting."
+      "Mira esta palabra.",
+      "OCÉANO",
+      "Tres vocales esperando."
     ],
     "topics": [
       "coast",
@@ -703,12 +703,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-053",
+    "id": "es-words-053",
     "type": "word",
     "fragments": [
-      "LEMON",
-      "First letter.",
-      "Then the last."
+      "LIMÓN",
+      "Primera carta.",
+      "Luego el último."
     ],
     "topics": [
       "plants",
@@ -717,12 +717,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-054",
+    "id": "es-words-054",
     "type": "word",
     "fragments": [
-      "A small word.",
-      "BRANCH",
-      "Look at the A as a small roof."
+      "Una pequeña palabra.",
+      "RAMA",
+      "Mira la A como un pequeño techo."
     ],
     "topics": [
       "forest",
@@ -731,11 +731,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-055",
+    "id": "es-words-055",
     "type": "word",
     "fragments": [
-      "Five letters, round at the start.",
-      "PEARL"
+      "Cinco letras, redondas al principio.",
+      "PERLA"
     ],
     "topics": [
       "coast"
@@ -743,11 +743,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-056",
+    "id": "es-words-056",
     "type": "word",
     "fragments": [
-      "HUMBLE",
-      "Let it sit."
+      "HUMILDE",
+      "Déjalo reposar."
     ],
     "topics": [
       "room"
@@ -755,11 +755,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-057",
+    "id": "es-words-057",
     "type": "word",
     "fragments": [
-      "COPPER",
-      "Follow the double P."
+      "COBRE",
+      "Sigue la doble P."
     ],
     "topics": [
       "light",
@@ -768,12 +768,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-058",
+    "id": "es-words-058",
     "type": "word",
     "fragments": [
-      "This one.",
-      "IVORY",
-      "Notice only the vowels."
+      "Éste.",
+      "MARFIL",
+      "Observe sólo las vocales."
     ],
     "topics": [
       "light"
@@ -781,11 +781,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-059",
+    "id": "es-words-059",
     "type": "word",
     "fragments": [
-      "GLASS",
-      "Notice only the vowels."
+      "VASO",
+      "Observe sólo las vocales."
     ],
     "topics": [
       "room",
@@ -794,12 +794,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-060",
+    "id": "es-words-060",
     "type": "word",
     "fragments": [
-      "Look at this word.",
-      "THYME",
-      "A small word. Let it sit."
+      "Mira esta palabra.",
+      "TOMILLO",
+      "Una pequeña palabra. Déjalo reposar."
     ],
     "topics": [
       "plants"
@@ -807,12 +807,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-061",
+    "id": "es-words-061",
     "type": "word",
     "fragments": [
-      "NICKEL",
-      "First letter.",
-      "Then the last."
+      "NÍQUEL",
+      "Primera carta.",
+      "Luego el último."
     ],
     "topics": [
       "stone",
@@ -821,12 +821,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-062",
+    "id": "es-words-062",
     "type": "word",
     "fragments": [
-      "A small word.",
-      "FLOUR",
-      "Follow the word once, slowly."
+      "Una pequeña palabra.",
+      "HARINA",
+      "Siga la palabra una vez, lentamente."
     ],
     "topics": [
       "room",
@@ -835,11 +835,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-063",
+    "id": "es-words-063",
     "type": "word",
     "fragments": [
-      "Notice the C, then the rest of the shape.",
-      "CEDAR"
+      "Observa la C, luego el resto de la forma.",
+      "CEDRO"
     ],
     "topics": [
       "forest"
@@ -847,11 +847,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-064",
+    "id": "es-words-064",
     "type": "word",
     "fragments": [
-      "PLUM",
-      "Let it sit."
+      "CIRUELA",
+      "Déjalo reposar."
     ],
     "topics": [
       "plants",
@@ -860,11 +860,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-065",
+    "id": "es-words-065",
     "type": "word",
     "fragments": [
-      "TIDE",
-      "In. Out. The letters stay."
+      "MAREA",
+      "En. Afuera. Las cartas se quedan."
     ],
     "topics": [
       "coast",
@@ -873,11 +873,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-066",
+    "id": "es-words-066",
     "type": "word",
     "fragments": [
-      "FOAM",
-      "Notice how light the letters feel."
+      "ESPUMA",
+      "Observe lo ligeras que se sienten las letras."
     ],
     "topics": [
       "coast"
@@ -885,12 +885,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-067",
+    "id": "es-words-067",
     "type": "word",
     "fragments": [
-      "One word.",
-      "PINE",
-      "Notice the I standing in the middle."
+      "Una palabra.",
+      "PINO",
+      "Observe el yo parado en el medio."
     ],
     "topics": [
       "forest"
@@ -898,11 +898,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-068",
+    "id": "es-words-068",
     "type": "word",
     "fragments": [
-      "HAZE",
-      "Follow H into the rest."
+      "BRUMA",
+      "Sigue a H hasta el resto."
     ],
     "topics": [
       "sky"
@@ -910,12 +910,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-069",
+    "id": "es-words-069",
     "type": "word",
     "fragments": [
-      "PANE",
-      "First letter.",
-      "Then the last."
+      "CRISTAL",
+      "Primera carta.",
+      "Luego el último."
     ],
     "topics": [
       "room",
@@ -924,11 +924,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-070",
+    "id": "es-words-070",
     "type": "word",
     "fragments": [
-      "INK",
-      "Three letters. Plenty."
+      "TINTA",
+      "Tres letras. Infinidad."
     ],
     "topics": [
       "paper"
@@ -936,11 +936,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-071",
+    "id": "es-words-071",
     "type": "word",
     "fragments": [
-      "KITE",
-      "Notice only the vowels."
+      "COMETA",
+      "Observe sólo las vocales."
     ],
     "topics": [
       "sky"
@@ -948,11 +948,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-072",
+    "id": "es-words-072",
     "type": "word",
     "fragments": [
-      "GRANITE",
-      "Notice the weight of the word."
+      "GRANITO",
+      "Note el peso de la palabra."
     ],
     "topics": [
       "stone"
@@ -960,11 +960,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-073",
+    "id": "es-words-073",
     "type": "word",
     "fragments": [
-      "LAMP",
-      "Let it sit."
+      "LÁMPARA",
+      "Déjalo reposar."
     ],
     "topics": [
       "light"
@@ -972,11 +972,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-074",
+    "id": "es-words-074",
     "type": "word",
     "fragments": [
-      "FROST",
-      "Soft at the edges."
+      "HELADA",
+      "Suave en los bordes."
     ],
     "topics": [
       "sky",
@@ -985,12 +985,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-075",
+    "id": "es-words-075",
     "type": "word",
     "fragments": [
-      "HULL",
-      "First letter.",
-      "Then the last."
+      "CÁSCARA",
+      "Primera carta.",
+      "Luego el último."
     ],
     "topics": [
       "coast"
@@ -998,15 +998,15 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "If a color from the last word is nearby, rest on it for a moment."
+      "text": "Si un color de la última palabra está cerca, descansa sobre él por un momento."
     }
   },
   {
-    "id": "en-words-076",
+    "id": "es-words-076",
     "type": "word",
     "fragments": [
-      "IVY",
-      "Three letters climbing."
+      "HIEDRA",
+      "Tres letras subiendo."
     ],
     "topics": [
       "plants"
@@ -1014,11 +1014,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-077",
+    "id": "es-words-077",
     "type": "word",
     "fragments": [
-      "DUSK",
-      "Notice only the U."
+      "OSCURIDAD",
+      "Observe sólo la U."
     ],
     "topics": [
       "light",
@@ -1027,11 +1027,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-078",
+    "id": "es-words-078",
     "type": "word",
     "fragments": [
-      "TWINE",
-      "Notice the W in the middle."
+      "ENROSCARSE",
+      "Observe la W en el medio."
     ],
     "topics": [
       "paper",
@@ -1040,11 +1040,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-079",
+    "id": "es-words-079",
     "type": "word",
     "fragments": [
-      "QUAY",
-      "Let it sit."
+      "MUELLE",
+      "Déjalo reposar."
     ],
     "topics": [
       "coast"
@@ -1052,11 +1052,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-080",
+    "id": "es-words-080",
     "type": "word",
     "fragments": [
-      "EMBER",
-      "Let it sit."
+      "ASCUA",
+      "Déjalo reposar."
     ],
     "topics": [
       "light"
@@ -1064,11 +1064,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-081",
+    "id": "es-words-081",
     "type": "word",
     "fragments": [
-      "SPINE",
-      "First letter. Then the last."
+      "COLUMNA VERTEBRAL",
+      "Primera carta. Luego el último."
     ],
     "topics": [
       "paper"
@@ -1076,11 +1076,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-082",
+    "id": "es-words-082",
     "type": "word",
     "fragments": [
-      "MOSSY",
-      "Let it sit."
+      "CUBIERTO DE MUSGO",
+      "Déjalo reposar."
     ],
     "topics": [
       "forest",
@@ -1089,11 +1089,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-083",
+    "id": "es-words-083",
     "type": "word",
     "fragments": [
-      "GULL",
-      "Let it sit."
+      "GAVIOTA",
+      "Déjalo reposar."
     ],
     "topics": [
       "coast"
@@ -1101,11 +1101,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-084",
+    "id": "es-words-084",
     "type": "word",
     "fragments": [
-      "LINTEL",
-      "A quiet architectural word."
+      "DINTEL",
+      "Una palabra arquitectónica tranquila."
     ],
     "topics": [
       "room"
@@ -1113,11 +1113,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-085",
+    "id": "es-words-085",
     "type": "word",
     "fragments": [
-      "CIDER",
-      "Let it sit."
+      "SIDRA",
+      "Déjalo reposar."
     ],
     "topics": [
       "plants",
@@ -1126,11 +1126,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-086",
+    "id": "es-words-086",
     "type": "word",
     "fragments": [
-      "FLINT",
-      "Let it sit."
+      "PEDERNAL",
+      "Déjalo reposar."
     ],
     "topics": [
       "stone"
@@ -1138,11 +1138,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-087",
+    "id": "es-words-087",
     "type": "word",
     "fragments": [
-      "THISTLE",
-      "Let it sit."
+      "CARDO",
+      "Déjalo reposar."
     ],
     "topics": [
       "plants"
@@ -1150,11 +1150,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-088",
+    "id": "es-words-088",
     "type": "word",
     "fragments": [
-      "HARBOR",
-      "Let it sit."
+      "PUERTO",
+      "Déjalo reposar."
     ],
     "topics": [
       "coast"
