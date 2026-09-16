@@ -34,10 +34,12 @@ export const subscriptionsPubliclyAvailable = false;
 
 /**
  * __DEV__ only: preview subscription UI states. Never affects production entitlements.
- * Set to `trialActive`, `subscribed`, `expired`, or `none` to preview Settings / paywall copy.
+ * Defaults to `subscribed` so core tools stay open during local dev and web preview.
+ * Set to `none`, `trialActive`, or `expired` to preview paywall / locked-tool UX.
+ * Set to `null` to exercise production resolution (store unavailable → tools locked).
  */
 export const devPreviewEntitlement: 'none' | 'trialActive' | 'subscribed' | 'expired' | null =
-  __DEV__ ? 'none' : null;
+  __DEV__ ? 'subscribed' : null;
 
 /** @deprecated use devPreviewEntitlement */
 export const devPreviewActiveSubscription = false;

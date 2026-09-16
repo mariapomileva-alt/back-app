@@ -18,7 +18,7 @@ Date: 17 September 2026. Scope: correct subscription model (S2). **No purchase a
 
 - `features/subscription/resolveBackPlusAccess.ts` + `useBackPlusAccess.ts`
 - Production without RevenueCat / products: `unavailable` for store UI, **tools locked** (`hasPaidAccess: false`).
-- `__DEV__`: `devPreviewEntitlement` fixtures (`none` | `trialActive` | `subscribed` | `expired`).
+- `__DEV__`: `devPreviewEntitlement` defaults to `subscribed` (tools open); override with `none` | `trialActive` | `expired` | `null` to preview paywall or production stub.
 - `entitlementCache.ts`: structure for last verified entitlement — **does not unlock** without store verification.
 
 ## Routing
