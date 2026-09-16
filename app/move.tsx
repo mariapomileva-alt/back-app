@@ -5,7 +5,7 @@ import { TextButton } from '@/components/buttons/TextButton';
 import { MoveStage } from '@/components/move/MoveStage';
 import { ActiveSessionScreen } from '@/components/session/ActiveSessionScreen';
 import { SessionChoiceSheet } from '@/components/session/SessionChoiceSheet';
-import { AppText } from '@/components/typography/AppText';
+import { CrossfadeInstructionText } from '@/components/typography/CrossfadeInstructionText';
 import { isMoveSequenceId, moveSequenceIds } from '@/features/move/steps';
 import { useMoveCycle } from '@/features/move/useMoveCycle';
 import { MOVE_UNCOMFORTABLE_INTENT } from '@/features/session/suggestions';
@@ -52,13 +52,15 @@ export default function MoveScreen() {
                 onPressIn={onPressIn}
                 onPressOut={onPressOut}
               />
-              <AppText
+              <CrossfadeInstructionText
+                contentKey={instructionKey}
                 variant="instruction"
                 accessibilityLiveRegion="polite"
                 style={[styles.instruction, compact && styles.instructionCompact]}
+                minHeight={compact ? 68 : 84}
               >
                 {instruction}
-              </AppText>
+              </CrossfadeInstructionText>
             </View>
             <SessionChoiceSheet
               visible={chooserOpen}

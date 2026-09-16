@@ -7,7 +7,7 @@ import { PatternPicker } from '@/components/breathe/PatternPicker';
 import { TextButton } from '@/components/buttons/TextButton';
 import { ActiveSessionScreen } from '@/components/session/ActiveSessionScreen';
 import { SessionChoiceSheet } from '@/components/session/SessionChoiceSheet';
-import { AppText } from '@/components/typography/AppText';
+import { CrossfadeInstructionText } from '@/components/typography/CrossfadeInstructionText';
 import {
   breathPatterns,
   cueKeyForPhase,
@@ -120,14 +120,16 @@ export default function BreatheScreen() {
                 reduceMotion={reduceMotion}
                 accessibilityLabel={t('breathe.circle')}
               />
-              <AppText
+              <CrossfadeInstructionText
+                contentKey={`${patternId}-${phase}`}
                 variant="instruction"
                 accessibilityLiveRegion="polite"
                 accessibilityLabel={`${cue}. ${patternName}`}
                 style={styles.cue}
+                minHeight={36}
               >
                 {cue}
-              </AppText>
+              </CrossfadeInstructionText>
             </Pressable>
             <SessionChoiceSheet
               visible={chooserOpen}

@@ -202,7 +202,7 @@ export default function GroundScreen() {
               accessibilityLabel={instruction}
               accessibilityHint={last ? undefined : t('ground.continueHint')}
               onPress={last ? undefined : goNext}
-              style={styles.instructionHit}
+              style={[styles.instructionHit, compact && styles.instructionHitCompact]}
             >
               <Animated.View style={{ opacity: instructionOpacity }}>
                 <AppText
@@ -273,6 +273,11 @@ const styles = StyleSheet.create({
   instructionHit: {
     width: '100%',
     alignItems: 'center',
+    justifyContent: 'center',
+    minHeight: 132,
+  },
+  instructionHitCompact: {
+    minHeight: 102,
   },
   instruction: {
     fontFamily: serif,
