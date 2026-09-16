@@ -140,51 +140,61 @@ def soft_rain(rng: np.random.Generator) -> np.ndarray:
 
 
 def ocean_swell(rng: np.random.Generator) -> np.ndarray:
+    """Calm long-period swell: sub-bass surf only, minimal foam, ~48 Hz undertone — no mid chatter."""
     t = np.arange(N, dtype=np.float64) / RATE
-    wave_period = 9.0
     swell_env = (
-        0.62
-        + 0.28 * np.sin(2.0 * np.pi * t / wave_period)
-        + 0.12 * np.sin(2.0 * np.pi * t / (wave_period * 0.5) + 1.1)
-        + 0.06 * np.sin(2.0 * np.pi * t / (wave_period * 1.7) + 2.4)
+        0.58
+        + 0.30 * np.sin(2.0 * np.pi * t / 10.5)
+        + 0.14 * np.sin(2.0 * np.pi * t / 11.4 + 1.05)
+        + 0.08 * np.sin(2.0 * np.pi * t / 9.2 + 2.35)
     )
-    swell_env = np.clip(swell_env, 0.05, 1.0)
+    swell_env = np.clip(swell_env, 0.04, 1.0)
 
-    surf = one_pole_lowpass(white_noise(rng, N), 180.0)
-    surf *= swell_env**1.35
+    deep_surf = brown_noise(rng, N)
+    deep_surf = one_pole_lowpass(deep_surf, 88.0)
+    deep_surf *= swell_env**1.55
 
-    foam = bandpass(white_noise(rng, N), 450.0, 2100.0)
-    foam_gate = np.clip((swell_env - 0.76) / 0.24, 0.0, 1.0) ** 2
-    foam *= foam_gate * 0.24
+    shelf = one_pole_lowpass(white_noise(rng, N), 52.0)
+    shelf *= 0.32 + 0.68 * (swell_env**1.2)
 
-    undertone = 0.14 * np.sin(2.0 * np.pi * 48.0 * t + 0.2)
-    undertone *= 0.85 + 0.15 * swell_env
+    foam = bandpass(white_noise(rng, N), 1400.0, 3400.0)
+    foam_gate = np.clip((swell_env - 0.84) / 0.16, 0.0, 1.0) ** 3
+    foam *= foam_gate * 0.06
 
-    x = surf + foam + undertone
-    x = seamless_crossfade(x, fade_ms=260.0)
+    undertone = 0.17 * np.sin(2.0 * np.pi * 48.0 * t + 0.15)
+    undertone += 0.04 * np.sin(2.0 * np.pi * 96.0 * t + 0.9)
+    undertone *= 0.72 + 0.28 * swell_env
+
+    x = 0.92 * deep_surf + 0.38 * shelf + foam + undertone
+    x = one_pole_lowpass(x, 420.0)
+    x = seamless_crossfade(x, fade_ms=280.0)
     return normalize(x)
 
 
 def gentle_stream(rng: np.random.Generator) -> np.ndarray:
+    """Continuous mid/high flow — fast water texture, distant smooth highs — no low swell bed."""
     t = np.arange(N, dtype=np.float64) / RATE
-    flow = bandpass(white_noise(rng, N), 280.0, 1800.0)
-    flow *= 0.48 + 0.22 * np.sin(2.0 * np.pi * t / 7.2 + 0.3)
-    flow *= 0.55 + 0.45 * (0.5 + 0.5 * np.sin(2.0 * np.pi * t / 19.0 + 1.0))
+    chatter = (
+        0.74
+        + 0.26 * np.sin(2.0 * np.pi * 3.6 * t + 0.25)
+        * (0.82 + 0.18 * np.sin(2.0 * np.pi * 0.42 * t + 1.1))
+    )
+    drift = 0.58 + 0.42 * np.sin(2.0 * np.pi * t / 14.0 + 0.55)
 
-    babble = bandpass(white_noise(rng, N), 900.0, 4200.0)
-    babble *= 0.12 + 0.1 * np.sin(2.0 * np.pi * t / 4.8 + 0.7)
-    pebble = np.zeros(N, dtype=np.float64)
-    for st in rng.uniform(0, DURATION_S, size=28):
-        pos = int(st * RATE)
-        if pos >= N - 120:
-            continue
-        tick_len = 120
-        env = np.exp(-np.arange(tick_len, dtype=np.float64) / (RATE * 0.018))
-        tick = bandpass(rng.standard_normal(tick_len), 1400.0, 6500.0) * env
-        end = min(N, pos + tick_len)
-        pebble[pos:end] += tick[: end - pos] * rng.uniform(0.15, 0.42)
+    flow_hi = bandpass(white_noise(rng, N), 1050.0, 6800.0)
+    flow_hi = one_pole_lowpass(flow_hi, 3600.0)
+    flow_hi *= chatter * drift
 
-    x = 0.7 * flow + 0.22 * babble + 0.35 * pebble
+    flow_mid = bandpass(white_noise(rng, N), 420.0, 1750.0)
+    flow_mid = one_pole_lowpass(flow_mid, 1280.0)
+    flow_mid *= 0.62 + 0.38 * np.sin(2.0 * np.pi * 2.4 * t + 0.85)
+
+    ripple = bandpass(white_noise(rng, N), 1900.0, 4500.0)
+    ripple = one_pole_lowpass(ripple, 3200.0)
+    ripple *= 0.38 + 0.32 * np.sin(2.0 * np.pi * 5.2 * t) * np.sin(2.0 * np.pi * 1.35 * t + 0.4)
+
+    x = 0.52 * flow_hi + 0.34 * flow_mid + 0.24 * ripple
+    x = one_pole_highpass(x, 240.0)
     x = seamless_crossfade(x, fade_ms=210.0)
     return normalize(x)
 
@@ -357,8 +367,8 @@ def stats(samples: np.ndarray) -> tuple[float, float, float]:
 def main() -> None:
     jobs: list[tuple[str, Path, np.random.Generator, Callable[[np.random.Generator], np.ndarray]]] = [
         ("rain", ROOT / "soft-rain-placeholder.wav", np.random.default_rng(2026091701), soft_rain),
-        ("ocean", ROOT / "ocean-placeholder.wav", np.random.default_rng(2026091702), ocean_swell),
-        ("stream", ROOT / "gentle-stream-placeholder.wav", np.random.default_rng(2026091703), gentle_stream),
+        ("ocean", ROOT / "ocean-placeholder.wav", np.random.default_rng(2026091722), ocean_swell),
+        ("stream", ROOT / "gentle-stream-placeholder.wav", np.random.default_rng(2026091723), gentle_stream),
         ("forest", ROOT / "forest-placeholder.wav", np.random.default_rng(2026091704), forest_ambience),
         ("birds", ROOT / "distant-birds-placeholder.wav", np.random.default_rng(2026091705), distant_birds),
         ("fan", ROOT / "fan-placeholder.wav", np.random.default_rng(2026091706), fan_hum),
