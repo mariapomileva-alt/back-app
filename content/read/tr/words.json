@@ -1,10 +1,10 @@
 [
   {
-    "id": "en-words-001",
+    "id": "tr-words-001",
     "type": "word",
     "fragments": [
-      "MOSS",
-      "Notice how little it needs."
+      "YOSUN",
+      "Ne kadar az şeye ihtiyacı olduğuna dikkat edin."
     ],
     "topics": [
       "plants",
@@ -13,12 +13,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-002",
+    "id": "tr-words-002",
     "type": "word",
     "fragments": [
-      "This one.",
-      "LINEN",
-      "Follow the line of the L."
+      "Bu.",
+      "KETEN",
+      "L çizgisini takip edin."
     ],
     "topics": [
       "room",
@@ -27,11 +27,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-003",
+    "id": "tr-words-003",
     "type": "word",
     "fragments": [
-      "ELEPHANT",
-      "Notice only the vowels."
+      "FİL",
+      "Yalnızca sesli harflere dikkat edin."
     ],
     "topics": [
       "nature"
@@ -39,12 +39,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-004",
+    "id": "tr-words-004",
     "type": "word",
     "fragments": [
-      "Look at this word.",
-      "WINDOW",
-      "Count the letters without naming them."
+      "Şu söze bakın.",
+      "PENCERE",
+      "Harfleri isim vermeden sayın."
     ],
     "topics": [
       "room"
@@ -52,12 +52,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-005",
+    "id": "tr-words-005",
     "type": "word",
     "fragments": [
-      "QUIET",
-      "First letter.",
-      "Then the last."
+      "SESSİZLİK",
+      "İlk mektup.",
+      "Sonra sonuncusu."
     ],
     "topics": [
       "room",
@@ -66,12 +66,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-006",
+    "id": "tr-words-006",
     "type": "word",
     "fragments": [
-      "A small word.",
-      "CLOUD",
-      "Follow the curve of the C."
+      "Küçük bir kelime.",
+      "BULUT",
+      "C eğrisini takip edin."
     ],
     "topics": [
       "sky"
@@ -79,11 +79,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-007",
+    "id": "tr-words-007",
     "type": "word",
     "fragments": [
-      "Notice the weight of the O.",
-      "STONE"
+      "O'nun ağırlığına dikkat edin.",
+      "TAŞ"
     ],
     "topics": [
       "stone"
@@ -91,20 +91,20 @@
     "difficulty": 1,
     "followUp": {
       "type": "choice",
-      "text": "If you can see a jacket or sweater, what color is it?",
+      "text": "Bir ceket veya kazak görebiliyorsanız, bu ne renk?",
       "options": [
-        "blue",
-        "black",
-        "another color"
+        "mavi",
+        "siyah",
+        "başka renk"
       ]
     }
   },
   {
-    "id": "en-words-008",
+    "id": "tr-words-008",
     "type": "word",
     "fragments": [
-      "RIVER",
-      "Let it sit."
+      "NEHİR",
+      "Bırak otursun."
     ],
     "topics": [
       "water"
@@ -112,11 +112,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-009",
+    "id": "tr-words-009",
     "type": "word",
     "fragments": [
       "AMBER",
-      "Notice the warm shape of A."
+      "A'nın sıcak şekline dikkat edin."
     ],
     "topics": [
       "light"
@@ -124,12 +124,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-010",
+    "id": "tr-words-010",
     "type": "word",
     "fragments": [
-      "This one.",
-      "FEATHER",
-      "Let your eyes rest on the TH."
+      "Bu.",
+      "TÜY",
+      "Bırakın gözleriniz TH'ye odaklansın."
     ],
     "topics": [
       "nature"
@@ -137,11 +137,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-011",
+    "id": "tr-words-011",
     "type": "word",
     "fragments": [
-      "MEADOW",
-      "Notice only the vowels."
+      "ÇAYIR",
+      "Yalnızca sesli harflere dikkat edin."
     ],
     "topics": [
       "plants"
@@ -149,12 +149,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-012",
+    "id": "tr-words-012",
     "type": "word",
     "fragments": [
-      "Look at this word.",
-      "SILVER",
-      "Follow the S as it turns."
+      "Şu söze bakın.",
+      "GÜMÜŞ",
+      "S dönerken onu takip edin."
     ],
     "topics": [
       "light"
@@ -162,12 +162,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-013",
+    "id": "tr-words-013",
     "type": "word",
     "fragments": [
-      "LANTERN",
-      "First letter.",
-      "Then the last."
+      "FENER",
+      "İlk mektup.",
+      "Sonra sonuncusu."
     ],
     "topics": [
       "light"
@@ -175,12 +175,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-014",
+    "id": "tr-words-014",
     "type": "word",
     "fragments": [
-      "A small word.",
-      "KETTLE",
-      "The double T stands like a quiet gate."
+      "Küçük bir kelime.",
+      "su ısıtıcı",
+      "Çift T sessiz bir kapı gibi duruyor."
     ],
     "topics": [
       "room",
@@ -189,11 +189,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-015",
+    "id": "tr-words-015",
     "type": "word",
     "fragments": [
-      "Notice how V repeats, then rests.",
-      "VELVET"
+      "V'nin nasıl tekrarladığına ve sonra nasıl durduğuna dikkat edin.",
+      "KADİFE"
     ],
     "topics": [
       "room",
@@ -202,11 +202,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-016",
+    "id": "tr-words-016",
     "type": "word",
     "fragments": [
-      "PAPER",
-      "Let it sit."
+      "KAĞIT",
+      "Bırak otursun."
     ],
     "topics": [
       "paper"
@@ -214,11 +214,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-017",
+    "id": "tr-words-017",
     "type": "word",
     "fragments": [
-      "HONEY",
-      "Notice only the O."
+      "BAL",
+      "Yalnızca O'ya dikkat edin."
     ],
     "topics": [
       "plants",
@@ -227,12 +227,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-018",
+    "id": "tr-words-018",
     "type": "word",
     "fragments": [
-      "This one.",
-      "BLANKET",
-      "Let the word take up its space."
+      "Bu.",
+      "BATTANİYE",
+      "Kelimenin yerini almasına izin verin."
     ],
     "topics": [
       "room",
@@ -241,11 +241,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-019",
+    "id": "tr-words-019",
     "type": "word",
     "fragments": [
-      "GARDEN",
-      "Notice only the vowels."
+      "BAHÇE",
+      "Yalnızca sesli harflere dikkat edin."
     ],
     "topics": [
       "plants"
@@ -253,12 +253,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-020",
+    "id": "tr-words-020",
     "type": "word",
     "fragments": [
-      "Look at this word.",
-      "CANDLE",
-      "Follow the word from left to right, once."
+      "Şu söze bakın.",
+      "MUM",
+      "Kelimeyi bir kez soldan sağa doğru takip edin."
     ],
     "topics": [
       "light"
@@ -266,12 +266,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-021",
+    "id": "tr-words-021",
     "type": "word",
     "fragments": [
-      "BUTTON",
-      "First letter.",
-      "Then the last."
+      "DÜĞME",
+      "İlk mektup.",
+      "Sonra sonuncusu."
     ],
     "topics": [
       "room",
@@ -280,12 +280,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-022",
+    "id": "tr-words-022",
     "type": "word",
     "fragments": [
-      "A small word.",
-      "WILLOW",
-      "Notice the W opening twice."
+      "Küçük bir kelime.",
+      "SÖĞÜT",
+      "W'nin iki kez açıldığına dikkat edin."
     ],
     "topics": [
       "plants",
@@ -294,11 +294,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-023",
+    "id": "tr-words-023",
     "type": "word",
     "fragments": [
-      "Look at the shape, not the meaning.",
-      "MARBLE"
+      "Anlamına değil şekline bakın.",
+      "MERMER"
     ],
     "topics": [
       "stone"
@@ -306,11 +306,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-024",
+    "id": "tr-words-024",
     "type": "word",
     "fragments": [
-      "COTTON",
-      "Let it sit."
+      "PAMUK",
+      "Bırak otursun."
     ],
     "topics": [
       "room",
@@ -319,11 +319,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-025",
+    "id": "tr-words-025",
     "type": "word",
     "fragments": [
-      "SAUCER",
-      "Notice the curve of S and C."
+      "TABAK",
+      "S ve C eğrisine dikkat edin."
     ],
     "topics": [
       "room",
@@ -332,12 +332,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-026",
+    "id": "tr-words-026",
     "type": "word",
     "fragments": [
-      "This one.",
-      "ORANGE",
-      "Find the vowels and leave the rest."
+      "Bu.",
+      "TURUNCU",
+      "Sesli harfleri bulun ve gerisini bırakın."
     ],
     "topics": [
       "plants",
@@ -346,11 +346,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-027",
+    "id": "tr-words-027",
     "type": "word",
     "fragments": [
-      "MIRROR",
-      "Notice only the vowels."
+      "AYNA",
+      "Yalnızca sesli harflere dikkat edin."
     ],
     "topics": [
       "room"
@@ -358,12 +358,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-028",
+    "id": "tr-words-028",
     "type": "word",
     "fragments": [
-      "Look at this word.",
-      "SHELL",
-      "Notice how small the word stays."
+      "Şu söze bakın.",
+      "KABUK",
+      "Kelimenin ne kadar küçük kaldığına dikkat edin."
     ],
     "topics": [
       "coast"
@@ -371,12 +371,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-029",
+    "id": "tr-words-029",
     "type": "word",
     "fragments": [
-      "TABLE",
-      "First letter.",
-      "Then the last."
+      "MASA",
+      "İlk mektup.",
+      "Sonra sonuncusu."
     ],
     "topics": [
       "room",
@@ -385,12 +385,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-030",
+    "id": "tr-words-030",
     "type": "word",
     "fragments": [
-      "A small word.",
-      "BREEZE",
-      "Follow the double E."
+      "Küçük bir kelime.",
+      "ESİNTİ",
+      "Çift E'yi takip edin."
     ],
     "topics": [
       "sky",
@@ -399,11 +399,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-031",
+    "id": "tr-words-031",
     "type": "word",
     "fragments": [
-      "Notice the round O.",
-      "POCKET"
+      "Yuvarlak O'ya dikkat edin.",
+      "CEP"
     ],
     "topics": [
       "room",
@@ -412,11 +412,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-032",
+    "id": "tr-words-032",
     "type": "word",
     "fragments": [
-      "THREAD",
-      "Let it sit."
+      "İPLİK",
+      "Bırak otursun."
     ],
     "topics": [
       "paper",
@@ -425,11 +425,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-033",
+    "id": "tr-words-033",
     "type": "word",
     "fragments": [
-      "LADDER",
-      "The double D is a quiet pair."
+      "MERDİVEN",
+      "Çift D sessiz bir çifttir."
     ],
     "topics": [
       "room",
@@ -438,12 +438,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-034",
+    "id": "tr-words-034",
     "type": "word",
     "fragments": [
-      "This one.",
-      "CURTAIN",
-      "Let the word stay. You do not have to hold it."
+      "Bu.",
+      "PERDE",
+      "Söz kalsın. Tutmanıza gerek yok."
     ],
     "topics": [
       "room"
@@ -451,11 +451,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-035",
+    "id": "tr-words-035",
     "type": "word",
     "fragments": [
-      "PEBBLE",
-      "Notice only the vowels."
+      "ÇAKIL",
+      "Yalnızca sesli harflere dikkat edin."
     ],
     "topics": [
       "stone",
@@ -464,12 +464,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-036",
+    "id": "tr-words-036",
     "type": "word",
     "fragments": [
-      "Look at this word.",
-      "YELLOW",
-      "Follow Y as it branches."
+      "Şu söze bakın.",
+      "SARI",
+      "Dallanırken Y'yi takip edin."
     ],
     "topics": [
       "light"
@@ -477,16 +477,16 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "Now find something yellow around you."
+      "text": "Şimdi etrafınızda sarı bir şey bulun."
     }
   },
   {
-    "id": "en-words-037",
+    "id": "tr-words-037",
     "type": "word",
     "fragments": [
-      "FOREST",
-      "First letter.",
-      "Then the last."
+      "ORMAN",
+      "İlk mektup.",
+      "Sonra sonuncusu."
     ],
     "topics": [
       "forest"
@@ -494,12 +494,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-038",
+    "id": "tr-words-038",
     "type": "word",
     "fragments": [
-      "A small word.",
-      "PILLOW",
-      "Soft letters. Double L."
+      "Küçük bir kelime.",
+      "YASTIK",
+      "Yumuşak harfler. Çift L."
     ],
     "topics": [
       "room",
@@ -508,11 +508,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-039",
+    "id": "tr-words-039",
     "type": "word",
     "fragments": [
-      "Count the letters with your eyes only.",
-      "MAPLE"
+      "Harfleri sadece gözlerinizle sayın.",
+      "AKÇAAĞAÇ"
     ],
     "topics": [
       "plants",
@@ -521,11 +521,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-040",
+    "id": "tr-words-040",
     "type": "word",
     "fragments": [
-      "SHADOW",
-      "Let it sit."
+      "GÖLGE",
+      "Bırak otursun."
     ],
     "topics": [
       "light"
@@ -533,11 +533,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-041",
+    "id": "tr-words-041",
     "type": "word",
     "fragments": [
-      "CERAMIC",
-      "Follow the C at both ends."
+      "SERAMİK",
+      "Her iki uçtaki C'yi takip edin."
     ],
     "topics": [
       "room",
@@ -546,12 +546,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-042",
+    "id": "tr-words-042",
     "type": "word",
     "fragments": [
-      "This one.",
-      "NEEDLE",
-      "Double E in the middle."
+      "Bu.",
+      "İĞNE",
+      "Ortada çift E."
     ],
     "topics": [
       "plants",
@@ -560,11 +560,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-043",
+    "id": "tr-words-043",
     "type": "word",
     "fragments": [
-      "BASKET",
-      "Notice only the vowels."
+      "SEPET",
+      "Yalnızca sesli harflere dikkat edin."
     ],
     "topics": [
       "room",
@@ -573,12 +573,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-044",
+    "id": "tr-words-044",
     "type": "word",
     "fragments": [
-      "Look at this word.",
-      "RAIN",
-      "Four letters. Plenty."
+      "Şu söze bakın.",
+      "YAĞMUR",
+      "Dört harf. Bolca."
     ],
     "topics": [
       "sky",
@@ -587,12 +587,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-045",
+    "id": "tr-words-045",
     "type": "word",
     "fragments": [
-      "WOOL",
-      "First letter.",
-      "Then the last."
+      "YÜN",
+      "İlk mektup.",
+      "Sonra sonuncusu."
     ],
     "topics": [
       "room",
@@ -601,12 +601,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-046",
+    "id": "tr-words-046",
     "type": "word",
     "fragments": [
-      "A small word.",
-      "GINGER",
-      "Soft G twice."
+      "Küçük bir kelime.",
+      "ZENCEFİL",
+      "İki kez yumuşak G."
     ],
     "topics": [
       "plants",
@@ -615,11 +615,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-047",
+    "id": "tr-words-047",
     "type": "word",
     "fragments": [
-      "Let your eyes rest on TH.",
-      "CLOTH"
+      "Bırakın gözleriniz TH'ye odaklansın.",
+      "BEZ"
     ],
     "topics": [
       "room",
@@ -628,11 +628,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-048",
+    "id": "tr-words-048",
     "type": "word",
     "fragments": [
-      "BASIL",
-      "Let it sit."
+      "REYHAN",
+      "Bırak otursun."
     ],
     "topics": [
       "plants"
@@ -640,11 +640,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-049",
+    "id": "tr-words-049",
     "type": "word",
     "fragments": [
-      "DRIFT",
-      "The word is already moving. You can stay."
+      "SÜRÜKLENME",
+      "Kelime zaten hareket ediyor. Kalabilirsin."
     ],
     "topics": [
       "coast",
@@ -653,21 +653,21 @@
     "difficulty": 1,
     "followUp": {
       "type": "choice",
-      "text": "Are you sitting, standing, or somewhere in between?",
+      "text": "Oturuyor musunuz, ayakta mı duruyorsunuz, yoksa arada bir yerde mi?",
       "options": [
-        "sitting",
-        "standing",
-        "in between"
+        "oturma",
+        "ayakta",
+        "arada"
       ]
     }
   },
   {
-    "id": "en-words-050",
+    "id": "tr-words-050",
     "type": "word",
     "fragments": [
-      "This one.",
-      "QUILT",
-      "Notice Q and U traveling together."
+      "Bu.",
+      "YORGAN",
+      "Q ve U'nun birlikte seyahat ettiğine dikkat edin."
     ],
     "topics": [
       "room",
@@ -676,11 +676,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-051",
+    "id": "tr-words-051",
     "type": "word",
     "fragments": [
-      "STITCH",
-      "Notice only the vowels."
+      "DİKİŞ",
+      "Yalnızca sesli harflere dikkat edin."
     ],
     "topics": [
       "room",
@@ -689,12 +689,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-052",
+    "id": "tr-words-052",
     "type": "word",
     "fragments": [
-      "Look at this word.",
-      "OCEAN",
-      "Three vowels waiting."
+      "Şu söze bakın.",
+      "OKYANUS",
+      "Üç sesli harf bekliyor."
     ],
     "topics": [
       "coast",
@@ -703,12 +703,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-053",
+    "id": "tr-words-053",
     "type": "word",
     "fragments": [
-      "LEMON",
-      "First letter.",
-      "Then the last."
+      "LİMON",
+      "İlk mektup.",
+      "Sonra sonuncusu."
     ],
     "topics": [
       "plants",
@@ -717,12 +717,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-054",
+    "id": "tr-words-054",
     "type": "word",
     "fragments": [
-      "A small word.",
-      "BRANCH",
-      "Look at the A as a small roof."
+      "Küçük bir kelime.",
+      "DAL",
+      "A'ya küçük bir çatı olarak bakın."
     ],
     "topics": [
       "forest",
@@ -731,11 +731,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-055",
+    "id": "tr-words-055",
     "type": "word",
     "fragments": [
-      "Five letters, round at the start.",
-      "PEARL"
+      "Beş harf, başında yuvarlak.",
+      "İNCİ"
     ],
     "topics": [
       "coast"
@@ -743,11 +743,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-056",
+    "id": "tr-words-056",
     "type": "word",
     "fragments": [
-      "HUMBLE",
-      "Let it sit."
+      "MÜTEVAZI",
+      "Bırak otursun."
     ],
     "topics": [
       "room"
@@ -755,11 +755,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-057",
+    "id": "tr-words-057",
     "type": "word",
     "fragments": [
-      "COPPER",
-      "Follow the double P."
+      "BAKIR",
+      "Çift P'yi takip edin."
     ],
     "topics": [
       "light",
@@ -768,12 +768,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-058",
+    "id": "tr-words-058",
     "type": "word",
     "fragments": [
-      "This one.",
-      "IVORY",
-      "Notice only the vowels."
+      "Bu.",
+      "FİLDİŞİ",
+      "Yalnızca sesli harflere dikkat edin."
     ],
     "topics": [
       "light"
@@ -781,11 +781,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-059",
+    "id": "tr-words-059",
     "type": "word",
     "fragments": [
-      "GLASS",
-      "Notice only the vowels."
+      "BARDAK",
+      "Yalnızca sesli harflere dikkat edin."
     ],
     "topics": [
       "room",
@@ -794,12 +794,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-060",
+    "id": "tr-words-060",
     "type": "word",
     "fragments": [
-      "Look at this word.",
-      "THYME",
-      "A small word. Let it sit."
+      "Şu söze bakın.",
+      "KEKİK",
+      "Küçük bir kelime. Bırak otursun."
     ],
     "topics": [
       "plants"
@@ -807,12 +807,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-061",
+    "id": "tr-words-061",
     "type": "word",
     "fragments": [
-      "NICKEL",
-      "First letter.",
-      "Then the last."
+      "NİKEL",
+      "İlk mektup.",
+      "Sonra sonuncusu."
     ],
     "topics": [
       "stone",
@@ -821,12 +821,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-062",
+    "id": "tr-words-062",
     "type": "word",
     "fragments": [
-      "A small word.",
-      "FLOUR",
-      "Follow the word once, slowly."
+      "Küçük bir kelime.",
+      "UN",
+      "Kelimeyi bir kez, yavaşça takip edin."
     ],
     "topics": [
       "room",
@@ -835,11 +835,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-063",
+    "id": "tr-words-063",
     "type": "word",
     "fragments": [
-      "Notice the C, then the rest of the shape.",
-      "CEDAR"
+      "C'ye ve ardından şeklin geri kalanına dikkat edin.",
+      "SEDİR"
     ],
     "topics": [
       "forest"
@@ -847,11 +847,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-064",
+    "id": "tr-words-064",
     "type": "word",
     "fragments": [
-      "PLUM",
-      "Let it sit."
+      "ERİK",
+      "Bırak otursun."
     ],
     "topics": [
       "plants",
@@ -860,11 +860,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-065",
+    "id": "tr-words-065",
     "type": "word",
     "fragments": [
-      "TIDE",
-      "In. Out. The letters stay."
+      "GELGİT",
+      "İçinde. Dışarı. Mektuplar kalıyor."
     ],
     "topics": [
       "coast",
@@ -873,11 +873,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-066",
+    "id": "tr-words-066",
     "type": "word",
     "fragments": [
-      "FOAM",
-      "Notice how light the letters feel."
+      "KÖPÜK",
+      "Harflerin ne kadar hafif olduğuna dikkat edin."
     ],
     "topics": [
       "coast"
@@ -885,12 +885,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-067",
+    "id": "tr-words-067",
     "type": "word",
     "fragments": [
-      "One word.",
-      "PINE",
-      "Notice the I standing in the middle."
+      "Tek kelime.",
+      "ÇAM",
+      "Ortada duran I'ye dikkat edin."
     ],
     "topics": [
       "forest"
@@ -898,11 +898,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-068",
+    "id": "tr-words-068",
     "type": "word",
     "fragments": [
-      "HAZE",
-      "Follow H into the rest."
+      "pus",
+      "Geri kalanına H'yi takip edin."
     ],
     "topics": [
       "sky"
@@ -910,12 +910,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-069",
+    "id": "tr-words-069",
     "type": "word",
     "fragments": [
-      "PANE",
-      "First letter.",
-      "Then the last."
+      "BÖLME",
+      "İlk mektup.",
+      "Sonra sonuncusu."
     ],
     "topics": [
       "room",
@@ -924,11 +924,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-070",
+    "id": "tr-words-070",
     "type": "word",
     "fragments": [
-      "INK",
-      "Three letters. Plenty."
+      "MÜREKKEP",
+      "Üç harf. Bolca."
     ],
     "topics": [
       "paper"
@@ -936,11 +936,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-071",
+    "id": "tr-words-071",
     "type": "word",
     "fragments": [
-      "KITE",
-      "Notice only the vowels."
+      "UÇURTMA",
+      "Yalnızca sesli harflere dikkat edin."
     ],
     "topics": [
       "sky"
@@ -948,11 +948,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-072",
+    "id": "tr-words-072",
     "type": "word",
     "fragments": [
-      "GRANITE",
-      "Notice the weight of the word."
+      "GRANİT",
+      "Kelimenin ağırlığına dikkat edin."
     ],
     "topics": [
       "stone"
@@ -960,11 +960,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-073",
+    "id": "tr-words-073",
     "type": "word",
     "fragments": [
-      "LAMP",
-      "Let it sit."
+      "LAMBA",
+      "Bırak otursun."
     ],
     "topics": [
       "light"
@@ -972,11 +972,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-074",
+    "id": "tr-words-074",
     "type": "word",
     "fragments": [
-      "FROST",
-      "Soft at the edges."
+      "DON",
+      "Kenarları yumuşak."
     ],
     "topics": [
       "sky",
@@ -985,12 +985,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-075",
+    "id": "tr-words-075",
     "type": "word",
     "fragments": [
-      "HULL",
-      "First letter.",
-      "Then the last."
+      "GÖVDE",
+      "İlk mektup.",
+      "Sonra sonuncusu."
     ],
     "topics": [
       "coast"
@@ -998,15 +998,15 @@
     "difficulty": 1,
     "followUp": {
       "type": "environment",
-      "text": "If a color from the last word is nearby, rest on it for a moment."
+      "text": "Son kelimenin rengi yakındaysa, bir süre onun üzerinde dinlenin."
     }
   },
   {
-    "id": "en-words-076",
+    "id": "tr-words-076",
     "type": "word",
     "fragments": [
-      "IVY",
-      "Three letters climbing."
+      "SARMAŞIK",
+      "Üç harf tırmanıyor."
     ],
     "topics": [
       "plants"
@@ -1014,11 +1014,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-077",
+    "id": "tr-words-077",
     "type": "word",
     "fragments": [
-      "DUSK",
-      "Notice only the U."
+      "akşam karanlığı",
+      "Yalnızca ABD'ye dikkat edin."
     ],
     "topics": [
       "light",
@@ -1027,11 +1027,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-078",
+    "id": "tr-words-078",
     "type": "word",
     "fragments": [
-      "TWINE",
-      "Notice the W in the middle."
+      "SİCİM",
+      "Ortadaki W'ye dikkat edin."
     ],
     "topics": [
       "paper",
@@ -1040,11 +1040,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-079",
+    "id": "tr-words-079",
     "type": "word",
     "fragments": [
-      "QUAY",
-      "Let it sit."
+      "İSKELE",
+      "Bırak otursun."
     ],
     "topics": [
       "coast"
@@ -1052,11 +1052,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-080",
+    "id": "tr-words-080",
     "type": "word",
     "fragments": [
-      "EMBER",
-      "Let it sit."
+      "KOR",
+      "Bırak otursun."
     ],
     "topics": [
       "light"
@@ -1064,11 +1064,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-081",
+    "id": "tr-words-081",
     "type": "word",
     "fragments": [
-      "SPINE",
-      "First letter. Then the last."
+      "OMURGA",
+      "İlk mektup. Sonra sonuncusu."
     ],
     "topics": [
       "paper"
@@ -1076,11 +1076,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-082",
+    "id": "tr-words-082",
     "type": "word",
     "fragments": [
-      "MOSSY",
-      "Let it sit."
+      "YOSUNLU",
+      "Bırak otursun."
     ],
     "topics": [
       "forest",
@@ -1089,11 +1089,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-083",
+    "id": "tr-words-083",
     "type": "word",
     "fragments": [
-      "GULL",
-      "Let it sit."
+      "MARTI",
+      "Bırak otursun."
     ],
     "topics": [
       "coast"
@@ -1101,11 +1101,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-084",
+    "id": "tr-words-084",
     "type": "word",
     "fragments": [
-      "LINTEL",
-      "A quiet architectural word."
+      "LENTO",
+      "Sessiz bir mimari kelime."
     ],
     "topics": [
       "room"
@@ -1113,11 +1113,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-085",
+    "id": "tr-words-085",
     "type": "word",
     "fragments": [
-      "CIDER",
-      "Let it sit."
+      "elma şarabı",
+      "Bırak otursun."
     ],
     "topics": [
       "plants",
@@ -1126,11 +1126,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-086",
+    "id": "tr-words-086",
     "type": "word",
     "fragments": [
       "FLINT",
-      "Let it sit."
+      "Bırak otursun."
     ],
     "topics": [
       "stone"
@@ -1138,11 +1138,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-087",
+    "id": "tr-words-087",
     "type": "word",
     "fragments": [
-      "THISTLE",
-      "Let it sit."
+      "devedikeni",
+      "Bırak otursun."
     ],
     "topics": [
       "plants"
@@ -1150,11 +1150,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-words-088",
+    "id": "tr-words-088",
     "type": "word",
     "fragments": [
-      "HARBOR",
-      "Let it sit."
+      "LİMAN",
+      "Bırak otursun."
     ],
     "topics": [
       "coast"

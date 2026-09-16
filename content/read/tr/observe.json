@@ -1,11 +1,11 @@
 [
   {
-    "id": "en-observe-001",
+    "id": "tr-observe-001",
     "type": "observation",
     "fragments": [
-      "Watch the space",
-      "between these letters.",
-      "quiet"
+      "Alanı izle",
+      "bu harflerin arasında.",
+      "sessizlik"
     ],
     "topics": [
       "language"
@@ -13,12 +13,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-002",
+    "id": "tr-observe-002",
     "type": "observation",
     "fragments": [
-      "Follow this word",
-      "as it settles.",
-      "still"
+      "Bu sözü takip edin",
+      "yerleşirken.",
+      "Hala"
     ],
     "topics": [
       "language"
@@ -26,13 +26,13 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-003",
+    "id": "tr-observe-003",
     "type": "observation",
     "fragments": [
-      "Let your eyes rest",
-      "on the last word",
-      "a moment longer.",
-      "still"
+      "Bırak gözlerin dinlensin",
+      "son kelimede",
+      "bir dakika daha.",
+      "Hala"
     ],
     "topics": [
       "language"
@@ -40,11 +40,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-004",
+    "id": "tr-observe-004",
     "type": "observation",
     "fragments": [
-      "Notice the shape",
-      "of the letter S.",
+      "Şekline dikkat edin",
+      "S harfi.",
       "S"
     ],
     "topics": [
@@ -53,10 +53,10 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-005",
+    "id": "tr-observe-005",
     "type": "observation",
     "fragments": [
-      "Watch how O",
+      "Nasıl olduğunu izle",
       "is a small enclosed room.",
       "O"
     ],
@@ -66,24 +66,24 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-006",
+    "id": "tr-observe-006",
     "type": "observation",
     "fragments": [
-      "The word here can stay.",
-      "You do not have to hold it.",
-      "here"
+      "Söz burada kalabilir.",
+      "Tutmanıza gerek yok.",
+      "Burada"
     ],
     "topics": [
-      "quiet"
+      "sessizlik"
     ],
     "difficulty": 1
   },
   {
-    "id": "en-observe-007",
+    "id": "tr-observe-007",
     "type": "observation",
     "fragments": [
-      "Look at the tall line",
-      "in the letter L.",
+      "Uzun çizgiye bak",
+      "L harfinde.",
       "L"
     ],
     "topics": [
@@ -92,25 +92,25 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-008",
+    "id": "tr-observe-008",
     "type": "observation",
     "fragments": [
-      "A pause is also",
-      "a kind of sentence.",
-      "pause"
+      "Bir duraklama da",
+      "bir tür cümle.",
+      "duraklatma"
     ],
     "topics": [
-      "quiet"
+      "sessizlik"
     ],
     "difficulty": 1
   },
   {
-    "id": "en-observe-009",
+    "id": "tr-observe-009",
     "type": "observation",
     "fragments": [
-      "Watch the word slow appear",
-      "without hurrying it.",
-      "slow"
+      "Yavaş kelimesinin görünmesini izleyin",
+      "acele etmeden.",
+      "yavaş"
     ],
     "topics": [
       "language"
@@ -118,11 +118,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-010",
+    "id": "tr-observe-010",
     "type": "observation",
     "fragments": [
-      "The letter M",
-      "has two small peaks.",
+      "M harfi",
+      "iki küçük zirvesi vardır.",
       "M"
     ],
     "topics": [
@@ -131,24 +131,24 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-011",
+    "id": "tr-observe-011",
     "type": "observation",
     "fragments": [
-      "Let this line of text",
-      "be enough.",
-      "enough"
+      "Bu metin satırının",
+      "yeterli ol.",
+      "yeterli"
     ],
     "topics": [
-      "quiet"
+      "sessizlik"
     ],
     "difficulty": 1
   },
   {
-    "id": "en-observe-012",
+    "id": "tr-observe-012",
     "type": "observation",
     "fragments": [
-      "Notice how T",
-      "stands like a small table.",
+      "Nasıl T olduğuna dikkat edin",
+      "küçük bir masa gibi duruyor.",
       "T"
     ],
     "topics": [
@@ -157,11 +157,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-013",
+    "id": "tr-observe-013",
     "type": "observation",
     "fragments": [
-      "Follow the curve",
-      "in the letter C.",
+      "Eğriyi takip et",
+      "C harfinde.",
       "C"
     ],
     "topics": [
@@ -170,12 +170,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-014",
+    "id": "tr-observe-014",
     "type": "observation",
     "fragments": [
-      "The word now",
-      "is already leaving.",
-      "now"
+      "Şimdi kelime",
+      "zaten ayrılıyor.",
+      "Şimdi"
     ],
     "topics": [
       "time"
@@ -183,12 +183,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-015",
+    "id": "tr-observe-015",
     "type": "observation",
     "fragments": [
-      "Watch the gap",
-      "under the letter E.",
-      "E"
+      "Boşluğu izle",
+      "E harfinin altında.",
+      "e"
     ],
     "topics": [
       "language"
@@ -196,11 +196,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-016",
+    "id": "tr-observe-016",
     "type": "observation",
     "fragments": [
-      "A period is a very small",
-      "full stop of looking.",
+      "Bir dönem çok küçük bir",
+      "tam bakmayı bırak.",
       "."
     ],
     "topics": [
@@ -209,12 +209,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-017",
+    "id": "tr-observe-017",
     "type": "observation",
     "fragments": [
-      "Let the word soft",
-      "take its time.",
-      "soft"
+      "Kelimenin yumuşak olmasına izin ver",
+      "zamanını al.",
+      "yumuşak"
     ],
     "topics": [
       "language"
@@ -222,11 +222,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-018",
+    "id": "tr-observe-018",
     "type": "observation",
     "fragments": [
-      "The letter W",
-      "is two valleys.",
+      "W harfi",
+      "iki vadidir.",
       "W"
     ],
     "topics": [
@@ -235,23 +235,23 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-019",
+    "id": "tr-observe-019",
     "type": "observation",
     "fragments": [
-      "Stay with this sentence",
-      "until it feels complete."
+      "Bu cümleyle kalın",
+      "tamamlandığını hissedene kadar."
     ],
     "topics": [
-      "quiet"
+      "sessizlik"
     ],
     "difficulty": 1
   },
   {
-    "id": "en-observe-020",
+    "id": "tr-observe-020",
     "type": "observation",
     "fragments": [
-      "Notice the open space",
-      "inside the letter A.",
+      "Açık alana dikkat edin",
+      "A harfinin içinde.",
       "A"
     ],
     "topics": [
@@ -260,12 +260,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-021",
+    "id": "tr-observe-021",
     "type": "observation",
     "fragments": [
-      "The word quiet has five letters",
-      "and room around them.",
-      "quiet"
+      "Sessiz kelimesinin beş harfi var",
+      "ve etraflarında oda var.",
+      "sessizlik"
     ],
     "topics": [
       "language"
@@ -273,12 +273,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-022",
+    "id": "tr-observe-022",
     "type": "observation",
     "fragments": [
-      "Watch the word linger",
-      "without adding more.",
-      "linger"
+      "Oyalanmak kelimesine dikkat et",
+      "daha fazlasını eklemeden.",
+      "oyalanmak"
     ],
     "topics": [
       "language"
@@ -286,12 +286,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-023",
+    "id": "tr-observe-023",
     "type": "observation",
     "fragments": [
-      "The letter I",
-      "is a single thin presence.",
-      "I"
+      "Ben harfi",
+      "tek ve ince bir varlıktır.",
+      "BEN"
     ],
     "topics": [
       "language"
@@ -299,12 +299,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-024",
+    "id": "tr-observe-024",
     "type": "observation",
     "fragments": [
-      "Let your gaze travel",
-      "from the first word",
-      "to the last."
+      "Bakışlarınızın seyahat etmesine izin verin",
+      "ilk kelimeden itibaren",
+      "sonuna kadar."
     ],
     "topics": [
       "language"
@@ -312,11 +312,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-025",
+    "id": "tr-observe-025",
     "type": "observation",
     "fragments": [
-      "The comma is a small breath",
-      "on the line."
+      "Virgül küçük bir nefestir",
+      "hatta."
     ],
     "topics": [
       "language"
@@ -324,11 +324,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-026",
+    "id": "tr-observe-026",
     "type": "observation",
     "fragments": [
-      "Notice how H",
-      "has a little window.",
+      "H'nin nasıl olduğuna dikkat edin",
+      "küçük bir penceresi var.",
       "H"
     ],
     "topics": [
@@ -337,12 +337,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-027",
+    "id": "tr-observe-027",
     "type": "observation",
     "fragments": [
-      "The word still can mean not moving,",
-      "or even so.",
-      "still"
+      "Kelime hala hareket etmemek anlamına gelebilir,",
+      "hatta öyle bile.",
+      "Hala"
     ],
     "topics": [
       "language"
@@ -350,37 +350,24 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-028",
+    "id": "tr-observe-028",
     "type": "observation",
     "fragments": [
-      "Watch this phrase arrive,",
-      "then rest."
+      "Bu cümlenin gelişini izle,",
+      "sonra dinlenin."
     ],
     "topics": [
-      "quiet"
+      "sessizlik"
     ],
     "difficulty": 1
   },
   {
-    "id": "en-observe-029",
+    "id": "tr-observe-029",
     "type": "observation",
     "fragments": [
-      "The letter U",
-      "is a small bowl.",
-      "U"
-    ],
-    "topics": [
-      "language"
-    ],
-    "difficulty": 1
-  },
-  {
-    "id": "en-observe-030",
-    "type": "observation",
-    "fragments": [
-      "Let the word gentle sit",
-      "in the middle of the screen.",
-      "gentle"
+      "U harfi",
+      "küçük bir kasedir.",
+      "sen"
     ],
     "topics": [
       "language"
@@ -388,11 +375,24 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-031",
+    "id": "tr-observe-030",
     "type": "observation",
     "fragments": [
-      "Notice the foot",
-      "of the letter R.",
+      "Nazik kelimesinin oturmasına izin verin",
+      "ekranın ortasında.",
+      "nazik"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-observe-031",
+    "type": "observation",
+    "fragments": [
+      "Ayağa dikkat edin",
+      "R harfinin",
       "R"
     ],
     "topics": [
@@ -401,37 +401,24 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-032",
+    "id": "tr-observe-032",
     "type": "observation",
     "fragments": [
-      "A blank line",
-      "is also readable."
+      "Boş bir satır",
+      "da okunabilir."
     ],
     "topics": [
-      "quiet"
+      "sessizlik"
     ],
     "difficulty": 1
   },
   {
-    "id": "en-observe-033",
+    "id": "tr-observe-033",
     "type": "observation",
     "fragments": [
-      "The word paper has two p’s",
-      "standing near each other.",
-      "paper"
-    ],
-    "topics": [
-      "language"
-    ],
-    "difficulty": 1
-  },
-  {
-    "id": "en-observe-034",
-    "type": "observation",
-    "fragments": [
-      "Watch the letter Y",
-      "as a small fork.",
-      "Y"
+      "Kağıt kelimesinde iki p var",
+      "birbirine yakın duruyor.",
+      "kağıt"
     ],
     "topics": [
       "language"
@@ -439,23 +426,36 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-035",
+    "id": "tr-observe-034",
     "type": "observation",
     "fragments": [
-      "Let this be a slow looking,",
-      "not a task."
+      "Y harfine dikkat edin",
+      "küçük bir çatal olarak.",
+      "e"
     ],
     "topics": [
-      "quiet"
+      "language"
     ],
     "difficulty": 1
   },
   {
-    "id": "en-observe-036",
+    "id": "tr-observe-035",
     "type": "observation",
     "fragments": [
-      "The letter N",
-      "is a gate with a diagonal.",
+      "Bu yavaş bir bakış olsun,",
+      "bir görev değil."
+    ],
+    "topics": [
+      "sessizlik"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-observe-036",
+    "type": "observation",
+    "fragments": [
+      "N harfi",
+      "diyagonal bir kapıdır.",
       "N"
     ],
     "topics": [
@@ -464,12 +464,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-037",
+    "id": "tr-observe-037",
     "type": "observation",
     "fragments": [
-      "Notice the roundness",
-      "in the word moon.",
-      "moon"
+      "Yuvarlaklığa dikkat edin",
+      "ay kelimesinde.",
+      "ay"
     ],
     "topics": [
       "language"
@@ -477,12 +477,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-038",
+    "id": "tr-observe-038",
     "type": "observation",
     "fragments": [
-      "The word room contains",
-      "another room: oo.",
-      "room"
+      "Oda kelimesi şunları içerir:",
+      "başka bir oda: oo.",
+      "oda"
     ],
     "topics": [
       "language"
@@ -490,23 +490,23 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-039",
+    "id": "tr-observe-039",
     "type": "observation",
     "fragments": [
-      "Stay with the last phrase",
-      "after it appears."
+      "Son cümleyle kalın",
+      "göründükten sonra."
     ],
     "topics": [
-      "quiet"
+      "sessizlik"
     ],
     "difficulty": 1
   },
   {
-    "id": "en-observe-040",
+    "id": "tr-observe-040",
     "type": "observation",
     "fragments": [
-      "The letter B",
-      "has two small enclosed gardens.",
+      "B harfi",
+      "iki küçük kapalı bahçesi vardır.",
       "B"
     ],
     "topics": [
@@ -515,12 +515,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-041",
+    "id": "tr-observe-041",
     "type": "observation",
     "fragments": [
-      "Let the word open",
-      "do only what it says.",
-      "open"
+      "Kelimenin açılmasına izin ver",
+      "sadece ne diyorsa onu yap.",
+      "açık"
     ],
     "topics": [
       "language"
@@ -528,11 +528,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-042",
+    "id": "tr-observe-042",
     "type": "observation",
     "fragments": [
-      "Watch how serif letters",
-      "have tiny feet."
+      "Serif harflerin nasıl olduğunu izleyin",
+      "minik ayakları var."
     ],
     "topics": [
       "language"
@@ -540,12 +540,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-043",
+    "id": "tr-observe-043",
     "type": "observation",
     "fragments": [
-      "The word leaf is four letters",
-      "and a shape.",
-      "leaf"
+      "Yaprak kelimesi dört harften oluşur",
+      "ve bir şekil.",
+      "yaprak"
     ],
     "topics": [
       "plants"
@@ -553,23 +553,23 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-044",
+    "id": "tr-observe-044",
     "type": "observation",
     "fragments": [
-      "Notice the silence",
-      "after a short sentence."
+      "Sessizliğe dikkat edin",
+      "kısa bir cümlenin ardından."
     ],
     "topics": [
-      "quiet"
+      "sessizlik"
     ],
     "difficulty": 1
   },
   {
-    "id": "en-observe-045",
+    "id": "tr-observe-045",
     "type": "observation",
     "fragments": [
-      "The letter G almost closes,",
-      "then doesn’t.",
+      "G harfi neredeyse kapanıyor,",
+      "o zaman yapmaz.",
       "G"
     ],
     "topics": [
@@ -578,25 +578,25 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-046",
+    "id": "tr-observe-046",
     "type": "observation",
     "fragments": [
-      "Let the word here be a place,",
-      "not a demand.",
-      "here"
+      "Buradaki kelime bir yer olsun,",
+      "bir talep değil.",
+      "Burada"
     ],
     "topics": [
-      "quiet"
+      "sessizlik"
     ],
     "difficulty": 1
   },
   {
-    "id": "en-observe-047",
+    "id": "tr-observe-047",
     "type": "observation",
     "fragments": [
-      "Watch the word dusk",
-      "as if it were light leaving.",
-      "dusk"
+      "Alacakaranlık kelimesine dikkat edin",
+      "sanki ışık ayrılıyormuş gibi.",
+      "alacakaranlık"
     ],
     "topics": [
       "light"
@@ -604,23 +604,23 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-048",
+    "id": "tr-observe-048",
     "type": "observation",
     "fragments": [
-      "This line can end.",
-      "You can stay a second more."
+      "Bu hat bitebilir.",
+      "Bir saniye daha kalabilirsin."
     ],
     "topics": [
-      "quiet"
+      "sessizlik"
     ],
     "difficulty": 1
   },
   {
-    "id": "en-observe-049",
+    "id": "tr-observe-049",
     "type": "observation",
     "fragments": [
-      "Let this word be enough.",
-      "HARVEST"
+      "Bu söz yeter.",
+      "HASAT"
     ],
     "topics": [
       "language"
@@ -628,10 +628,10 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-050",
+    "id": "tr-observe-050",
     "type": "observation",
     "fragments": [
-      "One letter is a gate.",
+      "Bir harf bir kapıdır.",
       "H"
     ],
     "topics": [
@@ -640,23 +640,23 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-051",
+    "id": "tr-observe-051",
     "type": "observation",
     "fragments": [
-      "Read this once.",
-      "Then let your eyes rest past it."
+      "Bunu bir kez okuyun.",
+      "Daha sonra gözlerinizin üzerinden geçmesine izin verin."
     ],
     "topics": [
-      "quiet"
+      "sessizlik"
     ],
     "difficulty": 1
   },
   {
-    "id": "en-observe-052",
+    "id": "tr-observe-052",
     "type": "observation",
     "fragments": [
-      "WIDE",
-      "Notice how the word takes space."
+      "GENİŞ",
+      "Kelimenin nasıl yer kapladığına dikkat edin."
     ],
     "topics": [
       "language"
@@ -664,23 +664,23 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-053",
+    "id": "tr-observe-053",
     "type": "observation",
     "fragments": [
-      "The last word can be small.",
-      "ok"
+      "Son kelime küçük olabilir.",
+      "Tamam"
     ],
     "topics": [
-      "quiet"
+      "sessizlik"
     ],
     "difficulty": 1
   },
   {
-    "id": "en-observe-054",
+    "id": "tr-observe-054",
     "type": "observation",
     "fragments": [
-      "Follow the descenders —",
-      "the letters that dip below the line.",
+      "İnenleri takip edin —",
+      "çizginin altına inen harfler.",
       "g p y"
     ],
     "topics": [
@@ -689,12 +689,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-055",
+    "id": "tr-observe-055",
     "type": "observation",
     "fragments": [
-      "Hold this shape.",
+      "Bu şekli koruyun.",
       "O",
-      "A room with no furniture."
+      "Hiçbir mobilyası olmayan bir oda."
     ],
     "topics": [
       "language"
@@ -702,11 +702,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-056",
+    "id": "tr-observe-056",
     "type": "observation",
     "fragments": [
-      "A longer line can still be gentle:",
-      "the light on the wall is only visiting."
+      "Daha uzun bir çizgi hala yumuşak olabilir:",
+      "duvardaki ışık sadece ziyaret ediyor."
     ],
     "topics": [
       "light"
@@ -714,12 +714,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-057",
+    "id": "tr-observe-057",
     "type": "observation",
     "fragments": [
-      "Count nothing.",
-      "Just look at the word until it becomes marks.",
-      "RIVER"
+      "Hiçbir şeyi sayma.",
+      "İşaret haline gelene kadar kelimeye bakın.",
+      "NEHİR"
     ],
     "topics": [
       "water"
@@ -727,12 +727,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-058",
+    "id": "tr-observe-058",
     "type": "observation",
     "fragments": [
-      "Soft.",
-      "Then the word under it.",
-      "LINEN"
+      "Yumuşak.",
+      "Daha sonra altındaki kelime.",
+      "KETEN"
     ],
     "topics": [
       "cloth"
@@ -740,11 +740,11 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-059",
+    "id": "tr-observe-059",
     "type": "observation",
     "fragments": [
-      "Let the next word arrive without preparing a face for it.",
-      "STONE"
+      "Bir sonraki kelime ona yüz hazırlamadan gelsin.",
+      "TAŞ"
     ],
     "topics": [
       "stone"
@@ -752,12 +752,12 @@
     "difficulty": 1
   },
   {
-    "id": "en-observe-060",
+    "id": "tr-observe-060",
     "type": "observation",
     "fragments": [
-      "Stay on the comma,",
-      "if there is one,",
-      "or on the pause where a comma could be."
+      "Virgülde kal,",
+      "eğer biri varsa,",
+      "veya virgülün olabileceği duraklamada."
     ],
     "topics": [
       "language"
