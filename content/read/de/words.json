@@ -1,0 +1,1164 @@
+[
+  {
+    "id": "en-words-001",
+    "type": "word",
+    "fragments": [
+      "MOSS",
+      "Notice how little it needs."
+    ],
+    "topics": [
+      "plants",
+      "forest"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-002",
+    "type": "word",
+    "fragments": [
+      "This one.",
+      "LINEN",
+      "Follow the line of the L."
+    ],
+    "topics": [
+      "room",
+      "cloth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-003",
+    "type": "word",
+    "fragments": [
+      "ELEPHANT",
+      "Notice only the vowels."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-004",
+    "type": "word",
+    "fragments": [
+      "Look at this word.",
+      "WINDOW",
+      "Count the letters without naming them."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-005",
+    "type": "word",
+    "fragments": [
+      "QUIET",
+      "First letter.",
+      "Then the last."
+    ],
+    "topics": [
+      "room",
+      "quiet"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-006",
+    "type": "word",
+    "fragments": [
+      "A small word.",
+      "CLOUD",
+      "Follow the curve of the C."
+    ],
+    "topics": [
+      "sky"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-007",
+    "type": "word",
+    "fragments": [
+      "Notice the weight of the O.",
+      "STONE"
+    ],
+    "topics": [
+      "stone"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "choice",
+      "text": "If you can see a jacket or sweater, what color is it?",
+      "options": [
+        "blue",
+        "black",
+        "another color"
+      ]
+    }
+  },
+  {
+    "id": "en-words-008",
+    "type": "word",
+    "fragments": [
+      "RIVER",
+      "Let it sit."
+    ],
+    "topics": [
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-009",
+    "type": "word",
+    "fragments": [
+      "AMBER",
+      "Notice the warm shape of A."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-010",
+    "type": "word",
+    "fragments": [
+      "This one.",
+      "FEATHER",
+      "Let your eyes rest on the TH."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-011",
+    "type": "word",
+    "fragments": [
+      "MEADOW",
+      "Notice only the vowels."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-012",
+    "type": "word",
+    "fragments": [
+      "Look at this word.",
+      "SILVER",
+      "Follow the S as it turns."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-013",
+    "type": "word",
+    "fragments": [
+      "LANTERN",
+      "First letter.",
+      "Then the last."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-014",
+    "type": "word",
+    "fragments": [
+      "A small word.",
+      "KETTLE",
+      "The double T stands like a quiet gate."
+    ],
+    "topics": [
+      "room",
+      "home"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-015",
+    "type": "word",
+    "fragments": [
+      "Notice how V repeats, then rests.",
+      "VELVET"
+    ],
+    "topics": [
+      "room",
+      "cloth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-016",
+    "type": "word",
+    "fragments": [
+      "PAPER",
+      "Let it sit."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-017",
+    "type": "word",
+    "fragments": [
+      "HONEY",
+      "Notice only the O."
+    ],
+    "topics": [
+      "plants",
+      "food"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-018",
+    "type": "word",
+    "fragments": [
+      "This one.",
+      "BLANKET",
+      "Let the word take up its space."
+    ],
+    "topics": [
+      "room",
+      "home"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-019",
+    "type": "word",
+    "fragments": [
+      "GARDEN",
+      "Notice only the vowels."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-020",
+    "type": "word",
+    "fragments": [
+      "Look at this word.",
+      "CANDLE",
+      "Follow the word from left to right, once."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-021",
+    "type": "word",
+    "fragments": [
+      "BUTTON",
+      "First letter.",
+      "Then the last."
+    ],
+    "topics": [
+      "room",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-022",
+    "type": "word",
+    "fragments": [
+      "A small word.",
+      "WILLOW",
+      "Notice the W opening twice."
+    ],
+    "topics": [
+      "plants",
+      "forest"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-023",
+    "type": "word",
+    "fragments": [
+      "Look at the shape, not the meaning.",
+      "MARBLE"
+    ],
+    "topics": [
+      "stone"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-024",
+    "type": "word",
+    "fragments": [
+      "COTTON",
+      "Let it sit."
+    ],
+    "topics": [
+      "room",
+      "cloth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-025",
+    "type": "word",
+    "fragments": [
+      "SAUCER",
+      "Notice the curve of S and C."
+    ],
+    "topics": [
+      "room",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-026",
+    "type": "word",
+    "fragments": [
+      "This one.",
+      "ORANGE",
+      "Find the vowels and leave the rest."
+    ],
+    "topics": [
+      "plants",
+      "food"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-027",
+    "type": "word",
+    "fragments": [
+      "MIRROR",
+      "Notice only the vowels."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-028",
+    "type": "word",
+    "fragments": [
+      "Look at this word.",
+      "SHELL",
+      "Notice how small the word stays."
+    ],
+    "topics": [
+      "coast"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-029",
+    "type": "word",
+    "fragments": [
+      "TABLE",
+      "First letter.",
+      "Then the last."
+    ],
+    "topics": [
+      "room",
+      "home"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-030",
+    "type": "word",
+    "fragments": [
+      "A small word.",
+      "BREEZE",
+      "Follow the double E."
+    ],
+    "topics": [
+      "sky",
+      "weather"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-031",
+    "type": "word",
+    "fragments": [
+      "Notice the round O.",
+      "POCKET"
+    ],
+    "topics": [
+      "room",
+      "cloth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-032",
+    "type": "word",
+    "fragments": [
+      "THREAD",
+      "Let it sit."
+    ],
+    "topics": [
+      "paper",
+      "cloth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-033",
+    "type": "word",
+    "fragments": [
+      "LADDER",
+      "The double D is a quiet pair."
+    ],
+    "topics": [
+      "room",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-034",
+    "type": "word",
+    "fragments": [
+      "This one.",
+      "CURTAIN",
+      "Let the word stay. You do not have to hold it."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-035",
+    "type": "word",
+    "fragments": [
+      "PEBBLE",
+      "Notice only the vowels."
+    ],
+    "topics": [
+      "stone",
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-036",
+    "type": "word",
+    "fragments": [
+      "Look at this word.",
+      "YELLOW",
+      "Follow Y as it branches."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "environment",
+      "text": "Now find something yellow around you."
+    }
+  },
+  {
+    "id": "en-words-037",
+    "type": "word",
+    "fragments": [
+      "FOREST",
+      "First letter.",
+      "Then the last."
+    ],
+    "topics": [
+      "forest"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-038",
+    "type": "word",
+    "fragments": [
+      "A small word.",
+      "PILLOW",
+      "Soft letters. Double L."
+    ],
+    "topics": [
+      "room",
+      "home"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-039",
+    "type": "word",
+    "fragments": [
+      "Count the letters with your eyes only.",
+      "MAPLE"
+    ],
+    "topics": [
+      "plants",
+      "forest"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-040",
+    "type": "word",
+    "fragments": [
+      "SHADOW",
+      "Let it sit."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-041",
+    "type": "word",
+    "fragments": [
+      "CERAMIC",
+      "Follow the C at both ends."
+    ],
+    "topics": [
+      "room",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-042",
+    "type": "word",
+    "fragments": [
+      "This one.",
+      "NEEDLE",
+      "Double E in the middle."
+    ],
+    "topics": [
+      "plants",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-043",
+    "type": "word",
+    "fragments": [
+      "BASKET",
+      "Notice only the vowels."
+    ],
+    "topics": [
+      "room",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-044",
+    "type": "word",
+    "fragments": [
+      "Look at this word.",
+      "RAIN",
+      "Four letters. Plenty."
+    ],
+    "topics": [
+      "sky",
+      "weather"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-045",
+    "type": "word",
+    "fragments": [
+      "WOOL",
+      "First letter.",
+      "Then the last."
+    ],
+    "topics": [
+      "room",
+      "cloth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-046",
+    "type": "word",
+    "fragments": [
+      "A small word.",
+      "GINGER",
+      "Soft G twice."
+    ],
+    "topics": [
+      "plants",
+      "food"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-047",
+    "type": "word",
+    "fragments": [
+      "Let your eyes rest on TH.",
+      "CLOTH"
+    ],
+    "topics": [
+      "room",
+      "cloth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-048",
+    "type": "word",
+    "fragments": [
+      "BASIL",
+      "Let it sit."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-049",
+    "type": "word",
+    "fragments": [
+      "DRIFT",
+      "The word is already moving. You can stay."
+    ],
+    "topics": [
+      "coast",
+      "water"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "choice",
+      "text": "Are you sitting, standing, or somewhere in between?",
+      "options": [
+        "sitting",
+        "standing",
+        "in between"
+      ]
+    }
+  },
+  {
+    "id": "en-words-050",
+    "type": "word",
+    "fragments": [
+      "This one.",
+      "QUILT",
+      "Notice Q and U traveling together."
+    ],
+    "topics": [
+      "room",
+      "home"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-051",
+    "type": "word",
+    "fragments": [
+      "STITCH",
+      "Notice only the vowels."
+    ],
+    "topics": [
+      "room",
+      "cloth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-052",
+    "type": "word",
+    "fragments": [
+      "Look at this word.",
+      "OCEAN",
+      "Three vowels waiting."
+    ],
+    "topics": [
+      "coast",
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-053",
+    "type": "word",
+    "fragments": [
+      "LEMON",
+      "First letter.",
+      "Then the last."
+    ],
+    "topics": [
+      "plants",
+      "food"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-054",
+    "type": "word",
+    "fragments": [
+      "A small word.",
+      "BRANCH",
+      "Look at the A as a small roof."
+    ],
+    "topics": [
+      "forest",
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-055",
+    "type": "word",
+    "fragments": [
+      "Five letters, round at the start.",
+      "PEARL"
+    ],
+    "topics": [
+      "coast"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-056",
+    "type": "word",
+    "fragments": [
+      "HUMBLE",
+      "Let it sit."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-057",
+    "type": "word",
+    "fragments": [
+      "COPPER",
+      "Follow the double P."
+    ],
+    "topics": [
+      "light",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-058",
+    "type": "word",
+    "fragments": [
+      "This one.",
+      "IVORY",
+      "Notice only the vowels."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-059",
+    "type": "word",
+    "fragments": [
+      "GLASS",
+      "Notice only the vowels."
+    ],
+    "topics": [
+      "room",
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-060",
+    "type": "word",
+    "fragments": [
+      "Look at this word.",
+      "THYME",
+      "A small word. Let it sit."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-061",
+    "type": "word",
+    "fragments": [
+      "NICKEL",
+      "First letter.",
+      "Then the last."
+    ],
+    "topics": [
+      "stone",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-062",
+    "type": "word",
+    "fragments": [
+      "A small word.",
+      "FLOUR",
+      "Follow the word once, slowly."
+    ],
+    "topics": [
+      "room",
+      "food"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-063",
+    "type": "word",
+    "fragments": [
+      "Notice the C, then the rest of the shape.",
+      "CEDAR"
+    ],
+    "topics": [
+      "forest"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-064",
+    "type": "word",
+    "fragments": [
+      "PLUM",
+      "Let it sit."
+    ],
+    "topics": [
+      "plants",
+      "food"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-065",
+    "type": "word",
+    "fragments": [
+      "TIDE",
+      "In. Out. The letters stay."
+    ],
+    "topics": [
+      "coast",
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-066",
+    "type": "word",
+    "fragments": [
+      "FOAM",
+      "Notice how light the letters feel."
+    ],
+    "topics": [
+      "coast"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-067",
+    "type": "word",
+    "fragments": [
+      "One word.",
+      "PINE",
+      "Notice the I standing in the middle."
+    ],
+    "topics": [
+      "forest"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-068",
+    "type": "word",
+    "fragments": [
+      "HAZE",
+      "Follow H into the rest."
+    ],
+    "topics": [
+      "sky"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-069",
+    "type": "word",
+    "fragments": [
+      "PANE",
+      "First letter.",
+      "Then the last."
+    ],
+    "topics": [
+      "room",
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-070",
+    "type": "word",
+    "fragments": [
+      "INK",
+      "Three letters. Plenty."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-071",
+    "type": "word",
+    "fragments": [
+      "KITE",
+      "Notice only the vowels."
+    ],
+    "topics": [
+      "sky"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-072",
+    "type": "word",
+    "fragments": [
+      "GRANITE",
+      "Notice the weight of the word."
+    ],
+    "topics": [
+      "stone"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-073",
+    "type": "word",
+    "fragments": [
+      "LAMP",
+      "Let it sit."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-074",
+    "type": "word",
+    "fragments": [
+      "FROST",
+      "Soft at the edges."
+    ],
+    "topics": [
+      "sky",
+      "weather"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-075",
+    "type": "word",
+    "fragments": [
+      "HULL",
+      "First letter.",
+      "Then the last."
+    ],
+    "topics": [
+      "coast"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "environment",
+      "text": "If a color from the last word is nearby, rest on it for a moment."
+    }
+  },
+  {
+    "id": "en-words-076",
+    "type": "word",
+    "fragments": [
+      "IVY",
+      "Three letters climbing."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-077",
+    "type": "word",
+    "fragments": [
+      "DUSK",
+      "Notice only the U."
+    ],
+    "topics": [
+      "light",
+      "night"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-078",
+    "type": "word",
+    "fragments": [
+      "TWINE",
+      "Notice the W in the middle."
+    ],
+    "topics": [
+      "paper",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-079",
+    "type": "word",
+    "fragments": [
+      "QUAY",
+      "Let it sit."
+    ],
+    "topics": [
+      "coast"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-080",
+    "type": "word",
+    "fragments": [
+      "EMBER",
+      "Let it sit."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-081",
+    "type": "word",
+    "fragments": [
+      "SPINE",
+      "First letter. Then the last."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-082",
+    "type": "word",
+    "fragments": [
+      "MOSSY",
+      "Let it sit."
+    ],
+    "topics": [
+      "forest",
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-083",
+    "type": "word",
+    "fragments": [
+      "GULL",
+      "Let it sit."
+    ],
+    "topics": [
+      "coast"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-084",
+    "type": "word",
+    "fragments": [
+      "LINTEL",
+      "A quiet architectural word."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-085",
+    "type": "word",
+    "fragments": [
+      "CIDER",
+      "Let it sit."
+    ],
+    "topics": [
+      "plants",
+      "food"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-086",
+    "type": "word",
+    "fragments": [
+      "FLINT",
+      "Let it sit."
+    ],
+    "topics": [
+      "stone"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-087",
+    "type": "word",
+    "fragments": [
+      "THISTLE",
+      "Let it sit."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-words-088",
+    "type": "word",
+    "fragments": [
+      "HARBOR",
+      "Let it sit."
+    ],
+    "topics": [
+      "coast"
+    ],
+    "difficulty": 1
+  }
+]

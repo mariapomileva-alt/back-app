@@ -1,15 +1,46 @@
-import { getLocales } from 'expo-localization';
-
+import de from './de.json';
 import en from './en.json';
+import es from './es.json';
+import fr from './fr.json';
+import it from './it.json';
+import nl from './nl.json';
+import pl from './pl.json';
+import ptBr from './pt-BR.json';
+import ru from './ru.json';
+import tr from './tr.json';
+import {
+  loadLanguagePreference,
+  peekLanguagePreference,
+  resolveUiLocale,
+} from '@/storage/languagePreference';
+import type { UiLocale } from './locale';
 
 type MessageTree = { [key: string]: string | MessageTree };
 
 const english = en as MessageTree;
 
-/** English is the only complete locale. Missing catalogs and keys fall back to it. */
-const catalogs: Record<string, MessageTree> = {
+const catalogs: Record<UiLocale, MessageTree> = {
   en: english,
+  es: es as MessageTree,
+  de: de as MessageTree,
+  fr: fr as MessageTree,
+  'pt-BR': ptBr as MessageTree,
+  ru: ru as MessageTree,
+  it: it as MessageTree,
+  pl: pl as MessageTree,
+  nl: nl as MessageTree,
+  tr: tr as MessageTree,
 };
+
+let activeUiLocale: UiLocale = 'en';
+
+export function setActiveUiLocale(locale: UiLocale): void {
+  activeUiLocale = locale;
+}
+
+export function getActiveUiLocale(): UiLocale {
+  return activeUiLocale;
+}
 
 function readPath(tree: MessageTree, path: string): string | undefined {
   const parts = path.split('.');
@@ -26,8 +57,7 @@ function readPath(tree: MessageTree, path: string): string | undefined {
 }
 
 function resolveCatalog(): MessageTree {
-  const language = getLocales()[0]?.languageCode ?? 'en';
-  return catalogs[language] ?? english;
+  return catalogs[activeUiLocale] ?? english;
 }
 
 export function t(path: string, vars?: Record<string, string | number>): string {
@@ -39,4 +69,18 @@ export function t(path: string, vars?: Record<string, string | number>): string 
     }
   }
   return value;
+}
+
+/** Bootstraps locale before React mounts (SplashScreen). */
+export async function bootstrapI18nLocale(): Promise<UiLocale> {
+  const peeked = peekLanguagePreference();
+  if (peeked !== undefined) {
+    const effective = resolveUiLocale(peeked);
+    setActiveUiLocale(effective);
+    return effective;
+  }
+  const stored = await loadLanguagePreference();
+  const effective = resolveUiLocale(stored);
+  setActiveUiLocale(effective);
+  return effective;
 }

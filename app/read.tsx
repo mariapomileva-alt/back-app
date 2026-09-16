@@ -11,6 +11,7 @@ import {
   extendReadSession,
   rememberShownId,
 } from '@/features/read/attentionEngine';
+import { resolveReadLanguage } from '@/features/read/language';
 import { loadReadPack } from '@/features/read/packs';
 import { loadReadMemory, saveReadMemory } from '@/features/read/storage';
 import type { ReadMemory, ReadSession } from '@/features/read/types';
@@ -45,7 +46,8 @@ export default function ReadScreen() {
       if (cancelled) {
         return;
       }
-      const nextSession = createReadSession(loadReadPack(), stored);
+      const readLanguage = resolveReadLanguage(stored.language);
+      const nextSession = createReadSession(loadReadPack(readLanguage), stored);
       const started = beginReadSession(stored, nextSession);
       const first = nextSession.fragments[0];
       shownItems.current = new Set(first ? [first.itemId] : []);

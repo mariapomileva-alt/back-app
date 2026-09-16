@@ -1,0 +1,727 @@
+[
+  {
+    "id": "en-notice-001",
+    "type": "observation",
+    "fragments": [
+      "Find one word",
+      "you can see around you."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-notice-002",
+    "type": "observation",
+    "fragments": [
+      "Notice one color",
+      "near your hands."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-notice-003",
+    "type": "observation",
+    "fragments": [
+      "Find an edge",
+      "where two surfaces meet."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-notice-004",
+    "type": "observation",
+    "fragments": [
+      "Look for something",
+      "that is still."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-notice-005",
+    "type": "observation",
+    "fragments": [
+      "Find one thing",
+      "that is slightly closer",
+      "than the rest."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-notice-006",
+    "type": "observation",
+    "fragments": [
+      "Notice a shadow,",
+      "even a small one."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-notice-007",
+    "type": "observation",
+    "fragments": [
+      "Find a straight line",
+      "somewhere nearby."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-notice-008",
+    "type": "observation",
+    "fragments": [
+      "Look for a curve",
+      "instead of a corner."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-notice-009",
+    "type": "observation",
+    "fragments": [
+      "Notice one texture",
+      "you are not touching."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-notice-010",
+    "type": "observation",
+    "fragments": [
+      "Find something that is matte,",
+      "not shiny."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-notice-011",
+    "type": "observation",
+    "fragments": [
+      "Look for a patch",
+      "of softer light."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-notice-012",
+    "type": "observation",
+    "fragments": [
+      "Find one object",
+      "that could fit in a pocket."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-notice-013",
+    "type": "observation",
+    "fragments": [
+      "Notice the farthest thing",
+      "you can see from here."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-notice-014",
+    "type": "observation",
+    "fragments": [
+      "Find a word printed",
+      "somewhere nearby."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-notice-015",
+    "type": "observation",
+    "fragments": [
+      "Look at the space",
+      "between two objects."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-notice-016",
+    "type": "observation",
+    "fragments": [
+      "Notice something",
+      "that is mostly one color."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-notice-017",
+    "type": "observation",
+    "fragments": [
+      "Find a surface",
+      "that looks cool to the touch."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-notice-018",
+    "type": "observation",
+    "fragments": [
+      "Look for something",
+      "vertical."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-notice-019",
+    "type": "observation",
+    "fragments": [
+      "Notice a place",
+      "where dust might gather."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-notice-020",
+    "type": "observation",
+    "fragments": [
+      "Find one thing",
+      "made of paper or card."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-notice-021",
+    "type": "observation",
+    "fragments": [
+      "Look for a reflection,",
+      "even a faint one."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-notice-022",
+    "type": "observation",
+    "fragments": [
+      "Notice the weight",
+      "of what you are sitting",
+      "or standing on."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-notice-023",
+    "type": "observation",
+    "fragments": [
+      "Find a corner of the room",
+      "and rest your eyes there."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-notice-024",
+    "type": "observation",
+    "fragments": [
+      "Look for something",
+      "older than this week."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-notice-025",
+    "type": "observation",
+    "fragments": [
+      "Notice one sound,",
+      "then let it pass."
+    ],
+    "topics": [
+      "quiet"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-notice-026",
+    "type": "observation",
+    "fragments": [
+      "Find a rectangle",
+      "somewhere around you."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-notice-027",
+    "type": "observation",
+    "fragments": [
+      "Look at the ceiling",
+      "for one slow breath of looking."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-notice-028",
+    "type": "observation",
+    "fragments": [
+      "Notice whether the light",
+      "is even or patchy."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-notice-029",
+    "type": "observation",
+    "fragments": [
+      "Find something",
+      "you could name in one word."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-notice-030",
+    "type": "observation",
+    "fragments": [
+      "Look for a fold,",
+      "a seam, or a joint."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-notice-031",
+    "type": "observation",
+    "fragments": [
+      "Notice one thing",
+      "that is empty on purpose."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-notice-032",
+    "type": "observation",
+    "fragments": [
+      "Find a plant,",
+      "or the idea of a plant",
+      "in a picture."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-notice-033",
+    "type": "observation",
+    "fragments": [
+      "Look at your own sleeve or cuff",
+      "for a moment."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-notice-034",
+    "type": "observation",
+    "fragments": [
+      "Notice a temperature difference,",
+      "even a small one."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-notice-035",
+    "type": "observation",
+    "fragments": [
+      "Find a number",
+      "somewhere nearby."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-notice-036",
+    "type": "observation",
+    "fragments": [
+      "Look for something that leans,",
+      "even slightly."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-notice-037",
+    "type": "observation",
+    "fragments": [
+      "Notice the path your eyes took",
+      "to get here."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-notice-038",
+    "type": "observation",
+    "fragments": [
+      "Find a circle or an oval",
+      "in the room."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-notice-039",
+    "type": "observation",
+    "fragments": [
+      "Look at the floor",
+      "where it meets a wall."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-notice-040",
+    "type": "observation",
+    "fragments": [
+      "Notice one thing",
+      "you have not used today."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-notice-041",
+    "type": "observation",
+    "fragments": [
+      "Find a quiet color,",
+      "not a loud one."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-notice-042",
+    "type": "observation",
+    "fragments": [
+      "Look for writing",
+      "that is not a screen."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-notice-043",
+    "type": "observation",
+    "fragments": [
+      "Notice how far your feet are",
+      "from each other."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-notice-044",
+    "type": "observation",
+    "fragments": [
+      "Find something stacked,",
+      "even two things."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-notice-045",
+    "type": "observation",
+    "fragments": [
+      "Look at a doorway",
+      "or the idea of a doorway."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-notice-046",
+    "type": "observation",
+    "fragments": [
+      "Notice one thing",
+      "that is slightly worn."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-notice-047",
+    "type": "observation",
+    "fragments": [
+      "Find the nearest source of daylight,",
+      "if there is one."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-notice-048",
+    "type": "observation",
+    "fragments": [
+      "Look once more,",
+      "then choose one detail to keep."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-notice-049",
+    "type": "observation",
+    "fragments": [
+      "Find a cool surface",
+      "and rest your attention there, not your hand."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-notice-050",
+    "type": "observation",
+    "fragments": [
+      "If there is a window,",
+      "notice what it frames.",
+      "If not, notice a wall."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-notice-051",
+    "type": "observation",
+    "fragments": [
+      "Look for a straight line",
+      "that is not a letter."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-notice-052",
+    "type": "observation",
+    "fragments": [
+      "Notice whether the light is even",
+      "or gathered in one place."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-notice-053",
+    "type": "observation",
+    "fragments": [
+      "Find something that has been folded",
+      "or could be folded."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-notice-054",
+    "type": "observation",
+    "fragments": [
+      "A sound far away, if there is one.",
+      "You do not need to name it."
+    ],
+    "topics": [
+      "quiet"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-notice-055",
+    "type": "observation",
+    "fragments": [
+      "Look at the floor",
+      "as if it were a landscape."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-notice-056",
+    "type": "observation",
+    "fragments": [
+      "Find a round thing.",
+      "Even a button counts."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-notice-057",
+    "type": "observation",
+    "fragments": [
+      "Notice one temperature difference",
+      "near you — a cooler edge, a warmer patch."
+    ],
+    "topics": [
+      "home"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-notice-058",
+    "type": "observation",
+    "fragments": [
+      "If you can see outdoors,",
+      "find the simplest shape in view.",
+      "If not, find one indoors."
+    ],
+    "topics": [
+      "sky"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-notice-059",
+    "type": "observation",
+    "fragments": [
+      "Keep one detail from the last minute.",
+      "You do not need to say it."
+    ],
+    "topics": [
+      "quiet"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "en-notice-060",
+    "type": "observation",
+    "fragments": [
+      "Find something that is not trying",
+      "to be looked at."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  }
+]

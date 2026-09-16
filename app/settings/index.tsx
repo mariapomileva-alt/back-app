@@ -10,6 +10,7 @@ import { getEmergencyByCountryCode } from '@/features/emergency/numbers';
 import { formatBackPlusDate } from '@/features/subscription/formatBackPlusDate';
 import { openBackPlusPaywall } from '@/features/subscription/openBackPlusPaywall';
 import { useBackPlusAccess } from '@/features/subscription/useBackPlusAccess';
+import { useLocale } from '@/hooks/useLocale';
 import { useTheme } from '@/hooks/useTheme';
 import { t } from '@/locales/i18n';
 import { loadEmergencyCountryCode } from '@/storage/emergencyCountry';
@@ -39,6 +40,7 @@ function backPlusSubtitle(access: ReturnType<typeof useBackPlusAccess>): string 
 
 export default function SettingsScreen() {
   const router = useRouter();
+  const { nativeName: languageName } = useLocale();
   const { themeName, hapticsEnabled, reduceMotionOverride, setHapticsEnabled, setReduceMotionOverride } =
     useTheme();
   const [emergencyCountry, setEmergencyCountry] = useState<string | null>(null);
@@ -78,6 +80,12 @@ export default function SettingsScreen() {
             value={t(`themes.${themeName}`)}
             accessibilityHint={t('settings.themeHint')}
             onPress={() => openPaidExperience('/settings/themes')}
+          />
+          <SettingsRow
+            label={t('settings.language')}
+            value={languageName}
+            accessibilityHint={t('settings.languageHint')}
+            onPress={() => router.push('/settings/language')}
           />
           <SettingsRow
             label={t('settings.voice')}

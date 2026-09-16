@@ -6,6 +6,7 @@ import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
 
 import { useBindSessionAppState } from '@/hooks/useActiveSession';
+import { LocaleProvider } from '@/providers/LocaleProvider';
 import { ThemeProvider, useTheme } from '@/providers/ThemeProvider';
 import { motion } from '@/theme/motion';
 
@@ -40,7 +41,9 @@ export default function RootLayout() {
   return (
     <GestureHandlerRootView style={styles.root}>
       <ThemeProvider>
-        <RootNavigation />
+        <LocaleProvider>
+          <RootNavigation />
+        </LocaleProvider>
       </ThemeProvider>
     </GestureHandlerRootView>
   );

@@ -1,0 +1,477 @@
+{
+  "app": {
+    "name": "Zurück"
+  },
+  "home": {
+    "hero": "Du bist hier.",
+    "prompt": "Was fühlt sich im Moment möglich an?",
+    "openSettings": "Einstellungen öffnen",
+    "openSettingsHint": "Öffnet Design, Privatsphäre und andere ruhige Einstellungen",
+    "startToolHint": "Beginnt sofort mit dem Support",
+    "callMyPerson": "Brauchen Sie jemanden? Rufen Sie meine Person an",
+    "callMyPersonNeed": "Brauchen Sie jemanden?",
+    "callMyPersonAction": "Rufen Sie meine Person an",
+    "callMyPersonHint": "Öffnet Ihren Supportkontakt",
+    "tools": {
+      "breathe": "Atmen",
+      "distract": "Ablenken",
+      "ground": "Boden",
+      "move": "Bewegen",
+      "listen": "Hören",
+      "read": "Lesen"
+    }
+  },
+  "common": {
+    "close": "Schließen",
+    "closeHint": "Kehrt zum vorherigen Bildschirm zurück",
+    "back": "Zurück",
+    "selected": "Ausgewählt",
+    "on": "An",
+    "off": "Aus",
+    "play": "Spielen",
+    "pause": "Pause",
+    "mute": "Stumm",
+    "unmute": "Stummschaltung aufheben",
+    "replay": "Wiederholung",
+    "next": "Nächste"
+  },
+  "settings": {
+    "title": "Einstellungen",
+    "theme": "Aussehen",
+    "themeHint": "Wählen Sie den Look von Back",
+    "voice": "Stimme und Ton",
+    "haptics": "Haptik",
+    "hapticsHint": "Schaltet sanftes haptisches Feedback ein oder aus",
+    "reduceMotion": "Bewegung reduzieren",
+    "reduceMotionHint": "Verwendet ruhigere Bewegungen, auch wenn Ihr System Animationen zulässt",
+    "language": "Sprache",
+    "languageHint": "Ändert sofort die Sprache von Back auf diesem Gerät",
+    "languageBlockedDuringSession": "Beenden oder schließen Sie zuerst Ihren aktuellen Support, dann können Sie die Sprache ändern.",
+    "languageBlockedDuringSessionHint": "Die Sprache kann sich während einer aktiven Sitzung nicht ändern",
+    "languageSystemDefault": "Verwenden Sie die Gerätesprache",
+    "languageComingSoon": "Kommt bald",
+    "read": "Lesen Sie die Einstellungen",
+    "readHint": "Wählen Sie aus, wie schnell Linien angezeigt werden",
+    "supportContact": "Support-Kontakt",
+    "patterns": "Meine Muster",
+    "subscription": "Abonnement",
+    "backPlus": "Zurück Plus",
+    "backPlusHint": "Öffnet Back Plus-Informationen",
+    "backPlusSubtitleTrial": "Testversion aktiv · endet am {Datum}",
+    "backPlusSubtitleAnnual": "Jahresplan · verlängert am {Datum}",
+    "backPlusSubtitleMonthly": "Monatsplan · verlängert am {Datum}",
+    "backPlusSubtitleRequired": "Abonnement erforderlich",
+    "backPlusSubtitleUnavailable": "Abonnementinformationen",
+    "privacy": "Privatsphäre",
+    "terms": "Nutzungsbedingungen",
+    "emergency": "Zusätzliche Unterstützung",
+    "about": "Über Zurück",
+    "groups": {
+      "experience": "Erfahrung",
+      "personal": "Persönlich",
+      "safetyLegal": "Sicherheit und Recht"
+    }
+  },
+  "themes": {
+    "title": "Thema",
+    "warmNeutral": "Warme Erde",
+    "deepGreen": "Wald",
+    "softBeige": "Weicher Salbei",
+    "selectHint": "Wendet diesen Look sofort an"
+  },
+  "patterns": {
+    "intro": "Dies bleibt auf diesem Gerät. Back lädt es nie hoch.",
+    "breathe": "Muster „Letzter Atemzug“.",
+    "distract": "Letzte Distract-Aktivität",
+    "listen": "Letzter Hörton",
+    "theme": "Letztes Thema",
+    "haptics": "Haptik",
+    "reduceMotion": "Bewegung reduzieren",
+    "empty": "Noch nicht gespeichert",
+    "recent": "Aktuelle Tools",
+    "recentItem": "Kürzlich: {tool} · {duration}",
+    "durationShort": "eine kurze Weile",
+    "durationMinute": "etwa eine Minute",
+    "durationFew": "ein paar Minuten",
+    "forget": "Vergiss das",
+    "forgetHint": "Entfernt diese gespeicherten Auswahlmöglichkeiten und zuletzt verwendeten Tools von diesem Gerät"
+  },
+  "session": {
+    "outcome": "Wie fühlst du dich jetzt?",
+    "alternatives": "Wir können etwas anderes ausprobieren.",
+    "better": "Etwas besser",
+    "same": "Ungefähr das Gleiche",
+    "worse": "Schlechter",
+    "betterBody": "Nehmen Sie sich Zeit. Sie können jederzeit wiederkommen.",
+    "sameBody": "Wir können etwas anderes ausprobieren.",
+    "worseBody": "Lasst uns mehr Unterstützung bekommen.",
+    "done": "Erledigt",
+    "share": "Teilen Zurück",
+    "shareMessage": "Zurück ist stille Unterstützung für die nächste Minute. Sechs Werkzeuge auf diesem Gerät.",
+    "shareHint": "Öffnet das Systemfreigabeblatt. Es wird nichts gesendet, bis Sie auswählen, wohin.",
+    "shareUnavailable": "Das Teilen ist hier nicht verfügbar.",
+    "callPerson": "Rufen Sie meine Person an",
+    "emergency": "Zusätzliche Unterstützung",
+    "returnTools": "Zurück zu den Werkzeugen",
+    "tryElse": "Versuchen Sie etwas anderes",
+    "tryElseHint": "Wählen Sie eine andere Art der Unterstützung"
+  },
+  "extraSupport": {
+    "title": "Zusätzliche Unterstützung",
+    "heading": "Brauchen Sie etwas mehr Unterstützung?",
+    "steps": {
+      "feet": "Stellen Sie beide Füße auf den Boden.",
+      "breath": "Lassen Sie Ihren Atem sanft bleiben. \nErzwinge es nicht.",
+      "water": "Trinken Sie einen kleinen Schluck Wasser \nfalls du welche hast.",
+      "see": "Schauen Sie sich um und benennen Sie \nDrei Dinge, die Sie sehen können.",
+      "now": "Du musst nicht rechnen \njetzt alles raus."
+    },
+    "callMyPerson": "Rufen Sie meine Person an",
+    "messageMyPerson": "Nachricht an meine Person",
+    "chooseSomeone": "Wählen Sie jemanden, dem ich vertraue",
+    "chooseSomeoneHint": "Öffnet einen privaten Kontakt, den Sie auf diesem Gerät behalten",
+    "callHint": "Öffnet die Telefon-App. Der Anruf startet erst, wenn Sie bestätigen.",
+    "messageHint": "Öffnet Nachrichten. Es wird nichts gesendet, bis Sie es senden.",
+    "urgentTitle": "Brauchen Sie dringend Hilfe?",
+    "urgentBody": "Wenn Sie glauben, dass Sie dringend medizinische Hilfe benötigen könnten, \nWenden Sie sich an Ihren örtlichen Notdienst.",
+    "emergencyHelp": "Notfallhilfe · {number}",
+    "urgentInCountry": "Dringende Hilfe in {Land}",
+    "emergencyHint": "Öffnet die Telefon-App. Der Anruf startet erst, wenn Sie bestätigen.",
+    "findLocal": "Finden Sie lokale Nothilfe",
+    "chooseCountry": "Wählen Sie ein Land",
+    "changeCountry": "Land ändern",
+    "keepCountry": "Behalte dieses Land",
+    "keepCountryHint": "Speichert dieses Land für das nächste Mal auf diesem Gerät",
+    "savedCountry": "Auf diesem Gerät gespeichert"
+  },
+  "supportSetup": {
+    "title": "Jemand, dem ich vertraue",
+    "intro": "Dies bleibt auf diesem Gerät. Back lädt es nie hoch.",
+    "name": "Name",
+    "nameHint": "Ein Name, den Sie wiedererkennen werden",
+    "phone": "Telefonnummer",
+    "phoneHint": "Wird nur für Anrufe oder Nachrichten von hier aus verwendet",
+    "save": "Speichern",
+    "clear": "Von diesem Gerät entfernen",
+    "change": "Ändere diese Person",
+    "localNote": "Hier wird nichts an Back oder jemand anderen gesendet."
+  },
+  "exercise": {
+    "progress": "{current} von {total}",
+    "elapsed": "Verstrichene Zeit",
+    "okay": "Im Moment geht es mir gut",
+    "okayHint": "Beendet diesen Support. Nach etwa 20 Sekunden fragt er, wie es Ihnen geht.",
+    "closeSession": "Sitzung schließen",
+    "closeHint": "Beendet diese Unterstützung und kehrt nach Hause zurück oder fragt, wie Sie sich nach einer kurzen Sitzung fühlen.",
+    "tryAnother": "Versuchen Sie es mit einem anderen",
+    "tryAnotherHint": "Wählt hier eine andere Aktivität aus, ohne diesen Support zu beenden.",
+    "breatheUncomfortable": "Das Atmen fühlt sich unangenehm an",
+    "moveUncomfortable": "Bewegung fühlt sich nicht richtig an"
+  },
+  "breathe": {
+    "inhale": "Atme sanft ein",
+    "exhale": "Atmen Sie langsam aus",
+    "hold": "Halten",
+    "circle": "Atemkreis",
+    "patternHint": "Ändert den Atemrhythmus",
+    "menu": "Atemmuster",
+    "menuHint": "Öffnet die Liste der stillen Muster",
+    "tryAnotherHint": "Öffnet die Atemmusterliste",
+    "patterns": {
+      "gentle": "Sanft 4/6",
+      "equal": "Gleich 4/4",
+      "box": "Kasten 4-4-4-4"
+    }
+  },
+  "distract": {
+    "choose": "Wählen Sie etwas Einfaches.",
+    "menu": "Menü ablenken",
+    "menuHint": "Kehrt zur Aktivitätsliste zurück",
+    "change": "Aktivität ändern",
+    "changeHint": "Öffnet die Liste der stillen Aktivitäten",
+    "tryAnotherHint": "Öffnet die Liste der stillen Aktivitäten",
+    "soundOn": "Ton an",
+    "soundOff": "Ton aus",
+    "soundOnHint": "Schaltet Spieltöne ein",
+    "soundOffHint": "Schaltet Spieltöne aus",
+    "activities": {
+      "shapes": "Formen",
+      "blocks": "Blöcke",
+      "snake": "Schlange",
+      "catch": "Fangen"
+    },
+    "shapes": {
+      "instruction": "Finden Sie die passende Form.",
+      "names": {
+        "circle": "Kreis",
+        "square": "Quadrat",
+        "triangle": "Dreieck",
+        "quarter": "Viertelkreis"
+      },
+      "colors": {
+        "forest": "Wald",
+        "sage": "Salbei",
+        "sand": "Sand",
+        "clay": "Ton",
+        "cool": "Cool"
+      }
+    },
+    "blocks": {
+      "instruction": "Platzieren Sie eine Form. Eine durchgezogene Zeile verschwindet.",
+      "empty": "Leerer Raum",
+      "filled": "Gefüllter Raum",
+      "tray": "Formen zum Platzieren",
+      "selectHint": "Wählt diese Form aus. Wählen Sie dann eine Stelle im Raster aus oder ziehen Sie sie dorthin.",
+      "placeHint": "Ausgewählt. Tippen Sie zweimal auf eine Stelle im Raster, um es zu platzieren, oder tippen Sie erneut zweimal, um es zu drehen.",
+      "turn": "Drehen",
+      "turnHint": "Dreht die ausgewählte Form",
+      "cellEmpty": "Zeile {row}, Spalte {col}, leer",
+      "cellFilled": "Zeile {row}, Spalte {col}, gefüllt",
+      "cellPlace": "Platzieren Sie {piece} in Zeile {row}, Spalte {col}",
+      "pieces": {
+        "twin": "Paar",
+        "bar": "Bar",
+        "elbow": "Ecke",
+        "tile": "Fliese",
+        "arch": "Bogen"
+      }
+    },
+    "snake": {
+      "instruction": "Führe die Schlange und sammle sie ein.",
+      "field": "Ruhiger Weg",
+      "left": "Links",
+      "right": "Rechts",
+      "up": "Hoch",
+      "down": "Runter"
+    },
+    "catch": {
+      "instruction": "Tippen Sie auf den Kreis, so wie er erscheint.",
+      "target": "Kreis",
+      "targetHint": "Der Kreis, den Sie antippen können"
+    }
+  },
+  "read": {
+    "canvas": "Lektüre",
+    "revealHint": "Zeigt die nächste Zeile an. Linien erscheinen auch einzeln.",
+    "pausedHint": "Leitungen werden pausiert. Doppeltippen, um die nächste Zeile anzuzeigen.",
+    "pause": "Halten Sie die Zeilen an",
+    "pauseHint": "Verhindert, dass Zeilen von selbst angezeigt werden. Sie können weiterhin auf tippen, um fortzufahren.",
+    "continue": "Setzen Sie die Zeilen fort",
+    "continueHint": "Lässt Linien wieder von selbst erscheinen.",
+    "tryAnotherHint": "Startet hier einen neuen Lesethread",
+    "speedHint": "Wie schnell jede Zeile erscheint. Tippen Sie auf eine beliebige Stelle, um sofort die nächste Zeile anzuzeigen.",
+    "speeds": {
+      "unhurried": "Ohne Eile",
+      "steady": "Stetig",
+      "quick": "Schnell"
+    },
+    "speedBoostOff": "Schneller lesen",
+    "speedBoostOffHint": "Zeigt jede Zeile für diese Sitzung etwa doppelt so schnell an.",
+    "speedBoostOn": "Schnelleres Lesen, weiter",
+    "speedBoostOnHint": "Linien entstehen etwa doppelt so schnell. Doppeltippen, um zur normalen Geschwindigkeit zurückzukehren."
+  },
+  "ground": {
+    "previous": "Vorherige Anweisung",
+    "previousHint": "Zeigt die vorherige Erdungsanweisung an",
+    "next": "Nächste Anweisung",
+    "nextHint": "Zeigt die nächste Erdungsanweisung an",
+    "continueHint": "Zeigt die nächste Erdungsanweisung an",
+    "menu": "Erdungsmenü",
+    "menuHint": "Öffnet die Ruheerdungsliste",
+    "tryAnotherHint": "Öffnet die Ruheerdungsliste",
+    "sequences": {
+      "feetBody": "Füße & Körper",
+      "fiveSenses": "5–4–3–2–1",
+      "lookAround": "Schauen Sie sich um",
+      "texture": "Textur und Temperatur"
+    },
+    "steps": {
+      "feet": "Spüren Sie, wo Ihre Füße den Boden berühren.",
+      "toes": "Bewegen Sie Ihre Zehen sanft.",
+      "weight": "Beachten Sie das Gewicht Ihrer Füße.",
+      "support": "Spüren Sie, was Ihren Körper stützt.",
+      "hands": "Beachten Sie Ihre Hände.",
+      "shoulders": "Lassen Sie Ihre Schultern weich werden.",
+      "stay": "Bleiben Sie noch einen Moment hier."
+    },
+    "fiveSenses": {
+      "see": "Schauen Sie sich um. Nennen Sie fünf Dinge, die Sie sehen können.",
+      "touch": "Beachten Sie vier Dinge, die Sie berühren können.",
+      "hear": "Nennen Sie drei Geräusche, die Sie hören können.",
+      "smell": "Beachten Sie zwei Gerüche, falls vorhanden.",
+      "taste": "Nehmen Sie einen Geschmack oder einfach nur das Gefühl in Ihrem Mund wahr."
+    },
+    "lookAround": {
+      "see": "Schauen Sie sich um und nennen Sie drei Dinge, die Sie sehen können.",
+      "farthest": "Beachten Sie, was Sie von hier aus am weitesten sehen können.",
+      "still": "Suchen Sie nach etwas, das still ist.",
+      "object": "Schauen Sie sich ein stilles Objekt in Ihrer Nähe an."
+    },
+    "texture": {
+      "notice": "Beachten Sie eine Textur, die Sie nicht berühren.",
+      "find": "Finden Sie etwas mit einer kleinen Textur.",
+      "cool": "Suchen Sie sich eine Oberfläche aus, die sich kühl anfühlt.",
+      "temp": "Beachten Sie einen Temperaturunterschied, auch wenn er noch so klein ist."
+    }
+  },
+  "move": {
+    "hold": "Halten.",
+    "release": "Freigeben.",
+    "notice": "Beachten Sie den Unterschied.",
+    "noticeFinal": "Ruhe hier. Spüren Sie, wie sich Ihr ganzer Körper anfühlt.",
+    "menu": "Bewegungsmenü",
+    "menuHint": "Öffnet die Liste der stillen Bewegungen",
+    "tryAnotherHint": "Öffnet die Liste der stillen Bewegungen",
+    "activities": {
+      "fingers": "Finger",
+      "palms": "Drücken Sie auf die Handflächen",
+      "shoulders": "Schultern",
+      "feet": "Drücken Sie die Füße",
+      "bodyScan": "Körperscan",
+      "tense": "Anspannung und Entspannung",
+      "hands": "Hände"
+    },
+    "hints": {
+      "press": "Halten Sie hier gedrückt, während Sie der Anweisung folgen",
+      "hold": "Halten Sie die Taste gedrückt, bis Sie zum Loslassen aufgefordert werden",
+      "release": "Jetzt veröffentlichen",
+      "notice": "Ruhen Sie sich hier aus und nehmen Sie wahr, wie sich Ihr Körper anfühlt"
+    },
+    "steps": {
+      "fingers": "Rollen Sie Ihre Finger sanft nach innen.",
+      "palms": "Drücken Sie Ihre Handflächen sanft zusammen.",
+      "shoulders": "Heben Sie Ihre Schultern ein wenig an.",
+      "feet": "Drücken Sie Ihre Füße sanft in den Boden.",
+      "bodyScan": "Scannen Sie langsam von Kopf bis Fuß.",
+      "tense": "Spannen Sie Ihre Hände sanft an.",
+      "hands": "Drücken Sie Ihre Hände in Ihre Beine."
+    }
+  },
+  "listen": {
+    "volume": "Volumen",
+    "previous": "Vorheriger Ton",
+    "next": "Nächster Ton",
+    "chooseSound": "Wählen Sie einen Ton",
+    "menu": "Klingt",
+    "menuHint": "Öffnet die Liste der leisen Geräusche",
+    "tryAnotherHint": "Öffnet die Liste der leisen Geräusche",
+    "nowPlaying": "{Name} spielt",
+    "tapToPlay": "Zum Abspielen tippen",
+    "groups": {
+      "nature": "Natur",
+      "steady": "Stetig"
+    },
+    "sounds": {
+      "rain": "Sanfter Regen",
+      "ocean": "Ozean",
+      "stream": "Sanfter Strahl",
+      "forest": "Ruhiger Wald",
+      "birds": "Ferne Vögel",
+      "fan": "Ständiger Lüfter",
+      "brown": "Braunes Rauschen",
+      "white": "Leises weißes Rauschen",
+      "melody": "Sanfte Melodie"
+    },
+    "images": {
+      "rain": "Leiser Regen auf Blättern",
+      "ocean": "Ruhiges Meerwasser",
+      "stream": "Weich fließendes Wasser",
+      "forest": "Gedämpfter Wald",
+      "birds": "Offener Himmel mit fernen Vögeln",
+      "fan": "Weiche abstrakte Luft",
+      "brown": "Warme braune Textur",
+      "white": "Leichte, gleichmäßige Textur",
+      "melody": "Sanfte warme Töne"
+    }
+  },
+  "privacy": {
+    "onDevice": "Alles, was Back für die sechs Tools verwendet, bleibt auf diesem Gerät. Es gibt kein Konto und keine Cloud.",
+    "stored": "Dazu können ein von Ihnen gespeicherter Support-Kontakt, Lesespeicher, Einstellungen wie Aussehen und Bewegung sowie eine kurze lokale Liste aktueller Tools gehören.",
+    "notSent": "Nichts davon wird an Back oder andere gesendet. Wenn Sie anrufen oder eine Nachricht senden, wird Ihre Telefon-App geöffnet und nur gestartet, wenn Sie dies bestätigen.",
+    "emergency": "Zusätzliche Unterstützung kann Ihnen helfen, jemanden in Ihrer Nähe zu erreichen. Back führt den Anruf nicht für Sie durch.",
+    "notMedical": "Der Rücken ist kein medizinisches Gerät. Es werden keine Gesundheitsakten erstellt und Apple Health wird nicht gelesen.",
+    "extraSupport": "Zusätzliche Unterstützung",
+    "extraSupportHint": "Öffnet Extra-Unterstützung",
+    "policy": "Datenschutzrichtlinie"
+  },
+  "terms": {
+    "selfHelp": "Back ist ein Hilfsmittel zur Selbsthilfe. Es ist keine Therapie und kein medizinisches Gerät.",
+    "emergency": "Der Rücken ist kein Ersatz für eine Notfallversorgung. Wenn Sie dringend Hilfe benötigen, nutzen Sie den Extra-Support oder wenden Sie sich an den örtlichen Rettungsdienst.",
+    "calls": "Wenn Sie jemanden anrufen oder ihm eine Nachricht senden, wird Ihre Telefon-App geöffnet. Der Anruf oder die Nachricht startet erst, wenn Sie bestätigen.",
+    "data": "Was Sie in „Zurück“ speichern, bleibt auf diesem Gerät. Es gibt kein Konto und keine Cloud."
+  },
+  "legal": {
+    "openWeb": "Webseite öffnen"
+  },
+  "voice": {
+    "intro": "Ground verwendet Anweisungen auf dem Bildschirm. Mit „Hören“ können Sie auf diesem Gerät leisen Ton wiedergeben.",
+    "lastSound": "Letzter Hörton",
+    "lastSoundEmpty": "Noch nicht gespeichert",
+    "lastSoundNote": "„Listen“ merkt sich den zuletzt gewählten Ton. Das bleibt auf diesem Gerät.",
+    "mute": "Stummschaltung",
+    "muteHint": "Schaltet „Listen“ und „Ground“ auf diesem Gerät stumm"
+  },
+  "about": {
+    "body": "Zurück ist schnelle lokale Unterstützung für die nächste Minute, mit sechs Tools auf diesem Gerät.",
+    "disclaimer": "Der Rücken ist kein medizinisches Gerät und keine Therapie."
+  },
+  "subscription": {
+    "kicker": "Zurück Plus",
+    "headline": "Bleiben Sie in der Nähe",
+    "headlineActive": "Back Plus ist aktiv",
+    "headlineExpired": "Ihr Back Plus-Zugang ist beendet",
+    "intro": "Sechs einfache Tools für schwierige Momente – privat, offline und jederzeit einsatzbereit. \n\nTesten Sie alles 7 Tage lang kostenlos mit dem Jahresplan, wenn Sie dazu berechtigt sind. Nach der Testversion ist ein aktives Monats- oder Jahresabonnement erforderlich, um Breathe, Distract, Ground, Move, Listen und Read nutzen zu können.",
+    "introPreparing": "Back Plus ist in Vorbereitung. \n\nBack beinhaltet eine 7-tägige Testversion mit dem Jahresplan, gefolgt von einem Monats- oder Jahresabonnement. Die endgültigen Preise und Einzelheiten zur Verlängerung werden vor dem Kauf im App Store oder bei Google Play angezeigt. \n\nBis zur Veröffentlichung von Back Plus gibt es nichts zu kaufen.",
+    "introTrialActive": "Ihre 7-tägige Testversion ist auf diesem Gerät aktiv. Vielen Dank, dass Sie Back Plus ausprobiert haben.",
+    "introAnnualActive": "Ihr jährlicher Back Plus-Plan ist auf diesem Gerät aktiv. Vielen Dank für die Unterstützung von Back.",
+    "introMonthlyActive": "Ihr monatlicher Back Plus-Plan ist auf diesem Gerät aktiv. Vielen Dank für die Unterstützung von Back.",
+    "introExpired": "Wählen Sie einen Plan, um die sechs Back-Tools weiterhin zu nutzen oder einen früheren Kauf wiederherzustellen. \n\nNotfallinformationen, zusätzlicher Support und „Meine Person anrufen“ sind weiterhin verfügbar.",
+    "statusTrialEnds": "Testversion endet am {Datum}",
+    "statusAnnualRenews": "Erneuert {Datum}",
+    "statusMonthlyRenews": "Erneuert {Datum}",
+    "benefitsTitle": "Alles in Back Plus",
+    "plannedNote": "In Entwicklung:",
+    "safetyTitle": "Der Support bleibt verfügbar",
+    "safetyBody": "Notfallinformationen, zusätzlicher Support und „Meine Person anrufen“ bleiben auch ohne Abonnement verfügbar. Back ist ein Hilfsmittel zur Selbsthilfe – kein Notfalldienst, kein medizinisches Gerät oder Ersatz für professionelle Pflege.",
+    "chooseTitle": "Wählen Sie, was für Sie funktioniert",
+    "chooseIntro": "Abonnements werden von Apple oder Google abgewickelt. Preise und Testberechtigung ergeben sich aus Ihrem Shop-Konto.",
+    "preparing": "Hier gibt es noch nichts zu kaufen. Wenn Back Plus auf den Markt kommt, können Sie den Jahresplan 7 Tage lang testen, wenn Sie dazu berechtigt sind.",
+    "planMonthly": "Zurück Plus monatlich",
+    "planAnnual": "Zurück Plus jährlich",
+    "planAnnualTrial": "7 Tage kostenlos für berechtigte neue Abonnenten",
+    "planMonthlyNoTrial": "Keine kostenlose Testversion",
+    "planUnavailable": "Noch nicht verfügbar",
+    "planUnavailableA11y": "Plan noch nicht verfügbar",
+    "planMonthlyLabel": "Verlängert sich monatlich, bis es in Ihrem Shop-Konto gekündigt wird.",
+    "planAnnualLabel": "Verlängert sich jährlich, bis es in Ihrem Shop-Konto gekündigt wird.",
+    "bestValue": "Bester Wert",
+    "regionalPricing": "Die Preise variieren je nach Region und Währung. Die endgültigen Preise werden im Shop angezeigt, bevor Sie den Kauf bestätigen.",
+    "choosePlan": "Wählen Sie einen Plan",
+    "restore": "Einkäufe wiederherstellen",
+    "manage": "Abonnement verwalten",
+    "notNow": "Nicht jetzt",
+    "notNowHint": "Schließt Back Plus und kehrt zum vorherigen Bildschirm zurück",
+    "linkSupport": "Abonnementunterstützung",
+    "linkPrivacy": "Privatsphäre",
+    "linkTerms": "Bedingungen",
+    "linkSubscriptions": "Abonnements im Internet",
+    "benefits": {
+      "sixTools": "Atmen, ablenken, erden, bewegen, zuhören und lesen",
+      "offlineSounds": "Die komplette Offline-Soundsammlung",
+      "allExercises": "Alle Atem-, Erdungs-, Bewegungs- und Aufmerksamkeitsübungen",
+      "readExperience": "Das komplette Leseerlebnis",
+      "patterns": "Persönliche lokale Muster",
+      "themes": "Alle Erscheinungsthemen",
+      "expandedSounds": "Erweiterte Umgebungsgeräusche für „Listen“.",
+      "additionalThemes": "Zusätzliche Darstellungsthemen",
+      "readLibrary": "Mehr Bibliotheksinhalte lesen",
+      "patternsDepth": "Tiefergehende Einblicke in meine Muster"
+    }
+  },
+  "notFound": {
+    "title": "Diese Seite ist nicht hier",
+    "body": "Kehren Sie zurück, wann immer Sie es brauchen.",
+    "home": "Gehen Sie zu Zurück",
+    "homeHint": "Kehrt zu den sechs Werkzeugen zurück"
+  }
+}

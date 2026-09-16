@@ -17,4 +17,5 @@ export const storageKeys = {
   emergencyCountry: 'back.emergencyCountry',
   history: 'back.history',
   readMemory: 'back.readMemory',
+  languagePreference: 'back.languagePreference',
 } as const;
