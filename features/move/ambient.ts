@@ -1,9 +1,9 @@
 /**
- * PLACEHOLDER — reuses the Breathe light air bed until a Move-specific loop ships.
+ * PLACEHOLDER — 25s seamless calm tonal pad (regenerate via scripts/generate-move-ambient.py).
  */
 export const moveAmbient = {
-  loop: require('../../audio/sfx/breathe-ambient-placeholder.wav'),
+  loop: require('../../audio/sfx/move-ambient-placeholder.wav'),
 } as const;
 
-/** Soft bed for body-move focus — between Breathe and Ground levels. */
-export const MOVE_AMBIENT_VOLUME = 0.1;
+/** Soft bed for body-move focus — melody reads slightly louder than noise beds. */
+export const MOVE_AMBIENT_VOLUME = 0.09;
