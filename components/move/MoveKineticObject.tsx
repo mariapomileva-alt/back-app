@@ -3,10 +3,12 @@ import { Platform, StyleSheet, View } from 'react-native';
 import Animated, {
   Easing,
   cancelAnimation,
+  useAnimatedProps,
   useAnimatedStyle,
   useSharedValue,
   withRepeat,
   withTiming,
+  type SharedValue,
 } from 'react-native-reanimated';
 import Svg, { Path } from 'react-native-svg';
 
@@ -14,8 +16,12 @@ import { MOVE_KINETIC_VIEWBOX, useMoveInk } from '@/components/move/moveInk';
 import type { MoveKineticAction } from '@/features/move/visualMap';
 import type { MovePhase } from '@/features/move/steps';
 
+const AnimatedPath = Animated.createAnimatedComponent(Path);
+
 const RELEASE_MS = 560;
 const PRESS_MS = 340;
+const ARC_DRIFT_MS = 12_500;
+const ARC_SHIMMER_MS = 8_400;
 const OBJECT_W = 208;
 const OBJECT_H = 124;
 
@@ -39,6 +45,38 @@ function compressedAmount(phase: MovePhase): number {
   return phase === 'press' || phase === 'hold' ? 1 : 0;
 }
 
+type ArcBandProps = {
+  d: string;
+  width: number;
+  stroke: string;
+  baseOpacity: number;
+  phaseOffset: number;
+  drift: SharedValue<number>;
+  shimmer: SharedValue<number>;
+  reduceMotion: boolean;
+};
+
+function ArcBand({ d, width, stroke, baseOpacity, phaseOffset, drift, shimmer, reduceMotion }: ArcBandProps) {
+  const animatedProps = useAnimatedProps(() => {
+    if (reduceMotion) {
+      return { opacity: baseOpacity };
+    }
+    const mix = drift.value * (1 - phaseOffset * 0.35) + shimmer.value * phaseOffset * 0.65;
+    return { opacity: baseOpacity * (0.86 + mix * 0.22) };
+  });
+
+  return (
+    <AnimatedPath
+      d={d}
+      fill="none"
+      stroke={stroke}
+      strokeWidth={width}
+      strokeLinecap="round"
+      animatedProps={animatedProps}
+    />
+  );
+}
+
 const USE_LAYOUT_MORPH = Platform.OS === 'web';
 
 export function MoveKineticObject({ action, phase, reduceMotion }: Props) {
@@ -46,6 +84,8 @@ export function MoveKineticObject({ action, phase, reduceMotion }: Props) {
   const compress = useSharedValue(compressedAmount(phase));
   const shoulderShift = useSharedValue(0);
   const handsUnwind = useSharedValue(0);
+  const arcDrift = useSharedValue(0.5);
+  const arcShimmer = useSharedValue(0.5);
 
   useEffect(() => {
     const target = compressedAmount(phase);
@@ -100,6 +140,38 @@ export function MoveKineticObject({ action, phase, reduceMotion }: Props) {
     });
   }, [action, handsUnwind, phase, reduceMotion]);
 
+  useEffect(() => {
+    cancelAnimation(arcDrift);
+    cancelAnimation(arcShimmer);
+    if (reduceMotion) {
+      arcDrift.value = 0.5;
+      arcShimmer.value = 0.5;
+      return;
+    }
+    arcDrift.value = withRepeat(
+      withTiming(1, { duration: ARC_DRIFT_MS, easing: Easing.inOut(Easing.sin) }),
+      -1,
+      true,
+    );
+    arcShimmer.value = withRepeat(
+      withTiming(1, { duration: ARC_SHIMMER_MS, easing: Easing.inOut(Easing.sin) }),
+      -1,
+      true,
+    );
+  }, [arcDrift, arcShimmer, reduceMotion]);
+
+  const arcFloatStyle = useAnimatedStyle(() => {
+    if (reduceMotion) {
+      return { transform: [{ translateX: 0 }, { translateY: 0 }] };
+    }
+    return {
+      transform: [
+        { translateX: (arcDrift.value - 0.5) * 6 },
+        { translateY: (arcShimmer.value - 0.5) * 4 },
+      ],
+    };
+  });
+
   const animatedStyle = useAnimatedStyle(() => {
     const c = compress.value;
     const vert =
@@ -151,7 +223,7 @@ export function MoveKineticObject({ action, phase, reduceMotion }: Props) {
     }
   };
 
-  const opacityFor = (role: BandRole) => {
+  const baseOpacityFor = (role: BandRole) => {
     switch (role) {
       case 'primary':
         return primaryOpacity;
@@ -165,19 +237,23 @@ export function MoveKineticObject({ action, phase, reduceMotion }: Props) {
   return (
     <View style={styles.shell}>
       <Animated.View style={[styles.object, animatedStyle]}>
-        <Svg width="100%" height="100%" viewBox={MOVE_KINETIC_VIEWBOX} preserveAspectRatio="xMidYMid meet">
-          {BANDS.map((band) => (
-            <Path
-              key={band.d}
-              d={band.d}
-              fill="none"
-              stroke={colorFor(band.role)}
-              strokeWidth={band.width}
-              strokeLinecap="round"
-              opacity={opacityFor(band.role)}
-            />
-          ))}
-        </Svg>
+        <Animated.View style={[styles.svgFloat, arcFloatStyle]}>
+          <Svg width="100%" height="100%" viewBox={MOVE_KINETIC_VIEWBOX} preserveAspectRatio="xMidYMid meet">
+            {BANDS.map((band, index) => (
+              <ArcBand
+                key={band.d}
+                d={band.d}
+                width={band.width}
+                stroke={colorFor(band.role)}
+                baseOpacity={baseOpacityFor(band.role)}
+                phaseOffset={index / BANDS.length}
+                drift={arcDrift}
+                shimmer={arcShimmer}
+                reduceMotion={reduceMotion}
+              />
+            ))}
+          </Svg>
+        </Animated.View>
       </Animated.View>
     </View>
   );
@@ -196,5 +272,10 @@ const styles = StyleSheet.create({
     height: OBJECT_H,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  svgFloat: {
+    flex: 1,
+    width: '100%',
+    height: '100%',
   },
 });

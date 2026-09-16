@@ -52,7 +52,7 @@ function FanWavePath({ d, width, stroke, base, useWave, wave, swell, reduceMotio
       return { opacity: base };
     }
     const mix = useWave ? wave.value : swell.value;
-    return { opacity: base - 0.1 + mix * 0.18 };
+    return { opacity: base - 0.12 + mix * 0.26 };
   });
 
   return (
@@ -79,7 +79,7 @@ type BrownBlobProps = {
 
 function BrownBlob({ cx, cy, r, fill, staticOpacity, driver, reduceMotion }: BrownBlobProps) {
   const animatedProps = useAnimatedProps(() => ({
-    opacity: reduceMotion ? staticOpacity : staticOpacity - 0.06 + driver.value * 0.14,
+    opacity: reduceMotion ? staticOpacity : staticOpacity - 0.08 + driver.value * 0.22,
   }));
 
   return <AnimatedCircle cx={cx} cy={cy} r={r} fill={fill} animatedProps={animatedProps} />;
@@ -102,12 +102,12 @@ export function ListenGraphic({ variant, motionActive = true }: Props) {
     }
 
     wave.value = withRepeat(
-      withTiming(1, { duration: 11_000, easing: Easing.inOut(Easing.sin) }),
+      withTiming(1, { duration: 9_200, easing: Easing.inOut(Easing.sin) }),
       -1,
       true,
     );
     swell.value = withRepeat(
-      withTiming(1, { duration: 7_200, easing: Easing.inOut(Easing.sin) }),
+      withTiming(1, { duration: 6_000, easing: Easing.inOut(Easing.sin) }),
       -1,
       true,
     );
@@ -118,7 +118,10 @@ export function ListenGraphic({ variant, motionActive = true }: Props) {
       return { transform: [{ translateX: 0 }] };
     }
     return {
-      transform: [{ translateX: (wave.value - 0.5) * 5 }],
+      transform: [
+        { translateX: (wave.value - 0.5) * 9 },
+        { translateY: (swell.value - 0.5) * 5 },
+      ],
     };
   });
 

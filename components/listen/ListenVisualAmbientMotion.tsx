@@ -18,8 +18,8 @@ type Props = {
   style?: object;
 };
 
-const DRIFT_MS = 14_000;
-const SHIMMER_MS = 9_500;
+const DRIFT_MS = 11_500;
+const SHIMMER_MS = 7_800;
 
 export function useListenVisualAmbientMotion(active = true) {
   const reduceMotion = useReduceMotion();
@@ -56,9 +56,9 @@ export function useListenVisualAmbientMotion(active = true) {
     const s = shimmer.value;
     return {
       transform: [
-        { scale: 1.045 + t * 0.018 },
-        { translateX: (t - 0.5) * 7 },
-        { translateY: (s - 0.5) * 5 },
+        { scale: 1.045 + t * 0.024 },
+        { translateX: (t - 0.5) * 10 },
+        { translateY: (s - 0.5) * 7 },
       ],
     };
   });
