@@ -301,14 +301,17 @@
     "hold": "Hold.",
     "release": "Release.",
     "notice": "Notice the difference.",
+    "noticeFinal": "Rest here. Notice how your whole body feels.",
     "menu": "Movement menu",
     "menuHint": "Opens the quiet movement list",
     "tryAnotherHint": "Opens the quiet movement list",
     "activities": {
-      "feet": "Press Feet",
+      "fingers": "Fingers",
       "palms": "Press Palms",
-      "tense": "Tense & Release",
       "shoulders": "Shoulders",
+      "feet": "Press Feet",
+      "bodyScan": "Body scan",
+      "tense": "Tense & Release",
       "hands": "Hands"
     },
     "hints": {
@@ -318,10 +321,12 @@
       "notice": "Rest here and notice how your body feels"
     },
     "steps": {
-      "feet": "Press your feet gently into the floor.",
+      "fingers": "Gently curl your fingers inward.",
       "palms": "Press your palms together gently.",
-      "tense": "Gently tense your hands.",
       "shoulders": "Lift your shoulders a little.",
+      "feet": "Press your feet gently into the floor.",
+      "bodyScan": "Scan slowly from head to toe.",
+      "tense": "Gently tense your hands.",
       "hands": "Press your hands into your legs."
     }
   },

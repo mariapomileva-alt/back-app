@@ -158,6 +158,7 @@ export function MoveKineticObject({ action, phase, reduceMotion }: Props) {
   const ink = useMoveInk();
   const compress = useSharedValue(compressedAmount(phase));
   const shoulderShift = useSharedValue(0);
+  const bodyScanPulse = useSharedValue(0);
   const handsUnwind = useSharedValue(0);
   const arcDrift = useSharedValue(0.5);
   const arcShimmer = useSharedValue(0.5);
@@ -210,6 +211,23 @@ export function MoveKineticObject({ action, phase, reduceMotion }: Props) {
   }, [action, phase, reduceMotion, shoulderShift]);
 
   useEffect(() => {
+    cancelAnimation(bodyScanPulse);
+    if (action !== 'bodyScan' || reduceMotion) {
+      bodyScanPulse.value = 0;
+      return;
+    }
+    if (phase === 'press' || phase === 'hold') {
+      bodyScanPulse.value = withRepeat(
+        withTiming(1, { duration: 5200, easing: Easing.inOut(Easing.sin) }),
+        -1,
+        true,
+      );
+      return;
+    }
+    bodyScanPulse.value = withTiming(0, { duration: RELEASE_MS, easing: Easing.out(Easing.cubic) });
+  }, [action, bodyScanPulse, phase, reduceMotion]);
+
+  useEffect(() => {
     cancelAnimation(handsUnwind);
     if (action !== 'hands' || reduceMotion) {
       handsUnwind.value = phase === 'press' || phase === 'hold' ? 1 : 0;
@@ -260,20 +278,31 @@ export function MoveKineticObject({ action, phase, reduceMotion }: Props) {
 
   const morphStyle = useAnimatedStyle(() => {
     const c = compress.value;
+    const scanBreath = action === 'bodyScan' ? (bodyScanPulse.value - 0.5) * 0.06 : 0;
     const vert =
       action === 'pressFeet' || action === 'tenseRelease'
         ? 1 - c * 0.075
         : action === 'hands'
           ? 1 - handsUnwind.value * 0.04
-          : 1;
+          : action === 'bodyScan'
+            ? 1 + scanBreath
+            : 1;
     const horiz =
       action === 'pressPalms' || action === 'tenseRelease'
         ? 1 - c * 0.07
         : action === 'hands'
           ? 1 - handsUnwind.value * 0.035
-          : 1;
+          : action === 'bodyScan'
+            ? 1 - scanBreath * 0.85
+            : 1;
     const rotate =
-      action === 'shoulders' ? (shoulderShift.value - 0.5) * 5 : action === 'hands' ? handsUnwind.value * -2.5 : 0;
+      action === 'shoulders'
+        ? (shoulderShift.value - 0.5) * 5
+        : action === 'hands'
+          ? handsUnwind.value * -2.5
+          : action === 'bodyScan'
+            ? (bodyScanPulse.value - 0.5) * 2.5
+            : 0;
 
     if (USE_LAYOUT_MORPH) {
       return {

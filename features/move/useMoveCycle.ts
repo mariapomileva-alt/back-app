@@ -4,12 +4,15 @@ import { AppState, Platform, type AppStateStatus } from 'react-native';
 import {
   MOVE_HOLD_MS,
   MOVE_MIN_HOLD_MS,
+  MOVE_NOTICE_DWELL_MS,
   MOVE_PRESS_FALLBACK_MS,
   MOVE_RELEASE_MS,
   defaultMoveSequenceId,
   instructionKeyFor,
+  isMoveSustainedSessionComplete,
   moveStepId,
   moveSequences,
+  nextAfterMoveNotice,
   nextMoveSequenceId,
   type MovePhase,
   type MoveSequence,
@@ -31,6 +34,7 @@ function sequenceById(id: MoveSequenceId): MoveSequence {
 export function useMoveCycle() {
   const haptics = useHaptics();
   const [sequenceId, setSequenceId] = useState<MoveSequenceId>(defaultMoveSequenceId);
+  const [lap, setLap] = useState(0);
   const [phase, setPhase] = useState<MovePhase>('press');
   const [pressed, setPressed] = useState(false);
   const holdStartedAt = useRef<number | null>(null);
@@ -41,7 +45,9 @@ export function useMoveCycle() {
   }, [haptics.light]);
 
   const sequence = sequenceById(sequenceId);
-  const instructionKey = instructionKeyFor(sequence, phase);
+  const sustainedComplete = isMoveSustainedSessionComplete(sequenceId, lap);
+  const instructionKey =
+    phase === 'notice' && sustainedComplete ? 'move.noticeFinal' : instructionKeyFor(sequence, phase);
   const stepId = moveStepId(sequenceId, phase);
   const phaseRef = useRef<MovePhase>(phase);
 
@@ -53,6 +59,76 @@ export function useMoveCycle() {
     lightRef.current();
     setPhase(next);
   }, []);
+
+  const advanceAfterNotice = useCallback(() => {
+    const next = nextAfterMoveNotice(sequenceId, lap);
+    if (!next) {
+      return;
+    }
+    holdStartedAt.current = null;
+    setPressed(false);
+    phaseRef.current = 'press';
+    setLap(next.lap);
+    setSequenceId(next.sequenceId);
+    setPhase('press');
+    lightRef.current();
+  }, [lap, sequenceId]);
+
+  useEffect(() => {
+    if (phase !== 'notice' || sustainedComplete) {
+      return;
+    }
+
+    let cancelled = false;
+    let timeout: ReturnType<typeof setTimeout> | undefined;
+    let remaining = MOVE_NOTICE_DWELL_MS;
+    let runningSince = Date.now();
+    let waiting = !isForeground(AppState.currentState);
+
+    const clear = () => {
+      if (timeout) {
+        clearTimeout(timeout);
+        timeout = undefined;
+      }
+    };
+
+    const schedule = () => {
+      clear();
+      timeout = setTimeout(() => {
+        if (cancelled) {
+          return;
+        }
+        advanceAfterNotice();
+      }, remaining);
+    };
+
+    const onAppState = (state: AppStateStatus) => {
+      if (isForeground(state)) {
+        if (waiting) {
+          runningSince = Date.now();
+          waiting = false;
+          schedule();
+        }
+        return;
+      }
+      if (!waiting) {
+        remaining = Math.max(0, remaining - (Date.now() - runningSince));
+        waiting = true;
+        clear();
+      }
+    };
+
+    const subscription = AppState.addEventListener('change', onAppState);
+    if (!waiting) {
+      schedule();
+    }
+
+    return () => {
+      cancelled = true;
+      clear();
+      subscription.remove();
+    };
+  }, [advanceAfterNotice, phase, sustainedComplete, sequenceId]);
 
   useEffect(() => {
     if (phase === 'notice') {
@@ -155,6 +231,7 @@ export function useMoveCycle() {
     holdStartedAt.current = null;
     setPressed(false);
     phaseRef.current = 'press';
+    setLap(0);
     setSequenceId((current) => nextMoveSequenceId(current));
     setPhase('press');
     lightRef.current();
@@ -164,6 +241,7 @@ export function useMoveCycle() {
     holdStartedAt.current = null;
     setPressed(false);
     phaseRef.current = 'press';
+    setLap(0);
     setSequenceId(id);
     setPhase('press');
     lightRef.current();

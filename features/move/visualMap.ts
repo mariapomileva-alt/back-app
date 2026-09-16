@@ -7,7 +7,13 @@ import {
   type MoveStepId,
 } from '@/features/move/steps';
 
-export type MoveKineticAction = 'pressFeet' | 'pressPalms' | 'shoulders' | 'tenseRelease' | 'hands';
+export type MoveKineticAction =
+  | 'pressFeet'
+  | 'pressPalms'
+  | 'shoulders'
+  | 'tenseRelease'
+  | 'hands'
+  | 'bodyScan';
 
 export const moveKineticActions = [
   'pressFeet',
@@ -15,12 +21,15 @@ export const moveKineticActions = [
   'shoulders',
   'tenseRelease',
   'hands',
+  'bodyScan',
 ] as const satisfies readonly MoveKineticAction[];
 
 export const MOVE_KINETIC_ACTION_BY_SEQUENCE: Record<MoveSequenceId, MoveKineticAction> = {
-  feet: 'pressFeet',
+  fingers: 'hands',
   palms: 'pressPalms',
   shoulders: 'shoulders',
+  feet: 'pressFeet',
+  bodyScan: 'bodyScan',
   tense: 'tenseRelease',
   hands: 'hands',
 };
