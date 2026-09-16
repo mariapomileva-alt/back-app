@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { StyleSheet, View } from 'react-native';
 import Animated, {
   Easing,
+  ReduceMotion,
   cancelAnimation,
   useAnimatedProps,
   useAnimatedStyle,
@@ -43,16 +44,16 @@ type FanWaveProps = {
   useWave: boolean;
   wave: SharedValue<number>;
   swell: SharedValue<number>;
-  reduceMotion: boolean;
+  motionActive: SharedValue<number>;
 };
 
-function FanWavePath({ d, width, stroke, base, useWave, wave, swell, reduceMotion }: FanWaveProps) {
+function FanWavePath({ d, width, stroke, base, useWave, wave, swell, motionActive }: FanWaveProps) {
   const animatedProps = useAnimatedProps(() => {
-    if (reduceMotion) {
+    if (motionActive.value === 0) {
       return { opacity: base };
     }
     const mix = useWave ? wave.value : swell.value;
-    return { opacity: base - 0.12 + mix * 0.26 };
+    return { opacity: base - 0.14 + mix * 0.32 };
   });
 
   return (
@@ -74,12 +75,13 @@ type BrownBlobProps = {
   fill: string;
   staticOpacity: number;
   driver: SharedValue<number>;
-  reduceMotion: boolean;
+  motionActive: SharedValue<number>;
 };
 
-function BrownBlob({ cx, cy, r, fill, staticOpacity, driver, reduceMotion }: BrownBlobProps) {
+function BrownBlob({ cx, cy, r, fill, staticOpacity, driver, motionActive }: BrownBlobProps) {
   const animatedProps = useAnimatedProps(() => ({
-    opacity: reduceMotion ? staticOpacity : staticOpacity - 0.08 + driver.value * 0.22,
+    opacity:
+      motionActive.value === 0 ? staticOpacity : staticOpacity - 0.1 + driver.value * 0.26,
   }));
 
   return <AnimatedCircle cx={cx} cy={cy} r={r} fill={fill} animatedProps={animatedProps} />;
@@ -90,6 +92,11 @@ export function ListenGraphic({ variant, motionActive = true }: Props) {
   const reduceMotion = useReduceMotion();
   const wave = useSharedValue(0.5);
   const swell = useSharedValue(0.5);
+  const motionActiveSv = useSharedValue(motionActive && !reduceMotion ? 1 : 0);
+
+  useEffect(() => {
+    motionActiveSv.value = motionActive && !reduceMotion ? 1 : 0;
+  }, [motionActive, motionActiveSv, reduceMotion]);
 
   useEffect(() => {
     cancelAnimation(wave);
@@ -101,26 +108,25 @@ export function ListenGraphic({ variant, motionActive = true }: Props) {
       return;
     }
 
-    wave.value = withRepeat(
-      withTiming(1, { duration: 9_200, easing: Easing.inOut(Easing.sin) }),
-      -1,
-      true,
-    );
-    swell.value = withRepeat(
-      withTiming(1, { duration: 6_000, easing: Easing.inOut(Easing.sin) }),
-      -1,
-      true,
-    );
+    const timing = (duration: number) =>
+      withTiming(1, {
+        duration,
+        easing: Easing.inOut(Easing.sin),
+        reduceMotion: ReduceMotion.Never,
+      });
+
+    wave.value = withRepeat(timing(9_200), -1, true);
+    swell.value = withRepeat(timing(6_000), -1, true);
   }, [motionActive, reduceMotion, swell, wave]);
 
   const svgMotion = useAnimatedStyle(() => {
-    if (reduceMotion) {
-      return { transform: [{ translateX: 0 }] };
+    if (motionActiveSv.value === 0) {
+      return { transform: [{ translateX: 0 }, { translateY: 0 }] };
     }
     return {
       transform: [
-        { translateX: (wave.value - 0.5) * 9 },
-        { translateY: (swell.value - 0.5) * 5 },
+        { translateX: (wave.value - 0.5) * 14 },
+        { translateY: (swell.value - 0.5) * 9 },
       ],
     };
   });
@@ -142,7 +148,7 @@ export function ListenGraphic({ variant, motionActive = true }: Props) {
               fill={hexToRgba(clay, 0.34)}
               staticOpacity={0.34}
               driver={swell}
-              reduceMotion={reduceMotion}
+              motionActive={motionActiveSv}
             />
             <BrownBlob
               cx={122}
@@ -151,7 +157,7 @@ export function ListenGraphic({ variant, motionActive = true }: Props) {
               fill={hexToRgba(highlight, 0.22)}
               staticOpacity={0.22}
               driver={wave}
-              reduceMotion={reduceMotion}
+              motionActive={motionActiveSv}
             />
             <BrownBlob
               cx={168}
@@ -160,7 +166,7 @@ export function ListenGraphic({ variant, motionActive = true }: Props) {
               fill={hexToRgba(forest, 0.2)}
               staticOpacity={0.2}
               driver={swell}
-              reduceMotion={reduceMotion}
+              motionActive={motionActiveSv}
             />
             <BrownBlob
               cx={96}
@@ -169,7 +175,7 @@ export function ListenGraphic({ variant, motionActive = true }: Props) {
               fill={hexToRgba(clay, 0.28)}
               staticOpacity={0.28}
               driver={wave}
-              reduceMotion={reduceMotion}
+              motionActive={motionActiveSv}
             />
           </Svg>
         </Animated.View>
@@ -194,7 +200,7 @@ export function ListenGraphic({ variant, motionActive = true }: Props) {
               useWave={item.useWave}
               wave={wave}
               swell={swell}
-              reduceMotion={reduceMotion}
+              motionActive={motionActiveSv}
             />
           ))}
         </Svg>

@@ -1,6 +1,12 @@
 import { useEffect } from 'react';
 import { StyleSheet } from 'react-native';
-import Animated, { Easing, useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated';
+import Animated, {
+  Easing,
+  ReduceMotion,
+  useAnimatedStyle,
+  useSharedValue,
+  withTiming,
+} from 'react-native-reanimated';
 
 import { ListenGraphic } from '@/components/listen/ListenGraphic';
 import { ListenVisualAmbientMotion } from '@/components/listen/ListenVisualAmbientMotion';
@@ -26,7 +32,11 @@ export function ListenSoundVisual({ sound, height, motionActive = true }: Props)
       return;
     }
     reveal.value = 0.82;
-    reveal.value = withTiming(1, { duration: 640, easing: Easing.inOut(Easing.quad) });
+    reveal.value = withTiming(1, {
+      duration: 640,
+      easing: Easing.inOut(Easing.quad),
+      reduceMotion: ReduceMotion.Never,
+    });
   }, [reduceMotion, reveal, sound.id]);
 
   const crossfadeStyle = useAnimatedStyle(() => ({

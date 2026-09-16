@@ -8,6 +8,7 @@ import {
   type ReactNode,
 } from 'react';
 import { AccessibilityInfo } from 'react-native';
+import { ReduceMotion, ReducedMotionConfig } from 'react-native-reanimated';
 import * as SystemUI from 'expo-system-ui';
 
 import {
@@ -135,7 +136,14 @@ export function ThemeProvider({ children }: Props) {
     ],
   );
 
-  return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>;
+  return (
+    <ThemeContext.Provider value={value}>
+      <ReducedMotionConfig
+        mode={value.reduceMotion ? ReduceMotion.Always : ReduceMotion.System}
+      />
+      {children}
+    </ThemeContext.Provider>
+  );
 }
 
 export function useTheme(): ThemeContextValue {

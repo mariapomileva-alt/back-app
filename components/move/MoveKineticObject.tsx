@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { Platform, StyleSheet, View } from 'react-native';
 import Animated, {
   Easing,
+  ReduceMotion,
   cancelAnimation,
   useAnimatedProps,
   useAnimatedStyle,
@@ -53,16 +54,16 @@ type ArcBandProps = {
   phaseOffset: number;
   drift: SharedValue<number>;
   shimmer: SharedValue<number>;
-  reduceMotion: boolean;
+  motionActive: SharedValue<number>;
 };
 
-function ArcBand({ d, width, stroke, baseOpacity, phaseOffset, drift, shimmer, reduceMotion }: ArcBandProps) {
+function ArcBand({ d, width, stroke, baseOpacity, phaseOffset, drift, shimmer, motionActive }: ArcBandProps) {
   const animatedProps = useAnimatedProps(() => {
-    if (reduceMotion) {
+    if (motionActive.value === 0) {
       return { opacity: baseOpacity };
     }
     const mix = drift.value * (1 - phaseOffset * 0.35) + shimmer.value * phaseOffset * 0.65;
-    return { opacity: baseOpacity * (0.86 + mix * 0.22) };
+    return { opacity: baseOpacity * (0.82 + mix * 0.28) };
   });
 
   return (
@@ -86,6 +87,11 @@ export function MoveKineticObject({ action, phase, reduceMotion }: Props) {
   const handsUnwind = useSharedValue(0);
   const arcDrift = useSharedValue(0.5);
   const arcShimmer = useSharedValue(0.5);
+  const motionActiveSv = useSharedValue(reduceMotion ? 0 : 1);
+
+  useEffect(() => {
+    motionActiveSv.value = reduceMotion ? 0 : 1;
+  }, [motionActiveSv, reduceMotion]);
 
   useEffect(() => {
     const target = compressedAmount(phase);
@@ -148,26 +154,25 @@ export function MoveKineticObject({ action, phase, reduceMotion }: Props) {
       arcShimmer.value = 0.5;
       return;
     }
-    arcDrift.value = withRepeat(
-      withTiming(1, { duration: ARC_DRIFT_MS, easing: Easing.inOut(Easing.sin) }),
-      -1,
-      true,
-    );
-    arcShimmer.value = withRepeat(
-      withTiming(1, { duration: ARC_SHIMMER_MS, easing: Easing.inOut(Easing.sin) }),
-      -1,
-      true,
-    );
+    const timing = (duration: number) =>
+      withTiming(1, {
+        duration,
+        easing: Easing.inOut(Easing.sin),
+        reduceMotion: ReduceMotion.Never,
+      });
+
+    arcDrift.value = withRepeat(timing(ARC_DRIFT_MS), -1, true);
+    arcShimmer.value = withRepeat(timing(ARC_SHIMMER_MS), -1, true);
   }, [arcDrift, arcShimmer, reduceMotion]);
 
   const arcFloatStyle = useAnimatedStyle(() => {
-    if (reduceMotion) {
+    if (motionActiveSv.value === 0) {
       return { transform: [{ translateX: 0 }, { translateY: 0 }] };
     }
     return {
       transform: [
-        { translateX: (arcDrift.value - 0.5) * 6 },
-        { translateY: (arcShimmer.value - 0.5) * 4 },
+        { translateX: (arcDrift.value - 0.5) * 11 },
+        { translateY: (arcShimmer.value - 0.5) * 8 },
       ],
     };
   });
@@ -249,7 +254,7 @@ export function MoveKineticObject({ action, phase, reduceMotion }: Props) {
                 phaseOffset={index / BANDS.length}
                 drift={arcDrift}
                 shimmer={arcShimmer}
-                reduceMotion={reduceMotion}
+                motionActive={motionActiveSv}
               />
             ))}
           </Svg>

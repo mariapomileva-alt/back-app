@@ -2,6 +2,7 @@ import { useEffect, type ReactNode } from 'react';
 import { StyleSheet, View } from 'react-native';
 import Animated, {
   Easing,
+  ReduceMotion,
   cancelAnimation,
   useAnimatedStyle,
   useSharedValue,
@@ -25,6 +26,13 @@ export function useListenVisualAmbientMotion(active = true) {
   const reduceMotion = useReduceMotion();
   const drift = useSharedValue(0.5);
   const shimmer = useSharedValue(0.5);
+  const motionActive = useSharedValue(active && !reduceMotion ? 1 : 0);
+  const calmStatic = useSharedValue(reduceMotion ? 1 : 0);
+
+  useEffect(() => {
+    motionActive.value = active && !reduceMotion ? 1 : 0;
+    calmStatic.value = reduceMotion ? 1 : 0;
+  }, [active, calmStatic, motionActive, reduceMotion]);
 
   useEffect(() => {
     cancelAnimation(drift);
@@ -36,39 +44,38 @@ export function useListenVisualAmbientMotion(active = true) {
       return;
     }
 
-    drift.value = withRepeat(
-      withTiming(1, { duration: DRIFT_MS, easing: Easing.inOut(Easing.sin) }),
-      -1,
-      true,
-    );
-    shimmer.value = withRepeat(
-      withTiming(1, { duration: SHIMMER_MS, easing: Easing.inOut(Easing.sin) }),
-      -1,
-      true,
-    );
+    const timing = (duration: number) =>
+      withTiming(1, {
+        duration,
+        easing: Easing.inOut(Easing.sin),
+        reduceMotion: ReduceMotion.Never,
+      });
+
+    drift.value = withRepeat(timing(DRIFT_MS), -1, true);
+    shimmer.value = withRepeat(timing(SHIMMER_MS), -1, true);
   }, [active, drift, reduceMotion, shimmer]);
 
   const contentStyle = useAnimatedStyle(() => {
-    if (reduceMotion) {
-      return { transform: [{ scale: 1.03 }] };
+    if (motionActive.value === 0) {
+      return { transform: [{ scale: calmStatic.value === 1 ? 1.03 : 1 }] };
     }
     const t = drift.value;
     const s = shimmer.value;
     return {
       transform: [
-        { scale: 1.045 + t * 0.024 },
-        { translateX: (t - 0.5) * 10 },
-        { translateY: (s - 0.5) * 7 },
+        { scale: 1.04 + t * 0.032 },
+        { translateX: (t - 0.5) * 14 },
+        { translateY: (s - 0.5) * 10 },
       ],
     };
   });
 
   const shimmerStyle = useAnimatedStyle(() => {
-    if (reduceMotion || !active) {
+    if (motionActive.value === 0) {
       return { opacity: 0 };
     }
     const s = shimmer.value;
-    return { opacity: 0.04 + s * 0.07 };
+    return { opacity: 0.05 + s * 0.09 };
   });
 
   return { contentStyle, shimmerStyle, reduceMotion, showShimmer: !reduceMotion && active };
