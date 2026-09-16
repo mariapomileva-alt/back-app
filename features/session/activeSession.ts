@@ -95,6 +95,11 @@ export function getActiveSessionTool(): HomeToolId | null {
   return session?.tool ?? null;
 }
 
+/** True while a tool screen is visible — language changes stay blocked until the session ends. */
+export function isActiveSessionVisible(): boolean {
+  return visibleToolScreens > 0;
+}
+
 export function shouldOfferSessionOutcome(elapsedMs = getSessionElapsedMs()): boolean {
   return elapsedMs >= SESSION_OUTCOME_AFTER_MS;
 }
