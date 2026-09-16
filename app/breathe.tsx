@@ -3,6 +3,7 @@ import { Pressable, StyleSheet, useWindowDimensions } from 'react-native';
 
 import { BreathingCircle } from '@/components/breathe/BreathingCircle';
 import { BreatheSfxMuteButton } from '@/components/breathe/BreatheSfxMuteButton';
+import { PatternPicker } from '@/components/breathe/PatternPicker';
 import { TextButton } from '@/components/buttons/TextButton';
 import { ActiveSessionScreen } from '@/components/session/ActiveSessionScreen';
 import { SessionChoiceSheet } from '@/components/session/SessionChoiceSheet';
@@ -93,7 +94,16 @@ export default function BreatheScreen() {
         backHint={t('breathe.menuHint')}
         backNavigates={!chooserOpen}
         extraActions={({ trySomethingElse }) => (
-          <TextButton label={t('exercise.breatheUncomfortable')} onPress={trySomethingElse} />
+          <>
+            <PatternPicker
+              selectedId={patternId}
+              onSelect={(id) => {
+                unlockFromUserGesture();
+                selectPattern(id);
+              }}
+            />
+            <TextButton label={t('exercise.breatheUncomfortable')} onPress={trySomethingElse} />
+          </>
         )}
       >
         {(controls) => (

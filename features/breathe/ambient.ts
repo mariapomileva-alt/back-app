@@ -6,14 +6,14 @@ export const breatheAmbient = {
   loop: require('../../audio/sfx/breathe-ambient-placeholder.wav'),
 } as const;
 
-/** Very light bed — quieter than Ground ambient. */
-export const BREATHE_AMBIENT_VOLUME = 0.24;
+/** Audible bed — still softer than Ground ambient; capped for comfort. */
+export const BREATHE_AMBIENT_VOLUME = 0.38;
 
 /** How much openness (orb size) lifts volume above the floor. */
-export const BREATHE_AMBIENT_MOD_DEPTH = 0.52;
+export const BREATHE_AMBIENT_MOD_DEPTH = 0.58;
 
 /** Minimum multiplier at rest (exhale closed). */
-export const BREATHE_AMBIENT_MOD_FLOOR = 0.48;
+export const BREATHE_AMBIENT_MOD_FLOOR = 0.42;
 
 /** Softer modulation when Reduce Motion is on. */
 export const BREATHE_REDUCE_MOTION_MOD_DEPTH = 0.12;
