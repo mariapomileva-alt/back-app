@@ -3,6 +3,6 @@
 window.BACK_RELEASES = {
   version: "1.0.0",
   ios: "",
-  android: "downloads/back.apk",
+  android: "",
   androidStore: "",
 };
