@@ -42,15 +42,21 @@ No iPad, Watch, or preview video.
 | URL | Live status (15 Sep 2026) |
 | --- | --- |
 | https://backapp.live/ | **Live.** HTTPS 200. DNS (Namecheap) → GitHub Pages (`185.199.x.x`). Certificate issued (`ssl_verify_result=0`). |
-| https://backapp.live/privacy.html | **Not live.** HTTPS 404 (GitHub Pages “Page not found”). File is in this repo, not on `main`. |
-| https://backapp.live/support.html | **Not live.** HTTPS 404. Same reason. |
-| https://mariapomileva-alt.github.io/back-app/privacy.html | **Not a fallback.** CNAME redirects to `backapp.live` — same 404. |
+| https://backapp.live/privacy.html | Confirm **200** after deploy from `main`. |
+| https://backapp.live/support.html | Confirm **200** after deploy from `main`. |
+| https://backapp.live/subscriptions.html | Subscriptions / billing transparency (free 1.0, no IAP). Confirm **200** after deploy. |
+| https://backapp.live/terms.html | Terms of use (wellness disclaimer, not medical). Confirm **200** after deploy. |
+| https://mariapomileva-alt.github.io/back-app/privacy.html | **Not a fallback.** CNAME redirects to `backapp.live`. |
 
-After `landing/privacy.html` and `landing/support.html` are on `main` (merge, or run the Pages workflow against a branch that contains them), confirm 200 in a browser, then paste:
+After `landing/*.html` legal pages are on `main`, confirm 200 in a browser, then paste:
 
 - **Support URL:** https://backapp.live/support.html
 - **Privacy Policy URL:** https://backapp.live/privacy.html
+- **Subscriptions / billing (public transparency):** https://backapp.live/subscriptions.html — use in Review notes or EU/consumer disclosures if Connect asks; not always a dedicated Connect field.
+- **Terms of use (EULA-style):** https://backapp.live/terms.html — link from site footer; optional in Connect unless required by territory.
 - **Marketing URL (optional):** https://backapp.live/
+
+**Site footer brand:** © Back App (public site). **App Store Connect copyright metadata** may still list **2026 Tatjana Fedorkova** as copyright holder — that is separate from the website footer.
 
 In-app Privacy already opens `https://backapp.live/privacy.html`. That in-app button will 404 until Pages is updated.
 
@@ -166,6 +172,8 @@ Back is not a medical device, not therapy, not a diagnosis, and not an emergency
 
 Privacy Policy: https://backapp.live/privacy.html
 Support: https://backapp.live/support.html
+Subscriptions (free, no IAP in 1.0): https://backapp.live/subscriptions.html
+Terms: https://backapp.live/terms.html
 ```
 
 Paste those two URLs in Review notes only after they 200 (see URLs above).
@@ -212,7 +220,7 @@ Submit stays grey until a human does these in the UI:
 - Production icon is the approved tactile forest disc in `store/ios/icon-1024.png` and `assets/images/icon.png`; `productionIconReady: true`.
 - Privacy screen links to https://backapp.live/privacy.html and states the app is not a medical device / not Health Records. (Page must be deployed from `main` before that URL 200s.)
 - Subscription row removed from Settings. No $9.99 promise in UI or listing. `/settings/subscription` remains a dormant “nothing to buy” screen if opened by URL.
-- Landing: `privacy.html`, `support.html`, footer links, copyright 2026 Tatjana Fedorkova.
+- Landing: `privacy.html`, `support.html`, `subscriptions.html`, `terms.html`; footer links (Privacy, Support, Subscriptions, Terms); site copyright © Back App.
 
 ---
 
