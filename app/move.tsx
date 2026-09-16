@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import { StyleSheet, View, useWindowDimensions } from 'react-native';
+import { Pressable, StyleSheet, useWindowDimensions } from 'react-native';
 
 import { TextButton } from '@/components/buttons/TextButton';
+import { MoveSfxMuteButton } from '@/components/move/MoveSfxMuteButton';
 import { MoveStage } from '@/components/move/MoveStage';
 import { ActiveSessionScreen } from '@/components/session/ActiveSessionScreen';
 import { SessionChoiceSheet } from '@/components/session/SessionChoiceSheet';
@@ -9,6 +10,7 @@ import { CrossfadeInstructionText } from '@/components/typography/CrossfadeInstr
 import { isMoveSequenceId, moveSequenceIds } from '@/features/move/steps';
 import { useMoveCycle } from '@/features/move/useMoveCycle';
 import { MOVE_UNCOMFORTABLE_INTENT } from '@/features/session/suggestions';
+import { useMoveAmbient } from '@/hooks/useMoveAmbient';
 import { t } from '@/locales/i18n';
 import { serif } from '@/theme/fonts';
 import { spacing } from '@/theme/spacing';
@@ -19,6 +21,9 @@ export default function MoveScreen() {
   const { phase, instructionKey, sequenceId, stepId, onPressIn, onPressOut, selectSequence } =
     useMoveCycle();
   const [chooserOpen, setChooserOpen] = useState(false);
+  const moveAmbient = useMoveAmbient({ sessionPaused: chooserOpen });
+  const { unlockFromUserGesture, muted: moveSfxMuted, toggleMute: toggleMoveSfxMute } =
+    moveAmbient;
   const instruction = t(instructionKey);
   const hint = t(`move.hints.${phase}`);
   const openChooser = () => setChooserOpen(true);
@@ -29,6 +34,15 @@ export default function MoveScreen() {
         tool="move"
         scroll={false}
         title={t('home.tools.move')}
+        right={
+          <MoveSfxMuteButton
+            muted={moveSfxMuted}
+            onPress={() => {
+              unlockFromUserGesture();
+              toggleMoveSfxMute();
+            }}
+          />
+        }
         onTryAnother={openChooser}
         tryAnotherHint={t('move.tryAnotherHint')}
         backClosesSession
@@ -42,7 +56,12 @@ export default function MoveScreen() {
         )}
       >
         <>
-            <View style={[styles.stage, compact && styles.stageCompact]}>
+            <Pressable
+              accessibilityRole="none"
+              importantForAccessibility="no-hide-descendants"
+              onPress={unlockFromUserGesture}
+              style={[styles.stage, compact && styles.stageCompact]}
+            >
               <MoveStage
                 activityId={sequenceId}
                 stepId={stepId}
@@ -61,7 +80,7 @@ export default function MoveScreen() {
               >
                 {instruction}
               </CrossfadeInstructionText>
-            </View>
+            </Pressable>
             <SessionChoiceSheet
               visible={chooserOpen}
               title={t('move.menu')}

@@ -9,6 +9,7 @@ import { useTheme } from '@/hooks/useTheme';
 type Props = {
   title: string;
   onClose: () => void;
+  showClose?: boolean;
   right?: ReactNode;
   children: ReactNode;
   scroll?: boolean;
@@ -22,6 +23,7 @@ type Props = {
 export function ExerciseShell({
   title,
   onClose,
+  showClose = false,
   right,
   children,
   scroll,
@@ -44,6 +46,7 @@ export function ExerciseShell({
         <ActiveSessionHeader
           title={title}
           onClose={onClose}
+          showClose={showClose}
           closeLabel={closeLabel}
           closeHint={closeHint}
           onBack={onBack}

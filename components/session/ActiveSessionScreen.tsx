@@ -30,6 +30,8 @@ type Props = {
   backNavigates?: boolean;
   /** When set, show a header back control that ends the session (same as close) if `onBack` is unset. */
   backClosesSession?: boolean;
+  /** Header × close (right when back is shown). Default off — back exits to home. */
+  showSessionClose?: boolean;
 };
 
 export function ActiveSessionScreen({
@@ -51,6 +53,7 @@ export function ActiveSessionScreen({
   backHint,
   backNavigates = false,
   backClosesSession = false,
+  showSessionClose = false,
 }: Props) {
   const controls = useActiveSession(tool, backNavigates ? onBack : undefined);
   const headerBack = onBack ?? (backClosesSession ? controls.close : undefined);
@@ -61,6 +64,7 @@ export function ActiveSessionScreen({
     <ExerciseShell
       title={title}
       onClose={onClose ?? controls.close}
+      showClose={showSessionClose}
       right={right}
       scroll={scroll}
       closeLabel={closeLabel ?? t('exercise.closeSession')}

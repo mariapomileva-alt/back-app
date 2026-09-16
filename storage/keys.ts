@@ -11,6 +11,7 @@ export const storageKeys = {
   groundSfxMuted: 'back.groundSfxMuted',
   groundAmbientMuted: 'back.groundAmbientMuted',
   breatheSfxMuted: 'back.breatheSfxMuted',
+  moveAmbientMuted: 'back.moveAmbientMuted',
   firstLaunchSeen: 'back.firstLaunchSeen',
   supportContact: 'back.supportContact',
   emergencyCountry: 'back.emergencyCountry',

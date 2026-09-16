@@ -6,6 +6,7 @@ import { t } from '@/locales/i18n';
 type Props = {
   title: string;
   onClose: () => void;
+  showClose?: boolean;
   right?: ReactNode;
   closeLabel?: string;
   closeHint?: string;
@@ -17,6 +18,7 @@ type Props = {
 export function ActiveSessionHeader({
   title,
   onClose,
+  showClose = false,
   right,
   closeLabel,
   closeHint,
@@ -30,6 +32,7 @@ export function ActiveSessionHeader({
   return (
     <ScreenHeader
       title={title}
+      showClose={showClose}
       onClose={onClose}
       closeVariant="close"
       closeLabel={resolvedCloseLabel}
