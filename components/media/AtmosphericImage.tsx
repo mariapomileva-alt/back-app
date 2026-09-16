@@ -1,6 +1,8 @@
+import Animated from 'react-native-reanimated';
 import { Image, StyleSheet, View, useWindowDimensions, type ImageSourcePropType } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 
+import { useListenVisualAmbientMotion } from '@/components/listen/ListenVisualAmbientMotion';
 import { useReduceTransparency } from '@/hooks/useReduceTransparency';
 import { useTheme } from '@/hooks/useTheme';
 import { brand, hexToRgba } from '@/theme/colors';
@@ -15,6 +17,9 @@ type Props = {
   height?: number;
   heightRatio?: number;
   treatment?: AtmosphericTreatment;
+  /** Gentle Ken Burns drift on the photo layer (Listen). */
+  ambientMotion?: boolean;
+  ambientMotionActive?: boolean;
 };
 
 export function AtmosphericImage({
@@ -23,6 +28,8 @@ export function AtmosphericImage({
   height,
   heightRatio = 0.36,
   treatment = 'photo',
+  ambientMotion = false,
+  ambientMotionActive = true,
 }: Props) {
   const { theme } = useTheme();
   const reduceTransparency = useReduceTransparency();
@@ -32,6 +39,14 @@ export function AtmosphericImage({
   const clear = hexToRgba(fade, 0);
   const abstract = treatment === 'abstract';
   const wash = abstract ? 0.14 : theme.name === 'deepGreen' ? 0.12 : 0.04;
+  const motion = useListenVisualAmbientMotion(ambientMotion && ambientMotionActive);
+  const photoLayer = ambientMotion ? (
+    <Animated.View style={[styles.imageMotion, motion.contentStyle]}>
+      <Image source={source} style={styles.image} resizeMode="cover" fadeDuration={0} />
+    </Animated.View>
+  ) : (
+    <Image source={source} style={styles.image} resizeMode="cover" fadeDuration={0} />
+  );
 
   return (
     <View
@@ -40,12 +55,7 @@ export function AtmosphericImage({
       accessibilityLabel={accessibilityLabel}
       style={[styles.wrap, { height: imageHeight }]}
     >
-      <Image
-        source={source}
-        style={styles.image}
-        resizeMode="cover"
-        fadeDuration={0}
-      />
+      {photoLayer}
       {reduceTransparency ? (
         <View style={[styles.solidEdge, { borderColor: theme.colors.border, pointerEvents: 'none' }]} />
       ) : (
@@ -68,6 +78,12 @@ export function AtmosphericImage({
             locations={abstract ? [0, 0.2, 0.8, 1] : [0, 0.16, 0.84, 1]}
             style={[StyleSheet.absoluteFill, styles.ignorePointer]}
           />
+          {motion.showShimmer ? (
+            <Animated.View
+              pointerEvents="none"
+              style={[StyleSheet.absoluteFill, styles.shimmer, motion.shimmerStyle]}
+            />
+          ) : null}
         </>
       )}
     </View>
@@ -80,10 +96,16 @@ const styles = StyleSheet.create({
     marginHorizontal: -spacing.lg,
     overflow: 'hidden',
   },
+  imageMotion: {
+    ...StyleSheet.absoluteFill,
+  },
   image: {
     width: '100%',
     height: '100%',
     opacity: 1,
+  },
+  shimmer: {
+    backgroundColor: '#ffffff',
   },
   fadeTop: {
     position: 'absolute',

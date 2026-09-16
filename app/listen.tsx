@@ -140,7 +140,11 @@ export default function ListenScreen() {
               </AppText>
             </View>
             <View style={[styles.visual, { height: visualHeight, marginVertical: compact ? spacing.xxs : spacing.sm }]}>
-              <ListenSoundVisual sound={selected} height={visualHeight} />
+              <ListenSoundVisual
+                sound={selected}
+                height={visualHeight}
+                motionActive={audio.isPlaying}
+              />
             </View>
             <View style={[styles.playback, { marginTop: gap }]}>
               <View style={[styles.transport, { marginBottom: compact ? spacing.xxs : spacing.sm }]}>
