@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { Pressable, StyleSheet, View, useWindowDimensions } from 'react-native';
+import { Animated, Easing, Platform, Pressable, StyleSheet, View, useWindowDimensions } from 'react-native';
 
 import { AudioControl } from '@/components/audio/AudioControl';
 import { GroundStage } from '@/components/ground/GroundStage';
@@ -13,14 +13,21 @@ import {
   isGroundSequenceId,
   type GroundSequenceId,
 } from '@/features/ground/steps';
+import {
+  GROUND_INSTRUCTION_DIM,
+  GROUND_INSTRUCTION_FADE_IN_MS,
+  GROUND_INSTRUCTION_FADE_OUT_MS,
+} from '@/features/ground/transitions';
 import { useGroundSequence } from '@/features/ground/useGroundSequence';
 import { useGuidedAudio } from '@/hooks/useGuidedAudio';
+import { useReduceMotion } from '@/hooks/useReduceMotion';
 import { t } from '@/locales/i18n';
 import { loadSoundMuted, saveSoundMuted } from '@/storage/preferences';
 import { serif } from '@/theme/fonts';
 import { spacing } from '@/theme/spacing';
 
 export default function GroundScreen() {
+  const reduceMotion = useReduceMotion();
   const { height, fontScale } = useWindowDimensions();
   const compact = height < 700 || fontScale > 1.35;
   const [soundMuted, setSoundMuted] = useState(false);
@@ -33,9 +40,22 @@ export default function GroundScreen() {
   const [paused, setPaused] = useState(false);
   const [sequenceId, setSequenceId] = useState<GroundSequenceId>(defaultGroundSequenceId);
   const [chooserOpen, setChooserOpen] = useState(false);
-  const { instructionKey, last, next, prev, reset } = useGroundSequence(paused, sequenceId);
+  const {
+    instructionKey,
+    last,
+    next,
+    prev,
+    reset,
+    forwardTransition,
+    stepEnter,
+    finishForwardTransition,
+    acknowledgeStepEnter,
+  } = useGroundSequence(paused, sequenceId);
   const instruction = t(instructionKey);
   const skipSequenceAudioReset = useRef(true);
+  const [instructionOpacity] = useState(() => new Animated.Value(1));
+  const instructionKeyRef = useRef(instructionKey);
+  const useNativeDriver = Platform.OS !== 'web';
 
   useEffect(() => {
     let cancelled = false;
@@ -48,6 +68,36 @@ export default function GroundScreen() {
       cancelled = true;
     };
   }, []);
+
+  useEffect(() => {
+    if (!forwardTransition) {
+      return;
+    }
+    Animated.timing(instructionOpacity, {
+      toValue: GROUND_INSTRUCTION_DIM,
+      duration: GROUND_INSTRUCTION_FADE_OUT_MS,
+      easing: Easing.out(Easing.quad),
+      useNativeDriver,
+    }).start();
+  }, [forwardTransition, instructionOpacity, useNativeDriver]);
+
+  useEffect(() => {
+    if (instructionKeyRef.current === instructionKey) {
+      return;
+    }
+    instructionKeyRef.current = instructionKey;
+    if (stepEnter === 'forward' || reduceMotion) {
+      instructionOpacity.setValue(GROUND_INSTRUCTION_DIM);
+      Animated.timing(instructionOpacity, {
+        toValue: 1,
+        duration: GROUND_INSTRUCTION_FADE_IN_MS,
+        easing: Easing.out(Easing.quad),
+        useNativeDriver,
+      }).start();
+    } else {
+      instructionOpacity.setValue(1);
+    }
+  }, [instructionKey, instructionOpacity, reduceMotion, stepEnter, useNativeDriver]);
 
   useEffect(() => {
     if (skipSequenceAudioReset.current) {
@@ -105,7 +155,14 @@ export default function GroundScreen() {
       {(controls) => (
         <>
           <View style={[styles.stage, compact && styles.stageCompact]}>
-            <GroundStage stepKey={instructionKey} />
+            <GroundStage
+              stepKey={instructionKey}
+              stepEnter={stepEnter}
+              forwardTransition={forwardTransition}
+              paused={paused}
+              onForwardTransitionComplete={finishForwardTransition}
+              onStepEnterHandled={acknowledgeStepEnter}
+            />
             <Pressable
               accessibilityRole={last ? 'text' : 'button'}
               accessibilityLabel={instruction}
@@ -113,14 +170,16 @@ export default function GroundScreen() {
               onPress={last ? undefined : next}
               style={styles.instructionHit}
             >
-              <AppText
-                variant="instruction"
-                accessibilityLiveRegion="polite"
-                accessible={false}
-                style={[styles.instruction, compact && styles.instructionCompact]}
-              >
-                {instruction}
-              </AppText>
+              <Animated.View style={{ opacity: instructionOpacity }}>
+                <AppText
+                  variant="instruction"
+                  accessibilityLiveRegion="polite"
+                  accessible={false}
+                  style={[styles.instruction, compact && styles.instructionCompact]}
+                >
+                  {instruction}
+                </AppText>
+              </Animated.View>
             </Pressable>
             <AudioControl
               isPlaying={!paused}

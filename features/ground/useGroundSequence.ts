@@ -24,9 +24,13 @@ export function useGroundSequence(
   const steps = stepsForGroundSequence(sequenceId);
   const [index, setIndex] = useState(0);
   const [activeId, setActiveId] = useState(sequenceId);
+  const [forwardTransition, setForwardTransition] = useState(false);
+  const [stepEnter, setStepEnter] = useState<'none' | 'forward' | 'back'>('none');
   if (activeId !== sequenceId) {
     setActiveId(sequenceId);
     setIndex(0);
+    setForwardTransition(false);
+    setStepEnter('none');
   }
   const first = index <= 0;
   const last = index >= steps.length - 1;
@@ -38,7 +42,7 @@ export function useGroundSequence(
   }, [haptics.light]);
 
   useEffect(() => {
-    if (paused || last) {
+    if (paused || last || forwardTransition) {
       return;
     }
 
@@ -62,7 +66,7 @@ export function useGroundSequence(
           return;
         }
         lightRef.current();
-        setIndex((current) => Math.min(current + 1, steps.length - 1));
+        setForwardTransition(true);
       }, remaining);
     };
 
@@ -92,29 +96,43 @@ export function useGroundSequence(
       clear();
       subscription.remove();
     };
-  }, [index, last, paused, steps.length]);
+  }, [forwardTransition, index, last, paused, steps.length]);
 
-  const next = useCallback(() => {
-    setIndex((current) => {
-      if (current >= steps.length - 1) {
-        return current;
-      }
-      lightRef.current();
-      return current + 1;
-    });
+  const finishForwardTransition = useCallback(() => {
+    setForwardTransition(false);
+    setStepEnter('forward');
+    setIndex((current) => Math.min(current + 1, steps.length - 1));
   }, [steps.length]);
 
+  const acknowledgeStepEnter = useCallback(() => {
+    setStepEnter('none');
+  }, []);
+
+  const next = useCallback(() => {
+    if (last || forwardTransition) {
+      return;
+    }
+    lightRef.current();
+    setForwardTransition(true);
+  }, [forwardTransition, last]);
+
   const prev = useCallback(() => {
+    if (forwardTransition) {
+      setForwardTransition(false);
+    }
     setIndex((current) => {
       if (current <= 0) {
         return current;
       }
       lightRef.current();
+      setStepEnter('back');
       return current - 1;
     });
-  }, []);
+  }, [forwardTransition]);
 
   const reset = useCallback(() => {
+    setForwardTransition(false);
+    setStepEnter('none');
     setIndex(0);
   }, []);
 
@@ -123,8 +141,12 @@ export function useGroundSequence(
     first,
     last,
     instructionKey,
+    forwardTransition,
+    stepEnter,
     next,
     prev,
     reset,
+    finishForwardTransition,
+    acknowledgeStepEnter,
   };
 }
