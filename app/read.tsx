@@ -135,6 +135,7 @@ export default function ReadScreen() {
       scroll={false}
       onTryAnother={tryAnother}
       tryAnotherHint={t('read.tryAnotherHint')}
+      backClosesSession
       extraActions={<ReadPauseControl paused={paused} onPress={() => setPaused((value) => !value)} />}
     >
       {!session || !memory || !fragments || fragments.length === 0 ? (

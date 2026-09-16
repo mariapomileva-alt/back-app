@@ -35,10 +35,7 @@ export function DistractActivityScreen({ activity, children, scroll = false, rig
       right={right}
       onTryAnother={goToChooser}
       tryAnotherHint={t('distract.tryAnotherHint')}
-      onBack={goToChooser}
-      backLabel={t('distract.menu')}
-      backHint={t('distract.menuHint')}
-      backNavigates
+      backClosesSession
     >
       <View style={scroll ? styles.scrollBody : styles.body}>{children}</View>
     </ActiveSessionScreen>

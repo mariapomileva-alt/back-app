@@ -31,10 +31,9 @@ export default function MoveScreen() {
         title={t('home.tools.move')}
         onTryAnother={openChooser}
         tryAnotherHint={t('move.tryAnotherHint')}
-        onBack={openChooser}
-        backLabel={t('move.menu')}
-        backHint={t('move.menuHint')}
-        backNavigates={!chooserOpen}
+        backClosesSession
+        backNavigates={chooserOpen}
+        onBack={chooserOpen ? () => setChooserOpen(false) : undefined}
         extraActions={({ tryOfferedAlternatives }) => (
           <TextButton
             label={t('exercise.moveUncomfortable')}
@@ -42,8 +41,7 @@ export default function MoveScreen() {
           />
         )}
       >
-        {(controls) => (
-          <>
+        <>
             <View style={[styles.stage, compact && styles.stageCompact]}>
               <MoveStage
                 activityId={sequenceId}
@@ -77,10 +75,8 @@ export default function MoveScreen() {
                 }
               }}
               onDismiss={() => setChooserOpen(false)}
-              onHardwareBack={controls.close}
             />
-          </>
-        )}
+        </>
       </ActiveSessionScreen>
     </>
   );

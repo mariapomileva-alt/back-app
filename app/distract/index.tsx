@@ -41,7 +41,12 @@ export default function DistractMenuScreen() {
   const rows = [distractActivityIds.slice(0, 2), distractActivityIds.slice(2, 4)];
 
   return (
-    <ActiveSessionScreen tool="distract" title={t('home.tools.distract')} showSessionActions={false}>
+    <ActiveSessionScreen
+      tool="distract"
+      title={t('home.tools.distract')}
+      showSessionActions={false}
+      backClosesSession
+    >
       <AppText style={styles.choose}>{t('distract.choose')}</AppText>
       <View style={styles.grid}>
         {rows.map((row) => (

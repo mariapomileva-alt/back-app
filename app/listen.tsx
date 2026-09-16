@@ -6,7 +6,6 @@ import { AccessiblePressable } from '@/components/accessibility/AccessiblePressa
 import { VolumeBar } from '@/components/audio/VolumeBar';
 import { ListenSoundVisual } from '@/components/listen/ListenSoundVisual';
 import { ActiveSessionScreen } from '@/components/session/ActiveSessionScreen';
-import { SessionChoiceSheet } from '@/components/session/SessionChoiceSheet';
 import { AppText } from '@/components/typography/AppText';
 import {
   defaultListenSoundId,
@@ -55,7 +54,6 @@ export default function ListenScreen() {
   const [soundId, setSoundId] = useState<ListenSoundId>(initialSoundId);
   const [soundMuted, setSoundMuted] = useState(false);
   const [soundVolume, setSoundVolume] = useState(DEFAULT_SOUND_VOLUME);
-  const [chooserOpen, setChooserOpen] = useState(false);
   const selectorRef = useRef<ScrollView>(null);
   const chipX = useRef<Partial<Record<ListenSoundId, number>>>({});
 
@@ -99,10 +97,7 @@ export default function ListenScreen() {
   const select = (id: ListenSoundId) => {
     setSoundId(id);
     void saveLastSoundId(id);
-    setChooserOpen(false);
   };
-
-  const openChooser = () => setChooserOpen(true);
 
   const shift = (delta: number) => {
     const index = listenSounds.findIndex((item) => item.id === soundId);
@@ -125,14 +120,9 @@ export default function ListenScreen() {
       tool="listen"
       title={t('home.tools.listen')}
       scroll={false}
-      onBack={openChooser}
-      backLabel={t('listen.menu')}
-      backHint={t('listen.menuHint')}
-      backNavigates={!chooserOpen}
+      backClosesSession
     >
-      {(controls) => (
-        <>
-          <View style={styles.stage}>
+      <View style={styles.stage}>
             <View style={{ marginBottom: gap }}>
               <AppText
                 accessibilityRole="header"
@@ -242,24 +232,6 @@ export default function ListenScreen() {
               })}
             </ScrollView>
           </View>
-          <SessionChoiceSheet
-            visible={chooserOpen}
-            title={t('listen.menu')}
-            selectedId={soundId}
-            options={listenSounds.map((item) => ({
-              id: item.id,
-              label: t(item.nameKey),
-            }))}
-            onSelect={(id) => {
-              if (isListenSoundId(id)) {
-                select(id);
-              }
-            }}
-            onDismiss={() => setChooserOpen(false)}
-            onHardwareBack={controls.close}
-          />
-        </>
-      )}
     </ActiveSessionScreen>
   );
 }

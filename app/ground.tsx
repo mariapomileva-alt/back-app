@@ -185,13 +185,11 @@ export default function GroundScreen() {
       title={t('home.tools.ground')}
       onTryAnother={openChooser}
       tryAnotherHint={t('ground.tryAnotherHint')}
-      onBack={openChooser}
-      backLabel={t('ground.menu')}
-      backHint={t('ground.menuHint')}
-      backNavigates={!chooserOpen}
+      backClosesSession
+      backNavigates={chooserOpen}
+      onBack={chooserOpen ? () => setChooserOpen(false) : undefined}
     >
-      {(controls) => (
-        <>
+      <>
           <Pressable
             accessibilityRole="none"
             importantForAccessibility="no-hide-descendants"
@@ -256,10 +254,8 @@ export default function GroundScreen() {
               }
             }}
             onDismiss={() => setChooserOpen(false)}
-            onHardwareBack={controls.close}
           />
-        </>
-      )}
+      </>
     </ActiveSessionScreen>
   );
 }
