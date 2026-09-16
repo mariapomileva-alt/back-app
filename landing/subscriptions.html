@@ -6,9 +6,9 @@
     <meta name="theme-color" content="#F3EDE1" />
     <meta
       name="description"
-      content="Subscriptions and billing for Back — version 1.0 is free with no in-app purchase."
+      content="Back Plus — optional support for Back. Core tools stay free. Subscriptions are being prepared; nothing to buy yet."
     />
-    <title>Subscriptions — Back</title>
+    <title>Back Plus — Back</title>
     <link rel="icon" href="favicon.png" type="image/png" sizes="64x64" />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="logo-mark.png" />
@@ -22,7 +22,7 @@
   </head>
   <body>
     <div class="grain" aria-hidden="true"></div>
-    <a class="skip" href="#subscriptions">Subscriptions</a>
+    <a class="skip" href="#subscriptions">Back Plus</a>
 
     <header class="nav">
       <a class="brand" href="index.html">
@@ -32,37 +32,93 @@
       <a class="nav-cta" href="index.html#tools">See the tools</a>
     </header>
 
-    <main class="legal-main" id="subscriptions">
-      <p class="kicker">Back 1.0</p>
-      <h1>Subscriptions</h1>
+    <main class="legal-main subscriptions-page" id="subscriptions">
+      <p class="kicker">Back Plus</p>
+      <h1>Keep Back close</h1>
       <p class="lede">
-        Back is free to use. There is no subscription required today and no in-app purchase in
-        this version.
+        Back is built for the next minute — six quiet tools on your device, with no account required.
+        Back Plus is an optional way to support the app and unlock more ways to make Back yours when it
+        is ready. The core tools stay free.
       </p>
 
-      <h2>Current version (1.0)</h2>
-      <p>
-        All six tools in Back work without payment. The App Store listing for this version does
-        not include an active subscription or one-time purchase product. You do not need an
-        account to use Back, and nothing in the app is locked behind a paywall.
+      <h2>What stays free</h2>
+      <ul class="sub-list">
+        <li>All six tools: Breathe, Distract, Ground, Move, Listen, and Read</li>
+        <li>Extra support and public emergency numbers you choose</li>
+        <li>Call my person and your on-device support contact</li>
+        <li>Privacy-first design — your patterns and contacts stay on this device</li>
+      </ul>
+      <p class="quiet">
+        Back does not lock safety tools or sessions behind a paywall. Nothing in Back replaces crisis
+        care or therapy.
       </p>
 
-      <h2>If a paid tier is added later</h2>
+      <h2>What Back Plus includes</h2>
       <p>
-        If we introduce an optional paid tier (for example “Back+”), this page will describe
-        what it includes, the price, how renewal works, and how to cancel through your Apple ID
-        subscription settings. Purchases would be handled by Apple; Back would still not require
-        a Back account for the core app.
+        When Back Plus launches, it is meant to add more sounds, exercises, and personalization — not
+        to take away what already helps you today.
       </p>
-      <p>
-        Until then, there is nothing to buy inside Back and no recurring charge from Back
-        itself.
+      <ul class="sub-list sub-list--planned" aria-label="In development for Back Plus">
+        <li>Expanded environment sounds for Listen</li>
+        <li>Additional appearance themes</li>
+        <li>More Read library content</li>
+        <li>Deeper My patterns insights</li>
+      </ul>
+      <p class="quiet">
+        These items are in development. Only features marked as available in the app or on this page
+        at launch will be part of Back Plus.
+      </p>
+
+      <h2>Choose what feels right</h2>
+
+      <div data-subscription-state="a" class="sub-state">
+        <p class="sub-preparing">
+          Back Plus is being prepared. There is nothing to buy on the website or in the app yet, and no
+          trial is available until subscriptions launch in the App Store or Google Play.
+        </p>
+        <p class="quiet">
+          Planned base pricing (for transparency only, not a live price):
+          monthly from about €2.99 and annual from about €19.99 before regional adjustments.
+          <strong>Prices vary by region and currency.</strong> Final prices will appear in the store
+          when Back Plus is available.
+        </p>
+      </div>
+
+      <div data-subscription-state="b" class="sub-state" hidden>
+        <p>
+          Subscriptions are handled by Apple or Google. Prices below come from the store in your region
+          when available.
+        </p>
+        <div class="sub-plans" role="list" aria-label="Back Plus plans">
+          <article class="sub-plan" role="listitem" aria-labelledby="plan-monthly-title">
+            <h3 id="plan-monthly-title" class="sub-plan-title">Monthly</h3>
+            <p class="sub-plan-price" data-store-price="monthly">—</p>
+            <p class="quiet">Renews monthly. Cancel in your store account settings.</p>
+          </article>
+          <article class="sub-plan" role="listitem" aria-labelledby="plan-annual-title">
+            <h3 id="plan-annual-title" class="sub-plan-title">Annual</h3>
+            <p class="sub-plan-price" data-store-price="annual">—</p>
+            <p class="quiet">Renews yearly. Cancel in your store account settings.</p>
+          </article>
+        </div>
+        <p class="quiet">Prices vary by region and currency.</p>
+      </div>
+
+      <div class="sub-actions">
+        <a class="btn forest" href="index.html">Open Back</a>
+        <a class="btn clay" href="support.html">Subscription support</a>
+      </div>
+      <p class="sub-legal-links">
+        <a href="privacy.html">Privacy</a>
+        <span aria-hidden="true"> · </span>
+        <a href="terms.html">Terms</a>
       </p>
 
       <h2>Questions</h2>
       <p>
-        For product or billing questions, use <a href="support.html">Support</a>. For how we
-        handle data, see the <a href="privacy.html">Privacy Policy</a>.
+        For billing or Back Plus questions before launch, use
+        <a href="support.html">Support</a>. For data practices, see the
+        <a href="privacy.html">Privacy Policy</a>.
       </p>
       <p>Effective 17 September 2026.</p>
     </main>
@@ -79,5 +135,8 @@
       </p>
       <p class="foot-meta">© 2026 Back App</p>
     </footer>
+
+    <script src="subscriptions-config.js"></script>
+    <script src="subscriptions.js"></script>
   </body>
 </html>

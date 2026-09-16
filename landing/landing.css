@@ -940,3 +940,68 @@ button {
     padding-right: 18px;
   }
 }
+
+.subscriptions-page .sub-list {
+  margin: 0 0 16px;
+  padding-left: 1.15em;
+}
+
+.subscriptions-page .sub-list--planned li {
+  color: var(--muted);
+}
+
+.sub-preparing {
+  padding: 18px 20px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(45, 74, 62, 0.12);
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+.sub-plans {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin: 20px 0 12px;
+}
+
+.sub-plan {
+  padding: 20px 22px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(45, 74, 62, 0.14);
+}
+
+.sub-plan-title {
+  margin: 0 0 8px;
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--forest);
+}
+
+.sub-plan-price {
+  margin: 0 0 10px;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.sub-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 18px;
+  margin: 28px 0 12px;
+}
+
+.sub-legal-links {
+  margin: 0 0 8px;
+  font-size: 15px;
+}
+
+.sub-legal-links a {
+  color: var(--forest);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
