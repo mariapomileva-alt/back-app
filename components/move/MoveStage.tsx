@@ -3,7 +3,6 @@ import { Pressable, StyleSheet } from 'react-native';
 import { MoveExerciseIllustration } from '@/components/move/MoveIllustration';
 import type { MovePhase, MoveSequenceId, MoveStepId } from '@/features/move/steps';
 import { useReduceMotion } from '@/hooks/useReduceMotion';
-import { spacing, touch } from '@/theme/spacing';
 
 type Props = {
   activityId: MoveSequenceId;
@@ -42,10 +41,9 @@ export function MoveStage({
 
 const styles = StyleSheet.create({
   press: {
-    minHeight: touch.min,
     width: '100%',
     alignItems: 'center',
     justifyContent: 'center',
-    paddingVertical: spacing.xs,
+    flexShrink: 0,
   },
 });

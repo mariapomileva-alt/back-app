@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, useWindowDimensions } from 'react-native';
 
 import { TextButton } from '@/components/buttons/TextButton';
 import { MoveStage } from '@/components/move/MoveStage';
@@ -14,6 +14,8 @@ import { serif } from '@/theme/fonts';
 import { spacing } from '@/theme/spacing';
 
 export default function MoveScreen() {
+  const { height, fontScale } = useWindowDimensions();
+  const compact = height < 700 || fontScale > 1.35;
   const { phase, instructionKey, sequenceId, stepId, onPressIn, onPressOut, selectSequence } =
     useMoveCycle();
   const [chooserOpen, setChooserOpen] = useState(false);
@@ -25,6 +27,7 @@ export default function MoveScreen() {
     <>
       <ActiveSessionScreen
         tool="move"
+        scroll={false}
         title={t('home.tools.move')}
         onTryAnother={openChooser}
         tryAnotherHint={t('move.tryAnotherHint')}
@@ -41,7 +44,7 @@ export default function MoveScreen() {
       >
         {(controls) => (
           <>
-            <View style={styles.stage}>
+            <View style={[styles.stage, compact && styles.stageCompact]}>
               <MoveStage
                 activityId={sequenceId}
                 stepId={stepId}
@@ -51,7 +54,11 @@ export default function MoveScreen() {
                 onPressIn={onPressIn}
                 onPressOut={onPressOut}
               />
-              <AppText variant="instruction" accessibilityLiveRegion="polite" style={styles.instruction}>
+              <AppText
+                variant="instruction"
+                accessibilityLiveRegion="polite"
+                style={[styles.instruction, compact && styles.instructionCompact]}
+              >
                 {instruction}
               </AppText>
             </View>
@@ -81,10 +88,16 @@ export default function MoveScreen() {
 
 const styles = StyleSheet.create({
   stage: {
-    flexGrow: 1,
+    flex: 1,
+    minHeight: 0,
     alignItems: 'center',
-    justifyContent: 'flex-start',
-    paddingTop: spacing.xs,
+    justifyContent: 'center',
+    paddingVertical: spacing.xs,
+    gap: spacing.md,
+  },
+  stageCompact: {
+    paddingVertical: spacing.xxs,
+    gap: spacing.sm,
   },
   instruction: {
     fontFamily: serif,
@@ -92,9 +105,12 @@ const styles = StyleSheet.create({
     lineHeight: 42,
     fontWeight: '500',
     textAlign: 'center',
-    marginTop: spacing.xs,
-    marginBottom: spacing.lg,
     maxWidth: 320,
     paddingHorizontal: spacing.sm,
+    flexShrink: 0,
+  },
+  instructionCompact: {
+    fontSize: 28,
+    lineHeight: 34,
   },
 });
