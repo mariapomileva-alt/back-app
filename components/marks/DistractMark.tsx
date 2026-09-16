@@ -15,10 +15,10 @@ export function DistractMark() {
   return (
     <MarkFrame>
       <Svg width="100%" height="100%" viewBox={markViewBox} preserveAspectRatio="xMidYMid meet">
-        <Circle cx="42" cy="40" r="16" fill={sage} opacity={0.42} />
-        <Circle cx="70" cy="24" r="11" fill={pale} opacity={0.7} />
-        <Circle cx="86" cy="46" r="9" fill={forest} opacity={0.38} />
-        <Circle cx="60" cy="50" r="6.5" fill={clay} opacity={0.32} />
+        <Circle cx="41" cy="39" r="16" fill={sage} opacity={0.44} />
+        <Circle cx="71" cy="23" r="11" fill={pale} opacity={0.72} />
+        <Circle cx="87" cy="45" r="9" fill={forest} opacity={0.42} />
+        <Circle cx="59" cy="51" r="7" fill={clay} opacity={0.38} />
       </Svg>
     </MarkFrame>
   );

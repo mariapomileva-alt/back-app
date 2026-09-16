@@ -3,54 +3,36 @@ import Svg, { Ellipse, Path } from 'react-native-svg';
 import { useTheme } from '@/hooks/useTheme';
 
 import { MarkFrame } from './MarkFrame';
-import { markViewBox, strokeRegular, strokeThin } from './markLanguage';
+import { markViewBox, strokeRegular } from './markLanguage';
 
+/** Contact with surface — horizontal base, form meeting widened contact. */
 export function GroundMark() {
   const { theme } = useTheme();
-  const mound = theme.colors.markSurface;
-  const sage = theme.colors.markSecondary;
+  const base = theme.colors.markSurface;
+  const form = theme.colors.markSecondary;
+  const contact = theme.colors.markPrimary;
 
   return (
     <MarkFrame>
       <Svg width="100%" height="100%" viewBox={markViewBox} preserveAspectRatio="xMidYMid meet">
-        <Ellipse cx="60" cy="60" rx="26" ry="7" fill={mound} opacity={0.78} />
         <Path
-          d="M60 58 L60 24"
+          d="M14 59 H106"
           fill="none"
-          stroke={sage}
-          strokeWidth={strokeRegular}
+          stroke={base}
+          strokeWidth={strokeRegular + 0.4}
           strokeLinecap="round"
-          opacity={0.8}
+          opacity={0.88}
         />
+        <Ellipse cx="60" cy="57" rx="22" ry="6" fill={form} opacity={0.26} />
         <Path
-          d="M60 26 C50 8 70 8 60 26 Z"
-          fill={sage}
-          fillOpacity={0.14}
-          stroke={sage}
-          strokeWidth={strokeThin}
+          d="M56 54 Q54 54 54 48 L55 24 Q60 17 65 24 L66 48 Q66 54 64 54 Q60 58 56 54 Z"
+          fill={form}
+          fillOpacity={0.22}
+          stroke={contact}
+          strokeWidth={strokeRegular}
           strokeLinejoin="round"
           strokeLinecap="round"
           opacity={0.9}
-        />
-        <Path
-          d="M60 42 C44 38 38 22 56 32 C48 28 58 36 60 42 Z"
-          fill={sage}
-          fillOpacity={0.12}
-          stroke={sage}
-          strokeWidth={strokeThin}
-          strokeLinejoin="round"
-          strokeLinecap="round"
-          opacity={0.82}
-        />
-        <Path
-          d="M60 42 C76 38 82 22 64 32 C72 28 62 36 60 42 Z"
-          fill={sage}
-          fillOpacity={0.12}
-          stroke={sage}
-          strokeWidth={strokeThin}
-          strokeLinejoin="round"
-          strokeLinecap="round"
-          opacity={0.82}
         />
       </Svg>
     </MarkFrame>

@@ -21,13 +21,13 @@ export function ReadMark() {
           fontSize="38"
           fontWeight="500"
           fill={letter}
-          opacity={0.55}
+          opacity={0.62}
         >
           Aa
         </SvgText>
-        <Rect x="70" y="28" width="36" height="1.35" rx="0.7" fill={rule} opacity={0.22} />
-        <Rect x="70" y="38" width="28" height="1.35" rx="0.7" fill={rule} opacity={0.16} />
-        <Rect x="70" y="48" width="20" height="1.35" rx="0.7" fill={rule} opacity={0.12} />
+        <Rect x="70" y="28" width="36" height="1.35" rx="0.7" fill={rule} opacity={0.32} />
+        <Rect x="70" y="38" width="28" height="1.35" rx="0.7" fill={rule} opacity={0.24} />
+        <Rect x="70" y="48" width="20" height="1.35" rx="0.7" fill={rule} opacity={0.18} />
       </Svg>
     </MarkFrame>
   );
