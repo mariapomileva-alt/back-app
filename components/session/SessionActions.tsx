@@ -41,5 +41,6 @@ const styles = StyleSheet.create({
     alignItems: 'stretch',
     flexShrink: 0,
     paddingTop: spacing.md,
+    gap: spacing.xxs,
   },
 });

@@ -29,7 +29,16 @@ export function ScreenContainer({
   const { theme } = useTheme();
 
   const body = (
-    <View style={[styles.body, padded && styles.padded, contentStyle]}>{children}</View>
+    <View
+      style={[
+        styles.body,
+        padded && styles.padded,
+        !scroll && styles.bodyFill,
+        contentStyle,
+      ]}
+    >
+      {children}
+    </View>
   );
 
   return (
@@ -65,6 +74,10 @@ const styles = StyleSheet.create({
   },
   body: {
     flexGrow: 1,
+  },
+  bodyFill: {
+    flex: 1,
+    minHeight: 0,
   },
   padded: {
     paddingHorizontal: spacing.lg,

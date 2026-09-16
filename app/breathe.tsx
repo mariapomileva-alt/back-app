@@ -79,6 +79,7 @@ export default function BreatheScreen() {
     <>
       <ActiveSessionScreen
         tool="breathe"
+        scroll={false}
         title={t('home.tools.breathe')}
         right={
           <BreatheSfxMuteButton
@@ -157,7 +158,8 @@ export default function BreatheScreen() {
 
 const styles = StyleSheet.create({
   stage: {
-    flexGrow: 1,
+    flex: 1,
+    minHeight: 0,
     alignItems: 'center',
     justifyContent: 'center',
     paddingVertical: spacing.md,

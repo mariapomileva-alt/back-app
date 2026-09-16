@@ -97,5 +97,6 @@ const styles = StyleSheet.create({
   footer: {
     flexShrink: 0,
     width: '100%',
+    marginTop: 'auto',
   },
 });

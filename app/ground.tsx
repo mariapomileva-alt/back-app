@@ -175,6 +175,7 @@ export default function GroundScreen() {
   return (
     <ActiveSessionScreen
       tool="ground"
+      scroll={false}
       title={t('home.tools.ground')}
       right={
         <GroundSfxMuteButton
@@ -246,7 +247,8 @@ export default function GroundScreen() {
 
 const styles = StyleSheet.create({
   stage: {
-    flexGrow: 1,
+    flex: 1,
+    minHeight: 0,
     alignItems: 'center',
     justifyContent: 'center',
     paddingBottom: spacing.md,
