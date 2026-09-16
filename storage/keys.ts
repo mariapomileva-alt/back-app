@@ -7,6 +7,7 @@ export const storageKeys = {
   soundVolume: 'back.soundVolume',
   lastBreathPattern: 'back.lastBreathPattern',
   lastDistractActivity: 'back.lastDistractActivity',
+  distractSfxMuted: 'back.distractSfxMuted',
   firstLaunchSeen: 'back.firstLaunchSeen',
   supportContact: 'back.supportContact',
   emergencyCountry: 'back.emergencyCountry',

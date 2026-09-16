@@ -12,9 +12,10 @@ type Props = {
   activity: DistractActivityId;
   children: ReactNode;
   scroll?: boolean;
+  right?: ReactNode;
 };
 
-export function DistractActivityScreen({ activity, children, scroll = false }: Props) {
+export function DistractActivityScreen({ activity, children, scroll = false, right }: Props) {
   const router = useRouter();
   useRememberDistractActivity(activity);
 
@@ -31,6 +32,7 @@ export function DistractActivityScreen({ activity, children, scroll = false }: P
       tool="distract"
       title={t('home.tools.distract')}
       scroll={scroll}
+      right={right}
       onTryAnother={goToChooser}
       tryAnotherHint={t('distract.tryAnotherHint')}
       onBack={goToChooser}

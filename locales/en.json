@@ -177,6 +177,10 @@
     "change": "Change activity",
     "changeHint": "Opens the quiet activity list",
     "tryAnotherHint": "Opens the quiet activity list",
+    "soundOn": "Sound on",
+    "soundOff": "Sound off",
+    "soundOnHint": "Turns game sounds on",
+    "soundOffHint": "Turns game sounds off",
     "activities": {
       "shapes": "Shapes",
       "blocks": "Blocks",

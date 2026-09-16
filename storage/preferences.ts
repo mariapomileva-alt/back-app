@@ -174,6 +174,18 @@ export async function saveLastDistractActivity(id: string): Promise<void> {
   }
 }
 
+export async function loadDistractSfxMuted(): Promise<boolean> {
+  return readBoolean(storageKeys.distractSfxMuted, false);
+}
+
+export async function saveDistractSfxMuted(muted: boolean): Promise<void> {
+  try {
+    await AsyncStorage.setItem(storageKeys.distractSfxMuted, String(muted));
+  } catch {
+    // Keep the in-memory preference if local storage is unavailable.
+  }
+}
+
 export type RememberedChoices = {
   lastBreathPattern: string | null;
   lastDistractActivity: string | null;

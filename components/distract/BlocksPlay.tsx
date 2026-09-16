@@ -206,7 +206,11 @@ function TrayPiece({
   );
 }
 
-export function BlocksPlay() {
+type Props = {
+  onAreaClear?: () => void;
+};
+
+export function BlocksPlay({ onAreaClear }: Props) {
   const { theme } = useTheme();
   const haptics = useHaptics();
   const rootRef = useRef<View>(null);
@@ -268,15 +272,20 @@ export function BlocksPlay() {
     });
   };
 
+  const beginClear = (indices: number[], nextBoard: Board, nextTray: TrayItem[]) => {
+    onAreaClear?.();
+    setFilled(nextBoard);
+    setTray(nextTray);
+    setClearing(indices);
+    setSelectedId(null);
+    dragRef.current = null;
+    setDrag(null);
+  };
+
   const settle = (nextBoard: Board, nextTray: TrayItem[]) => {
     const complete = completedAreaCells(nextBoard);
     if (complete.length > 0) {
-      setFilled(nextBoard);
-      setTray(nextTray);
-      setClearing(complete);
-      setSelectedId(null);
-      dragRef.current = null;
-      setDrag(null);
+      beginClear(complete, nextBoard, nextTray);
       return;
     }
 
@@ -284,12 +293,7 @@ export function BlocksPlay() {
     if (playable.every((item) => !itemFitsBoard(nextBoard, item))) {
       const relief = reliefCells(nextBoard);
       if (relief.length > 0) {
-        setFilled(nextBoard);
-        setTray(playable);
-        setClearing(relief);
-        setSelectedId(null);
-        dragRef.current = null;
-        setDrag(null);
+        beginClear(relief, nextBoard, playable);
         return;
       }
     }

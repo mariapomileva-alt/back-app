@@ -84,7 +84,11 @@ function CatchDisc({
   );
 }
 
-export function CatchPlay() {
+type Props = {
+  onCatchTap?: () => void;
+};
+
+export function CatchPlay({ onCatchTap }: Props) {
   const { theme } = useTheme();
   const haptics = useHaptics();
   const reduceMotion = useReduceMotion();
@@ -215,6 +219,7 @@ export function CatchPlay() {
               }
               setBusy(true);
               haptics.light();
+              onCatchTap?.();
               if (reduceMotion) {
                 showNext();
                 return;
