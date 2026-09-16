@@ -7,7 +7,7 @@ export const breatheAmbient = {
 } as const;
 
 /** Audible bed — still softer than Ground ambient; capped for comfort. */
-export const BREATHE_AMBIENT_VOLUME = 0.24;
+export const BREATHE_AMBIENT_VOLUME = 0.17;
 
 /** How much openness (orb size) lifts volume above the floor. */
 export const BREATHE_AMBIENT_MOD_DEPTH = 0.58;
