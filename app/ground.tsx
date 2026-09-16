@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { Animated, Easing, Platform, Pressable, StyleSheet, View, useWindowDimensions } from 'react-native';
 
 import { AudioControl } from '@/components/audio/AudioControl';
@@ -19,7 +19,7 @@ import {
   GROUND_INSTRUCTION_FADE_OUT_MS,
 } from '@/features/ground/transitions';
 import { useGroundSequence } from '@/features/ground/useGroundSequence';
-import { useGroundSfx } from '@/hooks/useGroundSfx';
+import { useGroundAmbient } from '@/hooks/useGroundAmbient';
 import { useGuidedAudio } from '@/hooks/useGuidedAudio';
 import { useReduceMotion } from '@/hooks/useReduceMotion';
 import { t } from '@/locales/i18n';
@@ -50,8 +50,14 @@ export default function GroundScreen() {
     forwardTransition,
     stepEnter,
     finishForwardTransition,
+    acknowledgeStepEnter,
   } = useGroundSequence(paused, sequenceId);
-  const groundSfx = useGroundSfx({ masterMuted: soundMuted || audio.muted });
+  const groundAmbient = useGroundAmbient({
+    paused,
+    masterMuted: soundMuted || audio.muted,
+  });
+  const { unlockFromUserGesture, muted: activitySfxMuted, toggleMute: toggleActivitySfxMute } =
+    groundAmbient;
   const instruction = t(instructionKey);
   const skipSequenceAudioReset = useRef(true);
   const [instructionOpacity] = useState(() => new Animated.Value(1));
@@ -114,8 +120,16 @@ export default function GroundScreen() {
     if (stepEnter !== 'forward') {
       return;
     }
-    groundSfx.playStep();
-  }, [groundSfx, instructionKey, stepEnter]);
+    acknowledgeStepEnter();
+  }, [acknowledgeStepEnter, stepEnter]);
+
+  const withSfxUnlock = useCallback(
+    (action: () => void) => {
+      unlockFromUserGesture();
+      action();
+    },
+    [unlockFromUserGesture],
+  );
 
   useEffect(() => {
     if (skipSequenceAudioReset.current) {
@@ -132,6 +146,7 @@ export default function GroundScreen() {
   }, [sequenceId]);
 
   const onPlayPause = () => {
+    unlockFromUserGesture();
     if (paused) {
       setPaused(false);
       if (narrationReady) {
@@ -144,12 +159,16 @@ export default function GroundScreen() {
   };
 
   const replay = () => {
+    unlockFromUserGesture();
     reset();
     setPaused(false);
     if (narrationReady) {
       audio.replay();
     }
   };
+
+  const goNext = useCallback(() => withSfxUnlock(next), [next, withSfxUnlock]);
+  const goPrev = useCallback(() => withSfxUnlock(prev), [prev, withSfxUnlock]);
 
   const openChooser = () => setChooserOpen(true);
 
@@ -178,7 +197,7 @@ export default function GroundScreen() {
               accessibilityRole={last ? 'text' : 'button'}
               accessibilityLabel={instruction}
               accessibilityHint={last ? undefined : t('ground.continueHint')}
-              onPress={last ? undefined : next}
+              onPress={last ? undefined : goNext}
               style={styles.instructionHit}
             >
               <Animated.View style={{ opacity: instructionOpacity }}>
@@ -196,13 +215,17 @@ export default function GroundScreen() {
               isPlaying={!paused}
               muted={audio.muted}
               onPlayPause={onPlayPause}
-              onPrevious={prev}
-              onNext={next}
-              activitySfxMuted={groundSfx.muted}
-              onActivitySfxMute={groundSfx.toggleMute}
+              onPrevious={goPrev}
+              onNext={goNext}
+              activitySfxMuted={activitySfxMuted}
+              onActivitySfxMute={() => {
+                unlockFromUserGesture();
+                toggleActivitySfxMute();
+              }}
               onMute={
                 narrationReady
                   ? () => {
+                      unlockFromUserGesture();
                       const nextMuted = !audio.muted;
                       setSoundMuted(nextMuted);
                       void saveSoundMuted(nextMuted);

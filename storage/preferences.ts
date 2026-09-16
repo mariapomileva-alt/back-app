@@ -186,13 +186,21 @@ export async function saveDistractSfxMuted(muted: boolean): Promise<void> {
   }
 }
 
-export async function loadGroundSfxMuted(): Promise<boolean> {
+export async function loadGroundAmbientMuted(): Promise<boolean> {
+  try {
+    const value = await AsyncStorage.getItem(storageKeys.groundAmbientMuted);
+    if (value !== null) {
+      return value === 'true';
+    }
+  } catch {
+    // Fall through to legacy key.
+  }
   return readBoolean(storageKeys.groundSfxMuted, false);
 }
 
-export async function saveGroundSfxMuted(muted: boolean): Promise<void> {
+export async function saveGroundAmbientMuted(muted: boolean): Promise<void> {
   try {
-    await AsyncStorage.setItem(storageKeys.groundSfxMuted, String(muted));
+    await AsyncStorage.setItem(storageKeys.groundAmbientMuted, String(muted));
   } catch {
     // Keep the in-memory preference if local storage is unavailable.
   }

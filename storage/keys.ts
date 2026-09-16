@@ -9,6 +9,7 @@ export const storageKeys = {
   lastDistractActivity: 'back.lastDistractActivity',
   distractSfxMuted: 'back.distractSfxMuted',
   groundSfxMuted: 'back.groundSfxMuted',
+  groundAmbientMuted: 'back.groundAmbientMuted',
   firstLaunchSeen: 'back.firstLaunchSeen',
   supportContact: 'back.supportContact',
   emergencyCountry: 'back.emergencyCountry',
