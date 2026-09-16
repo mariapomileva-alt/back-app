@@ -1,5 +1,5 @@
 /**
- * PLACEHOLDER — 20s seamless soft brown-noise / air bed, not production studio audio.
+ * PLACEHOLDER — 20s seamless warm low-mid air/hum bed (regenerate via scripts/generate-breathe-ambient.py).
  * Volume follows the breathing orb in-app; this file stays a steady calm loop.
  */
 export const breatheAmbient = {
