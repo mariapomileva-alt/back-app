@@ -139,14 +139,19 @@ export function useLoopingSound({
     }
   }, [player]);
 
-  const startPlayback = useCallback(async (): Promise<boolean> => {
+  const startPlayback = useCallback(async (resync = false): Promise<boolean> => {
     wantsPlay.current = true;
     await configureListenAudioSession();
     const alreadyAudible = isAudiblePlayback(playerRef.current);
-    if (alreadyAudible === true) {
-      if (muted) {
-        applyVolume(playerRef.current, 0);
-      } else if (!fading.current) {
+    // Silent bed: keep looping at volume 0 without re-calling play().
+    if (alreadyAudible === true && muted) {
+      applyVolume(playerRef.current, 0);
+      setPlayback('playing');
+      return true;
+    }
+    // Unmuted but HTML `paused === false` is not proof web audio unlocked (e.g. volume-0 autoplay).
+    if (alreadyAudible === true && !resync) {
+      if (!fading.current) {
         applyVolume(playerRef.current, volume);
       }
       setPlayback('playing');
@@ -361,8 +366,8 @@ export function useLoopingSound({
     playback,
     muted,
     volume,
-    play: () => {
-      void startPlayback();
+    play: (resync = false) => {
+      void startPlayback(resync);
     },
     pause: stopPlayback,
     toggle: () => {

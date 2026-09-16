@@ -39,11 +39,14 @@ export function useGroundAmbient({ paused = false, masterMuted = false }: Option
 
   const loopRef = useRef(loop);
   loopRef.current = loop;
+  const prevAmbientMutedRef = useRef(ambientMuted);
 
   useEffect(() => {
     if (!prefLoaded) {
       return;
     }
+    const wasMuted = prevAmbientMutedRef.current;
+    prevAmbientMutedRef.current = ambientMuted;
     if (paused) {
       loopRef.current.pause();
       return;
@@ -54,6 +57,11 @@ export function useGroundAmbient({ paused = false, masterMuted = false }: Option
     }
     if (loopRef.current.playback !== 'playing') {
       loopRef.current.play();
+      return;
+    }
+    // Unmute after a silent bed: re-sync play() on the user gesture that toggled mute.
+    if (wasMuted) {
+      loopRef.current.play(true);
     }
   }, [ambientMuted, paused, prefLoaded]);
 
@@ -61,9 +69,8 @@ export function useGroundAmbient({ paused = false, masterMuted = false }: Option
     if (paused || ambientMuted) {
       return;
     }
-    if (loopRef.current.playback !== 'playing') {
-      loopRef.current.play();
-    }
+    // Always re-attempt on tap so web NotAllowedError unlocks even when paused === false.
+    loopRef.current.play(true);
   }, [ambientMuted, paused]);
 
   const toggleMute = useCallback(() => {
