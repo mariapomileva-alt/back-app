@@ -7,7 +7,7 @@ export const breatheAmbient = {
 } as const;
 
 /** Very light bed — quieter than Ground ambient. */
-export const BREATHE_AMBIENT_VOLUME = 0.12;
+export const BREATHE_AMBIENT_VOLUME = 0.24;
 
 /** How much openness (orb size) lifts volume above the floor. */
 export const BREATHE_AMBIENT_MOD_DEPTH = 0.52;
