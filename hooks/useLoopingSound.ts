@@ -142,6 +142,16 @@ export function useLoopingSound({
   const startPlayback = useCallback(async (): Promise<boolean> => {
     wantsPlay.current = true;
     await configureListenAudioSession();
+    const alreadyAudible = isAudiblePlayback(playerRef.current);
+    if (alreadyAudible === true) {
+      if (muted) {
+        applyVolume(playerRef.current, 0);
+      } else if (!fading.current) {
+        applyVolume(playerRef.current, volume);
+      }
+      setPlayback('playing');
+      return true;
+    }
     const started = await attemptPlayback(playerRef.current);
     if (!started) {
       wantsPlay.current = false;

@@ -1,5 +1,5 @@
 /**
- * PLACEHOLDER — dev-generated brown-noise bed, not production studio audio.
+ * PLACEHOLDER — 20s periodic brown-noise bed (seamless loop), not production studio audio.
  */
 export const groundAmbient = {
   loop: require('../../audio/sfx/ground-ambient-placeholder.wav'),

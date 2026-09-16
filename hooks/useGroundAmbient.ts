@@ -49,16 +49,21 @@ export function useGroundAmbient({ paused = false, masterMuted = false }: Option
       return;
     }
     if (ambientMuted) {
+      // Keep the loop running silently so unmute does not restart the bed.
       return;
     }
-    loopRef.current.play();
+    if (loopRef.current.playback !== 'playing') {
+      loopRef.current.play();
+    }
   }, [ambientMuted, paused, prefLoaded]);
 
   const unlockFromUserGesture = useCallback(() => {
     if (paused || ambientMuted) {
       return;
     }
-    loopRef.current.play();
+    if (loopRef.current.playback !== 'playing') {
+      loopRef.current.play();
+    }
   }, [ambientMuted, paused]);
 
   const toggleMute = useCallback(() => {
