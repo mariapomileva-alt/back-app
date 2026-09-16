@@ -3,6 +3,7 @@ import { ActivityIndicator, StyleSheet, View } from 'react-native';
 
 import { ReadPauseControl } from '@/components/read/ReadPauseControl';
 import { ReadPlay } from '@/components/read/ReadPlay';
+import { ReadSpeedBoostButton } from '@/components/read/ReadSpeedBoostButton';
 import { ActiveSessionScreen } from '@/components/session/ActiveSessionScreen';
 import {
   beginReadSession,
@@ -22,6 +23,7 @@ export default function ReadScreen() {
   const [session, setSession] = useState<ReadSession | null>(null);
   const [revealedCount, setRevealedCount] = useState(1);
   const [paused, setPaused] = useState(false);
+  const [speedBoost, setSpeedBoost] = useState(false);
   const shownItems = useRef(new Set<string>());
   const sessionRef = useRef<ReadSession | null>(null);
   const memoryRef = useRef<ReadMemory | null>(null);
@@ -136,6 +138,12 @@ export default function ReadScreen() {
       onTryAnother={tryAnother}
       tryAnotherHint={t('read.tryAnotherHint')}
       backClosesSession
+      right={
+        <ReadSpeedBoostButton
+          active={speedBoost}
+          onPress={() => setSpeedBoost((value) => !value)}
+        />
+      }
       extraActions={<ReadPauseControl paused={paused} onPress={() => setPaused((value) => !value)} />}
     >
       {!session || !memory || !fragments || fragments.length === 0 ? (
@@ -149,6 +157,7 @@ export default function ReadScreen() {
           revealedCount={revealedCount}
           onReveal={onReveal}
           paused={paused}
+          speedBoost={speedBoost}
         />
       )}
     </ActiveSessionScreen>

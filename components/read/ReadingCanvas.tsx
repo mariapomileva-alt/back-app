@@ -37,6 +37,7 @@ type Props = {
   onReveal: () => void;
   speed: ReadRevealSpeed;
   paused?: boolean;
+  speedBoost?: boolean;
 };
 
 type PlacedFragment = {
@@ -341,7 +342,14 @@ function ReadLine({
   );
 }
 
-export function ReadingCanvas({ fragments, revealedCount, onReveal, speed, paused = false }: Props) {
+export function ReadingCanvas({
+  fragments,
+  revealedCount,
+  onReveal,
+  speed,
+  paused = false,
+  speedBoost = false,
+}: Props) {
   const reduceMotion = useReduceMotion();
   const [canvasHeight, setCanvasHeight] = useState(0);
   const [heights, setHeights] = useState<Record<string, number>>({});
@@ -408,10 +416,11 @@ export function ReadingCanvas({ fragments, revealedCount, onReveal, speed, pause
       return;
     }
     const delay = fragmentDelayMs(current.text, speed, current.kind);
-    const wait = reduceMotion ? Math.round(delay * 0.65) : delay;
+    const paced = speedBoost ? Math.round(delay / 2) : delay;
+    const wait = reduceMotion ? Math.round(paced * 0.65) : paced;
     const timer = setTimeout(onReveal, wait);
     return () => clearTimeout(timer);
-  }, [current, fragments.length, onReveal, paused, reduceMotion, speed, visibleCount]);
+  }, [current, fragments.length, onReveal, paused, reduceMotion, speed, speedBoost, visibleCount]);
 
   const visibleIds = new Set(fitted.items.map((item) => item.id));
   const placed: PlacedFragment[] = [

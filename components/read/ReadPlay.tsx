@@ -9,9 +9,17 @@ type Props = {
   revealedCount: number;
   onReveal: () => void;
   paused?: boolean;
+  speedBoost?: boolean;
 };
 
-export function ReadPlay({ fragments, speed, revealedCount, onReveal, paused = false }: Props) {
+export function ReadPlay({
+  fragments,
+  speed,
+  revealedCount,
+  onReveal,
+  paused = false,
+  speedBoost = false,
+}: Props) {
   return (
     <View style={styles.play}>
       <ReadingCanvas
@@ -20,6 +28,7 @@ export function ReadPlay({ fragments, speed, revealedCount, onReveal, paused = f
         onReveal={onReveal}
         speed={speed}
         paused={paused}
+        speedBoost={speedBoost}
       />
     </View>
   );

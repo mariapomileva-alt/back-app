@@ -251,7 +251,11 @@
       "unhurried": "Unhurried",
       "steady": "Steady",
       "quick": "Quick"
-    }
+    },
+    "speedBoostOff": "Read faster",
+    "speedBoostOffHint": "Shows each line about twice as quickly for this session.",
+    "speedBoostOn": "Faster reading, on",
+    "speedBoostOnHint": "Lines appear about twice as quickly. Double tap to return to normal speed."
   },
   "ground": {
     "previous": "Previous instruction",
