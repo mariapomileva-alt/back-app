@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
-import { StyleSheet, View, useWindowDimensions } from 'react-native';
+import { Pressable, StyleSheet, useWindowDimensions } from 'react-native';
 
 import { BreathingCircle } from '@/components/breathe/BreathingCircle';
+import { BreatheSfxMuteButton } from '@/components/breathe/BreatheSfxMuteButton';
 import { TextButton } from '@/components/buttons/TextButton';
 import { ActiveSessionScreen } from '@/components/session/ActiveSessionScreen';
 import { SessionChoiceSheet } from '@/components/session/SessionChoiceSheet';
@@ -15,6 +16,7 @@ import {
   type BreathPatternId,
 } from '@/features/breathe/patterns';
 import { useBreathCycle } from '@/features/breathe/useBreathCycle';
+import { useBreatheAmbient } from '@/hooks/useBreatheAmbient';
 import { useReduceMotion } from '@/hooks/useReduceMotion';
 import { t } from '@/locales/i18n';
 import { loadLastBreathPattern, saveLastBreathPattern } from '@/storage/preferences';
@@ -40,6 +42,13 @@ export default function BreatheScreen() {
     Math.min(reduceMotion ? REDUCE_OPEN_SIZE : OPEN_SIZE, Math.round(width * 0.84)),
   );
   const { phase, openness } = useBreathCycle(pattern);
+  const breatheAmbient = useBreatheAmbient({
+    openness,
+    sessionPaused: chooserOpen,
+    reduceMotion,
+  });
+  const { unlockFromUserGesture, muted: breatheSfxMuted, toggleMute: toggleBreatheSfxMute } =
+    breatheAmbient;
   const cue = t(cueKeyForPhase(phase));
   const patternName = t(pattern.nameKey);
 
@@ -68,6 +77,15 @@ export default function BreatheScreen() {
       <ActiveSessionScreen
         tool="breathe"
         title={t('home.tools.breathe')}
+        right={
+          <BreatheSfxMuteButton
+            muted={breatheSfxMuted}
+            onPress={() => {
+              unlockFromUserGesture();
+              toggleBreatheSfxMute();
+            }}
+          />
+        }
         onTryAnother={openChooser}
         tryAnotherHint={t('breathe.tryAnotherHint')}
         onBack={openChooser}
@@ -80,7 +98,12 @@ export default function BreatheScreen() {
       >
         {(controls) => (
           <>
-            <View style={[styles.stage, compact && styles.stageCompact]}>
+            <Pressable
+              accessibilityRole="none"
+              importantForAccessibility="no-hide-descendants"
+              onPress={unlockFromUserGesture}
+              style={[styles.stage, compact && styles.stageCompact]}
+            >
               <BreathingCircle
                 restSize={restSize}
                 openSize={openSize}
@@ -96,7 +119,7 @@ export default function BreatheScreen() {
               >
                 {cue}
               </AppText>
-            </View>
+            </Pressable>
             <SessionChoiceSheet
               visible={chooserOpen}
               title={t('breathe.menu')}

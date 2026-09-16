@@ -206,6 +206,18 @@ export async function saveGroundAmbientMuted(muted: boolean): Promise<void> {
   }
 }
 
+export async function loadBreatheSfxMuted(): Promise<boolean> {
+  return readBoolean(storageKeys.breatheSfxMuted, false);
+}
+
+export async function saveBreatheSfxMuted(muted: boolean): Promise<void> {
+  try {
+    await AsyncStorage.setItem(storageKeys.breatheSfxMuted, String(muted));
+  } catch {
+    // Keep the in-memory preference if local storage is unavailable.
+  }
+}
+
 export type RememberedChoices = {
   lastBreathPattern: string | null;
   lastDistractActivity: string | null;
