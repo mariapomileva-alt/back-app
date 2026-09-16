@@ -1,9 +1,10 @@
-import { useEffect, useMemo, useRef, useState } from 'react';
-import { ScrollView, StyleSheet, View, useWindowDimensions } from 'react-native';
+import { useEffect, useMemo, useState } from 'react';
+import { StyleSheet, View, useWindowDimensions } from 'react-native';
 import Svg, { Path } from 'react-native-svg';
 
 import { AccessiblePressable } from '@/components/accessibility/AccessiblePressable';
 import { VolumeBar } from '@/components/audio/VolumeBar';
+import { ListenSoundPicker } from '@/components/listen/ListenSoundPicker';
 import { ListenSoundVisual } from '@/components/listen/ListenSoundVisual';
 import { ActiveSessionScreen } from '@/components/session/ActiveSessionScreen';
 import { AppText } from '@/components/typography/AppText';
@@ -54,8 +55,6 @@ export default function ListenScreen() {
   const [soundId, setSoundId] = useState<ListenSoundId>(initialSoundId);
   const [soundMuted, setSoundMuted] = useState(false);
   const [soundVolume, setSoundVolume] = useState(DEFAULT_SOUND_VOLUME);
-  const selectorRef = useRef<ScrollView>(null);
-  const chipX = useRef<Partial<Record<ListenSoundId, number>>>({});
 
   useEffect(() => {
     let cancelled = false;
@@ -105,14 +104,6 @@ export default function ListenScreen() {
     if (next) {
       select(next.id);
     }
-  };
-
-  const revealSelectedChip = (id: ListenSoundId) => {
-    const x = chipX.current[id];
-    if (x == null) {
-      return;
-    }
-    selectorRef.current?.scrollTo({ x: Math.max(0, x - spacing.sm), animated: false });
   };
 
   return (
@@ -196,45 +187,7 @@ export default function ListenScreen() {
                 }}
               />
             </View>
-            <ScrollView
-              ref={selectorRef}
-              horizontal
-              accessibilityRole="radiogroup"
-              accessibilityLabel={t('listen.chooseSound')}
-              showsHorizontalScrollIndicator={false}
-              contentContainerStyle={[styles.selector, { marginTop: gap }]}
-              style={styles.selectorScroll}
-            >
-              {listenSounds.map((item) => {
-                const active = item.id === soundId;
-                return (
-                  <AccessiblePressable
-                    key={item.id}
-                    accessibilityRole="radio"
-                    accessibilityState={{ selected: active }}
-                    accessibilityLabel={
-                      active ? `${t(item.nameKey)}, ${t('common.selected')}` : t(item.nameKey)
-                    }
-                    onPress={() => select(item.id)}
-                    onLayout={(event) => {
-                      chipX.current[item.id] = event.nativeEvent.layout.x;
-                      if (item.id === soundId) {
-                        revealSelectedChip(item.id);
-                      }
-                    }}
-                    style={[
-                      styles.chip,
-                      {
-                        backgroundColor: active ? theme.colors.surfaceSecondary : 'transparent',
-                        borderColor: active ? theme.colors.primary : theme.colors.border,
-                      },
-                    ]}
-                  >
-                    <AppText variant="body">{t(item.nameKey)}</AppText>
-                  </AccessiblePressable>
-                );
-              })}
-            </ScrollView>
+            <ListenSoundPicker soundId={soundId} onSelect={select} marginTop={gap} />
           </View>
     </ActiveSessionScreen>
   );
@@ -282,25 +235,6 @@ const styles = StyleSheet.create({
   side: {
     width: touch.min,
     height: touch.min,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  selectorScroll: {
-    flexGrow: 0,
-    flexShrink: 0,
-  },
-  selector: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: spacing.sm,
-    paddingVertical: spacing.xxs,
-    paddingHorizontal: spacing.xxs,
-  },
-  chip: {
-    minHeight: touch.min,
-    paddingHorizontal: spacing.md,
-    borderRadius: radius.circle,
-    borderWidth: 1,
     alignItems: 'center',
     justifyContent: 'center',
   },
