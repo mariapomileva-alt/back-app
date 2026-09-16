@@ -1,5 +1,5 @@
 /**
- * PLACEHOLDER — 20s seamless warm low-mid air/hum bed (regenerate via scripts/generate-breathe-ambient.py).
+ * PLACEHOLDER — 20s seamless light filtered air bed (regenerate via scripts/generate-breathe-ambient.py).
  * Volume follows the breathing orb in-app; this file stays a steady calm loop.
  */
 export const breatheAmbient = {

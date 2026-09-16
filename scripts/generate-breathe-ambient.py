@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate a seamless ~20s warm air / brown bed for Breathe (placeholder)."""
+"""Generate a seamless ~20s light airy bed for Breathe (placeholder)."""
 
 from __future__ import annotations
 
@@ -43,28 +43,43 @@ def generate() -> np.ndarray:
     rng = np.random.default_rng(SEED)
     freqs = np.fft.rfftfreq(N, 1.0 / RATE)
 
-    # Warm brown bed: strong low-mids, very little treble (no bright hiss).
-    amp = 1.0 / np.power(freqs + 32.0, 2.25)
+    # Pink-ish noise: airy, not brown — minimal low energy.
+    amp = 1.0 / np.sqrt(freqs + 120.0)
     amp[0] = 0.0
-    amp *= np.exp(-np.power(freqs / 720.0, 2.35))
-    # Soft room hum (barely audible texture, not a tone).
-    for f0, weight, width in ((56.0, 0.038, 6.5), (112.0, 0.022, 10.0)):
-        amp += weight * np.exp(-np.power((freqs - f0) / width, 2.0))
+
+    # High-pass: strip rumble / room weight (gentle breath through a filter).
+    amp *= 1.0 - np.exp(-np.power(freqs / 380.0, 2.6))
+
+    # Band-pass emphasis ~600 Hz–5 kHz (soft wind / exhale texture).
+    band = np.exp(-np.power((freqs - 2400.0) / 2100.0, 2.0))
+    amp *= 0.55 + 0.45 * band
+
+    # De-harsh treble; keep whisper, not bright hiss.
+    amp *= np.exp(-np.power(freqs / 6800.0, 2.8))
 
     phases = rng.uniform(0.0, 2.0 * np.pi, len(freqs))
     spectrum = amp * np.exp(1j * phases)
     x = np.fft.irfft(spectrum, n=N).astype(np.float64)
 
-    # Slow 20s swell so the file is not a static flat hiss (still steady vs in-app mod).
+    # One slow 20s breath swell (seamless with loop length).
     t = np.arange(N, dtype=np.float64) / RATE
-    swell = 1.0 + 0.06 * np.sin(2.0 * np.pi * t / DURATION_S)
+    swell = 0.9 + 0.1 * np.sin(2.0 * np.pi * t / DURATION_S)
     x *= swell
+
+    # Very soft second layer: high band only, extra air without weight.
+    amp_hi = np.zeros_like(freqs)
+    mask = (freqs >= 900.0) & (freqs <= 5500.0)
+    amp_hi[mask] = 1.0 / np.sqrt(freqs[mask] + 200.0)
+    amp_hi *= np.exp(-np.power((freqs - 3200.0) / 2400.0, 2.0))
+    phases_hi = rng.uniform(0.0, 2.0 * np.pi, len(freqs))
+    hi = np.fft.irfft(amp_hi * np.exp(1j * phases_hi), n=N).astype(np.float64)
+    hi *= 0.22 * swell
+    x += hi
 
     x = seamless_crossfade(x)
 
     peak = np.max(np.abs(x))
     if peak > 0:
-        # Fuller than the old placeholder but capped — app volume stays ~0.38.
         x *= (0.42 * 32767.0) / peak
 
     return x
