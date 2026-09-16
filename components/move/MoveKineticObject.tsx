@@ -28,6 +28,46 @@ const ARC_SWELL_MS = 14_000;
 const OBJECT_W = 208;
 const OBJECT_H = 124;
 
+const WEB_WAVE_STYLE_ID = 'move-kinetic-wave-keyframes';
+const USE_WEB_CSS_WAVES = Platform.OS === 'web';
+
+const WEB_BAND_DELAYS_S = ['0s', '-1.4s', '-2.6s', '-0.8s', '-3.1s'] as const;
+const WEB_BAND_DURATIONS_S = ['9.2s', '10.6s', '11.4s', '8.8s', '12.5s'] as const;
+
+function ensureWebWaveKeyframes() {
+  if (!USE_WEB_CSS_WAVES || typeof document === 'undefined') {
+    return;
+  }
+  if (document.getElementById(WEB_WAVE_STYLE_ID)) {
+    return;
+  }
+  const style = document.createElement('style');
+  style.id = WEB_WAVE_STYLE_ID;
+  style.textContent = `
+@keyframes move-kinetic-idle-drift {
+  0%, 100% { transform: translate3d(-10px, -7px, 0); }
+  50% { transform: translate3d(10px, 7px, 0); }
+}
+@keyframes move-kinetic-band-drift {
+  0%, 100% { transform: translate3d(-8px, -5px, 0); }
+  50% { transform: translate3d(8px, 5px, 0); }
+}
+.move-kinetic-band-wave {
+  animation-name: move-kinetic-band-drift;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  will-change: transform;
+}
+.move-kinetic-band-wave-0 { animation-delay: ${WEB_BAND_DELAYS_S[0]}; animation-duration: ${WEB_BAND_DURATIONS_S[0]}; }
+.move-kinetic-band-wave-1 { animation-delay: ${WEB_BAND_DELAYS_S[1]}; animation-duration: ${WEB_BAND_DURATIONS_S[1]}; }
+.move-kinetic-band-wave-2 { animation-delay: ${WEB_BAND_DELAYS_S[2]}; animation-duration: ${WEB_BAND_DURATIONS_S[2]}; }
+.move-kinetic-band-wave-3 { animation-delay: ${WEB_BAND_DELAYS_S[3]}; animation-duration: ${WEB_BAND_DURATIONS_S[3]}; }
+.move-kinetic-band-wave-4 { animation-delay: ${WEB_BAND_DELAYS_S[4]}; animation-duration: ${WEB_BAND_DURATIONS_S[4]}; }
+`;
+  document.head.appendChild(style);
+}
+
 type Props = {
   action: MoveKineticAction;
   phase: MovePhase;
@@ -49,6 +89,7 @@ function compressedAmount(phase: MovePhase): number {
 }
 
 type ArcBandProps = {
+  bandIndex: number;
   d: string;
   width: number;
   stroke: string;
@@ -58,9 +99,11 @@ type ArcBandProps = {
   shimmer: SharedValue<number>;
   swell: SharedValue<number>;
   motionActive: SharedValue<number>;
+  reduceMotion: boolean;
 };
 
 function ArcBand({
+  bandIndex,
   d,
   width,
   stroke,
@@ -70,6 +113,7 @@ function ArcBand({
   shimmer,
   swell,
   motionActive,
+  reduceMotion,
 }: ArcBandProps) {
   const animatedProps = useAnimatedProps(() => {
     if (motionActive.value === 0) {
@@ -82,13 +126,24 @@ function ArcBand({
     const s = shimmer.value - 0.5;
     const w = swell.value - 0.5;
     const mix = drift.value * (1 - phaseOffset * 0.35) + shimmer.value * phaseOffset * 0.65;
-    const bandX = t * (5.5 + phaseOffset * 2.8) + w * phaseOffset * 1.6;
-    const bandY = s * (3.2 + phaseOffset * 1.8) - w * (1.2 - phaseOffset * 0.4);
+    const bandX = t * (11 + phaseOffset * 3.5) + w * phaseOffset * 2.4;
+    const bandY = s * (6 + phaseOffset * 2.4) - w * (2.4 - phaseOffset * 0.6);
     return {
       opacity: baseOpacity * (0.8 + mix * 0.32),
       transform: [{ translateX: bandX }, { translateY: bandY }],
     };
   });
+
+  if (USE_WEB_CSS_WAVES) {
+    const bandClass = reduceMotion
+      ? undefined
+      : `move-kinetic-band-wave move-kinetic-band-wave-${bandIndex}`;
+    return (
+      <G className={bandClass}>
+        <Path d={d} fill="none" stroke={stroke} strokeWidth={width} strokeLinecap="round" opacity={baseOpacity} />
+      </G>
+    );
+  }
 
   return (
     <AnimatedG animatedProps={animatedProps}>
@@ -108,6 +163,10 @@ export function MoveKineticObject({ action, phase, reduceMotion }: Props) {
   const arcShimmer = useSharedValue(0.5);
   const arcSwell = useSharedValue(0.5);
   const motionActiveSv = useSharedValue(reduceMotion ? 0 : 1);
+
+  useEffect(() => {
+    ensureWebWaveKeyframes();
+  }, []);
 
   useEffect(() => {
     motionActiveSv.value = reduceMotion ? 0 : 1;
@@ -170,7 +229,7 @@ export function MoveKineticObject({ action, phase, reduceMotion }: Props) {
     cancelAnimation(arcDrift);
     cancelAnimation(arcShimmer);
     cancelAnimation(arcSwell);
-    if (reduceMotion) {
+    if (reduceMotion || USE_WEB_CSS_WAVES) {
       arcDrift.value = 0.5;
       arcShimmer.value = 0.5;
       arcSwell.value = 0.5;
@@ -195,7 +254,7 @@ export function MoveKineticObject({ action, phase, reduceMotion }: Props) {
     const t = arcDrift.value - 0.5;
     const s = arcShimmer.value - 0.5;
     return {
-      transform: [{ translateX: t * 10 }, { translateY: s * 7 }],
+      transform: [{ translateX: t * 12 }, { translateY: s * 9 }],
     };
   });
 
@@ -261,28 +320,50 @@ export function MoveKineticObject({ action, phase, reduceMotion }: Props) {
     }
   };
 
+  const webIdleWaveStyle =
+    USE_WEB_CSS_WAVES && !reduceMotion
+      ? ({
+          animationName: 'move-kinetic-idle-drift',
+          animationDuration: `${ARC_DRIFT_MS}ms`,
+          animationTimingFunction: 'ease-in-out',
+          animationIterationCount: 'infinite',
+          animationDirection: 'alternate',
+          willChange: 'transform',
+        } as const)
+      : undefined;
+
+  const kineticSvg = (
+    <Animated.View style={[styles.morphLayer, morphStyle]}>
+      <Svg width="100%" height="100%" viewBox={MOVE_KINETIC_VIEWBOX} preserveAspectRatio="xMidYMid meet">
+        {BANDS.map((band, index) => (
+          <ArcBand
+            key={band.d}
+            bandIndex={index}
+            d={band.d}
+            width={band.width}
+            stroke={colorFor(band.role)}
+            baseOpacity={baseOpacityFor(band.role)}
+            phaseOffset={index / BANDS.length}
+            drift={arcDrift}
+            shimmer={arcShimmer}
+            swell={arcSwell}
+            motionActive={motionActiveSv}
+            reduceMotion={reduceMotion}
+          />
+        ))}
+      </Svg>
+    </Animated.View>
+  );
+
   return (
     <View style={styles.shell}>
-      <Animated.View style={[styles.idleLayer, arcIdleStyle]}>
-        <Animated.View style={[styles.morphLayer, morphStyle]}>
-          <Svg width="100%" height="100%" viewBox={MOVE_KINETIC_VIEWBOX} preserveAspectRatio="xMidYMid meet">
-            {BANDS.map((band, index) => (
-              <ArcBand
-                key={band.d}
-                d={band.d}
-                width={band.width}
-                stroke={colorFor(band.role)}
-                baseOpacity={baseOpacityFor(band.role)}
-                phaseOffset={index / BANDS.length}
-                drift={arcDrift}
-                shimmer={arcShimmer}
-                swell={arcSwell}
-                motionActive={motionActiveSv}
-              />
-            ))}
-          </Svg>
-        </Animated.View>
-      </Animated.View>
+      {USE_WEB_CSS_WAVES ? (
+        <View style={[styles.idleLayer, webIdleWaveStyle]}>
+          {kineticSvg}
+        </View>
+      ) : (
+        <Animated.View style={[styles.idleLayer, arcIdleStyle]}>{kineticSvg}</Animated.View>
+      )}
     </View>
   );
 }
