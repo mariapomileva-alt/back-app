@@ -32,7 +32,7 @@ const readReleaseStatus: Record<ReadContentLocale, LocaleReleaseStatus> = {
 };
 
 function isProductionBuild(): boolean {
-  return !__DEV__;
+  return typeof __DEV__ === 'boolean' ? !__DEV__ : process.env.NODE_ENV === 'production';
 }
 
 export function uiLocaleReleaseStatus(locale: UiLocale): LocaleReleaseStatus {

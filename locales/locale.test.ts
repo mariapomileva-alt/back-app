@@ -42,16 +42,10 @@ describe('resolveUiLocale', () => {
 
 describe('production gating', () => {
   it('enables only English in production builds', () => {
-    const dev = __DEV__;
-    try {
-      // @ts-expect-error test override
-      global.__DEV__ = false;
-      expect(isUiLocaleEnabled('en')).toBe(true);
-      expect(isUiLocaleEnabled('es')).toBe(false);
-      expect(isReadLocaleEnabled('es')).toBe(false);
-    } finally {
-      // @ts-expect-error test override
-      global.__DEV__ = dev;
-    }
+    vi.stubGlobal('__DEV__', false);
+    expect(isUiLocaleEnabled('en')).toBe(true);
+    expect(isUiLocaleEnabled('es')).toBe(false);
+    expect(isReadLocaleEnabled('es')).toBe(false);
+    vi.unstubAllGlobals();
   });
 });
