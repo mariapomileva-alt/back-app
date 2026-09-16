@@ -15,6 +15,6 @@ export const DISTRACT_SFX_VOLUME = 0.32;
 /** Catch tap is softer than other distract cues. */
 export const CATCH_TAP_SFX_VOLUME = 0.28;
 
-export const SHAPES_CORRECT_SFX_VOLUME = 0.26;
+export const SHAPES_CORRECT_SFX_VOLUME = 0.2;
 
 export const SNAKE_FOOD_SFX_VOLUME = 0.24;
