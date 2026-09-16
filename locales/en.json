@@ -254,6 +254,10 @@
     }
   },
   "ground": {
+    "previous": "Previous instruction",
+    "previousHint": "Shows the previous grounding instruction",
+    "next": "Next instruction",
+    "nextHint": "Shows the next grounding instruction",
     "continueHint": "Shows the next grounding instruction",
     "menu": "Grounding menu",
     "menuHint": "Opens the quiet grounding list",

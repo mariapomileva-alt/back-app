@@ -28,6 +28,7 @@ export function useGroundSequence(
     setActiveId(sequenceId);
     setIndex(0);
   }
+  const first = index <= 0;
   const last = index >= steps.length - 1;
   const instructionKey = steps[index] ?? steps[0]!;
   const lightRef = useRef(haptics.light);
@@ -103,15 +104,27 @@ export function useGroundSequence(
     });
   }, [steps.length]);
 
+  const prev = useCallback(() => {
+    setIndex((current) => {
+      if (current <= 0) {
+        return current;
+      }
+      lightRef.current();
+      return current - 1;
+    });
+  }, []);
+
   const reset = useCallback(() => {
     setIndex(0);
   }, []);
 
   return {
     index,
+    first,
     last,
     instructionKey,
     next,
+    prev,
     reset,
   };
 }

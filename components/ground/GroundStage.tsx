@@ -8,12 +8,22 @@ import { useReduceMotion } from '@/hooks/useReduceMotion';
 import { useTheme } from '@/hooks/useTheme';
 import { spacing } from '@/theme/spacing';
 
-export function GroundStage() {
+type Props = {
+  stepKey?: string;
+};
+
+export function GroundStage({ stepKey }: Props) {
   const { theme } = useTheme();
   const reduceMotion = useReduceMotion();
   const [pulse] = useState(() => new Animated.Value(0));
   const sage = theme.colors.secondaryGreen;
   const mound = theme.colors.organic;
+
+  useEffect(() => {
+    if (stepKey && !reduceMotion) {
+      pulse.setValue(0);
+    }
+  }, [pulse, reduceMotion, stepKey]);
 
   useEffect(() => {
     if (reduceMotion) {

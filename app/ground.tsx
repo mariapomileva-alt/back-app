@@ -33,7 +33,7 @@ export default function GroundScreen() {
   const [paused, setPaused] = useState(false);
   const [sequenceId, setSequenceId] = useState<GroundSequenceId>(defaultGroundSequenceId);
   const [chooserOpen, setChooserOpen] = useState(false);
-  const { instructionKey, last, next, reset } = useGroundSequence(paused, sequenceId);
+  const { instructionKey, last, next, prev, reset } = useGroundSequence(paused, sequenceId);
   const instruction = t(instructionKey);
   const skipSequenceAudioReset = useRef(true);
 
@@ -105,7 +105,7 @@ export default function GroundScreen() {
       {(controls) => (
         <>
           <View style={[styles.stage, compact && styles.stageCompact]}>
-            <GroundStage />
+            <GroundStage stepKey={instructionKey} />
             <Pressable
               accessibilityRole={last ? 'text' : 'button'}
               accessibilityLabel={instruction}
@@ -126,6 +126,8 @@ export default function GroundScreen() {
               isPlaying={!paused}
               muted={audio.muted}
               onPlayPause={onPlayPause}
+              onPrevious={prev}
+              onNext={next}
               onMute={
                 narrationReady
                   ? () => {
