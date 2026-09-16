@@ -14,7 +14,7 @@ export type ListenSound = {
   productionFile: string;
   image?: ImageSourcePropType;
   treatment: 'photo' | 'abstract';
-  /** Bundled Listen loops are generated placeholders until production mixes land. */
+  /** True until professionally mixed Listen loops ship (bundled synthetics are already distinct). */
   placeholderAudio: boolean;
 };
 

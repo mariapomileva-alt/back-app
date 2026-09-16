@@ -33,7 +33,8 @@ export const productionAudioFiles = {
 } as const;
 
 /**
- * PLACEHOLDER AUDIO — every file is a generated `-placeholder` loop, not a production mix.
+ * PLACEHOLDER AUDIO — Listen loops are distinct synthetics from scripts/generate-listen-sounds.py
+ * (not a production field recording mix). Ground uses its own placeholder generator.
  * All Listen + Ground audio is a local require() so the tools work offline.
  * TODO: REPLACE WITH PROFESSIONALLY RECORDED BACK GROUNDING AUDIO BEFORE RELEASE
  * TODO: replace looping environment sounds with professionally mixed audio before store release
