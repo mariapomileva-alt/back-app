@@ -1,68 +1,105 @@
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { Animated, Easing, Platform, StyleSheet, View, type ViewStyle } from 'react-native';
 import Svg, { Ellipse, Path } from 'react-native-svg';
 
 import { skipA11yNode } from '@/components/accessibility/hideFromA11y';
 import { GroundMark } from '@/components/marks';
+import { GROUND_STEP_MS } from '@/features/ground/steps';
 import {
-  GROUND_BACK_SCALE_DIP,
-  GROUND_BACK_SCALE_MS,
-  GROUND_FORWARD_RESET_MS,
-  GROUND_FORWARD_SCALE_MS,
-  GROUND_FORWARD_SCALE_PEAK,
+  GROUND_STEP_SCALE_END,
+  GROUND_STEP_SCALE_START,
 } from '@/features/ground/transitions';
 import { useReduceMotion } from '@/hooks/useReduceMotion';
 import { useTheme } from '@/hooks/useTheme';
 import { spacing } from '@/theme/spacing';
 
-const CSS_EASE_OUT = 'cubic-bezier(0.22, 1, 0.36, 1)';
-const CSS_EASE_IN = 'cubic-bezier(0.4, 0, 1, 1)';
+const CSS_GROW_EASE = 'cubic-bezier(0.45, 0, 0.55, 1)';
 
 type Props = {
   stepKey: string;
-  stepEnter: 'none' | 'forward' | 'back';
-  forwardTransition: boolean;
   paused: boolean;
-  onForwardTransitionComplete: () => void;
-  onStepEnterHandled: () => void;
 };
 
-export function GroundStage({
-  stepKey,
-  stepEnter,
-  forwardTransition,
-  paused,
-  onForwardTransitionComplete,
-  onStepEnterHandled,
-}: Props) {
+function growRemainingMs(fromScale: number): number {
+  const span = GROUND_STEP_SCALE_END - GROUND_STEP_SCALE_START;
+  if (span <= 0) {
+    return GROUND_STEP_MS;
+  }
+  const progress = (fromScale - GROUND_STEP_SCALE_START) / span;
+  return Math.max(48, Math.round(GROUND_STEP_MS * (1 - Math.min(1, Math.max(0, progress)))));
+}
+
+export function GroundStage({ stepKey, paused }: Props) {
   const { theme } = useTheme();
   const reduceMotion = useReduceMotion();
   const [pulse] = useState(() => new Animated.Value(0));
-  const [scale] = useState(() => new Animated.Value(1));
-  const [webScale, setWebScale] = useState(1);
+  const [scale] = useState(() => new Animated.Value(GROUND_STEP_SCALE_START));
+  const [webScale, setWebScale] = useState(GROUND_STEP_SCALE_START);
   const [webScaleDuration, setWebScaleDuration] = useState(0);
-  const [webScaleEase, setWebScaleEase] = useState(CSS_EASE_OUT);
-  const prevStepKeyRef = useRef(stepKey);
-  const forwardAnimRef = useRef<Animated.CompositeAnimation | null>(null);
-  const scaleAnimRef = useRef<Animated.CompositeAnimation | null>(null);
-  const forwardStartedRef = useRef(false);
-  const pausedForwardRef = useRef(false);
-  const webCompleteTimeoutRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
-  const webPausedRemainingRef = useRef(GROUND_FORWARD_SCALE_MS);
-  const completeRef = useRef(onForwardTransitionComplete);
+  const [webScaleEase, setWebScaleEase] = useState(CSS_GROW_EASE);
+  const growAnimRef = useRef<Animated.CompositeAnimation | null>(null);
+  const pausedGrowRef = useRef(false);
+  const webGrowFromRef = useRef(GROUND_STEP_SCALE_START);
+  const webGrowDurationRef = useRef(GROUND_STEP_MS);
+  const webGrowStartRef = useRef(0);
   const sage = theme.colors.secondaryGreen;
   const mound = theme.colors.organic;
 
-  useEffect(() => {
-    completeRef.current = onForwardTransitionComplete;
-  }, [onForwardTransitionComplete]);
+  const stopGrowAnim = useCallback(() => {
+    growAnimRef.current?.stop();
+    growAnimRef.current = null;
+  }, []);
 
-  const stopScaleAnims = () => {
-    forwardAnimRef.current?.stop();
-    scaleAnimRef.current?.stop();
-    forwardAnimRef.current = null;
-    scaleAnimRef.current = null;
-  };
+  const startNativeGrow = useCallback(
+    (fromScale: number) => {
+      stopGrowAnim();
+      if (reduceMotion) {
+        scale.setValue(GROUND_STEP_SCALE_START);
+        return;
+      }
+      const from = Math.max(GROUND_STEP_SCALE_START, Math.min(GROUND_STEP_SCALE_END, fromScale));
+      scale.setValue(from);
+      const duration = growRemainingMs(from);
+      growAnimRef.current = Animated.timing(scale, {
+        toValue: GROUND_STEP_SCALE_END,
+        duration,
+        easing: Easing.inOut(Easing.quad),
+        useNativeDriver: false,
+      });
+      growAnimRef.current.start();
+    },
+    [reduceMotion, scale, stopGrowAnim],
+  );
+
+  const startWebGrow = useCallback(
+    (fromScale: number) => {
+      if (reduceMotion) {
+        setWebScale(GROUND_STEP_SCALE_START);
+        setWebScaleDuration(0);
+        return;
+      }
+      const from = Math.max(GROUND_STEP_SCALE_START, Math.min(GROUND_STEP_SCALE_END, fromScale));
+      const duration = growRemainingMs(from);
+      webGrowFromRef.current = from;
+      webGrowDurationRef.current = duration;
+      webGrowStartRef.current = Date.now();
+      setWebScale(from);
+      setWebScaleDuration(0);
+      requestAnimationFrame(() => {
+        setWebScaleEase(CSS_GROW_EASE);
+        setWebScaleDuration(duration);
+        setWebScale(GROUND_STEP_SCALE_END);
+      });
+    },
+    [reduceMotion],
+  );
+
+  const webScaleAtElapsed = useCallback((elapsedMs: number) => {
+    const from = webGrowFromRef.current;
+    const duration = webGrowDurationRef.current;
+    const t = duration <= 0 ? 1 : Math.min(1, Math.max(0, elapsedMs / duration));
+    return from + (GROUND_STEP_SCALE_END - from) * t;
+  }, []);
 
   useEffect(() => {
     if (stepKey && !reduceMotion) {
@@ -97,175 +134,50 @@ export function GroundStage({
   }, [pulse, reduceMotion]);
 
   useEffect(() => {
-    if (prevStepKeyRef.current === stepKey) {
-      return;
-    }
-    prevStepKeyRef.current = stepKey;
-    forwardStartedRef.current = false;
-    scaleAnimRef.current?.stop();
-
-    if (stepEnter === 'forward') {
-      if (Platform.OS === 'web') {
-        requestAnimationFrame(() => {
-          setWebScaleDuration(GROUND_FORWARD_RESET_MS);
-          setWebScaleEase(CSS_EASE_IN);
-          setWebScale(1);
-        });
-      } else {
-        scaleAnimRef.current = Animated.timing(scale, {
-          toValue: 1,
-          duration: GROUND_FORWARD_RESET_MS,
-          easing: Easing.in(Easing.quad),
-          useNativeDriver: false,
-        });
-        scaleAnimRef.current.start();
-      }
-    } else if (stepEnter === 'back' && !reduceMotion) {
-      if (Platform.OS === 'web') {
-        requestAnimationFrame(() => {
-          setWebScale(GROUND_BACK_SCALE_DIP);
-          setWebScaleDuration(GROUND_BACK_SCALE_MS);
-          setWebScaleEase(CSS_EASE_OUT);
-          requestAnimationFrame(() => setWebScale(1));
-        });
-      } else {
-        scale.setValue(GROUND_BACK_SCALE_DIP);
-        scaleAnimRef.current = Animated.timing(scale, {
-          toValue: 1,
-          duration: GROUND_BACK_SCALE_MS,
-          easing: Easing.out(Easing.quad),
-          useNativeDriver: false,
-        });
-        scaleAnimRef.current.start();
-      }
-    } else {
-      scale.setValue(1);
-      requestAnimationFrame(() => {
-        setWebScale(1);
-        setWebScaleDuration(0);
-      });
-    }
-
-    requestAnimationFrame(() => onStepEnterHandled());
-  }, [onStepEnterHandled, reduceMotion, scale, stepEnter, stepKey]);
-
-  useEffect(() => {
-    if (!forwardTransition) {
-      forwardStartedRef.current = false;
-      pausedForwardRef.current = false;
-      return;
-    }
-    if (forwardStartedRef.current) {
-      return;
-    }
-    forwardStartedRef.current = true;
-
-    if (reduceMotion) {
-      completeRef.current();
-      return;
-    }
-
+    pausedGrowRef.current = false;
     if (Platform.OS === 'web') {
-      webPausedRemainingRef.current = GROUND_FORWARD_SCALE_MS;
-      requestAnimationFrame(() => {
-        setWebScale(1);
-        setWebScaleDuration(0);
-        requestAnimationFrame(() => {
-          setWebScaleDuration(GROUND_FORWARD_SCALE_MS);
-          setWebScaleEase(CSS_EASE_OUT);
-          setWebScale(GROUND_FORWARD_SCALE_PEAK);
-        });
-      });
-      return;
+      requestAnimationFrame(() => startWebGrow(GROUND_STEP_SCALE_START));
+    } else {
+      startNativeGrow(GROUND_STEP_SCALE_START);
     }
-
-    stopScaleAnims();
-    scale.setValue(1);
-    forwardAnimRef.current = Animated.timing(scale, {
-      toValue: GROUND_FORWARD_SCALE_PEAK,
-      duration: GROUND_FORWARD_SCALE_MS,
-      easing: Easing.out(Easing.quad),
-      useNativeDriver: false,
-    });
-    forwardAnimRef.current.start(({ finished }) => {
-      if (finished && !pausedForwardRef.current) {
-        completeRef.current();
-      }
-    });
-  }, [forwardTransition, reduceMotion, scale]);
+  }, [startNativeGrow, startWebGrow, stepKey]);
 
   useEffect(() => {
-    if (!forwardTransition || reduceMotion) {
+    if (reduceMotion) {
       return;
     }
 
     if (paused) {
-      pausedForwardRef.current = true;
-      forwardAnimRef.current?.stop();
+      pausedGrowRef.current = true;
+      if (Platform.OS === 'web') {
+        const elapsed = Date.now() - webGrowStartRef.current;
+        setWebScale(webScaleAtElapsed(elapsed));
+        setWebScaleDuration(0);
+      } else {
+        growAnimRef.current?.stop();
+      }
       return;
     }
 
-    if (!pausedForwardRef.current) {
+    if (!pausedGrowRef.current) {
       return;
     }
-    pausedForwardRef.current = false;
+    pausedGrowRef.current = false;
 
     if (Platform.OS === 'web') {
+      const elapsed = Date.now() - webGrowStartRef.current;
+      const from = webScaleAtElapsed(elapsed);
+      requestAnimationFrame(() => startWebGrow(from));
       return;
     }
 
     scale.stopAnimation((current) => {
-      const from = typeof current === 'number' ? current : 1;
-      const remaining = Math.max(
-        48,
-        Math.round(((GROUND_FORWARD_SCALE_PEAK - from) / (GROUND_FORWARD_SCALE_PEAK - 1)) * GROUND_FORWARD_SCALE_MS),
-      );
-      forwardAnimRef.current = Animated.timing(scale, {
-        toValue: GROUND_FORWARD_SCALE_PEAK,
-        duration: remaining,
-        easing: Easing.out(Easing.quad),
-        useNativeDriver: false,
-      });
-      forwardAnimRef.current.start(({ finished }) => {
-        if (finished) {
-          completeRef.current();
-        }
-      });
+      const from = typeof current === 'number' ? current : GROUND_STEP_SCALE_START;
+      startNativeGrow(from);
     });
-  }, [forwardTransition, paused, reduceMotion, scale]);
+  }, [paused, reduceMotion, scale, startNativeGrow, startWebGrow, webScaleAtElapsed]);
 
-  useEffect(() => {
-    if (Platform.OS !== 'web' || !forwardTransition || reduceMotion) {
-      return;
-    }
-
-    if (paused) {
-      pausedForwardRef.current = true;
-      if (webCompleteTimeoutRef.current) {
-        clearTimeout(webCompleteTimeoutRef.current);
-        webCompleteTimeoutRef.current = undefined;
-      }
-      return;
-    }
-
-    pausedForwardRef.current = false;
-    const delay = webPausedRemainingRef.current;
-    webCompleteTimeoutRef.current = setTimeout(() => {
-      webCompleteTimeoutRef.current = undefined;
-      if (!pausedForwardRef.current) {
-        completeRef.current();
-      }
-    }, delay);
-
-    return () => {
-      if (webCompleteTimeoutRef.current) {
-        clearTimeout(webCompleteTimeoutRef.current);
-        webCompleteTimeoutRef.current = undefined;
-      }
-    };
-  }, [forwardTransition, paused, reduceMotion]);
-
-  useEffect(() => () => stopScaleAnims(), []);
+  useEffect(() => () => stopGrowAnim(), [stopGrowAnim]);
 
   const groundOpacity = pulse.interpolate({
     inputRange: [0, 1],
@@ -276,6 +188,36 @@ export function GroundStage({
     outputRange: [0.16, 0.3],
   });
 
+  const markAndGround = (
+    <>
+      <View style={styles.mark}>
+        <GroundMark />
+      </View>
+      <Animated.View style={[styles.ground, { opacity: groundOpacity }]}>
+        <Svg width="100%" height="100%" viewBox="0 0 220 36" preserveAspectRatio="xMidYMid meet">
+          <Ellipse cx="110" cy="22" rx="78" ry="8" fill={mound} />
+          <Path
+            d="M110 22 V8"
+            fill="none"
+            stroke={sage}
+            strokeWidth={1.2}
+            strokeLinecap="round"
+            opacity={0.55}
+          />
+          <Path
+            d="M48 20 C78 14 142 14 172 20"
+            fill="none"
+            stroke={sage}
+            strokeWidth={1.15}
+            strokeLinecap="round"
+            opacity={0.38}
+          />
+        </Svg>
+      </Animated.View>
+      <Animated.View style={[styles.quietLine, { backgroundColor: sage, opacity: lineOpacity }]} />
+    </>
+  );
+
   const illustration =
     Platform.OS === 'web' && !reduceMotion ? (
       <View
@@ -284,6 +226,7 @@ export function GroundStage({
             styles.illustration,
             {
               transform: [{ scale: webScale }],
+              transformOrigin: 'center center',
               transitionProperty: 'transform',
               transitionDuration: `${webScaleDuration}ms`,
               transitionTimingFunction: webScaleEase,
@@ -291,59 +234,11 @@ export function GroundStage({
           ] as unknown as ViewStyle
         }
       >
-        <View style={styles.mark}>
-          <GroundMark />
-        </View>
-        <Animated.View style={[styles.ground, { opacity: groundOpacity }]}>
-          <Svg width="100%" height="100%" viewBox="0 0 220 36" preserveAspectRatio="xMidYMid meet">
-            <Ellipse cx="110" cy="22" rx="78" ry="8" fill={mound} />
-            <Path
-              d="M110 22 V8"
-              fill="none"
-              stroke={sage}
-              strokeWidth={1.2}
-              strokeLinecap="round"
-              opacity={0.55}
-            />
-            <Path
-              d="M48 20 C78 14 142 14 172 20"
-              fill="none"
-              stroke={sage}
-              strokeWidth={1.15}
-              strokeLinecap="round"
-              opacity={0.38}
-            />
-          </Svg>
-        </Animated.View>
-        <Animated.View style={[styles.quietLine, { backgroundColor: sage, opacity: lineOpacity }]} />
+        {markAndGround}
       </View>
     ) : (
       <Animated.View style={[styles.illustration, { transform: [{ scale }] }]}>
-        <View style={styles.mark}>
-          <GroundMark />
-        </View>
-        <Animated.View style={[styles.ground, { opacity: groundOpacity }]}>
-          <Svg width="100%" height="100%" viewBox="0 0 220 36" preserveAspectRatio="xMidYMid meet">
-            <Ellipse cx="110" cy="22" rx="78" ry="8" fill={mound} />
-            <Path
-              d="M110 22 V8"
-              fill="none"
-              stroke={sage}
-              strokeWidth={1.2}
-              strokeLinecap="round"
-              opacity={0.55}
-            />
-            <Path
-              d="M48 20 C78 14 142 14 172 20"
-              fill="none"
-              stroke={sage}
-              strokeWidth={1.15}
-              strokeLinecap="round"
-              opacity={0.38}
-            />
-          </Svg>
-        </Animated.View>
-        <Animated.View style={[styles.quietLine, { backgroundColor: sage, opacity: lineOpacity }]} />
+        {markAndGround}
       </Animated.View>
     );
 
@@ -361,6 +256,7 @@ const styles = StyleSheet.create({
     paddingTop: spacing.xl,
     paddingBottom: spacing.md,
     gap: spacing.md,
+    overflow: 'visible',
   },
   illustration: {
     alignItems: 'center',

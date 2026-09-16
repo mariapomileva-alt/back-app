@@ -49,7 +49,6 @@ export default function GroundScreen() {
     forwardTransition,
     stepEnter,
     finishForwardTransition,
-    acknowledgeStepEnter,
   } = useGroundSequence(paused, sequenceId);
   const instruction = t(instructionKey);
   const skipSequenceAudioReset = useRef(true);
@@ -80,6 +79,16 @@ export default function GroundScreen() {
       useNativeDriver,
     }).start();
   }, [forwardTransition, instructionOpacity, useNativeDriver]);
+
+  useEffect(() => {
+    if (!forwardTransition) {
+      return;
+    }
+    const timeout = setTimeout(() => {
+      finishForwardTransition();
+    }, GROUND_INSTRUCTION_FADE_OUT_MS);
+    return () => clearTimeout(timeout);
+  }, [finishForwardTransition, forwardTransition]);
 
   useEffect(() => {
     if (instructionKeyRef.current === instructionKey) {
@@ -155,14 +164,7 @@ export default function GroundScreen() {
       {(controls) => (
         <>
           <View style={[styles.stage, compact && styles.stageCompact]}>
-            <GroundStage
-              stepKey={instructionKey}
-              stepEnter={stepEnter}
-              forwardTransition={forwardTransition}
-              paused={paused}
-              onForwardTransitionComplete={finishForwardTransition}
-              onStepEnterHandled={acknowledgeStepEnter}
-            />
+            <GroundStage stepKey={instructionKey} paused={paused} />
             <Pressable
               accessibilityRole={last ? 'text' : 'button'}
               accessibilityLabel={instruction}
