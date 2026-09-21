@@ -664,31 +664,7 @@ button {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 22%;
-}
-
-.tool-preview--breathe img {
-  object-position: center 34%;
-}
-
-.tool-preview--distract img {
-  object-position: center 52%;
-}
-
-.tool-preview--ground img {
-  object-position: center 44%;
-}
-
-.tool-preview--move img {
-  object-position: center 38%;
-}
-
-.tool-preview--listen img {
-  object-position: center 16%;
-}
-
-.tool-preview--read img {
-  object-position: center 20%;
+  object-position: center center;
 }
 
 .tool h3,
