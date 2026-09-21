@@ -14,7 +14,7 @@ export default function PrivacyScreen() {
   const privacyUrl = productionConfig.privacyUrl;
 
   return (
-    <ScreenContainer>
+    <ScreenContainer phoneWidth>
       <ScreenHeader title={t('settings.privacy')} />
       <View style={styles.body}>
         <AppText variant="body">{t('privacy.onDevice')}</AppText>

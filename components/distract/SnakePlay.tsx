@@ -47,15 +47,28 @@ function gridMetrics(width: number, height: number) {
   if (innerW < 8 || innerH < 8) {
     return null;
   }
-  // Separate axes so 10 columns span the field width and 16 rows span the field height.
-  // A single square cell was width-capped, then vertically centered — the snake sat on a mid-band.
-  return { cellW: innerW / SNAKE_COLS, cellH: innerH / SNAKE_ROWS, cell: Math.min(innerW / SNAKE_COLS, innerH / SNAKE_ROWS) };
+  // Square cells only — non-uniform cellW/cellH made corners look stretched on turns.
+  const cell = Math.min(innerW / SNAKE_COLS, innerH / SNAKE_ROWS);
+  const gridW = cell * SNAKE_COLS;
+  const gridH = cell * SNAKE_ROWS;
+  return {
+    cell,
+    originX: FIELD_INSET + (innerW - gridW) / 2,
+    originY: FIELD_INSET + (innerH - gridH) / 2,
+  };
 }
 
-function slotStyle(col: number, row: number, cellW: number, cellH: number, size: number) {
+function slotStyle(
+  col: number,
+  row: number,
+  originX: number,
+  originY: number,
+  cell: number,
+  size: number,
+) {
   return {
-    left: FIELD_INSET + col * cellW + (cellW - size) / 2,
-    top: FIELD_INSET + row * cellH + (cellH - size) / 2,
+    left: originX + col * cell + (cell - size) / 2,
+    top: originY + row * cell + (cell - size) / 2,
     width: size,
     height: size,
   };
@@ -313,7 +326,10 @@ export function SnakePlay({ onSnakeFood }: Props) {
             />
             <View
               accessible={false}
-              style={[styles.sprite, slotStyle(food.x, food.y, grid.cellW, grid.cellH, cell * 0.84)]}
+              style={[
+                styles.sprite,
+                slotStyle(food.x, food.y, grid.originX, grid.originY, cell, cell * 0.84),
+              ]}
             >
               <Collectible
                 size={cell * 0.84}
@@ -330,7 +346,7 @@ export function SnakePlay({ onSnakeFood }: Props) {
                   key={`s-${part.x}-${part.y}-${index}`}
                   style={[
                     styles.segment,
-                    slotStyle(part.x, part.y, grid.cellW, grid.cellH, size),
+                    slotStyle(part.x, part.y, grid.originX, grid.originY, cell, size),
                     {
                       borderRadius: isHead ? size * 0.38 : size * 0.32,
                       // Row 0 is the top of this measured field. Down increases `part.y` → `top`.

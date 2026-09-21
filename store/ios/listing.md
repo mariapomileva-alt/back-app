@@ -1,66 +1,79 @@
 # App Store Connect pack — Back: You're Here
 
-Upload these files in App Store Connect. This file is the listing copy and the fill-in checklist.
+Upload assets and paste copy in App Store Connect. This file is the listing text and the fill-in checklist.
 
-Companion how-to (zip, where to paste, what they still click): **`store/ios/SHARE-WITH-COMPANION.md`**.
+Companion how-to (zip, build branch, what **not** to upload): **`store/ios/SHARE-WITH-COMPANION.md`**.
 
-**Copyright:** 2026 Tatjana Fedorkova  
+**Copyright (Connect):** 2026 Tatjana Fedorkova  
 **Bundle ID:** `app.back.selfhelp`  
 **Version:** 1.0.0  
-**SKU suggestion:** `back-ios-1` (set once; cannot invent Apple IDs)  
-**Branch for this pack:** `cursor/active-session-foundation`
+**SKU suggestion:** `back-ios-1` (set once in Connect)  
+**Branch for app + this pack:** `cursor/active-session-foundation`  
+**Pack updated:** 21 September 2026
 
-**Audit:** 15 September 2026 (icon via `sips`; URLs via `curl --max-time 8`).
+**Nothing in this folder auto-uploads to Apple.** A human uploads the **production binary** (EAS / Xcode) and these PNGs separately.
 
 ---
 
-## Files
+## Production build (developer — not in this folder)
 
-| Asset | Path | Spec | Audit |
+| Item | Instruction |
+| --- | --- |
+| Git branch | `cursor/active-session-foundation` after QA (not an stale `main` archive unless confirmed current) |
+| Profile | EAS **production** (or Xcode Archive → App Store Connect) |
+| Bundle ID | `app.back.selfhelp` |
+| Companion | Selects the uploaded build on version **1.0** in Connect — this pack does not contain the `.ipa` |
+
+---
+
+## Files for Connect
+
+| Asset | Path | Spec | Notes |
 | --- | --- | --- | --- |
-| App icon (master) | `store/ios/icon-1024.png` | 1024×1024, RGB, opaque PNG, no rounded corners, no alpha, no pre-rounded mask | **Present.** Approved tactile forest disc. `sips`: 1024×1024, RGB, `hasAlpha: no`. Same bytes as `assets/images/icon.png`. |
-| App icon (Expo slot) | `assets/images/icon.png` | Same file as master | Present (identical hash). |
-| Screenshots | `store/ios/screenshots/` | iPhone **6.9"** portrait **1320×2868** | **Present.** Six PNGs, all 1320×2868 RGB opaque. Full-bleed app UI (status bar + Dynamic Island as the screen, not a 3D phone bezel). No lorem. |
+| App icon (master) | `store/ios/icon-1024.png` | 1024×1024 RGB opaque PNG | Same as `assets/images/icon.png` |
+| Screenshots | `store/ios/screenshots/` | iPhone **6.9"** **1320×2868** portrait | Six PNGs; full-bleed UI (not a 3D phone frame) |
 
-Screenshots (upload in this order, 6.9" well — not 6.5"):
+Upload order (**6.9"** well — not 6.5"):
 
-1. `01-home.png` — Home
-2. `02-breathe.png` — Breathe
-3. `03-ground.png` — Ground
-4. `04-listen.png` — Listen
-5. `05-distract.png` — Distract
-6. `06-extra-support.png` — Extra support
+1. `01-home.png` — Home  
+2. `02-breathe.png` — Breathe  
+3. `03-ground.png` — Ground  
+4. `04-listen.png` — Listen (**confirm matches TestFlight** — picker + session chrome)  
+5. `05-distract.png` — Distract  
+6. `06-extra-support.png` — Extra support  
+
+**Do not upload:** `screenshots/compose.html`, anything under repo `verification-screenshots/` (QA sizes only).
 
 No iPad, Watch, or preview video.
 
 ---
 
-## URLs (paste in App Information)
+## URLs (App Information + Review notes)
 
-**Do not paste Privacy or Support URLs until they return HTTP 200.** GitHub Pages deploys from **`main`**. The HTML files exist on this branch (`landing/privacy.html`, `landing/support.html`) but **not** on `main`. Custom-domain HTTPS **is** issued.
+**Do not paste Privacy or Support into Connect until each URL returns HTTP 200 in a browser.**
 
-| URL | Live status (15 Sep 2026) |
+GitHub Pages for **backapp.live** deploys from **`main`**. Files live in `landing/` on this branch; they may 404 on the live site until merged/deployed to **`main`**.
+
+| URL | Role |
 | --- | --- |
-| https://backapp.live/ | **Live.** HTTPS 200. DNS (Namecheap) → GitHub Pages (`185.199.x.x`). Certificate issued (`ssl_verify_result=0`). |
-| https://backapp.live/privacy.html | Confirm **200** after deploy from `main`. |
-| https://backapp.live/support.html | Confirm **200** after deploy from `main`. |
-| https://backapp.live/subscriptions.html | Subscriptions / billing transparency (free 1.0, no IAP). Confirm **200** after deploy. |
-| https://backapp.live/terms.html | Terms of use (wellness disclaimer, not medical). Confirm **200** after deploy. |
-| https://mariapomileva-alt.github.io/back-app/privacy.html | **Not a fallback.** CNAME redirects to `backapp.live`. |
+| https://backapp.live/ | Marketing (optional) — usually live |
+| https://backapp.live/privacy.html | **Privacy Policy URL** (required) |
+| https://backapp.live/support.html | **Support URL** (required) |
+| https://backapp.live/subscriptions.html | Back Plus / billing transparency |
+| https://backapp.live/terms.html | Terms of use |
+| https://mariapomileva-alt.github.io/back-app/… | **Not a fallback** — custom domain redirects |
 
-After `landing/*.html` legal pages are on `main`, confirm 200 in a browser, then paste:
+After deploy, paste:
 
-- **Support URL:** https://backapp.live/support.html
-- **Privacy Policy URL:** https://backapp.live/privacy.html
-- **Subscriptions / billing (public transparency):** https://backapp.live/subscriptions.html — use in Review notes or EU/consumer disclosures if Connect asks; not always a dedicated Connect field.
-- **Terms of use (EULA-style):** https://backapp.live/terms.html — link from site footer; optional in Connect unless required by territory.
-- **Marketing URL (optional):** https://backapp.live/
+- **Support URL:** https://backapp.live/support.html  
+- **Privacy Policy URL:** https://backapp.live/privacy.html  
+- **Marketing URL (optional):** https://backapp.live/  
 
-**Site footer brand:** © Back App (public site). **App Store Connect copyright metadata** may still list **2026 Tatjana Fedorkova** as copyright holder — that is separate from the website footer.
+Use subscriptions + terms URLs in **Review notes** and in-app; Connect may not require separate fields.
 
-In-app Privacy already opens `https://backapp.live/privacy.html`. That in-app button will 404 until Pages is updated.
+**Site footer:** © Back App. **App Store copyright field** may still list **2026 Tatjana Fedorkova** — that is intentional.
 
-No product email is in the repo. Support is GitHub Issues (stated on the support page). Do not invent a mailbox.
+Support is described on the support page (e.g. GitHub Issues). Do not invent a product mailbox.
 
 ---
 
@@ -89,11 +102,21 @@ Move — small, quiet movement.
 Listen — rain, ocean, forest, fan, or brown noise, on this device.
 Read — short lines that appear at a pace you choose.
 
-Need someone? Call my person opens a contact you keep on this phone. Extra support can help you reach a person you trust, or show a public local emergency number. Back does not place the call for you.
+Back Plus
+
+The six core tools are part of Back Plus — a subscription with a planned 7-day trial on the annual plan for eligible subscribers, then monthly or annual renewal. Final prices and trial eligibility are determined by the App Store in your region when Back Plus is available for purchase.
+
+In this release, Back Plus is information only: there is nothing to buy in the App Store yet. Open Settings → Back Plus to read what is planned. Purchases and Restore will appear in a later update when subscriptions are activated.
+
+Always available without a subscription: Extra support, emergency information, Call my person, Privacy, Terms, and subscription information. Back does not place calls for you.
 
 Private. No account. Nothing you save is sent to Back. Your “my person” contact stays on this device.
 
 Back is not therapy, not a diagnosis, and not an emergency service. It is not a medical device.
+
+Subscription details: https://backapp.live/subscriptions.html
+Privacy: https://backapp.live/privacy.html
+Terms: https://backapp.live/terms.html
 ```
 
 ### Keywords (100 / 100 characters)
@@ -103,9 +126,9 @@ anxiety,panic,breathe,grounding,overload,stress,self-help,quiet,breathing,ground
 
 No competitor names. No “Calm”, “Headspace”, or similar.
 
-### Promotional text (optional, 57 / 170)
+### Promotional text (optional)
 ```
-Six quiet tools for the next minute. Private. No account.
+Six quiet tools for difficult minutes. Private. No account. Back Plus details in Settings.
 ```
 
 ### What's New
@@ -126,14 +149,12 @@ Secondary (optional): Lifestyle.
 
 Recommended store age: **12+** because the app names anxiety/panic and Extra support talks about urgent help. Do **not** check Medical Treatment / Medical or Treatment Information.
 
-Suggested answers (Apple’s age questionnaire):
-
 | Question | Answer |
 | --- | --- |
 | Unrestricted Web Access | No (Privacy opens one URL; calls/SMS open system apps) |
 | Gambling and Contests | None |
 | Mature/Suggestive Themes | None |
-| Medical or Treatment Information | **None** — do not mark this |
+| Medical or Treatment Information | **None** |
 | Alcohol, Tobacco, or Drug Use | None |
 | Simulated Gambling | None (Distract games are not gambling) |
 | Sexual Content or Nudity | None |
@@ -143,105 +164,139 @@ Suggested answers (Apple’s age questionnaire):
 | Realistic Violence | None |
 | Guns or Weapons | None |
 
-If the form then shows **4+**, that is the honest result without Medical Treatment. Extra support already carries an on-screen disclaimer. Prefer 12+ if Connect lets you choose a higher rating without checking Medical Treatment; otherwise submit the questionnaire result and keep the listing/disclaimer language.
+If the form shows **4+** without Medical Treatment, that can be honest; Extra support carries an on-screen disclaimer. Prefer **12+** if Connect allows without checking Medical Treatment.
 
 ### App Privacy (nutrition label)
 
 Select **Data Not Collected**.
 
-Do **not** check:
+Do **not** check Health & Fitness, Health, Health Records, Contact Info, Identifiers, Usage Data, Diagnostics, Location, or Sensitive Info.
 
-- Health & Fitness
-- Health
-- Health Records
-- Contact Info (the “my person” number is on-device only; we never receive it)
-- Identifiers, Usage Data, Diagnostics, Location, Sensitive Info
-
-User-saved contact, preferences, and recent tools never leave the device.
+The “my person” number and preferences stay on-device only; Back does not receive them.
 
 ### Review Information — Notes (paste)
 
+Paste **only after** legal URLs return HTTP 200. Replace `[REVIEWER PHONE]` if Maria adds a dedicated line in Notes elsewhere; companion still sets Review contact in Connect.
+
 ```
-Back is free and fully usable offline. There is no account and no demo login.
+Back is an offline-first self-help app. There is no account and no demo login.
 
-All six tools work without a network. A support contact saved as “my person” stays on the device and is never sent to us. Extra support can open the Phone or Messages app; Back does not place the call.
+SUBSCRIPTION (THIS BUILD)
+- Back Plus is shown in Settings and when tapping a core tool on Home.
+- In-app purchases are NOT enabled in App Store Connect for this submission. The Back Plus screen states that there is nothing to buy yet and that final prices will appear in the App Store before purchase.
+- Do not expect a working Subscribe button or Sandbox purchase in this build.
+- Planned model (documented on https://backapp.live/subscriptions.html ): 7-day trial on Back Plus Annual for eligible subscribers, then monthly or annual auto-renewing subscription for the six core tools.
 
-Listen may continue quiet sound with the screen locked (audio background mode). Ground can play optional on-device narration.
+WHAT REVIEWERS CAN OPEN WITHOUT A PURCHASE
+- Home → Call my person (on-device contact the user chooses).
+- Settings → Extra support (emergency information; not subscription-gated).
+- Settings → Privacy, Terms, Back Plus (information), Language, accessibility toggles.
 
-Back is not a medical device, not therapy, not a diagnosis, and not an emergency service. There are no in-app purchases or subscriptions in this version. Purchasing is disabled. Do not look for a paywall or a $9.99 product.
+CORE TOOLS (Breathe, Distract, Ground, Move, Listen, Read)
+- Tapping a tool on Home opens the Back Plus information screen instead of starting a session until store subscriptions are activated in a later release.
+- For UI review of a tool screen, use an internal TestFlight build if Maria provided one with tools unlocked; otherwise describe that session UI is present in the binary but gated until Back Plus purchases launch.
+
+AUDIO
+- Listen uses bundled on-device loops (synthetic placeholders generated in-repo, not a licensed commercial sound library). Ground optional narration is also a placeholder. If asked about rights: temporary generated assets until studio/licensed files ship in a later update.
+- Listen may continue quiet sound with the screen locked when a session is active (background audio mode).
+
+SAFETY
+- Back is not a medical device, not therapy, not a diagnosis, and not an emergency service. Extra support does not place calls; it can open Phone or Messages.
+
+ATTACHMENTS
+- Maria may attach a screen recording captured on a physical iPhone showing Home, Settings → Back Plus, Settings → Extra support, and Call my person.
 
 Privacy Policy: https://backapp.live/privacy.html
 Support: https://backapp.live/support.html
-Subscriptions (free, no IAP in 1.0): https://backapp.live/subscriptions.html
+Subscriptions: https://backapp.live/subscriptions.html
 Terms: https://backapp.live/terms.html
 ```
-
-Paste those two URLs in Review notes only after they 200 (see URLs above).
 
 ### Demo account
 None. Leave username/password blank.
 
 ### Advertising Identifier
-No. Do not check LAT / IDFA.
+No. Do not enable LAT / IDFA.
 
 ### Content rights
-You own or have rights to ship the UI. Listen/Ground **audio and some stills are still placeholders** — see Reject risk below. Do not claim those files are original licensed music if asked; they are generated stand-ins.
+You own or have rights to ship the UI. Listen/Ground **audio and some stills are placeholders** — see **Still placeholder — reject risk**. Do not claim licensed commercial music or commissioned field recordings if asked.
 
-### Paid Apps Agreement
-First version is **free**. Do **not** enable In-App Purchases. Do not attach a subscription product. The in-app Subscription row is removed until RevenueCat exists. Paid Apps Agreement can remain unused for a free app; complete the **Free** apps agreement / tax/banking only as Connect requires for paid later.
+### Paid Apps Agreement / In-App Purchases
+
+**This submission (1.0 review build):**
+
+- **Do not** create or attach subscription IAP products in Connect yet (`subscriptionsPubliclyAvailable: false` in app; no RevenueCat product IDs in production config).
+- **Do not** tell Review to complete a Sandbox purchase in this build.
+- **Free Apps** agreement / tax as Connect requires for distributing a free download.
+
+**Later (S3 — when Maria / developer confirms):**
+
+- Complete **Paid Apps Agreement**, banking, and tax if not already done.
+- Create Back Plus subscription group + products in Connect; wire RevenueCat + `config/production.ts`; enable purchases in app; submit a **new version** with updated Review notes and Sandbox test steps.
 
 ### EU trader status (Digital Services Act)
-You must complete this in App Store Connect. A banner about trader status (from Feb 2025) cannot be clicked from this pack. Choose trader vs non-trader, and fill the legal name/address Connect asks for (copyright holder: Tatjana Fedorkova) before Submit for Review will enable.
+Complete in App Store Connect (trader vs non-trader; legal name/address — copyright holder: Tatjana Fedorkova). Submit for Review stays disabled until this is done.
 
 ---
 
-## Manual clicks still required in App Store Connect
+## Manual clicks in App Store Connect
 
-Submit stays grey until a human does these in the UI:
-
-1. Create the iOS app record if needed (bundle `app.back.selfhelp`, listing name **Back: You're Here**).
-2. Upload `store/ios/icon-1024.png` if the build’s AppIcon is not already this file (EAS/Expo should pick `assets/images/icon.png`).
-3. Upload the six 1320×2868 screenshots into **6.9" Display** (not 6.5").
-4. Paste subtitle, description, keywords, What’s New.
-5. Set Support URL and Privacy Policy URL.
-6. Category: Health & Fitness.
-7. Complete Age Rating questionnaire (see table).
-8. App Privacy: Data Not Collected.
-9. Review notes + contact email/phone for App Review (your own).
-10. EU trader / DSA form.
-11. Encryption: `ITSAppUsesNonExemptEncryption` is already false in `app.json` — confirm the export compliance question as No.
-12. Upload a production build (EAS `production`). This pack does not submit the binary.
-13. Do **not** turn on IAP.
+1. App record: bundle `app.back.selfhelp`, name **Back: You're Here**.  
+2. Upload **production** iOS build from branch `cursor/active-session-foundation`.  
+3. Version **1.0**: select that build.  
+4. Upload six **1320×2868** screenshots → **6.9" Display**.  
+5. Paste subtitle, description, keywords, What’s New.  
+6. Support + Privacy URLs (200 OK).  
+7. Category: Health & Fitness.  
+8. Age Rating (table above).  
+9. App Privacy: Data Not Collected.  
+10. Review notes (block above) + Review phone/email.  
+11. EU trader / DSA.  
+12. Export compliance: encryption **No**.  
+13. **Leave IAP off** for this version.
 
 ---
 
-## What changed in the app for this pack
+## What this pack matches in the app (21 Sep 2026)
 
-- Production icon is the approved tactile forest disc in `store/ios/icon-1024.png` and `assets/images/icon.png`; `productionIconReady: true`.
-- Privacy screen links to https://backapp.live/privacy.html and states the app is not a medical device / not Health Records. (Page must be deployed from `main` before that URL 200s.)
-- Subscription row removed from Settings. No $9.99 promise in UI or listing. `/settings/subscription` remains a dormant “nothing to buy” screen if opened by URL.
-- Landing: `privacy.html`, `support.html`, `subscriptions.html`, `terms.html`; footer links (Privacy, Support, Subscriptions, Terms); site copyright © Back App.
+- **Back Plus** row in Settings; `/settings/subscription` explains planned trial/subscription; **no live store prices** in UI.  
+- **Production:** core tools on Home route to Back Plus info (`hasPaidAccess: false`; store products not configured).  
+- **Safety routes** (Extra support, emergency info, Call my person, Privacy, Terms, subscription info) remain reachable without purchase.  
+- **Listen:** 9 on-device loops — synthetic placeholders (`environmentAudioReady: false`).  
+- **Icon:** `store/ios/icon-1024.png` / `assets/images/icon.png` (tactile forest disc).  
+- **Landing:** `privacy.html`, `support.html`, `subscriptions.html`, `terms.html` in repo — deploy from **`main`** before Connect URLs must work.
 
 ---
 
 ## Still placeholder — reject risk
 
-Do **not** tell Review these sounds or photos are original commissioned recordings.
+Do **not** tell Review these sounds or photos are original commissioned or licensed library assets.
 
-| Slot | Status | Risk |
+| Slot | Status | If asked |
 | --- | --- | --- |
-| Listen loops (`audio/sounds/*-placeholder.wav`) | Generated placeholders; `environmentAudioReady: false` | If a reviewer asks about music rights, say they are temporary generated loops, not licensed commercial tracks. Replace before a later version if possible. |
-| Ground narration (`audio/grounding/english-placeholder.wav`) | Generated placeholder; `groundingAudioReady: false` | Same. Tool still works with on-screen instructions. |
-| Listen stills (`listen-*-placeholder.jpg`) | Bundled editorial-style photos, license unknown | Possible copyright complaint. Documented in `assets/docs/production-asset-manifest.txt`. |
-| Ground/Move stills (`*-placeholder.png`) | Bundled placeholders | Same. Home Ground/Move cards use compressed crops. |
-| Fan / brown visuals | Original in-app graphics | Fine. |
+| Listen loops (`audio/sounds/*-placeholder.wav`) | Generated placeholders; `environmentAudioReady: false` | Temporary in-repo loops; licensed/studio files planned in a later update. |
+| Ground narration (`audio/grounding/english-placeholder.wav`) | Placeholder; `groundingAudioReady: false` | On-screen instructions work without it. |
+| Listen stills (`listen-*-placeholder.jpg`) | Bundled placeholders; license not cleared for store | Documented in `assets/docs/production-asset-manifest.txt`. |
+| Ground/Move stills (`*-placeholder.png`) | Bundled placeholders | Same. |
+| Fan / brown visuals | Original in-app graphics | OK. |
 
-Extra support disclaimer is in the app and in the listing. Keep it.
+Extra support disclaimer stays in app and listing.
 
 ---
 
-## Character counts
+## Later updates (not this submission)
 
-- Subtitle: 25 / 30
-- Keywords: 100 / 100
-- Promotional text: 57 / 170
+| Change | Action |
+| --- | --- |
+| Licensed Listen audio | Replace WAVs, update `SOUND_ASSET_LICENSES.md`, `environmentAudioReady: true`, new build |
+| Fresh App Store screenshots | Replace `store/ios/screenshots/01–06`, re-upload in Connect |
+| Back Plus purchases live | S3: Connect products + RevenueCat + new Review notes with Sandbox Apple ID steps |
+
+---
+
+## Character counts (approximate)
+
+- Subtitle: 25 / 30  
+- Keywords: 100 / 100  
+- Promotional text: under 170  
+- Description: within App Store limit; includes subscription disclosure for planned Back Plus  

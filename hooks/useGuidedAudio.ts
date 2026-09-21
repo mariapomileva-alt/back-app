@@ -21,11 +21,9 @@ export function useGuidedAudio({ source, autoPlay = false, initialMuted = false 
   const [muted, setMuted] = useState(initialMuted);
   const [volume, setVolume] = useState(0.7);
 
-  const [prevInitialMuted, setPrevInitialMuted] = useState(initialMuted);
-  if (initialMuted !== prevInitialMuted) {
-    setPrevInitialMuted(initialMuted);
+  useEffect(() => {
     setMuted(initialMuted);
-  }
+  }, [initialMuted]);
 
   const applyVolume = useCallback(() => {
     try {

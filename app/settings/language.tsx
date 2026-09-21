@@ -33,7 +33,7 @@ export default function LanguageSettingsScreen() {
   };
 
   return (
-    <ScreenContainer>
+    <ScreenContainer phoneWidth>
       <ScreenHeader title={t('settings.language')} />
       <AppText tone="secondary" style={styles.lead}>
         {t('settings.languageHint')}

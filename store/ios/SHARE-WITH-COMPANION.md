@@ -5,9 +5,22 @@ This folder is the **only** iOS App Store pack. Zip it, send it, or open it on G
 Эта папка — **единственный** пакет для App Store. Сожмите, отправьте, или откройте на GitHub.
 
 **App / Приложение:** Back: You're Here  
-**Copyright:** 2026 Tatjana Fedorkova  
+**Copyright (Connect metadata):** 2026 Tatjana Fedorkova  
 **Branch / Ветка:** `cursor/active-session-foundation`  
-**Repo path:** `store/ios`
+**Repo path:** `store/ios`  
+**Pack updated:** 21 September 2026 — aligned with Back Plus UI (purchases **not** live yet).
+
+---
+
+## 0. Quick answer / Коротко
+
+| Question | Answer |
+| --- | --- |
+| Is everything already in App Store Connect? | **No.** Only this folder in GitHub. Connect is filled in manually. |
+| Where is the binary (.ipa)? | **Not in the repo.** Developer uploads a **production** build (EAS / Xcode) from branch `cursor/active-session-foundation`. |
+| Which branch? | **`cursor/active-session-foundation`** (after QA). Do **not** ship an old archive from `main` unless Maria confirms it is up to date. |
+| In-App Purchases in Connect? | **Do not enable** for this submission. App shows Back Plus **information** only; store products and RevenueCat are **S3** (later). |
+| Can we submit without licensed Listen audio? | **Yes**, with honest Review notes (generated loops). Licensed audio can ship in a later update. |
 
 ---
 
@@ -17,17 +30,16 @@ This folder is the **only** iOS App Store pack. Zip it, send it, or open it on G
 
 1. Zip the folder `store/ios` (icon + `screenshots/` + `listing.md` + this file).
 2. Send the zip via iCloud Drive, Google Drive, or email.
-3. Or both people open the GitHub repo on branch `cursor/active-session-foundation` and go to `store/ios`.
-4. Companion pastes copy from `listing.md` into App Store Connect (map below).
-5. Companion still clicks Age Rating, App Privacy, EU trader, and their own Review phone/email — those cannot be done from this pack.
+3. Or open the GitHub repo on branch `cursor/active-session-foundation` → `store/ios`.
+4. Paste copy from **`listing.md`** into App Store Connect (map in section 3).
+5. You still complete Age Rating, App Privacy, EU trader, Review phone/email, and **upload the build** — nothing in this pack does that for you.
 
 **Русский**
 
-1. Сожмите папку `store/ios` (иконка + `screenshots/` + `listing.md` + этот файл).
-2. Отправьте zip через iCloud Drive, Google Drive или почту.
-3. Или оба открывают репозиторий на ветке `cursor/active-session-foundation` и папку `store/ios`.
-4. Компаньон копирует тексты из `listing.md` в App Store Connect (карта ниже).
-5. Компаньон сам отмечает Age Rating, App Privacy, статус EU trader и свой телефон/email для App Review — из пакета это не нажать.
+1. Сожмите `store/ios` (иконка + `screenshots/` + `listing.md` + этот файл).
+2. Отправьте zip (Drive / iCloud / почта) или откройте репозиторий на ветке **`cursor/active-session-foundation`**.
+3. Тексты — из **`listing.md`**. Билд загружает разработчик отдельно.
+4. Age Rating, App Privacy, EU trader, телефон/email для Review — только в Connect.
 
 Do not send secrets, Apple IDs, or certificates. / Не пересылайте секреты, Apple ID и сертификаты.
 
@@ -35,93 +47,141 @@ Do not send secrets, Apple IDs, or certificates. / Не пересылайте �
 
 ## 2. What lives where / Где что лежит
 
-| Item / Что | Path / Путь | Upload? / Загружать? |
+| Item / Что | Path / Путь | Upload to Connect? |
 | --- | --- | --- |
-| App icon 1024×1024 (tactile forest disc) | `icon-1024.png` | Yes → App Information / App Icon if the build did not already include it |
-| Home | `screenshots/01-home.png` | Yes → 6.9" Display, first |
-| Breathe | `screenshots/02-breathe.png` | Yes → 6.9" |
-| Ground | `screenshots/03-ground.png` | Yes → 6.9" |
-| Listen | `screenshots/04-listen.png` | Yes → 6.9" |
-| Distract | `screenshots/05-distract.png` | Yes → 6.9" |
-| Extra support | `screenshots/06-extra-support.png` | Yes → 6.9" |
-| Paste-ready listing + Connect checklist | `listing.md` | No — copy/paste only |
-| This how-to | `SHARE-WITH-COMPANION.md` | No |
-| Screenshot compositor | `screenshots/compose.html` | **No** — generator, not an App Store asset |
+| App icon 1024×1024 | `icon-1024.png` | **Yes** → App Information, if Connect asks and the build did not already embed it |
+| Home | `screenshots/01-home.png` | **Yes** → **6.9" Display**, 1st |
+| Breathe | `screenshots/02-breathe.png` | **Yes** → 6.9" |
+| Ground | `screenshots/03-ground.png` | **Yes** → 6.9" |
+| Listen | `screenshots/04-listen.png` | **Yes** → 6.9" — **verify UI matches TestFlight** (see §4) |
+| Distract | `screenshots/05-distract.png` | **Yes** → 6.9" |
+| Extra support | `screenshots/06-extra-support.png` | **Yes** → 6.9" |
+| Listing + checklist | `listing.md` | **No** — copy/paste text only |
+| This how-to | `SHARE-WITH-COMPANION.md` | **No** |
+| Screenshot compositor | `screenshots/compose.html` | **No** — local tool only |
 
-All six screenshots are **1320×2868** (iPhone 6.9" portrait). Not 6.5". No iPad, no Watch, no preview video.
+All six store screenshots must be **1320×2868** (iPhone **6.9"** portrait). Not 6.5". No iPad, Watch, or preview video.
+
+### Do **not** upload / Не загружать
+
+| Path | Why |
+| --- | --- |
+| `verification-screenshots/` (repo root) | QA only — wrong sizes (390×844, etc.). Not App Store assets. |
+| `store/ios/screenshots/compose.html` | Not a PNG. |
+| Any `.env`, certificates, provisioning profiles | Secrets — never in Connect from this pack. |
+
+When Maria or the developer replaces screenshots, they commit new PNGs under `store/ios/screenshots/` — then you re-upload those files.
 
 ---
 
 ## 3. App Store Connect map / Куда что вставить
 
-Use `listing.md` as the source of truth. / Источник текстов — `listing.md`.
+Source of truth: **`listing.md`**.
 
 | Connect field | From |
 | --- | --- |
 | Name | Back: You're Here |
-| Subtitle | `Quiet help for one minute` (25 / 30) |
+| Subtitle | `Quiet help for one minute` |
 | Description | Description block in `listing.md` |
-| Keywords | Keywords block (100 / 100, no competitor names) |
+| Keywords | Keywords block |
 | Promotional text (optional) | Promotional block |
 | What's New | `First release.` |
-| Support URL | https://backapp.live/support.html — **only after it 200s** (see below) |
-| Privacy Policy URL | https://backapp.live/privacy.html — **only after it 200s** |
-| Marketing URL (optional) | https://backapp.live/ (this one is live) |
-| Category | Health & Fitness (not Medical) |
-| Screenshots | The six PNGs into **6.9" Display** |
-| Review notes | Review Information block in `listing.md` |
-| Demo account | Leave blank |
-| IAP / subscription product | **Do not enable** |
+| Support URL | https://backapp.live/support.html — **only after HTTP 200** |
+| Privacy Policy URL | https://backapp.live/privacy.html — **only after HTTP 200** |
+| Marketing URL (optional) | https://backapp.live/ |
+| Category | Health & Fitness (**not** Medical) |
+| Screenshots | Six PNGs → **6.9" Display** |
+| Review notes | **Review Information** block in `listing.md` |
+| Demo account | Leave **blank** |
+| In-App Purchases / subscription products | **Do not create or attach** for this submission |
 
 ---
 
-## 4. URLs — honest status / Честный статус ссылок
+## 4. Screenshots vs the real build / Скриншоты и билд
 
-Checked 15 September 2026.
+Before Submit:
 
-| URL | Status |
+1. Install the **same build** you will attach in Connect (TestFlight internal).
+2. Compare **Listen** (`04-listen.png`) with the app: horizontal sound chips, back arrow in session header (no duplicate close control).
+3. If PNGs in `store/ios/screenshots/` look older than TestFlight, **stop** — ask Maria for updated `01–06` on branch `cursor/active-session-foundation`, then upload the new files.
+
+Optional reference (not for upload): `verification-screenshots/pre-release-qa/` and `session-chrome-qa/` show recent QA layouts at other sizes.
+
+---
+
+## 5. URLs — check before paste / Ссылки
+
+GitHub Pages for **backapp.live** deploys from **`main`**. Legal HTML may exist on `cursor/active-session-foundation` before it is on `main`.
+
+**Before Submit:** open each URL in a browser. Paste into Connect and Review notes **only when they return HTTP 200**.
+
+| URL | Use |
 | --- | --- |
-| https://backapp.live/ | **Live / живой** — HTTPS 200. DNS is set. Certificate is issued. |
-| https://backapp.live/privacy.html | **404.** File is in the repo (`landing/privacy.html`) on this branch, **not** on `main`. Pages deploys from `main`. |
-| https://backapp.live/support.html | **404.** Same. |
-| github.io copies | **Not a fallback.** They redirect to `backapp.live` (same 404). |
+| https://backapp.live/ | Marketing (usually live) |
+| https://backapp.live/privacy.html | Privacy Policy URL |
+| https://backapp.live/support.html | Support URL |
+| https://backapp.live/subscriptions.html | Back Plus transparency (Review notes; in-app link) |
+| https://backapp.live/terms.html | Terms (Review notes; in-app link) |
 
-**Before Submit:** merge `landing/privacy.html` and `landing/support.html` onto `main` (or run the GitHub Pages workflow on a branch that has them), then open both URLs in a browser. Paste into Connect only when they load.
+If Privacy or Support 404, merge/deploy `landing/*.html` to **`main`** first (Maria / developer).
 
-**До Submit:** выложить эти две страницы на `main` (или запустить workflow Pages с ветки, где они есть), открыть обе ссылки в браузере. Вставлять в Connect только когда страницы открываются.
-
-In-app Settings → Privacy already points at the privacy URL; that button will 404 until Pages is updated.
-
-В приложении Настройки → Privacy уже ведёт на этот URL; кнопка будет 404, пока Pages не обновится.
+In-app Settings → Privacy opens the privacy URL; it will fail until the page is live.
 
 ---
 
-## 5. Companion still clicks / Компаньон всё ещё нажимает сам
+## 6. What this build does (for Review) / Поведение билда
 
-Submit stays grey until a human does these in App Store Connect:
+So Review notes match the app:
 
-Submit остаётся серым, пока человек не сделает это в Connect:
+| Area | Behavior in **production** build |
+| --- | --- |
+| Account / login | **None** |
+| Home — six tools | Tap opens **Back Plus** information (Settings → subscription screen). **No purchase** yet. |
+| Settings → **Back Plus** | Explains planned trial/subscription; copy says **nothing to buy until Back Plus is released**. |
+| Settings → **Extra support**, Privacy, Terms | **Always** reachable (not subscription-gated) |
+| Home → **Call my person** | Available without subscription (on-device contact) |
+| In-App Purchases in Connect | **Not enabled** — no Sandbox purchase in this submission |
+| Listen / Ground audio | In-app **generated placeholders** — not licensed commercial library (see `listing.md`) |
 
-1. **Age Rating** — questionnaire in `listing.md` (aim 12+ guidance; do **not** check Medical Treatment).
-2. **App Privacy** — select **Data Not Collected**.
-3. **EU trader / DSA** — trader vs non-trader; legal name/address (copyright holder: Tatjana Fedorkova).
-4. **Review contact** — companion’s own phone and email for App Review (not in this repo).
-5. Export compliance: encryption **No** (`ITSAppUsesNonExemptEncryption` is already false).
-6. Upload a **production** build (EAS). This pack is listing assets only.
-7. **Do not** turn on In-App Purchases.
-
----
-
-## 6. Do not / Не делать
-
-- Do not enable IAP or attach a $9.99 / subscription product.
-- Do not invent a support mailbox.
-- Do not tell Review that Listen/Ground audio or stills are licensed originals — they are still placeholders (see `listing.md` Reject risk).
-- Do not upload `compose.html`.
-- Do not send certificates, API keys, or Apple passwords.
+**Do not** paste old Review text claiming “free, all six tools work with no paywall.”
 
 ---
 
-## 7. Not needed / Не нужно
+## 7. Companion still clicks / Компаньон нажимает сам
 
-iPad screenshots, preview video, demo account, Apple Watch.
+Submit stays grey until Connect has:
+
+1. **Age Rating** — table in `listing.md` (do **not** check Medical Treatment).
+2. **App Privacy** — **Data Not Collected**.
+3. **EU trader / DSA** — legal name/address (copyright holder: Tatjana Fedorkova).
+4. **Review contact** — your phone + email for App Review.
+5. **Export compliance** — encryption **No** (`ITSAppUsesNonExemptEncryption` is false in the project).
+6. **Production iOS build** uploaded and selected for version 1.0.
+7. **IAP** — leave **off**; no subscription product attached to this version.
+
+Maria may provide a **screen recording on a physical iPhone** for Guideline 2.1 — attach in Resolution Center if Apple asks; not stored in this folder.
+
+---
+
+## 8. Do not / Не делать
+
+- Do **not** enable IAP or attach Back Plus products until Maria / developer completes **S3** (App Store products + RevenueCat + `config/production.ts`).
+- Do **not** invent support email addresses.
+- Do **not** tell Review that Listen/Ground audio or some card photos are licensed originals — placeholders (see `listing.md`).
+- Do **not** upload `compose.html` or `verification-screenshots/`.
+- Do **not** use listing copy that says “no subscriptions” if the build shows **Back Plus** in Settings.
+
+---
+
+## 9. Not needed / Не нужно
+
+iPad screenshots, Apple Watch, preview video, demo account.
+
+---
+
+## 10. After approval / После одобрения
+
+- **Listen licensed audio** — later app update (same bundle, new version).
+- **Back Plus purchases** — separate release when S3 is ready; then Paid Apps Agreement, products in Connect, and updated Review notes for Sandbox testing.
+
+Questions about branch, build number, or screenshot refresh → Maria or the developer, not guessed in Connect.

@@ -6,6 +6,10 @@ import { breathPatterns, type BreathPatternId } from '@/features/breathe/pattern
 import { useHaptics } from '@/hooks/useHaptics';
 import { useTheme } from '@/hooks/useTheme';
 import { t } from '@/locales/i18n';
+import {
+  SECONDARY_CONTROL_LABEL_OPACITY,
+  secondaryControlLabelColor,
+} from '@/theme/secondaryControlText';
 import { spacing, touch } from '@/theme/spacing';
 
 type Props = {
@@ -44,9 +48,9 @@ export function PatternPicker({ selectedId, onSelect }: Props) {
               style={[
                 styles.label,
                 {
-                  color: selected ? theme.colors.text : theme.colors.textSecondary,
+                  color: selected ? theme.colors.text : secondaryControlLabelColor(theme),
                   fontWeight: selected ? '500' : '400',
-                  opacity: selected ? 1 : 0.72,
+                  opacity: selected ? 1 : SECONDARY_CONTROL_LABEL_OPACITY,
                 },
               ]}
             >

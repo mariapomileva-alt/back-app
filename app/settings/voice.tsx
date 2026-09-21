@@ -44,7 +44,7 @@ export default function VoiceSettingsScreen() {
   }, []);
 
   return (
-    <ScreenContainer>
+    <ScreenContainer phoneWidth>
       <ScreenHeader title={t('settings.voice')} />
       <View style={styles.body}>
         <AppText variant="body">{t('voice.intro')}</AppText>

@@ -2,29 +2,21 @@ import { useEffect } from 'react';
 import { Platform, StyleSheet, View } from 'react-native';
 import Animated, {
   Easing,
-  ReduceMotion,
   cancelAnimation,
-  useAnimatedProps,
   useAnimatedStyle,
   useSharedValue,
   withRepeat,
   withTiming,
-  type SharedValue,
 } from 'react-native-reanimated';
-import Svg, { Path } from 'react-native-svg';
 
-import { MOVE_KINETIC_VIEWBOX, useMoveInk } from '@/components/move/moveInk';
+import { MoveSemanticSvg } from '@/components/move/MoveSemanticSvg';
+import { useMoveInk } from '@/components/move/moveInk';
 import type { MoveKineticAction } from '@/features/move/visualMap';
 import type { MovePhase } from '@/features/move/steps';
 
-const AnimatedPath = Animated.createAnimatedComponent(Path);
-
 const RELEASE_MS = 560;
 const PRESS_MS = 340;
-/** Always-on idle wave — independent of press/hold morph and step transitions. */
-const ARC_DRIFT_MS = 12_500;
-const ARC_SHIMMER_MS = 9_200;
-const ARC_SWELL_MS = 14_000;
+const BREATHE_MS = 4600;
 const OBJECT_W = 208;
 const OBJECT_H = 124;
 
@@ -34,81 +26,19 @@ type Props = {
   reduceMotion: boolean;
 };
 
-type BandRole = 'primary' | 'sage' | 'sand';
-
-const BANDS: { d: string; width: number; role: BandRole }[] = [
-  { d: 'M22 78 C58 62, 102 92, 178 72', width: 2.15, role: 'primary' },
-  { d: 'M30 50 C76 38, 118 54, 170 46', width: 1.7, role: 'sage' },
-  { d: 'M44 96 C86 88, 126 102, 158 94', width: 1.45, role: 'sand' },
-  { d: 'M52 30 C90 24, 132 36, 166 28', width: 1.55, role: 'sage' },
-  { d: 'M64 62 C98 56, 132 68, 154 60', width: 1.25, role: 'sand' },
-];
-
 function compressedAmount(phase: MovePhase): number {
   return phase === 'press' || phase === 'hold' ? 1 : 0;
-}
-
-type ArcBandProps = {
-  d: string;
-  width: number;
-  stroke: string;
-  baseOpacity: number;
-  phaseOffset: number;
-  drift: SharedValue<number>;
-  shimmer: SharedValue<number>;
-  swell: SharedValue<number>;
-  motionActive: SharedValue<number>;
-};
-
-function ArcBand({
-  d,
-  width,
-  stroke,
-  baseOpacity,
-  phaseOffset,
-  drift,
-  shimmer,
-  swell,
-  motionActive,
-}: ArcBandProps) {
-  const animatedProps = useAnimatedProps(() => {
-    if (motionActive.value === 0) {
-      return { opacity: baseOpacity };
-    }
-    const mix = drift.value * (1 - phaseOffset * 0.35) + shimmer.value * phaseOffset * 0.65;
-    const swellMix = swell.value * (0.35 + phaseOffset * 0.5);
-    const opacity = baseOpacity * (0.78 + mix * 0.34 + swellMix * 0.08);
-    return { opacity };
-  });
-
-  return (
-    <AnimatedPath
-      d={d}
-      fill="none"
-      stroke={stroke}
-      strokeWidth={width}
-      strokeLinecap="round"
-      animatedProps={animatedProps}
-    />
-  );
 }
 
 const USE_LAYOUT_MORPH = Platform.OS === 'web';
 
 export function MoveKineticObject({ action, phase, reduceMotion }: Props) {
-  const ink = useMoveInk();
+  const baseInk = useMoveInk();
   const compress = useSharedValue(compressedAmount(phase));
   const shoulderShift = useSharedValue(0);
   const bodyScanPulse = useSharedValue(0);
   const handsUnwind = useSharedValue(0);
-  const arcDrift = useSharedValue(0.5);
-  const arcShimmer = useSharedValue(0.5);
-  const arcSwell = useSharedValue(0.5);
-  const motionActiveSv = useSharedValue(reduceMotion ? 0 : 1);
-
-  useEffect(() => {
-    motionActiveSv.value = reduceMotion ? 0 : 1;
-  }, [motionActiveSv, reduceMotion]);
+  const breathe = useSharedValue(0.5);
 
   useEffect(() => {
     const target = compressedAmount(phase);
@@ -181,45 +111,22 @@ export function MoveKineticObject({ action, phase, reduceMotion }: Props) {
   }, [action, handsUnwind, phase, reduceMotion]);
 
   useEffect(() => {
-    cancelAnimation(arcDrift);
-    cancelAnimation(arcShimmer);
-    cancelAnimation(arcSwell);
+    cancelAnimation(breathe);
     if (reduceMotion) {
-      arcDrift.value = 0.5;
-      arcShimmer.value = 0.5;
-      arcSwell.value = 0.5;
+      breathe.value = 0.5;
       return;
     }
-    const timing = (duration: number) =>
-      withTiming(1, {
-        duration,
-        easing: Easing.inOut(Easing.sin),
-        reduceMotion: ReduceMotion.Never,
-      });
-
-    arcDrift.value = withRepeat(timing(ARC_DRIFT_MS), -1, true);
-    arcShimmer.value = withRepeat(timing(ARC_SHIMMER_MS), -1, true);
-    arcSwell.value = withRepeat(timing(ARC_SWELL_MS), -1, true);
-  }, [arcDrift, arcShimmer, arcSwell, reduceMotion]);
-
-  const arcIdleStyle = useAnimatedStyle(() => {
-    if (motionActiveSv.value === 0) {
-      return { transform: [{ translateX: 0 }, { translateY: 0 }] };
-    }
-    const t = arcDrift.value - 0.5;
-    const s = arcShimmer.value - 0.5;
-    const w = arcSwell.value - 0.5;
-    return {
-      transform: [
-        { translateX: t * 10 + w * 3 },
-        { translateY: s * 8 - w * 2 },
-      ],
-    };
-  });
+    breathe.value = withRepeat(
+      withTiming(1, { duration: BREATHE_MS, easing: Easing.inOut(Easing.sin) }),
+      -1,
+      true,
+    );
+  }, [breathe, reduceMotion]);
 
   const morphStyle = useAnimatedStyle(() => {
     const c = compress.value;
     const scanBreath = action === 'bodyScan' ? (bodyScanPulse.value - 0.5) * 0.06 : 0;
+    const idleY = reduceMotion ? 0 : (breathe.value - 0.5) * 18;
     const vert =
       action === 'pressFeet' || action === 'tenseRelease'
         ? 1 - c * 0.075
@@ -249,68 +156,33 @@ export function MoveKineticObject({ action, phase, reduceMotion }: Props) {
       return {
         width: OBJECT_W * horiz,
         height: OBJECT_H * vert,
-        transform: [{ rotate: `${rotate}deg` }],
+        transform: [{ translateY: idleY }, { rotate: `${rotate}deg` }],
       };
     }
 
     return {
-      transform: [{ scaleX: horiz }, { scaleY: vert }, { rotate: `${rotate}deg` }],
+      transform: [
+        { translateY: idleY },
+        { scaleX: horiz },
+        { scaleY: vert },
+        { rotate: `${rotate}deg` },
+      ],
     };
   });
 
   const pressDarken = phase === 'press' || phase === 'hold' ? 1.06 : 1;
   const noticeLift = phase === 'notice' ? 0.88 : 1;
-  const motionStatic = reduceMotion;
-  const staticCompressed = phase === 'press' || phase === 'hold';
-
-  const primaryOpacity =
-    ink.primaryOpacity * (motionStatic && staticCompressed ? 1.08 : pressDarken) * noticeLift;
-  const sageOpacity = ink.sageOpacity * noticeLift * (motionStatic && !staticCompressed ? 1.12 : 1);
-  const sandOpacity = ink.sandOpacity * noticeLift * (motionStatic && !staticCompressed ? 1.1 : 1);
-
-  const colorFor = (role: BandRole) => {
-    switch (role) {
-      case 'primary':
-        return ink.primary;
-      case 'sage':
-        return ink.sage;
-      case 'sand':
-        return ink.sand;
-    }
-  };
-
-  const baseOpacityFor = (role: BandRole) => {
-    switch (role) {
-      case 'primary':
-        return primaryOpacity;
-      case 'sage':
-        return sageOpacity;
-      case 'sand':
-        return sandOpacity;
-    }
+  const ink = {
+    ...baseInk,
+    primaryOpacity: baseInk.primaryOpacity * pressDarken * noticeLift,
+    sageOpacity: baseInk.sageOpacity * noticeLift,
+    sandOpacity: baseInk.sandOpacity * noticeLift,
   };
 
   return (
     <View style={styles.shell}>
-      <Animated.View style={[styles.idleLayer, arcIdleStyle]}>
-        <Animated.View style={[styles.morphLayer, morphStyle]}>
-          <Svg width="100%" height="100%" viewBox={MOVE_KINETIC_VIEWBOX} preserveAspectRatio="xMidYMid meet">
-            {BANDS.map((band, index) => (
-              <ArcBand
-                key={band.d}
-                d={band.d}
-                width={band.width}
-                stroke={colorFor(band.role)}
-                baseOpacity={baseOpacityFor(band.role)}
-                phaseOffset={index / BANDS.length}
-                drift={arcDrift}
-                shimmer={arcShimmer}
-                swell={arcSwell}
-                motionActive={motionActiveSv}
-              />
-            ))}
-          </Svg>
-        </Animated.View>
+      <Animated.View style={[styles.morphLayer, morphStyle]}>
+        <MoveSemanticSvg action={action} phase={phase} ink={ink} />
       </Animated.View>
     </View>
   );
@@ -321,13 +193,6 @@ const styles = StyleSheet.create({
     width: OBJECT_W,
     height: OBJECT_H,
     maxWidth: '100%',
-    alignItems: 'center',
-    justifyContent: 'center',
-    overflow: 'visible',
-  },
-  idleLayer: {
-    width: OBJECT_W,
-    height: OBJECT_H,
     alignItems: 'center',
     justifyContent: 'center',
     overflow: 'visible',

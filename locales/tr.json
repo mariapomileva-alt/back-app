@@ -76,7 +76,7 @@
     "title": "Tema",
     "warmNeutral": "Sıcak Dünya",
     "deepGreen": "Orman",
-    "softBeige": "Yumuşak Adaçayı",
+    "softBeige": "Airy Blue Sage",
     "selectHint": "Bu görünümü hemen uygular"
   },
   "patterns": {
@@ -268,7 +268,9 @@
     "speedBoostOff": "Daha hızlı oku",
     "speedBoostOffHint": "Bu oturum için her satırı yaklaşık iki kat daha hızlı gösterir.",
     "speedBoostOn": "Daha hızlı okuma, açık",
-    "speedBoostOnHint": "Çizgiler yaklaşık iki kat daha hızlı görünüyor. Normal hıza dönmek için iki kez dokunun."
+    "speedBoostOnHint": "Çizgiler yaklaşık iki kat daha hızlı görünüyor. Normal hıza dönmek için iki kez dokunun.",
+    "firstHintFollow": "Just follow the words.",
+    "firstHintTap": "Tap anywhere if you want to go faster."
   },
   "ground": {
     "previous": "Önceki talimat",
@@ -312,7 +314,8 @@
       "find": "Biraz dokuya sahip bir şey bulun.",
       "cool": "Dokunulduğunda hoş görünen bir yüzey bulun.",
       "temp": "Küçük bir sıcaklık farkına bile dikkat edin."
-    }
+    },
+    "sequenceHint": "Changes the grounding exercise"
   },
   "move": {
     "hold": "Tutmak.",
@@ -382,7 +385,11 @@
       "brown": "Sıcak kahverengi doku",
       "white": "Hafif, eşit doku",
       "melody": "Yumuşak sıcak tonlar"
-    }
+    },
+    "soundHint": "Changes the quiet sound",
+    "playing": "Playing",
+    "paused": "{name} paused",
+    "pausedStatus": "Paused"
   },
   "privacy": {
     "onDevice": "Back'in altı araç için kullandığı her şey bu cihazda kalır. Hesap yok ve bulut yok.",
@@ -466,7 +473,17 @@
       "additionalThemes": "Ek görünüm temaları",
       "readLibrary": "Daha Fazla Kitaplık içeriğini okuyun",
       "patternsDepth": "Desenlerimin daha derin içgörüleri"
-    }
+    },
+    "headlineTrial": "Your trial is active.",
+    "introThankYouActive": "Thank you for keeping Back close.\n\nYour subscription helps us care for these tools and keep them private, reliable and available offline.",
+    "trialAfterNote": "After the trial, your plan renews at the price shown in the App Store or Google Play before you confirm.",
+    "startTrial": "Start free trial",
+    "done": "Done",
+    "doneHint": "Returns to the previous screen",
+    "continue": "Continue",
+    "whatsIncluded": "What's included",
+    "loading": "Loading subscription…",
+    "managePreviewNote": "On this web preview, Manage subscription opens Back’s subscription information page. On your phone, it opens Apple or Google subscription settings."
   },
   "notFound": {
     "title": "Bu sayfa burada değil",

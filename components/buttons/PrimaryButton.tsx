@@ -3,7 +3,7 @@ import { Pressable, StyleSheet, type StyleProp, type ViewStyle } from 'react-nat
 
 import { AppText } from '@/components/typography/AppText';
 import { useTheme } from '@/hooks/useTheme';
-import { radius } from '@/theme/radius';
+import { primaryButtonRadius } from '@/theme/buttonChrome';
 import { spacing, touch } from '@/theme/spacing';
 
 type Props = {
@@ -22,7 +22,7 @@ export function PrimaryButton({
   disabled,
   style,
 }: Props) {
-  const { theme } = useTheme();
+  const { theme, themeName } = useTheme();
 
   return (
     <Pressable
@@ -35,8 +35,9 @@ export function PrimaryButton({
       style={({ pressed }) => [
         styles.base,
         {
+          borderRadius: primaryButtonRadius(themeName),
           backgroundColor: theme.colors.buttonBackground,
-          opacity: disabled ? 0.5 : pressed ? 0.88 : 1,
+          opacity: disabled ? 0.5 : pressed ? 0.9 : 1,
         },
         style,
       ]}
@@ -51,10 +52,9 @@ export function PrimaryButton({
 const styles = StyleSheet.create({
   base: {
     minHeight: touch.comfortable,
-    borderRadius: radius.button,
     alignItems: 'center',
     justifyContent: 'center',
-    paddingHorizontal: spacing.lg,
+    paddingHorizontal: spacing.xl,
     paddingVertical: spacing.md,
   },
 });

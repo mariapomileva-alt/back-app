@@ -71,7 +71,7 @@ export default function SettingsScreen() {
   };
 
   return (
-    <ScreenContainer>
+    <ScreenContainer phoneWidth>
       <ScreenHeader title={t('settings.title')} />
       <View style={styles.list}>
         <SettingsSection title={t('settings.groups.experience')} first>

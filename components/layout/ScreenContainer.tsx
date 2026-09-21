@@ -15,6 +15,8 @@ type Props = {
   children: ReactNode;
   scroll?: boolean;
   padded?: boolean;
+  /** Match Home / session phone column on wide web previews. */
+  phoneWidth?: boolean;
   style?: StyleProp<ViewStyle>;
   contentStyle?: StyleProp<ViewStyle>;
 };
@@ -23,6 +25,7 @@ export function ScreenContainer({
   children,
   scroll = true,
   padded = true,
+  phoneWidth = false,
   style,
   contentStyle,
 }: Props) {
@@ -34,6 +37,7 @@ export function ScreenContainer({
         styles.body,
         padded && styles.padded,
         !scroll && styles.bodyFill,
+        phoneWidth && styles.phoneWidth,
         contentStyle,
       ]}
     >
@@ -82,5 +86,10 @@ const styles = StyleSheet.create({
   padded: {
     paddingHorizontal: spacing.lg,
     paddingBottom: spacing.lg,
+  },
+  phoneWidth: {
+    width: '100%',
+    maxWidth: 430,
+    alignSelf: 'center',
   },
 });

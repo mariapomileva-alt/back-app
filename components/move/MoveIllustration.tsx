@@ -1,7 +1,10 @@
-import { MoveKineticObject } from '@/components/move/MoveKineticObject';
+import { MovePremiumVisual } from '@/components/move/MovePremiumVisual';
 import { MoveVisualFrame } from '@/components/move/MoveVisualFrame';
 import type { MovePhase, MoveSequenceId, MoveStepId } from '@/features/move/steps';
-import { resolveMoveVisual } from '@/features/move/visualMap';
+import {
+  movePremiumVisual,
+  movePremiumVisualKey,
+} from '@/features/move/premiumVisuals';
 
 type Props = {
   activityId: MoveSequenceId;
@@ -10,16 +13,18 @@ type Props = {
   reduceMotion: boolean;
 };
 
-export function MoveExerciseIllustration({ activityId, stepId, phase, reduceMotion }: Props) {
-  void activityId;
-  void phase;
-  const spec = resolveMoveVisual(stepId);
+export function MoveExerciseIllustration({ stepId, reduceMotion }: Props) {
+  const premium = movePremiumVisual(stepId);
+  const visualKey = movePremiumVisualKey(stepId);
 
   return (
     <MoveVisualFrame>
-      {spec ? (
-        <MoveKineticObject action={spec.action} phase={spec.phase} reduceMotion={reduceMotion} />
-      ) : null}
+      <MovePremiumVisual
+        key={visualKey}
+        assets={premium}
+        reduceMotion={reduceMotion}
+        visualKey={visualKey}
+      />
     </MoveVisualFrame>
   );
 }

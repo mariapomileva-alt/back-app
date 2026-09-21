@@ -4,7 +4,7 @@ import { AccessiblePressable } from '@/components/accessibility/AccessiblePressa
 import { AppText } from '@/components/typography/AppText';
 import { useTheme } from '@/hooks/useTheme';
 import { t } from '@/locales/i18n';
-import { radius } from '@/theme/radius';
+import { primaryButtonRadius } from '@/theme/buttonChrome';
 import { spacing, touch } from '@/theme/spacing';
 
 type Props = {
@@ -12,7 +12,8 @@ type Props = {
 };
 
 export function SessionExitAction({ onPress }: Props) {
-  const { theme } = useTheme();
+  const { theme, themeName } = useTheme();
+  const airy = themeName === 'softBeige';
 
   return (
     <AccessiblePressable
@@ -23,8 +24,10 @@ export function SessionExitAction({ onPress }: Props) {
       style={[
         styles.action,
         {
-          backgroundColor: theme.colors.surface,
+          borderRadius: primaryButtonRadius(themeName),
+          backgroundColor: airy ? theme.colors.surfaceElevated : theme.colors.surface,
           borderColor: theme.colors.border,
+          borderWidth: airy ? 1 : StyleSheet.hairlineWidth,
         },
       ]}
     >
@@ -37,13 +40,12 @@ const styles = StyleSheet.create({
   action: {
     minHeight: touch.min,
     minWidth: 220,
-    maxWidth: 320,
+    maxWidth: 420,
     alignSelf: 'center',
     alignItems: 'center',
     justifyContent: 'center',
-    paddingHorizontal: spacing.lg,
-    paddingVertical: spacing.sm,
-    borderRadius: radius.button,
-    borderWidth: StyleSheet.hairlineWidth,
+    paddingHorizontal: spacing.xl,
+    paddingVertical: spacing.md,
+    marginHorizontal: spacing.md,
   },
 });

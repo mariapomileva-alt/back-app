@@ -1,5 +1,5 @@
 import { Pressable, StyleSheet, View } from 'react-native';
-import Svg, { Circle } from 'react-native-svg';
+import Svg, { Circle, Ellipse } from 'react-native-svg';
 
 import { AppText } from '@/components/typography/AppText';
 import { useHaptics } from '@/hooks/useHaptics';
@@ -48,9 +48,19 @@ export function ThemeCard({ themeName, selected, onPress }: Props) {
       >
         <View style={[styles.surface, { backgroundColor: preview.colors.surface }]}>
           <Svg width={40} height={28} viewBox="0 0 40 28" preserveAspectRatio="xMidYMid meet">
-            <Circle cx="20" cy="14" r="12" fill={preview.colors.markMuted} opacity={0.34} />
-            <Circle cx="20" cy="14" r="8" fill={preview.colors.markSecondary} opacity={0.42} />
-            <Circle cx="20" cy="14" r="4.2" fill={preview.colors.markPrimary} opacity={0.88} />
+            {themeName === 'softBeige' ? (
+              <>
+                <Ellipse cx="20" cy="16" rx="11" ry="3.5" fill={preview.colors.markMuted} opacity={0.72} />
+                <Circle cx="20" cy="11" r="7" fill={preview.colors.markLine} opacity={0.38} />
+                <Circle cx="20" cy="11" r="7" fill="none" stroke={preview.colors.cool} strokeWidth={1.1} opacity={0.9} />
+              </>
+            ) : (
+              <>
+                <Circle cx="20" cy="14" r="12" fill={preview.colors.markMuted} opacity={0.34} />
+                <Circle cx="20" cy="14" r="8" fill={preview.colors.markSecondary} opacity={0.42} />
+                <Circle cx="20" cy="14" r="4.2" fill={preview.colors.markPrimary} opacity={0.88} />
+              </>
+            )}
           </Svg>
           <AppText
             variant="secondary"

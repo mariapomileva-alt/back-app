@@ -3,6 +3,7 @@ import { StyleSheet, View } from 'react-native';
 
 import { CloseButton } from '@/components/buttons/CloseButton';
 import { AppText } from '@/components/typography/AppText';
+import { useTheme } from '@/hooks/useTheme';
 import { spacing, touch } from '@/theme/spacing';
 
 type Props = {
@@ -30,6 +31,7 @@ export function ScreenHeader({
   backHint,
   right,
 }: Props) {
+  const { theme } = useTheme();
   const closeControl = showClose ? (
     <CloseButton
       variant={closeVariant}
@@ -42,7 +44,7 @@ export function ScreenHeader({
   );
 
   return (
-    <View style={styles.header}>
+    <View style={[styles.header, { backgroundColor: theme.colors.background, zIndex: 4 }]}>
       <View style={styles.side}>
         {onBack ? (
           <CloseButton
@@ -89,6 +91,7 @@ const styles = StyleSheet.create({
     overflow: 'visible',
     alignItems: 'center',
     justifyContent: 'center',
+    zIndex: 5,
   },
   spacer: {
     width: touch.min,

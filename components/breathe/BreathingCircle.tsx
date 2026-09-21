@@ -31,9 +31,10 @@ export function BreathingCircle({
   const sage = theme.colors.secondaryGreen;
   const pale = theme.colors.muted;
   const onDark = theme.name === 'deepGreen';
-  const core = onDark ? mixHex(sage, forest, 0.16) : mixHex(forest, sage, 0.26);
-  const mid = mixHex(sage, pale, 0.14);
-  const rim = mixHex(pale, sage, onDark ? 0.08 : 0.2);
+  const airy = theme.name === 'softBeige';
+  const core = airy ? '#5494F7' : onDark ? mixHex(sage, forest, 0.16) : mixHex(forest, sage, 0.26);
+  const mid = airy ? '#9FC4AD' : mixHex(sage, pale, 0.14);
+  const rim = airy ? '#BBD3FB' : mixHex(pale, sage, onDark ? 0.08 : 0.2);
   const fillOpacity = reduceMotion ? 0.46 + t * 0.5 : 1;
 
   return (

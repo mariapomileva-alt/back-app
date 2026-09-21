@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { useRouter } from 'expo-router';
 
 import { openBackPlusPaywall } from '@/features/subscription/openBackPlusPaywall';
@@ -11,12 +11,14 @@ import { useBackPlusAccess } from '@/features/subscription/useBackPlusAccess';
 export function usePaidToolGate(): void {
   const router = useRouter();
   const { accessState, hasPaidAccess } = useBackPlusAccess();
+  const redirectedRef = useRef(false);
 
   useEffect(() => {
-    if (accessState === 'loading') {
+    if (accessState === 'loading' || redirectedRef.current) {
       return;
     }
     if (!hasPaidAccess) {
+      redirectedRef.current = true;
       openBackPlusPaywall(router);
     }
   }, [accessState, hasPaidAccess, router]);

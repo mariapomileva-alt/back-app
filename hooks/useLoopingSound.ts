@@ -16,6 +16,8 @@ const FADE_MS = 1400;
 type Options = {
   source: AudioSource;
   autoPlay?: boolean;
+  /** On web, skip autoplay until an explicit play/toggle (avoids NotAllowedError loops). */
+  webRequiresUserGesture?: boolean;
   enabled?: boolean;
   initialMuted?: boolean;
   initialVolume?: number;
@@ -49,41 +51,38 @@ async function configureListenAudioSession() {
 export function useLoopingSound({
   source,
   autoPlay = true,
+  webRequiresUserGesture = false,
   enabled = true,
   initialMuted = false,
   initialVolume = DEFAULT_SOUND_VOLUME,
   lockScreenTitle,
 }: Options) {
+  const webGestureGate = Platform.OS === 'web' && webRequiresUserGesture;
   const player = useAudioPlayer(source, {
     updateInterval: 500,
     keepAudioSessionActive: true,
   });
   const status = useAudioPlayerStatus(player);
-  const [playback, setPlayback] = useState<LoopingPlayback>(autoPlay ? 'paused' : 'paused');
+  const [playback, setPlayback] = useState<LoopingPlayback>(() => {
+    if (webGestureGate && autoPlay) {
+      return 'blocked';
+    }
+    return 'paused';
+  });
   const [muted, setMuted] = useState(initialMuted);
-  const [volume, setVolume] = useState(initialVolume);
-
-  const [prevInitialMuted, setPrevInitialMuted] = useState(initialMuted);
-  if (initialMuted !== prevInitialMuted) {
-    setPrevInitialMuted(initialMuted);
-    setMuted(initialMuted);
-  }
-
-  const [prevInitialVolume, setPrevInitialVolume] = useState(initialVolume);
-  if (initialVolume !== prevInitialVolume) {
-    setPrevInitialVolume(initialVolume);
-    setVolume(initialVolume);
-  }
+  const [volume, setVolumeState] = useState(initialVolume);
 
   const fadeFrame = useRef<number | null>(null);
   const fading = useRef(false);
   const fadeTarget = useRef(initialVolume);
-  const wantsPlay = useRef(autoPlay);
+  const wantsPlay = useRef(autoPlay && !webGestureGate);
+  const gestureUnlocked = useRef(!webGestureGate);
   const suppressToggle = useRef(true);
   const playerRef = useRef(player);
   playerRef.current = player;
 
-  const isPlaying = playback === 'playing';
+  const isPlaying =
+    playback === 'playing' || (Platform.OS === 'web' && status.playing && wantsPlay.current);
 
   const stopFade = useCallback(() => {
     if (fadeFrame.current != null) {
@@ -92,6 +91,29 @@ export function useLoopingSound({
     }
     fading.current = false;
   }, []);
+
+  const setVolume = useCallback(
+    (value: number) => {
+      const clamped = Math.min(1, Math.max(0, value));
+      setVolumeState(clamped);
+      fadeTarget.current = muted ? 0 : clamped;
+      stopFade();
+      applyVolume(playerRef.current, muted ? 0 : clamped);
+    },
+    [muted, stopFade],
+  );
+
+  useEffect(() => {
+    setMuted(initialMuted);
+  }, [initialMuted]);
+
+  useEffect(() => {
+    setVolumeState(initialVolume);
+    fadeTarget.current = initialMuted ? 0 : initialVolume;
+    if (!fading.current) {
+      applyVolume(playerRef.current, initialMuted ? 0 : initialVolume);
+    }
+  }, [initialMuted, initialVolume]);
 
   const fadeIn = useCallback(
     (target: number) => {
@@ -141,6 +163,7 @@ export function useLoopingSound({
 
   const startPlayback = useCallback(async (resync = false): Promise<boolean> => {
     wantsPlay.current = true;
+    gestureUnlocked.current = true;
     // Web requires HTMLMediaElement.play() in the same turn as the user gesture.
     if (resync) {
       pauseOtherWebAudio();
@@ -233,7 +256,9 @@ export function useLoopingSound({
         return;
       }
       attachLockScreen();
-      if (wantsPlay.current || autoPlay) {
+      const shouldAutostart =
+        (wantsPlay.current || autoPlay) && (!webGestureGate || gestureUnlocked.current);
+      if (shouldAutostart) {
         const started = await attemptPlayback(player);
         if (cancelled) {
           return;
@@ -249,7 +274,7 @@ export function useLoopingSound({
         } else {
           wantsPlay.current = false;
           applyVolume(player, muted ? 0 : volume);
-          setPlayback('blocked');
+          setPlayback(webGestureGate ? 'blocked' : 'paused');
         }
       } else {
         try {
@@ -258,7 +283,11 @@ export function useLoopingSound({
           // Ignore.
         }
         applyVolume(player, muted ? 0 : volume);
-        setPlayback((current) => (current === 'playing' ? 'paused' : current));
+        if (webGestureGate && !gestureUnlocked.current && autoPlay) {
+          setPlayback('blocked');
+        } else {
+          setPlayback((current) => (current === 'playing' ? 'paused' : current));
+        }
       }
       suppressToggle.current = false;
     }
@@ -335,7 +364,7 @@ export function useLoopingSound({
     if (!wantsPlay.current) {
       return;
     }
-    if (audible === true || (audible === null && status.playing && Platform.OS !== 'web')) {
+    if (audible === true || (audible === null && status.playing)) {
       setPlayback('playing');
     }
   }, [playback, player, status.playing]);
@@ -363,6 +392,9 @@ export function useLoopingSound({
       }
       void configureListenAudioSession();
       if (!enabled || !wantsPlay.current) {
+        return;
+      }
+      if (webGestureGate && !gestureUnlocked.current) {
         return;
       }
       void attemptPlayback(player).then((started) => {

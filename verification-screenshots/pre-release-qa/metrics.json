@@ -1,0 +1,3471 @@
+{
+  "generatedAt": "2026-09-21T11:31:53.213Z",
+  "commit": "0939b41",
+  "totals": {
+    "cases": 27,
+    "pass": 15,
+    "fail": 12
+  },
+  "failures": [
+    {
+      "route": "breathe",
+      "viewport": "390x844",
+      "url": "http://localhost:8081/breathe",
+      "metrics": {
+        "inner": {
+          "w": 390,
+          "h": 844
+        },
+        "scrollOverflow": 0,
+        "headers": [],
+        "back": {
+          "label": "Back",
+          "x": 24,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        "mute": {
+          "label": "Sound on",
+          "x": 310,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        "buttonCount": 5,
+        "homeToolCount": 0,
+        "bottomButtons": [
+          {
+            "label": "I’m okay for now",
+            "x": 85,
+            "y": 568,
+            "w": 220,
+            "h": 56
+          },
+          {
+            "label": "Try another",
+            "x": 24,
+            "y": 628,
+            "w": 342,
+            "h": 56
+          },
+          {
+            "label": "Breathing feels uncomfortable",
+            "x": 24,
+            "y": 764,
+            "w": 342,
+            "h": 56
+          }
+        ],
+        "topButtons": [
+          {
+            "label": "Back",
+            "x": 24,
+            "y": 0,
+            "w": 56,
+            "h": 56
+          },
+          {
+            "label": "Sound on",
+            "x": 310,
+            "y": 0,
+            "w": 56,
+            "h": 56
+          }
+        ],
+        "spot": {
+          "listenChipCount": 3,
+          "listenScroll": {
+            "scrollWidth": 342,
+            "clientWidth": 342,
+            "scrollable": false
+          },
+          "breathePatternVisible": false,
+          "readFaster": false,
+          "readSurface": false,
+          "svgVisibleCount": 3,
+          "redTextSample": []
+        },
+        "urlPath": "/breathe"
+      },
+      "screenshot": "/Users/mariyagreku/back app/verification-screenshots/pre-release-qa/breathe-390x844.png",
+      "consoleErrors": [
+        {
+          "viewport": "390x844",
+          "text": "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"
+        },
+        {
+          "viewport": "390x844",
+          "text": "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"
+        }
+      ],
+      "assessment": {
+        "pass": false,
+        "issues": [
+          "console: NotAllowedError: play() failed because the user didn't interact with the documen; NotAllowedError: play() failed because the user didn't interact with the documen"
+        ]
+      }
+    },
+    {
+      "route": "ground",
+      "viewport": "390x844",
+      "url": "http://localhost:8081/ground",
+      "metrics": {
+        "inner": {
+          "w": 390,
+          "h": 844
+        },
+        "scrollOverflow": 0,
+        "headers": [],
+        "back": {
+          "label": "Back",
+          "x": 24,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        "mute": {
+          "label": "Sound on",
+          "x": 310,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        "buttonCount": 8,
+        "homeToolCount": 0,
+        "bottomButtons": [
+          {
+            "label": "Previous instruction",
+            "x": 95,
+            "y": 534,
+            "w": 56,
+            "h": 56
+          },
+          {
+            "label": "Pause",
+            "x": 167,
+            "y": 534,
+            "w": 56,
+            "h": 56
+          },
+          {
+            "label": "Next instruction",
+            "x": 239,
+            "y": 534,
+            "w": 56,
+            "h": 56
+          },
+          {
+            "label": "I’m okay for now",
+            "x": 85,
+            "y": 704,
+            "w": 220,
+            "h": 56
+          },
+          {
+            "label": "Try another",
+            "x": 24,
+            "y": 764,
+            "w": 342,
+            "h": 56
+          }
+        ],
+        "topButtons": [
+          {
+            "label": "Back",
+            "x": 24,
+            "y": 0,
+            "w": 56,
+            "h": 56
+          },
+          {
+            "label": "Sound on",
+            "x": 310,
+            "y": 0,
+            "w": 56,
+            "h": 56
+          }
+        ],
+        "spot": {
+          "listenChipCount": 0,
+          "listenScroll": null,
+          "breathePatternVisible": false,
+          "readFaster": false,
+          "readSurface": false,
+          "svgVisibleCount": 7,
+          "redTextSample": []
+        },
+        "urlPath": "/ground"
+      },
+      "screenshot": "/Users/mariyagreku/back app/verification-screenshots/pre-release-qa/ground-390x844.png",
+      "consoleErrors": [
+        {
+          "viewport": "390x844",
+          "text": "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"
+        },
+        {
+          "viewport": "390x844",
+          "text": "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"
+        }
+      ],
+      "assessment": {
+        "pass": false,
+        "issues": [
+          "console: NotAllowedError: play() failed because the user didn't interact with the documen; NotAllowedError: play() failed because the user didn't interact with the documen"
+        ]
+      }
+    },
+    {
+      "route": "move",
+      "viewport": "390x844",
+      "url": "http://localhost:8081/move",
+      "metrics": {
+        "inner": {
+          "w": 390,
+          "h": 844
+        },
+        "scrollOverflow": 0,
+        "headers": [],
+        "back": {
+          "label": "Back",
+          "x": 24,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        "mute": {
+          "label": "Sound on",
+          "x": 310,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        "buttonCount": 6,
+        "homeToolCount": 1,
+        "bottomButtons": [
+          {
+            "label": "I’m okay for now",
+            "x": 85,
+            "y": 644,
+            "w": 220,
+            "h": 56
+          },
+          {
+            "label": "Try another",
+            "x": 24,
+            "y": 704,
+            "w": 342,
+            "h": 56
+          },
+          {
+            "label": "Movement doesn’t feel right",
+            "x": 24,
+            "y": 764,
+            "w": 342,
+            "h": 56
+          }
+        ],
+        "topButtons": [
+          {
+            "label": "Back",
+            "x": 24,
+            "y": 0,
+            "w": 56,
+            "h": 56
+          },
+          {
+            "label": "Sound on",
+            "x": 310,
+            "y": 0,
+            "w": 56,
+            "h": 56
+          }
+        ],
+        "spot": {
+          "listenChipCount": 0,
+          "listenScroll": null,
+          "breathePatternVisible": false,
+          "readFaster": false,
+          "readSurface": false,
+          "svgVisibleCount": 3,
+          "redTextSample": []
+        },
+        "urlPath": "/move"
+      },
+      "screenshot": "/Users/mariyagreku/back app/verification-screenshots/pre-release-qa/move-390x844.png",
+      "consoleErrors": [
+        {
+          "viewport": "390x844",
+          "text": "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"
+        },
+        {
+          "viewport": "390x844",
+          "text": "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"
+        }
+      ],
+      "assessment": {
+        "pass": false,
+        "issues": [
+          "console: NotAllowedError: play() failed because the user didn't interact with the documen; NotAllowedError: play() failed because the user didn't interact with the documen"
+        ]
+      }
+    },
+    {
+      "route": "listen",
+      "viewport": "390x844",
+      "url": "http://localhost:8081/listen",
+      "metrics": {
+        "inner": {
+          "w": 390,
+          "h": 844
+        },
+        "scrollOverflow": 0,
+        "headers": [],
+        "back": {
+          "label": "Back",
+          "x": 24,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        "mute": {
+          "label": "Previous sound",
+          "x": 79,
+          "y": 432,
+          "w": 56,
+          "h": 56
+        },
+        "buttonCount": 10,
+        "homeToolCount": 0,
+        "bottomButtons": [
+          {
+            "label": "Volume 20",
+            "x": 24,
+            "y": 508,
+            "w": 62,
+            "h": 56
+          },
+          {
+            "label": "Volume 40",
+            "x": 94,
+            "y": 508,
+            "w": 62,
+            "h": 56
+          },
+          {
+            "label": "Volume 60",
+            "x": 164,
+            "y": 508,
+            "w": 62,
+            "h": 56
+          },
+          {
+            "label": "Volume 80",
+            "x": 234,
+            "y": 508,
+            "w": 62,
+            "h": 56
+          },
+          {
+            "label": "Volume 100",
+            "x": 304,
+            "y": 508,
+            "w": 62,
+            "h": 56
+          },
+          {
+            "label": "I’m okay for now",
+            "x": 85,
+            "y": 764,
+            "w": 220,
+            "h": 56
+          }
+        ],
+        "topButtons": [
+          {
+            "label": "Back",
+            "x": 24,
+            "y": 0,
+            "w": 56,
+            "h": 56
+          }
+        ],
+        "spot": {
+          "listenChipCount": 9,
+          "listenScroll": {
+            "scrollWidth": 342,
+            "clientWidth": 342,
+            "scrollable": false
+          },
+          "breathePatternVisible": false,
+          "readFaster": false,
+          "readSurface": false,
+          "svgVisibleCount": 4,
+          "redTextSample": []
+        },
+        "urlPath": "/listen"
+      },
+      "screenshot": "/Users/mariyagreku/back app/verification-screenshots/pre-release-qa/listen-390x844.png",
+      "consoleErrors": [
+        {
+          "viewport": "390x844",
+          "text": "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"
+        }
+      ],
+      "assessment": {
+        "pass": false,
+        "issues": [
+          "listen chips not horizontally scrollable",
+          "console: NotAllowedError: play() failed because the user didn't interact with the documen"
+        ]
+      }
+    },
+    {
+      "route": "breathe",
+      "viewport": "412x915",
+      "url": "http://localhost:8081/breathe",
+      "metrics": {
+        "inner": {
+          "w": 412,
+          "h": 915
+        },
+        "scrollOverflow": 0,
+        "headers": [],
+        "back": {
+          "label": "Back",
+          "x": 24,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        "mute": {
+          "label": "Sound on",
+          "x": 332,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        "buttonCount": 5,
+        "homeToolCount": 0,
+        "bottomButtons": [
+          {
+            "label": "I’m okay for now",
+            "x": 96,
+            "y": 639,
+            "w": 220,
+            "h": 56
+          },
+          {
+            "label": "Try another",
+            "x": 24,
+            "y": 699,
+            "w": 364,
+            "h": 56
+          },
+          {
+            "label": "Breathing feels uncomfortable",
+            "x": 24,
+            "y": 835,
+            "w": 364,
+            "h": 56
+          }
+        ],
+        "topButtons": [
+          {
+            "label": "Back",
+            "x": 24,
+            "y": 0,
+            "w": 56,
+            "h": 56
+          },
+          {
+            "label": "Sound on",
+            "x": 332,
+            "y": 0,
+            "w": 56,
+            "h": 56
+          }
+        ],
+        "spot": {
+          "listenChipCount": 3,
+          "listenScroll": {
+            "scrollWidth": 364,
+            "clientWidth": 364,
+            "scrollable": false
+          },
+          "breathePatternVisible": false,
+          "readFaster": false,
+          "readSurface": false,
+          "svgVisibleCount": 3,
+          "redTextSample": []
+        },
+        "urlPath": "/breathe"
+      },
+      "screenshot": "/Users/mariyagreku/back app/verification-screenshots/pre-release-qa/breathe-412x915.png",
+      "consoleErrors": [
+        {
+          "viewport": "412x915",
+          "text": "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"
+        },
+        {
+          "viewport": "412x915",
+          "text": "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"
+        }
+      ],
+      "assessment": {
+        "pass": false,
+        "issues": [
+          "console: NotAllowedError: play() failed because the user didn't interact with the documen; NotAllowedError: play() failed because the user didn't interact with the documen"
+        ]
+      }
+    },
+    {
+      "route": "ground",
+      "viewport": "412x915",
+      "url": "http://localhost:8081/ground",
+      "metrics": {
+        "inner": {
+          "w": 412,
+          "h": 915
+        },
+        "scrollOverflow": 0,
+        "headers": [],
+        "back": {
+          "label": "Back",
+          "x": 24,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        "mute": {
+          "label": "Sound on",
+          "x": 332,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        "buttonCount": 8,
+        "homeToolCount": 0,
+        "bottomButtons": [
+          {
+            "label": "Previous instruction",
+            "x": 106,
+            "y": 570,
+            "w": 56,
+            "h": 56
+          },
+          {
+            "label": "Pause",
+            "x": 178,
+            "y": 570,
+            "w": 56,
+            "h": 56
+          },
+          {
+            "label": "Next instruction",
+            "x": 250,
+            "y": 570,
+            "w": 56,
+            "h": 56
+          },
+          {
+            "label": "I’m okay for now",
+            "x": 96,
+            "y": 775,
+            "w": 220,
+            "h": 56
+          },
+          {
+            "label": "Try another",
+            "x": 24,
+            "y": 835,
+            "w": 364,
+            "h": 56
+          }
+        ],
+        "topButtons": [
+          {
+            "label": "Back",
+            "x": 24,
+            "y": 0,
+            "w": 56,
+            "h": 56
+          },
+          {
+            "label": "Sound on",
+            "x": 332,
+            "y": 0,
+            "w": 56,
+            "h": 56
+          }
+        ],
+        "spot": {
+          "listenChipCount": 0,
+          "listenScroll": null,
+          "breathePatternVisible": false,
+          "readFaster": false,
+          "readSurface": false,
+          "svgVisibleCount": 7,
+          "redTextSample": []
+        },
+        "urlPath": "/ground"
+      },
+      "screenshot": "/Users/mariyagreku/back app/verification-screenshots/pre-release-qa/ground-412x915.png",
+      "consoleErrors": [
+        {
+          "viewport": "412x915",
+          "text": "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"
+        },
+        {
+          "viewport": "412x915",
+          "text": "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"
+        }
+      ],
+      "assessment": {
+        "pass": false,
+        "issues": [
+          "console: NotAllowedError: play() failed because the user didn't interact with the documen; NotAllowedError: play() failed because the user didn't interact with the documen"
+        ]
+      }
+    },
+    {
+      "route": "move",
+      "viewport": "412x915",
+      "url": "http://localhost:8081/move",
+      "metrics": {
+        "inner": {
+          "w": 412,
+          "h": 915
+        },
+        "scrollOverflow": 0,
+        "headers": [],
+        "back": {
+          "label": "Back",
+          "x": 24,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        "mute": {
+          "label": "Sound on",
+          "x": 332,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        "buttonCount": 6,
+        "homeToolCount": 1,
+        "bottomButtons": [
+          {
+            "label": "I’m okay for now",
+            "x": 96,
+            "y": 715,
+            "w": 220,
+            "h": 56
+          },
+          {
+            "label": "Try another",
+            "x": 24,
+            "y": 775,
+            "w": 364,
+            "h": 56
+          },
+          {
+            "label": "Movement doesn’t feel right",
+            "x": 24,
+            "y": 835,
+            "w": 364,
+            "h": 56
+          }
+        ],
+        "topButtons": [
+          {
+            "label": "Back",
+            "x": 24,
+            "y": 0,
+            "w": 56,
+            "h": 56
+          },
+          {
+            "label": "Sound on",
+            "x": 332,
+            "y": 0,
+            "w": 56,
+            "h": 56
+          }
+        ],
+        "spot": {
+          "listenChipCount": 0,
+          "listenScroll": null,
+          "breathePatternVisible": false,
+          "readFaster": false,
+          "readSurface": false,
+          "svgVisibleCount": 3,
+          "redTextSample": []
+        },
+        "urlPath": "/move"
+      },
+      "screenshot": "/Users/mariyagreku/back app/verification-screenshots/pre-release-qa/move-412x915.png",
+      "consoleErrors": [
+        {
+          "viewport": "412x915",
+          "text": "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"
+        },
+        {
+          "viewport": "412x915",
+          "text": "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"
+        }
+      ],
+      "assessment": {
+        "pass": false,
+        "issues": [
+          "console: NotAllowedError: play() failed because the user didn't interact with the documen; NotAllowedError: play() failed because the user didn't interact with the documen"
+        ]
+      }
+    },
+    {
+      "route": "listen",
+      "viewport": "412x915",
+      "url": "http://localhost:8081/listen",
+      "metrics": {
+        "inner": {
+          "w": 412,
+          "h": 915
+        },
+        "scrollOverflow": 0,
+        "headers": [],
+        "back": {
+          "label": "Back",
+          "x": 24,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        "mute": {
+          "label": "Previous sound",
+          "x": 90,
+          "y": 432,
+          "w": 56,
+          "h": 56
+        },
+        "buttonCount": 10,
+        "homeToolCount": 0,
+        "bottomButtons": [
+          {
+            "label": "Volume 20",
+            "x": 24,
+            "y": 508,
+            "w": 66,
+            "h": 56
+          },
+          {
+            "label": "Volume 40",
+            "x": 98,
+            "y": 508,
+            "w": 66,
+            "h": 56
+          },
+          {
+            "label": "Volume 60",
+            "x": 173,
+            "y": 508,
+            "w": 66,
+            "h": 56
+          },
+          {
+            "label": "Volume 80",
+            "x": 247,
+            "y": 508,
+            "w": 66,
+            "h": 56
+          },
+          {
+            "label": "Volume 100",
+            "x": 322,
+            "y": 508,
+            "w": 66,
+            "h": 56
+          },
+          {
+            "label": "I’m okay for now",
+            "x": 96,
+            "y": 835,
+            "w": 220,
+            "h": 56
+          }
+        ],
+        "topButtons": [
+          {
+            "label": "Back",
+            "x": 24,
+            "y": 0,
+            "w": 56,
+            "h": 56
+          }
+        ],
+        "spot": {
+          "listenChipCount": 9,
+          "listenScroll": {
+            "scrollWidth": 364,
+            "clientWidth": 364,
+            "scrollable": false
+          },
+          "breathePatternVisible": false,
+          "readFaster": false,
+          "readSurface": false,
+          "svgVisibleCount": 4,
+          "redTextSample": []
+        },
+        "urlPath": "/listen"
+      },
+      "screenshot": "/Users/mariyagreku/back app/verification-screenshots/pre-release-qa/listen-412x915.png",
+      "consoleErrors": [
+        {
+          "viewport": "412x915",
+          "text": "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"
+        }
+      ],
+      "assessment": {
+        "pass": false,
+        "issues": [
+          "console: NotAllowedError: play() failed because the user didn't interact with the documen"
+        ]
+      }
+    },
+    {
+      "route": "breathe",
+      "viewport": "1280x720",
+      "url": "http://localhost:8081/breathe",
+      "metrics": {
+        "inner": {
+          "w": 1280,
+          "h": 720
+        },
+        "scrollOverflow": 0,
+        "headers": [],
+        "back": {
+          "label": "Back",
+          "x": 449,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        "mute": {
+          "label": "Sound on",
+          "x": 775,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        "buttonCount": 5,
+        "homeToolCount": 0,
+        "bottomButtons": [
+          {
+            "label": "I’m okay for now",
+            "x": 530,
+            "y": 444,
+            "w": 220,
+            "h": 56
+          },
+          {
+            "label": "Try another",
+            "x": 449,
+            "y": 504,
+            "w": 382,
+            "h": 56
+          },
+          {
+            "label": "Breathing feels uncomfortable",
+            "x": 449,
+            "y": 640,
+            "w": 382,
+            "h": 56
+          }
+        ],
+        "topButtons": [
+          {
+            "label": "Back",
+            "x": 449,
+            "y": 0,
+            "w": 56,
+            "h": 56
+          },
+          {
+            "label": "Sound on",
+            "x": 775,
+            "y": 0,
+            "w": 56,
+            "h": 56
+          }
+        ],
+        "spot": {
+          "listenChipCount": 3,
+          "listenScroll": {
+            "scrollWidth": 382,
+            "clientWidth": 382,
+            "scrollable": false
+          },
+          "breathePatternVisible": false,
+          "readFaster": false,
+          "readSurface": false,
+          "svgVisibleCount": 3,
+          "redTextSample": []
+        },
+        "urlPath": "/breathe"
+      },
+      "screenshot": "/Users/mariyagreku/back app/verification-screenshots/pre-release-qa/breathe-1280x720.png",
+      "consoleErrors": [
+        {
+          "viewport": "1280x720",
+          "text": "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"
+        },
+        {
+          "viewport": "1280x720",
+          "text": "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"
+        }
+      ],
+      "assessment": {
+        "pass": false,
+        "issues": [
+          "console: NotAllowedError: play() failed because the user didn't interact with the documen; NotAllowedError: play() failed because the user didn't interact with the documen"
+        ]
+      }
+    },
+    {
+      "route": "ground",
+      "viewport": "1280x720",
+      "url": "http://localhost:8081/ground",
+      "metrics": {
+        "inner": {
+          "w": 1280,
+          "h": 720
+        },
+        "scrollOverflow": 0,
+        "headers": [],
+        "back": {
+          "label": "Back",
+          "x": 449,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        "mute": {
+          "label": "Sound on",
+          "x": 775,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        "buttonCount": 8,
+        "homeToolCount": 0,
+        "bottomButtons": [
+          {
+            "label": "Previous instruction",
+            "x": 540,
+            "y": 472,
+            "w": 56,
+            "h": 56
+          },
+          {
+            "label": "Pause",
+            "x": 612,
+            "y": 472,
+            "w": 56,
+            "h": 56
+          },
+          {
+            "label": "Next instruction",
+            "x": 684,
+            "y": 472,
+            "w": 56,
+            "h": 56
+          },
+          {
+            "label": "I’m okay for now",
+            "x": 530,
+            "y": 580,
+            "w": 220,
+            "h": 56
+          },
+          {
+            "label": "Try another",
+            "x": 449,
+            "y": 640,
+            "w": 382,
+            "h": 56
+          }
+        ],
+        "topButtons": [
+          {
+            "label": "Back",
+            "x": 449,
+            "y": 0,
+            "w": 56,
+            "h": 56
+          },
+          {
+            "label": "Sound on",
+            "x": 775,
+            "y": 0,
+            "w": 56,
+            "h": 56
+          }
+        ],
+        "spot": {
+          "listenChipCount": 0,
+          "listenScroll": null,
+          "breathePatternVisible": false,
+          "readFaster": false,
+          "readSurface": false,
+          "svgVisibleCount": 7,
+          "redTextSample": []
+        },
+        "urlPath": "/ground"
+      },
+      "screenshot": "/Users/mariyagreku/back app/verification-screenshots/pre-release-qa/ground-1280x720.png",
+      "consoleErrors": [
+        {
+          "viewport": "1280x720",
+          "text": "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"
+        },
+        {
+          "viewport": "1280x720",
+          "text": "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"
+        }
+      ],
+      "assessment": {
+        "pass": false,
+        "issues": [
+          "console: NotAllowedError: play() failed because the user didn't interact with the documen; NotAllowedError: play() failed because the user didn't interact with the documen"
+        ]
+      }
+    },
+    {
+      "route": "move",
+      "viewport": "1280x720",
+      "url": "http://localhost:8081/move",
+      "metrics": {
+        "inner": {
+          "w": 1280,
+          "h": 720
+        },
+        "scrollOverflow": 0,
+        "headers": [],
+        "back": {
+          "label": "Back",
+          "x": 449,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        "mute": {
+          "label": "Sound on",
+          "x": 775,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        "buttonCount": 6,
+        "homeToolCount": 1,
+        "bottomButtons": [
+          {
+            "label": "I’m okay for now",
+            "x": 530,
+            "y": 520,
+            "w": 220,
+            "h": 56
+          },
+          {
+            "label": "Try another",
+            "x": 449,
+            "y": 580,
+            "w": 382,
+            "h": 56
+          },
+          {
+            "label": "Movement doesn’t feel right",
+            "x": 449,
+            "y": 640,
+            "w": 382,
+            "h": 56
+          }
+        ],
+        "topButtons": [
+          {
+            "label": "Back",
+            "x": 449,
+            "y": 0,
+            "w": 56,
+            "h": 56
+          },
+          {
+            "label": "Sound on",
+            "x": 775,
+            "y": 0,
+            "w": 56,
+            "h": 56
+          }
+        ],
+        "spot": {
+          "listenChipCount": 0,
+          "listenScroll": null,
+          "breathePatternVisible": false,
+          "readFaster": false,
+          "readSurface": false,
+          "svgVisibleCount": 3,
+          "redTextSample": []
+        },
+        "urlPath": "/move"
+      },
+      "screenshot": "/Users/mariyagreku/back app/verification-screenshots/pre-release-qa/move-1280x720.png",
+      "consoleErrors": [
+        {
+          "viewport": "1280x720",
+          "text": "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"
+        },
+        {
+          "viewport": "1280x720",
+          "text": "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"
+        }
+      ],
+      "assessment": {
+        "pass": false,
+        "issues": [
+          "console: NotAllowedError: play() failed because the user didn't interact with the documen; NotAllowedError: play() failed because the user didn't interact with the documen"
+        ]
+      }
+    },
+    {
+      "route": "listen",
+      "viewport": "1280x720",
+      "url": "http://localhost:8081/listen",
+      "metrics": {
+        "inner": {
+          "w": 1280,
+          "h": 720
+        },
+        "scrollOverflow": 0,
+        "headers": [],
+        "back": {
+          "label": "Back",
+          "x": 449,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        "mute": {
+          "label": "Previous sound",
+          "x": 524,
+          "y": 314,
+          "w": 56,
+          "h": 56
+        },
+        "buttonCount": 10,
+        "homeToolCount": 0,
+        "bottomButtons": [
+          {
+            "label": "I’m okay for now",
+            "x": 530,
+            "y": 640,
+            "w": 220,
+            "h": 56
+          }
+        ],
+        "topButtons": [
+          {
+            "label": "Back",
+            "x": 449,
+            "y": 0,
+            "w": 56,
+            "h": 56
+          }
+        ],
+        "spot": {
+          "listenChipCount": 9,
+          "listenScroll": {
+            "scrollWidth": 382,
+            "clientWidth": 382,
+            "scrollable": false
+          },
+          "breathePatternVisible": false,
+          "readFaster": false,
+          "readSurface": false,
+          "svgVisibleCount": 4,
+          "redTextSample": []
+        },
+        "urlPath": "/listen"
+      },
+      "screenshot": "/Users/mariyagreku/back app/verification-screenshots/pre-release-qa/listen-1280x720.png",
+      "consoleErrors": [
+        {
+          "viewport": "1280x720",
+          "text": "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"
+        }
+      ],
+      "assessment": {
+        "pass": false,
+        "issues": [
+          "console: NotAllowedError: play() failed because the user didn't interact with the documen"
+        ]
+      }
+    }
+  ],
+  "results": [
+    {
+      "route": "home",
+      "viewport": "390x844",
+      "url": "http://localhost:8081/",
+      "metrics": {
+        "inner": {
+          "w": 390,
+          "h": 844
+        },
+        "scrollOverflow": 0,
+        "headers": [],
+        "back": {
+          "label": "Back",
+          "x": 32,
+          "y": 27.859375,
+          "w": 49.109375,
+          "h": 16.28125
+        },
+        "mute": null,
+        "buttonCount": 8,
+        "homeToolCount": 6,
+        "bottomButtons": [
+          {
+            "label": "Listen",
+            "x": 32,
+            "y": 585,
+            "w": 158,
+            "h": 197
+          },
+          {
+            "label": "Read",
+            "x": 200,
+            "y": 585,
+            "w": 158,
+            "h": 197
+          },
+          {
+            "label": "Need someone? Call my person",
+            "x": 32,
+            "y": 788,
+            "w": 326,
+            "h": 48
+          }
+        ],
+        "topButtons": [
+          {
+            "label": "Open settings",
+            "x": 310,
+            "y": 8,
+            "w": 56,
+            "h": 56
+          }
+        ],
+        "spot": {
+          "listenChipCount": 0,
+          "listenScroll": null,
+          "breathePatternVisible": false,
+          "readFaster": false,
+          "readSurface": false,
+          "svgVisibleCount": 9,
+          "redTextSample": []
+        },
+        "urlPath": "/"
+      },
+      "screenshot": "/Users/mariyagreku/back app/verification-screenshots/pre-release-qa/home-390x844.png",
+      "consoleErrors": [],
+      "assessment": {
+        "pass": true,
+        "issues": []
+      }
+    },
+    {
+      "route": "breathe",
+      "viewport": "390x844",
+      "url": "http://localhost:8081/breathe",
+      "metrics": {
+        "inner": {
+          "w": 390,
+          "h": 844
+        },
+        "scrollOverflow": 0,
+        "headers": [],
+        "back": {
+          "label": "Back",
+          "x": 24,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        "mute": {
+          "label": "Sound on",
+          "x": 310,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        "buttonCount": 5,
+        "homeToolCount": 0,
+        "bottomButtons": [
+          {
+            "label": "I’m okay for now",
+            "x": 85,
+            "y": 568,
+            "w": 220,
+            "h": 56
+          },
+          {
+            "label": "Try another",
+            "x": 24,
+            "y": 628,
+            "w": 342,
+            "h": 56
+          },
+          {
+            "label": "Breathing feels uncomfortable",
+            "x": 24,
+            "y": 764,
+            "w": 342,
+            "h": 56
+          }
+        ],
+        "topButtons": [
+          {
+            "label": "Back",
+            "x": 24,
+            "y": 0,
+            "w": 56,
+            "h": 56
+          },
+          {
+            "label": "Sound on",
+            "x": 310,
+            "y": 0,
+            "w": 56,
+            "h": 56
+          }
+        ],
+        "spot": {
+          "listenChipCount": 3,
+          "listenScroll": {
+            "scrollWidth": 342,
+            "clientWidth": 342,
+            "scrollable": false
+          },
+          "breathePatternVisible": false,
+          "readFaster": false,
+          "readSurface": false,
+          "svgVisibleCount": 3,
+          "redTextSample": []
+        },
+        "urlPath": "/breathe"
+      },
+      "screenshot": "/Users/mariyagreku/back app/verification-screenshots/pre-release-qa/breathe-390x844.png",
+      "consoleErrors": [
+        {
+          "viewport": "390x844",
+          "text": "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"
+        },
+        {
+          "viewport": "390x844",
+          "text": "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"
+        }
+      ],
+      "assessment": {
+        "pass": false,
+        "issues": [
+          "console: NotAllowedError: play() failed because the user didn't interact with the documen; NotAllowedError: play() failed because the user didn't interact with the documen"
+        ]
+      }
+    },
+    {
+      "route": "distract",
+      "viewport": "390x844",
+      "url": "http://localhost:8081/distract",
+      "metrics": {
+        "inner": {
+          "w": 390,
+          "h": 844
+        },
+        "scrollOverflow": 0,
+        "headers": [],
+        "back": {
+          "label": "Back",
+          "x": 24,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        "mute": null,
+        "buttonCount": 5,
+        "homeToolCount": 0,
+        "bottomButtons": [],
+        "topButtons": [
+          {
+            "label": "Back",
+            "x": 24,
+            "y": 0,
+            "w": 56,
+            "h": 56
+          }
+        ],
+        "spot": {
+          "listenChipCount": 0,
+          "listenScroll": null,
+          "breathePatternVisible": false,
+          "readFaster": false,
+          "readSurface": false,
+          "svgVisibleCount": 3,
+          "redTextSample": []
+        },
+        "urlPath": "/distract"
+      },
+      "screenshot": "/Users/mariyagreku/back app/verification-screenshots/pre-release-qa/distract-390x844.png",
+      "consoleErrors": [],
+      "assessment": {
+        "pass": true,
+        "issues": []
+      }
+    },
+    {
+      "route": "distract-snake",
+      "viewport": "390x844",
+      "url": "http://localhost:8081/distract/snake",
+      "metrics": {
+        "inner": {
+          "w": 390,
+          "h": 844
+        },
+        "scrollOverflow": 0,
+        "headers": [],
+        "back": {
+          "label": "Back",
+          "x": 24,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        "mute": {
+          "label": "Sound on",
+          "x": 310,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        "buttonCount": 8,
+        "homeToolCount": 0,
+        "bottomButtons": [
+          {
+            "label": "Up",
+            "x": 163,
+            "y": 488,
+            "w": 64,
+            "h": 64
+          },
+          {
+            "label": "Left",
+            "x": 117,
+            "y": 556,
+            "w": 64,
+            "h": 64
+          },
+          {
+            "label": "Right",
+            "x": 209,
+            "y": 556,
+            "w": 64,
+            "h": 64
+          },
+          {
+            "label": "Down",
+            "x": 163,
+            "y": 624,
+            "w": 64,
+            "h": 64
+          },
+          {
+            "label": "I’m okay for now",
+            "x": 85,
+            "y": 704,
+            "w": 220,
+            "h": 56
+          },
+          {
+            "label": "Try another",
+            "x": 24,
+            "y": 764,
+            "w": 342,
+            "h": 56
+          }
+        ],
+        "topButtons": [
+          {
+            "label": "Back",
+            "x": 24,
+            "y": 0,
+            "w": 56,
+            "h": 56
+          },
+          {
+            "label": "Sound on",
+            "x": 310,
+            "y": 0,
+            "w": 56,
+            "h": 56
+          }
+        ],
+        "spot": {
+          "listenChipCount": 0,
+          "listenScroll": null,
+          "breathePatternVisible": false,
+          "readFaster": false,
+          "readSurface": false,
+          "svgVisibleCount": 6,
+          "redTextSample": []
+        },
+        "urlPath": "/distract/snake"
+      },
+      "screenshot": "/Users/mariyagreku/back app/verification-screenshots/pre-release-qa/distract-snake-390x844.png",
+      "consoleErrors": [],
+      "assessment": {
+        "pass": true,
+        "issues": []
+      }
+    },
+    {
+      "route": "ground",
+      "viewport": "390x844",
+      "url": "http://localhost:8081/ground",
+      "metrics": {
+        "inner": {
+          "w": 390,
+          "h": 844
+        },
+        "scrollOverflow": 0,
+        "headers": [],
+        "back": {
+          "label": "Back",
+          "x": 24,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        "mute": {
+          "label": "Sound on",
+          "x": 310,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        "buttonCount": 8,
+        "homeToolCount": 0,
+        "bottomButtons": [
+          {
+            "label": "Previous instruction",
+            "x": 95,
+            "y": 534,
+            "w": 56,
+            "h": 56
+          },
+          {
+            "label": "Pause",
+            "x": 167,
+            "y": 534,
+            "w": 56,
+            "h": 56
+          },
+          {
+            "label": "Next instruction",
+            "x": 239,
+            "y": 534,
+            "w": 56,
+            "h": 56
+          },
+          {
+            "label": "I’m okay for now",
+            "x": 85,
+            "y": 704,
+            "w": 220,
+            "h": 56
+          },
+          {
+            "label": "Try another",
+            "x": 24,
+            "y": 764,
+            "w": 342,
+            "h": 56
+          }
+        ],
+        "topButtons": [
+          {
+            "label": "Back",
+            "x": 24,
+            "y": 0,
+            "w": 56,
+            "h": 56
+          },
+          {
+            "label": "Sound on",
+            "x": 310,
+            "y": 0,
+            "w": 56,
+            "h": 56
+          }
+        ],
+        "spot": {
+          "listenChipCount": 0,
+          "listenScroll": null,
+          "breathePatternVisible": false,
+          "readFaster": false,
+          "readSurface": false,
+          "svgVisibleCount": 7,
+          "redTextSample": []
+        },
+        "urlPath": "/ground"
+      },
+      "screenshot": "/Users/mariyagreku/back app/verification-screenshots/pre-release-qa/ground-390x844.png",
+      "consoleErrors": [
+        {
+          "viewport": "390x844",
+          "text": "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"
+        },
+        {
+          "viewport": "390x844",
+          "text": "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"
+        }
+      ],
+      "assessment": {
+        "pass": false,
+        "issues": [
+          "console: NotAllowedError: play() failed because the user didn't interact with the documen; NotAllowedError: play() failed because the user didn't interact with the documen"
+        ]
+      }
+    },
+    {
+      "route": "move",
+      "viewport": "390x844",
+      "url": "http://localhost:8081/move",
+      "metrics": {
+        "inner": {
+          "w": 390,
+          "h": 844
+        },
+        "scrollOverflow": 0,
+        "headers": [],
+        "back": {
+          "label": "Back",
+          "x": 24,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        "mute": {
+          "label": "Sound on",
+          "x": 310,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        "buttonCount": 6,
+        "homeToolCount": 1,
+        "bottomButtons": [
+          {
+            "label": "I’m okay for now",
+            "x": 85,
+            "y": 644,
+            "w": 220,
+            "h": 56
+          },
+          {
+            "label": "Try another",
+            "x": 24,
+            "y": 704,
+            "w": 342,
+            "h": 56
+          },
+          {
+            "label": "Movement doesn’t feel right",
+            "x": 24,
+            "y": 764,
+            "w": 342,
+            "h": 56
+          }
+        ],
+        "topButtons": [
+          {
+            "label": "Back",
+            "x": 24,
+            "y": 0,
+            "w": 56,
+            "h": 56
+          },
+          {
+            "label": "Sound on",
+            "x": 310,
+            "y": 0,
+            "w": 56,
+            "h": 56
+          }
+        ],
+        "spot": {
+          "listenChipCount": 0,
+          "listenScroll": null,
+          "breathePatternVisible": false,
+          "readFaster": false,
+          "readSurface": false,
+          "svgVisibleCount": 3,
+          "redTextSample": []
+        },
+        "urlPath": "/move"
+      },
+      "screenshot": "/Users/mariyagreku/back app/verification-screenshots/pre-release-qa/move-390x844.png",
+      "consoleErrors": [
+        {
+          "viewport": "390x844",
+          "text": "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"
+        },
+        {
+          "viewport": "390x844",
+          "text": "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"
+        }
+      ],
+      "assessment": {
+        "pass": false,
+        "issues": [
+          "console: NotAllowedError: play() failed because the user didn't interact with the documen; NotAllowedError: play() failed because the user didn't interact with the documen"
+        ]
+      }
+    },
+    {
+      "route": "listen",
+      "viewport": "390x844",
+      "url": "http://localhost:8081/listen",
+      "metrics": {
+        "inner": {
+          "w": 390,
+          "h": 844
+        },
+        "scrollOverflow": 0,
+        "headers": [],
+        "back": {
+          "label": "Back",
+          "x": 24,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        "mute": {
+          "label": "Previous sound",
+          "x": 79,
+          "y": 432,
+          "w": 56,
+          "h": 56
+        },
+        "buttonCount": 10,
+        "homeToolCount": 0,
+        "bottomButtons": [
+          {
+            "label": "Volume 20",
+            "x": 24,
+            "y": 508,
+            "w": 62,
+            "h": 56
+          },
+          {
+            "label": "Volume 40",
+            "x": 94,
+            "y": 508,
+            "w": 62,
+            "h": 56
+          },
+          {
+            "label": "Volume 60",
+            "x": 164,
+            "y": 508,
+            "w": 62,
+            "h": 56
+          },
+          {
+            "label": "Volume 80",
+            "x": 234,
+            "y": 508,
+            "w": 62,
+            "h": 56
+          },
+          {
+            "label": "Volume 100",
+            "x": 304,
+            "y": 508,
+            "w": 62,
+            "h": 56
+          },
+          {
+            "label": "I’m okay for now",
+            "x": 85,
+            "y": 764,
+            "w": 220,
+            "h": 56
+          }
+        ],
+        "topButtons": [
+          {
+            "label": "Back",
+            "x": 24,
+            "y": 0,
+            "w": 56,
+            "h": 56
+          }
+        ],
+        "spot": {
+          "listenChipCount": 9,
+          "listenScroll": {
+            "scrollWidth": 342,
+            "clientWidth": 342,
+            "scrollable": false
+          },
+          "breathePatternVisible": false,
+          "readFaster": false,
+          "readSurface": false,
+          "svgVisibleCount": 4,
+          "redTextSample": []
+        },
+        "urlPath": "/listen"
+      },
+      "screenshot": "/Users/mariyagreku/back app/verification-screenshots/pre-release-qa/listen-390x844.png",
+      "consoleErrors": [
+        {
+          "viewport": "390x844",
+          "text": "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"
+        }
+      ],
+      "assessment": {
+        "pass": false,
+        "issues": [
+          "listen chips not horizontally scrollable",
+          "console: NotAllowedError: play() failed because the user didn't interact with the documen"
+        ]
+      }
+    },
+    {
+      "route": "read",
+      "viewport": "390x844",
+      "url": "http://localhost:8081/read",
+      "metrics": {
+        "inner": {
+          "w": 390,
+          "h": 844
+        },
+        "scrollOverflow": 0,
+        "headers": [],
+        "back": {
+          "label": "Back",
+          "x": 24,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        "mute": null,
+        "buttonCount": 6,
+        "homeToolCount": 2,
+        "bottomButtons": [
+          {
+            "label": "I’m okay for now",
+            "x": 85,
+            "y": 644,
+            "w": 220,
+            "h": 56
+          },
+          {
+            "label": "Try another",
+            "x": 24,
+            "y": 704,
+            "w": 342,
+            "h": 56
+          },
+          {
+            "label": "Pause the lines",
+            "x": 24,
+            "y": 764,
+            "w": 342,
+            "h": 56
+          }
+        ],
+        "topButtons": [
+          {
+            "label": "Back",
+            "x": 24,
+            "y": 0,
+            "w": 56,
+            "h": 56
+          },
+          {
+            "label": "Reading",
+            "x": 24,
+            "y": 72,
+            "w": 342,
+            "h": 556
+          },
+          {
+            "label": "Read faster",
+            "x": 310,
+            "y": 0,
+            "w": 56,
+            "h": 56
+          }
+        ],
+        "spot": {
+          "listenChipCount": 0,
+          "listenScroll": null,
+          "breathePatternVisible": false,
+          "readFaster": true,
+          "readSurface": true,
+          "svgVisibleCount": 1,
+          "redTextSample": []
+        },
+        "urlPath": "/read"
+      },
+      "screenshot": "/Users/mariyagreku/back app/verification-screenshots/pre-release-qa/read-390x844.png",
+      "consoleErrors": [],
+      "assessment": {
+        "pass": true,
+        "issues": []
+      }
+    },
+    {
+      "route": "home-open-breathe",
+      "viewport": "390x844",
+      "url": "http://localhost:8081/ → breathe",
+      "metrics": {
+        "navigation": {
+          "path": "/breathe",
+          "hasBack": true
+        }
+      },
+      "assessment": {
+        "pass": true,
+        "issues": []
+      }
+    },
+    {
+      "route": "home",
+      "viewport": "412x915",
+      "url": "http://localhost:8081/",
+      "metrics": {
+        "inner": {
+          "w": 412,
+          "h": 915
+        },
+        "scrollOverflow": 0,
+        "headers": [],
+        "back": {
+          "label": "Back",
+          "x": 32,
+          "y": 27.859375,
+          "w": 49.109375,
+          "h": 16.28125
+        },
+        "mute": null,
+        "buttonCount": 8,
+        "homeToolCount": 6,
+        "bottomButtons": [
+          {
+            "label": "Listen",
+            "x": 32,
+            "y": 632,
+            "w": 169,
+            "h": 221
+          },
+          {
+            "label": "Read",
+            "x": 211,
+            "y": 632,
+            "w": 169,
+            "h": 221
+          },
+          {
+            "label": "Need someone? Call my person",
+            "x": 32,
+            "y": 859,
+            "w": 348,
+            "h": 48
+          }
+        ],
+        "topButtons": [
+          {
+            "label": "Open settings",
+            "x": 332,
+            "y": 8,
+            "w": 56,
+            "h": 56
+          }
+        ],
+        "spot": {
+          "listenChipCount": 0,
+          "listenScroll": null,
+          "breathePatternVisible": false,
+          "readFaster": false,
+          "readSurface": false,
+          "svgVisibleCount": 9,
+          "redTextSample": []
+        },
+        "urlPath": "/"
+      },
+      "screenshot": "/Users/mariyagreku/back app/verification-screenshots/pre-release-qa/home-412x915.png",
+      "consoleErrors": [],
+      "assessment": {
+        "pass": true,
+        "issues": []
+      }
+    },
+    {
+      "route": "breathe",
+      "viewport": "412x915",
+      "url": "http://localhost:8081/breathe",
+      "metrics": {
+        "inner": {
+          "w": 412,
+          "h": 915
+        },
+        "scrollOverflow": 0,
+        "headers": [],
+        "back": {
+          "label": "Back",
+          "x": 24,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        "mute": {
+          "label": "Sound on",
+          "x": 332,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        "buttonCount": 5,
+        "homeToolCount": 0,
+        "bottomButtons": [
+          {
+            "label": "I’m okay for now",
+            "x": 96,
+            "y": 639,
+            "w": 220,
+            "h": 56
+          },
+          {
+            "label": "Try another",
+            "x": 24,
+            "y": 699,
+            "w": 364,
+            "h": 56
+          },
+          {
+            "label": "Breathing feels uncomfortable",
+            "x": 24,
+            "y": 835,
+            "w": 364,
+            "h": 56
+          }
+        ],
+        "topButtons": [
+          {
+            "label": "Back",
+            "x": 24,
+            "y": 0,
+            "w": 56,
+            "h": 56
+          },
+          {
+            "label": "Sound on",
+            "x": 332,
+            "y": 0,
+            "w": 56,
+            "h": 56
+          }
+        ],
+        "spot": {
+          "listenChipCount": 3,
+          "listenScroll": {
+            "scrollWidth": 364,
+            "clientWidth": 364,
+            "scrollable": false
+          },
+          "breathePatternVisible": false,
+          "readFaster": false,
+          "readSurface": false,
+          "svgVisibleCount": 3,
+          "redTextSample": []
+        },
+        "urlPath": "/breathe"
+      },
+      "screenshot": "/Users/mariyagreku/back app/verification-screenshots/pre-release-qa/breathe-412x915.png",
+      "consoleErrors": [
+        {
+          "viewport": "412x915",
+          "text": "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"
+        },
+        {
+          "viewport": "412x915",
+          "text": "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"
+        }
+      ],
+      "assessment": {
+        "pass": false,
+        "issues": [
+          "console: NotAllowedError: play() failed because the user didn't interact with the documen; NotAllowedError: play() failed because the user didn't interact with the documen"
+        ]
+      }
+    },
+    {
+      "route": "distract",
+      "viewport": "412x915",
+      "url": "http://localhost:8081/distract",
+      "metrics": {
+        "inner": {
+          "w": 412,
+          "h": 915
+        },
+        "scrollOverflow": 0,
+        "headers": [],
+        "back": {
+          "label": "Back",
+          "x": 24,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        "mute": null,
+        "buttonCount": 5,
+        "homeToolCount": 0,
+        "bottomButtons": [],
+        "topButtons": [
+          {
+            "label": "Back",
+            "x": 24,
+            "y": 0,
+            "w": 56,
+            "h": 56
+          }
+        ],
+        "spot": {
+          "listenChipCount": 0,
+          "listenScroll": null,
+          "breathePatternVisible": false,
+          "readFaster": false,
+          "readSurface": false,
+          "svgVisibleCount": 3,
+          "redTextSample": []
+        },
+        "urlPath": "/distract"
+      },
+      "screenshot": "/Users/mariyagreku/back app/verification-screenshots/pre-release-qa/distract-412x915.png",
+      "consoleErrors": [],
+      "assessment": {
+        "pass": true,
+        "issues": []
+      }
+    },
+    {
+      "route": "distract-snake",
+      "viewport": "412x915",
+      "url": "http://localhost:8081/distract/snake",
+      "metrics": {
+        "inner": {
+          "w": 412,
+          "h": 915
+        },
+        "scrollOverflow": 0,
+        "headers": [],
+        "back": {
+          "label": "Back",
+          "x": 24,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        "mute": {
+          "label": "Sound on",
+          "x": 332,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        "buttonCount": 8,
+        "homeToolCount": 0,
+        "bottomButtons": [
+          {
+            "label": "Up",
+            "x": 174,
+            "y": 559,
+            "w": 64,
+            "h": 64
+          },
+          {
+            "label": "Left",
+            "x": 128,
+            "y": 627,
+            "w": 64,
+            "h": 64
+          },
+          {
+            "label": "Right",
+            "x": 220,
+            "y": 627,
+            "w": 64,
+            "h": 64
+          },
+          {
+            "label": "Down",
+            "x": 174,
+            "y": 695,
+            "w": 64,
+            "h": 64
+          },
+          {
+            "label": "I’m okay for now",
+            "x": 96,
+            "y": 775,
+            "w": 220,
+            "h": 56
+          },
+          {
+            "label": "Try another",
+            "x": 24,
+            "y": 835,
+            "w": 364,
+            "h": 56
+          }
+        ],
+        "topButtons": [
+          {
+            "label": "Back",
+            "x": 24,
+            "y": 0,
+            "w": 56,
+            "h": 56
+          },
+          {
+            "label": "Sound on",
+            "x": 332,
+            "y": 0,
+            "w": 56,
+            "h": 56
+          }
+        ],
+        "spot": {
+          "listenChipCount": 0,
+          "listenScroll": null,
+          "breathePatternVisible": false,
+          "readFaster": false,
+          "readSurface": false,
+          "svgVisibleCount": 6,
+          "redTextSample": []
+        },
+        "urlPath": "/distract/snake"
+      },
+      "screenshot": "/Users/mariyagreku/back app/verification-screenshots/pre-release-qa/distract-snake-412x915.png",
+      "consoleErrors": [],
+      "assessment": {
+        "pass": true,
+        "issues": []
+      }
+    },
+    {
+      "route": "ground",
+      "viewport": "412x915",
+      "url": "http://localhost:8081/ground",
+      "metrics": {
+        "inner": {
+          "w": 412,
+          "h": 915
+        },
+        "scrollOverflow": 0,
+        "headers": [],
+        "back": {
+          "label": "Back",
+          "x": 24,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        "mute": {
+          "label": "Sound on",
+          "x": 332,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        "buttonCount": 8,
+        "homeToolCount": 0,
+        "bottomButtons": [
+          {
+            "label": "Previous instruction",
+            "x": 106,
+            "y": 570,
+            "w": 56,
+            "h": 56
+          },
+          {
+            "label": "Pause",
+            "x": 178,
+            "y": 570,
+            "w": 56,
+            "h": 56
+          },
+          {
+            "label": "Next instruction",
+            "x": 250,
+            "y": 570,
+            "w": 56,
+            "h": 56
+          },
+          {
+            "label": "I’m okay for now",
+            "x": 96,
+            "y": 775,
+            "w": 220,
+            "h": 56
+          },
+          {
+            "label": "Try another",
+            "x": 24,
+            "y": 835,
+            "w": 364,
+            "h": 56
+          }
+        ],
+        "topButtons": [
+          {
+            "label": "Back",
+            "x": 24,
+            "y": 0,
+            "w": 56,
+            "h": 56
+          },
+          {
+            "label": "Sound on",
+            "x": 332,
+            "y": 0,
+            "w": 56,
+            "h": 56
+          }
+        ],
+        "spot": {
+          "listenChipCount": 0,
+          "listenScroll": null,
+          "breathePatternVisible": false,
+          "readFaster": false,
+          "readSurface": false,
+          "svgVisibleCount": 7,
+          "redTextSample": []
+        },
+        "urlPath": "/ground"
+      },
+      "screenshot": "/Users/mariyagreku/back app/verification-screenshots/pre-release-qa/ground-412x915.png",
+      "consoleErrors": [
+        {
+          "viewport": "412x915",
+          "text": "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"
+        },
+        {
+          "viewport": "412x915",
+          "text": "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"
+        }
+      ],
+      "assessment": {
+        "pass": false,
+        "issues": [
+          "console: NotAllowedError: play() failed because the user didn't interact with the documen; NotAllowedError: play() failed because the user didn't interact with the documen"
+        ]
+      }
+    },
+    {
+      "route": "move",
+      "viewport": "412x915",
+      "url": "http://localhost:8081/move",
+      "metrics": {
+        "inner": {
+          "w": 412,
+          "h": 915
+        },
+        "scrollOverflow": 0,
+        "headers": [],
+        "back": {
+          "label": "Back",
+          "x": 24,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        "mute": {
+          "label": "Sound on",
+          "x": 332,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        "buttonCount": 6,
+        "homeToolCount": 1,
+        "bottomButtons": [
+          {
+            "label": "I’m okay for now",
+            "x": 96,
+            "y": 715,
+            "w": 220,
+            "h": 56
+          },
+          {
+            "label": "Try another",
+            "x": 24,
+            "y": 775,
+            "w": 364,
+            "h": 56
+          },
+          {
+            "label": "Movement doesn’t feel right",
+            "x": 24,
+            "y": 835,
+            "w": 364,
+            "h": 56
+          }
+        ],
+        "topButtons": [
+          {
+            "label": "Back",
+            "x": 24,
+            "y": 0,
+            "w": 56,
+            "h": 56
+          },
+          {
+            "label": "Sound on",
+            "x": 332,
+            "y": 0,
+            "w": 56,
+            "h": 56
+          }
+        ],
+        "spot": {
+          "listenChipCount": 0,
+          "listenScroll": null,
+          "breathePatternVisible": false,
+          "readFaster": false,
+          "readSurface": false,
+          "svgVisibleCount": 3,
+          "redTextSample": []
+        },
+        "urlPath": "/move"
+      },
+      "screenshot": "/Users/mariyagreku/back app/verification-screenshots/pre-release-qa/move-412x915.png",
+      "consoleErrors": [
+        {
+          "viewport": "412x915",
+          "text": "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"
+        },
+        {
+          "viewport": "412x915",
+          "text": "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"
+        }
+      ],
+      "assessment": {
+        "pass": false,
+        "issues": [
+          "console: NotAllowedError: play() failed because the user didn't interact with the documen; NotAllowedError: play() failed because the user didn't interact with the documen"
+        ]
+      }
+    },
+    {
+      "route": "listen",
+      "viewport": "412x915",
+      "url": "http://localhost:8081/listen",
+      "metrics": {
+        "inner": {
+          "w": 412,
+          "h": 915
+        },
+        "scrollOverflow": 0,
+        "headers": [],
+        "back": {
+          "label": "Back",
+          "x": 24,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        "mute": {
+          "label": "Previous sound",
+          "x": 90,
+          "y": 432,
+          "w": 56,
+          "h": 56
+        },
+        "buttonCount": 10,
+        "homeToolCount": 0,
+        "bottomButtons": [
+          {
+            "label": "Volume 20",
+            "x": 24,
+            "y": 508,
+            "w": 66,
+            "h": 56
+          },
+          {
+            "label": "Volume 40",
+            "x": 98,
+            "y": 508,
+            "w": 66,
+            "h": 56
+          },
+          {
+            "label": "Volume 60",
+            "x": 173,
+            "y": 508,
+            "w": 66,
+            "h": 56
+          },
+          {
+            "label": "Volume 80",
+            "x": 247,
+            "y": 508,
+            "w": 66,
+            "h": 56
+          },
+          {
+            "label": "Volume 100",
+            "x": 322,
+            "y": 508,
+            "w": 66,
+            "h": 56
+          },
+          {
+            "label": "I’m okay for now",
+            "x": 96,
+            "y": 835,
+            "w": 220,
+            "h": 56
+          }
+        ],
+        "topButtons": [
+          {
+            "label": "Back",
+            "x": 24,
+            "y": 0,
+            "w": 56,
+            "h": 56
+          }
+        ],
+        "spot": {
+          "listenChipCount": 9,
+          "listenScroll": {
+            "scrollWidth": 364,
+            "clientWidth": 364,
+            "scrollable": false
+          },
+          "breathePatternVisible": false,
+          "readFaster": false,
+          "readSurface": false,
+          "svgVisibleCount": 4,
+          "redTextSample": []
+        },
+        "urlPath": "/listen"
+      },
+      "screenshot": "/Users/mariyagreku/back app/verification-screenshots/pre-release-qa/listen-412x915.png",
+      "consoleErrors": [
+        {
+          "viewport": "412x915",
+          "text": "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"
+        }
+      ],
+      "assessment": {
+        "pass": false,
+        "issues": [
+          "console: NotAllowedError: play() failed because the user didn't interact with the documen"
+        ]
+      }
+    },
+    {
+      "route": "read",
+      "viewport": "412x915",
+      "url": "http://localhost:8081/read",
+      "metrics": {
+        "inner": {
+          "w": 412,
+          "h": 915
+        },
+        "scrollOverflow": 0,
+        "headers": [],
+        "back": {
+          "label": "Back",
+          "x": 24,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        "mute": null,
+        "buttonCount": 6,
+        "homeToolCount": 2,
+        "bottomButtons": [
+          {
+            "label": "I’m okay for now",
+            "x": 96,
+            "y": 715,
+            "w": 220,
+            "h": 56
+          },
+          {
+            "label": "Try another",
+            "x": 24,
+            "y": 775,
+            "w": 364,
+            "h": 56
+          },
+          {
+            "label": "Pause the lines",
+            "x": 24,
+            "y": 835,
+            "w": 364,
+            "h": 56
+          }
+        ],
+        "topButtons": [
+          {
+            "label": "Back",
+            "x": 24,
+            "y": 0,
+            "w": 56,
+            "h": 56
+          },
+          {
+            "label": "Reading",
+            "x": 24,
+            "y": 72,
+            "w": 364,
+            "h": 627
+          },
+          {
+            "label": "Read faster",
+            "x": 332,
+            "y": 0,
+            "w": 56,
+            "h": 56
+          }
+        ],
+        "spot": {
+          "listenChipCount": 0,
+          "listenScroll": null,
+          "breathePatternVisible": false,
+          "readFaster": true,
+          "readSurface": true,
+          "svgVisibleCount": 1,
+          "redTextSample": []
+        },
+        "urlPath": "/read"
+      },
+      "screenshot": "/Users/mariyagreku/back app/verification-screenshots/pre-release-qa/read-412x915.png",
+      "consoleErrors": [],
+      "assessment": {
+        "pass": true,
+        "issues": []
+      }
+    },
+    {
+      "route": "home-open-breathe",
+      "viewport": "412x915",
+      "url": "http://localhost:8081/ → breathe",
+      "metrics": {
+        "navigation": {
+          "path": "/breathe",
+          "hasBack": true
+        }
+      },
+      "assessment": {
+        "pass": true,
+        "issues": []
+      }
+    },
+    {
+      "route": "home",
+      "viewport": "1280x720",
+      "url": "http://localhost:8081/",
+      "metrics": {
+        "inner": {
+          "w": 1280,
+          "h": 720
+        },
+        "scrollOverflow": 0,
+        "headers": [],
+        "back": {
+          "label": "Back",
+          "x": 457,
+          "y": 27.859375,
+          "w": 49.109375,
+          "h": 16.28125
+        },
+        "mute": null,
+        "buttonCount": 8,
+        "homeToolCount": 6,
+        "bottomButtons": [
+          {
+            "label": "Listen",
+            "x": 457,
+            "y": 502,
+            "w": 178,
+            "h": 156
+          },
+          {
+            "label": "Read",
+            "x": 645,
+            "y": 502,
+            "w": 178,
+            "h": 156
+          },
+          {
+            "label": "Need someone? Call my person",
+            "x": 457,
+            "y": 664,
+            "w": 366,
+            "h": 48
+          }
+        ],
+        "topButtons": [
+          {
+            "label": "Open settings",
+            "x": 775,
+            "y": 8,
+            "w": 56,
+            "h": 56
+          }
+        ],
+        "spot": {
+          "listenChipCount": 0,
+          "listenScroll": null,
+          "breathePatternVisible": false,
+          "readFaster": false,
+          "readSurface": false,
+          "svgVisibleCount": 9,
+          "redTextSample": []
+        },
+        "urlPath": "/"
+      },
+      "screenshot": "/Users/mariyagreku/back app/verification-screenshots/pre-release-qa/home-1280x720.png",
+      "consoleErrors": [],
+      "assessment": {
+        "pass": true,
+        "issues": []
+      }
+    },
+    {
+      "route": "breathe",
+      "viewport": "1280x720",
+      "url": "http://localhost:8081/breathe",
+      "metrics": {
+        "inner": {
+          "w": 1280,
+          "h": 720
+        },
+        "scrollOverflow": 0,
+        "headers": [],
+        "back": {
+          "label": "Back",
+          "x": 449,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        "mute": {
+          "label": "Sound on",
+          "x": 775,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        "buttonCount": 5,
+        "homeToolCount": 0,
+        "bottomButtons": [
+          {
+            "label": "I’m okay for now",
+            "x": 530,
+            "y": 444,
+            "w": 220,
+            "h": 56
+          },
+          {
+            "label": "Try another",
+            "x": 449,
+            "y": 504,
+            "w": 382,
+            "h": 56
+          },
+          {
+            "label": "Breathing feels uncomfortable",
+            "x": 449,
+            "y": 640,
+            "w": 382,
+            "h": 56
+          }
+        ],
+        "topButtons": [
+          {
+            "label": "Back",
+            "x": 449,
+            "y": 0,
+            "w": 56,
+            "h": 56
+          },
+          {
+            "label": "Sound on",
+            "x": 775,
+            "y": 0,
+            "w": 56,
+            "h": 56
+          }
+        ],
+        "spot": {
+          "listenChipCount": 3,
+          "listenScroll": {
+            "scrollWidth": 382,
+            "clientWidth": 382,
+            "scrollable": false
+          },
+          "breathePatternVisible": false,
+          "readFaster": false,
+          "readSurface": false,
+          "svgVisibleCount": 3,
+          "redTextSample": []
+        },
+        "urlPath": "/breathe"
+      },
+      "screenshot": "/Users/mariyagreku/back app/verification-screenshots/pre-release-qa/breathe-1280x720.png",
+      "consoleErrors": [
+        {
+          "viewport": "1280x720",
+          "text": "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"
+        },
+        {
+          "viewport": "1280x720",
+          "text": "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"
+        }
+      ],
+      "assessment": {
+        "pass": false,
+        "issues": [
+          "console: NotAllowedError: play() failed because the user didn't interact with the documen; NotAllowedError: play() failed because the user didn't interact with the documen"
+        ]
+      }
+    },
+    {
+      "route": "distract",
+      "viewport": "1280x720",
+      "url": "http://localhost:8081/distract",
+      "metrics": {
+        "inner": {
+          "w": 1280,
+          "h": 720
+        },
+        "scrollOverflow": 0,
+        "headers": [],
+        "back": {
+          "label": "Back",
+          "x": 449,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        "mute": null,
+        "buttonCount": 5,
+        "homeToolCount": 0,
+        "bottomButtons": [],
+        "topButtons": [
+          {
+            "label": "Back",
+            "x": 449,
+            "y": 0,
+            "w": 56,
+            "h": 56
+          }
+        ],
+        "spot": {
+          "listenChipCount": 0,
+          "listenScroll": null,
+          "breathePatternVisible": false,
+          "readFaster": false,
+          "readSurface": false,
+          "svgVisibleCount": 3,
+          "redTextSample": []
+        },
+        "urlPath": "/distract"
+      },
+      "screenshot": "/Users/mariyagreku/back app/verification-screenshots/pre-release-qa/distract-1280x720.png",
+      "consoleErrors": [],
+      "assessment": {
+        "pass": true,
+        "issues": []
+      }
+    },
+    {
+      "route": "distract-snake",
+      "viewport": "1280x720",
+      "url": "http://localhost:8081/distract/snake",
+      "metrics": {
+        "inner": {
+          "w": 1280,
+          "h": 720
+        },
+        "scrollOverflow": 0,
+        "headers": [],
+        "back": {
+          "label": "Back",
+          "x": 449,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        "mute": {
+          "label": "Sound on",
+          "x": 775,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        "buttonCount": 8,
+        "homeToolCount": 0,
+        "bottomButtons": [
+          {
+            "label": "Left",
+            "x": 570,
+            "y": 448,
+            "w": 56,
+            "h": 56
+          },
+          {
+            "label": "Right",
+            "x": 654,
+            "y": 448,
+            "w": 56,
+            "h": 56
+          },
+          {
+            "label": "Down",
+            "x": 612,
+            "y": 508,
+            "w": 56,
+            "h": 56
+          },
+          {
+            "label": "I’m okay for now",
+            "x": 530,
+            "y": 580,
+            "w": 220,
+            "h": 56
+          },
+          {
+            "label": "Try another",
+            "x": 449,
+            "y": 640,
+            "w": 382,
+            "h": 56
+          }
+        ],
+        "topButtons": [
+          {
+            "label": "Back",
+            "x": 449,
+            "y": 0,
+            "w": 56,
+            "h": 56
+          },
+          {
+            "label": "Sound on",
+            "x": 775,
+            "y": 0,
+            "w": 56,
+            "h": 56
+          }
+        ],
+        "spot": {
+          "listenChipCount": 0,
+          "listenScroll": null,
+          "breathePatternVisible": false,
+          "readFaster": false,
+          "readSurface": false,
+          "svgVisibleCount": 6,
+          "redTextSample": []
+        },
+        "urlPath": "/distract/snake"
+      },
+      "screenshot": "/Users/mariyagreku/back app/verification-screenshots/pre-release-qa/distract-snake-1280x720.png",
+      "consoleErrors": [],
+      "assessment": {
+        "pass": true,
+        "issues": []
+      }
+    },
+    {
+      "route": "ground",
+      "viewport": "1280x720",
+      "url": "http://localhost:8081/ground",
+      "metrics": {
+        "inner": {
+          "w": 1280,
+          "h": 720
+        },
+        "scrollOverflow": 0,
+        "headers": [],
+        "back": {
+          "label": "Back",
+          "x": 449,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        "mute": {
+          "label": "Sound on",
+          "x": 775,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        "buttonCount": 8,
+        "homeToolCount": 0,
+        "bottomButtons": [
+          {
+            "label": "Previous instruction",
+            "x": 540,
+            "y": 472,
+            "w": 56,
+            "h": 56
+          },
+          {
+            "label": "Pause",
+            "x": 612,
+            "y": 472,
+            "w": 56,
+            "h": 56
+          },
+          {
+            "label": "Next instruction",
+            "x": 684,
+            "y": 472,
+            "w": 56,
+            "h": 56
+          },
+          {
+            "label": "I’m okay for now",
+            "x": 530,
+            "y": 580,
+            "w": 220,
+            "h": 56
+          },
+          {
+            "label": "Try another",
+            "x": 449,
+            "y": 640,
+            "w": 382,
+            "h": 56
+          }
+        ],
+        "topButtons": [
+          {
+            "label": "Back",
+            "x": 449,
+            "y": 0,
+            "w": 56,
+            "h": 56
+          },
+          {
+            "label": "Sound on",
+            "x": 775,
+            "y": 0,
+            "w": 56,
+            "h": 56
+          }
+        ],
+        "spot": {
+          "listenChipCount": 0,
+          "listenScroll": null,
+          "breathePatternVisible": false,
+          "readFaster": false,
+          "readSurface": false,
+          "svgVisibleCount": 7,
+          "redTextSample": []
+        },
+        "urlPath": "/ground"
+      },
+      "screenshot": "/Users/mariyagreku/back app/verification-screenshots/pre-release-qa/ground-1280x720.png",
+      "consoleErrors": [
+        {
+          "viewport": "1280x720",
+          "text": "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"
+        },
+        {
+          "viewport": "1280x720",
+          "text": "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"
+        }
+      ],
+      "assessment": {
+        "pass": false,
+        "issues": [
+          "console: NotAllowedError: play() failed because the user didn't interact with the documen; NotAllowedError: play() failed because the user didn't interact with the documen"
+        ]
+      }
+    },
+    {
+      "route": "move",
+      "viewport": "1280x720",
+      "url": "http://localhost:8081/move",
+      "metrics": {
+        "inner": {
+          "w": 1280,
+          "h": 720
+        },
+        "scrollOverflow": 0,
+        "headers": [],
+        "back": {
+          "label": "Back",
+          "x": 449,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        "mute": {
+          "label": "Sound on",
+          "x": 775,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        "buttonCount": 6,
+        "homeToolCount": 1,
+        "bottomButtons": [
+          {
+            "label": "I’m okay for now",
+            "x": 530,
+            "y": 520,
+            "w": 220,
+            "h": 56
+          },
+          {
+            "label": "Try another",
+            "x": 449,
+            "y": 580,
+            "w": 382,
+            "h": 56
+          },
+          {
+            "label": "Movement doesn’t feel right",
+            "x": 449,
+            "y": 640,
+            "w": 382,
+            "h": 56
+          }
+        ],
+        "topButtons": [
+          {
+            "label": "Back",
+            "x": 449,
+            "y": 0,
+            "w": 56,
+            "h": 56
+          },
+          {
+            "label": "Sound on",
+            "x": 775,
+            "y": 0,
+            "w": 56,
+            "h": 56
+          }
+        ],
+        "spot": {
+          "listenChipCount": 0,
+          "listenScroll": null,
+          "breathePatternVisible": false,
+          "readFaster": false,
+          "readSurface": false,
+          "svgVisibleCount": 3,
+          "redTextSample": []
+        },
+        "urlPath": "/move"
+      },
+      "screenshot": "/Users/mariyagreku/back app/verification-screenshots/pre-release-qa/move-1280x720.png",
+      "consoleErrors": [
+        {
+          "viewport": "1280x720",
+          "text": "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"
+        },
+        {
+          "viewport": "1280x720",
+          "text": "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"
+        }
+      ],
+      "assessment": {
+        "pass": false,
+        "issues": [
+          "console: NotAllowedError: play() failed because the user didn't interact with the documen; NotAllowedError: play() failed because the user didn't interact with the documen"
+        ]
+      }
+    },
+    {
+      "route": "listen",
+      "viewport": "1280x720",
+      "url": "http://localhost:8081/listen",
+      "metrics": {
+        "inner": {
+          "w": 1280,
+          "h": 720
+        },
+        "scrollOverflow": 0,
+        "headers": [],
+        "back": {
+          "label": "Back",
+          "x": 449,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        "mute": {
+          "label": "Previous sound",
+          "x": 524,
+          "y": 314,
+          "w": 56,
+          "h": 56
+        },
+        "buttonCount": 10,
+        "homeToolCount": 0,
+        "bottomButtons": [
+          {
+            "label": "I’m okay for now",
+            "x": 530,
+            "y": 640,
+            "w": 220,
+            "h": 56
+          }
+        ],
+        "topButtons": [
+          {
+            "label": "Back",
+            "x": 449,
+            "y": 0,
+            "w": 56,
+            "h": 56
+          }
+        ],
+        "spot": {
+          "listenChipCount": 9,
+          "listenScroll": {
+            "scrollWidth": 382,
+            "clientWidth": 382,
+            "scrollable": false
+          },
+          "breathePatternVisible": false,
+          "readFaster": false,
+          "readSurface": false,
+          "svgVisibleCount": 4,
+          "redTextSample": []
+        },
+        "urlPath": "/listen"
+      },
+      "screenshot": "/Users/mariyagreku/back app/verification-screenshots/pre-release-qa/listen-1280x720.png",
+      "consoleErrors": [
+        {
+          "viewport": "1280x720",
+          "text": "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"
+        }
+      ],
+      "assessment": {
+        "pass": false,
+        "issues": [
+          "console: NotAllowedError: play() failed because the user didn't interact with the documen"
+        ]
+      }
+    },
+    {
+      "route": "read",
+      "viewport": "1280x720",
+      "url": "http://localhost:8081/read",
+      "metrics": {
+        "inner": {
+          "w": 1280,
+          "h": 720
+        },
+        "scrollOverflow": 0,
+        "headers": [],
+        "back": {
+          "label": "Back",
+          "x": 449,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        "mute": null,
+        "buttonCount": 6,
+        "homeToolCount": 2,
+        "bottomButtons": [
+          {
+            "label": "I’m okay for now",
+            "x": 530,
+            "y": 520,
+            "w": 220,
+            "h": 56
+          },
+          {
+            "label": "Try another",
+            "x": 449,
+            "y": 580,
+            "w": 382,
+            "h": 56
+          },
+          {
+            "label": "Pause the lines",
+            "x": 449,
+            "y": 640,
+            "w": 382,
+            "h": 56
+          }
+        ],
+        "topButtons": [
+          {
+            "label": "Back",
+            "x": 449,
+            "y": 0,
+            "w": 56,
+            "h": 56
+          },
+          {
+            "label": "Reading",
+            "x": 449,
+            "y": 72,
+            "w": 382,
+            "h": 432
+          },
+          {
+            "label": "Read faster",
+            "x": 775,
+            "y": 0,
+            "w": 56,
+            "h": 56
+          }
+        ],
+        "spot": {
+          "listenChipCount": 0,
+          "listenScroll": null,
+          "breathePatternVisible": false,
+          "readFaster": true,
+          "readSurface": true,
+          "svgVisibleCount": 1,
+          "redTextSample": []
+        },
+        "urlPath": "/read"
+      },
+      "screenshot": "/Users/mariyagreku/back app/verification-screenshots/pre-release-qa/read-1280x720.png",
+      "consoleErrors": [],
+      "assessment": {
+        "pass": true,
+        "issues": []
+      }
+    },
+    {
+      "route": "home-open-breathe",
+      "viewport": "1280x720",
+      "url": "http://localhost:8081/ → breathe",
+      "metrics": {
+        "navigation": {
+          "path": "/breathe",
+          "hasBack": true
+        }
+      },
+      "assessment": {
+        "pass": true,
+        "issues": []
+      }
+    }
+  ],
+  "consoleLog": [
+    {
+      "viewport": "390x844",
+      "text": "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"
+    },
+    {
+      "viewport": "390x844",
+      "text": "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"
+    },
+    {
+      "viewport": "390x844",
+      "text": "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"
+    },
+    {
+      "viewport": "390x844",
+      "text": "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"
+    },
+    {
+      "viewport": "390x844",
+      "text": "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"
+    },
+    {
+      "viewport": "390x844",
+      "text": "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"
+    },
+    {
+      "viewport": "390x844",
+      "text": "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"
+    },
+    {
+      "viewport": "412x915",
+      "text": "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"
+    },
+    {
+      "viewport": "412x915",
+      "text": "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"
+    },
+    {
+      "viewport": "412x915",
+      "text": "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"
+    },
+    {
+      "viewport": "412x915",
+      "text": "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"
+    },
+    {
+      "viewport": "412x915",
+      "text": "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"
+    },
+    {
+      "viewport": "412x915",
+      "text": "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"
+    },
+    {
+      "viewport": "412x915",
+      "text": "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"
+    },
+    {
+      "viewport": "1280x720",
+      "text": "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"
+    },
+    {
+      "viewport": "1280x720",
+      "text": "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"
+    },
+    {
+      "viewport": "1280x720",
+      "text": "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"
+    },
+    {
+      "viewport": "1280x720",
+      "text": "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"
+    },
+    {
+      "viewport": "1280x720",
+      "text": "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"
+    },
+    {
+      "viewport": "1280x720",
+      "text": "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"
+    },
+    {
+      "viewport": "1280x720",
+      "text": "NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"
+    }
+  ]
+}

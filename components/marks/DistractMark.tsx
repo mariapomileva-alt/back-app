@@ -4,7 +4,7 @@ import Svg, { Circle, G } from 'react-native-svg';
 import { useTheme } from '@/hooks/useTheme';
 
 import { MarkFrame } from './MarkFrame';
-import { markIdleMix, markIdleRange, useMarkIdlePhase } from './markIdleMotion';
+import { markIdleDriftRange, markIdleMix, useMarkIdlePhase } from './markIdleMotion';
 import { markViewBox } from './markLanguage';
 
 const AnimatedG = Animated.createAnimatedComponent(G);
@@ -36,8 +36,8 @@ function DriftCircle({
       return { opacity: baseOpacity, transform: [{ translateX: 0 }, { translateY: 0 }] };
     }
     const mix = markIdleMix(phase.value, offset);
-    const driftX = markIdleRange(mix, -2.8, 2.8);
-    const driftY = markIdleRange(markIdleMix(phase.value, offset + 0.27), -2.2, 2.2);
+    const driftX = markIdleDriftRange(mix, -2.8, 2.8);
+    const driftY = markIdleDriftRange(markIdleMix(phase.value, offset + 0.27), -2.2, 2.2);
     return {
       opacity: baseOpacity,
       transform: [{ translateX: driftX }, { translateY: driftY }],

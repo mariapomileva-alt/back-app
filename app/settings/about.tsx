@@ -15,7 +15,7 @@ export default function AboutScreen() {
   const [shareUnavailable, setShareUnavailable] = useState(false);
 
   return (
-    <ScreenContainer>
+    <ScreenContainer phoneWidth>
       <ScreenHeader title={t('settings.about')} />
       <View style={styles.body}>
         <AppText variant="hero">{t('app.name')}</AppText>

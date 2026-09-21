@@ -7,14 +7,10 @@ type Props = {
   children?: ReactNode;
 };
 
-/** Compact kinetic stage — sits just above instruction copy. */
+/** Premium art stage — sits just above instruction copy. */
 export function MoveVisualFrame({ children }: Props) {
   return (
-    <View
-      {...hideFromA11yTree()}
-      pointerEvents="none"
-      style={styles.frame}
-    >
+    <View {...hideFromA11yTree()} style={[styles.frame, styles.noPointer]}>
       {children}
     </View>
   );
@@ -22,14 +18,16 @@ export function MoveVisualFrame({ children }: Props) {
 
 const styles = StyleSheet.create({
   frame: {
-    width: '82%',
-    maxWidth: 220,
-    height: 132,
-    maxHeight: 140,
+    width: '100%',
+    maxWidth: 340,
+    minHeight: 180,
     alignSelf: 'center',
     alignItems: 'center',
-    justifyContent: 'flex-end',
-    overflow: 'visible',
-    marginBottom: 4,
+    justifyContent: 'center',
+    overflow: 'hidden',
+    marginBottom: 8,
+  },
+  noPointer: {
+    pointerEvents: 'none',
   },
 });

@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from 'react';
 import { StyleSheet, View, type StyleProp, type TextStyle, type ViewStyle } from 'react-native';
 import Animated, {
   Easing,
-  runOnJS,
   useAnimatedStyle,
   useSharedValue,
   withTiming,
@@ -19,7 +18,7 @@ import {
 import { useReduceMotion } from '@/hooks/useReduceMotion';
 import type { TypographyVariant } from '@/theme/typography';
 
-const EASE_OUT = Easing.bezier(0.4, 0, 0.2, 1);
+const EASE_SMOOTH = Easing.bezier(0.22, 0.61, 0.36, 1);
 
 type Props = {
   contentKey: string;
@@ -50,45 +49,19 @@ export function CrossfadeInstructionText({
   const outOpacity = reduceMotion ? 0 : INSTRUCTION_CROSSFADE_DIM;
 
   const visibleKeyRef = useRef(contentKey);
-  const [displayText, setDisplayText] = useState(children);
-  const pendingRef = useRef({ key: contentKey, text: children });
   const skipFirstRef = useRef(true);
+  const topIsARef = useRef(true);
 
-  const opacity = useSharedValue(1);
-  const shiftY = useSharedValue(0);
+  const [layerA, setLayerA] = useState({ key: contentKey, text: children });
+  const [layerB, setLayerB] = useState({ key: contentKey, text: children });
+  const [topIsA, setTopIsA] = useState(true);
 
-  const fadeInNative = (text: string, key: string) => {
-    visibleKeyRef.current = key;
-    setDisplayText(text);
-    if (reduceMotion) {
-      opacity.value = 1;
-      shiftY.value = 0;
-      return;
-    }
-    shiftY.value = INSTRUCTION_ENTER_SHIFT_PX;
-    opacity.value = outOpacity;
-    opacity.value = withTiming(1, { duration: fadeInMs, easing: EASE_OUT });
-    shiftY.value = withTiming(0, { duration: fadeInMs, easing: EASE_OUT });
-  };
-
-  const fadeOutNative = () => {
-    const latest = pendingRef.current;
-    if (reduceMotion) {
-      fadeInNative(latest.text, latest.key);
-      return;
-    }
-    shiftY.value = withTiming(-INSTRUCTION_ENTER_SHIFT_PX, { duration: fadeOutMs, easing: EASE_OUT });
-    opacity.value = withTiming(outOpacity, { duration: fadeOutMs, easing: EASE_OUT }, (finished) => {
-      if (!finished) {
-        return;
-      }
-      const pending = pendingRef.current;
-      runOnJS(fadeInNative)(pending.text, pending.key);
-    });
-  };
+  const opacityA = useSharedValue(1);
+  const opacityB = useSharedValue(0);
+  const shiftA = useSharedValue(0);
+  const shiftB = useSharedValue(0);
 
   useEffect(() => {
-    pendingRef.current = { key: contentKey, text: children };
     if (skipFirstRef.current) {
       skipFirstRef.current = false;
       visibleKeyRef.current = contentKey;
@@ -97,32 +70,104 @@ export function CrossfadeInstructionText({
     if (contentKey === visibleKeyRef.current) {
       return;
     }
-    fadeOutNative();
-    // Crossfade runs when contentKey changes; motion values are stable refs.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [children, contentKey]);
+    visibleKeyRef.current = contentKey;
 
-  const nativeStyle = useAnimatedStyle(() => ({
-    opacity: opacity.value,
-    transform: [{ translateY: shiftY.value }],
+    const run = () => {
+      if (reduceMotion) {
+        setLayerA({ key: contentKey, text: children });
+        setTopIsA(true);
+        topIsARef.current = true;
+        opacityA.value = 1;
+        opacityB.value = 0;
+        return;
+      }
+
+      const incomingOnA = !topIsARef.current;
+      if (incomingOnA) {
+        setLayerA({ key: contentKey, text: children });
+        shiftA.value = INSTRUCTION_ENTER_SHIFT_PX;
+        opacityA.value = outOpacity;
+        shiftB.value = 0;
+        opacityB.value = 1;
+        opacityB.value = withTiming(0, { duration: fadeOutMs, easing: EASE_SMOOTH });
+        shiftB.value = withTiming(-INSTRUCTION_ENTER_SHIFT_PX, { duration: fadeOutMs, easing: EASE_SMOOTH });
+        opacityA.value = withTiming(1, { duration: fadeInMs, easing: EASE_SMOOTH });
+        shiftA.value = withTiming(0, { duration: fadeInMs, easing: EASE_SMOOTH });
+        setTopIsA(true);
+        topIsARef.current = true;
+      } else {
+        setLayerB({ key: contentKey, text: children });
+        shiftB.value = INSTRUCTION_ENTER_SHIFT_PX;
+        opacityB.value = outOpacity;
+        shiftA.value = 0;
+        opacityA.value = 1;
+        opacityA.value = withTiming(0, { duration: fadeOutMs, easing: EASE_SMOOTH });
+        shiftA.value = withTiming(-INSTRUCTION_ENTER_SHIFT_PX, { duration: fadeOutMs, easing: EASE_SMOOTH });
+        opacityB.value = withTiming(1, { duration: fadeInMs, easing: EASE_SMOOTH });
+        shiftB.value = withTiming(0, { duration: fadeInMs, easing: EASE_SMOOTH });
+        setTopIsA(false);
+        topIsARef.current = false;
+      }
+    };
+
+    queueMicrotask(run);
+    // Layer swap is driven by contentKey; shared values are stable refs.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [children, contentKey, fadeInMs, fadeOutMs, outOpacity, reduceMotion]);
+
+  const styleA = useAnimatedStyle(() => ({
+    opacity: opacityA.value,
+    transform: [{ translateY: shiftA.value }],
   }));
+
+  const styleB = useAnimatedStyle(() => ({
+    opacity: opacityB.value,
+    transform: [{ translateY: shiftB.value }],
+  }));
+
+  const renderLayer = (
+    reactKey: 'a' | 'b',
+    layer: { key: string; text: string },
+    animatedStyle: typeof styleA,
+    onTop: boolean,
+  ) => (
+    <Animated.View
+      key={reactKey}
+      style={[
+        styles.layer,
+        animatedStyle,
+        onTop ? styles.layerTop : styles.layerBottom,
+        styles.noPointer,
+      ]}
+    >
+      <AppText
+        variant={variant}
+        accessibilityLiveRegion={onTop ? accessibilityLiveRegion : 'none'}
+        accessibilityLabel={onTop ? accessibilityLabel : undefined}
+        accessible={onTop ? accessible : false}
+        style={style}
+      >
+        {layer.text}
+      </AppText>
+    </Animated.View>
+  );
 
   return (
     <View
       style={[styles.container, minHeight != null ? { minHeight } : null, containerStyle]}
       collapsable={false}
     >
-      <Animated.View style={nativeStyle}>
-        <AppText
-          variant={variant}
-          accessibilityLiveRegion={accessibilityLiveRegion}
-          accessibilityLabel={accessibilityLabel}
-          accessible={accessible}
-          style={style}
-        >
-          {displayText}
-        </AppText>
-      </Animated.View>
+      {topIsA ? (
+        <>
+          {renderLayer('b', layerB, styleB, false)}
+          {renderLayer('a', layerA, styleA, true)}
+        </>
+      ) : (
+        <>
+          {renderLayer('a', layerA, styleA, false)}
+          {renderLayer('b', layerB, styleB, true)}
+        </>
+      )}
     </View>
   );
 }
@@ -132,5 +177,21 @@ const styles = StyleSheet.create({
     width: '100%',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  layer: {
+    width: '100%',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  layerBottom: {
+    position: 'absolute',
+    left: 0,
+    right: 0,
+  },
+  layerTop: {
+    position: 'relative',
+  },
+  noPointer: {
+    pointerEvents: 'none',
   },
 });

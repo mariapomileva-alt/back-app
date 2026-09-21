@@ -76,7 +76,7 @@
     "title": "Thème",
     "warmNeutral": "Terre chaude",
     "deepGreen": "Forêt",
-    "softBeige": "Sauge douce",
+    "softBeige": "Airy Blue Sage",
     "selectHint": "Applique ce look immédiatement"
   },
   "patterns": {
@@ -268,7 +268,9 @@
     "speedBoostOff": "Lire plus vite",
     "speedBoostOffHint": "Affiche chaque ligne environ deux fois plus rapidement pour cette session.",
     "speedBoostOn": "Lecture plus rapide, sur",
-    "speedBoostOnHint": "Les rides apparaissent environ deux fois plus vite. Appuyez deux fois pour revenir à la vitesse normale."
+    "speedBoostOnHint": "Les rides apparaissent environ deux fois plus vite. Appuyez deux fois pour revenir à la vitesse normale.",
+    "firstHintFollow": "Just follow the words.",
+    "firstHintTap": "Tap anywhere if you want to go faster."
   },
   "ground": {
     "previous": "Instruction précédente",
@@ -312,7 +314,8 @@
       "find": "Trouvez quelque chose avec un peu de texture.",
       "cool": "Trouvez une surface qui semble froide au toucher.",
       "temp": "Remarquez une différence de température, même minime."
-    }
+    },
+    "sequenceHint": "Changes the grounding exercise"
   },
   "move": {
     "hold": "Prise.",
@@ -382,7 +385,11 @@
       "brown": "Texture marron chaud",
       "white": "Texture légère et uniforme",
       "melody": "Des tons doux et chauds"
-    }
+    },
+    "soundHint": "Changes the quiet sound",
+    "playing": "Playing",
+    "paused": "{name} paused",
+    "pausedStatus": "Paused"
   },
   "privacy": {
     "onDevice": "Tout ce que Back utilise pour les six outils reste sur cet appareil. Il n'y a pas de compte ni de cloud.",
@@ -466,7 +473,17 @@
       "additionalThemes": "Thèmes d'apparence supplémentaires",
       "readLibrary": "Lire le contenu de la bibliothèque",
       "patternsDepth": "Informations plus approfondies sur mes modèles"
-    }
+    },
+    "headlineTrial": "Your trial is active.",
+    "introThankYouActive": "Thank you for keeping Back close.\n\nYour subscription helps us care for these tools and keep them private, reliable and available offline.",
+    "trialAfterNote": "After the trial, your plan renews at the price shown in the App Store or Google Play before you confirm.",
+    "startTrial": "Start free trial",
+    "done": "Done",
+    "doneHint": "Returns to the previous screen",
+    "continue": "Continue",
+    "whatsIncluded": "What's included",
+    "loading": "Loading subscription…",
+    "managePreviewNote": "On this web preview, Manage subscription opens Back’s subscription information page. On your phone, it opens Apple or Google subscription settings."
   },
   "notFound": {
     "title": "Cette page n'est pas ici",

@@ -2,7 +2,6 @@ import { useEffect, type ReactNode } from 'react';
 import { StyleSheet, View } from 'react-native';
 import Animated, {
   Easing,
-  ReduceMotion,
   cancelAnimation,
   useAnimatedStyle,
   useSharedValue,
@@ -19,28 +18,26 @@ type Props = {
   style?: object;
 };
 
-const DRIFT_MS = 11_500;
-const SHIMMER_MS = 7_800;
+const DRIFT_MS = 8_800;
+const SHIMMER_MS = 6_200;
 
 export function useListenVisualAmbientMotion(active = true) {
   const reduceMotion = useReduceMotion();
   const drift = useSharedValue(0.5);
   const shimmer = useSharedValue(0.5);
   const motionActive = useSharedValue(active && !reduceMotion ? 1 : 0);
-  const calmStatic = useSharedValue(reduceMotion ? 1 : 0);
 
   useEffect(() => {
     motionActive.value = active && !reduceMotion ? 1 : 0;
-    calmStatic.value = reduceMotion ? 1 : 0;
-  }, [active, calmStatic, motionActive, reduceMotion]);
+  }, [active, motionActive, reduceMotion]);
 
   useEffect(() => {
     cancelAnimation(drift);
     cancelAnimation(shimmer);
 
     if (reduceMotion || !active) {
-      drift.value = 0.5;
-      shimmer.value = 0.5;
+      drift.value = withTiming(0.5, { duration: 420, easing: Easing.out(Easing.quad) });
+      shimmer.value = withTiming(0.5, { duration: 420, easing: Easing.out(Easing.quad) });
       return;
     }
 
@@ -48,7 +45,6 @@ export function useListenVisualAmbientMotion(active = true) {
       withTiming(1, {
         duration,
         easing: Easing.inOut(Easing.sin),
-        reduceMotion: ReduceMotion.Never,
       });
 
     drift.value = withRepeat(timing(DRIFT_MS), -1, true);
@@ -57,15 +53,15 @@ export function useListenVisualAmbientMotion(active = true) {
 
   const contentStyle = useAnimatedStyle(() => {
     if (motionActive.value === 0) {
-      return { transform: [{ scale: calmStatic.value === 1 ? 1.03 : 1 }] };
+      return { transform: [{ scale: 1 }, { translateX: 0 }, { translateY: 0 }] };
     }
     const t = drift.value;
     const s = shimmer.value;
     return {
       transform: [
-        { scale: 1.04 + t * 0.032 },
-        { translateX: (t - 0.5) * 14 },
-        { translateY: (s - 0.5) * 10 },
+        { scale: 1.02 + t * 0.022 },
+        { translateX: (t - 0.5) * 11 },
+        { translateY: (s - 0.5) * 8 },
       ],
     };
   });
@@ -75,15 +71,15 @@ export function useListenVisualAmbientMotion(active = true) {
       return { opacity: 0 };
     }
     const s = shimmer.value;
-    return { opacity: 0.05 + s * 0.09 };
+    return { opacity: 0.04 + s * 0.11 };
   });
 
   return { contentStyle, shimmerStyle, reduceMotion, showShimmer: !reduceMotion && active };
 }
 
 /**
- * Slow drift + shimmer for Listen visuals — photos and abstract graphics.
- * Respects Reduce Motion (static frame, no shimmer).
+ * Slow drift + shimmer for Listen visuals while playing.
+ * Paused = still. Respects Reduce Motion.
  */
 export function ListenVisualAmbientMotion({ children, active = true, style }: Props) {
   const { contentStyle, shimmerStyle, showShimmer } = useListenVisualAmbientMotion(active);
@@ -92,10 +88,7 @@ export function ListenVisualAmbientMotion({ children, active = true, style }: Pr
     <View style={[styles.shell, style]}>
       <Animated.View style={[styles.content, contentStyle]}>{children}</Animated.View>
       {showShimmer ? (
-        <Animated.View
-          pointerEvents="none"
-          style={[StyleSheet.absoluteFill, styles.shimmer, shimmerStyle]}
-        />
+        <Animated.View style={[StyleSheet.absoluteFill, styles.shimmer, shimmerStyle, styles.noPointer]} />
       ) : null}
     </View>
   );
@@ -105,7 +98,8 @@ const styles = StyleSheet.create({
   shell: {
     flex: 1,
     width: '100%',
-    overflow: 'hidden',
+    overflow: 'visible',
+    backgroundColor: 'transparent',
   },
   content: {
     flex: 1,
@@ -113,5 +107,8 @@ const styles = StyleSheet.create({
   },
   shimmer: {
     backgroundColor: '#ffffff',
+  },
+  noPointer: {
+    pointerEvents: 'none',
   },
 });

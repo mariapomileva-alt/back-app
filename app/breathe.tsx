@@ -40,10 +40,13 @@ export default function BreatheScreen() {
   const [chooserOpen, setChooserOpen] = useState(false);
   const pattern = getBreathPattern(patternId);
   const restSize = Math.min(REST_SIZE, Math.round(width * 0.48));
-  const openSize = Math.max(
+  const openCap = Math.max(
     restSize + 100,
     Math.min(reduceMotion ? REDUCE_OPEN_SIZE : OPEN_SIZE, Math.round(width * 0.84)),
   );
+  // Keep the orb layout box below the header on short viewports (web hit-testing overlaps otherwise).
+  const stageBudget = Math.max(restSize + 48, height - (compact ? 300 : 340));
+  const openSize = Math.min(openCap, Math.round(stageBudget * 0.88));
   const { phase, openness } = useBreathCycle(pattern);
   const breatheAmbient = useBreatheAmbient({
     openness,
@@ -115,6 +118,7 @@ export default function BreatheScreen() {
               importantForAccessibility="no-hide-descendants"
               onPress={unlockFromUserGesture}
               style={[styles.stage, compact && styles.stageCompact]}
+              pointerEvents="box-none"
             >
               <BreathingCircle
                 restSize={restSize}

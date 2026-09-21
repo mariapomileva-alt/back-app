@@ -69,7 +69,7 @@ export function ThemeProvider({ children }: Props) {
 
     const apply = (enabled: boolean) => {
       if (!cancelled) {
-        setSystemReduceMotion(enabled);
+        setSystemReduceMotion((current) => (current === enabled ? current : enabled));
       }
     };
 
@@ -139,7 +139,7 @@ export function ThemeProvider({ children }: Props) {
   return (
     <ThemeContext.Provider value={value}>
       <ReducedMotionConfig
-        mode={value.reduceMotion ? ReduceMotion.Always : ReduceMotion.System}
+        mode={value.reduceMotion ? ReduceMotion.Always : ReduceMotion.Never}
       />
       {children}
     </ThemeContext.Provider>

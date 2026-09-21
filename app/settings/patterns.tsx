@@ -131,7 +131,7 @@ export default function PatternsScreen() {
   };
 
   return (
-    <ScreenContainer>
+    <ScreenContainer phoneWidth>
       <ScreenHeader title={t('settings.patterns')} />
       <View style={styles.body}>
         <AppText variant="body" tone="secondary">

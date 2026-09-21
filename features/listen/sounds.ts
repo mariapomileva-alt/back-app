@@ -1,7 +1,7 @@
 import type { ImageSourcePropType } from 'react-native';
 
 import { productionConfig } from '@/config/production';
-import { exerciseAudio, exerciseImages, productionAudioFiles } from '@/features/media/catalog';
+import { exerciseAudio, productionAudioFiles } from '@/features/media/catalog';
 
 export type ListenSoundGroup = 'nature' | 'steady';
 
@@ -16,7 +16,16 @@ export type ListenSoundId =
   | 'white'
   | 'melody';
 
-export type ListenGraphicVariant = 'fan' | 'brown' | 'stream' | 'birds' | 'white' | 'melody';
+export type ListenGraphicVariant =
+  | 'rain'
+  | 'ocean'
+  | 'forest'
+  | 'fan'
+  | 'brown'
+  | 'stream'
+  | 'birds'
+  | 'white'
+  | 'melody';
 
 export type ListenSound = {
   id: ListenSoundId;
@@ -50,8 +59,8 @@ export const listenSounds: ListenSound[] = [
     imageLabelKey: 'listen.images.rain',
     audio: exerciseAudio.softRain,
     productionFile: productionAudioFiles.softRain,
-    image: exerciseImages.listenRain,
-    treatment: 'photo',
+    treatment: 'abstract',
+    graphicVariant: 'rain',
     placeholderAudio: listenAudioIsPlaceholder,
   },
   {
@@ -61,8 +70,8 @@ export const listenSounds: ListenSound[] = [
     imageLabelKey: 'listen.images.ocean',
     audio: exerciseAudio.ocean,
     productionFile: productionAudioFiles.ocean,
-    image: exerciseImages.listenOcean,
-    treatment: 'photo',
+    treatment: 'abstract',
+    graphicVariant: 'ocean',
     placeholderAudio: listenAudioIsPlaceholder,
   },
   {
@@ -83,8 +92,8 @@ export const listenSounds: ListenSound[] = [
     imageLabelKey: 'listen.images.forest',
     audio: exerciseAudio.forest,
     productionFile: productionAudioFiles.forest,
-    image: exerciseImages.listenForest,
-    treatment: 'photo',
+    treatment: 'abstract',
+    graphicVariant: 'forest',
     placeholderAudio: listenAudioIsPlaceholder,
   },
   {
@@ -146,6 +155,9 @@ export const listenSounds: ListenSound[] = [
 
 export const defaultListenSoundId: ListenSoundId = 'rain';
 
+/** Store-facing picker (premium pass): eight core loops, no melody chip. */
+export const listenPickerSounds: ListenSound[] = listenSounds.filter((item) => item.id !== 'melody');
+
 export function isListenSoundId(value: string | null): value is ListenSoundId {
   return listenSounds.some((item) => item.id === value);
 }
@@ -153,6 +165,9 @@ export function isListenSoundId(value: string | null): value is ListenSoundId {
 export function listenGraphicVariantFor(sound: ListenSound): ListenGraphicVariant {
   if (sound.graphicVariant) {
     return sound.graphicVariant;
+  }
+  if (sound.id === 'rain' || sound.id === 'ocean' || sound.id === 'forest') {
+    return sound.id;
   }
   return sound.id === 'brown' ? 'brown' : 'fan';
 }

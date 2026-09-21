@@ -92,6 +92,8 @@ export type ReadMemory = {
   lastSeenAt: Record<string, number>;
   language: ReadLanguagePreference;
   revealSpeed: ReadRevealSpeed;
+  /** First-use canvas hint (“follow the words” / tap to go faster). */
+  sawCanvasHint?: boolean;
 };
 
 export const defaultReadMemory: ReadMemory = {

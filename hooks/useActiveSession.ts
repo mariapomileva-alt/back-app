@@ -28,6 +28,7 @@ export function useActiveSession(
   const leavingRef = useRef(false);
 
   useEffect(() => {
+    leavingRef.current = false;
     retainSessionVisibility(tool);
     return () => {
       releaseSessionVisibility();
@@ -45,6 +46,7 @@ export function useActiveSession(
     const { id: sessionId } = recordClosedSession({ tool: closedTool, durationMs: elapsedMs });
 
     // Never route to a paywall from an active session.
+    beginInternalSessionNavigation();
     if (shouldOfferSessionOutcome(elapsedMs)) {
       router.replace({
         pathname: '/session/outcome',

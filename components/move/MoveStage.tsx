@@ -1,6 +1,7 @@
 import { Pressable, StyleSheet } from 'react-native';
 
 import { MoveExerciseIllustration } from '@/components/move/MoveIllustration';
+import { ToolSessionEntryFade } from '@/components/session/ToolSessionEntryFade';
 import type { MovePhase, MoveSequenceId, MoveStepId } from '@/features/move/steps';
 import { useReduceMotion } from '@/hooks/useReduceMotion';
 
@@ -34,7 +35,14 @@ export function MoveStage({
       onPressOut={onPressOut}
       style={styles.press}
     >
-      <MoveExerciseIllustration activityId={activityId} stepId={stepId} phase={phase} reduceMotion={reduceMotion} />
+      <ToolSessionEntryFade>
+        <MoveExerciseIllustration
+          activityId={activityId}
+          stepId={stepId}
+          phase={phase}
+          reduceMotion={reduceMotion}
+        />
+      </ToolSessionEntryFade>
     </Pressable>
   );
 }

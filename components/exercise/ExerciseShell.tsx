@@ -1,10 +1,8 @@
 import { type ReactNode } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet } from 'react-native';
 
-import { PaperGrain } from '@/components/home/PaperGrain';
+import { ThemedAppShell } from '@/components/layout/ThemedAppShell';
 import { ActiveSessionHeader } from '@/components/session/ActiveSessionHeader';
-import { SessionSafeArea } from '@/components/session/SessionSafeArea';
-import { useTheme } from '@/hooks/useTheme';
 
 type Props = {
   title: string;
@@ -33,40 +31,25 @@ export function ExerciseShell({
   backLabel,
   backHint,
 }: Props) {
-  const { theme } = useTheme();
-
   return (
-    <View style={[styles.root, { backgroundColor: theme.colors.background }]}>
-      <PaperGrain />
-      <SessionSafeArea
-        scroll={scroll}
-        style={styles.transparent}
-        contentStyle={[styles.content, scroll === false ? styles.fill : null]}
-      >
-        <ActiveSessionHeader
-          title={title}
-          onClose={onClose}
-          showClose={showClose}
-          closeLabel={closeLabel}
-          closeHint={closeHint}
-          onBack={onBack}
-          backLabel={backLabel}
-          backHint={backHint}
-          right={right}
-        />
-        {children}
-      </SessionSafeArea>
-    </View>
+    <ThemedAppShell scroll={scroll} contentStyle={[styles.content, scroll === false ? styles.fill : null]}>
+      <ActiveSessionHeader
+        title={title}
+        onClose={onClose}
+        showClose={showClose}
+        closeLabel={closeLabel}
+        closeHint={closeHint}
+        onBack={onBack}
+        backLabel={backLabel}
+        backHint={backHint}
+        right={right}
+      />
+      {children}
+    </ThemedAppShell>
   );
 }
 
 const styles = StyleSheet.create({
-  root: {
-    flex: 1,
-  },
-  transparent: {
-    backgroundColor: 'transparent',
-  },
   content: {
     flexGrow: 1,
     width: '100%',

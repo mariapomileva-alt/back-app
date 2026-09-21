@@ -14,7 +14,7 @@ export default function TermsScreen() {
   const termsUrl = productionConfig.termsUrl;
 
   return (
-    <ScreenContainer>
+    <ScreenContainer phoneWidth>
       <ScreenHeader title={t('settings.terms')} />
       <View style={styles.body}>
         <AppText variant="body">{t('terms.selfHelp')}</AppText>

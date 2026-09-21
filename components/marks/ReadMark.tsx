@@ -5,7 +5,12 @@ import { useTheme } from '@/hooks/useTheme';
 import { serif } from '@/theme/fonts';
 
 import { MarkFrame } from './MarkFrame';
-import { markIdleMix, markIdleRange, useMarkIdlePhase } from './markIdleMotion';
+import {
+  markIdleDriftRange,
+  markIdleMix,
+  markIdleOpacityRange,
+  useMarkIdlePhase,
+} from './markIdleMotion';
 import { markViewBox } from './markLanguage';
 
 const AnimatedG = Animated.createAnimatedComponent(G);
@@ -32,10 +37,16 @@ function FadeRule({
 }) {
   const animatedProps = useAnimatedProps(() => {
     if (motionActive.value === 0) {
-      return { opacity: baseOpacity };
+      return { opacity: baseOpacity, transform: [{ translateX: 0 }, { translateY: 0 }] };
     }
     const mix = markIdleMix(phase.value, offset);
-    return { opacity: markIdleRange(mix, baseOpacity - 0.04, baseOpacity + 0.06) };
+    return {
+      opacity: markIdleOpacityRange(mix, baseOpacity - 0.06, baseOpacity + 0.1),
+      transform: [
+        { translateX: markIdleDriftRange(mix, -0.6, 0.6) },
+        { translateY: markIdleDriftRange(markIdleMix(phase.value, offset + 0.2), -1.2, 1.2) },
+      ],
+    };
   });
 
   return (
@@ -53,10 +64,16 @@ export function ReadMark() {
 
   const letterAnimatedProps = useAnimatedProps(() => {
     if (motionActive.value === 0) {
-      return { opacity: 0.62 };
+      return { opacity: 0.62, transform: [{ translateX: 0 }, { translateY: 0 }] };
     }
     const mix = markIdleMix(phase.value, 0);
-    return { opacity: markIdleRange(mix, 0.58, 0.66) };
+    return {
+      opacity: markIdleOpacityRange(mix, 0.52, 0.72),
+      transform: [
+        { translateX: markIdleDriftRange(mix, -1.4, 1.4) },
+        { translateY: markIdleDriftRange(markIdleMix(phase.value, 0.25), -2.2, 2.2) },
+      ],
+    };
   });
 
   const rules: RuleSpec[] = [

@@ -2,16 +2,14 @@ import { useEffect } from 'react';
 import { StyleSheet, View } from 'react-native';
 import Animated, {
   Easing,
-  ReduceMotion,
   cancelAnimation,
   useAnimatedProps,
-  useAnimatedStyle,
   useSharedValue,
   withRepeat,
   withTiming,
   type SharedValue,
 } from 'react-native-reanimated';
-import Svg, { Circle, Path, Rect } from 'react-native-svg';
+import Svg, { Circle, Path } from 'react-native-svg';
 
 import { skipA11yNode } from '@/components/accessibility/hideFromA11y';
 
@@ -22,19 +20,21 @@ import { hexToRgba } from '@/theme/colors';
 const AnimatedPath = Animated.createAnimatedComponent(Path);
 const AnimatedCircle = Animated.createAnimatedComponent(Circle);
 
-type Variant = 'fan' | 'brown' | 'stream' | 'birds' | 'white' | 'melody';
+type Variant =
+  | 'rain'
+  | 'ocean'
+  | 'forest'
+  | 'fan'
+  | 'brown'
+  | 'stream'
+  | 'birds'
+  | 'white'
+  | 'melody';
 
 type Props = {
   variant: Variant;
   motionActive?: boolean;
 };
-
-const FAN_WAVES = [
-  { d: 'M18 28 C70 8 150 48 202 24', width: 1.2, base: 0.38, useWave: true },
-  { d: 'M14 48 C72 28 148 68 206 46', width: 1.6, base: 0.62, useWave: false },
-  { d: 'M20 68 C76 50 146 86 200 70', width: 1.3, base: 0.44, useWave: true },
-  { d: 'M24 88 C80 74 140 102 196 90', width: 1.15, base: 0.4, useWave: false },
-] as const;
 
 type FanWaveProps = {
   d: string;
@@ -53,7 +53,8 @@ function FanWavePath({ d, width, stroke, base, useWave, wave, swell, motionActiv
       return { opacity: base };
     }
     const mix = useWave ? wave.value : swell.value;
-    return { opacity: base - 0.14 + mix * 0.32 };
+    const opacity = base - 0.32 + mix * 0.72;
+    return { opacity: Math.min(1, Math.max(0.08, opacity)) };
   });
 
   return (
@@ -79,10 +80,13 @@ type BrownBlobProps = {
 };
 
 function BrownBlob({ cx, cy, r, fill, staticOpacity, driver, motionActive }: BrownBlobProps) {
-  const animatedProps = useAnimatedProps(() => ({
-    opacity:
-      motionActive.value === 0 ? staticOpacity : staticOpacity - 0.1 + driver.value * 0.26,
-  }));
+  const animatedProps = useAnimatedProps(() => {
+    if (motionActive.value === 0) {
+      return { opacity: staticOpacity };
+    }
+    const opacity = staticOpacity - 0.22 + driver.value * 0.58;
+    return { opacity: Math.min(1, Math.max(0.08, opacity)) };
+  });
 
   return <AnimatedCircle cx={cx} cy={cy} r={r} fill={fill} animatedProps={animatedProps} />;
 }
@@ -112,24 +116,140 @@ export function ListenGraphic({ variant, motionActive = true }: Props) {
       withTiming(1, {
         duration,
         easing: Easing.inOut(Easing.sin),
-        reduceMotion: ReduceMotion.Never,
       });
 
     wave.value = withRepeat(timing(9_200), -1, true);
     swell.value = withRepeat(timing(6_000), -1, true);
   }, [motionActive, reduceMotion, swell, wave]);
 
-  const svgMotion = useAnimatedStyle(() => {
-    if (motionActiveSv.value === 0) {
-      return { transform: [{ translateX: 0 }, { translateY: 0 }] };
-    }
-    return {
-      transform: [
-        { translateX: (wave.value - 0.5) * 14 },
-        { translateY: (swell.value - 0.5) * 9 },
-      ],
-    };
-  });
+  const sage = theme.colors.secondaryGreen;
+  const cool = theme.colors.cool;
+  const forestTone = theme.colors.forest;
+
+  if (variant === 'rain') {
+    const streaks = [
+      { x: 42, h: 52 },
+      { x: 68, h: 44 },
+      { x: 94, h: 58 },
+      { x: 118, h: 48 },
+      { x: 142, h: 54 },
+      { x: 166, h: 46 },
+    ] as const;
+
+    return (
+      <View {...skipA11yNode()} style={styles.frame}>
+        <View style={styles.svgWrap}>
+          <Svg width="100%" height="100%" viewBox="0 0 220 120" preserveAspectRatio="xMidYMid meet">
+            <Path
+              d="M0 78 C55 68 110 86 220 74"
+              stroke={hexToRgba(sage, 0.22)}
+              strokeWidth={1.1}
+              fill="none"
+            />
+            {streaks.map((item, index) => (
+              <FanWavePath
+                key={item.x}
+                d={`M${item.x} 28 L${item.x - 3} ${28 + item.h}`}
+                width={1.1}
+                stroke={hexToRgba(cool, 0.38)}
+                base={0.28 + (index % 3) * 0.08}
+                useWave={index % 2 === 0}
+                wave={wave}
+                swell={swell}
+                motionActive={motionActiveSv}
+              />
+            ))}
+          </Svg>
+        </View>
+      </View>
+    );
+  }
+
+  if (variant === 'ocean') {
+    const swells = [
+      { d: 'M0 62 C48 52 96 72 148 58 S220 68 220 58', width: 1.5, base: 0.48 },
+      { d: 'M0 78 C52 70 104 88 156 76 S220 82 220 74', width: 1.2, base: 0.34 },
+      { d: 'M0 94 C60 88 120 98 220 92', width: 1, base: 0.22 },
+    ] as const;
+
+    return (
+      <View {...skipA11yNode()} style={styles.frame}>
+        <View style={styles.svgWrap}>
+          <Svg width="100%" height="100%" viewBox="0 0 220 120" preserveAspectRatio="xMidYMid meet">
+            {swells.map((item, index) => (
+              <FanWavePath
+                key={item.d}
+                d={item.d}
+                width={item.width}
+                stroke={hexToRgba(index === 0 ? cool : sage, item.base + 0.2)}
+                base={item.base}
+                useWave={index !== 2}
+                wave={wave}
+                swell={swell}
+                motionActive={motionActiveSv}
+              />
+            ))}
+          </Svg>
+        </View>
+      </View>
+    );
+  }
+
+  if (variant === 'forest') {
+    const trunks = [48, 88, 128, 168] as const;
+
+    return (
+      <View {...skipA11yNode()} style={styles.frame}>
+        <View style={styles.svgWrap}>
+          <Svg width="100%" height="100%" viewBox="0 0 220 120" preserveAspectRatio="xMidYMid meet">
+            <Path
+              d="M0 96 C70 88 150 102 220 94"
+              stroke={hexToRgba(forestTone, 0.2)}
+              strokeWidth={1.2}
+              fill="none"
+            />
+            {trunks.map((x) => (
+              <Path
+                key={x}
+                d={`M${x} 96 L${x} 54`}
+                stroke={hexToRgba(forestTone, 0.32)}
+                strokeWidth={2}
+                strokeLinecap="round"
+                fill="none"
+              />
+            ))}
+            <BrownBlob
+              cx={72}
+              cy={46}
+              r={14}
+              fill={hexToRgba(sage, 0.18)}
+              staticOpacity={0.18}
+              driver={swell}
+              motionActive={motionActiveSv}
+            />
+            <BrownBlob
+              cx={118}
+              cy={40}
+              r={18}
+              fill={hexToRgba(sage, 0.14)}
+              staticOpacity={0.14}
+              driver={wave}
+              motionActive={motionActiveSv}
+            />
+            <BrownBlob
+              cx={158}
+              cy={48}
+              r={12}
+              fill={hexToRgba(cool, 0.16)}
+              staticOpacity={0.16}
+              driver={swell}
+              motionActive={motionActiveSv}
+            />
+          </Svg>
+        </View>
+      </View>
+    );
+  }
 
   if (variant === 'melody') {
     const highlight = theme.colors.highlight;
@@ -138,9 +258,8 @@ export function ListenGraphic({ variant, motionActive = true }: Props) {
 
     return (
       <View {...skipA11yNode()} style={styles.frame}>
-        <Animated.View style={[styles.svgWrap, svgMotion]}>
+        <View style={styles.svgWrap}>
           <Svg width="100%" height="100%" viewBox="0 0 220 120" preserveAspectRatio="xMidYMid meet">
-            <Rect x="0" y="0" width="220" height="120" fill={hexToRgba(surface, 0.32)} />
             <BrownBlob
               cx={88}
               cy={56}
@@ -169,49 +288,33 @@ export function ListenGraphic({ variant, motionActive = true }: Props) {
               motionActive={motionActiveSv}
             />
           </Svg>
-        </Animated.View>
+        </View>
       </View>
     );
   }
 
   if (variant === 'white') {
-    const cool = theme.colors.cool;
-    const surface = theme.colors.surfaceSecondary;
+    const lines = [32, 48, 64, 80, 96] as const;
 
     return (
       <View {...skipA11yNode()} style={styles.frame}>
-        <Animated.View style={[styles.svgWrap, svgMotion]}>
+        <View style={styles.svgWrap}>
           <Svg width="100%" height="100%" viewBox="0 0 220 120" preserveAspectRatio="xMidYMid meet">
-            <Rect x="0" y="0" width="220" height="120" fill={hexToRgba(surface, 0.35)} />
-            <BrownBlob
-              cx={70}
-              cy={58}
-              r={52}
-              fill={hexToRgba(cool, 0.16)}
-              staticOpacity={0.16}
-              driver={swell}
-              motionActive={motionActiveSv}
-            />
-            <BrownBlob
-              cx={138}
-              cy={52}
-              r={44}
-              fill={hexToRgba(cool, 0.12)}
-              staticOpacity={0.12}
-              driver={wave}
-              motionActive={motionActiveSv}
-            />
-            <BrownBlob
-              cx={112}
-              cy={78}
-              r={36}
-              fill={hexToRgba(surface, 0.28)}
-              staticOpacity={0.28}
-              driver={swell}
-              motionActive={motionActiveSv}
-            />
+            {lines.map((y, index) => (
+              <FanWavePath
+                key={y}
+                d={`M24 ${y} L196 ${y}`}
+                width={1}
+                stroke={hexToRgba(cool, 0.22)}
+                base={0.1 + index * 0.04}
+                useWave={index % 2 === 0}
+                wave={wave}
+                swell={swell}
+                motionActive={motionActiveSv}
+              />
+            ))}
           </Svg>
-        </Animated.View>
+        </View>
       </View>
     );
   }
@@ -219,21 +322,92 @@ export function ListenGraphic({ variant, motionActive = true }: Props) {
   if (variant === 'birds') {
     const sage = theme.colors.secondaryGreen;
     const cool = theme.colors.cool;
-    const sky = hexToRgba(theme.colors.surface, 0.2);
+    return (
+      <View {...skipA11yNode()} style={styles.frame}>
+        <View style={styles.svgWrap}>
+          <Svg width="100%" height="100%" viewBox="0 0 220 120" preserveAspectRatio="xMidYMid meet">
+            <Path
+              d="M168 18 L198 28 L192 34 L162 26 Z"
+              fill={hexToRgba(sage, 0.22)}
+              stroke={hexToRgba(sage, 0.32)}
+              strokeWidth={0.8}
+            />
+            <Path
+              d="M178 26 c14 8 28 6 38 -2"
+              stroke={hexToRgba(sage, 0.38)}
+              strokeWidth={1.2}
+              fill="none"
+              strokeLinecap="round"
+            />
+            <BrownBlob
+              cx={38}
+              cy={33}
+              r={5}
+              fill={hexToRgba(cool, 0.42)}
+              staticOpacity={0.42}
+              driver={wave}
+              motionActive={motionActiveSv}
+            />
+            <BrownBlob
+              cx={94}
+              cy={26}
+              r={5.5}
+              fill={hexToRgba(sage, 0.38)}
+              staticOpacity={0.38}
+              driver={swell}
+              motionActive={motionActiveSv}
+            />
+            <BrownBlob
+              cx={150}
+              cy={37}
+              r={4.5}
+              fill={hexToRgba(cool, 0.34)}
+              staticOpacity={0.34}
+              driver={wave}
+              motionActive={motionActiveSv}
+            />
+            <Path
+              d="M24 108 L196 108"
+              stroke={hexToRgba(sage, 0.12)}
+              strokeWidth={1}
+              fill="none"
+            />
+          </Svg>
+        </View>
+      </View>
+    );
+  }
+
+  if (variant === 'fan') {
+    const cool = theme.colors.cool;
+    const sage = theme.colors.secondaryGreen;
+    const air = [
+      { d: 'M28 24 C52 48 52 72 28 96', width: 1.3, base: 0.42 },
+      { d: 'M56 20 C78 44 78 76 56 100', width: 1.5, base: 0.52 },
+      { d: 'M84 26 C104 50 104 70 84 94', width: 1.2, base: 0.38 },
+      { d: 'M112 22 C132 46 132 74 112 98', width: 1.4, base: 0.48 },
+      { d: 'M140 28 C158 50 158 70 140 92', width: 1.15, base: 0.36 },
+    ] as const;
 
     return (
       <View {...skipA11yNode()} style={styles.frame}>
-        <Animated.View style={[styles.svgWrap, svgMotion]}>
+        <View style={styles.svgWrap}>
           <Svg width="100%" height="100%" viewBox="0 0 220 120" preserveAspectRatio="xMidYMid meet">
-            <Rect x="0" y="0" width="220" height="120" fill={sky} />
-            <Path d="M0 88 C60 72 120 96 220 80" stroke={hexToRgba(sage, 0.28)} strokeWidth={1.2} fill="none" />
-            <Path d="M42 36 c8 -6 16 -6 24 0" stroke={hexToRgba(cool, 0.55)} strokeWidth={1.4} fill="none" strokeLinecap="round" />
-            <Path d="M98 28 c10 -7 20 -7 30 0" stroke={hexToRgba(sage, 0.5)} strokeWidth={1.3} fill="none" strokeLinecap="round" />
-            <Path d="M152 42 c7 -5 14 -5 21 0" stroke={hexToRgba(cool, 0.45)} strokeWidth={1.2} fill="none" strokeLinecap="round" />
-            <Circle cx={54} cy={92} r={3} fill={hexToRgba(sage, 0.35)} />
-            <Circle cx={168} cy={86} r={2.5} fill={hexToRgba(cool, 0.3)} />
+            {air.map((item, index) => (
+              <FanWavePath
+                key={item.d}
+                d={item.d}
+                width={item.width}
+                stroke={index % 2 === 0 ? cool : sage}
+                base={item.base}
+                useWave={index % 2 === 0}
+                wave={wave}
+                swell={swell}
+                motionActive={motionActiveSv}
+              />
+            ))}
           </Svg>
-        </Animated.View>
+        </View>
       </View>
     );
   }
@@ -249,7 +423,7 @@ export function ListenGraphic({ variant, motionActive = true }: Props) {
 
     return (
       <View {...skipA11yNode()} style={styles.frame}>
-        <Animated.View style={[styles.svgWrap, svgMotion]}>
+        <View style={styles.svgWrap}>
           <Svg width="100%" height="100%" viewBox="0 0 220 120" preserveAspectRatio="xMidYMid meet">
             {streams.map((item, index) => (
               <FanWavePath
@@ -265,7 +439,7 @@ export function ListenGraphic({ variant, motionActive = true }: Props) {
               />
             ))}
           </Svg>
-        </Animated.View>
+        </View>
       </View>
     );
   }
@@ -277,9 +451,8 @@ export function ListenGraphic({ variant, motionActive = true }: Props) {
 
     return (
       <View {...skipA11yNode()} style={styles.frame}>
-        <Animated.View style={[styles.svgWrap, svgMotion]}>
+        <View style={styles.svgWrap}>
           <Svg width="100%" height="100%" viewBox="0 0 220 120" preserveAspectRatio="xMidYMid meet">
-            <Rect x="0" y="0" width="220" height="120" fill={hexToRgba(clay, 0.18)} />
             <BrownBlob
               cx={58}
               cy={64}
@@ -317,46 +490,25 @@ export function ListenGraphic({ variant, motionActive = true }: Props) {
               motionActive={motionActiveSv}
             />
           </Svg>
-        </Animated.View>
+        </View>
       </View>
     );
   }
 
-  const cool = theme.colors.cool;
-  const sage = theme.colors.secondaryGreen;
-
-  return (
-    <View {...skipA11yNode()} style={styles.frame}>
-      <Animated.View style={[styles.svgWrap, svgMotion]}>
-        <Svg width="100%" height="100%" viewBox="0 0 220 120" preserveAspectRatio="xMidYMid meet">
-          {FAN_WAVES.map((item, index) => (
-            <FanWavePath
-              key={item.d}
-              d={item.d}
-              width={item.width}
-              stroke={index % 2 === 0 ? cool : sage}
-              base={item.base}
-              useWave={item.useWave}
-              wave={wave}
-              swell={swell}
-              motionActive={motionActiveSv}
-            />
-          ))}
-        </Svg>
-      </Animated.View>
-    </View>
-  );
+  return null;
 }
 
 const styles = StyleSheet.create({
   frame: {
-    flex: 1,
     width: '100%',
+    maxHeight: '100%',
     alignItems: 'center',
     justifyContent: 'center',
   },
   svgWrap: {
-    flex: 1,
     width: '100%',
+    maxWidth: 320,
+    aspectRatio: 220 / 120,
+    alignSelf: 'center',
   },
 });

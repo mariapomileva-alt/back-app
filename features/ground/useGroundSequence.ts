@@ -7,6 +7,7 @@ import {
   stepsForGroundSequence,
   type GroundSequenceId,
 } from '@/features/ground/steps';
+import { INSTRUCTION_CROSSFADE_LOCK_MS } from '@/features/ground/transitions';
 import { useHaptics } from '@/hooks/useHaptics';
 
 function isForeground(state: AppStateStatus): boolean {
@@ -23,26 +24,52 @@ export function useGroundSequence(
   const haptics = useHaptics();
   const steps = stepsForGroundSequence(sequenceId);
   const [index, setIndex] = useState(0);
-  const [activeId, setActiveId] = useState(sequenceId);
-  const [forwardTransition, setForwardTransition] = useState(false);
+  const [crossfadeBusy, setCrossfadeBusy] = useState(false);
   const [stepEnter, setStepEnter] = useState<'none' | 'forward' | 'back'>('none');
-  if (activeId !== sequenceId) {
-    setActiveId(sequenceId);
+
+  useEffect(() => {
     setIndex(0);
-    setForwardTransition(false);
+    setCrossfadeBusy(false);
     setStepEnter('none');
-  }
+  }, [sequenceId]);
+
   const first = index <= 0;
   const last = index >= steps.length - 1;
   const instructionKey = steps[index] ?? steps[0]!;
   const lightRef = useRef(haptics.light);
+  const crossfadeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
     lightRef.current = haptics.light;
   }, [haptics.light]);
 
+  const advanceStep = useCallback(() => {
+    if (last) {
+      return;
+    }
+    lightRef.current();
+    setCrossfadeBusy(true);
+    setStepEnter('forward');
+    setIndex((current) => Math.min(current + 1, steps.length - 1));
+    if (crossfadeTimerRef.current) {
+      clearTimeout(crossfadeTimerRef.current);
+    }
+    crossfadeTimerRef.current = setTimeout(() => {
+      setCrossfadeBusy(false);
+      crossfadeTimerRef.current = null;
+    }, INSTRUCTION_CROSSFADE_LOCK_MS);
+  }, [last, steps.length]);
+
   useEffect(() => {
-    if (paused || last || forwardTransition) {
+    return () => {
+      if (crossfadeTimerRef.current) {
+        clearTimeout(crossfadeTimerRef.current);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    if (paused || last || crossfadeBusy) {
       return;
     }
 
@@ -65,8 +92,7 @@ export function useGroundSequence(
         if (cancelled) {
           return;
         }
-        lightRef.current();
-        setForwardTransition(true);
+        advanceStep();
       }, remaining);
     };
 
@@ -96,29 +122,22 @@ export function useGroundSequence(
       clear();
       subscription.remove();
     };
-  }, [forwardTransition, index, last, paused, steps.length]);
-
-  const finishForwardTransition = useCallback(() => {
-    setForwardTransition(false);
-    setStepEnter('forward');
-    setIndex((current) => Math.min(current + 1, steps.length - 1));
-  }, [steps.length]);
+  }, [advanceStep, crossfadeBusy, index, last, paused, steps.length]);
 
   const acknowledgeStepEnter = useCallback(() => {
     setStepEnter('none');
   }, []);
 
   const next = useCallback(() => {
-    if (last || forwardTransition) {
+    if (last || crossfadeBusy) {
       return;
     }
-    lightRef.current();
-    setForwardTransition(true);
-  }, [forwardTransition, last]);
+    advanceStep();
+  }, [advanceStep, crossfadeBusy, last]);
 
   const prev = useCallback(() => {
-    if (forwardTransition) {
-      setForwardTransition(false);
+    if (crossfadeBusy) {
+      return;
     }
     setIndex((current) => {
       if (current <= 0) {
@@ -126,12 +145,20 @@ export function useGroundSequence(
       }
       lightRef.current();
       setStepEnter('back');
+      setCrossfadeBusy(true);
+      if (crossfadeTimerRef.current) {
+        clearTimeout(crossfadeTimerRef.current);
+      }
+      crossfadeTimerRef.current = setTimeout(() => {
+        setCrossfadeBusy(false);
+        crossfadeTimerRef.current = null;
+      }, INSTRUCTION_CROSSFADE_LOCK_MS);
       return current - 1;
     });
-  }, [forwardTransition]);
+  }, [crossfadeBusy]);
 
   const reset = useCallback(() => {
-    setForwardTransition(false);
+    setCrossfadeBusy(false);
     setStepEnter('none');
     setIndex(0);
   }, []);
@@ -141,12 +168,10 @@ export function useGroundSequence(
     first,
     last,
     instructionKey,
-    forwardTransition,
     stepEnter,
     next,
     prev,
     reset,
-    finishForwardTransition,
     acknowledgeStepEnter,
   };
 }

@@ -1,41 +1,45 @@
 import { useEffect } from 'react';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, type StyleProp, type ViewStyle } from 'react-native';
 import Animated, {
   Easing,
-  ReduceMotion,
   useAnimatedStyle,
   useSharedValue,
   withTiming,
 } from 'react-native-reanimated';
 
 import { ListenGraphic } from '@/components/listen/ListenGraphic';
-import { ListenVisualAmbientMotion } from '@/components/listen/ListenVisualAmbientMotion';
-import { AtmosphericImage } from '@/components/media/AtmosphericImage';
+import { ListenPremiumVisual } from '@/components/listen/ListenPremiumVisual';
+import { listenPremiumVisual } from '@/features/listen/premiumVisuals';
 import { listenGraphicVariantFor, type ListenSound } from '@/features/listen/sounds';
 import { useReduceMotion } from '@/hooks/useReduceMotion';
 import { t } from '@/locales/i18n';
 
 type Props = {
   sound: ListenSound;
+  /** Fixed band height when the stage scrolls or on short layouts. */
   height: number;
-  /** Drives ambient drift while the session is playing. */
-  motionActive?: boolean;
+  /** Grow with free space between title and transport (default Listen layout). */
+  fill?: boolean;
+  width?: number;
+  style?: StyleProp<ViewStyle>;
 };
 
-export function ListenSoundVisual({ sound, height, motionActive = true }: Props) {
+/** Main Listen stage — runtime-trimmed art at responsive size; PNG when Reduce Motion. */
+export function ListenSoundVisual({ sound, height, fill = false, width, style }: Props) {
   const reduceMotion = useReduceMotion();
   const reveal = useSharedValue(1);
+  const premium = listenPremiumVisual(sound.id);
+  const label = t(sound.imageLabelKey);
 
   useEffect(() => {
     if (reduceMotion) {
       reveal.value = 1;
       return;
     }
-    reveal.value = 0.82;
+    reveal.value = 0.94;
     reveal.value = withTiming(1, {
-      duration: 640,
+      duration: 420,
       easing: Easing.inOut(Easing.quad),
-      reduceMotion: ReduceMotion.Never,
     });
   }, [reduceMotion, reveal, sound.id]);
 
@@ -43,44 +47,38 @@ export function ListenSoundVisual({ sound, height, motionActive = true }: Props)
     opacity: reveal.value,
   }));
 
-  if (sound.treatment === 'photo' && sound.image) {
-    return (
-      <Animated.View style={[styles.frame, { height }, crossfadeStyle]}>
-        <AtmosphericImage
-          source={sound.image}
-          accessibilityLabel={t(sound.imageLabelKey)}
-          height={height}
-          treatment="photo"
-          ambientMotion
-          ambientMotionActive={motionActive}
-        />
-      </Animated.View>
-    );
-  }
-
   return (
     <Animated.View
-      accessible
-      accessibilityRole="image"
-      accessibilityLabel={t(sound.imageLabelKey)}
-      style={[styles.frame, styles.graphic, { height }, crossfadeStyle]}
+      accessible={!premium}
+      accessibilityRole={premium ? undefined : 'image'}
+      accessibilityLabel={premium ? undefined : label}
+      importantForAccessibility={premium ? 'no-hide-descendants' : 'auto'}
+      style={[
+        styles.slot,
+        fill ? styles.slotFill : width != null ? { width, height } : { height },
+        style,
+        crossfadeStyle,
+      ]}
     >
-      <ListenVisualAmbientMotion active={motionActive} style={styles.fill}>
-        <ListenGraphic variant={listenGraphicVariantFor(sound)} motionActive={motionActive} />
-      </ListenVisualAmbientMotion>
+      {premium ? (
+        <ListenPremiumVisual assets={premium} reduceMotion={reduceMotion} />
+      ) : (
+        <ListenGraphic variant={listenGraphicVariantFor(sound)} motionActive={false} />
+      )}
     </Animated.View>
   );
 }
 
 const styles = StyleSheet.create({
-  frame: {
+  slot: {
     width: '100%',
     alignSelf: 'center',
+    backgroundColor: 'transparent',
+    overflow: 'visible',
   },
-  graphic: {
-    minHeight: 0,
-  },
-  fill: {
+  slotFill: {
     flex: 1,
+    minHeight: 0,
+    height: '100%',
   },
 });

@@ -1,98 +1,138 @@
-import { useEffect, useRef } from 'react';
-import { ScrollView, StyleSheet } from 'react-native';
+import { useCallback, useEffect, useRef } from 'react';
+import { ScrollView, StyleSheet, View } from 'react-native';
 
 import { AccessiblePressable } from '@/components/accessibility/AccessiblePressable';
+import { HorizontalTextCarouselFrame } from '@/components/session/HorizontalTextCarouselFrame';
 import { AppText } from '@/components/typography/AppText';
-import { listenSounds, type ListenSoundId } from '@/features/listen/sounds';
+import { listenPickerSounds, type ListenSoundId } from '@/features/listen/sounds';
+import { useHaptics } from '@/hooks/useHaptics';
 import { useTheme } from '@/hooks/useTheme';
 import { t } from '@/locales/i18n';
-import { radius } from '@/theme/radius';
+import {
+  SECONDARY_CONTROL_LABEL_OPACITY,
+  secondaryControlLabelColor,
+} from '@/theme/secondaryControlText';
 import { spacing, touch } from '@/theme/spacing';
 
 type Props = {
   soundId: ListenSoundId;
   onSelect: (id: ListenSoundId) => void;
-  marginTop?: number;
 };
 
-export function ListenSoundPicker({ soundId, onSelect, marginTop }: Props) {
-  const { theme } = useTheme();
-  const scrollRef = useRef<ScrollView>(null);
-  const chipX = useRef<Partial<Record<ListenSoundId, number>>>({});
+const ITEM_MIN_WIDTH = 108;
+const ITEM_GAP = spacing.sm;
 
-  const revealSelectedChip = (id: ListenSoundId, animated = true) => {
-    const x = chipX.current[id];
+export function ListenSoundPicker({ soundId, onSelect }: Props) {
+  const { theme } = useTheme();
+  const haptics = useHaptics();
+  const scrollRef = useRef<ScrollView>(null);
+  const itemX = useRef<Partial<Record<ListenSoundId, number>>>({});
+
+  const scrollToId = useCallback((id: ListenSoundId, animated: boolean) => {
+    const x = itemX.current[id];
     if (x == null) {
       return;
     }
-    scrollRef.current?.scrollTo({ x: Math.max(0, x - spacing.sm), animated });
-  };
+    const target = Math.max(0, x - spacing.lg);
+    scrollRef.current?.scrollTo({ x: target, animated });
+  }, []);
 
   useEffect(() => {
-    revealSelectedChip(soundId, true);
-  }, [soundId]);
+    scrollToId(soundId, true);
+  }, [scrollToId, soundId]);
 
   return (
-    <ScrollView
-      ref={scrollRef}
-      horizontal
-      accessibilityRole="radiogroup"
-      accessibilityLabel={t('listen.chooseSound')}
-      showsHorizontalScrollIndicator={false}
-      contentContainerStyle={[styles.content, marginTop != null ? { marginTop } : undefined]}
-      style={styles.scroll}
-    >
-      {listenSounds.map((sound) => {
-        const active = sound.id === soundId;
+    <HorizontalTextCarouselFrame>
+      <ScrollView
+        ref={scrollRef}
+        horizontal
+        accessibilityRole="radiogroup"
+        accessibilityLabel={t('listen.menu')}
+        showsHorizontalScrollIndicator={false}
+        contentContainerStyle={styles.content}
+        style={styles.scroll}
+      >
+        {listenPickerSounds.map((sound, index) => {
+        const selected = sound.id === soundId;
+        const label = t(sound.nameKey);
         return (
           <AccessiblePressable
             key={sound.id}
             accessibilityRole="radio"
-            accessibilityState={{ selected: active }}
-            accessibilityLabel={
-              active ? `${t(sound.nameKey)}, ${t('common.selected')}` : t(sound.nameKey)
-            }
-            onPress={() => onSelect(sound.id)}
+            accessibilityLabel={label}
+            accessibilityHint={t('listen.soundHint')}
+            accessibilityState={{ selected }}
             onLayout={(event) => {
-              chipX.current[sound.id] = event.nativeEvent.layout.x;
+              itemX.current[sound.id] = event.nativeEvent.layout.x;
               if (sound.id === soundId) {
-                revealSelectedChip(sound.id, false);
+                scrollToId(sound.id, false);
               }
             }}
-            style={[
-              styles.chip,
-              {
-                backgroundColor: active ? theme.colors.surfaceSecondary : 'transparent',
-                borderColor: active ? theme.colors.primary : theme.colors.border,
-              },
-            ]}
+            onPress={() => {
+              if (selected) {
+                return;
+              }
+              haptics.selection();
+              onSelect(sound.id);
+            }}
+            style={[styles.item, index > 0 ? { marginLeft: ITEM_GAP } : null]}
           >
-            <AppText variant="body">{t(sound.nameKey)}</AppText>
+            <AppText
+              variant="secondary"
+              numberOfLines={2}
+              style={[
+                styles.label,
+                {
+                  color: selected ? theme.colors.text : secondaryControlLabelColor(theme),
+                  fontWeight: selected ? '500' : '400',
+                  opacity: selected ? 1 : SECONDARY_CONTROL_LABEL_OPACITY,
+                },
+              ]}
+            >
+              {label}
+            </AppText>
+            <View
+              style={[
+                styles.mark,
+                {
+                  backgroundColor: selected ? theme.colors.text : 'transparent',
+                },
+              ]}
+            />
           </AccessiblePressable>
         );
-      })}
-    </ScrollView>
+        })}
+      </ScrollView>
+    </HorizontalTextCarouselFrame>
   );
 }
 
 const styles = StyleSheet.create({
   scroll: {
+    width: '100%',
     flexGrow: 0,
-    flexShrink: 0,
+    marginTop: spacing.md,
+    opacity: 0.92,
   },
   content: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: spacing.sm,
-    paddingVertical: spacing.xxs,
-    paddingHorizontal: spacing.xxs,
+    paddingLeft: spacing.lg,
+    paddingRight: spacing.xl + spacing.lg,
+    alignItems: 'stretch',
   },
-  chip: {
+  item: {
+    minWidth: ITEM_MIN_WIDTH,
     minHeight: touch.min,
-    paddingHorizontal: spacing.md,
-    borderRadius: radius.circle,
-    borderWidth: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    paddingHorizontal: spacing.xs,
+    gap: 6,
+  },
+  label: {
+    textAlign: 'center',
+  },
+  mark: {
+    width: 16,
+    height: 1,
+    borderRadius: 1,
   },
 });

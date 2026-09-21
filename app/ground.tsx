@@ -1,39 +1,33 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { Animated, Easing, Platform, Pressable, StyleSheet, useWindowDimensions } from 'react-native';
+import { Pressable, StyleSheet, useWindowDimensions } from 'react-native';
 
 import { AudioControl } from '@/components/audio/AudioControl';
 import { GroundSfxMuteButton } from '@/components/ground/GroundSfxMuteButton';
+import { GroundSequencePicker } from '@/components/ground/GroundSequencePicker';
 import { GroundStage } from '@/components/ground/GroundStage';
 import { ActiveSessionScreen } from '@/components/session/ActiveSessionScreen';
-import { SessionChoiceSheet } from '@/components/session/SessionChoiceSheet';
-import { AppText } from '@/components/typography/AppText';
+import { CrossfadeInstructionText } from '@/components/typography/CrossfadeInstructionText';
 import { groundAudio } from '@/features/ground/audio';
 import {
   defaultGroundSequenceId,
-  groundSequenceIds,
-  isGroundSequenceId,
   type GroundSequenceId,
 } from '@/features/ground/steps';
-import {
-  GROUND_INSTRUCTION_DIM,
-  GROUND_INSTRUCTION_FADE_IN_MS,
-  GROUND_INSTRUCTION_FADE_OUT_MS,
-} from '@/features/ground/transitions';
 import { useGroundSequence } from '@/features/ground/useGroundSequence';
 import { useGroundAmbient } from '@/hooks/useGroundAmbient';
 import { usePaidToolGate } from '@/hooks/usePaidToolGate';
 import { useGuidedAudio } from '@/hooks/useGuidedAudio';
-import { useReduceMotion } from '@/hooks/useReduceMotion';
 import { t } from '@/locales/i18n';
 import { loadSoundMuted } from '@/storage/preferences';
+import { useTheme } from '@/hooks/useTheme';
 import { serif } from '@/theme/fonts';
 import { spacing } from '@/theme/spacing';
 
 export default function GroundScreen() {
   usePaidToolGate();
-  const reduceMotion = useReduceMotion();
+  const { theme } = useTheme();
   const { height, fontScale } = useWindowDimensions();
   const compact = height < 700 || fontScale > 1.35;
+  const needsScroll = height < 640 || fontScale > 1.85;
   const [soundMuted, setSoundMuted] = useState(false);
   const narrationReady = groundAudio.ready;
   const audio = useGuidedAudio({
@@ -43,17 +37,10 @@ export default function GroundScreen() {
   });
   const [paused, setPaused] = useState(false);
   const [sequenceId, setSequenceId] = useState<GroundSequenceId>(defaultGroundSequenceId);
-  const [chooserOpen, setChooserOpen] = useState(false);
-  const {
-    instructionKey,
-    last,
-    next,
-    prev,
-    forwardTransition,
-    stepEnter,
-    finishForwardTransition,
-    acknowledgeStepEnter,
-  } = useGroundSequence(paused, sequenceId);
+  const { instructionKey, last, next, prev, stepEnter, acknowledgeStepEnter } = useGroundSequence(
+    paused,
+    sequenceId,
+  );
   const groundAmbient = useGroundAmbient({
     paused,
     masterMuted: soundMuted || audio.muted,
@@ -62,9 +49,6 @@ export default function GroundScreen() {
     groundAmbient;
   const instruction = t(instructionKey);
   const skipSequenceAudioReset = useRef(true);
-  const [instructionOpacity] = useState(() => new Animated.Value(1));
-  const instructionKeyRef = useRef(instructionKey);
-  const useNativeDriver = Platform.OS !== 'web';
 
   useEffect(() => {
     let cancelled = false;
@@ -77,46 +61,6 @@ export default function GroundScreen() {
       cancelled = true;
     };
   }, []);
-
-  useEffect(() => {
-    if (!forwardTransition) {
-      return;
-    }
-    Animated.timing(instructionOpacity, {
-      toValue: GROUND_INSTRUCTION_DIM,
-      duration: GROUND_INSTRUCTION_FADE_OUT_MS,
-      easing: Easing.out(Easing.quad),
-      useNativeDriver,
-    }).start();
-  }, [forwardTransition, instructionOpacity, useNativeDriver]);
-
-  useEffect(() => {
-    if (!forwardTransition) {
-      return;
-    }
-    const timeout = setTimeout(() => {
-      finishForwardTransition();
-    }, GROUND_INSTRUCTION_FADE_OUT_MS);
-    return () => clearTimeout(timeout);
-  }, [finishForwardTransition, forwardTransition]);
-
-  useEffect(() => {
-    if (instructionKeyRef.current === instructionKey) {
-      return;
-    }
-    instructionKeyRef.current = instructionKey;
-    if (stepEnter === 'forward' || reduceMotion) {
-      instructionOpacity.setValue(GROUND_INSTRUCTION_DIM);
-      Animated.timing(instructionOpacity, {
-        toValue: 1,
-        duration: GROUND_INSTRUCTION_FADE_IN_MS,
-        easing: Easing.out(Easing.quad),
-        useNativeDriver,
-      }).start();
-    } else {
-      instructionOpacity.setValue(1);
-    }
-  }, [instructionKey, instructionOpacity, reduceMotion, stepEnter, useNativeDriver]);
 
   useEffect(() => {
     if (stepEnter !== 'forward') {
@@ -164,18 +108,15 @@ export default function GroundScreen() {
   const goNext = useCallback(() => withSfxUnlock(next), [next, withSfxUnlock]);
   const goPrev = useCallback(() => withSfxUnlock(prev), [prev, withSfxUnlock]);
 
-  const openChooser = () => setChooserOpen(true);
-
   const selectSequence = (id: GroundSequenceId) => {
     setSequenceId(id);
     setPaused(false);
-    setChooserOpen(false);
   };
 
   return (
     <ActiveSessionScreen
       tool="ground"
-      scroll={false}
+      scroll={needsScroll}
       title={t('home.tools.ground')}
       right={
         <GroundSfxMuteButton
@@ -186,60 +127,53 @@ export default function GroundScreen() {
           }}
         />
       }
-      onTryAnother={openChooser}
-      tryAnotherHint={t('ground.tryAnotherHint')}
       backClosesSession
-      backNavigates={chooserOpen}
-      onBack={chooserOpen ? () => setChooserOpen(false) : undefined}
+      extraActions={
+        <GroundSequencePicker
+          selectedId={sequenceId}
+          onSelect={(id) => {
+            unlockFromUserGesture();
+            selectSequence(id);
+          }}
+        />
+      }
     >
       <>
+        <Pressable
+          accessibilityRole="none"
+          importantForAccessibility="no-hide-descendants"
+          onPress={unlockFromUserGesture}
+          style={[styles.stage, compact && styles.stageCompact, needsScroll && styles.stageScroll]}
+        >
+          <GroundStage sequenceId={sequenceId} stepKey={instructionKey} paused={paused} />
           <Pressable
-            accessibilityRole="none"
-            importantForAccessibility="no-hide-descendants"
-            onPress={unlockFromUserGesture}
-            style={[styles.stage, compact && styles.stageCompact]}
+            accessibilityRole={last ? 'text' : 'button'}
+            accessibilityLabel={instruction}
+            accessibilityHint={last ? undefined : t('ground.continueHint')}
+            onPress={last ? undefined : goNext}
+            style={[styles.instructionHit, compact && styles.instructionHitCompact]}
           >
-            <GroundStage stepKey={instructionKey} paused={paused} />
-            <Pressable
-              accessibilityRole={last ? 'text' : 'button'}
-              accessibilityLabel={instruction}
-              accessibilityHint={last ? undefined : t('ground.continueHint')}
-              onPress={last ? undefined : goNext}
-              style={[styles.instructionHit, compact && styles.instructionHitCompact]}
+            <CrossfadeInstructionText
+              contentKey={instructionKey}
+              variant="instruction"
+              accessibilityLiveRegion="polite"
+              style={[
+                styles.instruction,
+                { color: theme.colors.text },
+                compact && styles.instructionCompact,
+              ]}
+              minHeight={compact ? 102 : 132}
             >
-              <Animated.View style={{ opacity: instructionOpacity }}>
-                <AppText
-                  variant="instruction"
-                  accessibilityLiveRegion="polite"
-                  accessible={false}
-                  style={[styles.instruction, compact && styles.instructionCompact]}
-                >
-                  {instruction}
-                </AppText>
-              </Animated.View>
-            </Pressable>
-            <AudioControl
-              isPlaying={!paused}
-              onPlayPause={onPlayPause}
-              onPrevious={goPrev}
-              onNext={goNext}
-            />
+              {instruction}
+            </CrossfadeInstructionText>
           </Pressable>
-          <SessionChoiceSheet
-            visible={chooserOpen}
-            title={t('ground.menu')}
-            selectedId={sequenceId}
-            options={groundSequenceIds.map((id) => ({
-              id,
-              label: t(`ground.sequences.${id}`),
-            }))}
-            onSelect={(id) => {
-              if (isGroundSequenceId(id)) {
-                selectSequence(id);
-              }
-            }}
-            onDismiss={() => setChooserOpen(false)}
+          <AudioControl
+            isPlaying={!paused}
+            onPlayPause={onPlayPause}
+            onPrevious={goPrev}
+            onNext={goNext}
           />
+        </Pressable>
       </>
     </ActiveSessionScreen>
   );
@@ -252,9 +186,16 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     paddingBottom: spacing.md,
+    overflow: 'visible',
   },
   stageCompact: {
     paddingBottom: spacing.xs,
+  },
+  stageScroll: {
+    flexGrow: 1,
+    flex: undefined,
+    minHeight: undefined,
+    paddingBottom: spacing.md,
   },
   instructionHit: {
     width: '100%',

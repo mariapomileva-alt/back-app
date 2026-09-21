@@ -1,7 +1,9 @@
-import { Linking, ScrollView, StyleSheet, View } from 'react-native';
+import { Linking, Platform, ScrollView, StyleSheet, View } from 'react-native';
 import { useRouter } from 'expo-router';
 
+import { BackPlusActivePlanCard } from '@/components/subscription/BackPlusActivePlanCard';
 import { BackPlusPlanPlaceholder } from '@/components/subscription/BackPlusPlanPlaceholder';
+import { PrimaryButton } from '@/components/buttons/PrimaryButton';
 import { SecondaryButton } from '@/components/buttons/SecondaryButton';
 import { TextButton } from '@/components/buttons/TextButton';
 import { ScreenContainer } from '@/components/layout/ScreenContainer';
@@ -12,7 +14,7 @@ import {
   plannedBackPlusBenefits,
   releasedBackPlusBenefits,
 } from '@/config/backPlus';
-import { formatBackPlusDate } from '@/features/subscription/formatBackPlusDate';
+import { openManageSubscription } from '@/features/subscription/openManageSubscription';
 import { useBackPlusAccess } from '@/features/subscription/useBackPlusAccess';
 import { t } from '@/locales/i18n';
 import { spacing, touch } from '@/theme/spacing';
@@ -45,32 +47,19 @@ export default function SubscriptionScreen() {
     router.replace('/settings');
   };
 
-  const isActive = accessState === 'trialActive' || accessState === 'subscribed';
+  const isSubscribed = accessState === 'subscribed';
+  const isTrial = accessState === 'trialActive';
+  const isActive = isSubscribed || isTrial;
   const isExpired = accessState === 'expired';
+  const isEligible = accessState === 'none';
   const isUnavailable = accessState === 'unavailable';
-  const dateLabel =
-    renewalOrExpirationDate !== null ? formatBackPlusDate(renewalOrExpirationDate) : null;
+  const renewalDate = renewalOrExpirationDate;
+  const activePlan = plan ?? 'annual';
 
-  const headlineKey = isActive
-    ? 'subscription.headlineActive'
-    : isExpired
-      ? 'subscription.headlineExpired'
-      : 'subscription.headline';
-
-  const introKey = isActive
-    ? accessState === 'trialActive'
-      ? 'subscription.introTrialActive'
-      : plan === 'monthly'
-        ? 'subscription.introMonthlyActive'
-        : 'subscription.introAnnualActive'
-    : isExpired
-      ? 'subscription.introExpired'
-      : isUnavailable
-        ? 'subscription.introPreparing'
-        : 'subscription.intro';
+  const showManagePreviewNote = isActive && (!storePurchasesAvailable || Platform.OS === 'web');
 
   return (
-    <ScreenContainer scroll={false}>
+    <ScreenContainer scroll={false} phoneWidth>
       <ScreenHeader title={t('settings.backPlus')} />
       <ScrollView
         contentContainerStyle={styles.scrollContent}
@@ -78,28 +67,139 @@ export default function SubscriptionScreen() {
         keyboardShouldPersistTaps="handled"
       >
         <View style={styles.body}>
-          <AppText variant="secondary" tone="secondary">
-            {t('subscription.kicker')}
-          </AppText>
-          <AppText variant="hero" style={styles.headline}>
-            {t(headlineKey)}
-          </AppText>
-          <AppText variant="body" style={styles.copy}>
-            {t(introKey, dateLabel ? { date: dateLabel } : undefined)}
-          </AppText>
-
-          {isActive && dateLabel ? (
-            <AppText variant="body" tone="secondary" style={styles.statusLine}>
-              {accessState === 'trialActive'
-                ? t('subscription.statusTrialEnds', { date: dateLabel })
-                : plan === 'monthly'
-                  ? t('subscription.statusMonthlyRenews', { date: dateLabel })
-                  : t('subscription.statusAnnualRenews', { date: dateLabel })}
-            </AppText>
+          {isActive ? (
+            <>
+              <AppText variant="hero" style={styles.headline}>
+                {t(isTrial ? 'subscription.headlineTrial' : 'subscription.headlineActive')}
+              </AppText>
+              <AppText variant="body" style={styles.copy}>
+                {t(
+                  isTrial ? 'subscription.introTrialActive' : 'subscription.introThankYouActive',
+                )}
+              </AppText>
+              {renewalDate ? (
+                <BackPlusActivePlanCard plan={activePlan} renewalDate={renewalDate} trial={isTrial} />
+              ) : null}
+              {isTrial ? (
+                <AppText variant="body" tone="secondary" style={styles.copy}>
+                  {t('subscription.trialAfterNote')}
+                </AppText>
+              ) : null}
+              <AppText variant="body" style={styles.sectionTitle}>
+                {t('subscription.whatsIncluded')}
+              </AppText>
+              <BenefitList benefitIds={released.map((b) => b.id)} />
+              {planned.length > 0 ? (
+                <>
+                  <AppText variant="secondary" tone="secondary" style={styles.plannedNote}>
+                    {t('subscription.plannedNote')}
+                  </AppText>
+                  <BenefitList benefitIds={planned.map((b) => b.id)} tone="secondary" />
+                </>
+              ) : null}
+              <PrimaryButton
+                label={t(isTrial ? 'subscription.continue' : 'subscription.done')}
+                onPress={close}
+                accessibilityHint={t('subscription.doneHint')}
+                style={styles.primaryAction}
+              />
+              {showManagePreviewNote ? (
+                <AppText variant="secondary" tone="secondary" style={styles.previewNote}>
+                  {t('subscription.managePreviewNote')}
+                </AppText>
+              ) : null}
+              <View style={styles.links}>
+                <TextButton
+                  label={t('subscription.manage')}
+                  onPress={() => openManageSubscription(storePurchasesAvailable)}
+                  style={styles.link}
+                />
+                <TextButton
+                  label={t('subscription.linkSupport')}
+                  onPress={() => {
+                    void Linking.openURL(backPlusLegalUrls.support);
+                  }}
+                  style={styles.link}
+                />
+                <TextButton
+                  label={t('subscription.linkPrivacy')}
+                  onPress={() => {
+                    void Linking.openURL(backPlusLegalUrls.privacy);
+                  }}
+                  style={styles.link}
+                />
+                <TextButton
+                  label={t('subscription.linkTerms')}
+                  onPress={() => {
+                    void Linking.openURL(backPlusLegalUrls.terms);
+                  }}
+                  style={styles.link}
+                />
+              </View>
+            </>
           ) : null}
 
-          {!isActive ? (
+          {isExpired ? (
             <>
+              <AppText variant="hero" style={styles.headline}>
+                {t('subscription.headlineExpired')}
+              </AppText>
+              <AppText variant="body" style={styles.copy}>
+                {t('subscription.introExpired')}
+              </AppText>
+              <PrimaryButton
+                label={t('subscription.choosePlan')}
+                onPress={() => {}}
+                disabled={!storePurchasesAvailable}
+                style={styles.primaryAction}
+              />
+              <TextButton
+                label={t('subscription.restore')}
+                onPress={() => {}}
+                disabled={!storePurchasesAvailable}
+                style={styles.link}
+              />
+              <TextButton
+                label={t('session.emergency')}
+                onPress={() => router.push('/settings/emergency')}
+                style={styles.link}
+              />
+              <SecondaryButton
+                label={t('subscription.notNow')}
+                accessibilityHint={t('subscription.notNowHint')}
+                onPress={close}
+                style={styles.secondaryAction}
+              />
+              <View style={styles.links}>
+                <TextButton
+                  label={t('subscription.linkPrivacy')}
+                  onPress={() => {
+                    void Linking.openURL(backPlusLegalUrls.privacy);
+                  }}
+                  style={styles.link}
+                />
+                <TextButton
+                  label={t('subscription.linkTerms')}
+                  onPress={() => {
+                    void Linking.openURL(backPlusLegalUrls.terms);
+                  }}
+                  style={styles.link}
+                />
+              </View>
+            </>
+          ) : null}
+
+          {isEligible || isUnavailable ? (
+            <>
+              <AppText variant="secondary" tone="secondary">
+                {t('subscription.kicker')}
+              </AppText>
+              <AppText variant="hero" style={styles.headline}>
+                {t('subscription.headline')}
+              </AppText>
+              <AppText variant="body" style={styles.copy}>
+                {t(isUnavailable ? 'subscription.introPreparing' : 'subscription.intro')}
+              </AppText>
               <AppText variant="body" style={styles.sectionTitle}>
                 {t('subscription.benefitsTitle')}
               </AppText>
@@ -112,14 +212,12 @@ export default function SubscriptionScreen() {
                   <BenefitList benefitIds={planned.map((b) => b.id)} tone="secondary" />
                 </>
               ) : null}
-
               <AppText variant="body" style={styles.sectionTitle}>
                 {t('subscription.safetyTitle')}
               </AppText>
               <AppText variant="body" tone="secondary">
                 {t('subscription.safetyBody')}
               </AppText>
-
               {!isExpired ? (
                 <>
                   <AppText variant="body" style={styles.sectionTitle}>
@@ -134,83 +232,75 @@ export default function SubscriptionScreen() {
                     <BackPlusPlanPlaceholder planId="annual" highlight />
                     <BackPlusPlanPlaceholder planId="monthly" />
                   </View>
-                  {!isUnavailable ? (
+                  {isEligible ? (
                     <AppText variant="secondary" tone="secondary">
                       {t('subscription.regionalPricing')}
                     </AppText>
                   ) : null}
                 </>
               ) : null}
+              {isEligible ? (
+                <PrimaryButton
+                  label={t('subscription.startTrial')}
+                  onPress={() => {}}
+                  disabled={!storePurchasesAvailable}
+                  style={styles.primaryAction}
+                />
+              ) : null}
+              {isEligible ? (
+                <TextButton
+                  label={t('subscription.restore')}
+                  onPress={() => {}}
+                  disabled={!storePurchasesAvailable}
+                  style={styles.link}
+                />
+              ) : null}
+              <SecondaryButton
+                label={t('subscription.notNow')}
+                accessibilityHint={t('subscription.notNowHint')}
+                onPress={close}
+                style={styles.secondaryAction}
+              />
+              <View style={styles.links}>
+                <TextButton
+                  label={t('subscription.linkSupport')}
+                  onPress={() => {
+                    void Linking.openURL(backPlusLegalUrls.support);
+                  }}
+                  style={styles.link}
+                />
+                <TextButton
+                  label={t('subscription.linkPrivacy')}
+                  onPress={() => {
+                    void Linking.openURL(backPlusLegalUrls.privacy);
+                  }}
+                  style={styles.link}
+                />
+                <TextButton
+                  label={t('subscription.linkTerms')}
+                  onPress={() => {
+                    void Linking.openURL(backPlusLegalUrls.terms);
+                  }}
+                  style={styles.link}
+                />
+                {!isUnavailable ? (
+                  <TextButton
+                    label={t('subscription.linkSubscriptions')}
+                    onPress={() => {
+                      void Linking.openURL(backPlusLegalUrls.subscriptions);
+                    }}
+                    style={styles.link}
+                  />
+                ) : null}
+              </View>
             </>
           ) : null}
 
-          {isExpired ? (
-            <SecondaryButton
-              label={t('subscription.choosePlan')}
-              onPress={() => {}}
-              disabled={!storePurchasesAvailable}
-              style={styles.primaryAction}
-            />
+          {accessState === 'loading' ? (
+            <AppText variant="body" tone="secondary">
+              {t('subscription.loading')}
+            </AppText>
           ) : null}
-
-          <SecondaryButton
-            label={t('subscription.notNow')}
-            accessibilityHint={t('subscription.notNowHint')}
-            onPress={close}
-            style={styles.primaryAction}
-          />
-
-          <View style={styles.links}>
-            <TextButton
-              label={t('subscription.restore')}
-              onPress={() => {}}
-              disabled={!storePurchasesAvailable}
-              style={styles.link}
-            />
-            {isActive ? (
-              <TextButton
-                label={t('subscription.manage')}
-                onPress={() => {}}
-                disabled={!storePurchasesAvailable}
-                style={styles.link}
-              />
-            ) : null}
-            {isExpired ? (
-              <TextButton
-                label={t('session.emergency')}
-                onPress={() => router.push('/settings/emergency')}
-                style={styles.link}
-              />
-            ) : null}
-            <TextButton
-              label={t('subscription.linkSupport')}
-              onPress={() => {
-                void Linking.openURL(backPlusLegalUrls.support);
-              }}
-              style={styles.link}
-            />
-            <TextButton
-              label={t('subscription.linkPrivacy')}
-              onPress={() => {
-                void Linking.openURL(backPlusLegalUrls.privacy);
-              }}
-              style={styles.link}
-            />
-            <TextButton
-              label={t('subscription.linkTerms')}
-              onPress={() => {
-                void Linking.openURL(backPlusLegalUrls.terms);
-              }}
-              style={styles.link}
-            />
-            <TextButton
-              label={t('subscription.linkSubscriptions')}
-              onPress={() => {
-                void Linking.openURL(backPlusLegalUrls.subscriptions);
-              }}
-              style={styles.link}
-            />
-          </View>
         </View>
       </ScrollView>
     </ScreenContainer>
@@ -223,16 +313,12 @@ const styles = StyleSheet.create({
   },
   body: {
     marginTop: spacing.md,
-    maxWidth: 360,
     gap: spacing.sm,
   },
   headline: {
     marginTop: spacing.xxs,
   },
   copy: {
-    marginTop: spacing.xs,
-  },
-  statusLine: {
     marginTop: spacing.xs,
   },
   sectionTitle: {
@@ -257,6 +343,15 @@ const styles = StyleSheet.create({
     marginTop: spacing.xl,
     alignSelf: 'stretch',
     minHeight: touch.min,
+  },
+  secondaryAction: {
+    marginTop: spacing.md,
+    alignSelf: 'stretch',
+    minHeight: touch.min,
+  },
+  previewNote: {
+    marginTop: spacing.sm,
+    lineHeight: 20,
   },
   links: {
     marginTop: spacing.lg,

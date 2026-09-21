@@ -1,6 +1,11 @@
 import { Pressable, StyleSheet, type StyleProp, type ViewStyle } from 'react-native';
 
 import { AppText } from '@/components/typography/AppText';
+import { useTheme } from '@/hooks/useTheme';
+import {
+  SECONDARY_CONTROL_LABEL_OPACITY,
+  secondaryControlLabelColor,
+} from '@/theme/secondaryControlText';
 import { spacing, touch } from '@/theme/spacing';
 
 type Props = {
@@ -18,6 +23,8 @@ export function TextButton({
   disabled,
   style,
 }: Props) {
+  const { theme } = useTheme();
+
   return (
     <Pressable
       accessibilityRole="button"
@@ -32,7 +39,13 @@ export function TextButton({
         style,
       ]}
     >
-      <AppText variant="body" tone="secondary">
+      <AppText
+        variant="body"
+        style={{
+          color: secondaryControlLabelColor(theme),
+          opacity: SECONDARY_CONTROL_LABEL_OPACITY,
+        }}
+      >
         {label}
       </AppText>
     </Pressable>

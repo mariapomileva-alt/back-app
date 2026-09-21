@@ -6,8 +6,7 @@ import { ToolCard } from '@/components/cards/ToolCard';
 import { CallMyPersonAction } from '@/components/home/CallMyPersonAction';
 import { HomeCardVisual } from '@/components/home/HomeCardVisual';
 import { HomeSettingsButton } from '@/components/home/HomeSettingsButton';
-import { PaperGrain } from '@/components/home/PaperGrain';
-import { ScreenContainer } from '@/components/layout/ScreenContainer';
+import { ThemedAppShell } from '@/components/layout/ThemedAppShell';
 import { AppText } from '@/components/typography/AppText';
 import { homeCardBorder } from '@/features/home/surfaces';
 import { homeTools } from '@/features/home/tools';
@@ -41,9 +40,7 @@ export default function HomeScreen() {
   };
 
   return (
-    <View style={[styles.root, { backgroundColor: theme.colors.background }]}>
-      <PaperGrain opacity={0.12} />
-      <ScreenContainer scroll={false} style={styles.transparent} contentStyle={styles.content}>
+    <ThemedAppShell scroll={false} contentStyle={styles.content}>
         <View style={styles.top}>
           <BackWordmark
             size={22}
@@ -85,18 +82,11 @@ export default function HomeScreen() {
         <View style={styles.footer}>
           <CallMyPersonAction onPress={() => router.push('/support')} />
         </View>
-      </ScreenContainer>
-    </View>
+    </ThemedAppShell>
   );
 }
 
 const styles = StyleSheet.create({
-  root: {
-    flex: 1,
-  },
-  transparent: {
-    backgroundColor: 'transparent',
-  },
   content: {
     flex: 1,
     width: '100%',

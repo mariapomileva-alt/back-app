@@ -1,4 +1,6 @@
+import { useCallback } from 'react';
 import { StyleSheet, View } from 'react-native';
+import { useFocusEffect } from 'expo-router';
 
 import { ThemeCard } from '@/components/cards/ThemeCard';
 import { ScreenContainer } from '@/components/layout/ScreenContainer';
@@ -11,10 +13,16 @@ import { themeOrder } from '@/theme/themes';
 
 export default function ThemesScreen() {
   usePaidToolGate();
-  const { themeName, setThemeName } = useTheme();
+  const { themeName, setThemeName, reloadPreferences } = useTheme();
+
+  useFocusEffect(
+    useCallback(() => {
+      void reloadPreferences();
+    }, [reloadPreferences]),
+  );
 
   return (
-    <ScreenContainer>
+    <ScreenContainer phoneWidth>
       <ScreenHeader title={t('themes.title')} />
       <View style={styles.list}>
         {themeOrder.map((name) => (

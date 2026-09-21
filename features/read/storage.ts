@@ -54,6 +54,7 @@ function parseMemory(raw: string | null): ReadMemory {
       lastSeenAt: asLastSeenAt(parsed.lastSeenAt),
       language: isLanguagePreference(parsed.language) ? parsed.language : 'en',
       revealSpeed: isRevealSpeed(parsed.revealSpeed) ? parsed.revealSpeed : 'steady',
+      sawCanvasHint: parsed.sawCanvasHint === true,
     };
   } catch {
     return { ...defaultReadMemory, lastSeenAt: {} };

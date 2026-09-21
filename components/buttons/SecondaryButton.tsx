@@ -2,7 +2,7 @@ import { Pressable, StyleSheet, type StyleProp, type ViewStyle } from 'react-nat
 
 import { AppText } from '@/components/typography/AppText';
 import { useTheme } from '@/hooks/useTheme';
-import { radius } from '@/theme/radius';
+import { primaryButtonRadius, secondaryButtonUsesOutline } from '@/theme/buttonChrome';
 import { spacing, touch } from '@/theme/spacing';
 
 type Props = {
@@ -20,7 +20,8 @@ export function SecondaryButton({
   disabled,
   style,
 }: Props) {
-  const { theme } = useTheme();
+  const { theme, themeName } = useTheme();
+  const outline = secondaryButtonUsesOutline(themeName);
 
   return (
     <Pressable
@@ -33,8 +34,11 @@ export function SecondaryButton({
       style={({ pressed }) => [
         styles.base,
         {
+          borderRadius: primaryButtonRadius(themeName),
           backgroundColor: theme.colors.secondaryButtonBackground,
-          opacity: disabled ? 0.5 : pressed ? 0.88 : 1,
+          borderWidth: outline ? 1 : 0,
+          borderColor: outline ? theme.colors.border : 'transparent',
+          opacity: disabled ? 0.5 : pressed ? 0.9 : 1,
         },
         style,
       ]}
@@ -49,10 +53,9 @@ export function SecondaryButton({
 const styles = StyleSheet.create({
   base: {
     minHeight: touch.comfortable,
-    borderRadius: radius.button,
     alignItems: 'center',
     justifyContent: 'center',
-    paddingHorizontal: spacing.lg,
+    paddingHorizontal: spacing.xl,
     paddingVertical: spacing.md,
   },
 });

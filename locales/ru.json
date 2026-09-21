@@ -76,7 +76,7 @@
     "title": "Тема",
     "warmNeutral": "Теплая земля",
     "deepGreen": "Лес",
-    "softBeige": "Мягкий шалфей",
+    "softBeige": "Airy Blue Sage",
     "selectHint": "Применяет этот внешний вид немедленно"
   },
   "patterns": {
@@ -268,7 +268,9 @@
     "speedBoostOff": "Читайте быстрее",
     "speedBoostOffHint": "В этом сеансе каждая строка отображается примерно в два раза быстрее.",
     "speedBoostOn": "Ускоренное чтение, на",
-    "speedBoostOnHint": "Линии появляются примерно в два раза быстрее. Нажмите дважды, чтобы вернуться к нормальной скорости."
+    "speedBoostOnHint": "Линии появляются примерно в два раза быстрее. Нажмите дважды, чтобы вернуться к нормальной скорости.",
+    "firstHintFollow": "Just follow the words.",
+    "firstHintTap": "Tap anywhere if you want to go faster."
   },
   "ground": {
     "previous": "Предыдущая инструкция",
@@ -312,7 +314,8 @@
       "find": "Найдите что-нибудь с небольшой текстурой.",
       "cool": "Найдите поверхность, которая выглядит прохладной на ощупь.",
       "temp": "Обратите внимание на разницу температур, даже небольшую."
-    }
+    },
+    "sequenceHint": "Changes the grounding exercise"
   },
   "move": {
     "hold": "Держать.",
@@ -382,7 +385,11 @@
       "brown": "Теплая коричневая текстура",
       "white": "Легкая ровная текстура",
       "melody": "Мягкие теплые тона"
-    }
+    },
+    "soundHint": "Changes the quiet sound",
+    "playing": "Playing",
+    "paused": "{name} paused",
+    "pausedStatus": "Paused"
   },
   "privacy": {
     "onDevice": "Все, что Back использует для шести инструментов, остается на этом устройстве. Аккаунта и облака нет.",
@@ -466,7 +473,17 @@
       "additionalThemes": "Дополнительные темы внешнего вида",
       "readLibrary": "Подробнее Читать содержимое библиотеки",
       "patternsDepth": "Более глубокое понимание моих шаблонов"
-    }
+    },
+    "headlineTrial": "Your trial is active.",
+    "introThankYouActive": "Thank you for keeping Back close.\n\nYour subscription helps us care for these tools and keep them private, reliable and available offline.",
+    "trialAfterNote": "After the trial, your plan renews at the price shown in the App Store or Google Play before you confirm.",
+    "startTrial": "Start free trial",
+    "done": "Done",
+    "doneHint": "Returns to the previous screen",
+    "continue": "Continue",
+    "whatsIncluded": "What's included",
+    "loading": "Loading subscription…",
+    "managePreviewNote": "On this web preview, Manage subscription opens Back’s subscription information page. On your phone, it opens Apple or Google subscription settings."
   },
   "notFound": {
     "title": "Этой страницы здесь нет",

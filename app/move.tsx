@@ -113,6 +113,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     paddingVertical: spacing.xs,
     gap: spacing.md,
+    overflow: 'visible',
   },
   stageCompact: {
     paddingVertical: spacing.xxs,

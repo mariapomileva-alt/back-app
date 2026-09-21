@@ -4,7 +4,12 @@ import Svg, { Ellipse, G } from 'react-native-svg';
 import { useTheme } from '@/hooks/useTheme';
 
 import { MarkFrame } from './MarkFrame';
-import { markIdleMix, markIdleRange, useMarkIdlePhase } from './markIdleMotion';
+import {
+  markIdleMix,
+  markIdleOpacityRange,
+  markIdleScaleRange,
+  useMarkIdlePhase,
+} from './markIdleMotion';
 import { markViewBox } from './markLanguage';
 
 const AnimatedG = Animated.createAnimatedComponent(G);
@@ -55,8 +60,8 @@ function BreatheRing({
       };
     }
     const mix = markIdleMix(phase.value, offset);
-    const scale = markIdleRange(mix, scaleMin, scaleMax);
-    const opacity = markIdleRange(mix, opacityMin, opacityMax);
+    const scale = markIdleScaleRange(mix, scaleMin, scaleMax);
+    const opacity = markIdleOpacityRange(mix, opacityMin, opacityMax);
     return {
       opacity,
       transform: [

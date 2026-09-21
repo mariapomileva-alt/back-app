@@ -1,0 +1,1433 @@
+[
+  {
+    "route": "breathe",
+    "viewport": "390x844",
+    "url": "http://localhost:8081/breathe",
+    "metrics": {
+      "inner": {
+        "w": 390,
+        "h": 844
+      },
+      "scrollOverflow": 0,
+      "headers": [],
+      "back": {
+        "label": "Back",
+        "x": 24,
+        "y": 0,
+        "w": 56,
+        "h": 56
+      },
+      "mute": {
+        "label": "Sound on",
+        "x": 310,
+        "y": 0,
+        "w": 56,
+        "h": 56
+      },
+      "buttonCount": 5,
+      "bottomButtons": [
+        {
+          "label": "I’m okay for now",
+          "x": 85,
+          "y": 568,
+          "w": 220,
+          "h": 56
+        },
+        {
+          "label": "Try another",
+          "x": 24,
+          "y": 628,
+          "w": 342,
+          "h": 56
+        },
+        {
+          "label": "Breathing feels uncomfortable",
+          "x": 24,
+          "y": 764,
+          "w": 342,
+          "h": 56
+        }
+      ],
+      "topButtons": [
+        {
+          "label": "Back",
+          "x": 24,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        {
+          "label": "Sound on",
+          "x": 310,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        }
+      ]
+    },
+    "screenshot": "/Users/mariyagreku/back app/verification-screenshots/session-chrome-qa/breathe-390x844.png"
+  },
+  {
+    "route": "distract",
+    "viewport": "390x844",
+    "url": "http://localhost:8081/distract",
+    "metrics": {
+      "inner": {
+        "w": 390,
+        "h": 844
+      },
+      "scrollOverflow": 0,
+      "headers": [],
+      "back": {
+        "label": "Back",
+        "x": 24,
+        "y": 0,
+        "w": 56,
+        "h": 56
+      },
+      "mute": null,
+      "buttonCount": 5,
+      "bottomButtons": [],
+      "topButtons": [
+        {
+          "label": "Back",
+          "x": 24,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        }
+      ]
+    },
+    "screenshot": "/Users/mariyagreku/back app/verification-screenshots/session-chrome-qa/distract-390x844.png"
+  },
+  {
+    "route": "distract-snake",
+    "viewport": "390x844",
+    "url": "http://localhost:8081/distract/snake",
+    "metrics": {
+      "inner": {
+        "w": 390,
+        "h": 844
+      },
+      "scrollOverflow": 0,
+      "headers": [],
+      "back": {
+        "label": "Back",
+        "x": 24,
+        "y": 0,
+        "w": 56,
+        "h": 56
+      },
+      "mute": {
+        "label": "Sound on",
+        "x": 310,
+        "y": 0,
+        "w": 56,
+        "h": 56
+      },
+      "buttonCount": 8,
+      "bottomButtons": [
+        {
+          "label": "Up",
+          "x": 163,
+          "y": 488,
+          "w": 64,
+          "h": 64
+        },
+        {
+          "label": "Left",
+          "x": 117,
+          "y": 556,
+          "w": 64,
+          "h": 64
+        },
+        {
+          "label": "Right",
+          "x": 209,
+          "y": 556,
+          "w": 64,
+          "h": 64
+        },
+        {
+          "label": "Down",
+          "x": 163,
+          "y": 624,
+          "w": 64,
+          "h": 64
+        },
+        {
+          "label": "I’m okay for now",
+          "x": 85,
+          "y": 704,
+          "w": 220,
+          "h": 56
+        },
+        {
+          "label": "Try another",
+          "x": 24,
+          "y": 764,
+          "w": 342,
+          "h": 56
+        }
+      ],
+      "topButtons": [
+        {
+          "label": "Back",
+          "x": 24,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        {
+          "label": "Sound on",
+          "x": 310,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        }
+      ]
+    },
+    "screenshot": "/Users/mariyagreku/back app/verification-screenshots/session-chrome-qa/distract-snake-390x844.png"
+  },
+  {
+    "route": "ground",
+    "viewport": "390x844",
+    "url": "http://localhost:8081/ground",
+    "metrics": {
+      "inner": {
+        "w": 390,
+        "h": 844
+      },
+      "scrollOverflow": 0,
+      "headers": [],
+      "back": {
+        "label": "Back",
+        "x": 24,
+        "y": 0,
+        "w": 56,
+        "h": 56
+      },
+      "mute": {
+        "label": "Sound on",
+        "x": 310,
+        "y": 0,
+        "w": 56,
+        "h": 56
+      },
+      "buttonCount": 8,
+      "bottomButtons": [
+        {
+          "label": "Previous instruction",
+          "x": 95,
+          "y": 534,
+          "w": 56,
+          "h": 56
+        },
+        {
+          "label": "Pause",
+          "x": 167,
+          "y": 534,
+          "w": 56,
+          "h": 56
+        },
+        {
+          "label": "Next instruction",
+          "x": 239,
+          "y": 534,
+          "w": 56,
+          "h": 56
+        },
+        {
+          "label": "I’m okay for now",
+          "x": 85,
+          "y": 704,
+          "w": 220,
+          "h": 56
+        },
+        {
+          "label": "Try another",
+          "x": 24,
+          "y": 764,
+          "w": 342,
+          "h": 56
+        }
+      ],
+      "topButtons": [
+        {
+          "label": "Back",
+          "x": 24,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        {
+          "label": "Sound on",
+          "x": 310,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        }
+      ]
+    },
+    "screenshot": "/Users/mariyagreku/back app/verification-screenshots/session-chrome-qa/ground-390x844.png"
+  },
+  {
+    "route": "move",
+    "viewport": "390x844",
+    "url": "http://localhost:8081/move",
+    "metrics": {
+      "inner": {
+        "w": 390,
+        "h": 844
+      },
+      "scrollOverflow": 0,
+      "headers": [],
+      "back": {
+        "label": "Back",
+        "x": 24,
+        "y": 0,
+        "w": 56,
+        "h": 56
+      },
+      "mute": {
+        "label": "Sound on",
+        "x": 310,
+        "y": 0,
+        "w": 56,
+        "h": 56
+      },
+      "buttonCount": 6,
+      "bottomButtons": [
+        {
+          "label": "I’m okay for now",
+          "x": 85,
+          "y": 644,
+          "w": 220,
+          "h": 56
+        },
+        {
+          "label": "Try another",
+          "x": 24,
+          "y": 704,
+          "w": 342,
+          "h": 56
+        },
+        {
+          "label": "Movement doesn’t feel right",
+          "x": 24,
+          "y": 764,
+          "w": 342,
+          "h": 56
+        }
+      ],
+      "topButtons": [
+        {
+          "label": "Back",
+          "x": 24,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        {
+          "label": "Sound on",
+          "x": 310,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        }
+      ]
+    },
+    "screenshot": "/Users/mariyagreku/back app/verification-screenshots/session-chrome-qa/move-390x844.png"
+  },
+  {
+    "route": "listen",
+    "viewport": "390x844",
+    "url": "http://localhost:8081/listen",
+    "metrics": {
+      "inner": {
+        "w": 390,
+        "h": 844
+      },
+      "scrollOverflow": 0,
+      "headers": [],
+      "back": {
+        "label": "Back",
+        "x": 24,
+        "y": 0,
+        "w": 56,
+        "h": 56
+      },
+      "mute": {
+        "label": "Previous sound",
+        "x": 79,
+        "y": 432,
+        "w": 56,
+        "h": 56
+      },
+      "buttonCount": 10,
+      "bottomButtons": [
+        {
+          "label": "Volume 20",
+          "x": 24,
+          "y": 508,
+          "w": 62,
+          "h": 56
+        },
+        {
+          "label": "Volume 40",
+          "x": 94,
+          "y": 508,
+          "w": 62,
+          "h": 56
+        },
+        {
+          "label": "Volume 60",
+          "x": 164,
+          "y": 508,
+          "w": 62,
+          "h": 56
+        },
+        {
+          "label": "Volume 80",
+          "x": 234,
+          "y": 508,
+          "w": 62,
+          "h": 56
+        },
+        {
+          "label": "Volume 100",
+          "x": 304,
+          "y": 508,
+          "w": 62,
+          "h": 56
+        },
+        {
+          "label": "I’m okay for now",
+          "x": 85,
+          "y": 764,
+          "w": 220,
+          "h": 56
+        }
+      ],
+      "topButtons": [
+        {
+          "label": "Back",
+          "x": 24,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        }
+      ]
+    },
+    "screenshot": "/Users/mariyagreku/back app/verification-screenshots/session-chrome-qa/listen-390x844.png"
+  },
+  {
+    "route": "read",
+    "viewport": "390x844",
+    "url": "http://localhost:8081/read",
+    "metrics": {
+      "inner": {
+        "w": 390,
+        "h": 844
+      },
+      "scrollOverflow": 0,
+      "headers": [],
+      "back": {
+        "label": "Back",
+        "x": 24,
+        "y": 0,
+        "w": 56,
+        "h": 56
+      },
+      "mute": null,
+      "buttonCount": 6,
+      "bottomButtons": [
+        {
+          "label": "I’m okay for now",
+          "x": 85,
+          "y": 644,
+          "w": 220,
+          "h": 56
+        },
+        {
+          "label": "Try another",
+          "x": 24,
+          "y": 704,
+          "w": 342,
+          "h": 56
+        },
+        {
+          "label": "Pause the lines",
+          "x": 24,
+          "y": 764,
+          "w": 342,
+          "h": 56
+        }
+      ],
+      "topButtons": [
+        {
+          "label": "Back",
+          "x": 24,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        {
+          "label": "Reading",
+          "x": 24,
+          "y": 72,
+          "w": 342,
+          "h": 556
+        },
+        {
+          "label": "Read faster",
+          "x": 310,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        }
+      ]
+    },
+    "screenshot": "/Users/mariyagreku/back app/verification-screenshots/session-chrome-qa/read-390x844.png"
+  },
+  {
+    "route": "breathe",
+    "viewport": "412x915",
+    "url": "http://localhost:8081/breathe",
+    "metrics": {
+      "inner": {
+        "w": 412,
+        "h": 915
+      },
+      "scrollOverflow": 0,
+      "headers": [],
+      "back": {
+        "label": "Back",
+        "x": 24,
+        "y": 0,
+        "w": 56,
+        "h": 56
+      },
+      "mute": {
+        "label": "Sound on",
+        "x": 332,
+        "y": 0,
+        "w": 56,
+        "h": 56
+      },
+      "buttonCount": 5,
+      "bottomButtons": [
+        {
+          "label": "I’m okay for now",
+          "x": 96,
+          "y": 639,
+          "w": 220,
+          "h": 56
+        },
+        {
+          "label": "Try another",
+          "x": 24,
+          "y": 699,
+          "w": 364,
+          "h": 56
+        },
+        {
+          "label": "Breathing feels uncomfortable",
+          "x": 24,
+          "y": 835,
+          "w": 364,
+          "h": 56
+        }
+      ],
+      "topButtons": [
+        {
+          "label": "Back",
+          "x": 24,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        {
+          "label": "Sound on",
+          "x": 332,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        }
+      ]
+    },
+    "screenshot": "/Users/mariyagreku/back app/verification-screenshots/session-chrome-qa/breathe-412x915.png"
+  },
+  {
+    "route": "distract",
+    "viewport": "412x915",
+    "url": "http://localhost:8081/distract",
+    "metrics": {
+      "inner": {
+        "w": 412,
+        "h": 915
+      },
+      "scrollOverflow": 0,
+      "headers": [],
+      "back": {
+        "label": "Back",
+        "x": 24,
+        "y": 0,
+        "w": 56,
+        "h": 56
+      },
+      "mute": null,
+      "buttonCount": 5,
+      "bottomButtons": [],
+      "topButtons": [
+        {
+          "label": "Back",
+          "x": 24,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        }
+      ]
+    },
+    "screenshot": "/Users/mariyagreku/back app/verification-screenshots/session-chrome-qa/distract-412x915.png"
+  },
+  {
+    "route": "distract-snake",
+    "viewport": "412x915",
+    "url": "http://localhost:8081/distract/snake",
+    "metrics": {
+      "inner": {
+        "w": 412,
+        "h": 915
+      },
+      "scrollOverflow": 0,
+      "headers": [],
+      "back": {
+        "label": "Back",
+        "x": 24,
+        "y": 0,
+        "w": 56,
+        "h": 56
+      },
+      "mute": {
+        "label": "Sound on",
+        "x": 332,
+        "y": 0,
+        "w": 56,
+        "h": 56
+      },
+      "buttonCount": 8,
+      "bottomButtons": [
+        {
+          "label": "Up",
+          "x": 174,
+          "y": 559,
+          "w": 64,
+          "h": 64
+        },
+        {
+          "label": "Left",
+          "x": 128,
+          "y": 627,
+          "w": 64,
+          "h": 64
+        },
+        {
+          "label": "Right",
+          "x": 220,
+          "y": 627,
+          "w": 64,
+          "h": 64
+        },
+        {
+          "label": "Down",
+          "x": 174,
+          "y": 695,
+          "w": 64,
+          "h": 64
+        },
+        {
+          "label": "I’m okay for now",
+          "x": 96,
+          "y": 775,
+          "w": 220,
+          "h": 56
+        },
+        {
+          "label": "Try another",
+          "x": 24,
+          "y": 835,
+          "w": 364,
+          "h": 56
+        }
+      ],
+      "topButtons": [
+        {
+          "label": "Back",
+          "x": 24,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        {
+          "label": "Sound on",
+          "x": 332,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        }
+      ]
+    },
+    "screenshot": "/Users/mariyagreku/back app/verification-screenshots/session-chrome-qa/distract-snake-412x915.png"
+  },
+  {
+    "route": "ground",
+    "viewport": "412x915",
+    "url": "http://localhost:8081/ground",
+    "metrics": {
+      "inner": {
+        "w": 412,
+        "h": 915
+      },
+      "scrollOverflow": 0,
+      "headers": [],
+      "back": {
+        "label": "Back",
+        "x": 24,
+        "y": 0,
+        "w": 56,
+        "h": 56
+      },
+      "mute": {
+        "label": "Sound on",
+        "x": 332,
+        "y": 0,
+        "w": 56,
+        "h": 56
+      },
+      "buttonCount": 8,
+      "bottomButtons": [
+        {
+          "label": "Previous instruction",
+          "x": 106,
+          "y": 570,
+          "w": 56,
+          "h": 56
+        },
+        {
+          "label": "Pause",
+          "x": 178,
+          "y": 570,
+          "w": 56,
+          "h": 56
+        },
+        {
+          "label": "Next instruction",
+          "x": 250,
+          "y": 570,
+          "w": 56,
+          "h": 56
+        },
+        {
+          "label": "I’m okay for now",
+          "x": 96,
+          "y": 775,
+          "w": 220,
+          "h": 56
+        },
+        {
+          "label": "Try another",
+          "x": 24,
+          "y": 835,
+          "w": 364,
+          "h": 56
+        }
+      ],
+      "topButtons": [
+        {
+          "label": "Back",
+          "x": 24,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        {
+          "label": "Sound on",
+          "x": 332,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        }
+      ]
+    },
+    "screenshot": "/Users/mariyagreku/back app/verification-screenshots/session-chrome-qa/ground-412x915.png"
+  },
+  {
+    "route": "move",
+    "viewport": "412x915",
+    "url": "http://localhost:8081/move",
+    "metrics": {
+      "inner": {
+        "w": 412,
+        "h": 915
+      },
+      "scrollOverflow": 0,
+      "headers": [],
+      "back": {
+        "label": "Back",
+        "x": 24,
+        "y": 0,
+        "w": 56,
+        "h": 56
+      },
+      "mute": {
+        "label": "Sound on",
+        "x": 332,
+        "y": 0,
+        "w": 56,
+        "h": 56
+      },
+      "buttonCount": 6,
+      "bottomButtons": [
+        {
+          "label": "I’m okay for now",
+          "x": 96,
+          "y": 715,
+          "w": 220,
+          "h": 56
+        },
+        {
+          "label": "Try another",
+          "x": 24,
+          "y": 775,
+          "w": 364,
+          "h": 56
+        },
+        {
+          "label": "Movement doesn’t feel right",
+          "x": 24,
+          "y": 835,
+          "w": 364,
+          "h": 56
+        }
+      ],
+      "topButtons": [
+        {
+          "label": "Back",
+          "x": 24,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        {
+          "label": "Sound on",
+          "x": 332,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        }
+      ]
+    },
+    "screenshot": "/Users/mariyagreku/back app/verification-screenshots/session-chrome-qa/move-412x915.png"
+  },
+  {
+    "route": "listen",
+    "viewport": "412x915",
+    "url": "http://localhost:8081/listen",
+    "metrics": {
+      "inner": {
+        "w": 412,
+        "h": 915
+      },
+      "scrollOverflow": 0,
+      "headers": [],
+      "back": {
+        "label": "Back",
+        "x": 24,
+        "y": 0,
+        "w": 56,
+        "h": 56
+      },
+      "mute": {
+        "label": "Previous sound",
+        "x": 90,
+        "y": 432,
+        "w": 56,
+        "h": 56
+      },
+      "buttonCount": 10,
+      "bottomButtons": [
+        {
+          "label": "Volume 20",
+          "x": 24,
+          "y": 508,
+          "w": 66,
+          "h": 56
+        },
+        {
+          "label": "Volume 40",
+          "x": 98,
+          "y": 508,
+          "w": 66,
+          "h": 56
+        },
+        {
+          "label": "Volume 60",
+          "x": 173,
+          "y": 508,
+          "w": 66,
+          "h": 56
+        },
+        {
+          "label": "Volume 80",
+          "x": 247,
+          "y": 508,
+          "w": 66,
+          "h": 56
+        },
+        {
+          "label": "Volume 100",
+          "x": 322,
+          "y": 508,
+          "w": 66,
+          "h": 56
+        },
+        {
+          "label": "I’m okay for now",
+          "x": 96,
+          "y": 835,
+          "w": 220,
+          "h": 56
+        }
+      ],
+      "topButtons": [
+        {
+          "label": "Back",
+          "x": 24,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        }
+      ]
+    },
+    "screenshot": "/Users/mariyagreku/back app/verification-screenshots/session-chrome-qa/listen-412x915.png"
+  },
+  {
+    "route": "read",
+    "viewport": "412x915",
+    "url": "http://localhost:8081/read",
+    "metrics": {
+      "inner": {
+        "w": 412,
+        "h": 915
+      },
+      "scrollOverflow": 0,
+      "headers": [],
+      "back": {
+        "label": "Back",
+        "x": 24,
+        "y": 0,
+        "w": 56,
+        "h": 56
+      },
+      "mute": null,
+      "buttonCount": 6,
+      "bottomButtons": [
+        {
+          "label": "I’m okay for now",
+          "x": 96,
+          "y": 715,
+          "w": 220,
+          "h": 56
+        },
+        {
+          "label": "Try another",
+          "x": 24,
+          "y": 775,
+          "w": 364,
+          "h": 56
+        },
+        {
+          "label": "Pause the lines",
+          "x": 24,
+          "y": 835,
+          "w": 364,
+          "h": 56
+        }
+      ],
+      "topButtons": [
+        {
+          "label": "Back",
+          "x": 24,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        {
+          "label": "Reading",
+          "x": 24,
+          "y": 72,
+          "w": 364,
+          "h": 627
+        },
+        {
+          "label": "Read faster",
+          "x": 332,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        }
+      ]
+    },
+    "screenshot": "/Users/mariyagreku/back app/verification-screenshots/session-chrome-qa/read-412x915.png"
+  },
+  {
+    "route": "breathe",
+    "viewport": "1280x720",
+    "url": "http://localhost:8081/breathe",
+    "metrics": {
+      "inner": {
+        "w": 1280,
+        "h": 720
+      },
+      "scrollOverflow": 0,
+      "headers": [],
+      "back": {
+        "label": "Back",
+        "x": 449,
+        "y": 0,
+        "w": 56,
+        "h": 56
+      },
+      "mute": {
+        "label": "Sound on",
+        "x": 775,
+        "y": 0,
+        "w": 56,
+        "h": 56
+      },
+      "buttonCount": 5,
+      "bottomButtons": [
+        {
+          "label": "I’m okay for now",
+          "x": 530,
+          "y": 444,
+          "w": 220,
+          "h": 56
+        },
+        {
+          "label": "Try another",
+          "x": 449,
+          "y": 504,
+          "w": 382,
+          "h": 56
+        },
+        {
+          "label": "Breathing feels uncomfortable",
+          "x": 449,
+          "y": 640,
+          "w": 382,
+          "h": 56
+        }
+      ],
+      "topButtons": [
+        {
+          "label": "Back",
+          "x": 449,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        {
+          "label": "Sound on",
+          "x": 775,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        }
+      ]
+    },
+    "screenshot": "/Users/mariyagreku/back app/verification-screenshots/session-chrome-qa/breathe-1280x720.png"
+  },
+  {
+    "route": "distract",
+    "viewport": "1280x720",
+    "url": "http://localhost:8081/distract",
+    "metrics": {
+      "inner": {
+        "w": 1280,
+        "h": 720
+      },
+      "scrollOverflow": 0,
+      "headers": [],
+      "back": {
+        "label": "Back",
+        "x": 449,
+        "y": 0,
+        "w": 56,
+        "h": 56
+      },
+      "mute": null,
+      "buttonCount": 5,
+      "bottomButtons": [],
+      "topButtons": [
+        {
+          "label": "Back",
+          "x": 449,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        }
+      ]
+    },
+    "screenshot": "/Users/mariyagreku/back app/verification-screenshots/session-chrome-qa/distract-1280x720.png"
+  },
+  {
+    "route": "distract-snake",
+    "viewport": "1280x720",
+    "url": "http://localhost:8081/distract/snake",
+    "metrics": {
+      "inner": {
+        "w": 1280,
+        "h": 720
+      },
+      "scrollOverflow": 0,
+      "headers": [],
+      "back": {
+        "label": "Back",
+        "x": 449,
+        "y": 0,
+        "w": 56,
+        "h": 56
+      },
+      "mute": {
+        "label": "Sound on",
+        "x": 775,
+        "y": 0,
+        "w": 56,
+        "h": 56
+      },
+      "buttonCount": 8,
+      "bottomButtons": [
+        {
+          "label": "Left",
+          "x": 570,
+          "y": 448,
+          "w": 56,
+          "h": 56
+        },
+        {
+          "label": "Right",
+          "x": 654,
+          "y": 448,
+          "w": 56,
+          "h": 56
+        },
+        {
+          "label": "Down",
+          "x": 612,
+          "y": 508,
+          "w": 56,
+          "h": 56
+        },
+        {
+          "label": "I’m okay for now",
+          "x": 530,
+          "y": 580,
+          "w": 220,
+          "h": 56
+        },
+        {
+          "label": "Try another",
+          "x": 449,
+          "y": 640,
+          "w": 382,
+          "h": 56
+        }
+      ],
+      "topButtons": [
+        {
+          "label": "Back",
+          "x": 449,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        {
+          "label": "Sound on",
+          "x": 775,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        }
+      ]
+    },
+    "screenshot": "/Users/mariyagreku/back app/verification-screenshots/session-chrome-qa/distract-snake-1280x720.png"
+  },
+  {
+    "route": "ground",
+    "viewport": "1280x720",
+    "url": "http://localhost:8081/ground",
+    "metrics": {
+      "inner": {
+        "w": 1280,
+        "h": 720
+      },
+      "scrollOverflow": 0,
+      "headers": [],
+      "back": {
+        "label": "Back",
+        "x": 449,
+        "y": 0,
+        "w": 56,
+        "h": 56
+      },
+      "mute": {
+        "label": "Sound on",
+        "x": 775,
+        "y": 0,
+        "w": 56,
+        "h": 56
+      },
+      "buttonCount": 8,
+      "bottomButtons": [
+        {
+          "label": "Previous instruction",
+          "x": 540,
+          "y": 472,
+          "w": 56,
+          "h": 56
+        },
+        {
+          "label": "Pause",
+          "x": 612,
+          "y": 472,
+          "w": 56,
+          "h": 56
+        },
+        {
+          "label": "Next instruction",
+          "x": 684,
+          "y": 472,
+          "w": 56,
+          "h": 56
+        },
+        {
+          "label": "I’m okay for now",
+          "x": 530,
+          "y": 580,
+          "w": 220,
+          "h": 56
+        },
+        {
+          "label": "Try another",
+          "x": 449,
+          "y": 640,
+          "w": 382,
+          "h": 56
+        }
+      ],
+      "topButtons": [
+        {
+          "label": "Back",
+          "x": 449,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        {
+          "label": "Sound on",
+          "x": 775,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        }
+      ]
+    },
+    "screenshot": "/Users/mariyagreku/back app/verification-screenshots/session-chrome-qa/ground-1280x720.png"
+  },
+  {
+    "route": "move",
+    "viewport": "1280x720",
+    "url": "http://localhost:8081/move",
+    "metrics": {
+      "inner": {
+        "w": 1280,
+        "h": 720
+      },
+      "scrollOverflow": 0,
+      "headers": [],
+      "back": {
+        "label": "Back",
+        "x": 449,
+        "y": 0,
+        "w": 56,
+        "h": 56
+      },
+      "mute": {
+        "label": "Sound on",
+        "x": 775,
+        "y": 0,
+        "w": 56,
+        "h": 56
+      },
+      "buttonCount": 6,
+      "bottomButtons": [
+        {
+          "label": "I’m okay for now",
+          "x": 530,
+          "y": 520,
+          "w": 220,
+          "h": 56
+        },
+        {
+          "label": "Try another",
+          "x": 449,
+          "y": 580,
+          "w": 382,
+          "h": 56
+        },
+        {
+          "label": "Movement doesn’t feel right",
+          "x": 449,
+          "y": 640,
+          "w": 382,
+          "h": 56
+        }
+      ],
+      "topButtons": [
+        {
+          "label": "Back",
+          "x": 449,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        {
+          "label": "Sound on",
+          "x": 775,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        }
+      ]
+    },
+    "screenshot": "/Users/mariyagreku/back app/verification-screenshots/session-chrome-qa/move-1280x720.png"
+  },
+  {
+    "route": "listen",
+    "viewport": "1280x720",
+    "url": "http://localhost:8081/listen",
+    "metrics": {
+      "inner": {
+        "w": 1280,
+        "h": 720
+      },
+      "scrollOverflow": 0,
+      "headers": [],
+      "back": {
+        "label": "Back",
+        "x": 449,
+        "y": 0,
+        "w": 56,
+        "h": 56
+      },
+      "mute": {
+        "label": "Previous sound",
+        "x": 524,
+        "y": 314,
+        "w": 56,
+        "h": 56
+      },
+      "buttonCount": 10,
+      "bottomButtons": [
+        {
+          "label": "I’m okay for now",
+          "x": 530,
+          "y": 640,
+          "w": 220,
+          "h": 56
+        }
+      ],
+      "topButtons": [
+        {
+          "label": "Back",
+          "x": 449,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        }
+      ]
+    },
+    "screenshot": "/Users/mariyagreku/back app/verification-screenshots/session-chrome-qa/listen-1280x720.png"
+  },
+  {
+    "route": "read",
+    "viewport": "1280x720",
+    "url": "http://localhost:8081/read",
+    "metrics": {
+      "inner": {
+        "w": 1280,
+        "h": 720
+      },
+      "scrollOverflow": 0,
+      "headers": [],
+      "back": {
+        "label": "Back",
+        "x": 449,
+        "y": 0,
+        "w": 56,
+        "h": 56
+      },
+      "mute": null,
+      "buttonCount": 6,
+      "bottomButtons": [
+        {
+          "label": "I’m okay for now",
+          "x": 530,
+          "y": 520,
+          "w": 220,
+          "h": 56
+        },
+        {
+          "label": "Try another",
+          "x": 449,
+          "y": 580,
+          "w": 382,
+          "h": 56
+        },
+        {
+          "label": "Pause the lines",
+          "x": 449,
+          "y": 640,
+          "w": 382,
+          "h": 56
+        }
+      ],
+      "topButtons": [
+        {
+          "label": "Back",
+          "x": 449,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        {
+          "label": "Reading",
+          "x": 449,
+          "y": 72,
+          "w": 382,
+          "h": 432
+        },
+        {
+          "label": "Read faster",
+          "x": 775,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        }
+      ]
+    },
+    "screenshot": "/Users/mariyagreku/back app/verification-screenshots/session-chrome-qa/read-1280x720.png"
+  }
+]

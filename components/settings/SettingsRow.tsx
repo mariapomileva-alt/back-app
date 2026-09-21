@@ -61,7 +61,7 @@ export function SettingsRow({
       <View style={styles.copy}>
         <AppText variant="body">{label}</AppText>
         {value ? (
-          <AppText variant="secondary" tone="secondary">
+          <AppText variant="secondary" tone="secondary" style={styles.value}>
             {value}
           </AppText>
         ) : null}
@@ -135,6 +135,9 @@ const styles = StyleSheet.create({
   copy: {
     flex: 1,
     gap: spacing.xxs,
+  },
+  value: {
+    fontWeight: '500',
   },
   toggleTrack: {
     width: 52,

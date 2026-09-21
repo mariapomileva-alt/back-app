@@ -4,7 +4,7 @@ import Svg, { Path } from 'react-native-svg';
 import { useTheme } from '@/hooks/useTheme';
 
 import { MarkFrame } from './MarkFrame';
-import { markIdleMix, markIdleRange, useMarkIdlePhase } from './markIdleMotion';
+import { markIdleDriftRange, markIdleMix, markIdleOpacityRange, useMarkIdlePhase } from './markIdleMotion';
 import { markViewBox } from './markLanguage';
 
 const AnimatedPath = Animated.createAnimatedComponent(Path);
@@ -36,8 +36,11 @@ function SwayWave({
     const mix = markIdleMix(phase.value, offset);
     const sway = markIdleMix(phase.value, offset + 0.19);
     return {
-      opacity: markIdleRange(mix, baseOpacity - 0.08, baseOpacity + 0.1),
-      transform: [{ translateX: markIdleRange(sway, -1.8, 1.8) }, { translateY: markIdleRange(mix, -0.8, 0.8) }],
+      opacity: markIdleOpacityRange(mix, baseOpacity - 0.08, baseOpacity + 0.1),
+      transform: [
+        { translateX: markIdleDriftRange(sway, -1.8, 1.8) },
+        { translateY: markIdleDriftRange(mix, -0.8, 0.8) },
+      ],
     };
   });
 

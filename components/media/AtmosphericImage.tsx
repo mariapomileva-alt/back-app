@@ -80,8 +80,7 @@ export function AtmosphericImage({
           />
           {motion.showShimmer ? (
             <Animated.View
-              pointerEvents="none"
-              style={[StyleSheet.absoluteFill, styles.shimmer, motion.shimmerStyle]}
+              style={[StyleSheet.absoluteFill, styles.shimmer, motion.shimmerStyle, styles.ignorePointer]}
             />
           ) : null}
         </>

@@ -76,7 +76,7 @@
     "title": "Theme",
     "warmNeutral": "Warm Earth",
     "deepGreen": "Forest",
-    "softBeige": "Soft Sage",
+    "softBeige": "Airy Blue Sage",
     "selectHint": "Applies this look immediately"
   },
   "patterns": {
@@ -268,7 +268,9 @@
     "speedBoostOff": "Read faster",
     "speedBoostOffHint": "Shows each line about twice as quickly for this session.",
     "speedBoostOn": "Faster reading, on",
-    "speedBoostOnHint": "Lines appear about twice as quickly. Double tap to return to normal speed."
+    "speedBoostOnHint": "Lines appear about twice as quickly. Double tap to return to normal speed.",
+    "firstHintFollow": "Just follow the words.",
+    "firstHintTap": "Tap anywhere if you want to go faster."
   },
   "ground": {
     "previous": "Previous instruction",
@@ -279,6 +281,7 @@
     "menu": "Grounding menu",
     "menuHint": "Opens the quiet grounding list",
     "tryAnotherHint": "Opens the quiet grounding list",
+    "sequenceHint": "Changes the grounding exercise",
     "sequences": {
       "feetBody": "Feet & Body",
       "fiveSenses": "5–4–3–2–1",
@@ -352,11 +355,15 @@
     "previous": "Previous sound",
     "next": "Next sound",
     "chooseSound": "Choose a sound",
+    "soundHint": "Changes the quiet sound",
     "menu": "Sounds",
     "menuHint": "Opens the quiet sound list",
     "tryAnotherHint": "Opens the quiet sound list",
     "nowPlaying": "{name} playing",
+    "playing": "Playing",
     "tapToPlay": "Tap to play",
+    "paused": "{name} paused",
+    "pausedStatus": "Paused",
     "groups": {
       "nature": "Nature",
       "steady": "Steady"
@@ -418,11 +425,14 @@
   "subscription": {
     "kicker": "Back Plus",
     "headline": "Keep Back close",
-    "headlineActive": "Back Plus is active",
-    "headlineExpired": "Your Back Plus access has ended",
+    "headlineActive": "Back Plus is active.",
+    "headlineTrial": "Your trial is active.",
+    "headlineExpired": "Your Back Plus access has ended.",
+    "introThankYouActive": "Thank you for keeping Back close.\n\nYour subscription helps us care for these tools and keep them private, reliable and available offline.",
     "intro": "Six simple tools for difficult moments — private, offline and ready whenever you need them.\n\nTry everything free for 7 days with the annual plan when you are eligible. After the trial, an active monthly or annual subscription is required to use Breathe, Distract, Ground, Move, Listen and Read.",
     "introPreparing": "Back Plus is being prepared.\n\nBack will include a 7-day trial with the annual plan, followed by a monthly or annual subscription. Final prices and renewal details will appear in the App Store or Google Play before purchase.\n\nThere is nothing to buy until Back Plus is released.",
-    "introTrialActive": "Your 7-day trial is active on this device. Thank you for trying Back Plus.",
+    "introTrialActive": "Thank you for trying Back Plus on this device.",
+    "trialAfterNote": "After the trial, your plan renews at the price shown in the App Store or Google Play before you confirm.",
     "introAnnualActive": "Your annual Back Plus plan is active on this device. Thank you for supporting Back.",
     "introMonthlyActive": "Your monthly Back Plus plan is active on this device. Thank you for supporting Back.",
     "introExpired": "Choose a plan to continue using the six Back tools, or restore an earlier purchase.\n\nEmergency information, Extra Support and Call my person are still available.",
@@ -447,6 +457,13 @@
     "bestValue": "Best value",
     "regionalPricing": "Prices vary by region and currency. Final prices appear in the store before you confirm purchase.",
     "choosePlan": "Choose a plan",
+    "startTrial": "Start free trial",
+    "done": "Done",
+    "doneHint": "Returns to the previous screen",
+    "continue": "Continue",
+    "whatsIncluded": "What's included",
+    "loading": "Loading subscription…",
+    "managePreviewNote": "On this web preview, Manage subscription opens Back’s subscription information page. On your phone, it opens Apple or Google subscription settings.",
     "restore": "Restore purchases",
     "manage": "Manage subscription",
     "notNow": "Not now",

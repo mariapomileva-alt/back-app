@@ -76,7 +76,7 @@
     "title": "Thema",
     "warmNeutral": "Warme aarde",
     "deepGreen": "Woud",
-    "softBeige": "Zachte salie",
+    "softBeige": "Airy Blue Sage",
     "selectHint": "Past deze look onmiddellijk toe"
   },
   "patterns": {
@@ -268,7 +268,9 @@
     "speedBoostOff": "Lees sneller",
     "speedBoostOffHint": "Toont elke regel ongeveer twee keer zo snel voor deze sessie.",
     "speedBoostOn": "Sneller lezen, aan",
-    "speedBoostOnHint": "Lijnen verschijnen ongeveer twee keer zo snel. Dubbeltik om terug te keren naar de normale snelheid."
+    "speedBoostOnHint": "Lijnen verschijnen ongeveer twee keer zo snel. Dubbeltik om terug te keren naar de normale snelheid.",
+    "firstHintFollow": "Just follow the words.",
+    "firstHintTap": "Tap anywhere if you want to go faster."
   },
   "ground": {
     "previous": "Vorige instructie",
@@ -312,7 +314,8 @@
       "find": "Zoek iets met een beetje textuur.",
       "cool": "Zoek een oppervlak dat er cool uitziet.",
       "temp": "Merk een temperatuurverschil op, zelfs een klein verschil."
-    }
+    },
+    "sequenceHint": "Changes the grounding exercise"
   },
   "move": {
     "hold": "Uitstel.",
@@ -382,7 +385,11 @@
       "brown": "Warme bruine textuur",
       "white": "Lichte, gelijkmatige textuur",
       "melody": "Zachte warme tinten"
-    }
+    },
+    "soundHint": "Changes the quiet sound",
+    "playing": "Playing",
+    "paused": "{name} paused",
+    "pausedStatus": "Paused"
   },
   "privacy": {
     "onDevice": "Alles wat Back gebruikt voor de zes tools blijft op dit apparaat staan. Er is geen account en geen cloud.",
@@ -466,7 +473,17 @@
       "additionalThemes": "Extra uiterlijkthema's",
       "readLibrary": "Meer Lees bibliotheekinhoud",
       "patternsDepth": "Dieper Mijn patronen inzichten"
-    }
+    },
+    "headlineTrial": "Your trial is active.",
+    "introThankYouActive": "Thank you for keeping Back close.\n\nYour subscription helps us care for these tools and keep them private, reliable and available offline.",
+    "trialAfterNote": "After the trial, your plan renews at the price shown in the App Store or Google Play before you confirm.",
+    "startTrial": "Start free trial",
+    "done": "Done",
+    "doneHint": "Returns to the previous screen",
+    "continue": "Continue",
+    "whatsIncluded": "What's included",
+    "loading": "Loading subscription…",
+    "managePreviewNote": "On this web preview, Manage subscription opens Back’s subscription information page. On your phone, it opens Apple or Google subscription settings."
   },
   "notFound": {
     "title": "Deze pagina is er niet",

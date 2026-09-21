@@ -6,7 +6,7 @@ export const brandIdentity = {
   wordmark: {
     warmEarth: brand.deepForest,
     forest: brand.warmIvory,
-    softSage: brand.softSage,
+    softSage: '#212121',
   },
   surface: {
     warmEarth: brand.warmIvory,

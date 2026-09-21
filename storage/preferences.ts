@@ -20,6 +20,20 @@ function isThemeName(value: string | null): value is ThemeName {
   return value === 'warmNeutral' || value === 'deepGreen' || value === 'softBeige';
 }
 
+const legacyThemeNames: Record<string, ThemeName> = {
+  softSage: 'softBeige',
+};
+
+function resolveThemeName(stored: string | null): ThemeName {
+  if (isThemeName(stored)) {
+    return stored;
+  }
+  if (stored && legacyThemeNames[stored]) {
+    return legacyThemeNames[stored];
+  }
+  return defaultPreferences.themeName;
+}
+
 async function readBoolean(key: string, fallback: boolean): Promise<boolean> {
   try {
     const value = await AsyncStorage.getItem(key);
@@ -40,8 +54,13 @@ export async function loadPreferences(): Promise<Preferences> {
       readBoolean(storageKeys.reduceMotionOverride, defaultPreferences.reduceMotionOverride),
     ]);
 
+    const resolvedTheme = resolveThemeName(themeName);
+    if (themeName && themeName !== resolvedTheme) {
+      void saveThemeName(resolvedTheme);
+    }
+
     return {
-      themeName: isThemeName(themeName) ? themeName : defaultPreferences.themeName,
+      themeName: resolvedTheme,
       hapticsEnabled,
       reduceMotionOverride,
     };
