@@ -651,11 +651,12 @@ button {
 
 .tool-preview {
   margin: 0 0 18px;
-  height: clamp(168px, 22vw, 220px);
+  height: clamp(184px, 24vw, 248px);
   border-radius: 20px;
   overflow: hidden;
   border: 1px solid color-mix(in srgb, var(--divider) 55%, var(--ivory));
   background: var(--ivory);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--ivory) 70%, white);
 }
 
 .tool-preview img {
@@ -663,7 +664,31 @@ button {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: top center;
+  object-position: center 22%;
+}
+
+.tool-preview--breathe img {
+  object-position: center 26%;
+}
+
+.tool-preview--distract img {
+  object-position: center 24%;
+}
+
+.tool-preview--ground img {
+  object-position: center 30%;
+}
+
+.tool-preview--move img {
+  object-position: center 38%;
+}
+
+.tool-preview--listen img {
+  object-position: center 16%;
+}
+
+.tool-preview--read img {
+  object-position: center 20%;
 }
 
 .tool h3,
@@ -936,7 +961,7 @@ button {
   }
 
   .tool-preview {
-    height: 148px;
+    height: 168px;
     margin-bottom: 14px;
   }
 
