@@ -8,7 +8,7 @@ import {
   type AudioSource,
 } from 'expo-audio';
 
-import { attemptPlayback, isAudiblePlayback } from '@/features/audio/playback';
+import { attemptPlayback, isAudiblePlayback, pauseOtherWebAudio } from '@/features/audio/playback';
 import { DEFAULT_SOUND_VOLUME } from '@/storage/preferences';
 
 const FADE_MS = 1400;
@@ -141,6 +141,28 @@ export function useLoopingSound({
 
   const startPlayback = useCallback(async (resync = false): Promise<boolean> => {
     wantsPlay.current = true;
+    // Web requires HTMLMediaElement.play() in the same turn as the user gesture.
+    if (resync) {
+      pauseOtherWebAudio();
+      try {
+        const result = playerRef.current.play();
+        if (result && typeof (result as Promise<unknown>).then === 'function') {
+          void (result as Promise<unknown>).catch(() => {});
+        }
+      } catch {
+        wantsPlay.current = false;
+        setPlayback('blocked');
+        return false;
+      }
+      void configureListenAudioSession();
+      if (muted) {
+        applyVolume(playerRef.current, 0);
+      } else {
+        fadeIn(volume);
+      }
+      setPlayback('playing');
+      return true;
+    }
     await configureListenAudioSession();
     const alreadyAudible = isAudiblePlayback(playerRef.current);
     // Silent bed: keep looping at volume 0 without re-calling play().

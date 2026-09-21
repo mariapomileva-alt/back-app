@@ -77,9 +77,13 @@ export function useGroundAmbient({ paused = false, masterMuted = false }: Option
     setGroundMuted((current) => {
       const next = !current;
       void saveGroundAmbientMuted(next);
+      const willBeAmbientMuted = next || masterMuted;
+      if (!willBeAmbientMuted && !paused) {
+        loopRef.current.play(true);
+      }
       return next;
     });
-  }, []);
+  }, [masterMuted, paused]);
 
   return {
     muted: groundMuted,
