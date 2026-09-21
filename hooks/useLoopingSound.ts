@@ -145,7 +145,7 @@ export function useLoopingSound({
     if (resync) {
       pauseOtherWebAudio();
       try {
-        const result = playerRef.current.play();
+        const result = (playerRef.current as { play: () => unknown }).play();
         if (result && typeof (result as Promise<unknown>).then === 'function') {
           void (result as Promise<unknown>).catch(() => {});
         }
