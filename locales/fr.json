@@ -57,6 +57,7 @@
     "subscription": "Abonnement",
     "backPlus": "Retour Plus",
     "backPlusHint": "Ouvre Retour Plus d'informations",
+    "subscriptionHint": "Ouvre l’abonnement et Back Plus",
     "backPlusSubtitleTrial": "Essai actif · se termine le {date}",
     "backPlusSubtitleAnnual": "Forfait annuel · renouvelle {date}",
     "backPlusSubtitleMonthly": "Forfait mensuel · renouvelle {date}",
@@ -67,6 +68,7 @@
     "emergency": "Assistance supplémentaire",
     "about": "À propos Retour",
     "groups": {
+      "subscription": "Abonnement",
       "experience": "Expérience",
       "personal": "Personnelle",
       "safetyLegal": "Sécurité et juridique"

@@ -57,6 +57,7 @@
     "subscription": "Abonnement",
     "backPlus": "Terug Plus",
     "backPlusHint": "Opent Back Plus-informatie",
+    "subscriptionHint": "Opent abonnement en Back Plus",
     "backPlusSubtitleTrial": "Proefperiode actief · eindigt op {date}",
     "backPlusSubtitleAnnual": "Jaarabonnement · verlengd op {date}",
     "backPlusSubtitleMonthly": "Maandabonnement · wordt verlengd op {datum}",
@@ -67,6 +68,7 @@
     "emergency": "Extra ondersteuning",
     "about": "Over Terug",
     "groups": {
+      "subscription": "Abonnement",
       "experience": "Ervaring",
       "personal": "Persoonlijk",
       "safetyLegal": "Veiligheid en juridisch"

@@ -57,6 +57,7 @@
     "subscription": "Abonnement",
     "backPlus": "Zurück Plus",
     "backPlusHint": "Öffnet Back Plus-Informationen",
+    "subscriptionHint": "Öffnet Abonnement und Back Plus",
     "backPlusSubtitleTrial": "Testversion aktiv · endet am {Datum}",
     "backPlusSubtitleAnnual": "Jahresplan · verlängert am {Datum}",
     "backPlusSubtitleMonthly": "Monatsplan · verlängert am {Datum}",
@@ -67,6 +68,7 @@
     "emergency": "Zusätzliche Unterstützung",
     "about": "Über Zurück",
     "groups": {
+      "subscription": "Abonnement",
       "experience": "Erfahrung",
       "personal": "Persönlich",
       "safetyLegal": "Sicherheit und Recht"

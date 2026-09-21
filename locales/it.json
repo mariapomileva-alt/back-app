@@ -57,6 +57,7 @@
     "subscription": "Sottoscrizione",
     "backPlus": "Indietro Più",
     "backPlusHint": "Apre le informazioni di Back Plus",
+    "subscriptionHint": "Apre abbonamento e Back Plus",
     "backPlusSubtitleTrial": "Prova attiva · termina il giorno {data}",
     "backPlusSubtitleAnnual": "Piano annuale · rinnova il {data}",
     "backPlusSubtitleMonthly": "Piano mensile · rinnova il {data}",
@@ -67,6 +68,7 @@
     "emergency": "Supporto aggiuntivo",
     "about": "A proposito di Indietro",
     "groups": {
+      "subscription": "Abbonamento",
       "experience": "Esperienza",
       "personal": "Personale",
       "safetyLegal": "Sicurezza e legalità"

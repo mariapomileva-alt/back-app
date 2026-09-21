@@ -57,6 +57,7 @@
     "subscription": "Subscrição",
     "backPlus": "Voltar mais",
     "backPlusHint": "Abre informações do Back Plus",
+    "subscriptionHint": "Abre assinatura e Back Plus",
     "backPlusSubtitleTrial": "Teste ativo · termina em {data}",
     "backPlusSubtitleAnnual": "Plano anual · renovação em {data}",
     "backPlusSubtitleMonthly": "Plano mensal · renovação em {data}",
@@ -67,6 +68,7 @@
     "emergency": "Suporte extra",
     "about": "Sobre Voltar",
     "groups": {
+      "subscription": "Assinatura",
       "experience": "Experiência",
       "personal": "Pessoal",
       "safetyLegal": "Segurança e Jurídico"

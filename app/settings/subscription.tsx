@@ -60,7 +60,7 @@ export default function SubscriptionScreen() {
 
   return (
     <ScreenContainer scroll={false} phoneWidth>
-      <ScreenHeader title={t('settings.backPlus')} />
+      <ScreenHeader title={t('settings.subscription')} />
       <ScrollView
         contentContainerStyle={styles.scrollContent}
         showsVerticalScrollIndicator={false}

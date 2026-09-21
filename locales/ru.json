@@ -57,6 +57,7 @@
     "subscription": "Подписка",
     "backPlus": "Назад Плюс",
     "backPlusHint": "Открывает информацию Back Plus",
+    "subscriptionHint": "Подписка и Back Plus",
     "backPlusSubtitleTrial": "Пробная версия активна · заканчивается {date}",
     "backPlusSubtitleAnnual": "Годовой план · продлевается {дата}",
     "backPlusSubtitleMonthly": "Ежемесячный план · продлевается {date}",
@@ -67,6 +68,7 @@
     "emergency": "Дополнительная поддержка",
     "about": "О Назад",
     "groups": {
+      "subscription": "Подписка",
       "experience": "Опыт",
       "personal": "Персональный",
       "safetyLegal": "Безопасность и юридическая сторона"

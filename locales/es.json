@@ -57,6 +57,7 @@
     "subscription": "Suscripción",
     "backPlus": "Atrás más",
     "backPlusHint": "Abre Atrás Más información",
+    "subscriptionHint": "Abre suscripción y Back Plus",
     "backPlusSubtitleTrial": "Prueba activa · finaliza el {fecha}",
     "backPlusSubtitleAnnual": "Plan anual · se renueva {fecha}",
     "backPlusSubtitleMonthly": "Plan mensual · se renueva {fecha}",
@@ -67,6 +68,7 @@
     "emergency": "Soporte adicional",
     "about": "Acerca de la espalda",
     "groups": {
+      "subscription": "Suscripción",
       "experience": "Experiencia",
       "personal": "Personal",
       "safetyLegal": "Seguridad y Legal"

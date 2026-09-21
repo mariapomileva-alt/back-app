@@ -57,6 +57,7 @@
     "subscription": "Abonelik",
     "backPlus": "Geri Artı",
     "backPlusHint": "Back Plus bilgilerini açar",
+    "subscriptionHint": "Abonelik ve Back Plus'ı açar",
     "backPlusSubtitleTrial": "Deneme etkin · {date} tarihinde sona eriyor",
     "backPlusSubtitleAnnual": "Yıllık plan · {date} tarihinde yenilenir",
     "backPlusSubtitleMonthly": "Aylık plan · {date} tarihinde yenilenir",
@@ -67,6 +68,7 @@
     "emergency": "Ekstra destek",
     "about": "Geri Hakkında",
     "groups": {
+      "subscription": "Abonelik",
       "experience": "Deneyim",
       "personal": "Kişisel",
       "safetyLegal": "Güvenlik ve Hukuk"

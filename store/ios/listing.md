@@ -73,7 +73,7 @@ Use subscriptions + terms URLs in **Review notes** and in-app; Connect may not r
 
 **Site footer:** © Back App. **App Store copyright field** may still list **2026 Tatjana Fedorkova** — that is intentional.
 
-Support is described on the support page (e.g. GitHub Issues). Do not invent a product mailbox.
+Support is described on the support page: **support@backapp.live** (also linked from https://backapp.live/support.html).
 
 ---
 

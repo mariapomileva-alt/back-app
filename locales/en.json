@@ -57,6 +57,7 @@
     "subscription": "Subscription",
     "backPlus": "Back Plus",
     "backPlusHint": "Opens Back Plus information",
+    "subscriptionHint": "Opens subscription and Back Plus",
     "backPlusSubtitleTrial": "Trial active · ends {date}",
     "backPlusSubtitleAnnual": "Annual plan · renews {date}",
     "backPlusSubtitleMonthly": "Monthly plan · renews {date}",
@@ -67,6 +68,7 @@
     "emergency": "Extra support",
     "about": "About Back",
     "groups": {
+      "subscription": "Subscription",
       "experience": "Experience",
       "personal": "Personal",
       "safetyLegal": "Safety & Legal"
