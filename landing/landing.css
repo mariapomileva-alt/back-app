@@ -668,15 +668,15 @@ button {
 }
 
 .tool-preview--breathe img {
-  object-position: center 26%;
+  object-position: center 34%;
 }
 
 .tool-preview--distract img {
-  object-position: center 24%;
+  object-position: center 52%;
 }
 
 .tool-preview--ground img {
-  object-position: center 30%;
+  object-position: center 44%;
 }
 
 .tool-preview--move img {
