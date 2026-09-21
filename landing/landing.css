@@ -37,6 +37,7 @@ body {
   line-height: 1.5;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 img,
@@ -103,12 +104,6 @@ button {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
 }
 
-.mark-defs {
-  position: absolute;
-  width: 0;
-  height: 0;
-  overflow: hidden;
-}
 
 .nav {
   position: relative;
@@ -275,19 +270,116 @@ button {
   position: relative;
   isolation: isolate;
   height: 640px;
-  overflow: hidden;
+  overflow: visible;
+}
+
+@keyframes landing-orb-primary {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translate(16px, -22px) scale(1.14);
+    opacity: 0.38;
+  }
+}
+
+@keyframes landing-orb-halo {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.4;
+  }
+  45% {
+    transform: translate(-12px, 14px) scale(1.18);
+    opacity: 0.52;
+  }
+  75% {
+    transform: translate(8px, -8px) scale(0.94);
+    opacity: 0.36;
+  }
+}
+
+@keyframes landing-slab-breathe {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-10px) scale(1.015);
+  }
+}
+
+@keyframes landing-clay-float {
+  0%,
+  100% {
+    transform: rotate(11deg) translateY(0) scale(1);
+  }
+  50% {
+    transform: rotate(14deg) translateY(-10px) scale(1.06);
+  }
+}
+
+@keyframes landing-scribble-float {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.52;
+  }
+  50% {
+    transform: translateY(8px);
+    opacity: 0.62;
+  }
+}
+
+@keyframes landing-bezel-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-11px);
+  }
+}
+
+@keyframes landing-shelf-orb {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.2;
+  }
+  50% {
+    transform: translate(-18px, 12px) scale(1.12);
+    opacity: 0.28;
+  }
 }
 
 .orb {
   position: absolute;
   z-index: 0;
+  border-radius: 50%;
+  transform-origin: center center;
+  will-change: transform;
+}
+
+.orb-primary {
   top: 24px;
   left: 18%;
   width: 196px;
   height: 196px;
-  border-radius: 50%;
   background: var(--sage);
-  opacity: 0.32;
+  animation: landing-orb-primary 8.5s ease-in-out infinite;
+}
+
+.orb-halo {
+  top: 108px;
+  left: 6%;
+  width: 132px;
+  height: 132px;
+  background: var(--pale);
+  animation: landing-orb-halo 11.5s ease-in-out infinite;
+  animation-delay: -2.5s;
 }
 
 .slab {
@@ -299,6 +391,9 @@ button {
   height: 460px;
   border-radius: 32px;
   background: var(--forest);
+  transform-origin: 50% 88%;
+  animation: landing-slab-breathe 12s ease-in-out infinite;
+  animation-delay: -1s;
 }
 
 .clay {
@@ -311,6 +406,8 @@ button {
   border-radius: 10px;
   background: var(--clay);
   transform: rotate(11deg);
+  animation: landing-clay-float 9s ease-in-out infinite;
+  animation-delay: -3s;
 }
 
 .scribble {
@@ -320,7 +417,8 @@ button {
   bottom: 22%;
   width: 220px;
   height: 70px;
-  opacity: 0.55;
+  animation: landing-scribble-float 10s ease-in-out infinite;
+  animation-delay: -4s;
 }
 
 .giant {
@@ -345,12 +443,9 @@ button {
   position: absolute;
   z-index: 3;
   top: 8px;
-  right: 12px;
-  left: auto;
-  width: min(286px, 100%);
-  max-width: 286px;
-  transform: rotate(-3.2deg);
-  transform-origin: 50% 42%;
+  left: 68%;
+  width: 286px;
+  transform: translateX(-14%) rotate(-3.2deg);
 }
 
 .bezel {
@@ -360,27 +455,25 @@ button {
   box-shadow:
     0 40px 80px rgba(12, 59, 46, 0.16),
     0 8px 18px rgba(12, 59, 46, 0.06);
-  max-width: 100%;
+  animation: landing-bezel-float 7.5s ease-in-out infinite;
+  animation-delay: -1.5s;
 }
 
 .screen {
   position: relative;
   overflow: hidden;
   height: 572px;
-  padding: 6px 12px 10px;
+  padding: 0;
   border-radius: 32px;
   background: var(--ivory);
-  display: flex;
-  flex-direction: column;
 }
 
-.phone-grain {
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  opacity: 0.1;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E");
-  pointer-events: none;
+.screen-shot {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
 }
 
 .status {
@@ -556,11 +649,21 @@ button {
   background: var(--surface);
 }
 
-.tool-mark {
+.tool-preview {
+  margin: 0 0 18px;
+  height: clamp(168px, 22vw, 220px);
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--divider) 55%, var(--ivory));
+  background: var(--ivory);
+}
+
+.tool-preview img {
+  display: block;
   width: 100%;
-  max-width: 160px;
-  height: 86px;
-  margin-bottom: 20px;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
 }
 
 .tool h3,
@@ -630,7 +733,9 @@ button {
   height: 220px;
   border-radius: 50%;
   background: var(--sage);
-  opacity: 0.22;
+  transform-origin: center center;
+  animation: landing-shelf-orb 10s ease-in-out infinite;
+  animation-delay: -5s;
 }
 
 .shelf-inner {
@@ -714,11 +819,9 @@ button {
   }
 
   .phone {
-    right: auto;
     left: 66%;
     top: 24px;
     transform: translateX(-28%) rotate(-3deg);
-    transform-origin: 50% 42%;
   }
 
   .giant {
@@ -777,21 +880,12 @@ button {
 
   .phone {
     width: 214px;
-    max-width: 214px;
     top: 16px;
-    right: auto;
     left: 56%;
-    transform: translateX(-22%) rotate(-3deg);
-    transform-origin: 50% 42%;
   }
 
   .screen {
     height: 430px;
-    padding: 6px 10px 10px;
-  }
-
-  .home-hero {
-    font-size: 22px;
   }
 
   .slab {
@@ -801,9 +895,16 @@ button {
     top: 48px;
   }
 
-  .orb {
+  .orb-primary {
     width: 108px;
     height: 108px;
+  }
+
+  .orb-halo {
+    width: 76px;
+    height: 76px;
+    top: 88px;
+    left: 4%;
   }
 
   .clay {
@@ -834,10 +935,9 @@ button {
     padding: 16px;
   }
 
-  .tool-mark {
-    width: 88px;
-    height: 52px;
-    margin-bottom: 16px;
+  .tool-preview {
+    height: 148px;
+    margin-bottom: 14px;
   }
 
   .nav-cta {
@@ -852,20 +952,28 @@ button {
     scroll-behavior: auto;
   }
 
+  .orb-primary,
+  .orb-halo,
+  .slab,
+  .clay,
+  .scribble,
+  .bezel,
+  .shelf-bg::after {
+    animation: none !important;
+  }
+
+  .clay {
+    transform: rotate(11deg);
+  }
+
   .phone {
-    transform: rotate(-3.2deg);
+    transform: translateX(-14%);
   }
 }
 
 @media (max-width: 980px) and (prefers-reduced-motion: reduce) {
   .phone {
     transform: translateX(-28%) rotate(-3deg);
-  }
-}
-
-@media (max-width: 640px) and (prefers-reduced-motion: reduce) {
-  .phone {
-    transform: translateX(-22%) rotate(-3deg);
   }
 }
 
