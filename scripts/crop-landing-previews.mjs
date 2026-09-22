@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 /**
  * Build landing/screenshots/previews/*.png from 390×844 session captures.
- * Run after replacing landing/screenshots/{tool}.png (must be 1×, not Retina 2×).
+ * Visual-only crops — titles live under each card on the landing page.
+ * Distract and Read use Home marks in index.html instead of these PNGs.
  */
 import { execFileSync } from 'node:child_process';
 import { mkdirSync } from 'node:fs';
@@ -14,12 +15,10 @@ const outDir = path.join(srcDir, 'previews');
 
 /** @type {Record<string, [number, number, number, number]>} */
 const crops = {
-  breathe: [0, 118, 390, 418],
-  distract: [0, 54, 390, 534],
-  ground: [0, 108, 390, 502],
-  move: [0, 120, 390, 455],
-  listen: [0, 50, 390, 392],
-  read: [0, 148, 390, 428],
+  breathe: [48, 158, 342, 348],
+  ground: [32, 118, 358, 298],
+  move: [24, 118, 366, 318],
+  listen: [24, 168, 366, 368],
 };
 
 mkdirSync(outDir, { recursive: true });
@@ -34,7 +33,7 @@ for (const [name, box] of Object.entries(crops)) {
     'python3',
     [
       '-c',
-      `from PIL import Image; im=Image.open(${JSON.stringify(input)}); assert im.size==(390,844), f'expected 390x844, got {im.size} for ${name}'; im.crop((${x0}, ${y0}, ${x1}, ${y1})).save(${JSON.stringify(output)})`,
+      `from PIL import Image; im=Image.open(${JSON.stringify(input)}); assert im.size==(390,844), f'expected 390x844, got {im.size}'; im.crop((${x0}, ${y0}, ${x1}, ${y1})).save(${JSON.stringify(output)})`,
     ],
     { stdio: 'inherit' },
   );
