@@ -38,6 +38,20 @@
   </head>
   <body>
     <div class="grain" aria-hidden="true"></div>
+    <svg class="mark-defs" aria-hidden="true">
+      <symbol id="mark-distract" viewBox="0 0 120 72">
+        <circle cx="42" cy="40" r="16" fill="#6D9773" opacity="0.42" />
+        <circle cx="70" cy="24" r="11" fill="#D7E0D5" opacity="0.7" />
+        <circle cx="86" cy="46" r="9" fill="#315E4D" opacity="0.38" />
+        <circle cx="60" cy="50" r="6.5" fill="#BB8A52" opacity="0.32" />
+      </symbol>
+      <symbol id="mark-read" viewBox="0 0 120 72">
+        <text x="16" y="50" font-family="Georgia, 'Times New Roman', serif" font-size="38" font-weight="500" fill="#BB8A52" opacity="0.55">Aa</text>
+        <rect x="70" y="28" width="36" height="1.35" rx="0.7" fill="#0C3B2E" opacity="0.22" />
+        <rect x="70" y="38" width="28" height="1.35" rx="0.7" fill="#0C3B2E" opacity="0.16" />
+        <rect x="70" y="48" width="20" height="1.35" rx="0.7" fill="#0C3B2E" opacity="0.12" />
+      </symbol>
+    </svg>
     <a class="skip" href="#tools">Explore the six tools</a>
 
     <header class="nav">
@@ -118,15 +132,10 @@
             <p class="tool-copy">Follow a gentle rhythm.</p>
           </article>
           <article class="tool">
-            <figure class="landing-session-card">
-              <img
-                src="screenshots/previews/distract.png"
-                alt=""
-                width="390"
-                height="844"
-                loading="lazy"
-                decoding="async"
-              />
+            <figure class="landing-session-card landing-session-card--mark">
+              <svg class="landing-tool-mark" viewBox="0 0 120 72" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+                <use href="#mark-distract" width="120" height="72" />
+              </svg>
             </figure>
             <h3>Distract</h3>
             <p class="tool-copy">Give your attention a simple task.</p>
@@ -174,15 +183,10 @@
             <p class="tool-copy">Follow a steady sound.</p>
           </article>
           <article class="tool">
-            <figure class="landing-session-card">
-              <img
-                src="screenshots/previews/read.png"
-                alt=""
-                width="390"
-                height="844"
-                loading="lazy"
-                decoding="async"
-              />
+            <figure class="landing-session-card landing-session-card--mark">
+              <svg class="landing-tool-mark" viewBox="0 0 120 72" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+                <use href="#mark-read" width="120" height="72" />
+              </svg>
             </figure>
             <h3>Read</h3>
             <p class="tool-copy">Let changing words hold your attention.</p>

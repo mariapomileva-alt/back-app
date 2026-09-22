@@ -104,6 +104,13 @@ button {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
 }
 
+.mark-defs {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
 .nav {
   position: relative;
   z-index: 5;
@@ -677,6 +684,15 @@ button {
   border: none;
   border-radius: 0;
   box-shadow: none;
+}
+
+.landing-session-card--mark {
+  background: transparent;
+}
+
+.landing-tool-mark {
+  width: min(72%, 168px);
+  height: auto;
 }
 
 .tool h3,
