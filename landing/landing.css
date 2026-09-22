@@ -650,7 +650,6 @@ button {
 
 .landing-session-card {
   margin: 0;
-  height: clamp(200px, 26vw, 268px);
   overflow: hidden;
   border: 1px solid color-mix(in srgb, var(--divider) 65%, var(--ivory));
   border-radius: 20px;
@@ -661,33 +660,8 @@ button {
 .landing-session-card img {
   display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 32%;
-}
-
-.landing-session-card--breathe img {
-  object-position: center 30%;
-}
-
-.landing-session-card--distract img {
-  object-position: center 38%;
-}
-
-.landing-session-card--ground img {
-  object-position: center 34%;
-}
-
-.landing-session-card--move img {
-  object-position: center 36%;
-}
-
-.landing-session-card--listen img {
-  object-position: center 16%;
-}
-
-.landing-session-card--read img {
-  object-position: center 20%;
+  height: auto;
+  vertical-align: middle;
 }
 
 .tool h3,
@@ -954,9 +928,6 @@ button {
     grid-template-columns: 1fr 1fr;
   }
 
-  .landing-session-card {
-    height: 188px;
-  }
 
   .nav-cta {
     min-height: 40px;
