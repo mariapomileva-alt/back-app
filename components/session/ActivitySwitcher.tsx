@@ -7,7 +7,7 @@ import { t } from '@/locales/i18n';
 import {
   SECONDARY_CONTROL_LABEL_OPACITY,
   secondaryControlLabelColor,
-} from '@/theme/secondaryControlText';
+} from '@/theme/colors';
 import { spacing, touch } from '@/theme/spacing';
 
 type Props = {
