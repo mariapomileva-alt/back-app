@@ -104,14 +104,6 @@ button {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
 }
 
-.mark-defs {
-  position: absolute;
-  width: 0;
-  height: 0;
-  overflow: hidden;
-}
-
-
 .nav {
   position: relative;
   z-index: 5;
@@ -656,70 +648,60 @@ button {
   background: transparent;
 }
 
-.landing-tool-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  min-height: clamp(148px, 18vw, 188px);
-  padding: 12px 10px 12px;
-  border: 1px solid color-mix(in srgb, var(--divider) 72%, var(--ivory));
+.landing-session-card {
+  margin: 0;
+  height: clamp(200px, 26vw, 268px);
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--divider) 65%, var(--ivory));
   border-radius: 20px;
   background: var(--surface);
   box-shadow: 0 4px 14px rgba(12, 59, 46, 0.018);
 }
 
-.landing-tool-visual {
-  position: relative;
-  display: flex;
-  flex: 1;
-  align-items: center;
-  justify-content: center;
+.landing-session-card img {
+  display: block;
   width: 100%;
-  min-height: 72px;
-  overflow: hidden;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 32%;
 }
 
-.landing-tool-visual::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  height: 28%;
-  background: linear-gradient(to bottom, transparent, var(--surface));
-  pointer-events: none;
+.landing-session-card--breathe img {
+  object-position: center 30%;
 }
 
-.landing-tool-mark {
-  width: min(100%, 168px);
-  height: auto;
-  max-height: 100%;
+.landing-session-card--distract img {
+  object-position: center 38%;
 }
 
-.landing-tool-label {
-  position: relative;
-  z-index: 1;
-  margin-top: 4px;
-  font-size: 16px;
+.landing-session-card--ground img {
+  object-position: center 34%;
+}
+
+.landing-session-card--move img {
+  object-position: center 36%;
+}
+
+.landing-session-card--listen img {
+  object-position: center 16%;
+}
+
+.landing-session-card--read img {
+  object-position: center 20%;
+}
+
+.tool h3,
+.principles h3 {
+  margin: 14px 0 0;
+  font-size: 20px;
   font-weight: 600;
-  letter-spacing: 0.15px;
-  line-height: 1.25;
-  text-align: center;
-  color: var(--ink);
 }
 
 .tool-copy {
-  margin: 14px 4px 0;
+  margin: 8px 0 0;
   color: var(--muted);
   font-size: 15px;
   line-height: 1.45;
-}
-
-.principles h3 {
-  margin: 0;
-  font-size: 20px;
-  font-weight: 600;
 }
 
 .principles-grid {
@@ -972,8 +954,8 @@ button {
     grid-template-columns: 1fr 1fr;
   }
 
-  .landing-tool-card {
-    min-height: 136px;
+  .landing-session-card {
+    height: 188px;
   }
 
   .nav-cta {
