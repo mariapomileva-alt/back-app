@@ -744,6 +744,7 @@ def main() -> None:
     bg.save(IMAGES / "android-icon-background.png")
     mono.save(IMAGES / "android-icon-monochrome.png")
     favicon.save(IMAGES / "favicon.png")
+    shutil.copyfile(IMAGES / "favicon.png", LANDING / "favicon.png")
 
     landing_favicon = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <rect width="64" height="64" fill="{IVORY}"/>
@@ -751,6 +752,8 @@ def main() -> None:
 </svg>
 '''
     (LANDING / "favicon.svg").write_text(landing_favicon)
+
+    downscale(master, 256).save(LANDING / "logo-mark.png")
 
     write_comparison_board()
 
