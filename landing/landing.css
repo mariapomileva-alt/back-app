@@ -136,11 +136,7 @@ button {
   flex-shrink: 0;
   width: 32px;
   height: 32px;
-  border-radius: 50%;
-  background-color: var(--ivory);
-  background-image: url("logo-mark.png");
-  background-position: center;
-  background-size: cover;
+  background: url("logo-mark.png") center / contain no-repeat;
 }
 
 .nav-cta {
