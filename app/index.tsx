@@ -1,20 +1,25 @@
+import { useCallback, useState } from 'react';
 import { StyleSheet, View } from 'react-native';
-import { useRouter } from 'expo-router';
+import { useFocusEffect, useRouter } from 'expo-router';
 
 import { BackWordmark } from '@/components/brand/BackWordmark';
 import { ToolCard } from '@/components/cards/ToolCard';
 import { CallMyPersonAction } from '@/components/home/CallMyPersonAction';
 import { HomeCardVisual } from '@/components/home/HomeCardVisual';
+import { HomeNamePrompt } from '@/components/home/HomeNamePrompt';
 import { HomeSettingsButton } from '@/components/home/HomeSettingsButton';
 import { ThemedAppShell } from '@/components/layout/ThemedAppShell';
+import { HomeHeroLine } from '@/components/home/HomeHeroLine';
 import { AppText } from '@/components/typography/AppText';
 import { homeCardBorder } from '@/features/home/surfaces';
 import { homeTools } from '@/features/home/tools';
 import { openBackPlusPaywall } from '@/features/subscription/openBackPlusPaywall';
 import { useBackPlusAccess } from '@/features/subscription/useBackPlusAccess';
+import { useHomeFitLayout } from '@/hooks/useHomeFitLayout';
 import { useTheme } from '@/hooks/useTheme';
 import { t } from '@/locales/i18n';
-import { serif } from '@/theme/fonts';
+import { dismissHomeNamePrompt, isHomeNamePromptDismissed } from '@/storage/homeNamePrompt';
+import { loadLocalProfile, profileSalutation } from '@/storage/profile';
 import { spacing, touch } from '@/theme/spacing';
 
 const toolRows = [
@@ -27,6 +32,28 @@ export default function HomeScreen() {
   const router = useRouter();
   const { theme } = useTheme();
   const { accessState, hasPaidAccess } = useBackPlusAccess();
+  const [salutation, setSalutation] = useState<string | null>(null);
+  const [showNamePrompt, setShowNamePrompt] = useState(false);
+  const homeLayout = useHomeFitLayout(showNamePrompt, Boolean(salutation));
+
+  useFocusEffect(
+    useCallback(() => {
+      let active = true;
+      void (async () => {
+        const profile = await loadLocalProfile();
+        const name = profileSalutation(profile);
+        const dismissed = await isHomeNamePromptDismissed();
+        if (!active) {
+          return;
+        }
+        setSalutation(name);
+        setShowNamePrompt(!name && !dismissed);
+      })();
+      return () => {
+        active = false;
+      };
+    }, []),
+  );
 
   const openTool = (href: (typeof homeTools)[number]['href']) => {
     if (accessState === 'loading') {
@@ -43,7 +70,7 @@ export default function HomeScreen() {
     <ThemedAppShell scroll={false} contentStyle={styles.content}>
         <View style={styles.top}>
           <BackWordmark
-            size={22}
+            size={homeLayout.wordmarkSize}
             variant="theme"
             accessibilityRole="header"
             accessibilityLabel={t('app.name')}
@@ -51,23 +78,51 @@ export default function HomeScreen() {
           <HomeSettingsButton onPress={() => router.push('/settings')} />
         </View>
 
-        <View style={styles.hero}>
-          <AppText variant="hero" style={styles.heroTitle}>
-            {t('home.hero')}
-          </AppText>
-          <AppText tone="secondary" style={styles.prompt}>
+        {showNamePrompt ? (
+          <HomeNamePrompt
+            onDismiss={() => {
+              void dismissHomeNamePrompt();
+              setShowNamePrompt(false);
+            }}
+          />
+        ) : null}
+
+        <View
+          style={[
+            styles.hero,
+            {
+              marginTop: homeLayout.heroMarginTop,
+              marginBottom: salutation
+                ? homeLayout.heroMarginBottomNamed
+                : homeLayout.heroMarginBottom,
+            },
+          ]}
+        >
+          <HomeHeroLine salutation={salutation} layout={homeLayout} />
+          <AppText
+            tone="secondary"
+            maxFontSizeMultiplier={homeLayout.maxFontSizeMultiplier}
+            style={[
+              styles.prompt,
+              {
+                fontSize: homeLayout.promptFontSize,
+                lineHeight: homeLayout.promptLineHeight,
+              },
+            ]}
+          >
             {t('home.prompt')}
           </AppText>
         </View>
 
-        <View style={styles.grid}>
+        <View style={[styles.grid, { gap: homeLayout.gridGap }]}>
           {toolRows.map((row) => (
-            <View key={row.map((tool) => tool.id).join('-')} style={styles.row}>
+            <View key={row.map((tool) => tool.id).join('-')} style={[styles.row, { gap: homeLayout.gridGap }]}>
               {row.map((tool) => (
                 <ToolCard
                   key={tool.id}
                   label={t(`home.tools.${tool.id}`)}
                   visual={<HomeCardVisual id={tool.id} />}
+                  density={homeLayout.cardDensity}
                   onPress={() => openTool(tool.href)}
                   style={{
                     backgroundColor: theme.colors.surface,
@@ -103,34 +158,21 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   hero: {
-    marginTop: spacing.sm,
-    marginBottom: 18,
     maxWidth: 300,
   },
-  heroTitle: {
-    fontFamily: serif,
-    fontWeight: '500',
-    fontSize: 40,
-    lineHeight: 46,
-    letterSpacing: -0.6,
-  },
   prompt: {
-    marginTop: 8,
-    fontSize: 15,
-    lineHeight: 22,
+    marginTop: 6,
     letterSpacing: 0.2,
     fontWeight: '400',
   },
   grid: {
     flex: 1,
-    gap: 10,
     width: '100%',
     minHeight: 0,
   },
   row: {
     flex: 1,
     flexDirection: 'row',
-    gap: 10,
     width: '100%',
     minHeight: 0,
   },

@@ -3,23 +3,28 @@
     "name": "Voltar"
   },
   "home": {
-    "hero": "Você está aqui.",
-    "prompt": "O que parece possível agora?",
-    "openSettings": "Abrir configurações",
-    "openSettingsHint": "Abre tema, privacidade e outras preferências silenciosas",
-    "startToolHint": "Inicia o suporte imediatamente",
-    "callMyPerson": "Precisa de alguém? Ligue para minha pessoa",
-    "callMyPersonNeed": "Precisa de alguém?",
-    "callMyPersonAction": "Ligue para minha pessoa",
-    "callMyPersonHint": "Abre seu contato de suporte",
+    "hero": "You’re here",
+    "prompt": "What feels possible right now?",
+    "openSettings": "Open settings",
+    "openSettingsHint": "Opens theme, privacy, and other quiet preferences",
+    "startToolHint": "Starts support immediately",
+    "callMyPerson": "Need someone? Call my person",
+    "callMyPersonNeed": "Need someone?",
+    "callMyPersonAction": "Call my person",
+    "callMyPersonHint": "Opens your support contact",
     "tools": {
-      "breathe": "Respirar",
-      "distract": "Distrair",
-      "ground": "Chão",
-      "move": "Mover",
-      "listen": "Ouvir",
-      "read": "Ler"
-    }
+      "breathe": "Breathe",
+      "distract": "Distract",
+      "ground": "Ground",
+      "move": "Move",
+      "listen": "Listen",
+      "read": "Read"
+    },
+    "namePrompt": "Tell us what to call you — only on this phone",
+    "namePromptAction": "Choose a name",
+    "namePromptSkip": "Not now",
+    "heroNamedLine2": "you’re here",
+    "heroNamedA11y": "{name}, you’re here"
   },
   "common": {
     "close": "Fechar",
@@ -72,7 +77,9 @@
       "experience": "Experiência",
       "personal": "Pessoal",
       "safetyLegal": "Segurança e Jurídico"
-    }
+    },
+    "profile": "About you",
+    "profileHint": "How you want Back to greet you on this device"
   },
   "themes": {
     "title": "Tema",
@@ -492,5 +499,15 @@
     "body": "Volte para trás sempre que precisar.",
     "home": "Ir para trás",
     "homeHint": "Retorna às seis ferramentas"
+  },
+  "profile": {
+    "title": "About you",
+    "lead": "Optional. A name, a nickname — whatever feels right. Skip if you prefer. Nothing leaves this phone.",
+    "displayName": "What should we call you?",
+    "displayNameHint": "Zayka",
+    "deviceOnly": "We don’t upload this. No account, no server. Later we may offer optional, anonymous insights — only if you turn that on.",
+    "save": "Save",
+    "clear": "Remove what I shared",
+    "skip": "Skip for now"
   }
 }

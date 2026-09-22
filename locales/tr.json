@@ -3,23 +3,28 @@
     "name": "Geri"
   },
   "home": {
-    "hero": "Buradasın.",
-    "prompt": "Şu anda ne mümkün görünüyor?",
-    "openSettings": "Ayarları aç",
-    "openSettingsHint": "Temayı, gizliliği ve diğer sessiz tercihlerini açar",
-    "startToolHint": "Desteğe hemen başlar",
-    "callMyPerson": "Birine mi ihtiyacınız var? Kişimi ara",
-    "callMyPersonNeed": "Birine mi ihtiyacınız var?",
-    "callMyPersonAction": "Kişimi ara",
-    "callMyPersonHint": "Destek iletişim kişinizi açar",
+    "hero": "You’re here",
+    "prompt": "What feels possible right now?",
+    "openSettings": "Open settings",
+    "openSettingsHint": "Opens theme, privacy, and other quiet preferences",
+    "startToolHint": "Starts support immediately",
+    "callMyPerson": "Need someone? Call my person",
+    "callMyPersonNeed": "Need someone?",
+    "callMyPersonAction": "Call my person",
+    "callMyPersonHint": "Opens your support contact",
     "tools": {
-      "breathe": "Nefes almak",
-      "distract": "Dikkatini dağıt",
-      "ground": "Zemin",
-      "move": "Taşınmak",
-      "listen": "Dinlemek",
-      "read": "Okumak"
-    }
+      "breathe": "Breathe",
+      "distract": "Distract",
+      "ground": "Ground",
+      "move": "Move",
+      "listen": "Listen",
+      "read": "Read"
+    },
+    "namePrompt": "Tell us what to call you — only on this phone",
+    "namePromptAction": "Choose a name",
+    "namePromptSkip": "Not now",
+    "heroNamedLine2": "you’re here",
+    "heroNamedA11y": "{name}, you’re here"
   },
   "common": {
     "close": "Kapalı",
@@ -72,7 +77,9 @@
       "experience": "Deneyim",
       "personal": "Kişisel",
       "safetyLegal": "Güvenlik ve Hukuk"
-    }
+    },
+    "profile": "About you",
+    "profileHint": "How you want Back to greet you on this device"
   },
   "themes": {
     "title": "Tema",
@@ -492,5 +499,15 @@
     "body": "İhtiyacınız olduğunda Geriye dönün.",
     "home": "Geriye Git",
     "homeHint": "Altı araca geri döner"
+  },
+  "profile": {
+    "title": "About you",
+    "lead": "Optional. A name, a nickname — whatever feels right. Skip if you prefer. Nothing leaves this phone.",
+    "displayName": "What should we call you?",
+    "displayNameHint": "Zayka",
+    "deviceOnly": "We don’t upload this. No account, no server. Later we may offer optional, anonymous insights — only if you turn that on.",
+    "save": "Save",
+    "clear": "Remove what I shared",
+    "skip": "Skip for now"
   }
 }

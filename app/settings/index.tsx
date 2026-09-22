@@ -123,6 +123,11 @@ export default function SettingsScreen() {
 
         <SettingsSection title={t('settings.groups.personal')}>
           <SettingsRow
+            label={t('settings.profile')}
+            accessibilityHint={t('settings.profileHint')}
+            onPress={() => router.push('/settings/profile')}
+          />
+          <SettingsRow
             label={t('settings.supportContact')}
             onPress={() => router.push('/support/setup')}
           />

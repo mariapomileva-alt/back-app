@@ -3,23 +3,28 @@
     "name": "Rug"
   },
   "home": {
-    "hero": "Je bent hier.",
-    "prompt": "Wat voelt op dit moment mogelijk?",
-    "openSettings": "Instellingen openen",
-    "openSettingsHint": "Opent thema, privacy en andere stille voorkeuren",
-    "startToolHint": "Start onmiddellijk ondersteuning",
-    "callMyPerson": "Iemand nodig? Bel mijn persoon",
-    "callMyPersonNeed": "Iemand nodig?",
-    "callMyPersonAction": "Bel mijn persoon",
-    "callMyPersonHint": "Opent uw ondersteuningscontact",
+    "hero": "You’re here",
+    "prompt": "What feels possible right now?",
+    "openSettings": "Open settings",
+    "openSettingsHint": "Opens theme, privacy, and other quiet preferences",
+    "startToolHint": "Starts support immediately",
+    "callMyPerson": "Need someone? Call my person",
+    "callMyPersonNeed": "Need someone?",
+    "callMyPersonAction": "Call my person",
+    "callMyPersonHint": "Opens your support contact",
     "tools": {
-      "breathe": "Ademen",
-      "distract": "Afleiden",
-      "ground": "Grond",
-      "move": "Beweging",
-      "listen": "Luisteren",
-      "read": "Lezen"
-    }
+      "breathe": "Breathe",
+      "distract": "Distract",
+      "ground": "Ground",
+      "move": "Move",
+      "listen": "Listen",
+      "read": "Read"
+    },
+    "namePrompt": "Tell us what to call you — only on this phone",
+    "namePromptAction": "Choose a name",
+    "namePromptSkip": "Not now",
+    "heroNamedLine2": "you’re here",
+    "heroNamedA11y": "{name}, you’re here"
   },
   "common": {
     "close": "Dichtbij",
@@ -72,7 +77,9 @@
       "experience": "Ervaring",
       "personal": "Persoonlijk",
       "safetyLegal": "Veiligheid en juridisch"
-    }
+    },
+    "profile": "About you",
+    "profileHint": "How you want Back to greet you on this device"
   },
   "themes": {
     "title": "Thema",
@@ -492,5 +499,15 @@
     "body": "Keer terug naar terug wanneer u maar wilt.",
     "home": "Ga naar Terug",
     "homeHint": "Keert terug naar de zes hulpmiddelen"
+  },
+  "profile": {
+    "title": "About you",
+    "lead": "Optional. A name, a nickname — whatever feels right. Skip if you prefer. Nothing leaves this phone.",
+    "displayName": "What should we call you?",
+    "displayNameHint": "Zayka",
+    "deviceOnly": "We don’t upload this. No account, no server. Later we may offer optional, anonymous insights — only if you turn that on.",
+    "save": "Save",
+    "clear": "Remove what I shared",
+    "skip": "Skip for now"
   }
 }

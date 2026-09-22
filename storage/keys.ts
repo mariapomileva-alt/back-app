@@ -18,4 +18,6 @@ export const storageKeys = {
   history: 'back.history',
   readMemory: 'back.readMemory',
   languagePreference: 'back.languagePreference',
+  localProfile: 'back.profile.v1',
+  homeNamePromptDismissed: 'back.homeNamePromptDismissed',
 } as const;

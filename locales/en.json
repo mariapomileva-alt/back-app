@@ -3,7 +3,12 @@
     "name": "Back"
   },
   "home": {
-    "hero": "You’re here.",
+    "hero": "You’re here",
+    "heroNamedLine2": "you’re here",
+    "heroNamedA11y": "{name}, you’re here",
+    "namePrompt": "Tell us what to call you — only on this phone",
+    "namePromptAction": "Choose a name",
+    "namePromptSkip": "Not now",
     "prompt": "What feels possible right now?",
     "openSettings": "Open settings",
     "openSettingsHint": "Opens theme, privacy, and other quiet preferences",
@@ -67,12 +72,24 @@
     "terms": "Terms of use",
     "emergency": "Extra support",
     "about": "About Back",
+    "profile": "About you",
+    "profileHint": "How you want Back to greet you on this device",
     "groups": {
       "subscription": "Subscription",
       "experience": "Experience",
       "personal": "Personal",
       "safetyLegal": "Safety & Legal"
     }
+  },
+  "profile": {
+    "title": "About you",
+    "lead": "Optional. A name, a nickname — whatever feels right. Skip if you prefer. Nothing leaves this phone.",
+    "displayName": "What should we call you?",
+    "displayNameHint": "Zayka",
+    "deviceOnly": "We don’t upload this. No account, no server. Later we may offer optional, anonymous insights — only if you turn that on.",
+    "save": "Save",
+    "clear": "Remove what I shared",
+    "skip": "Skip for now"
   },
   "themes": {
     "title": "Theme",

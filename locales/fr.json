@@ -3,23 +3,28 @@
     "name": "Dos"
   },
   "home": {
-    "hero": "Vous êtes ici.",
-    "prompt": "Qu’est-ce qui semble possible en ce moment ?",
-    "openSettings": "Ouvrir les paramètres",
-    "openSettingsHint": "Ouvre le thème, la confidentialité et d'autres préférences silencieuses",
-    "startToolHint": "Démarre le support immédiatement",
-    "callMyPerson": "Besoin de quelqu'un ? Appelle ma personne",
-    "callMyPersonNeed": "Besoin de quelqu'un ?",
-    "callMyPersonAction": "Appelle ma personne",
-    "callMyPersonHint": "Ouvre votre contact d'assistance",
+    "hero": "You’re here",
+    "prompt": "What feels possible right now?",
+    "openSettings": "Open settings",
+    "openSettingsHint": "Opens theme, privacy, and other quiet preferences",
+    "startToolHint": "Starts support immediately",
+    "callMyPerson": "Need someone? Call my person",
+    "callMyPersonNeed": "Need someone?",
+    "callMyPersonAction": "Call my person",
+    "callMyPersonHint": "Opens your support contact",
     "tools": {
-      "breathe": "Respirer",
-      "distract": "Distraire",
-      "ground": "Sol",
-      "move": "Se déplacer",
-      "listen": "Écouter",
-      "read": "Lire"
-    }
+      "breathe": "Breathe",
+      "distract": "Distract",
+      "ground": "Ground",
+      "move": "Move",
+      "listen": "Listen",
+      "read": "Read"
+    },
+    "namePrompt": "Tell us what to call you — only on this phone",
+    "namePromptAction": "Choose a name",
+    "namePromptSkip": "Not now",
+    "heroNamedLine2": "you’re here",
+    "heroNamedA11y": "{name}, you’re here"
   },
   "common": {
     "close": "Fermer",
@@ -72,7 +77,9 @@
       "experience": "Expérience",
       "personal": "Personnelle",
       "safetyLegal": "Sécurité et juridique"
-    }
+    },
+    "profile": "About you",
+    "profileHint": "How you want Back to greet you on this device"
   },
   "themes": {
     "title": "Thème",
@@ -492,5 +499,15 @@
     "body": "Revenez à Back chaque fois que vous en avez besoin.",
     "home": "Aller au retour",
     "homeHint": "Retour aux six outils"
+  },
+  "profile": {
+    "title": "About you",
+    "lead": "Optional. A name, a nickname — whatever feels right. Skip if you prefer. Nothing leaves this phone.",
+    "displayName": "What should we call you?",
+    "displayNameHint": "Zayka",
+    "deviceOnly": "We don’t upload this. No account, no server. Later we may offer optional, anonymous insights — only if you turn that on.",
+    "save": "Save",
+    "clear": "Remove what I shared",
+    "skip": "Skip for now"
   }
 }
