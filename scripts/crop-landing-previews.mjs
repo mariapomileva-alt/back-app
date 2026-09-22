@@ -13,13 +13,14 @@ const srcDir = path.join(root, 'landing/screenshots');
 const outDir = path.join(srcDir, 'previews');
 
 /** @type {Record<string, [number, number, number, number]>} */
+/** Optional marketing crops — verify visually before wiring in index.html. */
 const crops = {
-  breathe: [0, 52, 390, 348],
-  distract: [0, 68, 390, 398],
-  ground: [0, 72, 390, 382],
-  move: [0, 88, 390, 378],
-  listen: [0, 48, 390, 368],
-  read: [0, 108, 390, 388],
+  breathe: [0, 115, 390, 420],
+  distract: [0, 125, 390, 480],
+  ground: [0, 130, 390, 440],
+  move: [0, 150, 390, 450],
+  listen: [0, 55, 390, 400],
+  read: [0, 140, 390, 420],
 };
 
 mkdirSync(outDir, { recursive: true });
