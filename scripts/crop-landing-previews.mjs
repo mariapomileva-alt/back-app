@@ -15,10 +15,11 @@ const outDir = path.join(srcDir, 'previews');
 
 /** @type {Record<string, [number, number, number, number]>} */
 const crops = {
-  breathe: [48, 158, 342, 348],
-  ground: [32, 118, 358, 298],
-  move: [24, 118, 366, 318],
-  listen: [24, 168, 366, 368],
+  // Extra vertical padding so soft glows (e.g. Breathe circle) are not sheared.
+  breathe: [30, 115, 360, 415],
+  ground: [16, 95, 374, 385],
+  move: [24, 95, 366, 405],
+  listen: [24, 130, 366, 455],
 };
 
 mkdirSync(outDir, { recursive: true });
