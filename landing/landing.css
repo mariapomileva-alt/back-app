@@ -680,11 +680,13 @@ button {
 .tool-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
-  align-items: start;
+  gap: 12px 16px;
+  align-items: stretch;
 }
 
 .tool {
+  display: flex;
+  flex-direction: column;
   min-height: auto;
   padding: 0;
   border: 0;
@@ -693,25 +695,29 @@ button {
 }
 
 .landing-session-card {
+  --tool-art-max-h: clamp(100px, 12vw, 136px);
   margin: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  min-height: clamp(120px, 16vw, 172px);
-  padding: 10px 6px 14px;
+  min-height: calc(var(--tool-art-max-h) + 20px);
+  height: calc(var(--tool-art-max-h) + 20px);
+  padding: 10px 8px;
   overflow: visible;
   border: none;
   border-radius: 0;
   background: transparent;
   box-shadow: none;
+  flex: 0 0 auto;
 }
 
 .landing-session-card img {
   display: block;
-  width: 100%;
-  height: auto;
+  width: auto;
   max-width: 100%;
+  height: auto;
+  max-height: var(--tool-art-max-h);
   object-fit: contain;
   object-position: center center;
   border: none;
@@ -724,19 +730,22 @@ button {
 }
 
 .landing-tool-mark {
-  width: min(72%, 168px);
-  height: auto;
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: var(--tool-art-max-h);
+  max-height: var(--tool-art-max-h);
 }
 
 .tool h3,
 .principles h3 {
-  margin: 10px 0 0;
+  margin: 12px 0 0;
   font-size: 17px;
   font-weight: 600;
 }
 
 .tool-copy {
-  margin: 4px 0 0;
+  margin: 6px 0 0;
   color: var(--muted);
   font-size: 14px;
   line-height: 1.4;
