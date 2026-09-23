@@ -64,8 +64,8 @@
       </p>
       <p>Your payment method will be charged through Apple or Google.</p>
       <p class="quiet">
-        Trial eligibility is determined by the App Store or Google Play and is generally available
-        once per store account and subscription group.
+        Trial availability is determined by the App Store or Google Play and will be shown before
+        you subscribe.
       </p>
 
       <h2>Included in Back Plus at launch</h2>
@@ -99,42 +99,48 @@
         Final localized prices, billing periods and renewal terms will be displayed in the App Store
         or Google Play before you confirm your purchase.
       </p>
-      <p>
+
+      <p class="sub-preparing">
         Back Plus is still being prepared. There is nothing to purchase until subscriptions become
         available inside the app.
       </p>
-      <p class="quiet">
-        Planned base pricing, shown for transparency only: approximately €2.99 per month or €19.99
-        per year before regional adjustments. These are not live prices. Final localized prices will
-        be displayed by the App Store or Google Play before purchase.
+
+      <div class="sub-plans" aria-label="Planned Back Plus pricing">
+        <article class="sub-plan sub-plan--monthly" aria-labelledby="plan-monthly-title">
+          <p class="sub-plan-label">Monthly</p>
+          <h3 id="plan-monthly-title" class="sub-plan-title">Back Plus Monthly</h3>
+          <p class="sub-plan-price">
+            <span class="sub-plan-price-amount">Approximately €2.99</span>
+            <span class="sub-plan-period">/ month</span>
+          </p>
+          <p class="sub-plan-desc">Flexible monthly access to all six Back tools.</p>
+          <p class="sub-plan-disclosure quiet">
+            No free trial is currently planned for the monthly subscription.
+          </p>
+        </article>
+        <article class="sub-plan sub-plan--annual" aria-labelledby="plan-annual-title">
+          <p class="sub-plan-label sub-plan-label--trial">7 days free</p>
+          <h3 id="plan-annual-title" class="sub-plan-title">Back Plus Annual</h3>
+          <p class="sub-plan-price">
+            <span class="sub-plan-price-amount">Approximately €19.99</span>
+            <span class="sub-plan-period">/ year</span>
+          </p>
+          <p class="sub-plan-desc">One year of access to all six Back tools.</p>
+          <p class="sub-plan-disclosure quiet">
+            Eligible new subscribers can try Back Plus Annual free for 7 days.
+          </p>
+          <p class="sub-plan-disclosure quiet">
+            Unless canceled before the trial ends, the annual subscription automatically renews at
+            the annual price shown before purchase.
+          </p>
+        </article>
+      </div>
+
+      <p class="quiet sub-prelaunch">
+        Subscriptions are not available yet. These planned base prices are shown for transparency
+        only. Final localized prices, billing periods and renewal terms will be displayed by the App
+        Store or Google Play before purchase.
       </p>
-
-      <div data-subscription-state="a" class="sub-state">
-        <p class="sub-preparing">
-          Back Plus is still being prepared. There is nothing to purchase until subscriptions become
-          available inside the app.
-        </p>
-      </div>
-
-      <div data-subscription-state="b" class="sub-state" hidden>
-        <p>
-          Subscriptions are handled by Apple or Google. Plan prices come from the store in your
-          region when available.
-        </p>
-        <div class="sub-plans" role="list" aria-label="Back Plus plans">
-          <article class="sub-plan" role="listitem" aria-labelledby="plan-annual-title">
-            <h3 id="plan-annual-title" class="sub-plan-title">Back Plus Annual</h3>
-            <p class="quiet">7-day free trial for eligible new subscribers</p>
-            <p class="sub-plan-price" data-store-price="annual">—</p>
-            <p class="quiet">Renews annually unless canceled.</p>
-          </article>
-          <article class="sub-plan" role="listitem" aria-labelledby="plan-monthly-title">
-            <h3 id="plan-monthly-title" class="sub-plan-title">Back Plus Monthly</h3>
-            <p class="sub-plan-price" data-store-price="monthly">—</p>
-            <p class="quiet">Renews monthly unless canceled.</p>
-          </article>
-        </div>
-      </div>
 
       <h2>Manage your subscription</h2>
       <p>
