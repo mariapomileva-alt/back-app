@@ -7,8 +7,12 @@ import { VolumeBar } from '@/components/audio/VolumeBar';
 import { ListenSoundPicker } from '@/components/listen/ListenSoundPicker';
 import { ListenSoundVisual } from '@/components/listen/ListenSoundVisual';
 import { ActiveSessionScreen } from '@/components/session/ActiveSessionScreen';
-import { AppText } from '@/components/typography/AppText';
-import { listenArtMinHeightForScreen, listenLayoutGaps } from '@/features/listen/artworkLayout';
+import {
+  LISTEN_ART_MIN_HEIGHT,
+  LISTEN_CONTROLS_MIN_HEIGHT,
+  listenArtMinHeightForScreen,
+  listenLayoutGaps,
+} from '@/features/listen/artworkLayout';
 import { listenEffectiveVolume } from '@/features/listen/playback';
 import {
   defaultListenSoundId,
@@ -30,7 +34,6 @@ import {
   saveLastSoundId,
   saveSoundVolume,
 } from '@/storage/preferences';
-import { serif } from '@/theme/fonts';
 import { spacing, touch } from '@/theme/spacing';
 
 const PLAY_SIZE = 64;
@@ -63,7 +66,7 @@ export default function ListenScreen() {
   const shortScreen = windowHeight < 620;
   const needsScroll = shortScreen || fontScale > 1.85;
   const gaps = listenLayoutGaps(compact || shortScreen);
-  const [chromeHeights, setChromeHeights] = useState({ stage: 0, title: 0, controls: 0 });
+  const [chromeHeights, setChromeHeights] = useState({ stage: 0, controls: 0 });
   const [soundId, setSoundId] = useState<ListenSoundId>(initialSoundId);
   const [soundMuted, setSoundMuted] = useState(false);
   const [soundVolume, setSoundVolume] = useState(DEFAULT_SOUND_VOLUME);
@@ -97,16 +100,14 @@ export default function ListenScreen() {
   );
 
   const artDisplayHeight = useMemo(() => {
-    const { stage, title, controls } = chromeHeights;
-    if (stage > 0 && title > 0 && controls > 0) {
-      const gap = gaps.statusToArt + gaps.artToPlayback;
-      const fitted = Math.floor(stage - title - controls - gap);
-      if (fitted >= artMinHeight * 0.9) {
-        return fitted;
-      }
+    const { stage, controls } = chromeHeights;
+    const controlsBlock = Math.max(controls, LISTEN_CONTROLS_MIN_HEIGHT);
+    if (stage > 0) {
+      const fitted = Math.floor(stage - controlsBlock - gaps.artToPlayback);
+      return Math.max(LISTEN_ART_MIN_HEIGHT, fitted);
     }
     return artMinHeight;
-  }, [artMinHeight, chromeHeights, gaps.artToPlayback, gaps.statusToArt]);
+  }, [artMinHeight, chromeHeights, gaps.artToPlayback]);
 
   const playbackVolume = listenEffectiveVolume(soundVolume, soundId);
   const nativeAutoPlay = Platform.OS !== 'web';
@@ -138,16 +139,11 @@ export default function ListenScreen() {
 
   const soundName = t(selected.nameKey);
   const awaitingGesture = audio.playback === 'blocked';
-  const statusText = awaitingGesture
-    ? t('listen.tapToPlay')
+  const playPauseA11y = awaitingGesture
+    ? `${t('common.play')}. ${t('listen.tapToPlay')}`
     : audio.isPlaying
-      ? t('listen.playing')
-      : t('listen.pausedStatus');
-  const statusA11y = awaitingGesture
-    ? t('listen.tapToPlay')
-    : audio.isPlaying
-      ? t('listen.nowPlaying', { name: soundName })
-      : t('listen.paused', { name: soundName });
+      ? `${t('common.pause')}. ${soundName}`
+      : `${t('common.play')}. ${soundName}`;
 
   const select = (id: ListenSoundId) => {
     setSoundId(id);
@@ -197,36 +193,12 @@ export default function ListenScreen() {
         }}
       >
         <View
-          style={[styles.titleBlock, { marginBottom: gaps.statusToArt }]}
-          onLayout={(event) => {
-            const next = event.nativeEvent.layout.height + gaps.statusToArt;
-            setChromeHeights((current) =>
-              Math.abs(current.title - next) < 1 ? current : { ...current, title: next },
-            );
-          }}
-        >
-          <AppText
-            accessibilityRole="header"
-            style={[styles.name, compact && styles.nameCompact]}
-          >
-            {soundName}
-          </AppText>
-          <AppText
-            variant="body"
-            tone="secondary"
-            style={[styles.status, { marginTop: gaps.titleToStatus }]}
-            accessibilityLiveRegion="polite"
-            accessibilityLabel={statusA11y}
-          >
-            {statusText}
-          </AppText>
-        </View>
-
-        <View
           style={[
             styles.artSlot,
             { height: artDisplayHeight, marginBottom: gaps.artToPlayback },
           ]}
+          accessibilityLabel={soundName}
+          accessibilityRole="image"
         >
           <ListenSoundVisual sound={selected} fill height={artDisplayHeight} />
         </View>
@@ -240,7 +212,7 @@ export default function ListenScreen() {
             );
           }}
         >
-        <View style={[styles.playback, { marginBottom: gaps.playbackToVolume }]}>
+        <View style={[styles.playback, { gap: gaps.playbackToVolume }]}>
           <View style={[styles.transport, { gap: transportGap }]}>
             <AccessiblePressable
               accessibilityRole="button"
@@ -260,11 +232,7 @@ export default function ListenScreen() {
             </AccessiblePressable>
             <AccessiblePressable
               accessibilityRole="button"
-              accessibilityLabel={
-                audio.isPlaying
-                  ? `${t('common.pause')}. ${statusA11y}`
-                  : `${t('common.play')}. ${statusA11y}`
-              }
+              accessibilityLabel={playPauseA11y}
               accessibilityState={{ selected: audio.isPlaying }}
               onPress={onPlayPress}
               style={[
@@ -338,36 +306,16 @@ const styles = StyleSheet.create({
     width: '100%',
     alignItems: 'center',
     justifyContent: 'center',
-    overflow: 'visible',
-    paddingHorizontal: spacing.xs,
+    overflow: 'hidden',
+    paddingHorizontal: 0,
+    flexShrink: 1,
   },
   controlsDock: {
     flexShrink: 0,
     width: '100%',
     alignItems: 'stretch',
-  },
-  titleBlock: {
-    flexShrink: 0,
-    width: '100%',
-    alignItems: 'center',
-    zIndex: 2,
-    position: 'relative',
-  },
-  name: {
-    fontFamily: serif,
-    fontSize: 36,
-    lineHeight: 40,
-    fontWeight: '600',
-    textAlign: 'center',
-  },
-  nameCompact: {
-    fontSize: 32,
-    lineHeight: 36,
-  },
-  status: {
-    fontSize: 17,
-    lineHeight: 22,
-    textAlign: 'center',
+    zIndex: 1,
+    paddingBottom: spacing.xs,
   },
   playback: {
     flexShrink: 0,
@@ -378,7 +326,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    marginBottom: spacing.sm,
   },
   play: {
     width: PLAY_SIZE,

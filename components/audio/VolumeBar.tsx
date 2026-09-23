@@ -154,6 +154,7 @@ const styles = StyleSheet.create({
   },
   wrapListen: {
     paddingHorizontal: spacing.md,
+    paddingTop: spacing.xxs,
     maxWidth: 420,
     alignSelf: 'center',
   },

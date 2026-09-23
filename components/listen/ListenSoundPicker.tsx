@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef } from 'react';
-import { ScrollView, StyleSheet, View } from 'react-native';
+import { ScrollView, StyleSheet } from 'react-native';
 
 import { AccessiblePressable } from '@/components/accessibility/AccessiblePressable';
 import { HorizontalTextCarouselFrame } from '@/components/session/HorizontalTextCarouselFrame';
@@ -91,14 +91,6 @@ export function ListenSoundPicker({ soundId, onSelect }: Props) {
             >
               {label}
             </AppText>
-            <View
-              style={[
-                styles.mark,
-                {
-                  backgroundColor: selected ? theme.colors.text : 'transparent',
-                },
-              ]}
-            />
           </AccessiblePressable>
         );
         })}
@@ -129,10 +121,5 @@ const styles = StyleSheet.create({
   },
   label: {
     textAlign: 'center',
-  },
-  mark: {
-    width: 16,
-    height: 1,
-    borderRadius: 1,
   },
 });

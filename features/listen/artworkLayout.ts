@@ -1,14 +1,14 @@
 import type { ListenSoundId } from '@/features/listen/sounds';
 
 /** Runtime trim targets — see `assets/listen-art/runtime/manifest.json`. */
-export const LISTEN_ART_MAX_WIDTH = 430;
-export const LISTEN_ART_HORIZONTAL_INSET = 24;
+export const LISTEN_ART_MAX_WIDTH = 460;
+export const LISTEN_ART_HORIZONTAL_INSET = 12;
 export const LISTEN_ART_MIN_HEIGHT = 140;
-export const LISTEN_ART_MAX_HEIGHT = 260;
+export const LISTEN_ART_MAX_HEIGHT = 420;
 /** Full computed size — slot height + flex spacer keep transport clear of the loop. */
 export const LISTEN_ART_DISPLAY_SCALE = 1;
 /** Inset inside the art band so trimmed loops keep soft margins visible (each edge). */
-export const LISTEN_ART_CONTENT_INSET = 0.06;
+export const LISTEN_ART_CONTENT_INSET = 0.035;
 
 const ART_ASPECT_BY_SOUND: Partial<Record<ListenSoundId, number>> = {
   rain: 1.6667,
@@ -68,28 +68,21 @@ export function computeListenArtworkSize(
   return { width, height };
 }
 
+/** Play row + volume label + slider (no status line under title). */
+export const LISTEN_CONTROLS_MIN_HEIGHT = 152;
+
 export function listenLayoutGaps(compact: boolean) {
   return {
-    titleToStatus: compact ? 4 : 6,
-    statusToArt: compact ? 16 : 22,
     /** Space between art bottom and transport — keep play/volume off the loop. */
-    artToPlayback: compact ? 20 : 24,
-    playbackToVolume: compact ? 12 : 16,
+    artToPlayback: compact ? 10 : 12,
+    playbackToVolume: compact ? 16 : 18,
   };
 }
 
-/** Minimum art band (matches art-pack target ~220–280dp on a 390-wide phone). */
+/** Fallback art height before stage layout (no title — art-first layout). */
 export function listenArtMinHeightForScreen(windowHeight: number, compact: boolean): number {
-  if (windowHeight < 680) {
-    return compact ? 148 : 168;
-  }
-  if (windowHeight < 740) {
-    return compact ? 188 : 212;
-  }
-  if (windowHeight < 820) {
-    return compact ? 228 : 252;
-  }
-  return compact ? 268 : 300;
+  const ratio = compact ? 0.58 : 0.66;
+  return Math.round(windowHeight * ratio);
 }
 
 /** @deprecated Use listenArtMinHeightForScreen — kept for QA scripts. */
