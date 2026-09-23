@@ -2,6 +2,7 @@ import { type ReactNode } from 'react';
 import { StyleSheet, View } from 'react-native';
 
 import { ExerciseShell } from '@/components/exercise/ExerciseShell';
+import { useTheme } from '@/hooks/useTheme';
 import { SessionActions } from '@/components/session/SessionActions';
 import {
   useActiveSession,
@@ -55,6 +56,7 @@ export function ActiveSessionScreen({
   backClosesSession = false,
   showSessionClose = false,
 }: Props) {
+  const { theme } = useTheme();
   const controls = useActiveSession(tool, backNavigates ? onBack : undefined);
   const headerBack = onBack ?? (backClosesSession ? controls.close : undefined);
   const body = typeof children === 'function' ? children(controls) : children;
@@ -75,7 +77,7 @@ export function ActiveSessionScreen({
     >
       {scroll === false ? <View style={styles.body}>{body}</View> : body}
       {showSessionActions ? (
-        <View style={styles.footer}>
+        <View style={[styles.footer, { backgroundColor: theme.colors.background }]}>
           <SessionActions
             onOkay={controls.close}
             onTryAnother={onTryAnother}

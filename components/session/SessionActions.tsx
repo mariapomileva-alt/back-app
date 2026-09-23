@@ -22,7 +22,7 @@ export function SessionActions({
 }: Props) {
   return (
     <View style={styles.actions}>
-      <SessionExitAction onPress={onOkay} />
+      {extra}
       {onTryAnother ? (
         <ActivitySwitcher
           onPress={onTryAnother}
@@ -30,7 +30,7 @@ export function SessionActions({
           accessibilityHint={tryAnotherHint}
         />
       ) : null}
-      {extra}
+      <SessionExitAction onPress={onOkay} />
     </View>
   );
 }
@@ -40,8 +40,8 @@ const styles = StyleSheet.create({
     width: '100%',
     alignItems: 'stretch',
     flexShrink: 0,
-    paddingTop: spacing.md,
+    paddingTop: spacing.xxs,
     paddingBottom: spacing.xs,
-    gap: spacing.xxs,
+    gap: spacing.sm,
   },
 });
