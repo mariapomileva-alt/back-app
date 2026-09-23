@@ -1,8 +1,6 @@
-/**
- * PLACEHOLDER — 25s seamless calm tonal pad (regenerate via scripts/generate-ground-ambient.py).
- */
+/** Licensed bed — AudioJungle Calm Ambient (see audio/sounds/SOUND_ASSET_LICENSES.md). */
 export const groundAmbient = {
-  loop: require('../../audio/sfx/ground-ambient-placeholder.wav'),
+  loop: require('../../audio/sfx/ground-ambient.wav'),
 } as const;
 
 /** Soft melodic bed — louder than Move so grounding feels present without harshness. */

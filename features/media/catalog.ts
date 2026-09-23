@@ -57,13 +57,13 @@ export const productionAudioFiles = {
  */
 export const exerciseAudio = {
   groundingEnglish: require('../../audio/grounding/english-placeholder.wav'),
-  softRain: require('../../audio/sounds/soft-rain-placeholder.wav'),
-  ocean: require('../../audio/sounds/ocean-placeholder.wav'),
-  gentleStream: require('../../audio/sounds/gentle-stream-placeholder.wav'),
-  forest: require('../../audio/sounds/forest-placeholder.wav'),
-  distantBirds: require('../../audio/sounds/distant-birds-placeholder.wav'),
-  fan: require('../../audio/sounds/fan-placeholder.wav'),
-  brownNoise: require('../../audio/sounds/brown-noise-placeholder.wav'),
-  softWhiteNoise: require('../../audio/sounds/soft-white-noise-placeholder.wav'),
-  softMelody: require('../../audio/sounds/soft-melody-placeholder.wav'),
+  softRain: require('../../audio/sounds/soft-rain.wav'),
+  ocean: require('../../audio/sounds/ocean.wav'),
+  gentleStream: require('../../audio/sounds/gentle-stream.wav'),
+  forest: require('../../audio/sounds/forest.wav'),
+  distantBirds: require('../../audio/sounds/distant-birds.wav'),
+  fan: require('../../audio/sounds/fan.wav'),
+  brownNoise: require('../../audio/sounds/brown-noise.wav'),
+  softWhiteNoise: require('../../audio/sounds/soft-white-noise.wav'),
+  softMelody: require('../../audio/sounds/soft-melody.wav'),
 } as const;

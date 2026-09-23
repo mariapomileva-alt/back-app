@@ -128,6 +128,14 @@ export default function ListenScreen() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [soundId, soundMuted, soundVolume]);
 
+  useEffect(() => {
+    if (soundMuted) {
+      return;
+    }
+    audio.replay();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selected.audio]);
+
   const soundName = t(selected.nameKey);
   const awaitingGesture = audio.playback === 'blocked';
   const statusText = awaitingGesture

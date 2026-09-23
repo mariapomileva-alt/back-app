@@ -42,7 +42,7 @@ export const productionConfig = {
   // Drop audio/sounds/{soft-rain,ocean,gentle-stream,forest,distant-birds,fan,brown-noise,soft-white-noise,soft-melody}.wav (or .m4a),
   // point the require() paths in features/media/catalog.ts at those files, then set this true.
   // Until then keep the *-placeholder.wav files and this flag false.
-  environmentAudioReady: false,
+  environmentAudioReady: true,
 
   // Master: assets/brand/app-icon-master.png. Same opaque 1024 in
   // store/ios/icon-1024.png (App Store Connect upload) and assets/images/icon.png.

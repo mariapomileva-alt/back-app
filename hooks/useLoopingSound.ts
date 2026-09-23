@@ -34,6 +34,14 @@ function applyVolume(player: { volume: number }, value: number) {
   }
 }
 
+function applyLoopFlag(player: { loop?: boolean }) {
+  try {
+    player.loop = true;
+  } catch {
+    // Player may be released during fast source swaps.
+  }
+}
+
 async function configureListenAudioSession() {
   try {
     await setIsAudioActiveAsync(true);
@@ -164,6 +172,7 @@ export function useLoopingSound({
   const startPlayback = useCallback(async (resync = false): Promise<boolean> => {
     wantsPlay.current = true;
     gestureUnlocked.current = true;
+    applyLoopFlag(playerRef.current);
     // Web requires HTMLMediaElement.play() in the same turn as the user gesture.
     if (resync) {
       pauseOtherWebAudio();
@@ -202,12 +211,14 @@ export function useLoopingSound({
       setPlayback('playing');
       return true;
     }
+    applyLoopFlag(playerRef.current);
     const started = await attemptPlayback(playerRef.current);
     if (!started) {
       wantsPlay.current = false;
       setPlayback('blocked');
       return false;
     }
+    applyLoopFlag(playerRef.current);
     if (muted) {
       applyVolume(playerRef.current, 0);
     } else {
@@ -232,8 +243,8 @@ export function useLoopingSound({
     let cancelled = false;
     suppressToggle.current = true;
     applyVolume(player, 0);
+    applyLoopFlag(player);
     try {
-      player.loop = true;
       player.muted = muted;
     } catch {
       // Player methods can throw on a released instance during fast unmount.
@@ -259,11 +270,13 @@ export function useLoopingSound({
       const shouldAutostart =
         (wantsPlay.current || autoPlay) && (!webGestureGate || gestureUnlocked.current);
       if (shouldAutostart) {
+        applyLoopFlag(player);
         const started = await attemptPlayback(player);
         if (cancelled) {
           return;
         }
         if (started) {
+          applyLoopFlag(player);
           if (muted) {
             applyVolume(player, 0);
           } else {
@@ -304,9 +317,9 @@ export function useLoopingSound({
       }
       detachLockScreen();
     };
-    // Load a single player per bundled source. Volume/play are applied in dedicated effects.
+    // Reload when the bundled source or player instance changes.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [player, enabled]);
+  }, [player, enabled, source]);
 
   useEffect(() => {
     return () => {
@@ -345,12 +358,8 @@ export function useLoopingSound({
     if (!enabled || !status.isLoaded) {
       return;
     }
-    try {
-      player.loop = true;
-    } catch {
-      // Ignore.
-    }
-  }, [enabled, player, status.isLoaded]);
+    applyLoopFlag(player);
+  }, [enabled, player, status.isLoaded, source]);
 
   useEffect(() => {
     const audible = isAudiblePlayback(player);
@@ -374,11 +383,13 @@ export function useLoopingSound({
       return;
     }
     try {
-      player.loop = true;
+      applyLoopFlag(player);
       void player.seekTo(0).then(() => {
-        if (wantsPlay.current) {
-          player.play();
+        if (!wantsPlay.current) {
+          return;
         }
+        applyLoopFlag(player);
+        void attemptPlayback(player);
       });
     } catch {
       // Native loop usually prevents didJustFinish; this is a web/fallback path.

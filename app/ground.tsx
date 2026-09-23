@@ -34,6 +34,7 @@ export default function GroundScreen() {
     source: groundAudio.source,
     autoPlay: narrationReady,
     initialMuted: soundMuted,
+    enabled: narrationReady,
   });
   const [paused, setPaused] = useState(false);
   const [sequenceId, setSequenceId] = useState<GroundSequenceId>(defaultGroundSequenceId);
@@ -43,7 +44,7 @@ export default function GroundScreen() {
   );
   const groundAmbient = useGroundAmbient({
     paused,
-    masterMuted: soundMuted || audio.muted,
+    masterMuted: narrationReady ? soundMuted || audio.muted : false,
   });
   const { unlockFromUserGesture, muted: activitySfxMuted, toggleMute: toggleActivitySfxMute } =
     groundAmbient;

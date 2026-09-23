@@ -12,10 +12,17 @@ type Options = {
   source: AudioSource;
   autoPlay?: boolean;
   initialMuted?: boolean;
+  /** When false, never loads voice into the session (ambient-only Ground). */
+  enabled?: boolean;
 };
 
 /** One-shot guided voice. Do not use for looping environment sound. */
-export function useGuidedAudio({ source, autoPlay = false, initialMuted = false }: Options) {
+export function useGuidedAudio({
+  source,
+  autoPlay = false,
+  initialMuted = false,
+  enabled = true,
+}: Options) {
   const player = useAudioPlayer(source, { updateInterval: 500 });
   const [isPlaying, setIsPlaying] = useState(autoPlay);
   const [muted, setMuted] = useState(initialMuted);
@@ -55,6 +62,10 @@ export function useGuidedAudio({ source, autoPlay = false, initialMuted = false 
       try {
         player.loop = false;
         applyVolume();
+        if (!enabled) {
+          player.pause();
+          return;
+        }
         if (isPlaying) {
           const started = await attemptPlayback(player);
           if (!started) {
@@ -87,6 +98,14 @@ export function useGuidedAudio({ source, autoPlay = false, initialMuted = false 
   }, [applyVolume]);
 
   useEffect(() => {
+    if (!enabled) {
+      try {
+        player.pause();
+      } catch {
+        // Ignore.
+      }
+      return;
+    }
     if (isPlaying) {
       void attemptPlayback(player).then((started) => {
         if (!started) {
@@ -100,7 +119,7 @@ export function useGuidedAudio({ source, autoPlay = false, initialMuted = false 
     } catch {
       // Ignore.
     }
-  }, [isPlaying, player]);
+  }, [enabled, isPlaying, player]);
 
   return {
     isPlaying,
