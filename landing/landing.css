@@ -154,6 +154,7 @@ button {
 }
 
 .hero {
+  position: relative;
   display: grid;
   grid-template-columns: minmax(280px, 0.92fr) minmax(340px, 1.08fr);
   gap: 4px 12px;
@@ -163,6 +164,14 @@ button {
   padding: 28px 32px 40px;
   min-height: 0;
   overflow: visible;
+}
+
+.hero-orbs {
+  position: absolute;
+  inset: 28px 32px 40px;
+  z-index: 0;
+  overflow: visible;
+  pointer-events: none;
 }
 
 .hero-copy {
@@ -278,9 +287,10 @@ button {
 
 .stage {
   position: relative;
+  z-index: 2;
   isolation: isolate;
   height: 600px;
-  overflow: hidden;
+  overflow: visible;
 }
 
 @keyframes back-circle-drift-a {
@@ -379,15 +389,16 @@ button {
 
 .back-circle {
   position: absolute;
-  z-index: 0;
   border-radius: 50%;
   transform-origin: center center;
   pointer-events: none;
+  -webkit-mask-image: radial-gradient(circle, #000 58%, transparent 100%);
+  mask-image: radial-gradient(circle, #000 58%, transparent 100%);
 }
 
 .back-circle--a {
-  top: -28px;
-  left: 10%;
+  top: 2%;
+  left: 36%;
   width: 168px;
   height: 168px;
   background: color-mix(in srgb, var(--sage) 55%, transparent);
@@ -396,8 +407,8 @@ button {
 }
 
 .back-circle--b {
-  top: 96px;
-  left: -4%;
+  top: 18%;
+  left: 32%;
   width: 112px;
   height: 112px;
   background: color-mix(in srgb, var(--pale) 72%, transparent);
@@ -406,8 +417,8 @@ button {
 }
 
 .back-circle--c {
-  top: 36px;
-  right: -6%;
+  top: 5%;
+  left: 50%;
   width: 204px;
   height: 204px;
   background: color-mix(in srgb, var(--grove) 28%, transparent);
@@ -416,8 +427,8 @@ button {
 }
 
 .back-circle--d {
-  bottom: 8%;
-  left: 22%;
+  bottom: 14%;
+  left: 42%;
   width: 88px;
   height: 88px;
   background: color-mix(in srgb, var(--ivory) 55%, var(--pale));
@@ -426,8 +437,8 @@ button {
 }
 
 .back-circle--e {
-  right: 14%;
-  bottom: -18px;
+  right: 26%;
+  bottom: 4%;
   width: 52px;
   height: 52px;
   background: color-mix(in srgb, var(--clay) 38%, transparent);
@@ -859,13 +870,37 @@ button {
     grid-template-columns: 1fr;
     min-height: 0;
     padding-bottom: 24px;
-    overflow: hidden;
+    overflow: visible;
   }
 
   .stage {
     height: 620px;
     margin-right: 0;
-    overflow: hidden;
+    overflow: visible;
+  }
+
+  .hero-orbs {
+    inset: 28px 32px 24px;
+  }
+
+  .back-circle--a {
+    left: 28%;
+  }
+
+  .back-circle--b {
+    left: 22%;
+  }
+
+  .back-circle--c {
+    left: 44%;
+  }
+
+  .back-circle--d {
+    left: 34%;
+  }
+
+  .back-circle--e {
+    right: 18%;
   }
 
   .phone {
@@ -944,39 +979,43 @@ button {
     height: min(454px, 122vw);
   }
 
+  .hero-orbs {
+    inset: 24px 18px 28px;
+  }
+
   .back-circle--a {
     width: 120px;
     height: 120px;
-    top: -16px;
-    left: 6%;
+    top: 0;
+    left: 8%;
   }
 
   .back-circle--b {
     width: 84px;
     height: 84px;
-    top: 72px;
-    left: -8%;
+    top: 14%;
+    left: 2%;
   }
 
   .back-circle--c {
     width: 148px;
     height: 148px;
-    top: 28px;
-    right: -10%;
+    top: 2%;
+    left: 38%;
   }
 
   .back-circle--d {
     width: 64px;
     height: 64px;
     left: 18%;
-    bottom: 6%;
+    bottom: 10%;
   }
 
   .back-circle--e {
     width: 40px;
     height: 40px;
-    right: 10%;
-    bottom: -8px;
+    right: 12%;
+    bottom: 0;
   }
 
   .giant {
