@@ -45,8 +45,8 @@ export default function BreatheScreen() {
     Math.min(reduceMotion ? REDUCE_OPEN_SIZE : OPEN_SIZE, Math.round(width * 0.84)),
   );
   // Keep the orb layout box below the header on short viewports (web hit-testing overlaps otherwise).
-  const stageBudget = Math.max(restSize + 48, height - (compact ? 300 : 340));
-  const openSize = Math.min(openCap, Math.round(stageBudget * 0.88));
+  const stageBudget = Math.max(restSize + 48, height - (compact ? 288 : 320));
+  const openSize = Math.min(openCap, Math.round(stageBudget * 0.92));
   const { phase, openness } = useBreathCycle(pattern);
   const breatheAmbient = useBreatheAmbient({
     openness,
@@ -166,12 +166,14 @@ const styles = StyleSheet.create({
     minHeight: 0,
     alignItems: 'center',
     justifyContent: 'center',
-    paddingVertical: spacing.md,
-    gap: spacing.lg,
+    paddingTop: spacing.sm,
+    paddingBottom: spacing.xs,
+    gap: spacing.md,
+    overflow: 'visible',
   },
   stageCompact: {
-    paddingVertical: spacing.xs,
-    gap: spacing.md,
+    paddingTop: spacing.xxs,
+    gap: spacing.sm,
   },
   cue: {
     fontFamily: serif,
