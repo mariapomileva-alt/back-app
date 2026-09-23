@@ -50,5 +50,5 @@ Flat — no drop shadow. Sans `button` variant, generous horizontal padding.
 
 ## Siblings
 
-- **Warm Earth** — `warmNeutral`
+- **Warm Earth** — `warmNeutral` (`theme/warm-earth-palette.md`)
 - **Forest** — `deepGreen`

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Back — Home greeting preview</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Outfit:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --ivory: #f3ede1;
+        --surface: #f8f4ec;
+        --sand: #e7ddce;
+        --border: #d8cfc0;
+        --forest: #315e4d;
+        --deep: #0c3b2e;
+        --text: #153c32;
+        --text-soft: #65736c;
+        --sage: #6d9773;
+        --clay: #bb8a52;
+        --blue-sage: #9eb6b0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #e8e2d6;
+        font-family: 'Outfit', system-ui, sans-serif;
+        padding: 24px;
+      }
+
+      .phone {
+        width: 390px;
+        height: 844px;
+        border-radius: 44px;
+        background: var(--ivory);
+        box-shadow: 0 24px 80px rgba(12, 59, 46, 0.12);
+        overflow: hidden;
+        position: relative;
+        padding: 56px 28px 28px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .grain {
+        pointer-events: none;
+        position: absolute;
+        inset: 0;
+        opacity: 0.35;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
+        mix-blend-mode: multiply;
+      }
+
+      .top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        z-index: 1;
+        margin-bottom: 8px;
+      }
+
+      .wordmark {
+        font-family: 'Fraunces', Georgia, serif;
+        font-size: 22px;
+        font-weight: 500;
+        color: var(--deep);
+        letter-spacing: 0.02em;
+      }
+
+      .gear {
+        width: 44px;
+        height: 44px;
+        border-radius: 22px;
+        border: 1px solid var(--border);
+        background: var(--surface);
+        display: grid;
+        place-items: center;
+        color: var(--forest);
+        font-size: 18px;
+      }
+
+      .hero {
+        position: relative;
+        z-index: 1;
+        margin: 12px 0 18px;
+        max-width: 300px;
+      }
+
+      .hero-salutation {
+        font-family: 'Fraunces', Georgia, serif;
+        font-size: 17px;
+        line-height: 23px;
+        letter-spacing: 0.08px;
+        margin: 0;
+      }
+
+      .hero-salutation .hi {
+        color: #5a726a;
+        font-weight: 400;
+      }
+
+      .hero-salutation .name {
+        color: #3d534c;
+        font-weight: 500;
+      }
+
+      .hero-line {
+        font-family: 'Fraunces', Georgia, serif;
+        font-size: 40px;
+        line-height: 46px;
+        letter-spacing: -0.6px;
+        margin: 0;
+        color: var(--text);
+      }
+
+      .prompt {
+        margin: 10px 0 0;
+        font-size: 15px;
+        line-height: 22px;
+        color: var(--text-soft);
+        letter-spacing: 0.2px;
+      }
+
+      .grid {
+        position: relative;
+        z-index: 1;
+        flex: 1;
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        gap: 10px;
+        min-height: 0;
+      }
+
+      .row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+
+      .card {
+        border-radius: 24px;
+        border: 1px solid rgba(216, 207, 192, 0.85);
+        background: var(--surface);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 12px 10px 14px;
+        min-height: 0;
+      }
+
+      .card.breathe {
+        background: linear-gradient(180deg, #faf7f0 0%, #f3ede8 100%);
+      }
+      .card.distract {
+        background: linear-gradient(180deg, #f6f0e6 0%, #efe8dc 100%);
+      }
+      .card.ground {
+        background: linear-gradient(180deg, #f5f0e8 0%, #ebe4d8 100%);
+      }
+      .card.move {
+        background: linear-gradient(180deg, #f7f2ea 0%, #efe9df 100%);
+      }
+      .card.listen {
+        background: linear-gradient(180deg, #f4f0eb 0%, #e9ecea 100%);
+      }
+      .card.read {
+        background: linear-gradient(180deg, #f6f1ea 0%, #efe8df 100%);
+      }
+
+      .mark {
+        flex: 1;
+        width: 100%;
+        display: grid;
+        place-items: center;
+        margin-bottom: 6px;
+      }
+
+      .breathe-mark {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        background: radial-gradient(circle at 38% 34%, #6d9773, #315e4d 74%, #144335);
+      }
+
+      .label {
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 0.15px;
+        color: var(--text);
+      }
+
+      .footer {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        font-size: 15px;
+        color: var(--text-soft);
+        padding-top: 8px;
+      }
+
+      .footer strong {
+        color: var(--text);
+        font-weight: 600;
+      }
+
+      .caption {
+        position: fixed;
+        bottom: 16px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-size: 13px;
+        color: #5a635c;
+      }
+
+      .tabs {
+        position: fixed;
+        top: 16px;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        z-index: 10;
+      }
+
+      .tabs button {
+        font-family: inherit;
+        font-size: 13px;
+        padding: 8px 14px;
+        border-radius: 999px;
+        border: 1px solid var(--border);
+        background: #fff;
+        color: var(--deep);
+        cursor: pointer;
+      }
+
+      .tabs button.active {
+        background: var(--deep);
+        color: var(--ivory);
+        border-color: var(--deep);
+      }
+
+      .panel[hidden] {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tabs">
+      <button type="button" class="active" data-show="named">С именем</button>
+      <button type="button" data-show="plain">Без имени</button>
+    </div>
+
+    <div class="panel" id="named">
+      <div class="phone">
+        <div class="grain" aria-hidden="true"></div>
+        <div class="top">
+          <div class="wordmark">Back</div>
+          <div class="gear" aria-hidden="true">⚙</div>
+        </div>
+        <div class="hero">
+          <p class="hero-salutation"><span class="name">Zayka,</span></p>
+          <p class="hero-line" style="margin-top: 2px">
+            <span class="name" style="font-weight: 500">you're here</span>
+          </p>
+          <p class="prompt">What feels possible right now?</p>
+        </div>
+        <div class="grid">
+          <div class="row">
+            <div class="card breathe">
+              <div class="mark"><div class="breathe-mark"></div></div>
+              <div class="label">Breathe</div>
+            </div>
+            <div class="card distract"><div class="mark"></div><div class="label">Distract</div></div>
+          </div>
+          <div class="row">
+            <div class="card ground"><div class="mark"></div><div class="label">Ground</div></div>
+            <div class="card move"><div class="mark"></div><div class="label">Move</div></div>
+          </div>
+          <div class="row">
+            <div class="card listen"><div class="mark"></div><div class="label">Listen</div></div>
+            <div class="card read"><div class="mark"></div><div class="label">Read</div></div>
+          </div>
+        </div>
+        <div class="footer">Need someone? <strong>Call my person</strong></div>
+      </div>
+    </div>
+
+    <div class="panel" id="plain" hidden>
+      <div class="phone">
+        <div class="grain" aria-hidden="true"></div>
+        <div class="top">
+          <div class="wordmark">Back</div>
+          <div class="gear" aria-hidden="true">⚙</div>
+        </div>
+        <div class="hero">
+          <p class="hero-line"><span class="name" style="font-weight: 500">You're here</span></p>
+          <p class="prompt">What feels possible right now?</p>
+        </div>
+        <div class="grid">
+          <div class="row">
+            <div class="card breathe">
+              <div class="mark"><div class="breathe-mark"></div></div>
+              <div class="label">Breathe</div>
+            </div>
+            <div class="card distract"><div class="mark"></div><div class="label">Distract</div></div>
+          </div>
+          <div class="row">
+            <div class="card ground"><div class="mark"></div><div class="label">Ground</div></div>
+            <div class="card move"><div class="mark"></div><div class="label">Move</div></div>
+          </div>
+          <div class="row">
+            <div class="card listen"><div class="mark"></div><div class="label">Listen</div></div>
+            <div class="card read"><div class="mark"></div><div class="label">Read</div></div>
+          </div>
+        </div>
+        <div class="footer">Need someone? <strong>Call my person</strong></div>
+      </div>
+    </div>
+
+    <p class="caption">Warm Earth · те же hex, что в приложении · превью, не билд</p>
+
+    <script>
+      document.querySelectorAll('.tabs button').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.tabs button').forEach((b) => b.classList.remove('active'));
+          btn.classList.add('active');
+          const id = btn.getAttribute('data-show');
+          document.querySelectorAll('.panel').forEach((p) => {
+            p.hidden = p.id !== id;
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
