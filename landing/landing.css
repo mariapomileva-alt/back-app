@@ -229,6 +229,14 @@ button {
   margin-top: 26px;
 }
 
+.quiet-proof {
+  margin: 14px 0 0;
+  max-width: 22rem;
+  font-size: 14px;
+  line-height: 1.45;
+  color: color-mix(in srgb, var(--muted) 92%, var(--grove));
+}
+
 .quiet {
   margin: 0;
   color: var(--muted);
@@ -271,55 +279,67 @@ button {
 .stage {
   position: relative;
   isolation: isolate;
-  height: 640px;
-  overflow: visible;
+  height: 600px;
+  overflow: hidden;
 }
 
-@keyframes landing-orb-primary {
+@keyframes back-circle-drift-a {
   0%,
   100% {
     transform: translate(0, 0) scale(1);
-    opacity: 0.3;
+    opacity: 0.26;
   }
   50% {
-    transform: translate(16px, -22px) scale(1.14);
-    opacity: 0.38;
+    transform: translate(12px, -10px) scale(1);
+    opacity: 0.32;
   }
 }
 
-@keyframes landing-orb-halo {
+@keyframes back-circle-drift-b {
   0%,
   100% {
     transform: translate(0, 0) scale(1);
-    opacity: 0.4;
+    opacity: 0.34;
   }
   45% {
-    transform: translate(-12px, 14px) scale(1.18);
-    opacity: 0.52;
-  }
-  75% {
-    transform: translate(8px, -8px) scale(0.94);
-    opacity: 0.36;
+    transform: translate(-10px, 8px) scale(1);
+    opacity: 0.4;
   }
 }
 
-@keyframes landing-slab-breathe {
+@keyframes back-circle-drift-c {
   0%,
   100% {
-    transform: translateY(0) scale(1);
+    transform: translate(0, 0) scale(1);
+    opacity: 0.18;
   }
-  50% {
-    transform: translateY(-10px) scale(1.015);
+  55% {
+    transform: translate(8px, 12px) scale(1);
+    opacity: 0.24;
   }
 }
 
-@keyframes landing-clay-float {
+@keyframes back-circle-drift-d {
   0%,
   100% {
-    transform: rotate(11deg) translateY(0) scale(1);
+    transform: translate(0, 0) scale(1);
+    opacity: 0.22;
+  }
+  40% {
+    transform: translate(-12px, -6px) scale(1);
+    opacity: 0.28;
+  }
+}
+
+@keyframes back-circle-breathe {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.2;
   }
   50% {
-    transform: rotate(14deg) translateY(-10px) scale(1.06);
+    transform: translate(6px, -8px) scale(1.035);
+    opacity: 0.26;
   }
 }
 
@@ -357,59 +377,62 @@ button {
   }
 }
 
-.orb {
+.back-circle {
   position: absolute;
   z-index: 0;
   border-radius: 50%;
   transform-origin: center center;
-  will-change: transform;
+  pointer-events: none;
 }
 
-.orb-primary {
-  top: 24px;
-  left: 18%;
-  width: 196px;
-  height: 196px;
-  background: var(--sage);
-  animation: landing-orb-primary 8.5s ease-in-out infinite;
+.back-circle--a {
+  top: -28px;
+  left: 10%;
+  width: 168px;
+  height: 168px;
+  background: color-mix(in srgb, var(--sage) 55%, transparent);
+  animation: back-circle-drift-a 14s ease-in-out infinite;
+  animation-delay: -2s;
 }
 
-.orb-halo {
-  top: 108px;
-  left: 6%;
-  width: 132px;
-  height: 132px;
-  background: var(--pale);
-  animation: landing-orb-halo 11.5s ease-in-out infinite;
-  animation-delay: -2.5s;
+.back-circle--b {
+  top: 96px;
+  left: -4%;
+  width: 112px;
+  height: 112px;
+  background: color-mix(in srgb, var(--pale) 72%, transparent);
+  animation: back-circle-drift-b 11s ease-in-out infinite;
+  animation-delay: -5s;
 }
 
-.slab {
-  position: absolute;
-  z-index: 0;
-  right: 6%;
-  top: 88px;
-  width: min(268px, 48%);
-  height: 460px;
-  border-radius: 32px;
-  background: var(--forest);
-  transform-origin: 50% 88%;
-  animation: landing-slab-breathe 12s ease-in-out infinite;
+.back-circle--c {
+  top: 36px;
+  right: -6%;
+  width: 204px;
+  height: 204px;
+  background: color-mix(in srgb, var(--grove) 28%, transparent);
+  animation: back-circle-drift-c 16s ease-in-out infinite;
+  animation-delay: -7s;
+}
+
+.back-circle--d {
+  bottom: 8%;
+  left: 22%;
+  width: 88px;
+  height: 88px;
+  background: color-mix(in srgb, var(--ivory) 55%, var(--pale));
+  animation: back-circle-drift-d 9s ease-in-out infinite;
   animation-delay: -1s;
 }
 
-.clay {
-  position: absolute;
-  z-index: 2;
-  right: 7%;
-  top: 62%;
-  width: 78px;
-  height: 78px;
-  border-radius: 10px;
-  background: var(--clay);
-  transform: rotate(11deg);
-  animation: landing-clay-float 9s ease-in-out infinite;
-  animation-delay: -3s;
+.back-circle--e {
+  right: 14%;
+  bottom: -18px;
+  width: 52px;
+  height: 52px;
+  background: color-mix(in srgb, var(--clay) 38%, transparent);
+  animation: back-circle-breathe 12.5s ease-in-out infinite;
+  animation-delay: -3.5s;
 }
 
 .scribble {
@@ -426,28 +449,29 @@ button {
 .giant {
   position: absolute;
   z-index: 1;
-  left: 0;
-  bottom: 10%;
+  left: -6%;
+  bottom: 4%;
   margin: 0;
   font-family: var(--serif);
-  font-size: clamp(96px, 12vw, 168px);
+  font-size: clamp(68px, 7.5vw, 112px);
   font-weight: 500;
   font-optical-sizing: auto;
   font-variation-settings: "SOFT" 40, "opsz" 144;
   line-height: 0.72;
   letter-spacing: -0.07em;
-  color: var(--forest);
-  opacity: 0.22;
+  color: color-mix(in srgb, var(--grove) 70%, var(--ivory));
+  opacity: 0.1;
   pointer-events: none;
 }
 
 .phone {
   position: absolute;
   z-index: 3;
-  top: 8px;
-  left: 68%;
-  width: 286px;
-  transform: translateX(-14%) rotate(-3.2deg);
+  top: 12px;
+  left: 66%;
+  width: 254px;
+  max-width: calc(100% - 24px);
+  transform: translateX(-12%) rotate(-3deg);
 }
 
 .bezel {
@@ -464,7 +488,7 @@ button {
 .screen {
   position: relative;
   overflow: hidden;
-  height: 572px;
+  height: 508px;
   padding: 0;
   border-radius: 32px;
   background: var(--ivory);
@@ -844,18 +868,23 @@ button {
   }
 
   .phone {
-    left: 66%;
-    top: 24px;
-    transform: translateX(-28%) rotate(-3deg);
+    left: 64%;
+    top: 20px;
+    width: min(248px, 72vw);
+    transform: translateX(-22%) rotate(-3deg);
+  }
+
+  .screen {
+    height: min(496px, 105vw);
   }
 
   .giant {
-    left: 0;
-    bottom: 10%;
+    left: -4%;
+    bottom: 6%;
     top: auto;
-    font-size: 98px;
+    font-size: 76px;
     z-index: 1;
-    opacity: 0.2;
+    opacity: 0.09;
   }
 
   .tool-grid,
@@ -899,50 +928,61 @@ button {
   }
 
   .stage {
-    height: 480px;
-    margin: 4px -18px 0;
+    height: 460px;
+    margin: 4px -12px 0;
   }
 
   .phone {
-    width: 214px;
-    top: 16px;
-    left: 56%;
+    width: min(228px, 58vw);
+    top: 12px;
+    left: 54%;
+    transform: translateX(-18%) rotate(-2.8deg);
   }
 
   .screen {
-    height: 430px;
+    height: min(454px, 122vw);
   }
 
-  .slab {
-    width: 180px;
-    height: 300px;
-    right: 8%;
-    top: 48px;
+  .back-circle--a {
+    width: 120px;
+    height: 120px;
+    top: -16px;
+    left: 6%;
   }
 
-  .orb-primary {
-    width: 108px;
-    height: 108px;
+  .back-circle--b {
+    width: 84px;
+    height: 84px;
+    top: 72px;
+    left: -8%;
   }
 
-  .orb-halo {
-    width: 76px;
-    height: 76px;
-    top: 88px;
-    left: 4%;
+  .back-circle--c {
+    width: 148px;
+    height: 148px;
+    top: 28px;
+    right: -10%;
   }
 
-  .clay {
-    width: 52px;
-    height: 52px;
-    top: 58%;
+  .back-circle--d {
+    width: 64px;
+    height: 64px;
+    left: 18%;
+    bottom: 6%;
+  }
+
+  .back-circle--e {
+    width: 40px;
+    height: 40px;
+    right: 10%;
+    bottom: -8px;
   }
 
   .giant {
-    font-size: 62px;
-    left: 2%;
-    bottom: 8%;
-    opacity: 0.2;
+    font-size: 54px;
+    left: -2%;
+    bottom: 5%;
+    opacity: 0.08;
   }
 
   .scribble {
@@ -963,33 +1003,39 @@ button {
   }
 }
 
+html.motion-paused .back-circle,
+html.motion-paused .scribble,
+html.motion-paused .bezel,
+html.motion-paused .shelf-bg::after {
+  animation-play-state: paused;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
 
-  .orb-primary,
-  .orb-halo,
-  .slab,
-  .clay,
+  .back-circle,
   .scribble,
   .bezel,
   .shelf-bg::after {
     animation: none !important;
   }
 
-  .clay {
-    transform: rotate(11deg);
-  }
-
   .phone {
-    transform: translateX(-14%);
+    transform: translateX(-12%) rotate(-3deg);
   }
 }
 
 @media (max-width: 980px) and (prefers-reduced-motion: reduce) {
   .phone {
-    transform: translateX(-28%) rotate(-3deg);
+    transform: translateX(-22%) rotate(-3deg);
+  }
+}
+
+@media (max-width: 640px) and (prefers-reduced-motion: reduce) {
+  .phone {
+    transform: translateX(-18%) rotate(-2.8deg);
   }
 }
 

@@ -139,3 +139,14 @@ if (year) {
 }
 
 wireAvailability();
+
+(function initHeroMotionPause() {
+  const root = document.documentElement;
+
+  function syncMotionPause() {
+    root.classList.toggle("motion-paused", document.hidden);
+  }
+
+  document.addEventListener("visibilitychange", syncMotionPause);
+  syncMotionPause();
+})();
