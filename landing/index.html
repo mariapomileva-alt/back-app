@@ -54,31 +54,49 @@
     </svg>
     <a class="skip" href="#tools">Explore the six tools</a>
 
-    <header class="nav">
-      <a class="brand" href="#top">
-        <span class="mark" aria-hidden="true"></span>
-        Back
-      </a>
-      <a class="nav-cta" href="#tools">See the tools</a>
-    </header>
+    <div class="nav-shell">
+      <header class="nav">
+        <a class="brand" href="#top">
+          <span class="mark" aria-hidden="true"></span>
+          Back
+        </a>
+        <button
+          type="button"
+          class="nav-toggle"
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          <span class="sr-only">Menu</span>
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Primary">
+          <ul class="site-nav-list">
+            <li><a href="#how-it-works">How it works</a></li>
+            <li><a href="#tools">Tools</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
+            <li><a href="subscriptions.html">Back Plus</a></li>
+          </ul>
+          <a class="nav-cta" href="#tools">Explore Back</a>
+        </nav>
+      </header>
+    </div>
 
     <main id="top">
-      <section class="hero">
+      <section class="hero section-ivory" aria-labelledby="hero-heading">
         <div class="hero-orbs" aria-hidden="true">
           <div class="back-circle back-circle--a"></div>
-          <div class="back-circle back-circle--b"></div>
           <div class="back-circle back-circle--c"></div>
-          <div class="back-circle back-circle--d"></div>
           <div class="back-circle back-circle--e"></div>
         </div>
         <div class="hero-copy">
           <p class="kicker">Back</p>
-          <h1 class="poster">
+          <h1 class="poster" id="hero-heading">
             <span class="sr-only">Back. </span>
             You’re here.
           </h1>
           <p class="lede lede-primary">
-            Six simple tools for moments of anxiety, panic, or overwhelm.
+            Six simple ways to guide your attention through the next difficult minute.
           </p>
           <p class="quiet quiet-hero">Choose one small thing to do right now.</p>
           <div class="hero-actions">
@@ -111,6 +129,7 @@
                   width="390"
                   height="844"
                   decoding="async"
+                  fetchpriority="high"
                 />
               </div>
             </div>
@@ -118,121 +137,339 @@
         </div>
       </section>
 
-      <section class="tools" id="tools">
-        <h2 class="section-title">What feels possible right now?</h2>
-        <div class="tool-grid">
-          <article class="tool">
-            <figure class="landing-session-card">
-              <img
-                src="screenshots/previews/breathe.png"
-                alt=""
-                width="330"
-                height="300"
-                loading="lazy"
-                decoding="async"
-              />
-            </figure>
-            <h3>Breathe</h3>
-            <p class="tool-copy">Follow a gentle rhythm.</p>
-          </article>
-          <article class="tool">
-            <figure class="landing-session-card landing-session-card--mark">
-              <svg class="landing-tool-mark" viewBox="0 0 120 72" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
-                <use href="#mark-distract" width="120" height="72" />
-              </svg>
-            </figure>
-            <h3>Distract</h3>
-            <p class="tool-copy">Give your attention a simple task.</p>
-          </article>
-          <article class="tool">
-            <figure class="landing-session-card">
-              <img
-                src="screenshots/previews/ground.png"
-                alt=""
-                width="358"
-                height="290"
-                loading="lazy"
-                decoding="async"
-              />
-            </figure>
-            <h3>Ground</h3>
-            <p class="tool-copy">Return to what is around you.</p>
-          </article>
-          <article class="tool">
-            <figure class="landing-session-card">
-              <img
-                src="screenshots/previews/move.png"
-                alt=""
-                width="342"
-                height="310"
-                loading="lazy"
-                decoding="async"
-              />
-            </figure>
-            <h3>Move</h3>
-            <p class="tool-copy">Release tension through small movements.</p>
-          </article>
-          <article class="tool">
-            <figure class="landing-session-card">
-              <img
-                src="screenshots/previews/listen.png"
-                alt=""
-                width="342"
-                height="325"
-                loading="lazy"
-                decoding="async"
-              />
-            </figure>
-            <h3>Listen</h3>
-            <p class="tool-copy">Follow a steady sound.</p>
-          </article>
-          <article class="tool">
-            <figure class="landing-session-card landing-session-card--mark">
-              <svg class="landing-tool-mark" viewBox="0 0 120 72" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
-                <use href="#mark-read" width="120" height="72" />
-              </svg>
-            </figure>
-            <h3>Read</h3>
-            <p class="tool-copy">Let changing words hold your attention.</p>
-          </article>
+      <section class="trust-strip section-sage" aria-label="Product essentials">
+        <div class="section-inner trust-strip-inner" id="trust-strip-root"></div>
+      </section>
+
+      <section class="how-works section-sage" id="how-it-works">
+        <div class="section-inner">
+          <p class="kicker">How Back works</p>
+          <h2 class="section-title section-title-wide">
+            Support begins with one small action.
+          </h2>
+          <p class="section-intro">
+            Back does not ask you to explain everything first.
+          </p>
+          <ol class="steps-grid">
+            <li class="step-card">
+              <span class="step-num" aria-hidden="true">01</span>
+              <h3>Choose what feels possible</h3>
+              <p>Breathe, distract, ground, move, listen or read.</p>
+            </li>
+            <li class="step-card">
+              <span class="step-num" aria-hidden="true">02</span>
+              <h3>Begin immediately</h3>
+              <p>No setup screen. No account. No instructions to study first.</p>
+            </li>
+            <li class="step-card">
+              <span class="step-num" aria-hidden="true">03</span>
+              <h3>Stop or switch at any time</h3>
+              <p>Try another tool, call your person or return whenever you need.</p>
+            </li>
+          </ol>
         </div>
       </section>
 
-      <section class="principles" id="principles">
-        <h2 class="section-title">Ready when you need it.</h2>
-        <div class="principles-grid">
-          <article>
-            <h3>Works offline</h3>
-            <p>Core tools are available without an internet connection.</p>
-          </article>
-          <article>
-            <h3>No account</h3>
-            <p>Open Back and begin. No registration or profile.</p>
-          </article>
-          <article>
-            <h3>Private by design</h3>
-            <p>Your preferences and activity stay on your device.</p>
-          </article>
-          <article>
-            <h3>No ads or tracking</h3>
-            <p>No advertising and no behavioral analytics.</p>
-          </article>
-        </div>
-        <p class="boundary">
-          Back is a self-help tool. It is not therapy, a diagnosis, an emergency service, or a medical device.
-        </p>
-      </section>
-
-      <section class="shelf" id="availability">
-        <div class="shelf-bg" aria-hidden="true"></div>
-        <div class="shelf-inner">
-          <div class="shelf-copy">
-            <h2 class="poster light">Keep Back close.</h2>
-            <p class="lede light">
-              Immediate support for difficult moments — without an account, ads, or a required connection.
-            </p>
+      <section class="tools section-ivory" id="tools">
+        <div class="section-inner section-inner-narrow">
+          <h2 class="section-title">What feels possible right now?</h2>
+          <div class="tool-grid">
+            <article class="tool">
+              <figure class="landing-session-card">
+                <img
+                  src="screenshots/previews/breathe.png"
+                  alt=""
+                  width="330"
+                  height="300"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </figure>
+              <h3>Breathe</h3>
+              <p class="tool-copy">Follow a gentle rhythm.</p>
+            </article>
+            <article class="tool">
+              <figure class="landing-session-card landing-session-card--mark">
+                <svg class="landing-tool-mark" viewBox="0 0 120 72" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+                  <use href="#mark-distract" width="120" height="72" />
+                </svg>
+              </figure>
+              <h3>Distract</h3>
+              <p class="tool-copy">Give your attention a simple task.</p>
+            </article>
+            <article class="tool">
+              <figure class="landing-session-card">
+                <img
+                  src="screenshots/previews/ground.png"
+                  alt=""
+                  width="358"
+                  height="290"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </figure>
+              <h3>Ground</h3>
+              <p class="tool-copy">Return to what is around you.</p>
+            </article>
+            <article class="tool">
+              <figure class="landing-session-card">
+                <img
+                  src="screenshots/previews/move.png"
+                  alt=""
+                  width="342"
+                  height="310"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </figure>
+              <h3>Move</h3>
+              <p class="tool-copy">Release tension through small movements.</p>
+            </article>
+            <article class="tool">
+              <figure class="landing-session-card">
+                <img
+                  src="screenshots/previews/listen.png"
+                  alt=""
+                  width="342"
+                  height="325"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </figure>
+              <h3>Listen</h3>
+              <p class="tool-copy">Follow a steady sound.</p>
+            </article>
+            <article class="tool">
+              <figure class="landing-session-card landing-session-card--mark">
+                <svg class="landing-tool-mark" viewBox="0 0 120 72" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+                  <use href="#mark-read" width="120" height="72" />
+                </svg>
+              </figure>
+              <h3>Read</h3>
+              <p class="tool-copy">Let changing words hold your attention.</p>
+            </article>
           </div>
-          <div class="avail-grid" aria-live="polite">
+        </div>
+      </section>
+
+      <section class="showcase section-beige" id="inside-back" aria-labelledby="showcase-heading">
+        <div class="section-inner">
+          <p class="kicker">Inside Back</p>
+          <h2 class="section-title section-title-wide" id="showcase-heading">
+            Six different ways to meet the same difficult minute.
+          </h2>
+
+          <article class="story story--reverse">
+            <div class="story-copy">
+              <h3>Follow the circle.</h3>
+              <p>
+                A gentle rhythm gives your attention one simple thing to follow. Nothing to
+                perfect.
+              </p>
+              <p class="story-detail quiet">Breathe · gentle rhythm</p>
+            </div>
+            <figure class="story-visual story-visual--breathe">
+              <img
+                src="screenshots/breathe.png"
+                alt="Breathe session with a soft circle rhythm"
+                width="390"
+                height="844"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+          </article>
+
+          <article class="story">
+            <div class="story-copy">
+              <h3>Give your attention a small task.</h3>
+              <p>
+                Calm visual activities occupy the next few moments without scores, pressure or
+                failure.
+              </p>
+              <p class="story-detail quiet">Distract · calm activities</p>
+            </div>
+            <figure class="story-visual">
+              <img
+                src="screenshots/distract.png"
+                alt="Distract activity screen in Back"
+                width="390"
+                height="844"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+          </article>
+
+          <article class="story story--reverse">
+            <div class="story-copy">
+              <h3>Let a steady sound hold the moment.</h3>
+              <p>
+                Rain, ocean, forest and soft noise are stored on the device and ready offline.
+              </p>
+              <p class="story-detail quiet">Listen · offline sounds</p>
+            </div>
+            <figure class="story-visual">
+              <img
+                src="screenshots/listen.png"
+                alt="Listen player with sound choices"
+                width="390"
+                height="844"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+          </article>
+
+          <article class="story">
+            <div class="story-copy">
+              <h3>Follow the words as they appear.</h3>
+              <p>
+                Short changing fragments give your attention something neutral and gentle to follow.
+              </p>
+              <p class="story-detail quiet">Read · changing words</p>
+            </div>
+            <figure class="story-visual">
+              <img
+                src="screenshots/read.png"
+                alt="Read session with progressive text"
+                width="390"
+                height="844"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+          </article>
+        </div>
+      </section>
+
+      <section class="moments section-editorial" id="moments">
+        <div class="section-inner">
+          <p class="kicker">Made for real moments</p>
+          <h2 class="section-title section-title-wide">When the next minute feels difficult.</h2>
+          <p class="section-intro">
+            Back is designed for moments when reading, choosing and concentrating may feel harder
+            than usual.
+          </p>
+          <div class="moments-grid">
+            <article class="moment-card">
+              <div class="moment-visual moment-visual--flight" role="img" aria-label="Placeholder: hand near an airplane window">
+                <span class="moment-placeholder-label">Photo placeholder · On a flight</span>
+              </div>
+              <h3>On a flight</h3>
+              <p>When you cannot leave, but need something small to follow.</p>
+            </article>
+            <article class="moment-card">
+              <div class="moment-visual moment-visual--desk" role="img" aria-label="Placeholder: quiet desk before a meeting">
+                <span class="moment-placeholder-label">Photo placeholder · Before a presentation</span>
+              </div>
+              <h3>Before a presentation</h3>
+              <p>A minute to ground before you step forward.</p>
+            </article>
+            <article class="moment-card">
+              <div class="moment-visual moment-visual--crowd" role="img" aria-label="Placeholder: softened public light">
+                <span class="moment-placeholder-label">Photo placeholder · In a crowded place</span>
+              </div>
+              <h3>In a crowded place</h3>
+              <p>When the room feels close and your attention needs an anchor.</p>
+            </article>
+            <article class="moment-card">
+              <div class="moment-visual moment-visual--evening" role="img" aria-label="Placeholder: warm evening room">
+                <span class="moment-placeholder-label">Photo placeholder · When the day feels too loud</span>
+              </div>
+              <h3>When the day feels too loud</h3>
+              <p>An evening reset without another long checklist.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="privacy-deep section-forest" id="privacy">
+        <div class="section-inner privacy-inner">
+          <p class="kicker light">Private by design</p>
+          <h2 class="poster light">What happens in Back stays close.</h2>
+          <p class="lede light privacy-lede">
+            Back does not require an account. Personal activity and patterns stay on your device.
+            Core tools and bundled sounds work without an internet connection.
+          </p>
+          <ul class="privacy-facts">
+            <li>No account or profile</li>
+            <li>No advertising tracking</li>
+            <li>Personal patterns stored locally</li>
+            <li>Core tools available offline</li>
+          </ul>
+          <p class="boundary boundary-light">
+            Back is a self-help tool. It is not therapy, a diagnosis, an emergency service, or a
+            medical device.
+          </p>
+          <p class="privacy-link-wrap">
+            <a class="text-link light" href="privacy.html">Read our privacy approach</a>
+          </p>
+        </div>
+      </section>
+
+      <section class="built-care section-ivory" id="built-with-care">
+        <div class="section-inner">
+          <p class="kicker">Built with care</p>
+          <h2 class="section-title section-title-wide">
+            Designed for moments when attention is limited.
+          </h2>
+          <ul class="care-grid" id="care-claims-root"></ul>
+          <!--
+            TODO: ADD ONLY VERIFIED TESTIMONIALS WITH USER CONSENT
+            TODO: ADD PROFESSIONAL REVIEW ONLY AFTER FORMAL REVIEW AND APPROVAL
+            <div class="verified-proof" hidden aria-hidden="true">
+              Future verified proof: beta quote, a11y test result, named review, research result.
+            </div>
+          -->
+        </div>
+      </section>
+
+      <section class="back-plus section-sage" id="back-plus">
+        <div class="section-inner">
+          <p class="kicker">Back Plus</p>
+          <h2 class="section-title">Keep Back close.</h2>
+          <p class="section-intro">
+            Eligible new subscribers will be able to try the complete Back experience free for 7
+            days with Back Plus Annual.
+          </p>
+          <div class="plus-cards">
+            <article class="plus-card">
+              <h3 class="plus-plan">Monthly</h3>
+              <p class="plus-price">Approximately €2.99 / month</p>
+              <p class="quiet">No free trial currently planned.</p>
+            </article>
+            <article class="plus-card plus-card--featured">
+              <h3 class="plus-plan">Annual</h3>
+              <p class="plus-price">Approximately €19.99 / year</p>
+              <p class="quiet">7 days free for eligible new subscribers.</p>
+            </article>
+          </div>
+          <p class="plus-disclosure quiet">
+            Subscriptions are not available yet. Final localized prices and renewal terms will be
+            displayed by the App Store or Google Play before purchase.
+          </p>
+          <p class="plus-safety quiet">
+            Safety features stay outside the paywall: Emergency information, Extra Support, and Call
+            my person.
+          </p>
+          <p class="plus-link-wrap">
+            <a class="text-link" href="subscriptions.html">See subscription details</a>
+          </p>
+        </div>
+      </section>
+
+      <section class="final-cta section-forest" id="availability">
+        <div class="section-inner final-cta-inner">
+          <h2 class="poster light">Keep Back close.</h2>
+          <p class="lede light final-lede">
+            Quiet support for the next difficult minute — private, immediate and ready offline.
+          </p>
+          <div class="final-actions">
+            <a class="btn forest-on-light" href="#tools">Explore the six tools</a>
+            <a class="text-link light final-secondary" href="subscriptions.html">Read about Back Plus</a>
+          </div>
+          <div class="avail-grid avail-grid--final" aria-live="polite">
             <div class="avail-slot" id="avail-ios"></div>
             <div class="avail-slot" id="avail-android"></div>
           </div>
@@ -253,6 +490,7 @@
       <p class="foot-meta">© <span id="year">2026</span> Back App</p>
     </footer>
 
+    <script src="trustClaims.js"></script>
     <script src="releases.js"></script>
     <script src="landing.js"></script>
   </body>

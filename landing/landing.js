@@ -140,6 +140,78 @@ if (year) {
 
 wireAvailability();
 
+function renderTrustStrip() {
+  const claims = window.BACK_TRUST_CLAIMS?.strip;
+  const root = document.getElementById("trust-strip-root");
+  if (!root || !Array.isArray(claims)) {
+    return;
+  }
+  root.replaceChildren();
+  claims.forEach((item, index) => {
+    if (index > 0) {
+      const divider = document.createElement("span");
+      divider.className = "trust-divider";
+      divider.setAttribute("aria-hidden", "true");
+      root.append(divider);
+    }
+    const block = document.createElement("article");
+    block.className = "trust-item";
+    const title = document.createElement("h3");
+    title.textContent = item.title;
+    const body = document.createElement("p");
+    body.textContent = item.body;
+    block.append(title, body);
+    root.append(block);
+  });
+}
+
+function renderCareClaims() {
+  const claims = window.BACK_TRUST_CLAIMS?.builtWithCare;
+  const root = document.getElementById("care-claims-root");
+  if (!root || !Array.isArray(claims)) {
+    return;
+  }
+  root.replaceChildren();
+  claims.forEach((text) => {
+    const item = document.createElement("li");
+    item.textContent = text;
+    root.append(item);
+  });
+}
+
+function initMobileNav() {
+  const toggle = document.querySelector(".nav-toggle");
+  const nav = document.getElementById("site-nav");
+  if (!toggle || !nav) {
+    return;
+  }
+
+  function setOpen(open) {
+    toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    nav.classList.toggle("is-open", open);
+    document.body.classList.toggle("nav-open", open);
+  }
+
+  toggle.addEventListener("click", () => {
+    const open = toggle.getAttribute("aria-expanded") !== "true";
+    setOpen(open);
+  });
+
+  nav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => setOpen(false));
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      setOpen(false);
+    }
+  });
+}
+
+renderTrustStrip();
+renderCareClaims();
+initMobileNav();
+
 (function initHeroMotionPause() {
   const root = document.documentElement;
 
