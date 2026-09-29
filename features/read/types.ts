@@ -1,4 +1,18 @@
-export const readLanguages = ['en'] as const;
+import type { UiLocale } from '@/locales/locale';
+
+export const readLanguages = [
+  'en',
+  'es',
+  'de',
+  'fr',
+  'pt-BR',
+  'ru',
+  'it',
+  'pl',
+  'nl',
+  'tr',
+] as const satisfies readonly UiLocale[];
+
 export type ReadLanguage = (typeof readLanguages)[number];
 
 export const readItemTypes = ['micro_story', 'curious', 'word', 'observation'] as const;
@@ -10,7 +24,7 @@ export type ReadSlotType = (typeof readSlotTypes)[number];
 export const readRevealSpeeds = ['unhurried', 'steady', 'quick'] as const;
 export type ReadRevealSpeed = (typeof readRevealSpeeds)[number];
 
-export type ReadLanguagePreference = 'en';
+export type ReadLanguagePreference = ReadLanguage;
 
 export type EnvironmentFollowUp = {
   type: 'environment';
@@ -78,6 +92,8 @@ export type ReadMemory = {
   lastSeenAt: Record<string, number>;
   language: ReadLanguagePreference;
   revealSpeed: ReadRevealSpeed;
+  /** First-use canvas hint (“follow the words” / tap to go faster). */
+  sawCanvasHint?: boolean;
 };
 
 export const defaultReadMemory: ReadMemory = {

@@ -1,0 +1,1506 @@
+[
+  {
+    "id": "tr-curious-001",
+    "type": "curious",
+    "fragments": [
+      "Bazı kelebekler",
+      "ayaklarıyla tat alırlar."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-002",
+    "type": "curious",
+    "fragments": [
+      "Bir bulut günlerce sürüklenebilir",
+      "iniş yapmadan."
+    ],
+    "topics": [
+      "sky"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-003",
+    "type": "curious",
+    "fragments": [
+      "Bal kendi kendine kalıyor",
+      "çok uzun zamandır."
+    ],
+    "topics": [
+      "food"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-004",
+    "type": "curious",
+    "fragments": [
+      "Muz meyvelerdir.",
+      "Çilekler değil."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "environment",
+      "text": "Şimdi etrafınızda yeşil bir şeyler bulun."
+    }
+  },
+  {
+    "id": "tr-curious-005",
+    "type": "curious",
+    "fragments": [
+      "Ay yavaşça hareket ediyor",
+      "Dünya'dan daha uzakta."
+    ],
+    "topics": [
+      "sky"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-006",
+    "type": "curious",
+    "fragments": [
+      "Dünya üzerinde daha fazla ağaç var",
+      "açık bir gecede görebileceğiniz yıldızlardan daha fazla."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-007",
+    "type": "curious",
+    "fragments": [
+      "Bir salyangoz dinlenebilir",
+      "uzun bir sezon ve sonra devam."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-008",
+    "type": "curious",
+    "fragments": [
+      "Su samuru bazen yüzer",
+      "uyurken yan yanalar."
+    ],
+    "topics": [
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-009",
+    "type": "curious",
+    "fragments": [
+      "Venüs'te bir gün",
+      "yılına göre daha uzun ömürlüdür."
+    ],
+    "topics": [
+      "sky"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-010",
+    "type": "curious",
+    "fragments": [
+      "Yosun taş üzerinde büyüyebilir,",
+      "ahşap ve sessiz çatılar."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-011",
+    "type": "curious",
+    "fragments": [
+      "Yağmur damlaları gözyaşı damlası şeklinde değildir.",
+      "Düştükçe yuvarlaklaşırlar."
+    ],
+    "topics": [
+      "weather"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-012",
+    "type": "curious",
+    "fragments": [
+      "Bir ataş açılabilir",
+      "tek bir ince çizgi halinde."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-013",
+    "type": "curious",
+    "fragments": [
+      "Ayçiçekleri ışığa yöneliyor",
+      "genç olduklarında."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-014",
+    "type": "curious",
+    "fragments": [
+      "Dünyanın en sessiz odası",
+      "hala tam olarak sessiz değil."
+    ],
+    "topics": [
+      "quiet"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-015",
+    "type": "curious",
+    "fragments": [
+      "Denizin camlanması yıllar alır",
+      "pürüzsüz hale gelmek."
+    ],
+    "topics": [
+      "water"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "environment",
+      "text": "Şimdi bir yansıma bulun, küçük bile olsa."
+    }
+  },
+  {
+    "id": "tr-curious-016",
+    "type": "curious",
+    "fragments": [
+      "Bir çay kaşığı bal",
+      "birçok arının işidir."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-017",
+    "type": "curious",
+    "fragments": [
+      "Kar tek renk değildir.",
+      "Birçok küçük gölgeyi barındırır."
+    ],
+    "topics": [
+      "weather"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-018",
+    "type": "curious",
+    "fragments": [
+      "Bazı bambular büyüyebilir",
+      "izleyebildiğin kadar hızlı."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-019",
+    "type": "curious",
+    "fragments": [
+      "Pusula iğnesi küçük bir mıknatıstır",
+      "Dünya'yı dinleyen."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-020",
+    "type": "curious",
+    "fragments": [
+      "Kargalar yüzleri hatırlıyor",
+      "daha önce tanışmışlardı."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "choice",
+      "text": "Elinize en yakın renk hangisi?",
+      "options": [
+        "ılık",
+        "Serin",
+        "başka bir şey"
+      ]
+    }
+  },
+  {
+    "id": "tr-curious-021",
+    "type": "curious",
+    "fragments": [
+      "Sahra'da soluk taşlı alanlar var",
+      "yanı sıra kum."
+    ],
+    "topics": [
+      "earth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-022",
+    "type": "curious",
+    "fragments": [
+      "Nehirdeki bir çakıl taşı",
+      "yavaş yavaş yuvarlanıyor."
+    ],
+    "topics": [
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-023",
+    "type": "curious",
+    "fragments": [
+      "Mum alevleri yukarıyı gösteriyor",
+      "çünkü sıcak hava yükselir."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-024",
+    "type": "curious",
+    "fragments": [
+      "Eğrelti otları daha yaşlı",
+      "çoğu çiçekli bitkiden daha fazladır."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-025",
+    "type": "curious",
+    "fragments": [
+      "Bir deniz kabuğunun sesi",
+      "çoğunlukla etrafınızdaki odadır."
+    ],
+    "topics": [
+      "quiet"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-026",
+    "type": "curious",
+    "fragments": [
+      "Baykuşlar başlarını çevirebilir",
+      "insanların yapabileceğinden çok daha uzağa."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "environment",
+      "text": "Yaşayan bir şey bulun veya yaşayan bir şeyin rengini bulun."
+    }
+  },
+  {
+    "id": "tr-curious-027",
+    "type": "curious",
+    "fragments": [
+      "Kağıt üzerine mürekkep",
+      "ince bir kurumuş renk tabakasıdır."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-028",
+    "type": "curious",
+    "fragments": [
+      "Sabah ışığı genellikle daha serindir",
+      "akşam ışığından daha renkli."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-029",
+    "type": "curious",
+    "fragments": [
+      "Bir ceviz biraz görünüyor",
+      "tesadüfen küçük bir beyin gibi."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-030",
+    "type": "curious",
+    "fragments": [
+      "Bazı likenler yaşıyor",
+      "Onlarca yıldır aynı taş üzerinde."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-031",
+    "type": "curious",
+    "fragments": [
+      "Bir su ısıtıcısından çıkan buhar",
+      "su bir anlığına havaya mı dönüşüyor?"
+    ],
+    "topics": [
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-032",
+    "type": "curious",
+    "fragments": [
+      "Bir kütüphane kartı kitaplardan daha fazlasını kataloglar.",
+      "İadeleri kataloglar."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-033",
+    "type": "curious",
+    "fragments": [
+      "Güveler içer",
+      "uzun kıvrımlı bir dil ile."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-034",
+    "type": "curious",
+    "fragments": [
+      "Kuzey Yıldızı",
+      "zar zor hareket ediyor gibi görünüyor."
+    ],
+    "topics": [
+      "sky"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-035",
+    "type": "curious",
+    "fragments": [
+      "Clay şekli hatırlıyor",
+      "onu tutan ellerden."
+    ],
+    "topics": [
+      "earth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-036",
+    "type": "curious",
+    "fragments": [
+      "Bir gölge yalnızca yerdir",
+      "ışık ulaşmadı."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-037",
+    "type": "curious",
+    "fragments": [
+      "Çam kozalakları daha çok açılıyor",
+      "hava kuruduğunda."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "environment",
+      "text": "Şimdi etrafınızda yeşil bir şeyler bulun."
+    }
+  },
+  {
+    "id": "tr-curious-038",
+    "type": "curious",
+    "fragments": [
+      "Çoğunlukla cam yapılır",
+      "erimiş kumdan."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-039",
+    "type": "curious",
+    "fragments": [
+      "Bir kedinin bıyıkları",
+      "yaklaşık olarak gövdesi kadar geniştir."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-040",
+    "type": "curious",
+    "fragments": [
+      "Sis bir buluttur",
+      "düşük kalmaya karar verdi."
+    ],
+    "topics": [
+      "weather"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-041",
+    "type": "curious",
+    "fragments": [
+      "Kağıt bir zamanlar çoğunlukla paçavradan oluşuyordu,",
+      "sonra çoğunlukla ahşap."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-042",
+    "type": "curious",
+    "fragments": [
+      "Gelgit havuzları küçük bir okyanus tutar",
+      "birkaç saatliğine."
+    ],
+    "topics": [
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-043",
+    "type": "curious",
+    "fragments": [
+      "Bir tohum zaten içeriyor",
+      "yaprak fikri."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-044",
+    "type": "curious",
+    "fragments": [
+      "Yankılar sestir",
+      "ikinci kez geliyoruz."
+    ],
+    "topics": [
+      "quiet"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-045",
+    "type": "curious",
+    "fragments": [
+      "Derin buzun rengi",
+      "neredeyse mavi görünebilir."
+    ],
+    "topics": [
+      "weather"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-046",
+    "type": "curious",
+    "fragments": [
+      "Arılar çiçeklerdeki desenleri görüyor",
+      "insanların özlediği şey."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-047",
+    "type": "curious",
+    "fragments": [
+      "Bir tuğla sadece kildir",
+      "hareketsiz kalmayı öğrendi."
+    ],
+    "topics": [
+      "earth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-048",
+    "type": "curious",
+    "fragments": [
+      "Rüzgarın rengi yoktur.",
+      "Ne hareket ettiğini görüyoruz."
+    ],
+    "topics": [
+      "weather"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "environment",
+      "text": "Bir an için cildinizdeki havayı fark edin."
+    }
+  },
+  {
+    "id": "tr-curious-049",
+    "type": "curious",
+    "fragments": [
+      "Bazı mantarlar hafifçe parlıyor",
+      "karanlık ormanlarda."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-050",
+    "type": "curious",
+    "fragments": [
+      "Bir posta pulu",
+      "çok küçük bir basılı alandır."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-051",
+    "type": "curious",
+    "fragments": [
+      "Amazon nehri",
+      "bazı şehirlerden daha geniş olabilir."
+    ],
+    "topics": [
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-052",
+    "type": "curious",
+    "fragments": [
+      "Karahindiba saatleri tohumdur",
+      "bir esinti bekliyorum."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-053",
+    "type": "curious",
+    "fragments": [
+      "Bir ayna camdır",
+      "arkasında sessiz bir metal var."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-054",
+    "type": "curious",
+    "fragments": [
+      "Serçeler toz içinde yıkanıyor",
+      "aynı zamanda suda."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-055",
+    "type": "curious",
+    "fragments": [
+      "Yağmur kokusunun bir adı vardır:",
+      "petrichor."
+    ],
+    "topics": [
+      "weather"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-056",
+    "type": "curious",
+    "fragments": [
+      "Mercan minik hayvanlar tarafından yapılmıştır",
+      "uzun bir süre boyunca."
+    ],
+    "topics": [
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-057",
+    "type": "curious",
+    "fragments": [
+      "Bir kalem yazıyor",
+      "ince bir karbon izi ile."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-058",
+    "type": "curious",
+    "fragments": [
+      "Çiy sudur",
+      "serin havadan toplandı."
+    ],
+    "topics": [
+      "weather"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-059",
+    "type": "curious",
+    "fragments": [
+      "Bir meşe yaşayabilir",
+      "bir evden daha uzun."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "environment",
+      "text": "Şimdi etrafınızda yeşil bir şeyler bulun."
+    }
+  },
+  {
+    "id": "tr-curious-060",
+    "type": "curious",
+    "fragments": [
+      "Kelime alfabesi",
+      "ilk iki harften gelir."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-061",
+    "type": "curious",
+    "fragments": [
+      "Lav soğuyarak taşa dönüşüyor",
+      "farklı dokulara sahip."
+    ],
+    "topics": [
+      "earth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-062",
+    "type": "curious",
+    "fragments": [
+      "Su ısıtıcısının düdüğü buhardır",
+      "küçük bir delikten sıkarak."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-063",
+    "type": "curious",
+    "fragments": [
+      "Ateşböcekleri ışık saçar",
+      "fazla ısı olmadan."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-064",
+    "type": "curious",
+    "fragments": [
+      "Gobi'de kışlar var",
+      "sessiz kardan."
+    ],
+    "topics": [
+      "earth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-065",
+    "type": "curious",
+    "fragments": [
+      "Yer imi bir duraklamadır",
+      "tutabilirsin."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-066",
+    "type": "curious",
+    "fragments": [
+      "Dalgalar seyahat eder,",
+      "ama su çoğunlukla kalıyor."
+    ],
+    "topics": [
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-067",
+    "type": "curious",
+    "fragments": [
+      "Keten şu şekilde başlar:",
+      "uzun, mavi çiçekli bir bitki."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-068",
+    "type": "curious",
+    "fragments": [
+      "Q harfi",
+      "neredeyse her zaman U'yu yanında getirir."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-069",
+    "type": "curious",
+    "fragments": [
+      "Bir pişmiş toprak kap",
+      "toprak şeklinde olup pişirilmektedir."
+    ],
+    "topics": [
+      "earth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-070",
+    "type": "curious",
+    "fragments": [
+      "Bulutlar yavaş görünüyor",
+      "çünkü çok büyükler."
+    ],
+    "topics": [
+      "sky"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "environment",
+      "text": "Tavana kadar da olsa yukarıya bakın."
+    }
+  },
+  {
+    "id": "tr-curious-071",
+    "type": "curious",
+    "fragments": [
+      "Güvelerin kanatları ağaç kabuğuna benzeyebilir",
+      "gün ışığında."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-072",
+    "type": "curious",
+    "fragments": [
+      "Tuz kristalleri küçük küplerdir",
+      "eğer yakından bakarsanız."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-073",
+    "type": "curious",
+    "fragments": [
+      "Mutluluk kelimesi",
+      "bir hikaye başlığı olarak başladı."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-074",
+    "type": "curious",
+    "fragments": [
+      "Pencere pervazı küçük bir sahnedir",
+      "ışık için."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-075",
+    "type": "curious",
+    "fragments": [
+      "Dere taşları birbirine çarpıyor",
+      "onlar aynı fikirde olana kadar."
+    ],
+    "topics": [
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-076",
+    "type": "curious",
+    "fragments": [
+      "Kekik kokusunu koruyor",
+      "kurutulduğunda bile."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-077",
+    "type": "curious",
+    "fragments": [
+      "Gece gökyüzü bir haritadır",
+      "yavaş yavaş dönüyor."
+    ],
+    "topics": [
+      "sky"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-078",
+    "type": "curious",
+    "fragments": [
+      "Bir zarf katlanmış bir duraklamadır",
+      "iki oda arasında."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-079",
+    "type": "curious",
+    "fragments": [
+      "Bir dalga üzerinde köpük",
+      "çoğunlukla hava ve su karışımıdır."
+    ],
+    "topics": [
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-080",
+    "type": "curious",
+    "fragments": [
+      "Bazı elmalar çıtır kalır",
+      "serin ve hareketsiz tutulursa."
+    ],
+    "topics": [
+      "food"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-081",
+    "type": "curious",
+    "fragments": [
+      "Bir menteşe bir kapıyı açar",
+      "yavaşça fikrini değiştir."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "environment",
+      "text": "Adını vermeden gözlerinizi tek bir nesneye odaklayın."
+    }
+  },
+  {
+    "id": "tr-curious-082",
+    "type": "curious",
+    "fragments": [
+      "Liken genellikle iki hayattır",
+      "bir şekli paylaşıyorum."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-083",
+    "type": "curious",
+    "fragments": [
+      "Ninni kelimesi",
+      "çoğu evden daha eskidir."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-084",
+    "type": "curious",
+    "fragments": [
+      "Sıcak ekmek daha güçlü kokar",
+      "soğuk ekmekten daha."
+    ],
+    "topics": [
+      "food"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-085",
+    "type": "curious",
+    "fragments": [
+      "Petrichor",
+      "yağmurun kuru zemindeki kokusuna verilen isimdir."
+    ],
+    "topics": [
+      "weather"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-086",
+    "type": "curious",
+    "fragments": [
+      "Su samuru bazen uyurken patilerini tutar",
+      "böylece birbirlerinden ayrılmıyorlar."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-087",
+    "type": "curious",
+    "fragments": [
+      "Bir an gerçek bir zaman birimidir.",
+      "Çok küçük."
+    ],
+    "topics": [
+      "time"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-088",
+    "type": "curious",
+    "fragments": [
+      "Yer fıstığı fındık değildir.",
+      "Yer altında büyüyorlar."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-089",
+    "type": "curious",
+    "fragments": [
+      "Kuzey Yıldızı zar zor hareket ediyor.",
+      "Gökyüzünün geri kalanı onun etrafında dönüyor."
+    ],
+    "topics": [
+      "sky"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-090",
+    "type": "curious",
+    "fragments": [
+      "Buz yüzer",
+      "çünkü geldiği suya göre biraz daha az yoğundur."
+    ],
+    "topics": [
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-091",
+    "type": "curious",
+    "fragments": [
+      "Bir grup baykuş",
+      "parlamento denir."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-092",
+    "type": "curious",
+    "fragments": [
+      "Kağıt bir zamanlar",
+      "çoğunlukla bez paçavralar."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "environment",
+      "text": "Yakınınızdaki bir kağıt parçasına, hatta bir etikete dikkat edin."
+    }
+  },
+  {
+    "id": "tr-curious-093",
+    "type": "curious",
+    "fragments": [
+      "Bazı yosunlar neredeyse tamamen kuruyabilir",
+      "ve sonra kendilerini geri içerler."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-094",
+    "type": "curious",
+    "fragments": [
+      "Bir pusula iğnesi",
+      "tek yönü tercih eden minik bir gezgindir."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-095",
+    "type": "curious",
+    "fragments": [
+      "Sis bir buluttur",
+      "düşük kalmaya karar verdi."
+    ],
+    "topics": [
+      "weather"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-096",
+    "type": "curious",
+    "fragments": [
+      "İngilizce'deki en kısa tam cümle",
+      "Go'dur."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-097",
+    "type": "curious",
+    "fragments": [
+      "Bal arıları insan yüzlerini tanıyabilir.",
+      "Buna gerek yok."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-098",
+    "type": "curious",
+    "fragments": [
+      "Bir gölge yalnızca",
+      "ışığın yokluğu."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-099",
+    "type": "curious",
+    "fragments": [
+      "Nehir taşları yuvarlaklaşıyor",
+      "sabırla, planla değil."
+    ],
+    "topics": [
+      "stone"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-100",
+    "type": "curious",
+    "fragments": [
+      "Ananaslar yerden büyür,",
+      "ağaçlardan değil."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-101",
+    "type": "curious",
+    "fragments": [
+      "Venüs'te bir gün",
+      "yılından daha uzundur."
+    ],
+    "topics": [
+      "sky"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-102",
+    "type": "curious",
+    "fragments": [
+      "En sessiz odalar inşa ediliyor",
+      "neredeyse her sesi yutmak."
+    ],
+    "topics": [
+      "quiet"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "choice",
+      "text": "Etrafınızdaki ses daha kısık mı yoksa daha fazla uğultu mu?",
+      "options": [
+        "sus",
+        "uğultu",
+        "emin değilim"
+      ]
+    }
+  },
+  {
+    "id": "tr-curious-103",
+    "type": "curious",
+    "fragments": [
+      "Waffle'ların cepleri var",
+      "çünkü birisi üstte ne varsa daha fazlasını istiyordu."
+    ],
+    "topics": [
+      "food"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-104",
+    "type": "curious",
+    "fragments": [
+      "Koalaların parmak izleri var",
+      "şaşırtıcı derecede bizimkilere benzeyebilir."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-105",
+    "type": "curious",
+    "fragments": [
+      "Güneşten gelen ışık",
+      "gelmesi yaklaşık sekiz dakika sürer."
+    ],
+    "topics": [
+      "sky"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-106",
+    "type": "curious",
+    "fragments": [
+      "Bir tohum yıllarca bekleyebilir",
+      "ve hala ne yapacağını biliyorum."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-107",
+    "type": "curious",
+    "fragments": [
+      "Sabun suyun bezin içine akmasını sağlar",
+      "biraz daha az utangaç hale getirerek."
+    ],
+    "topics": [
+      "home"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-108",
+    "type": "curious",
+    "fragments": [
+      "Bir flamingonun rengi",
+      "yediği şeyden gelir."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-109",
+    "type": "curious",
+    "fragments": [
+      "Antarktika bir çöldür.",
+      "Çok kuru ve çok geniş."
+    ],
+    "topics": [
+      "earth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-110",
+    "type": "curious",
+    "fragments": [
+      "Bir an bir zamanlar",
+      "ölçülen bir süre."
+    ],
+    "topics": [
+      "time"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-111",
+    "type": "curious",
+    "fragments": [
+      "Bazı ağaçlar iletişim kurar",
+      "toprağın içinden, sessizce."
+    ],
+    "topics": [
+      "forest"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-112",
+    "type": "curious",
+    "fragments": [
+      "Cam çok hızlı soğuyor",
+      "asla sıradan bir kristal haline gelmez."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-113",
+    "type": "curious",
+    "fragments": [
+      "Kargalar yüzleri hatırlıyor",
+      "ve kin ya da iyilik tutabilir."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-114",
+    "type": "curious",
+    "fragments": [
+      "Deniz geceleri daha gürültülüdür",
+      "çoğunlukla dünyanın geri kalanının daha sessiz olması nedeniyle."
+    ],
+    "topics": [
+      "coast"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-115",
+    "type": "curious",
+    "fragments": [
+      "Mutluluk kelimesi",
+      "masalsı bir kaza olarak başladı."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-116",
+    "type": "curious",
+    "fragments": [
+      "Bir ayçiçeği kafası",
+      "tek bir çiçek değil",
+      "Yüzlerce küçük olan",
+      "aynı şekilde yüzleşmeyi kabul ediyorum."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-117",
+    "type": "curious",
+    "fragments": [
+      "Gök mavisi dediğimiz renk",
+      "dağınık ışıktır.",
+      "Hava maviyi koruyor",
+      "ve geri kalanının devam etmesine izin verin."
+    ],
+    "topics": [
+      "sky"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-118",
+    "type": "curious",
+    "fragments": [
+      "Ahtapot tadı",
+      "kollarıyla.",
+      "Ulaşan bir şey",
+      "aynı zamanda bilinen bir şey de olabilir."
+    ],
+    "topics": [
+      "water",
+      "nature"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-119",
+    "type": "curious",
+    "fragments": [
+      "Bir kalem yazabilir",
+      "yaklaşık kırk beş bin kelime",
+      "önce yine sadece ahşap."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-curious-120",
+    "type": "curious",
+    "fragments": [
+      "Peteklerde altıgenler kullanılır",
+      "çünkü altı taraf",
+      "çok tutmak",
+      "çok az duvarla."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1
+  }
+]

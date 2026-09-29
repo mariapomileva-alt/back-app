@@ -1,0 +1,727 @@
+[
+  {
+    "id": "de-notice-001",
+    "type": "observation",
+    "fragments": [
+      "Finden Sie ein Wort",
+      "Du kannst um dich herum sehen."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-notice-002",
+    "type": "observation",
+    "fragments": [
+      "Beachten Sie eine Farbe",
+      "in der Nähe deiner Hände."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-notice-003",
+    "type": "observation",
+    "fragments": [
+      "Finden Sie eine Kante",
+      "wo zwei Flächen aufeinandertreffen."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-notice-004",
+    "type": "observation",
+    "fragments": [
+      "Suchen Sie nach etwas",
+      "das ist immer noch."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-notice-005",
+    "type": "observation",
+    "fragments": [
+      "Finden Sie eine Sache",
+      "das ist etwas näher",
+      "als der Rest."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-notice-006",
+    "type": "observation",
+    "fragments": [
+      "Beachten Sie einen Schatten,",
+      "sogar ein kleines."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-notice-007",
+    "type": "observation",
+    "fragments": [
+      "Finden Sie eine gerade Linie",
+      "irgendwo in der Nähe."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-notice-008",
+    "type": "observation",
+    "fragments": [
+      "Suchen Sie nach einer Kurve",
+      "statt einer Ecke."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-notice-009",
+    "type": "observation",
+    "fragments": [
+      "Beachten Sie eine Textur",
+      "Du berührst es nicht."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-notice-010",
+    "type": "observation",
+    "fragments": [
+      "Finden Sie etwas, das matt ist,",
+      "nicht glänzend."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-notice-011",
+    "type": "observation",
+    "fragments": [
+      "Suchen Sie nach einem Patch",
+      "weicheres Licht."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-notice-012",
+    "type": "observation",
+    "fragments": [
+      "Finden Sie ein Objekt",
+      "das könnte in eine Tasche passen."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-notice-013",
+    "type": "observation",
+    "fragments": [
+      "Beachten Sie das am weitesten entfernte Objekt",
+      "können Sie von hier aus sehen."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-notice-014",
+    "type": "observation",
+    "fragments": [
+      "Finden Sie ein gedrucktes Wort",
+      "irgendwo in der Nähe."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-notice-015",
+    "type": "observation",
+    "fragments": [
+      "Schauen Sie sich den Raum an",
+      "zwischen zwei Objekten."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-notice-016",
+    "type": "observation",
+    "fragments": [
+      "Beachten Sie etwas",
+      "das ist meistens eine Farbe."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-notice-017",
+    "type": "observation",
+    "fragments": [
+      "Finden Sie eine Oberfläche",
+      "das fühlt sich cool an."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-notice-018",
+    "type": "observation",
+    "fragments": [
+      "Suchen Sie nach etwas",
+      "Vertikale."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-notice-019",
+    "type": "observation",
+    "fragments": [
+      "Beachten Sie einen Ort",
+      "wo sich Staub ansammeln könnte."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-notice-020",
+    "type": "observation",
+    "fragments": [
+      "Finden Sie eine Sache",
+      "aus Papier oder Karton."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-notice-021",
+    "type": "observation",
+    "fragments": [
+      "Suchen Sie nach einem Spiegelbild,",
+      "sogar ein schwaches."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-notice-022",
+    "type": "observation",
+    "fragments": [
+      "Beachten Sie das Gewicht",
+      "von dem, was du sitzt",
+      "oder darauf stehen."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-notice-023",
+    "type": "observation",
+    "fragments": [
+      "Suchen Sie eine Ecke des Raumes",
+      "und lass deine Augen dort ruhen."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-notice-024",
+    "type": "observation",
+    "fragments": [
+      "Suchen Sie nach etwas",
+      "älter als diese Woche."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-notice-025",
+    "type": "observation",
+    "fragments": [
+      "Beachten Sie ein Geräusch,",
+      "dann lass es passieren."
+    ],
+    "topics": [
+      "quiet"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-notice-026",
+    "type": "observation",
+    "fragments": [
+      "Finden Sie ein Rechteck",
+      "Irgendwo um dich herum."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-notice-027",
+    "type": "observation",
+    "fragments": [
+      "Schauen Sie sich die Decke an",
+      "für einen langsamen Atemzug des Schauens."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-notice-028",
+    "type": "observation",
+    "fragments": [
+      "Beachten Sie, ob das Licht",
+      "ist gleichmäßig oder fleckig."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-notice-029",
+    "type": "observation",
+    "fragments": [
+      "Finden Sie etwas",
+      "könnte man mit einem Wort benennen."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-notice-030",
+    "type": "observation",
+    "fragments": [
+      "Suchen Sie nach einer Falte,",
+      "eine Naht oder eine Verbindung."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-notice-031",
+    "type": "observation",
+    "fragments": [
+      "Beachten Sie eines",
+      "das ist absichtlich leer."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-notice-032",
+    "type": "observation",
+    "fragments": [
+      "Finde eine Pflanze,",
+      "oder die Idee einer Pflanze",
+      "in einem Bild."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-notice-033",
+    "type": "observation",
+    "fragments": [
+      "Schauen Sie sich Ihren eigenen Ärmel oder Ihre Manschette an",
+      "für einen Moment."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-notice-034",
+    "type": "observation",
+    "fragments": [
+      "Beachten Sie einen Temperaturunterschied,",
+      "sogar ein kleines."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-notice-035",
+    "type": "observation",
+    "fragments": [
+      "Finden Sie eine Nummer",
+      "irgendwo in der Nähe."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-notice-036",
+    "type": "observation",
+    "fragments": [
+      "Suchen Sie nach etwas, das sich lehnt,",
+      "sogar geringfügig."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-notice-037",
+    "type": "observation",
+    "fragments": [
+      "Beachten Sie den Weg, den Ihre Augen genommen haben",
+      "um hierher zu kommen."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-notice-038",
+    "type": "observation",
+    "fragments": [
+      "Finden Sie einen Kreis oder ein Oval",
+      "im Zimmer."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-notice-039",
+    "type": "observation",
+    "fragments": [
+      "Schauen Sie auf den Boden",
+      "wo es auf eine Wand trifft."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-notice-040",
+    "type": "observation",
+    "fragments": [
+      "Beachten Sie eines",
+      "Sie haben es heute nicht genutzt."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-notice-041",
+    "type": "observation",
+    "fragments": [
+      "Finde eine ruhige Farbe,",
+      "kein lauter."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-notice-042",
+    "type": "observation",
+    "fragments": [
+      "Suchen Sie nach Schreiben",
+      "Das ist kein Bildschirm."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-notice-043",
+    "type": "observation",
+    "fragments": [
+      "Beachten Sie, wie weit Ihre Füße entfernt sind",
+      "voneinander."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-notice-044",
+    "type": "observation",
+    "fragments": [
+      "Finden Sie etwas Gestapeltes,",
+      "sogar zwei Dinge."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-notice-045",
+    "type": "observation",
+    "fragments": [
+      "Schauen Sie sich eine Tür an",
+      "oder die Idee einer Tür."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-notice-046",
+    "type": "observation",
+    "fragments": [
+      "Beachten Sie eines",
+      "das ist leicht abgenutzt."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-notice-047",
+    "type": "observation",
+    "fragments": [
+      "Finden Sie die nächstgelegene Tageslichtquelle,",
+      "falls es einen gibt."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-notice-048",
+    "type": "observation",
+    "fragments": [
+      "Schauen Sie noch einmal,",
+      "Wählen Sie dann ein Detail aus, das Sie behalten möchten."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-notice-049",
+    "type": "observation",
+    "fragments": [
+      "Suchen Sie sich eine kühle Oberfläche",
+      "und lassen Sie Ihre Aufmerksamkeit darauf ruhen, nicht auf Ihre Hand."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-notice-050",
+    "type": "observation",
+    "fragments": [
+      "Wenn es ein Fenster gibt,",
+      "Beachten Sie, was es umrahmt.",
+      "Wenn nicht, achten Sie auf eine Wand."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-notice-051",
+    "type": "observation",
+    "fragments": [
+      "Suchen Sie nach einer geraden Linie",
+      "das ist kein Brief."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-notice-052",
+    "type": "observation",
+    "fragments": [
+      "Achten Sie darauf, ob das Licht gleichmäßig ist",
+      "oder an einem Ort versammelt."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-notice-053",
+    "type": "observation",
+    "fragments": [
+      "Finden Sie etwas, das gefaltet wurde",
+      "oder könnte gefaltet werden."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-notice-054",
+    "type": "observation",
+    "fragments": [
+      "Ein weit entferntes Geräusch, falls es eines gibt.",
+      "Sie müssen es nicht benennen."
+    ],
+    "topics": [
+      "quiet"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-notice-055",
+    "type": "observation",
+    "fragments": [
+      "Schauen Sie auf den Boden",
+      "als wäre es eine Landschaft."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-notice-056",
+    "type": "observation",
+    "fragments": [
+      "Finde ein rundes Ding.",
+      "Sogar ein Knopf zählt."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-notice-057",
+    "type": "observation",
+    "fragments": [
+      "Beachten Sie einen Temperaturunterschied",
+      "in Ihrer Nähe – ein kühlerer Rand, ein wärmerer Fleck."
+    ],
+    "topics": [
+      "home"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-notice-058",
+    "type": "observation",
+    "fragments": [
+      "Wenn Sie draußen sehen können,",
+      "Finden Sie die einfachste Form, die Sie sich vorstellen können.",
+      "Wenn nicht, suchen Sie sich eines drinnen."
+    ],
+    "topics": [
+      "sky"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-notice-059",
+    "type": "observation",
+    "fragments": [
+      "Behalten Sie ein Detail von der letzten Minute.",
+      "Du brauchst es nicht zu sagen."
+    ],
+    "topics": [
+      "quiet"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-notice-060",
+    "type": "observation",
+    "fragments": [
+      "Finden Sie etwas, das Sie nicht versuchen",
+      "angeschaut werden."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  }
+]

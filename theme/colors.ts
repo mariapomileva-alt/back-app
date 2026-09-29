@@ -1,3 +1,5 @@
+import type { AppTheme } from '@/theme/themes';
+
 export const brand = {
   warmIvory: '#F3EDE1',
   warmSurface: '#F8F4EC',
@@ -7,6 +9,7 @@ export const brand = {
   forestGreen: '#315E4D',
   sage: '#6D9773',
   paleSage: '#D7E0D5',
+  softSage: '#17483A',
   blueSage: '#9EB6B0',
   camel: '#BB8A52',
   mutedGold: '#C9A65B',
@@ -60,3 +63,10 @@ export function mixHex(base: string, tint: string, amount: number): string {
 
   return `#${channel(from.r, to.r)}${channel(from.g, to.g)}${channel(from.b, to.b)}`;
 }
+
+/** Unselected mode / secondary control labels — ~12% stronger than raw textSecondary. */
+export function secondaryControlLabelColor(theme: AppTheme): string {
+  return mixHex(theme.colors.textSecondary, theme.colors.text, 0.12);
+}
+
+export const SECONDARY_CONTROL_LABEL_OPACITY = 0.84;

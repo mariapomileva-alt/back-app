@@ -1,0 +1,1164 @@
+[
+  {
+    "id": "nl-words-001",
+    "type": "word",
+    "fragments": [
+      "MOS",
+      "Merk op hoe weinig het nodig heeft."
+    ],
+    "topics": [
+      "plants",
+      "forest"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-002",
+    "type": "word",
+    "fragments": [
+      "Deze.",
+      "LINNEN",
+      "Volg de lijn van de L."
+    ],
+    "topics": [
+      "room",
+      "cloth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-003",
+    "type": "word",
+    "fragments": [
+      "OLIFANT",
+      "Let alleen op de klinkers."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-004",
+    "type": "word",
+    "fragments": [
+      "Kijk naar dit woord.",
+      "RAAM",
+      "Tel de letters zonder ze een naam te geven."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-005",
+    "type": "word",
+    "fragments": [
+      "RUSTIG",
+      "Eerste brief.",
+      "Dan de laatste."
+    ],
+    "topics": [
+      "room",
+      "quiet"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-006",
+    "type": "word",
+    "fragments": [
+      "Een klein woord.",
+      "WOLK",
+      "Volg de curve van de C."
+    ],
+    "topics": [
+      "sky"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-007",
+    "type": "word",
+    "fragments": [
+      "Let op het gewicht van de O.",
+      "STEEN"
+    ],
+    "topics": [
+      "stone"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "choice",
+      "text": "Als je een jas of trui kunt zien, welke kleur heeft deze dan?",
+      "options": [
+        "blauw",
+        "zwart",
+        "een andere kleur"
+      ]
+    }
+  },
+  {
+    "id": "nl-words-008",
+    "type": "word",
+    "fragments": [
+      "RIVIER",
+      "Laat het zitten."
+    ],
+    "topics": [
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-009",
+    "type": "word",
+    "fragments": [
+      "AMBER",
+      "Let op de warme vorm van A."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-010",
+    "type": "word",
+    "fragments": [
+      "Deze.",
+      "VEERKRACHT",
+      "Laat je ogen rusten op de TH."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-011",
+    "type": "word",
+    "fragments": [
+      "WEI",
+      "Let alleen op de klinkers."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-012",
+    "type": "word",
+    "fragments": [
+      "Kijk naar dit woord.",
+      "ZILVER",
+      "Volg de S als deze draait."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-013",
+    "type": "word",
+    "fragments": [
+      "LANTAARN",
+      "Eerste brief.",
+      "Dan de laatste."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-014",
+    "type": "word",
+    "fragments": [
+      "Een klein woord.",
+      "KETEL",
+      "De dubbele T staat als een stille poort."
+    ],
+    "topics": [
+      "room",
+      "home"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-015",
+    "type": "word",
+    "fragments": [
+      "Merk op hoe V zich herhaalt en dan rust.",
+      "FLUEEL"
+    ],
+    "topics": [
+      "room",
+      "cloth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-016",
+    "type": "word",
+    "fragments": [
+      "PAPIER",
+      "Laat het zitten."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-017",
+    "type": "word",
+    "fragments": [
+      "HONING",
+      "Let alleen op de O."
+    ],
+    "topics": [
+      "plants",
+      "food"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-018",
+    "type": "word",
+    "fragments": [
+      "Deze.",
+      "DEKEN",
+      "Laat het woord zijn ruimte innemen."
+    ],
+    "topics": [
+      "room",
+      "home"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-019",
+    "type": "word",
+    "fragments": [
+      "TUIN",
+      "Let alleen op de klinkers."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-020",
+    "type": "word",
+    "fragments": [
+      "Kijk naar dit woord.",
+      "KAARS",
+      "Volg het woord één keer van links naar rechts."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-021",
+    "type": "word",
+    "fragments": [
+      "KNOP",
+      "Eerste brief.",
+      "Dan de laatste."
+    ],
+    "topics": [
+      "room",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-022",
+    "type": "word",
+    "fragments": [
+      "Een klein woord.",
+      "WILG",
+      "Let op de W-opening tweemaal."
+    ],
+    "topics": [
+      "plants",
+      "forest"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-023",
+    "type": "word",
+    "fragments": [
+      "Kijk naar de vorm, niet naar de betekenis.",
+      "MARMER"
+    ],
+    "topics": [
+      "stone"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-024",
+    "type": "word",
+    "fragments": [
+      "KATOEN",
+      "Laat het zitten."
+    ],
+    "topics": [
+      "room",
+      "cloth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-025",
+    "type": "word",
+    "fragments": [
+      "SCHOTEL",
+      "Let op de curve van S en C."
+    ],
+    "topics": [
+      "room",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-026",
+    "type": "word",
+    "fragments": [
+      "Deze.",
+      "ORANJE",
+      "Zoek de klinkers en laat de rest liggen."
+    ],
+    "topics": [
+      "plants",
+      "food"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-027",
+    "type": "word",
+    "fragments": [
+      "SPIEGEL",
+      "Let alleen op de klinkers."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-028",
+    "type": "word",
+    "fragments": [
+      "Kijk naar dit woord.",
+      "SCHELP",
+      "Merk op hoe klein het woord blijft."
+    ],
+    "topics": [
+      "coast"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-029",
+    "type": "word",
+    "fragments": [
+      "TAFEL",
+      "Eerste brief.",
+      "Dan de laatste."
+    ],
+    "topics": [
+      "room",
+      "home"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-030",
+    "type": "word",
+    "fragments": [
+      "Een klein woord.",
+      "BREEZE",
+      "Volg de dubbele E."
+    ],
+    "topics": [
+      "sky",
+      "weather"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-031",
+    "type": "word",
+    "fragments": [
+      "Let op de ronde O.",
+      "ZAK"
+    ],
+    "topics": [
+      "room",
+      "cloth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-032",
+    "type": "word",
+    "fragments": [
+      "DRAAD",
+      "Laat het zitten."
+    ],
+    "topics": [
+      "paper",
+      "cloth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-033",
+    "type": "word",
+    "fragments": [
+      "LADDER",
+      "De dubbele D is een rustig paar."
+    ],
+    "topics": [
+      "room",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-034",
+    "type": "word",
+    "fragments": [
+      "Deze.",
+      "GORDIJN",
+      "Laat het woord blijven. Je hoeft het niet vast te houden."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-035",
+    "type": "word",
+    "fragments": [
+      "KIEZELSTEEN",
+      "Let alleen op de klinkers."
+    ],
+    "topics": [
+      "stone",
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-036",
+    "type": "word",
+    "fragments": [
+      "Kijk naar dit woord.",
+      "GEEL",
+      "Volg Y terwijl deze zich vertakt."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "environment",
+      "text": "Zoek nu iets geels om je heen."
+    }
+  },
+  {
+    "id": "nl-words-037",
+    "type": "word",
+    "fragments": [
+      "WOUD",
+      "Eerste brief.",
+      "Dan de laatste."
+    ],
+    "topics": [
+      "forest"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-038",
+    "type": "word",
+    "fragments": [
+      "Een klein woord.",
+      "KUSSEN",
+      "Zachte letters. Dubbele L."
+    ],
+    "topics": [
+      "room",
+      "home"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-039",
+    "type": "word",
+    "fragments": [
+      "Tel de letters alleen met je ogen.",
+      "ESDOORN"
+    ],
+    "topics": [
+      "plants",
+      "forest"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-040",
+    "type": "word",
+    "fragments": [
+      "SCHADUW",
+      "Laat het zitten."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-041",
+    "type": "word",
+    "fragments": [
+      "KERAMIEK",
+      "Volg de C aan beide uiteinden."
+    ],
+    "topics": [
+      "room",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-042",
+    "type": "word",
+    "fragments": [
+      "Deze.",
+      "NAALD",
+      "Dubbele E in het midden."
+    ],
+    "topics": [
+      "plants",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-043",
+    "type": "word",
+    "fragments": [
+      "MAND",
+      "Let alleen op de klinkers."
+    ],
+    "topics": [
+      "room",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-044",
+    "type": "word",
+    "fragments": [
+      "Kijk naar dit woord.",
+      "REGEN",
+      "Vier brieven. Veel."
+    ],
+    "topics": [
+      "sky",
+      "weather"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-045",
+    "type": "word",
+    "fragments": [
+      "WOL",
+      "Eerste brief.",
+      "Dan de laatste."
+    ],
+    "topics": [
+      "room",
+      "cloth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-046",
+    "type": "word",
+    "fragments": [
+      "Een klein woord.",
+      "GEMBER",
+      "Zachte G tweemaal."
+    ],
+    "topics": [
+      "plants",
+      "food"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-047",
+    "type": "word",
+    "fragments": [
+      "Laat je ogen rusten op TH.",
+      "LAP"
+    ],
+    "topics": [
+      "room",
+      "cloth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-048",
+    "type": "word",
+    "fragments": [
+      "BASILICUM",
+      "Laat het zitten."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-049",
+    "type": "word",
+    "fragments": [
+      "DRIFT",
+      "Het woord is al in beweging. Je kunt blijven."
+    ],
+    "topics": [
+      "coast",
+      "water"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "choice",
+      "text": "Zit, sta of ergens daar tussenin?",
+      "options": [
+        "zitten",
+        "staan",
+        "tussenin"
+      ]
+    }
+  },
+  {
+    "id": "nl-words-050",
+    "type": "word",
+    "fragments": [
+      "Deze.",
+      "DEKBED",
+      "Merk op dat Q en U samen reizen."
+    ],
+    "topics": [
+      "room",
+      "home"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-051",
+    "type": "word",
+    "fragments": [
+      "STEEK",
+      "Let alleen op de klinkers."
+    ],
+    "topics": [
+      "room",
+      "cloth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-052",
+    "type": "word",
+    "fragments": [
+      "Kijk naar dit woord.",
+      "OCEAAN",
+      "Drie klinkers wachten."
+    ],
+    "topics": [
+      "coast",
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-053",
+    "type": "word",
+    "fragments": [
+      "CITROEN",
+      "Eerste brief.",
+      "Dan de laatste."
+    ],
+    "topics": [
+      "plants",
+      "food"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-054",
+    "type": "word",
+    "fragments": [
+      "Een klein woord.",
+      "TAK",
+      "Beschouw de A als een klein dak."
+    ],
+    "topics": [
+      "forest",
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-055",
+    "type": "word",
+    "fragments": [
+      "Vijf letters, rond aan het begin.",
+      "PAREL"
+    ],
+    "topics": [
+      "coast"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-056",
+    "type": "word",
+    "fragments": [
+      "NEDERIG",
+      "Laat het zitten."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-057",
+    "type": "word",
+    "fragments": [
+      "KOPER",
+      "Volg de dubbele P."
+    ],
+    "topics": [
+      "light",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-058",
+    "type": "word",
+    "fragments": [
+      "Deze.",
+      "IVOOR",
+      "Let alleen op de klinkers."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-059",
+    "type": "word",
+    "fragments": [
+      "GLAS",
+      "Let alleen op de klinkers."
+    ],
+    "topics": [
+      "room",
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-060",
+    "type": "word",
+    "fragments": [
+      "Kijk naar dit woord.",
+      "TIJM",
+      "Een klein woord. Laat het zitten."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-061",
+    "type": "word",
+    "fragments": [
+      "NIKKEL",
+      "Eerste brief.",
+      "Dan de laatste."
+    ],
+    "topics": [
+      "stone",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-062",
+    "type": "word",
+    "fragments": [
+      "Een klein woord.",
+      "MEEL",
+      "Volg het woord één keer, langzaam."
+    ],
+    "topics": [
+      "room",
+      "food"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-063",
+    "type": "word",
+    "fragments": [
+      "Let op de C en vervolgens op de rest van de vorm.",
+      "CEDER"
+    ],
+    "topics": [
+      "forest"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-064",
+    "type": "word",
+    "fragments": [
+      "PRUIM",
+      "Laat het zitten."
+    ],
+    "topics": [
+      "plants",
+      "food"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-065",
+    "type": "word",
+    "fragments": [
+      "GETIJDE",
+      "In. Uit. De brieven blijven."
+    ],
+    "topics": [
+      "coast",
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-066",
+    "type": "word",
+    "fragments": [
+      "SCHUIM",
+      "Merk op hoe licht de letters aanvoelen."
+    ],
+    "topics": [
+      "coast"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-067",
+    "type": "word",
+    "fragments": [
+      "Eén woord.",
+      "PIJNBOOM",
+      "Let op de ik die in het midden staat."
+    ],
+    "topics": [
+      "forest"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-068",
+    "type": "word",
+    "fragments": [
+      "NEVEL",
+      "Volg H naar de rest."
+    ],
+    "topics": [
+      "sky"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-069",
+    "type": "word",
+    "fragments": [
+      "PANEEL",
+      "Eerste brief.",
+      "Dan de laatste."
+    ],
+    "topics": [
+      "room",
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-070",
+    "type": "word",
+    "fragments": [
+      "INKT",
+      "Drie brieven. Veel."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-071",
+    "type": "word",
+    "fragments": [
+      "VLIEGER",
+      "Let alleen op de klinkers."
+    ],
+    "topics": [
+      "sky"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-072",
+    "type": "word",
+    "fragments": [
+      "GRANIET",
+      "Let op het gewicht van het woord."
+    ],
+    "topics": [
+      "stone"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-073",
+    "type": "word",
+    "fragments": [
+      "LAMP",
+      "Laat het zitten."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-074",
+    "type": "word",
+    "fragments": [
+      "VORST",
+      "Zacht aan de randen."
+    ],
+    "topics": [
+      "sky",
+      "weather"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-075",
+    "type": "word",
+    "fragments": [
+      "ROMP",
+      "Eerste brief.",
+      "Dan de laatste."
+    ],
+    "topics": [
+      "coast"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "environment",
+      "text": "Als een kleur uit het laatste woord in de buurt is, rust er dan even op uit."
+    }
+  },
+  {
+    "id": "nl-words-076",
+    "type": "word",
+    "fragments": [
+      "KLIMOP",
+      "Drie letters klimmen."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-077",
+    "type": "word",
+    "fragments": [
+      "SCHEMERING",
+      "Let alleen op de U."
+    ],
+    "topics": [
+      "light",
+      "night"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-078",
+    "type": "word",
+    "fragments": [
+      "TWIJN",
+      "Let op de W in het midden."
+    ],
+    "topics": [
+      "paper",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-079",
+    "type": "word",
+    "fragments": [
+      "KADE",
+      "Laat het zitten."
+    ],
+    "topics": [
+      "coast"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-080",
+    "type": "word",
+    "fragments": [
+      "EMBER",
+      "Laat het zitten."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-081",
+    "type": "word",
+    "fragments": [
+      "RUGGENGRAAT",
+      "Eerste brief. Dan de laatste."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-082",
+    "type": "word",
+    "fragments": [
+      "MOSY",
+      "Laat het zitten."
+    ],
+    "topics": [
+      "forest",
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-083",
+    "type": "word",
+    "fragments": [
+      "MEEUW",
+      "Laat het zitten."
+    ],
+    "topics": [
+      "coast"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-084",
+    "type": "word",
+    "fragments": [
+      "LATEI",
+      "Een rustig architectonisch woord."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-085",
+    "type": "word",
+    "fragments": [
+      "CIDER",
+      "Laat het zitten."
+    ],
+    "topics": [
+      "plants",
+      "food"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-086",
+    "type": "word",
+    "fragments": [
+      "VUURSTEEN",
+      "Laat het zitten."
+    ],
+    "topics": [
+      "stone"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-087",
+    "type": "word",
+    "fragments": [
+      "DISTEL",
+      "Laat het zitten."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-words-088",
+    "type": "word",
+    "fragments": [
+      "HAVEN",
+      "Laat het zitten."
+    ],
+    "topics": [
+      "coast"
+    ],
+    "difficulty": 1
+  }
+]

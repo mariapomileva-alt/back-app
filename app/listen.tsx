@@ -1,37 +1,149 @@
 import { useEffect, useMemo, useState } from 'react';
-import { Pressable, StyleSheet, View } from 'react-native';
+import { Platform, StyleSheet, View, useWindowDimensions } from 'react-native';
 import Svg, { Path } from 'react-native-svg';
 
 import { AccessiblePressable } from '@/components/accessibility/AccessiblePressable';
 import { VolumeBar } from '@/components/audio/VolumeBar';
-import { ListenMark } from '@/components/marks';
+import { ListenSoundPicker } from '@/components/listen/ListenSoundPicker';
+import { ListenSoundVisual } from '@/components/listen/ListenSoundVisual';
 import { ActiveSessionScreen } from '@/components/session/ActiveSessionScreen';
-import { AppText } from '@/components/typography/AppText';
-import { defaultListenSoundId, listenSounds, type ListenSoundId } from '@/features/listen/sounds';
+import {
+  LISTEN_ART_MIN_HEIGHT,
+  LISTEN_CONTROLS_MIN_HEIGHT,
+  listenArtMinHeightForScreen,
+  listenLayoutGaps,
+} from '@/features/listen/artworkLayout';
+import { listenEffectiveVolume } from '@/features/listen/playback';
+import {
+  defaultListenSoundId,
+  isListenSoundId,
+  listenPickerSounds,
+  listenSounds,
+  type ListenSoundId,
+} from '@/features/listen/sounds';
 import { useLoopingSound } from '@/hooks/useLoopingSound';
+import { usePaidToolGate } from '@/hooks/usePaidToolGate';
 import { useTheme } from '@/hooks/useTheme';
 import { t } from '@/locales/i18n';
-import { serif } from '@/theme/fonts';
-import { radius } from '@/theme/radius';
+import {
+  DEFAULT_SOUND_VOLUME,
+  loadLastSoundId,
+  loadSoundMuted,
+  loadSoundVolume,
+  peekLastSoundId,
+  saveLastSoundId,
+  saveSoundVolume,
+} from '@/storage/preferences';
 import { spacing, touch } from '@/theme/spacing';
-import { loadLastSoundId, saveLastSoundId } from '@/storage/preferences';
+
+const PLAY_SIZE = 64;
+const PLAY_ICON = 24;
+const TRANSPORT_ICON = 24;
+
+function initialSoundId(): ListenSoundId {
+  const cached = peekLastSoundId();
+  if (cached && isListenSoundId(cached)) {
+    if (cached === 'melody') {
+      return defaultListenSoundId;
+    }
+    return cached;
+  }
+  return defaultListenSoundId;
+}
+
+function normalizePickerSound(id: ListenSoundId): ListenSoundId {
+  if (id === 'melody') {
+    return defaultListenSoundId;
+  }
+  return listenPickerSounds.some((item) => item.id === id) ? id : defaultListenSoundId;
+}
 
 export default function ListenScreen() {
+  usePaidToolGate();
   const { theme } = useTheme();
-  const [soundId, setSoundId] = useState<ListenSoundId>(defaultListenSoundId);
+  const { width: windowWidth, height: windowHeight, fontScale } = useWindowDimensions();
+  const compact = windowHeight < 740;
+  const shortScreen = windowHeight < 620;
+  const needsScroll = shortScreen || fontScale > 1.85;
+  const gaps = listenLayoutGaps(compact || shortScreen);
+  const [chromeHeights, setChromeHeights] = useState({ stage: 0, controls: 0 });
+  const [soundId, setSoundId] = useState<ListenSoundId>(initialSoundId);
+  const [soundMuted, setSoundMuted] = useState(false);
+  const [soundVolume, setSoundVolume] = useState(DEFAULT_SOUND_VOLUME);
 
   useEffect(() => {
-    void loadLastSoundId().then((stored) => {
-      if (listenSounds.some((item) => item.id === stored)) {
-        setSoundId(stored as ListenSoundId);
-      }
-    });
+    let cancelled = false;
+    void Promise.all([loadLastSoundId(), loadSoundMuted(), loadSoundVolume()]).then(
+      ([stored, muted, volume]) => {
+        if (cancelled) {
+          return;
+        }
+        if (isListenSoundId(stored)) {
+          setSoundId(normalizePickerSound(stored));
+        }
+        setSoundMuted(muted);
+        setSoundVolume(volume);
+      },
+    );
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   const selected = useMemo(() => {
     return listenSounds.find((item) => item.id === soundId) ?? listenSounds[0]!;
   }, [soundId]);
-  const audio = useLoopingSound({ source: selected.audio });
+
+  const artMinHeight = useMemo(
+    () => listenArtMinHeightForScreen(windowHeight, compact || shortScreen),
+    [compact, shortScreen, windowHeight],
+  );
+
+  const artDisplayHeight = useMemo(() => {
+    const { stage, controls } = chromeHeights;
+    const controlsBlock = Math.max(controls, LISTEN_CONTROLS_MIN_HEIGHT);
+    if (stage > 0) {
+      const fitted = Math.floor(stage - controlsBlock - gaps.artToPlayback);
+      return Math.max(LISTEN_ART_MIN_HEIGHT, fitted);
+    }
+    return artMinHeight;
+  }, [artMinHeight, chromeHeights, gaps.artToPlayback]);
+
+  const playbackVolume = listenEffectiveVolume(soundVolume, soundId);
+  const nativeAutoPlay = Platform.OS !== 'web';
+  const audio = useLoopingSound({
+    source: selected.audio,
+    enabled: true,
+    autoPlay: nativeAutoPlay,
+    webRequiresUserGesture: true,
+    initialMuted: soundMuted,
+    initialVolume: playbackVolume,
+    lockScreenTitle: t(selected.nameKey),
+  });
+
+  useEffect(() => {
+    if (soundMuted) {
+      return;
+    }
+    audio.setVolume(listenEffectiveVolume(soundVolume, soundId));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [soundId, soundMuted, soundVolume]);
+
+  useEffect(() => {
+    if (soundMuted) {
+      return;
+    }
+    audio.replay();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selected.audio]);
+
+  const soundName = t(selected.nameKey);
+  const awaitingGesture = audio.playback === 'blocked';
+  const playPauseA11y = awaitingGesture
+    ? `${t('common.play')}. ${t('listen.tapToPlay')}`
+    : audio.isPlaying
+      ? `${t('common.pause')}. ${soundName}`
+      : `${t('common.play')}. ${soundName}`;
 
   const select = (id: ListenSoundId) => {
     setSoundId(id);
@@ -39,132 +151,199 @@ export default function ListenScreen() {
   };
 
   const shift = (delta: number) => {
-    const index = listenSounds.findIndex((item) => item.id === soundId);
-    const next = listenSounds[(index + delta + listenSounds.length) % listenSounds.length];
+    const index = listenPickerSounds.findIndex((item) => item.id === soundId);
+    const resolvedIndex = index >= 0 ? index : 0;
+    const next = listenPickerSounds[(resolvedIndex + delta + listenPickerSounds.length) % listenPickerSounds.length];
     if (next) {
       select(next.id);
     }
   };
 
+  const onPlayPress = () => {
+    if (audio.isPlaying) {
+      audio.pause();
+      return;
+    }
+    if (Platform.OS === 'web') {
+      audio.play(true);
+      return;
+    }
+    audio.toggle();
+  };
+
+  const transportGap = windowWidth < 360 ? spacing.md : spacing.lg;
+
   return (
-    <ActiveSessionScreen tool="listen" title={t('home.tools.listen')}>
-      <AppText style={styles.name}>{t(selected.nameKey)}</AppText>
-      <View style={styles.mark} accessible={false} importantForAccessibility="no">
-        <ListenMark />
-      </View>
-      <View style={styles.transport}>
-        <AccessiblePressable
-          accessibilityRole="button"
-          accessibilityLabel={t('listen.previous')}
-          onPress={() => shift(-1)}
-          style={styles.side}
+    <ActiveSessionScreen
+      tool="listen"
+      title={t('home.tools.listen')}
+      scroll={needsScroll}
+      backClosesSession
+      extraActions={
+        <ListenSoundPicker soundId={normalizePickerSound(soundId)} onSelect={select} />
+      }
+    >
+      <View
+        style={[styles.stage, needsScroll && styles.stageScroll]}
+        onLayout={(event) => {
+          const next = event.nativeEvent.layout.height;
+          setChromeHeights((current) =>
+            Math.abs(current.stage - next) < 1 ? current : { ...current, stage: next },
+          );
+        }}
+      >
+        <View
+          style={[
+            styles.artSlot,
+            { height: artDisplayHeight, marginBottom: gaps.artToPlayback },
+          ]}
+          accessibilityLabel={soundName}
+          accessibilityRole="image"
         >
-          <Svg width={22} height={22} viewBox="0 0 22 22">
-            <Path d="M13.5 6L8 11l5.5 5" stroke={theme.colors.icon} strokeWidth={1.5} fill="none" strokeLinecap="round" />
-          </Svg>
-        </AccessiblePressable>
-        <AccessiblePressable
-          accessibilityRole="button"
-          accessibilityLabel={audio.isPlaying ? t('common.pause') : t('common.play')}
-          onPress={audio.toggle}
-          style={[styles.play, { backgroundColor: theme.colors.buttonBackground }]}
+          <ListenSoundVisual sound={selected} fill height={artDisplayHeight} />
+        </View>
+
+        <View
+          style={[styles.controlsDock, needsScroll ? { marginTop: spacing.md } : null]}
+          onLayout={(event) => {
+            const next = event.nativeEvent.layout.height;
+            setChromeHeights((current) =>
+              Math.abs(current.controls - next) < 1 ? current : { ...current, controls: next },
+            );
+          }}
         >
-          {audio.isPlaying ? (
-            <Svg width={28} height={28} viewBox="0 0 28 28">
-              <Path d="M9 7h3.4v14H9zM15.6 7H19v14h-3.4z" fill={theme.colors.buttonText} />
-            </Svg>
-          ) : (
-            <Svg width={28} height={28} viewBox="0 0 28 28">
-              <Path d="M10 7.2v13.6L21 14 10 7.2z" fill={theme.colors.buttonText} />
-            </Svg>
-          )}
-        </AccessiblePressable>
-        <AccessiblePressable
-          accessibilityRole="button"
-          accessibilityLabel={t('listen.next')}
-          onPress={() => shift(1)}
-          style={styles.side}
-        >
-          <Svg width={22} height={22} viewBox="0 0 22 22">
-            <Path d="M8.5 6L14 11l-5.5 5" stroke={theme.colors.icon} strokeWidth={1.5} fill="none" strokeLinecap="round" />
-          </Svg>
-        </AccessiblePressable>
-      </View>
-      <VolumeBar value={audio.volume} onChange={audio.setVolume} />
-      <View style={styles.selector}>
-        {listenSounds.map((item) => {
-          const active = item.id === soundId;
-          return (
-            <Pressable
-              key={item.id}
+        <View style={[styles.playback, { gap: gaps.playbackToVolume }]}>
+          <View style={[styles.transport, { gap: transportGap }]}>
+            <AccessiblePressable
               accessibilityRole="button"
-              accessibilityState={{ selected: active }}
-              accessibilityLabel={t(item.nameKey)}
-              onPress={() => select(item.id)}
+              accessibilityLabel={t('listen.previous')}
+              onPress={() => shift(-1)}
+              style={[styles.side, styles.sideQuiet]}
+            >
+              <Svg width={TRANSPORT_ICON} height={TRANSPORT_ICON} viewBox="0 0 22 22">
+                <Path
+                  d="M13.5 6L8 11l5.5 5"
+                  stroke={theme.colors.icon}
+                  strokeWidth={1.5}
+                  fill="none"
+                  strokeLinecap="round"
+                />
+              </Svg>
+            </AccessiblePressable>
+            <AccessiblePressable
+              accessibilityRole="button"
+              accessibilityLabel={playPauseA11y}
+              accessibilityState={{ selected: audio.isPlaying }}
+              onPress={onPlayPress}
               style={[
-                styles.chip,
+                styles.play,
                 {
-                  backgroundColor: active ? theme.colors.surfaceSecondary : 'transparent',
-                  borderColor: active ? theme.colors.primary : theme.colors.border,
+                  backgroundColor: theme.colors.buttonBackground,
+                  borderColor: audio.isPlaying ? theme.colors.primary : 'transparent',
                 },
               ]}
             >
-              <AppText variant="secondary">{t(item.nameKey)}</AppText>
-            </Pressable>
-          );
-        })}
+              {audio.isPlaying ? (
+                <Svg width={PLAY_ICON} height={PLAY_ICON} viewBox="0 0 28 28">
+                  <Path d="M9 7h3.4v14H9zM15.6 7H19v14h-3.4z" fill={theme.colors.buttonText} />
+                </Svg>
+              ) : (
+                <Svg width={PLAY_ICON} height={PLAY_ICON} viewBox="0 0 28 28">
+                  <Path d="M10 7.2v13.6L21 14 10 7.2z" fill={theme.colors.buttonText} />
+                </Svg>
+              )}
+            </AccessiblePressable>
+            <AccessiblePressable
+              accessibilityRole="button"
+              accessibilityLabel={t('listen.next')}
+              onPress={() => shift(1)}
+              style={[styles.side, styles.sideQuiet]}
+            >
+              <Svg width={TRANSPORT_ICON} height={TRANSPORT_ICON} viewBox="0 0 22 22">
+                <Path
+                  d="M8.5 6L14 11l-5.5 5"
+                  stroke={theme.colors.icon}
+                  strokeWidth={1.5}
+                  fill="none"
+                  strokeLinecap="round"
+                />
+              </Svg>
+            </AccessiblePressable>
+          </View>
+          <VolumeBar
+            listenLayout
+            value={soundVolume}
+            onChange={(value) => {
+              setSoundVolume(value);
+              audio.setVolume(listenEffectiveVolume(value, soundId));
+              void saveSoundVolume(value);
+            }}
+          />
+        </View>
+        </View>
       </View>
     </ActiveSessionScreen>
   );
 }
 
 const styles = StyleSheet.create({
-  name: {
-    fontFamily: serif,
-    fontSize: 34,
-    lineHeight: 40,
-    fontWeight: '500',
-    marginBottom: spacing.sm,
-  },
-  mark: {
-    width: 220,
-    height: 120,
+  stage: {
+    flex: 1,
+    minHeight: 0,
+    width: '100%',
+    maxWidth: 460,
     alignSelf: 'center',
-    marginVertical: spacing.md,
+    alignItems: 'center',
+    overflow: 'visible',
+  },
+  stageScroll: {
+    flexGrow: 1,
+    flex: undefined,
+    minHeight: undefined,
+    paddingBottom: spacing.md,
+  },
+  artSlot: {
+    width: '100%',
+    alignItems: 'center',
+    justifyContent: 'center',
+    overflow: 'hidden',
+    paddingHorizontal: 0,
+    flexShrink: 1,
+  },
+  controlsDock: {
+    flexShrink: 0,
+    width: '100%',
+    alignItems: 'stretch',
+    zIndex: 1,
+    paddingBottom: spacing.xs,
+  },
+  playback: {
+    flexShrink: 0,
+    width: '100%',
+    maxWidth: '100%',
   },
   transport: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    gap: spacing.lg,
-    marginTop: spacing.md,
-    marginBottom: spacing.sm,
   },
   play: {
-    width: 72,
-    height: 72,
-    borderRadius: radius.circle,
+    width: PLAY_SIZE,
+    height: PLAY_SIZE,
+    borderRadius: PLAY_SIZE / 2,
     alignItems: 'center',
     justifyContent: 'center',
+    borderWidth: 2,
   },
   side: {
     width: touch.min,
     height: touch.min,
     alignItems: 'center',
     justifyContent: 'center',
+    opacity: 0.88,
   },
-  selector: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    gap: spacing.sm,
-    marginTop: spacing.md,
-  },
-  chip: {
-    minHeight: 44,
-    paddingHorizontal: spacing.md,
-    borderRadius: radius.circle,
-    borderWidth: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+  sideQuiet: Platform.select({
+    web: { outlineWidth: 0, boxShadow: 'none' } as object,
+    default: {},
+  }),
 });

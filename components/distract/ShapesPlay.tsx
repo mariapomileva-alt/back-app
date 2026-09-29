@@ -1,7 +1,8 @@
 import { useMemo, useState } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, useWindowDimensions } from 'react-native';
 
 import { AccessiblePressable } from '@/components/accessibility/AccessiblePressable';
+import { hideFromA11yTree } from '@/components/accessibility/hideFromA11y';
 import { AppText } from '@/components/typography/AppText';
 import { createShapeDeck, drawShapeRound, type ShapeColorKey } from '@/features/distract/shapes';
 import { useHaptics } from '@/hooks/useHaptics';
@@ -13,9 +14,19 @@ import { spacing, touch } from '@/theme/spacing';
 
 import { ShapeGlyph } from './ShapeGlyph';
 
-export function ShapesPlay() {
+const TARGET_SIZE = 118;
+const OPTION_SIZE = 46;
+
+type Props = {
+  onCorrectAdvance?: () => void;
+};
+
+export function ShapesPlay({ onCorrectAdvance }: Props) {
   const { theme } = useTheme();
   const haptics = useHaptics();
+  const { height, fontScale } = useWindowDimensions();
+  const compact = height < 700 || fontScale > 1.35;
+  const targetSize = compact ? 92 : TARGET_SIZE;
   const [deck, setDeck] = useState(createShapeDeck);
   const [faded, setFaded] = useState<number | null>(null);
   const round = deck.round;
@@ -33,19 +44,22 @@ export function ShapesPlay() {
 
   return (
     <View style={styles.root}>
-      <AppText style={styles.instruction}>{t('distract.shapes.instruction')}</AppText>
-      <View style={styles.target} accessible={false} importantForAccessibility="no">
-        <ShapeGlyph shape={round.shape} color={palette[round.colorKey]} size={118} />
+      <AppText style={[styles.instruction, compact && styles.instructionCompact]}>
+        {t('distract.shapes.instruction')}
+      </AppText>
+      <View {...hideFromA11yTree()} style={[styles.target, compact && styles.targetCompact]}>
+        <ShapeGlyph shape={round.shape} color={palette[round.colorKey]} size={targetSize} />
       </View>
       <View style={styles.options}>
         {round.options.map((option, index) => (
           <AccessiblePressable
             key={`${option.shape}-${option.colorKey}-${index}-${round.shape}-${round.colorKey}`}
             accessibilityRole="button"
-            accessibilityLabel={t(`distract.shapes.names.${option.shape}`)}
+            accessibilityLabel={`${t(`distract.shapes.colors.${option.colorKey}`)} ${t(`distract.shapes.names.${option.shape}`)}`}
             onPress={() => {
               if (option.correct) {
                 haptics.light();
+                onCorrectAdvance?.();
                 setFaded(null);
                 setDeck((current) => drawShapeRound(current.remaining, current.round));
                 return;
@@ -63,7 +77,7 @@ export function ShapesPlay() {
               },
             ]}
           >
-            <ShapeGlyph shape={option.shape} color={palette[option.colorKey]} size={46} />
+            <ShapeGlyph shape={option.shape} color={palette[option.colorKey]} size={OPTION_SIZE} />
           </AccessiblePressable>
         ))}
       </View>
@@ -73,7 +87,7 @@ export function ShapesPlay() {
 
 const styles = StyleSheet.create({
   root: {
-    flex: 1,
+    flexGrow: 1,
   },
   instruction: {
     fontFamily: serif,
@@ -83,16 +97,27 @@ const styles = StyleSheet.create({
     marginBottom: spacing.lg,
     maxWidth: 320,
   },
+  instructionCompact: {
+    fontSize: 24,
+    lineHeight: 30,
+    marginBottom: spacing.md,
+  },
   target: {
     minHeight: 150,
     alignItems: 'center',
     justifyContent: 'center',
     marginBottom: spacing.lg,
+    overflow: 'visible',
+  },
+  targetCompact: {
+    minHeight: 108,
+    marginBottom: spacing.md,
   },
   options: {
     flexDirection: 'row',
     flexWrap: 'wrap',
     gap: spacing.sm,
+    overflow: 'visible',
   },
   option: {
     minHeight: touch.comfortable + 20,
@@ -100,5 +125,6 @@ const styles = StyleSheet.create({
     borderWidth: StyleSheet.hairlineWidth,
     alignItems: 'center',
     justifyContent: 'center',
+    overflow: 'visible',
   },
 });

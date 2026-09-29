@@ -1,0 +1,57 @@
+import { Pressable, StyleSheet } from 'react-native';
+
+import { MoveExerciseIllustration } from '@/components/move/MoveIllustration';
+import { ToolSessionEntryFade } from '@/components/session/ToolSessionEntryFade';
+import type { MovePhase, MoveSequenceId, MoveStepId } from '@/features/move/steps';
+import { useReduceMotion } from '@/hooks/useReduceMotion';
+
+type Props = {
+  activityId: MoveSequenceId;
+  stepId: MoveStepId;
+  phase: MovePhase;
+  instruction: string;
+  hint: string;
+  onPressIn: () => void;
+  onPressOut: () => void;
+};
+
+export function MoveStage({
+  activityId,
+  stepId,
+  phase,
+  instruction,
+  hint,
+  onPressIn,
+  onPressOut,
+}: Props) {
+  const reduceMotion = useReduceMotion();
+
+  return (
+    <Pressable
+      accessibilityRole="button"
+      accessibilityLabel={instruction}
+      accessibilityHint={hint}
+      onPressIn={onPressIn}
+      onPressOut={onPressOut}
+      style={styles.press}
+    >
+      <ToolSessionEntryFade>
+        <MoveExerciseIllustration
+          activityId={activityId}
+          stepId={stepId}
+          phase={phase}
+          reduceMotion={reduceMotion}
+        />
+      </ToolSessionEntryFade>
+    </Pressable>
+  );
+}
+
+const styles = StyleSheet.create({
+  press: {
+    width: '100%',
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexShrink: 0,
+  },
+});

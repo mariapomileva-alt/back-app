@@ -1,22 +1,19 @@
-Back app icon — production export checklist
+Back app icon — production export
 
-Master artwork is not yet present. Current PNGs in assets/images are development placeholders.
+Approved master (archive): assets/_brand/icon-master.png
+  Aug 21 tactile forest disc — Maria approved this look.
+Flattened copy: assets/brand/app-icon-master.png
+Copied to: assets/images/icon.png and store/ios/icon-1024.png
+Splash mark: assets/images/splash-icon.png (same object on ivory, no wordmark)
+Android: assets/images/android-icon-{foreground,background,monochrome}.png
 
-Intended design:
-- Warm ivory background (#F4F0E6)
-- One deep forest green tactile circle, centered (#174E43)
-- Very subtle inner sage highlight
-- Extremely soft shadow
-- No text, letter, or symbol
+Design:
+- Ivory field #F3EDE1, opaque RGB, no transparency, no rounded corners (Apple applies the mask)
+- ONE centered tactile breathing object, matte forest, soft upper-left light, slight contact shadow
+- No word Back, no letter B, no gold underline, no symbols
+- Do not replace with a flat disc or a newly generated sphere
+- Regenerate wordmarks/lockups with: python3 scripts/export-brand-assets.py
+  (that script copies the approved master; it does not invent a new icon)
 
-Required exports before store release:
-- 1024 x 1024 App Store icon (iOS)
-- 1024 x 1024 Play Store icon (Android)
-- iOS AppIcon set: 20, 29, 40, 58, 60, 76, 80, 87, 120, 152, 167, 180, 1024
-- Android adaptive icon foreground 1024 x 1024 (circle inside 66% safe zone)
-- Android adaptive icon background 1024 x 1024 (#F4F0E6)
-- Android monochrome 1024 x 1024
-- Web favicon 48 x 48 and 32 x 32
-- Splash mark ~88 pt on ivory
-
-TODO: replace placeholder PNGs with production artwork from the master file.
+App Store Connect upload: store/ios/icon-1024.png
+Verified: 1024×1024 PNG, RGB, hasAlpha=no

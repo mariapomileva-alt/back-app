@@ -1,0 +1,767 @@
+[
+  {
+    "id": "de-observe-001",
+    "type": "observation",
+    "fragments": [
+      "Beobachten Sie den Raum",
+      "zwischen diesen Buchstaben.",
+      "ruhig"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-observe-002",
+    "type": "observation",
+    "fragments": [
+      "Folge diesem Wort",
+      "wie es sich beruhigt.",
+      "Trotzdem"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-observe-003",
+    "type": "observation",
+    "fragments": [
+      "Lassen Sie Ihre Augen ruhen",
+      "auf das letzte Wort",
+      "einen Moment länger.",
+      "Trotzdem"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-observe-004",
+    "type": "observation",
+    "fragments": [
+      "Beachten Sie die Form",
+      "des Buchstabens S.",
+      "S"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-observe-005",
+    "type": "observation",
+    "fragments": [
+      "Sehen Sie, wie O",
+      "ist ein kleiner geschlossener Raum.",
+      "O"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-observe-006",
+    "type": "observation",
+    "fragments": [
+      "Das Wort hier kann bleiben.",
+      "Sie müssen es nicht festhalten.",
+      "Hier"
+    ],
+    "topics": [
+      "ruhig"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-observe-007",
+    "type": "observation",
+    "fragments": [
+      "Schauen Sie sich die hohe Linie an",
+      "im Buchstaben L.",
+      "L"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-observe-008",
+    "type": "observation",
+    "fragments": [
+      "Eine Pause ist auch",
+      "eine Art Satz.",
+      "Pause"
+    ],
+    "topics": [
+      "ruhig"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-observe-009",
+    "type": "observation",
+    "fragments": [
+      "Beobachten Sie, wie das Wort langsam erscheint",
+      "ohne es zu beeilen.",
+      "langsam"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-observe-010",
+    "type": "observation",
+    "fragments": [
+      "Der Buchstabe M",
+      "hat zwei kleine Spitzen.",
+      "M"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-observe-011",
+    "type": "observation",
+    "fragments": [
+      "Lassen Sie diese Textzeile",
+      "ausreichen.",
+      "genug"
+    ],
+    "topics": [
+      "ruhig"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-observe-012",
+    "type": "observation",
+    "fragments": [
+      "Beachten Sie, wie T",
+      "steht wie ein kleiner Tisch.",
+      "T"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-observe-013",
+    "type": "observation",
+    "fragments": [
+      "Folgen Sie der Kurve",
+      "im Buchstaben C.",
+      "C"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-observe-014",
+    "type": "observation",
+    "fragments": [
+      "Das Wort jetzt",
+      "geht schon.",
+      "Jetzt"
+    ],
+    "topics": [
+      "time"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-observe-015",
+    "type": "observation",
+    "fragments": [
+      "Achten Sie auf die Lücke",
+      "unter dem Buchstaben E.",
+      "E"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-observe-016",
+    "type": "observation",
+    "fragments": [
+      "Eine Periode ist sehr klein",
+      "Vollständiges Aufhören des Suchens.",
+      "."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-observe-017",
+    "type": "observation",
+    "fragments": [
+      "Lass das Wort weich werden",
+      "Lass dir Zeit.",
+      "weich"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-observe-018",
+    "type": "observation",
+    "fragments": [
+      "Der Buchstabe W",
+      "ist zwei Täler.",
+      "W"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-observe-019",
+    "type": "observation",
+    "fragments": [
+      "Bleiben Sie bei diesem Satz",
+      "bis es sich vollständig anfühlt."
+    ],
+    "topics": [
+      "ruhig"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-observe-020",
+    "type": "observation",
+    "fragments": [
+      "Beachten Sie den offenen Raum",
+      "innerhalb des Buchstabens A.",
+      "A"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-observe-021",
+    "type": "observation",
+    "fragments": [
+      "Das Wort ruhig hat fünf Buchstaben",
+      "und Platz um sie herum.",
+      "ruhig"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-observe-022",
+    "type": "observation",
+    "fragments": [
+      "Beobachten Sie, wie das Wort verweilt",
+      "ohne mehr hinzuzufügen.",
+      "verweilen"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-observe-023",
+    "type": "observation",
+    "fragments": [
+      "Der Buchstabe I",
+      "ist eine einzelne dünne Präsenz.",
+      "ICH"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-observe-024",
+    "type": "observation",
+    "fragments": [
+      "Lassen Sie Ihren Blick wandern",
+      "vom ersten Wort an",
+      "bis zuletzt."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-observe-025",
+    "type": "observation",
+    "fragments": [
+      "Das Komma ist ein kleiner Atemzug",
+      "auf der Linie."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-observe-026",
+    "type": "observation",
+    "fragments": [
+      "Beachten Sie, wie H",
+      "hat ein kleines Fenster.",
+      "H"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-observe-027",
+    "type": "observation",
+    "fragments": [
+      "Das Wort kann immer noch bedeuten, sich nicht zu bewegen,",
+      "oder sogar so.",
+      "Trotzdem"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-observe-028",
+    "type": "observation",
+    "fragments": [
+      "Beobachten Sie, wie dieser Satz ankommt,",
+      "dann ruhe dich aus."
+    ],
+    "topics": [
+      "ruhig"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-observe-029",
+    "type": "observation",
+    "fragments": [
+      "Der Buchstabe U",
+      "ist eine kleine Schüssel.",
+      "U"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-observe-030",
+    "type": "observation",
+    "fragments": [
+      "Lass das Wort sanft sitzen",
+      "in der Mitte des Bildschirms.",
+      "sanft"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-observe-031",
+    "type": "observation",
+    "fragments": [
+      "Beachten Sie den Fuß",
+      "des Buchstabens R.",
+      "R"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-observe-032",
+    "type": "observation",
+    "fragments": [
+      "Eine leere Zeile",
+      "ist auch lesbar."
+    ],
+    "topics": [
+      "ruhig"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-observe-033",
+    "type": "observation",
+    "fragments": [
+      "Das Wort Papier hat zwei Ps",
+      "nebeneinander stehen.",
+      "Papier"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-observe-034",
+    "type": "observation",
+    "fragments": [
+      "Achten Sie auf den Buchstaben Y",
+      "als kleine Gabel.",
+      "Y"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-observe-035",
+    "type": "observation",
+    "fragments": [
+      "Lass das langsam aussehen,",
+      "keine Aufgabe."
+    ],
+    "topics": [
+      "ruhig"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-observe-036",
+    "type": "observation",
+    "fragments": [
+      "Der Buchstabe N",
+      "ist ein Tor mit einer Diagonale.",
+      "N"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-observe-037",
+    "type": "observation",
+    "fragments": [
+      "Beachten Sie die Rundheit",
+      "im Wort Mond.",
+      "Mond"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-observe-038",
+    "type": "observation",
+    "fragments": [
+      "Der Wortraum enthält",
+      "ein anderes Zimmer: oo.",
+      "Zimmer"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-observe-039",
+    "type": "observation",
+    "fragments": [
+      "Bleiben Sie beim letzten Satz",
+      "nachdem es erscheint."
+    ],
+    "topics": [
+      "ruhig"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-observe-040",
+    "type": "observation",
+    "fragments": [
+      "Der Buchstabe B",
+      "verfügt über zwei kleine umzäunte Gärten.",
+      "B"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-observe-041",
+    "type": "observation",
+    "fragments": [
+      "Lass das Wort öffnen",
+      "Tu nur, was es sagt.",
+      "offen"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-observe-042",
+    "type": "observation",
+    "fragments": [
+      "Beobachten Sie, wie Serifenbuchstaben geschrieben werden",
+      "habe winzige Füße."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-observe-043",
+    "type": "observation",
+    "fragments": [
+      "Das Wort Blatt besteht aus vier Buchstaben",
+      "und eine Form.",
+      "Blatt"
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-observe-044",
+    "type": "observation",
+    "fragments": [
+      "Beachten Sie die Stille",
+      "nach einem kurzen Satz."
+    ],
+    "topics": [
+      "ruhig"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-observe-045",
+    "type": "observation",
+    "fragments": [
+      "Der Buchstabe G schließt fast,",
+      "dann nicht.",
+      "G"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-observe-046",
+    "type": "observation",
+    "fragments": [
+      "Lass das Wort hier ein Ort sein,",
+      "keine Forderung.",
+      "Hier"
+    ],
+    "topics": [
+      "ruhig"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-observe-047",
+    "type": "observation",
+    "fragments": [
+      "Achten Sie auf das Wort Dämmerung",
+      "als ob es leicht wäre, wegzugehen.",
+      "Dämmerung"
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-observe-048",
+    "type": "observation",
+    "fragments": [
+      "Diese Zeile kann enden.",
+      "Du kannst noch eine Sekunde bleiben."
+    ],
+    "topics": [
+      "ruhig"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-observe-049",
+    "type": "observation",
+    "fragments": [
+      "Lass dieses Wort genügen.",
+      "ERNTE"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-observe-050",
+    "type": "observation",
+    "fragments": [
+      "Ein Buchstabe ist ein Tor.",
+      "H"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-observe-051",
+    "type": "observation",
+    "fragments": [
+      "Lesen Sie dies einmal.",
+      "Dann lassen Sie Ihren Blick daran vorbei ruhen."
+    ],
+    "topics": [
+      "ruhig"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-observe-052",
+    "type": "observation",
+    "fragments": [
+      "BREIT",
+      "Beachten Sie, wie das Wort Platz einnimmt."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-observe-053",
+    "type": "observation",
+    "fragments": [
+      "Das letzte Wort kann klein sein.",
+      "OK"
+    ],
+    "topics": [
+      "ruhig"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-observe-054",
+    "type": "observation",
+    "fragments": [
+      "Folgen Sie den Absteigern –",
+      "die Buchstaben, die unter die Linie fallen.",
+      "g p y"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-observe-055",
+    "type": "observation",
+    "fragments": [
+      "Halten Sie diese Form.",
+      "O",
+      "Ein Raum ohne Möbel."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-observe-056",
+    "type": "observation",
+    "fragments": [
+      "Eine längere Schlange kann dennoch sanft sein:",
+      "Das Licht an der Wand ist nur Besuch."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-observe-057",
+    "type": "observation",
+    "fragments": [
+      "Zähle nichts.",
+      "Schauen Sie sich das Wort einfach an, bis es zu Markierungen wird.",
+      "FLUSS"
+    ],
+    "topics": [
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-observe-058",
+    "type": "observation",
+    "fragments": [
+      "Weich.",
+      "Dann das Wort darunter.",
+      "LEINEN"
+    ],
+    "topics": [
+      "cloth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-observe-059",
+    "type": "observation",
+    "fragments": [
+      "Lassen Sie das nächste Wort kommen, ohne sich darauf vorzubereiten.",
+      "STEIN"
+    ],
+    "topics": [
+      "stone"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "de-observe-060",
+    "type": "observation",
+    "fragments": [
+      "Bleiben Sie beim Komma,",
+      "wenn es einen gibt,",
+      "oder in der Pause, wo ein Komma stehen könnte."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  }
+]

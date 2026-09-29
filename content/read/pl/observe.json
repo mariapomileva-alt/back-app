@@ -1,0 +1,767 @@
+[
+  {
+    "id": "pl-observe-001",
+    "type": "observation",
+    "fragments": [
+      "Obserwuj przestrzeń",
+      "pomiędzy tymi literami.",
+      "cichy"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pl-observe-002",
+    "type": "observation",
+    "fragments": [
+      "Podążaj za tym słowem",
+      "jak się uspokoi.",
+      "Nadal"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pl-observe-003",
+    "type": "observation",
+    "fragments": [
+      "Daj odpocząć oczom",
+      "na ostatnim słowie",
+      "chwilę dłużej.",
+      "Nadal"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pl-observe-004",
+    "type": "observation",
+    "fragments": [
+      "Zwróć uwagę na kształt",
+      "z litery S.",
+      "S"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pl-observe-005",
+    "type": "observation",
+    "fragments": [
+      "Zobacz, jak O",
+      "to mały, zamknięty pokój.",
+      "O"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pl-observe-006",
+    "type": "observation",
+    "fragments": [
+      "Słowo tutaj może pozostać.",
+      "Nie musisz go trzymać.",
+      "Tutaj"
+    ],
+    "topics": [
+      "cichy"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pl-observe-007",
+    "type": "observation",
+    "fragments": [
+      "Spójrz na wysoką linię",
+      "w literze l.",
+      "L"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pl-observe-008",
+    "type": "observation",
+    "fragments": [
+      "Pauza też jest",
+      "rodzaj zdania.",
+      "pauza"
+    ],
+    "topics": [
+      "cichy"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pl-observe-009",
+    "type": "observation",
+    "fragments": [
+      "Zobacz, jak pojawia się słowo powolne",
+      "bez pośpiechu.",
+      "powolny"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pl-observe-010",
+    "type": "observation",
+    "fragments": [
+      "List m",
+      "ma dwa małe szczyty.",
+      "M"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pl-observe-011",
+    "type": "observation",
+    "fragments": [
+      "Niech ta linia tekstu",
+      "wystarczać.",
+      "wystarczająco"
+    ],
+    "topics": [
+      "cichy"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pl-observe-012",
+    "type": "observation",
+    "fragments": [
+      "Zwróć uwagę, jak T",
+      "stoi jak mały stolik.",
+      "T"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pl-observe-013",
+    "type": "observation",
+    "fragments": [
+      "Podążaj za krzywą",
+      "w literze C.",
+      "C"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pl-observe-014",
+    "type": "observation",
+    "fragments": [
+      "Słowo teraz",
+      "już odchodzi.",
+      "Teraz"
+    ],
+    "topics": [
+      "time"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pl-observe-015",
+    "type": "observation",
+    "fragments": [
+      "Obserwuj lukę",
+      "pod literą E.",
+      "mi"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pl-observe-016",
+    "type": "observation",
+    "fragments": [
+      "Okres jest bardzo krótki",
+      "koniec patrzenia.",
+      "."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pl-observe-017",
+    "type": "observation",
+    "fragments": [
+      "Niech słowo będzie miękkie",
+      "nie spiesz się.",
+      "miękki"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pl-observe-018",
+    "type": "observation",
+    "fragments": [
+      "List W",
+      "to dwie doliny.",
+      "W"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pl-observe-019",
+    "type": "observation",
+    "fragments": [
+      "Pozostań przy tym zdaniu",
+      "dopóki nie poczujesz, że jest kompletny."
+    ],
+    "topics": [
+      "cichy"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pl-observe-020",
+    "type": "observation",
+    "fragments": [
+      "Zwróć uwagę na otwartą przestrzeń",
+      "wewnątrz litery A.",
+      "A"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pl-observe-021",
+    "type": "observation",
+    "fragments": [
+      "Słowo cisza ma pięć liter",
+      "i pokój wokół nich.",
+      "cichy"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pl-observe-022",
+    "type": "observation",
+    "fragments": [
+      "Obserwuj, jak słowo się utrzymuje",
+      "bez dodawania kolejnych.",
+      "marudzić"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pl-observe-023",
+    "type": "observation",
+    "fragments": [
+      "List I",
+      "jest pojedynczą cienką obecnością.",
+      "I"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pl-observe-024",
+    "type": "observation",
+    "fragments": [
+      "Pozwól swojemu spojrzeniu podróżować",
+      "od pierwszego słowa",
+      "do ostatka."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pl-observe-025",
+    "type": "observation",
+    "fragments": [
+      "Przecinek to mały oddech",
+      "na linii."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pl-observe-026",
+    "type": "observation",
+    "fragments": [
+      "Zwróć uwagę, jak H",
+      "ma małe okienko.",
+      "H"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pl-observe-027",
+    "type": "observation",
+    "fragments": [
+      "Słowo nadal może oznaczać nie ruszanie się,",
+      "lub nawet tak.",
+      "Nadal"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pl-observe-028",
+    "type": "observation",
+    "fragments": [
+      "Zobacz, jak nadeszła ta fraza,",
+      "potem odpocznij."
+    ],
+    "topics": [
+      "cichy"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pl-observe-029",
+    "type": "observation",
+    "fragments": [
+      "Litera U",
+      "to mała miska.",
+      "U"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pl-observe-030",
+    "type": "observation",
+    "fragments": [
+      "Niech słowo „łagodny” usiądzie",
+      "na środku ekranu.",
+      "delikatny"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pl-observe-031",
+    "type": "observation",
+    "fragments": [
+      "Zwróć uwagę na stopę",
+      "z litery R.",
+      "R"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pl-observe-032",
+    "type": "observation",
+    "fragments": [
+      "Pusta linia",
+      "jest również czytelny."
+    ],
+    "topics": [
+      "cichy"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pl-observe-033",
+    "type": "observation",
+    "fragments": [
+      "Słowo papier ma dwa p",
+      "stojąc blisko siebie.",
+      "papier"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pl-observe-034",
+    "type": "observation",
+    "fragments": [
+      "Obejrzyj literę Y",
+      "jako mały widelec.",
+      "Y"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pl-observe-035",
+    "type": "observation",
+    "fragments": [
+      "Niech to będzie powolne spojrzenie,",
+      "nie jest to zadanie."
+    ],
+    "topics": [
+      "cichy"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pl-observe-036",
+    "type": "observation",
+    "fragments": [
+      "Litera N",
+      "jest bramą o przekątnej.",
+      "N"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pl-observe-037",
+    "type": "observation",
+    "fragments": [
+      "Zwróć uwagę na okrągłość",
+      "w słowie księżyc.",
+      "księżyc"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pl-observe-038",
+    "type": "observation",
+    "fragments": [
+      "Słowo pokój zawiera",
+      "inny pokój: oo.",
+      "pokój"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pl-observe-039",
+    "type": "observation",
+    "fragments": [
+      "Pozostań przy ostatnim zdaniu",
+      "po tym jak się pojawi."
+    ],
+    "topics": [
+      "cichy"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pl-observe-040",
+    "type": "observation",
+    "fragments": [
+      "Litera B",
+      "ma dwa małe ogrodzone ogrody.",
+      "B"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pl-observe-041",
+    "type": "observation",
+    "fragments": [
+      "Niech słowo się otworzy",
+      "rób tylko to, co jest napisane.",
+      "Otwarte"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pl-observe-042",
+    "type": "observation",
+    "fragments": [
+      "Zobacz, jak litery szeryfowe",
+      "mieć małe stopy."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pl-observe-043",
+    "type": "observation",
+    "fragments": [
+      "Słowo liść składa się z czterech liter",
+      "i kształt.",
+      "liść"
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pl-observe-044",
+    "type": "observation",
+    "fragments": [
+      "Zwróć uwagę na ciszę",
+      "po krótkim zdaniu."
+    ],
+    "topics": [
+      "cichy"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pl-observe-045",
+    "type": "observation",
+    "fragments": [
+      "Litera G prawie się zamyka,",
+      "wtedy nie.",
+      "G"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pl-observe-046",
+    "type": "observation",
+    "fragments": [
+      "Niech słowo tutaj będzie miejscem,",
+      "nie żądanie.",
+      "Tutaj"
+    ],
+    "topics": [
+      "cichy"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pl-observe-047",
+    "type": "observation",
+    "fragments": [
+      "Zwróć uwagę na słowo zmierzch",
+      "jakby wychodziło światło.",
+      "zmierzch"
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pl-observe-048",
+    "type": "observation",
+    "fragments": [
+      "Ta linia może się zakończyć.",
+      "Możesz zostać jeszcze sekundę."
+    ],
+    "topics": [
+      "cichy"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pl-observe-049",
+    "type": "observation",
+    "fragments": [
+      "Niech to słowo wystarczy.",
+      "ZBIÓR"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pl-observe-050",
+    "type": "observation",
+    "fragments": [
+      "Jedna litera to brama.",
+      "H"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pl-observe-051",
+    "type": "observation",
+    "fragments": [
+      "Przeczytaj to raz.",
+      "Następnie pozwól swoim oczom odpocząć."
+    ],
+    "topics": [
+      "cichy"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pl-observe-052",
+    "type": "observation",
+    "fragments": [
+      "SZEROKI",
+      "Zwróć uwagę, jak słowo zajmuje przestrzeń."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pl-observe-053",
+    "type": "observation",
+    "fragments": [
+      "Ostatnie słowo może być małe.",
+      "OK"
+    ],
+    "topics": [
+      "cichy"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pl-observe-054",
+    "type": "observation",
+    "fragments": [
+      "Podążaj za zjazdami —",
+      "litery zanurzone poniżej linii.",
+      "g p y"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pl-observe-055",
+    "type": "observation",
+    "fragments": [
+      "Trzymaj ten kształt.",
+      "O",
+      "Pokój bez mebli."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pl-observe-056",
+    "type": "observation",
+    "fragments": [
+      "Dłuższa linia może być nadal delikatna:",
+      "światło na ścianie tylko odwiedza."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pl-observe-057",
+    "type": "observation",
+    "fragments": [
+      "Nie licz niczego.",
+      "Po prostu patrz na słowo, aż stanie się znakami.",
+      "RZEKA"
+    ],
+    "topics": [
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pl-observe-058",
+    "type": "observation",
+    "fragments": [
+      "Miękki.",
+      "Następnie słowo pod nim.",
+      "BIELIZNA"
+    ],
+    "topics": [
+      "cloth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pl-observe-059",
+    "type": "observation",
+    "fragments": [
+      "Niech nadejdzie następne słowo, nie przygotowując na nie twarzy.",
+      "KAMIEŃ"
+    ],
+    "topics": [
+      "stone"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pl-observe-060",
+    "type": "observation",
+    "fragments": [
+      "Trzymaj się przecinka,",
+      "jeśli jest jeden,",
+      "lub na pauzie, w której może znajdować się przecinek."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  }
+]

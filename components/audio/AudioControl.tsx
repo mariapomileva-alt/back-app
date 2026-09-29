@@ -2,6 +2,7 @@ import { StyleSheet, View } from 'react-native';
 import Svg, { Circle, Path } from 'react-native-svg';
 
 import { AccessiblePressable } from '@/components/accessibility/AccessiblePressable';
+import { SfxMuteButton } from '@/components/audio/SfxMuteButton';
 import { AppText } from '@/components/typography/AppText';
 import { useTheme } from '@/hooks/useTheme';
 import { t } from '@/locales/i18n';
@@ -13,6 +14,10 @@ type Props = {
   onPlayPause: () => void;
   onMute?: () => void;
   onReplay?: () => void;
+  onPrevious?: () => void;
+  onNext?: () => void;
+  activitySfxMuted?: boolean;
+  onActivitySfxMute?: () => void;
   elapsed?: string;
   layout?: 'row' | 'stack';
 };
@@ -23,6 +28,10 @@ export function AudioControl({
   onPlayPause,
   onMute,
   onReplay,
+  onPrevious,
+  onNext,
+  activitySfxMuted,
+  onActivitySfxMute,
   elapsed,
   layout = 'row',
 }: Props) {
@@ -34,6 +43,7 @@ export function AudioControl({
     <AccessiblePressable
       accessibilityRole="button"
       accessibilityLabel={isPlaying ? t('common.pause') : t('common.play')}
+      accessibilityState={{ selected: isPlaying }}
       onPress={onPlayPause}
       style={[styles.control, stacked && styles.stackControl]}
     >
@@ -48,6 +58,48 @@ export function AudioControl({
       )}
     </AccessiblePressable>
   );
+
+  const previous =
+    onPrevious && layout !== 'stack' ? (
+      <AccessiblePressable
+        accessibilityRole="button"
+        accessibilityLabel={t('ground.previous')}
+        accessibilityHint={t('ground.previousHint')}
+        onPress={onPrevious}
+        style={styles.control}
+      >
+        <Svg width={22} height={22} viewBox="0 0 22 22">
+          <Path
+            d="M13.5 6L8 11l5.5 5"
+            stroke={color}
+            strokeWidth={1.5}
+            fill="none"
+            strokeLinecap="round"
+          />
+        </Svg>
+      </AccessiblePressable>
+    ) : null;
+
+  const nextStep =
+    onNext && layout !== 'stack' ? (
+      <AccessiblePressable
+        accessibilityRole="button"
+        accessibilityLabel={t('ground.next')}
+        accessibilityHint={t('ground.nextHint')}
+        onPress={onNext}
+        style={styles.control}
+      >
+        <Svg width={22} height={22} viewBox="0 0 22 22">
+          <Path
+            d="M8.5 6L14 11l-5.5 5"
+            stroke={color}
+            strokeWidth={1.5}
+            fill="none"
+            strokeLinecap="round"
+          />
+        </Svg>
+      </AccessiblePressable>
+    ) : null;
 
   const replay = onReplay ? (
     <AccessiblePressable
@@ -68,6 +120,11 @@ export function AudioControl({
       </Svg>
     </AccessiblePressable>
   ) : null;
+
+  const activitySfx =
+    onActivitySfxMute && layout !== 'stack' ? (
+      <SfxMuteButton muted={activitySfxMuted ?? false} onPress={onActivitySfxMute} />
+    ) : null;
 
   const mute = onMute ? (
     <AccessiblePressable
@@ -111,8 +168,11 @@ export function AudioControl({
 
   return (
     <View style={styles.row}>
+      {previous}
       {replay}
       {playPause}
+      {nextStep}
+      {activitySfx}
       {mute}
     </View>
   );
@@ -136,6 +196,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   stackControl: {
-    height: 48,
+    minHeight: touch.min,
   },
 });

@@ -1,0 +1,767 @@
+[
+  {
+    "id": "ru-observe-001",
+    "type": "observation",
+    "fragments": [
+      "Следите за пространством",
+      "между этими буквами.",
+      "тихий"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-observe-002",
+    "type": "observation",
+    "fragments": [
+      "Следуй за этим словом",
+      "как решится.",
+      "все еще"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-observe-003",
+    "type": "observation",
+    "fragments": [
+      "Пусть ваши глаза отдохнут",
+      "на последнем слове",
+      "еще мгновение.",
+      "все еще"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-observe-004",
+    "type": "observation",
+    "fragments": [
+      "Обратите внимание на форму",
+      "буквы С.",
+      "С"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-observe-005",
+    "type": "observation",
+    "fragments": [
+      "Смотри, как О",
+      "представляет собой небольшую закрытую комнату.",
+      "О"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-observe-006",
+    "type": "observation",
+    "fragments": [
+      "Слово здесь может остаться.",
+      "Вам не обязательно его удерживать.",
+      "здесь"
+    ],
+    "topics": [
+      "тихий"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-observe-007",
+    "type": "observation",
+    "fragments": [
+      "Посмотрите на высокую линию",
+      "на букву Л.",
+      "л"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-observe-008",
+    "type": "observation",
+    "fragments": [
+      "Пауза тоже есть",
+      "своего рода приговор.",
+      "пауза"
+    ],
+    "topics": [
+      "тихий"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-observe-009",
+    "type": "observation",
+    "fragments": [
+      "Смотри, как появляется слово «медленно»",
+      "не торопясь.",
+      "медленный"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-observe-010",
+    "type": "observation",
+    "fragments": [
+      "Буква М",
+      "имеет два небольших пика.",
+      "М"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-observe-011",
+    "type": "observation",
+    "fragments": [
+      "Пусть эта строка текста",
+      "будет достаточно.",
+      "достаточно"
+    ],
+    "topics": [
+      "тихий"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-observe-012",
+    "type": "observation",
+    "fragments": [
+      "Обратите внимание, как Т",
+      "стоит как небольшой столик.",
+      "Т"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-observe-013",
+    "type": "observation",
+    "fragments": [
+      "Следуйте кривой",
+      "в букве С.",
+      "С"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-observe-014",
+    "type": "observation",
+    "fragments": [
+      "Слово сейчас",
+      "уже уходит.",
+      "сейчас"
+    ],
+    "topics": [
+      "time"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-observe-015",
+    "type": "observation",
+    "fragments": [
+      "Следите за разрывом",
+      "под буквой Е.",
+      "Э"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-observe-016",
+    "type": "observation",
+    "fragments": [
+      "Период очень маленький",
+      "полная остановка поиска.",
+      "."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-observe-017",
+    "type": "observation",
+    "fragments": [
+      "Пусть слово мягкое",
+      "не торопитесь.",
+      "мягкий"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-observe-018",
+    "type": "observation",
+    "fragments": [
+      "Буква В",
+      "это две долины.",
+      "Вт"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-observe-019",
+    "type": "observation",
+    "fragments": [
+      "Оставайся с этим предложением",
+      "пока он не почувствует себя завершенным."
+    ],
+    "topics": [
+      "тихий"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-observe-020",
+    "type": "observation",
+    "fragments": [
+      "Обратите внимание на открытое пространство",
+      "внутри буквы А.",
+      "А"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-observe-021",
+    "type": "observation",
+    "fragments": [
+      "В слове «тихо» пять букв.",
+      "и пространство вокруг них.",
+      "тихий"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-observe-022",
+    "type": "observation",
+    "fragments": [
+      "Смотри, как слово задерживается",
+      "не добавляя больше.",
+      "задерживаться"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-observe-023",
+    "type": "observation",
+    "fragments": [
+      "Письмо я",
+      "это единое тонкое присутствие.",
+      "я"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-observe-024",
+    "type": "observation",
+    "fragments": [
+      "Пусть ваш взгляд путешествует",
+      "с первого слова",
+      "до последнего."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-observe-025",
+    "type": "observation",
+    "fragments": [
+      "Запятая – это небольшой вздох",
+      "на линии."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-observe-026",
+    "type": "observation",
+    "fragments": [
+      "Обратите внимание, как Х",
+      "есть небольшое окно.",
+      "ЧАС"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-observe-027",
+    "type": "observation",
+    "fragments": [
+      "Слово все еще может означать неподвижность,",
+      "или даже так.",
+      "все еще"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-observe-028",
+    "type": "observation",
+    "fragments": [
+      "Смотри, как эта фраза прибывает,",
+      "потом отдохни."
+    ],
+    "topics": [
+      "тихий"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-observe-029",
+    "type": "observation",
+    "fragments": [
+      "Буква У",
+      "представляет собой небольшую миску.",
+      "ты"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-observe-030",
+    "type": "observation",
+    "fragments": [
+      "Пусть слово нежное сидит",
+      "в середине экрана.",
+      "нежный"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-observe-031",
+    "type": "observation",
+    "fragments": [
+      "Обратите внимание на ногу",
+      "буквы Р.",
+      "Р"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-observe-032",
+    "type": "observation",
+    "fragments": [
+      "Пустая строка",
+      "также читаем."
+    ],
+    "topics": [
+      "тихий"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-observe-033",
+    "type": "observation",
+    "fragments": [
+      "В слове «бумага» две буквы «п».",
+      "стоящие рядом друг с другом.",
+      "бумага"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-observe-034",
+    "type": "observation",
+    "fragments": [
+      "Следи за буквой Й",
+      "как маленькая вилка.",
+      "Да"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-observe-035",
+    "type": "observation",
+    "fragments": [
+      "Пусть это будет медленный взгляд,",
+      "не задача."
+    ],
+    "topics": [
+      "тихий"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-observe-036",
+    "type": "observation",
+    "fragments": [
+      "Буква Н",
+      "ворота с диагональю.",
+      "Н"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-observe-037",
+    "type": "observation",
+    "fragments": [
+      "Обратите внимание на округлость",
+      "в слове луна.",
+      "луна"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-observe-038",
+    "type": "observation",
+    "fragments": [
+      "Слово комната содержит",
+      "другая комната: оо.",
+      "комната"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-observe-039",
+    "type": "observation",
+    "fragments": [
+      "Оставайтесь с последней фразой",
+      "после того, как оно появится."
+    ],
+    "topics": [
+      "тихий"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-observe-040",
+    "type": "observation",
+    "fragments": [
+      "Буква Б",
+      "имеет два небольших огороженных сада.",
+      "Б"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-observe-041",
+    "type": "observation",
+    "fragments": [
+      "Пусть слово откроется",
+      "делай только то, что он говорит.",
+      "открыть"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-observe-042",
+    "type": "observation",
+    "fragments": [
+      "Посмотрите, как буквы с засечками",
+      "иметь крошечные ноги."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-observe-043",
+    "type": "observation",
+    "fragments": [
+      "Слово лист состоит из четырех букв.",
+      "и форма.",
+      "лист"
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-observe-044",
+    "type": "observation",
+    "fragments": [
+      "Обратите внимание на тишину",
+      "после короткого предложения."
+    ],
+    "topics": [
+      "тихий"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-observe-045",
+    "type": "observation",
+    "fragments": [
+      "Буква Г почти закрывается,",
+      "тогда нет.",
+      "Г"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-observe-046",
+    "type": "observation",
+    "fragments": [
+      "Пусть слово здесь будет местом,",
+      "не требование.",
+      "здесь"
+    ],
+    "topics": [
+      "тихий"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-observe-047",
+    "type": "observation",
+    "fragments": [
+      "Следи за словом сумерки",
+      "как будто свет уходит.",
+      "сумерки"
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-observe-048",
+    "type": "observation",
+    "fragments": [
+      "Эта линия может закончиться.",
+      "Ты можешь остаться еще на секунду."
+    ],
+    "topics": [
+      "тихий"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-observe-049",
+    "type": "observation",
+    "fragments": [
+      "Пусть этого слова будет достаточно.",
+      "УРОЖАЙ"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-observe-050",
+    "type": "observation",
+    "fragments": [
+      "Одна буква – это ворота.",
+      "ЧАС"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-observe-051",
+    "type": "observation",
+    "fragments": [
+      "Прочтите это один раз.",
+      "Затем позвольте своим глазам отдохнуть от этого."
+    ],
+    "topics": [
+      "тихий"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-observe-052",
+    "type": "observation",
+    "fragments": [
+      "ШИРОКИЙ",
+      "Обратите внимание, как слово занимает место."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-observe-053",
+    "type": "observation",
+    "fragments": [
+      "Последнее слово может быть небольшим.",
+      "хорошо"
+    ],
+    "topics": [
+      "тихий"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-observe-054",
+    "type": "observation",
+    "fragments": [
+      "Следуйте за спускающимися —",
+      "буквы, которые опускаются ниже линии.",
+      "г п р й"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-observe-055",
+    "type": "observation",
+    "fragments": [
+      "Держите эту форму.",
+      "О",
+      "Комната без мебели."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-observe-056",
+    "type": "observation",
+    "fragments": [
+      "Более длинная линия все еще может быть нежной:",
+      "свет на стене только визитный."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-observe-057",
+    "type": "observation",
+    "fragments": [
+      "Ничего не считать.",
+      "Просто смотрите на слово, пока оно не превратится в знаки.",
+      "РЕКА"
+    ],
+    "topics": [
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-observe-058",
+    "type": "observation",
+    "fragments": [
+      "Мягкий.",
+      "Затем слово под ним.",
+      "ШЕРСТЬ"
+    ],
+    "topics": [
+      "cloth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-observe-059",
+    "type": "observation",
+    "fragments": [
+      "Позвольте следующему слову произнести, не готовя к нему лицо.",
+      "КАМЕНЬ"
+    ],
+    "topics": [
+      "stone"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-observe-060",
+    "type": "observation",
+    "fragments": [
+      "Оставайся на запятой,",
+      "если он есть,",
+      "или на паузе, где может быть запятая."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  }
+]

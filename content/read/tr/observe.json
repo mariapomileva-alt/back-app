@@ -1,0 +1,767 @@
+[
+  {
+    "id": "tr-observe-001",
+    "type": "observation",
+    "fragments": [
+      "Alanı izle",
+      "bu harflerin arasında.",
+      "sessizlik"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-observe-002",
+    "type": "observation",
+    "fragments": [
+      "Bu sözü takip edin",
+      "yerleşirken.",
+      "Hala"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-observe-003",
+    "type": "observation",
+    "fragments": [
+      "Bırak gözlerin dinlensin",
+      "son kelimede",
+      "bir dakika daha.",
+      "Hala"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-observe-004",
+    "type": "observation",
+    "fragments": [
+      "Şekline dikkat edin",
+      "S harfi.",
+      "S"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-observe-005",
+    "type": "observation",
+    "fragments": [
+      "Nasıl olduğunu izle",
+      "is a small enclosed room.",
+      "O"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-observe-006",
+    "type": "observation",
+    "fragments": [
+      "Söz burada kalabilir.",
+      "Tutmanıza gerek yok.",
+      "Burada"
+    ],
+    "topics": [
+      "sessizlik"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-observe-007",
+    "type": "observation",
+    "fragments": [
+      "Uzun çizgiye bak",
+      "L harfinde.",
+      "L"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-observe-008",
+    "type": "observation",
+    "fragments": [
+      "Bir duraklama da",
+      "bir tür cümle.",
+      "duraklatma"
+    ],
+    "topics": [
+      "sessizlik"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-observe-009",
+    "type": "observation",
+    "fragments": [
+      "Yavaş kelimesinin görünmesini izleyin",
+      "acele etmeden.",
+      "yavaş"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-observe-010",
+    "type": "observation",
+    "fragments": [
+      "M harfi",
+      "iki küçük zirvesi vardır.",
+      "M"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-observe-011",
+    "type": "observation",
+    "fragments": [
+      "Bu metin satırının",
+      "yeterli ol.",
+      "yeterli"
+    ],
+    "topics": [
+      "sessizlik"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-observe-012",
+    "type": "observation",
+    "fragments": [
+      "Nasıl T olduğuna dikkat edin",
+      "küçük bir masa gibi duruyor.",
+      "T"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-observe-013",
+    "type": "observation",
+    "fragments": [
+      "Eğriyi takip et",
+      "C harfinde.",
+      "C"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-observe-014",
+    "type": "observation",
+    "fragments": [
+      "Şimdi kelime",
+      "zaten ayrılıyor.",
+      "Şimdi"
+    ],
+    "topics": [
+      "time"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-observe-015",
+    "type": "observation",
+    "fragments": [
+      "Boşluğu izle",
+      "E harfinin altında.",
+      "e"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-observe-016",
+    "type": "observation",
+    "fragments": [
+      "Bir dönem çok küçük bir",
+      "tam bakmayı bırak.",
+      "."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-observe-017",
+    "type": "observation",
+    "fragments": [
+      "Kelimenin yumuşak olmasına izin ver",
+      "zamanını al.",
+      "yumuşak"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-observe-018",
+    "type": "observation",
+    "fragments": [
+      "W harfi",
+      "iki vadidir.",
+      "W"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-observe-019",
+    "type": "observation",
+    "fragments": [
+      "Bu cümleyle kalın",
+      "tamamlandığını hissedene kadar."
+    ],
+    "topics": [
+      "sessizlik"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-observe-020",
+    "type": "observation",
+    "fragments": [
+      "Açık alana dikkat edin",
+      "A harfinin içinde.",
+      "A"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-observe-021",
+    "type": "observation",
+    "fragments": [
+      "Sessiz kelimesinin beş harfi var",
+      "ve etraflarında oda var.",
+      "sessizlik"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-observe-022",
+    "type": "observation",
+    "fragments": [
+      "Oyalanmak kelimesine dikkat et",
+      "daha fazlasını eklemeden.",
+      "oyalanmak"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-observe-023",
+    "type": "observation",
+    "fragments": [
+      "Ben harfi",
+      "tek ve ince bir varlıktır.",
+      "BEN"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-observe-024",
+    "type": "observation",
+    "fragments": [
+      "Bakışlarınızın seyahat etmesine izin verin",
+      "ilk kelimeden itibaren",
+      "sonuna kadar."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-observe-025",
+    "type": "observation",
+    "fragments": [
+      "Virgül küçük bir nefestir",
+      "hatta."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-observe-026",
+    "type": "observation",
+    "fragments": [
+      "H'nin nasıl olduğuna dikkat edin",
+      "küçük bir penceresi var.",
+      "H"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-observe-027",
+    "type": "observation",
+    "fragments": [
+      "Kelime hala hareket etmemek anlamına gelebilir,",
+      "hatta öyle bile.",
+      "Hala"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-observe-028",
+    "type": "observation",
+    "fragments": [
+      "Bu cümlenin gelişini izle,",
+      "sonra dinlenin."
+    ],
+    "topics": [
+      "sessizlik"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-observe-029",
+    "type": "observation",
+    "fragments": [
+      "U harfi",
+      "küçük bir kasedir.",
+      "sen"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-observe-030",
+    "type": "observation",
+    "fragments": [
+      "Nazik kelimesinin oturmasına izin verin",
+      "ekranın ortasında.",
+      "nazik"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-observe-031",
+    "type": "observation",
+    "fragments": [
+      "Ayağa dikkat edin",
+      "R harfinin",
+      "R"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-observe-032",
+    "type": "observation",
+    "fragments": [
+      "Boş bir satır",
+      "da okunabilir."
+    ],
+    "topics": [
+      "sessizlik"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-observe-033",
+    "type": "observation",
+    "fragments": [
+      "Kağıt kelimesinde iki p var",
+      "birbirine yakın duruyor.",
+      "kağıt"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-observe-034",
+    "type": "observation",
+    "fragments": [
+      "Y harfine dikkat edin",
+      "küçük bir çatal olarak.",
+      "e"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-observe-035",
+    "type": "observation",
+    "fragments": [
+      "Bu yavaş bir bakış olsun,",
+      "bir görev değil."
+    ],
+    "topics": [
+      "sessizlik"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-observe-036",
+    "type": "observation",
+    "fragments": [
+      "N harfi",
+      "diyagonal bir kapıdır.",
+      "N"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-observe-037",
+    "type": "observation",
+    "fragments": [
+      "Yuvarlaklığa dikkat edin",
+      "ay kelimesinde.",
+      "ay"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-observe-038",
+    "type": "observation",
+    "fragments": [
+      "Oda kelimesi şunları içerir:",
+      "başka bir oda: oo.",
+      "oda"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-observe-039",
+    "type": "observation",
+    "fragments": [
+      "Son cümleyle kalın",
+      "göründükten sonra."
+    ],
+    "topics": [
+      "sessizlik"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-observe-040",
+    "type": "observation",
+    "fragments": [
+      "B harfi",
+      "iki küçük kapalı bahçesi vardır.",
+      "B"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-observe-041",
+    "type": "observation",
+    "fragments": [
+      "Kelimenin açılmasına izin ver",
+      "sadece ne diyorsa onu yap.",
+      "açık"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-observe-042",
+    "type": "observation",
+    "fragments": [
+      "Serif harflerin nasıl olduğunu izleyin",
+      "minik ayakları var."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-observe-043",
+    "type": "observation",
+    "fragments": [
+      "Yaprak kelimesi dört harften oluşur",
+      "ve bir şekil.",
+      "yaprak"
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-observe-044",
+    "type": "observation",
+    "fragments": [
+      "Sessizliğe dikkat edin",
+      "kısa bir cümlenin ardından."
+    ],
+    "topics": [
+      "sessizlik"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-observe-045",
+    "type": "observation",
+    "fragments": [
+      "G harfi neredeyse kapanıyor,",
+      "o zaman yapmaz.",
+      "G"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-observe-046",
+    "type": "observation",
+    "fragments": [
+      "Buradaki kelime bir yer olsun,",
+      "bir talep değil.",
+      "Burada"
+    ],
+    "topics": [
+      "sessizlik"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-observe-047",
+    "type": "observation",
+    "fragments": [
+      "Alacakaranlık kelimesine dikkat edin",
+      "sanki ışık ayrılıyormuş gibi.",
+      "alacakaranlık"
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-observe-048",
+    "type": "observation",
+    "fragments": [
+      "Bu hat bitebilir.",
+      "Bir saniye daha kalabilirsin."
+    ],
+    "topics": [
+      "sessizlik"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-observe-049",
+    "type": "observation",
+    "fragments": [
+      "Bu söz yeter.",
+      "HASAT"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-observe-050",
+    "type": "observation",
+    "fragments": [
+      "Bir harf bir kapıdır.",
+      "H"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-observe-051",
+    "type": "observation",
+    "fragments": [
+      "Bunu bir kez okuyun.",
+      "Daha sonra gözlerinizin üzerinden geçmesine izin verin."
+    ],
+    "topics": [
+      "sessizlik"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-observe-052",
+    "type": "observation",
+    "fragments": [
+      "GENİŞ",
+      "Kelimenin nasıl yer kapladığına dikkat edin."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-observe-053",
+    "type": "observation",
+    "fragments": [
+      "Son kelime küçük olabilir.",
+      "Tamam"
+    ],
+    "topics": [
+      "sessizlik"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-observe-054",
+    "type": "observation",
+    "fragments": [
+      "İnenleri takip edin —",
+      "çizginin altına inen harfler.",
+      "g p y"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-observe-055",
+    "type": "observation",
+    "fragments": [
+      "Bu şekli koruyun.",
+      "O",
+      "Hiçbir mobilyası olmayan bir oda."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-observe-056",
+    "type": "observation",
+    "fragments": [
+      "Daha uzun bir çizgi hala yumuşak olabilir:",
+      "duvardaki ışık sadece ziyaret ediyor."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-observe-057",
+    "type": "observation",
+    "fragments": [
+      "Hiçbir şeyi sayma.",
+      "İşaret haline gelene kadar kelimeye bakın.",
+      "NEHİR"
+    ],
+    "topics": [
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-observe-058",
+    "type": "observation",
+    "fragments": [
+      "Yumuşak.",
+      "Daha sonra altındaki kelime.",
+      "KETEN"
+    ],
+    "topics": [
+      "cloth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-observe-059",
+    "type": "observation",
+    "fragments": [
+      "Bir sonraki kelime ona yüz hazırlamadan gelsin.",
+      "TAŞ"
+    ],
+    "topics": [
+      "stone"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-observe-060",
+    "type": "observation",
+    "fragments": [
+      "Virgülde kal,",
+      "eğer biri varsa,",
+      "veya virgülün olabileceği duraklamada."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  }
+]

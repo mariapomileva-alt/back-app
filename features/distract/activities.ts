@@ -11,8 +11,3 @@ export function isDistractActivityId(value: string | null | undefined): value is
 export function distractActivityHref(id: DistractActivityId): Href {
   return `/distract/${id}`;
 }
-
-export function wantsDistractChooser(value: string | string[] | undefined): boolean {
-  const raw = Array.isArray(value) ? value[0] : value;
-  return raw === '1' || raw === 'true';
-}

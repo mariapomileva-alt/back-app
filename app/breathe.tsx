@@ -1,12 +1,15 @@
 import { useEffect, useState } from 'react';
-import { StyleSheet, View, useWindowDimensions } from 'react-native';
+import { Pressable, StyleSheet, useWindowDimensions } from 'react-native';
 
 import { BreathingCircle } from '@/components/breathe/BreathingCircle';
+import { BreatheSfxMuteButton } from '@/components/breathe/BreatheSfxMuteButton';
 import { PatternPicker } from '@/components/breathe/PatternPicker';
 import { TextButton } from '@/components/buttons/TextButton';
 import { ActiveSessionScreen } from '@/components/session/ActiveSessionScreen';
-import { AppText } from '@/components/typography/AppText';
+import { SessionChoiceSheet } from '@/components/session/SessionChoiceSheet';
+import { CrossfadeInstructionText } from '@/components/typography/CrossfadeInstructionText';
 import {
+  breathPatterns,
   cueKeyForPhase,
   defaultBreathPatternId,
   getBreathPattern,
@@ -14,24 +17,44 @@ import {
   type BreathPatternId,
 } from '@/features/breathe/patterns';
 import { useBreathCycle } from '@/features/breathe/useBreathCycle';
+import { useBreatheAmbient } from '@/hooks/useBreatheAmbient';
+import { usePaidToolGate } from '@/hooks/usePaidToolGate';
 import { useReduceMotion } from '@/hooks/useReduceMotion';
 import { t } from '@/locales/i18n';
 import { loadLastBreathPattern, saveLastBreathPattern } from '@/storage/preferences';
 import { serif } from '@/theme/fonts';
 import { spacing } from '@/theme/spacing';
 
-const REST_RATIO = 0.58;
-const GROW_SCALE = 1.12;
-const REDUCE_GROW_SCALE = 1.03;
+// User-approved orb: 180 rest → 320 open. Do not shrink, height-cap for “compact”,
+// or replace with scale-only / Reduce-Motion-as-default. Size via width/height.
+const REST_SIZE = 180;
+const OPEN_SIZE = 320;
+const REDUCE_OPEN_SIZE = 280;
 
 export default function BreatheScreen() {
+  usePaidToolGate();
   const reduceMotion = useReduceMotion();
-  const { width } = useWindowDimensions();
+  const { width, height, fontScale } = useWindowDimensions();
+  const compact = height < 700 || fontScale > 1.35;
   const [patternId, setPatternId] = useState<BreathPatternId>(defaultBreathPatternId);
+  const [chooserOpen, setChooserOpen] = useState(false);
   const pattern = getBreathPattern(patternId);
-  const growScale = reduceMotion ? REDUCE_GROW_SCALE : GROW_SCALE;
-  const restSize = Math.min(width * REST_RATIO, 268);
-  const { phase, scale } = useBreathCycle(pattern, growScale);
+  const restSize = Math.min(REST_SIZE, Math.round(width * 0.48));
+  const openCap = Math.max(
+    restSize + 100,
+    Math.min(reduceMotion ? REDUCE_OPEN_SIZE : OPEN_SIZE, Math.round(width * 0.84)),
+  );
+  // Keep the orb layout box below the header on short viewports (web hit-testing overlaps otherwise).
+  const stageBudget = Math.max(restSize + 48, height - (compact ? 288 : 320));
+  const openSize = Math.min(openCap, Math.round(stageBudget * 0.92));
+  const { phase, openness } = useBreathCycle(pattern);
+  const breatheAmbient = useBreatheAmbient({
+    openness,
+    sessionPaused: chooserOpen,
+    reduceMotion,
+  });
+  const { unlockFromUserGesture, muted: breatheSfxMuted, toggleMute: toggleBreatheSfxMute } =
+    breatheAmbient;
   const cue = t(cueKeyForPhase(phase));
   const patternName = t(pattern.nameKey);
 
@@ -50,47 +73,107 @@ export default function BreatheScreen() {
   const selectPattern = (id: BreathPatternId) => {
     setPatternId(id);
     void saveLastBreathPattern(id);
+    setChooserOpen(false);
   };
 
+  const openChooser = () => setChooserOpen(true);
+
   return (
-    <ActiveSessionScreen
-      tool="breathe"
-      title={t('home.tools.breathe')}
-      extraActions={({ trySomethingElse }) => (
-        <>
-          <PatternPicker selectedId={patternId} onSelect={selectPattern} />
-          <TextButton label={t('exercise.breatheUncomfortable')} onPress={trySomethingElse} />
-        </>
-      )}
-    >
-      <View style={styles.stage}>
-        <BreathingCircle
-          restSize={restSize}
-          maxScale={growScale}
-          scale={scale}
-          reduceMotion={reduceMotion}
-          accessibilityLabel={t('breathe.circle')}
-        />
-        <AppText
-          variant="instruction"
-          accessibilityLiveRegion="polite"
-          accessibilityLabel={`${cue}. ${patternName}`}
-          style={styles.cue}
-        >
-          {cue}
-        </AppText>
-      </View>
-    </ActiveSessionScreen>
+    <>
+      <ActiveSessionScreen
+        tool="breathe"
+        scroll={false}
+        title={t('home.tools.breathe')}
+        right={
+          <BreatheSfxMuteButton
+            muted={breatheSfxMuted}
+            onPress={() => {
+              unlockFromUserGesture();
+              toggleBreatheSfxMute();
+            }}
+          />
+        }
+        onTryAnother={openChooser}
+        tryAnotherHint={t('breathe.tryAnotherHint')}
+        backClosesSession
+        backNavigates={chooserOpen}
+        onBack={chooserOpen ? () => setChooserOpen(false) : undefined}
+        extraActions={({ trySomethingElse }) => (
+          <>
+            <PatternPicker
+              selectedId={patternId}
+              onSelect={(id) => {
+                unlockFromUserGesture();
+                selectPattern(id);
+              }}
+            />
+            <TextButton label={t('exercise.breatheUncomfortable')} onPress={trySomethingElse} />
+          </>
+        )}
+      >
+        {(controls) => (
+          <>
+            <Pressable
+              accessibilityRole="none"
+              importantForAccessibility="no-hide-descendants"
+              onPress={unlockFromUserGesture}
+              style={[styles.stage, compact && styles.stageCompact]}
+              pointerEvents="box-none"
+            >
+              <BreathingCircle
+                restSize={restSize}
+                openSize={openSize}
+                openness={openness}
+                reduceMotion={reduceMotion}
+                accessibilityLabel={t('breathe.circle')}
+              />
+              <CrossfadeInstructionText
+                contentKey={`${patternId}-${phase}`}
+                variant="instruction"
+                accessibilityLiveRegion="polite"
+                accessibilityLabel={`${cue}. ${patternName}`}
+                style={styles.cue}
+                minHeight={36}
+              >
+                {cue}
+              </CrossfadeInstructionText>
+            </Pressable>
+            <SessionChoiceSheet
+              visible={chooserOpen}
+              title={t('breathe.menu')}
+              selectedId={patternId}
+              options={breathPatterns.map((item) => ({
+                id: item.id,
+                label: t(item.nameKey),
+              }))}
+              onSelect={(id) => {
+                if (isBreathPatternId(id)) {
+                  selectPattern(id);
+                }
+              }}
+              onDismiss={() => setChooserOpen(false)}
+            />
+          </>
+        )}
+      </ActiveSessionScreen>
+    </>
   );
 }
 
 const styles = StyleSheet.create({
   stage: {
-    flexGrow: 1,
+    flex: 1,
+    minHeight: 0,
     alignItems: 'center',
     justifyContent: 'center',
-    paddingVertical: spacing.md,
-    gap: spacing.lg,
+    paddingTop: spacing.sm,
+    paddingBottom: spacing.xs,
+    gap: spacing.md,
+    overflow: 'visible',
+  },
+  stageCompact: {
+    paddingTop: spacing.xxs,
+    gap: spacing.sm,
   },
   cue: {
     fontFamily: serif,

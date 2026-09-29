@@ -1,0 +1,1164 @@
+[
+  {
+    "id": "fr-words-001",
+    "type": "word",
+    "fragments": [
+      "MOUSSE",
+      "Remarquez à quel point il en faut peu."
+    ],
+    "topics": [
+      "plants",
+      "forest"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-002",
+    "type": "word",
+    "fragments": [
+      "Celui-ci.",
+      "LIN",
+      "Suivez la ligne du L."
+    ],
+    "topics": [
+      "room",
+      "cloth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-003",
+    "type": "word",
+    "fragments": [
+      "ÉLÉPHANTE",
+      "Notez uniquement les voyelles."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-004",
+    "type": "word",
+    "fragments": [
+      "Regardez ce mot.",
+      "FENÊTRE",
+      "Comptez les lettres sans les nommer."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-005",
+    "type": "word",
+    "fragments": [
+      "CALME",
+      "Première lettre.",
+      "Puis le dernier."
+    ],
+    "topics": [
+      "room",
+      "quiet"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-006",
+    "type": "word",
+    "fragments": [
+      "Un petit mot.",
+      "NUAGE",
+      "Suivez la courbe du C."
+    ],
+    "topics": [
+      "sky"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-007",
+    "type": "word",
+    "fragments": [
+      "Notez le poids du O.",
+      "PIERRE"
+    ],
+    "topics": [
+      "stone"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "choice",
+      "text": "Si vous voyez une veste ou un pull, de quelle couleur est-il ?",
+      "options": [
+        "bleue",
+        "noire",
+        "une autre couleur"
+      ]
+    }
+  },
+  {
+    "id": "fr-words-008",
+    "type": "word",
+    "fragments": [
+      "RIVIÈRE",
+      "Laissez-le reposer."
+    ],
+    "topics": [
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-009",
+    "type": "word",
+    "fragments": [
+      "AMBRE",
+      "Remarquez la forme chaleureuse de A."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-010",
+    "type": "word",
+    "fragments": [
+      "Celui-ci.",
+      "PLUME",
+      "Laissez vos yeux se poser sur le TH."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-011",
+    "type": "word",
+    "fragments": [
+      "PRAIRIE",
+      "Notez uniquement les voyelles."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-012",
+    "type": "word",
+    "fragments": [
+      "Regardez ce mot.",
+      "ARGENT",
+      "Suivez le S pendant qu'il tourne."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-013",
+    "type": "word",
+    "fragments": [
+      "LANTERNE",
+      "Première lettre.",
+      "Puis le dernier."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-014",
+    "type": "word",
+    "fragments": [
+      "Un petit mot.",
+      "BOUILLOIRE",
+      "Le double T se dresse comme une porte silencieuse."
+    ],
+    "topics": [
+      "room",
+      "home"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-015",
+    "type": "word",
+    "fragments": [
+      "Remarquez comment V se répète, puis se repose.",
+      "VELOURS"
+    ],
+    "topics": [
+      "room",
+      "cloth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-016",
+    "type": "word",
+    "fragments": [
+      "PAPIER",
+      "Laissez-le reposer."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-017",
+    "type": "word",
+    "fragments": [
+      "CHÉRIE",
+      "Notez seulement le O."
+    ],
+    "topics": [
+      "plants",
+      "food"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-018",
+    "type": "word",
+    "fragments": [
+      "Celui-ci.",
+      "COUVERTURE",
+      "Laissons la parole prendre sa place."
+    ],
+    "topics": [
+      "room",
+      "home"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-019",
+    "type": "word",
+    "fragments": [
+      "JARDIN",
+      "Notez uniquement les voyelles."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-020",
+    "type": "word",
+    "fragments": [
+      "Regardez ce mot.",
+      "BOUGIE",
+      "Suivez le mot de gauche à droite, une fois."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-021",
+    "type": "word",
+    "fragments": [
+      "BOUTON",
+      "Première lettre.",
+      "Puis le dernier."
+    ],
+    "topics": [
+      "room",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-022",
+    "type": "word",
+    "fragments": [
+      "Un petit mot.",
+      "SAULE",
+      "Remarquez le W qui s'ouvre deux fois."
+    ],
+    "topics": [
+      "plants",
+      "forest"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-023",
+    "type": "word",
+    "fragments": [
+      "Regardez la forme, pas la signification.",
+      "MARBRE"
+    ],
+    "topics": [
+      "stone"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-024",
+    "type": "word",
+    "fragments": [
+      "COTON",
+      "Laissez-le reposer."
+    ],
+    "topics": [
+      "room",
+      "cloth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-025",
+    "type": "word",
+    "fragments": [
+      "SOUCOUPE",
+      "Notez la courbe de S et C."
+    ],
+    "topics": [
+      "room",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-026",
+    "type": "word",
+    "fragments": [
+      "Celui-ci.",
+      "ORANGE",
+      "Trouvez les voyelles et laissez le reste."
+    ],
+    "topics": [
+      "plants",
+      "food"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-027",
+    "type": "word",
+    "fragments": [
+      "MIROIR",
+      "Notez uniquement les voyelles."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-028",
+    "type": "word",
+    "fragments": [
+      "Regardez ce mot.",
+      "COQUILLE",
+      "Remarquez à quel point le mot reste petit."
+    ],
+    "topics": [
+      "coast"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-029",
+    "type": "word",
+    "fragments": [
+      "TABLEAU",
+      "Première lettre.",
+      "Puis le dernier."
+    ],
+    "topics": [
+      "room",
+      "home"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-030",
+    "type": "word",
+    "fragments": [
+      "Un petit mot.",
+      "BRISE",
+      "Suivez le double E."
+    ],
+    "topics": [
+      "sky",
+      "weather"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-031",
+    "type": "word",
+    "fragments": [
+      "Remarquez le rond O.",
+      "POCHE"
+    ],
+    "topics": [
+      "room",
+      "cloth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-032",
+    "type": "word",
+    "fragments": [
+      "FIL",
+      "Laissez-le reposer."
+    ],
+    "topics": [
+      "paper",
+      "cloth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-033",
+    "type": "word",
+    "fragments": [
+      "ÉCHELLE",
+      "Le double D est une paire tranquille."
+    ],
+    "topics": [
+      "room",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-034",
+    "type": "word",
+    "fragments": [
+      "Celui-ci.",
+      "RIDEAU",
+      "Laissez le mot rester. Vous n'êtes pas obligé de le tenir."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-035",
+    "type": "word",
+    "fragments": [
+      "CAILLOU",
+      "Notez uniquement les voyelles."
+    ],
+    "topics": [
+      "stone",
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-036",
+    "type": "word",
+    "fragments": [
+      "Regardez ce mot.",
+      "JAUNE",
+      "Suivez Y dans ses branches."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "environment",
+      "text": "Maintenant, trouvez quelque chose de jaune autour de vous."
+    }
+  },
+  {
+    "id": "fr-words-037",
+    "type": "word",
+    "fragments": [
+      "FORÊT",
+      "Première lettre.",
+      "Puis le dernier."
+    ],
+    "topics": [
+      "forest"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-038",
+    "type": "word",
+    "fragments": [
+      "Un petit mot.",
+      "OREILLER",
+      "Lettres douces. Double L."
+    ],
+    "topics": [
+      "room",
+      "home"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-039",
+    "type": "word",
+    "fragments": [
+      "Comptez les lettres avec vos yeux uniquement.",
+      "ÉRABLE"
+    ],
+    "topics": [
+      "plants",
+      "forest"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-040",
+    "type": "word",
+    "fragments": [
+      "OMBRE",
+      "Laissez-le reposer."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-041",
+    "type": "word",
+    "fragments": [
+      "CÉRAMIQUE",
+      "Suivez le C aux deux extrémités."
+    ],
+    "topics": [
+      "room",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-042",
+    "type": "word",
+    "fragments": [
+      "Celui-ci.",
+      "AIGUILLE",
+      "Double E au milieu."
+    ],
+    "topics": [
+      "plants",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-043",
+    "type": "word",
+    "fragments": [
+      "PANIER",
+      "Notez uniquement les voyelles."
+    ],
+    "topics": [
+      "room",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-044",
+    "type": "word",
+    "fragments": [
+      "Regardez ce mot.",
+      "PLUIE",
+      "Quatre lettres. Beaucoup."
+    ],
+    "topics": [
+      "sky",
+      "weather"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-045",
+    "type": "word",
+    "fragments": [
+      "LAINE",
+      "Première lettre.",
+      "Puis le dernier."
+    ],
+    "topics": [
+      "room",
+      "cloth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-046",
+    "type": "word",
+    "fragments": [
+      "Un petit mot.",
+      "GINGEMBRE",
+      "G doux deux fois."
+    ],
+    "topics": [
+      "plants",
+      "food"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-047",
+    "type": "word",
+    "fragments": [
+      "Laissez vos yeux se poser sur TH.",
+      "TISSU"
+    ],
+    "topics": [
+      "room",
+      "cloth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-048",
+    "type": "word",
+    "fragments": [
+      "BASILIC",
+      "Laissez-le reposer."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-049",
+    "type": "word",
+    "fragments": [
+      "DÉRIVE",
+      "Le mot bouge déjà. Tu peux rester."
+    ],
+    "topics": [
+      "coast",
+      "water"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "choice",
+      "text": "Êtes-vous assis, debout ou quelque part entre les deux ?",
+      "options": [
+        "séance",
+        "debout",
+        "entre"
+      ]
+    }
+  },
+  {
+    "id": "fr-words-050",
+    "type": "word",
+    "fragments": [
+      "Celui-ci.",
+      "ÉDREDON",
+      "Remarquez que Q et U voyagent ensemble."
+    ],
+    "topics": [
+      "room",
+      "home"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-051",
+    "type": "word",
+    "fragments": [
+      "POINT",
+      "Notez uniquement les voyelles."
+    ],
+    "topics": [
+      "room",
+      "cloth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-052",
+    "type": "word",
+    "fragments": [
+      "Regardez ce mot.",
+      "OCÉAN",
+      "Trois voyelles en attente."
+    ],
+    "topics": [
+      "coast",
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-053",
+    "type": "word",
+    "fragments": [
+      "CITRON",
+      "Première lettre.",
+      "Puis le dernier."
+    ],
+    "topics": [
+      "plants",
+      "food"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-054",
+    "type": "word",
+    "fragments": [
+      "Un petit mot.",
+      "BIFURQUER",
+      "Considérez le A comme un petit toit."
+    ],
+    "topics": [
+      "forest",
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-055",
+    "type": "word",
+    "fragments": [
+      "Cinq lettres, rondes au début.",
+      "PERLE"
+    ],
+    "topics": [
+      "coast"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-056",
+    "type": "word",
+    "fragments": [
+      "HUMBLE",
+      "Laissez-le reposer."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-057",
+    "type": "word",
+    "fragments": [
+      "CUIVRE",
+      "Suivez le double P."
+    ],
+    "topics": [
+      "light",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-058",
+    "type": "word",
+    "fragments": [
+      "Celui-ci.",
+      "IVOIRE",
+      "Notez uniquement les voyelles."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-059",
+    "type": "word",
+    "fragments": [
+      "VERRE",
+      "Notez uniquement les voyelles."
+    ],
+    "topics": [
+      "room",
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-060",
+    "type": "word",
+    "fragments": [
+      "Regardez ce mot.",
+      "THYM",
+      "Un petit mot. Laissez-le reposer."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-061",
+    "type": "word",
+    "fragments": [
+      "NICKEL",
+      "Première lettre.",
+      "Puis le dernier."
+    ],
+    "topics": [
+      "stone",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-062",
+    "type": "word",
+    "fragments": [
+      "Un petit mot.",
+      "FARINE",
+      "Suivez le mot une fois, lentement."
+    ],
+    "topics": [
+      "room",
+      "food"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-063",
+    "type": "word",
+    "fragments": [
+      "Notez le C, puis le reste de la forme.",
+      "CÈDRE"
+    ],
+    "topics": [
+      "forest"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-064",
+    "type": "word",
+    "fragments": [
+      "PRUNE",
+      "Laissez-le reposer."
+    ],
+    "topics": [
+      "plants",
+      "food"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-065",
+    "type": "word",
+    "fragments": [
+      "MARÉE",
+      "Dans. Dehors. Les lettres restent."
+    ],
+    "topics": [
+      "coast",
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-066",
+    "type": "word",
+    "fragments": [
+      "MOUSSE",
+      "Remarquez à quel point les lettres sont légères."
+    ],
+    "topics": [
+      "coast"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-067",
+    "type": "word",
+    "fragments": [
+      "Un mot.",
+      "PIN",
+      "Remarquez le I debout au milieu."
+    ],
+    "topics": [
+      "forest"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-068",
+    "type": "word",
+    "fragments": [
+      "BRUME",
+      "Suivez H dans le reste."
+    ],
+    "topics": [
+      "sky"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-069",
+    "type": "word",
+    "fragments": [
+      "VITRE",
+      "Première lettre.",
+      "Puis le dernier."
+    ],
+    "topics": [
+      "room",
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-070",
+    "type": "word",
+    "fragments": [
+      "ENCRE",
+      "Trois lettres. Beaucoup."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-071",
+    "type": "word",
+    "fragments": [
+      "CERF-VOLANT",
+      "Notez uniquement les voyelles."
+    ],
+    "topics": [
+      "sky"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-072",
+    "type": "word",
+    "fragments": [
+      "GRANIT",
+      "Notez le poids du mot."
+    ],
+    "topics": [
+      "stone"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-073",
+    "type": "word",
+    "fragments": [
+      "LAMPE",
+      "Laissez-le reposer."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-074",
+    "type": "word",
+    "fragments": [
+      "GEL",
+      "Doux sur les bords."
+    ],
+    "topics": [
+      "sky",
+      "weather"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-075",
+    "type": "word",
+    "fragments": [
+      "COQUE",
+      "Première lettre.",
+      "Puis le dernier."
+    ],
+    "topics": [
+      "coast"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "environment",
+      "text": "Si une couleur du dernier mot est à proximité, reposez-vous dessus un instant."
+    }
+  },
+  {
+    "id": "fr-words-076",
+    "type": "word",
+    "fragments": [
+      "LIERRE",
+      "Trois lettres grimpantes."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-077",
+    "type": "word",
+    "fragments": [
+      "CRÉPUSCULE",
+      "Notez seulement le U."
+    ],
+    "topics": [
+      "light",
+      "night"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-078",
+    "type": "word",
+    "fragments": [
+      "FICELLE",
+      "Remarquez le W au milieu."
+    ],
+    "topics": [
+      "paper",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-079",
+    "type": "word",
+    "fragments": [
+      "QUAI",
+      "Laissez-le reposer."
+    ],
+    "topics": [
+      "coast"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-080",
+    "type": "word",
+    "fragments": [
+      "BRAISE",
+      "Laissez-le reposer."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-081",
+    "type": "word",
+    "fragments": [
+      "COLONNE VERTÉBRALE",
+      "Première lettre. Puis le dernier."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-082",
+    "type": "word",
+    "fragments": [
+      "MOUSSUE",
+      "Laissez-le reposer."
+    ],
+    "topics": [
+      "forest",
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-083",
+    "type": "word",
+    "fragments": [
+      "MOUETTE",
+      "Laissez-le reposer."
+    ],
+    "topics": [
+      "coast"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-084",
+    "type": "word",
+    "fragments": [
+      "LINTEAU",
+      "Un mot architectural tranquille."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-085",
+    "type": "word",
+    "fragments": [
+      "CIDRE",
+      "Laissez-le reposer."
+    ],
+    "topics": [
+      "plants",
+      "food"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-086",
+    "type": "word",
+    "fragments": [
+      "SILEX",
+      "Laissez-le reposer."
+    ],
+    "topics": [
+      "stone"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-087",
+    "type": "word",
+    "fragments": [
+      "CHARDON",
+      "Laissez-le reposer."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-words-088",
+    "type": "word",
+    "fragments": [
+      "PORT",
+      "Laissez-le reposer."
+    ],
+    "topics": [
+      "coast"
+    ],
+    "difficulty": 1
+  }
+]

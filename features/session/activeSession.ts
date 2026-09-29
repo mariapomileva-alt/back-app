@@ -1,4 +1,4 @@
-import { AppState, type AppStateStatus } from 'react-native';
+import { AppState, Platform, type AppStateStatus } from 'react-native';
 
 import type { HomeToolId } from '@/types';
 
@@ -15,8 +15,20 @@ let session: ActiveSession | null = null;
 let appState: AppStateStatus = AppState.currentState;
 let allowInternalNavigation = false;
 let appStateBound = false;
+let visibleToolScreens = 0;
+
+function pauseSessionClock(): void {
+  if (!session || session.segmentStartedAt === null) {
+    return;
+  }
+  session.accumulatedMs += Date.now() - session.segmentStartedAt;
+  session.segmentStartedAt = null;
+}
 
 function isForeground(state: AppStateStatus): boolean {
+  if (Platform.OS === 'web') {
+    return state !== 'background';
+  }
   return state === 'active';
 }
 
@@ -33,7 +45,7 @@ export function isHomeToolId(value: string | undefined | null): value is HomeToo
 
 /**
  * Start a session for a tool, or keep the existing one when the user stays
- * inside the same category (e.g. Distract activity → Change activity).
+ * inside the same category (e.g. Distract chooser ↔ activity).
  */
 export function startOrContinueSession(tool: HomeToolId): void {
   if (session?.tool === tool) {
@@ -83,17 +95,36 @@ export function getActiveSessionTool(): HomeToolId | null {
   return session?.tool ?? null;
 }
 
+/** True while a tool screen is visible — language changes stay blocked until the session ends. */
+export function isActiveSessionVisible(): boolean {
+  return visibleToolScreens > 0;
+}
+
 export function shouldOfferSessionOutcome(elapsedMs = getSessionElapsedMs()): boolean {
   return elapsedMs >= SESSION_OUTCOME_AFTER_MS;
 }
 
 export function consumeSession(): { tool: HomeToolId; elapsedMs: number } | null {
+  visibleToolScreens = 0;
   if (!session) {
     return null;
   }
   const snapshot = { tool: session.tool, elapsedMs: getSessionElapsedMs() };
   session = null;
   return snapshot;
+}
+
+/** Count a visible tool screen so Home / leftover mounts cannot keep the clock running. */
+export function retainSessionVisibility(tool: HomeToolId): void {
+  startOrContinueSession(tool);
+  visibleToolScreens += 1;
+}
+
+export function releaseSessionVisibility(): void {
+  visibleToolScreens = Math.max(0, visibleToolScreens - 1);
+  if (visibleToolScreens === 0) {
+    pauseSessionClock();
+  }
 }
 
 /**

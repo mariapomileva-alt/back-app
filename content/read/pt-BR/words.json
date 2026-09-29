@@ -1,0 +1,1164 @@
+[
+  {
+    "id": "pt-words-001",
+    "type": "word",
+    "fragments": [
+      "MUSGO",
+      "Observe quão pouco é necessário."
+    ],
+    "topics": [
+      "plants",
+      "forest"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-002",
+    "type": "word",
+    "fragments": [
+      "Este.",
+      "LINHO",
+      "Siga a linha do L."
+    ],
+    "topics": [
+      "room",
+      "cloth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-003",
+    "type": "word",
+    "fragments": [
+      "ELEFANTA",
+      "Observe apenas as vogais."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-004",
+    "type": "word",
+    "fragments": [
+      "Veja esta palavra.",
+      "JANELA",
+      "Conte as letras sem nomeá-las."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-005",
+    "type": "word",
+    "fragments": [
+      "QUIETA",
+      "Primeira carta.",
+      "Então o último."
+    ],
+    "topics": [
+      "room",
+      "quiet"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-006",
+    "type": "word",
+    "fragments": [
+      "Uma pequena palavra.",
+      "NUVEM",
+      "Siga a curva do C."
+    ],
+    "topics": [
+      "sky"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-007",
+    "type": "word",
+    "fragments": [
+      "Observe o peso do O.",
+      "PEDRA"
+    ],
+    "topics": [
+      "stone"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "choice",
+      "text": "Se você consegue ver uma jaqueta ou suéter, de que cor é?",
+      "options": [
+        "azul",
+        "preta",
+        "outra cor"
+      ]
+    }
+  },
+  {
+    "id": "pt-words-008",
+    "type": "word",
+    "fragments": [
+      "RIO",
+      "Deixe descansar."
+    ],
+    "topics": [
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-009",
+    "type": "word",
+    "fragments": [
+      "ÂMBAR",
+      "Observe a forma quente de A."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-010",
+    "type": "word",
+    "fragments": [
+      "Este.",
+      "PENA",
+      "Deixe seus olhos repousarem no TH."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-011",
+    "type": "word",
+    "fragments": [
+      "PRADO",
+      "Observe apenas as vogais."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-012",
+    "type": "word",
+    "fragments": [
+      "Veja esta palavra.",
+      "PRATA",
+      "Siga o S enquanto ele vira."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-013",
+    "type": "word",
+    "fragments": [
+      "LANTERNA",
+      "Primeira carta.",
+      "Então o último."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-014",
+    "type": "word",
+    "fragments": [
+      "Uma pequena palavra.",
+      "CHALEIRA",
+      "O duplo T parece um portão silencioso."
+    ],
+    "topics": [
+      "room",
+      "home"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-015",
+    "type": "word",
+    "fragments": [
+      "Observe como V repete e depois descansa.",
+      "VELUDA"
+    ],
+    "topics": [
+      "room",
+      "cloth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-016",
+    "type": "word",
+    "fragments": [
+      "PAPEL",
+      "Deixe descansar."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-017",
+    "type": "word",
+    "fragments": [
+      "MEL",
+      "Observe apenas o O."
+    ],
+    "topics": [
+      "plants",
+      "food"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-018",
+    "type": "word",
+    "fragments": [
+      "Este.",
+      "COBERTOR",
+      "Deixe a palavra ocupar seu espaço."
+    ],
+    "topics": [
+      "room",
+      "home"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-019",
+    "type": "word",
+    "fragments": [
+      "JARDIM",
+      "Observe apenas as vogais."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-020",
+    "type": "word",
+    "fragments": [
+      "Veja esta palavra.",
+      "VELA",
+      "Siga a palavra da esquerda para a direita, uma vez."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-021",
+    "type": "word",
+    "fragments": [
+      "BOTÃO",
+      "Primeira carta.",
+      "Então o último."
+    ],
+    "topics": [
+      "room",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-022",
+    "type": "word",
+    "fragments": [
+      "Uma pequena palavra.",
+      "SALGUEIRA",
+      "Observe a abertura W duas vezes."
+    ],
+    "topics": [
+      "plants",
+      "forest"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-023",
+    "type": "word",
+    "fragments": [
+      "Observe a forma, não o significado.",
+      "MÁRMORE"
+    ],
+    "topics": [
+      "stone"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-024",
+    "type": "word",
+    "fragments": [
+      "ALGODÃO",
+      "Deixe descansar."
+    ],
+    "topics": [
+      "room",
+      "cloth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-025",
+    "type": "word",
+    "fragments": [
+      "PIRES",
+      "Observe a curva de S e C."
+    ],
+    "topics": [
+      "room",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-026",
+    "type": "word",
+    "fragments": [
+      "Este.",
+      "LARANJA",
+      "Encontre as vogais e deixe o resto."
+    ],
+    "topics": [
+      "plants",
+      "food"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-027",
+    "type": "word",
+    "fragments": [
+      "ESPELHO",
+      "Observe apenas as vogais."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-028",
+    "type": "word",
+    "fragments": [
+      "Veja esta palavra.",
+      "CONCHA",
+      "Observe como a palavra permanece pequena."
+    ],
+    "topics": [
+      "coast"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-029",
+    "type": "word",
+    "fragments": [
+      "MESA",
+      "Primeira carta.",
+      "Então o último."
+    ],
+    "topics": [
+      "room",
+      "home"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-030",
+    "type": "word",
+    "fragments": [
+      "Uma pequena palavra.",
+      "BRISA",
+      "Siga o duplo E."
+    ],
+    "topics": [
+      "sky",
+      "weather"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-031",
+    "type": "word",
+    "fragments": [
+      "Observe a rodada O.",
+      "BOLSO"
+    ],
+    "topics": [
+      "room",
+      "cloth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-032",
+    "type": "word",
+    "fragments": [
+      "FIO",
+      "Deixe descansar."
+    ],
+    "topics": [
+      "paper",
+      "cloth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-033",
+    "type": "word",
+    "fragments": [
+      "ESCADA",
+      "O duplo D é um par silencioso."
+    ],
+    "topics": [
+      "room",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-034",
+    "type": "word",
+    "fragments": [
+      "Este.",
+      "CORTINA",
+      "Deixe a palavra ficar. Você não precisa segurá-lo."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-035",
+    "type": "word",
+    "fragments": [
+      "SEIXO",
+      "Observe apenas as vogais."
+    ],
+    "topics": [
+      "stone",
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-036",
+    "type": "word",
+    "fragments": [
+      "Veja esta palavra.",
+      "AMARELA",
+      "Siga Y conforme ele se ramifica."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "environment",
+      "text": "Agora encontre algo amarelo ao seu redor."
+    }
+  },
+  {
+    "id": "pt-words-037",
+    "type": "word",
+    "fragments": [
+      "FLORESTA",
+      "Primeira carta.",
+      "Então o último."
+    ],
+    "topics": [
+      "forest"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-038",
+    "type": "word",
+    "fragments": [
+      "Uma pequena palavra.",
+      "TRAVESSEIRO",
+      "Letras suaves. Duplo L."
+    ],
+    "topics": [
+      "room",
+      "home"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-039",
+    "type": "word",
+    "fragments": [
+      "Conte as letras apenas com os olhos.",
+      "BORDO"
+    ],
+    "topics": [
+      "plants",
+      "forest"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-040",
+    "type": "word",
+    "fragments": [
+      "SOMBRA",
+      "Deixe descansar."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-041",
+    "type": "word",
+    "fragments": [
+      "CERÂMICA",
+      "Siga o C em ambas as extremidades."
+    ],
+    "topics": [
+      "room",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-042",
+    "type": "word",
+    "fragments": [
+      "Este.",
+      "AGULHA",
+      "Duplo E no meio."
+    ],
+    "topics": [
+      "plants",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-043",
+    "type": "word",
+    "fragments": [
+      "CESTA",
+      "Observe apenas as vogais."
+    ],
+    "topics": [
+      "room",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-044",
+    "type": "word",
+    "fragments": [
+      "Veja esta palavra.",
+      "CHUVA",
+      "Quatro letras. Bastante."
+    ],
+    "topics": [
+      "sky",
+      "weather"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-045",
+    "type": "word",
+    "fragments": [
+      "LÃ",
+      "Primeira carta.",
+      "Então o último."
+    ],
+    "topics": [
+      "room",
+      "cloth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-046",
+    "type": "word",
+    "fragments": [
+      "Uma pequena palavra.",
+      "RUIVA",
+      "Suave G duas vezes."
+    ],
+    "topics": [
+      "plants",
+      "food"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-047",
+    "type": "word",
+    "fragments": [
+      "Deixe seus olhos descansarem em TH.",
+      "PANO"
+    ],
+    "topics": [
+      "room",
+      "cloth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-048",
+    "type": "word",
+    "fragments": [
+      "MANJERICÃO",
+      "Deixe descansar."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-049",
+    "type": "word",
+    "fragments": [
+      "DERIVA",
+      "A palavra já está se movendo. Você pode ficar."
+    ],
+    "topics": [
+      "coast",
+      "water"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "choice",
+      "text": "Você está sentado, em pé ou em algum lugar intermediário?",
+      "options": [
+        "sentada",
+        "de pé",
+        "entre"
+      ]
+    }
+  },
+  {
+    "id": "pt-words-050",
+    "type": "word",
+    "fragments": [
+      "Este.",
+      "COLCHA",
+      "Observe Q e U viajando juntos."
+    ],
+    "topics": [
+      "room",
+      "home"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-051",
+    "type": "word",
+    "fragments": [
+      "PONTO",
+      "Observe apenas as vogais."
+    ],
+    "topics": [
+      "room",
+      "cloth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-052",
+    "type": "word",
+    "fragments": [
+      "Veja esta palavra.",
+      "OCEANO",
+      "Três vogais esperando."
+    ],
+    "topics": [
+      "coast",
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-053",
+    "type": "word",
+    "fragments": [
+      "LIMÃO",
+      "Primeira carta.",
+      "Então o último."
+    ],
+    "topics": [
+      "plants",
+      "food"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-054",
+    "type": "word",
+    "fragments": [
+      "Uma pequena palavra.",
+      "FILIAL",
+      "Veja o A como um pequeno telhado."
+    ],
+    "topics": [
+      "forest",
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-055",
+    "type": "word",
+    "fragments": [
+      "Cinco letras, redondas no início.",
+      "PÉROLA"
+    ],
+    "topics": [
+      "coast"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-056",
+    "type": "word",
+    "fragments": [
+      "HUMILDE",
+      "Deixe descansar."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-057",
+    "type": "word",
+    "fragments": [
+      "COBRE",
+      "Siga o duplo P."
+    ],
+    "topics": [
+      "light",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-058",
+    "type": "word",
+    "fragments": [
+      "Este.",
+      "MARFIM",
+      "Observe apenas as vogais."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-059",
+    "type": "word",
+    "fragments": [
+      "VIDRO",
+      "Observe apenas as vogais."
+    ],
+    "topics": [
+      "room",
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-060",
+    "type": "word",
+    "fragments": [
+      "Veja esta palavra.",
+      "TOMILHO",
+      "Uma pequena palavra. Deixe descansar."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-061",
+    "type": "word",
+    "fragments": [
+      "NÍQUEL",
+      "Primeira carta.",
+      "Então o último."
+    ],
+    "topics": [
+      "stone",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-062",
+    "type": "word",
+    "fragments": [
+      "Uma pequena palavra.",
+      "FARINHA",
+      "Siga a palavra uma vez, lentamente."
+    ],
+    "topics": [
+      "room",
+      "food"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-063",
+    "type": "word",
+    "fragments": [
+      "Observe o C e depois o resto da forma.",
+      "CEDRO"
+    ],
+    "topics": [
+      "forest"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-064",
+    "type": "word",
+    "fragments": [
+      "AMEIXA",
+      "Deixe descansar."
+    ],
+    "topics": [
+      "plants",
+      "food"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-065",
+    "type": "word",
+    "fragments": [
+      "MARÉ",
+      "Em. Fora. As cartas ficam."
+    ],
+    "topics": [
+      "coast",
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-066",
+    "type": "word",
+    "fragments": [
+      "ESPUMA",
+      "Observe como as letras parecem leves."
+    ],
+    "topics": [
+      "coast"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-067",
+    "type": "word",
+    "fragments": [
+      "Uma palavra.",
+      "PINHO",
+      "Observe o I parado no meio."
+    ],
+    "topics": [
+      "forest"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-068",
+    "type": "word",
+    "fragments": [
+      "CONFUSÃO",
+      "Siga H para o resto."
+    ],
+    "topics": [
+      "sky"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-069",
+    "type": "word",
+    "fragments": [
+      "PAINEL",
+      "Primeira carta.",
+      "Então o último."
+    ],
+    "topics": [
+      "room",
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-070",
+    "type": "word",
+    "fragments": [
+      "TINTA",
+      "Três letras. Bastante."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-071",
+    "type": "word",
+    "fragments": [
+      "PIPA",
+      "Observe apenas as vogais."
+    ],
+    "topics": [
+      "sky"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-072",
+    "type": "word",
+    "fragments": [
+      "GRANITO",
+      "Observe o peso da palavra."
+    ],
+    "topics": [
+      "stone"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-073",
+    "type": "word",
+    "fragments": [
+      "LÂMPADA",
+      "Deixe descansar."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-074",
+    "type": "word",
+    "fragments": [
+      "GEADA",
+      "Suave nas bordas."
+    ],
+    "topics": [
+      "sky",
+      "weather"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-075",
+    "type": "word",
+    "fragments": [
+      "CASCO",
+      "Primeira carta.",
+      "Então o último."
+    ],
+    "topics": [
+      "coast"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "environment",
+      "text": "Se uma cor da última palavra estiver próxima, descanse nela por um momento."
+    }
+  },
+  {
+    "id": "pt-words-076",
+    "type": "word",
+    "fragments": [
+      "HERA",
+      "Três letras subindo."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-077",
+    "type": "word",
+    "fragments": [
+      "CREPÚSCULO",
+      "Observe apenas o U."
+    ],
+    "topics": [
+      "light",
+      "night"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-078",
+    "type": "word",
+    "fragments": [
+      "fio",
+      "Observe o W no meio."
+    ],
+    "topics": [
+      "paper",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-079",
+    "type": "word",
+    "fragments": [
+      "CAIS",
+      "Deixe descansar."
+    ],
+    "topics": [
+      "coast"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-080",
+    "type": "word",
+    "fragments": [
+      "BRASA",
+      "Deixe descansar."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-081",
+    "type": "word",
+    "fragments": [
+      "COLUNA",
+      "Primeira carta. Então o último."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-082",
+    "type": "word",
+    "fragments": [
+      "MUSGOSA",
+      "Deixe descansar."
+    ],
+    "topics": [
+      "forest",
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-083",
+    "type": "word",
+    "fragments": [
+      "GAIVOTA",
+      "Deixe descansar."
+    ],
+    "topics": [
+      "coast"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-084",
+    "type": "word",
+    "fragments": [
+      "LINTEL",
+      "Uma palavra arquitetônica tranquila."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-085",
+    "type": "word",
+    "fragments": [
+      "CIDRA",
+      "Deixe descansar."
+    ],
+    "topics": [
+      "plants",
+      "food"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-086",
+    "type": "word",
+    "fragments": [
+      "PEDRA",
+      "Deixe descansar."
+    ],
+    "topics": [
+      "stone"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-087",
+    "type": "word",
+    "fragments": [
+      "CARDO",
+      "Deixe descansar."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-words-088",
+    "type": "word",
+    "fragments": [
+      "PORTO",
+      "Deixe descansar."
+    ],
+    "topics": [
+      "coast"
+    ],
+    "difficulty": 1
+  }
+]

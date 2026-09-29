@@ -1,16 +1,20 @@
 {
   "name": "back",
   "main": "expo-router/entry",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
+    "web:8081": "expo start --web --port 8081",
     "export:web": "expo export --platform web",
     "lint": "expo lint",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "locales:check": "node scripts/check-locale-completeness.mjs",
+    "locales:draft": "node scripts/generate-draft-localization.mjs"
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "2.2.0",
@@ -26,6 +30,7 @@
     "expo-splash-screen": "^57.0.9",
     "expo-status-bar": "~57.0.1",
     "expo-system-ui": "~57.0.3",
+    "playwright": "^1.51.0",
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "react-native": "0.86.3",
@@ -42,7 +47,9 @@
     "eas-cli": "^16.32.0",
     "eslint": "^9.39.5",
     "eslint-config-expo": "~57.0.2",
-    "typescript": "~6.0.3"
+    "google-translate-api-x": "^10.7.2",
+    "typescript": "~6.0.3",
+    "vitest": "^3.2.4"
   },
   "overrides": {
     "uuid": "11.1.1",

@@ -1,0 +1,1155 @@
+[
+  {
+    "id": "pt-stories-001",
+    "type": "micro_story",
+    "fragments": [
+      "Em um lago calmo",
+      "um pequeno barco estava sentado",
+      "como se tivesse esquecido de sair.",
+      "A água segurou o céu",
+      "sem perguntar.",
+      "Um pássaro cruzou uma vez.",
+      "Então o silêncio voltou."
+    ],
+    "topics": [
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-stories-002",
+    "type": "micro_story",
+    "fragments": [
+      "A cadeira",
+      "lembrei-me da forma de esperar.",
+      "A tarde se recompôs",
+      "em um quadrado de chão.",
+      "Nada precisava acontecer a seguir."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "environment",
+      "text": "Olhe para um objeto parado perto de você."
+    }
+  },
+  {
+    "id": "pt-stories-003",
+    "type": "micro_story",
+    "fragments": [
+      "Uma samambaia desenrolou uma folha nova e lenta.",
+      "O resto da planta permaneceu como estava.",
+      "Green manteve seu próprio tempo."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-stories-004",
+    "type": "micro_story",
+    "fragments": [
+      "Nuvens se empilharam",
+      "sem pressa.",
+      "A rua escureceu um pouco,",
+      "então fez uma pausa.",
+      "A chuva decidiu mais tarde."
+    ],
+    "topics": [
+      "weather"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-stories-005",
+    "type": "micro_story",
+    "fragments": [
+      "Alguém deixou uma página aberta",
+      "na mesa.",
+      "A frase do meio",
+      "estava inacabado.",
+      "Poderia esperar.",
+      "O papel é paciente."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-stories-006",
+    "type": "micro_story",
+    "fragments": [
+      "A lâmpada fez um pequeno círculo no pano.",
+      "As mariposas teriam gostado, mas nenhuma apareceu.",
+      "O círculo permaneceu, fazendo apenas isso."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-stories-007",
+    "type": "micro_story",
+    "fragments": [
+      "Um caminho passava entre dois campos de grama clara.",
+      "As pedras impediam que as bordas se desviassem.",
+      "O caminho não se importava com quem o usava."
+    ],
+    "topics": [
+      "earth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-stories-008",
+    "type": "micro_story",
+    "fragments": [
+      "A noite chegou como uma mudança na cor das paredes.",
+      "Uma estrela apareceu e depois fingiu que estava ali.",
+      "O resto do céu demorou."
+    ],
+    "topics": [
+      "sky"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "environment",
+      "text": "Olhe para cima, mesmo que seja apenas até o teto."
+    }
+  },
+  {
+    "id": "pt-stories-009",
+    "type": "micro_story",
+    "fragments": [
+      "Uma xícara estava exatamente no centro do pires.",
+      "Estava vazio, o que era uma espécie de prontidão.",
+      "A mesa continha ambos sem comentários."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-stories-010",
+    "type": "micro_story",
+    "fragments": [
+      "Pardais discutiam baixinho numa cerca viva.",
+      "Então eles esqueceram a discussão.",
+      "A cerca continuou sendo uma cerca."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-stories-011",
+    "type": "micro_story",
+    "fragments": [
+      "A maré deixou uma linha de areia mais escura.",
+      "As conchas mantinham seus próprios quartos pequenos.",
+      "A linha se moveria novamente, e tudo bem."
+    ],
+    "topics": [
+      "water"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "environment",
+      "text": "Agora encontre um reflexo, mesmo que pequeno."
+    }
+  },
+  {
+    "id": "pt-stories-012",
+    "type": "micro_story",
+    "fragments": [
+      "A casa emitiu um som de madeira, depois nenhum.",
+      "Um relógio em algum lugar decidiu não insistir.",
+      "Ouvir ficou mais fácil."
+    ],
+    "topics": [
+      "quiet"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-stories-013",
+    "type": "micro_story",
+    "fragments": [
+      "As maçãs esperaram em uma tigela como se tivessem o dia todo.",
+      "Um era mais verde.",
+      "Nenhum deles estava com pressa.",
+      "A tigela era mais velha que a fruta."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-stories-014",
+    "type": "micro_story",
+    "fragments": [
+      "Uma janela exibia um quadrado de rua comum.",
+      "Uma bicicleta passou por lá e saiu.",
+      "A praça permaneceu normal, o que ajudou."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "environment",
+      "text": "Olhe para um objeto parado perto de você."
+    }
+  },
+  {
+    "id": "pt-stories-015",
+    "type": "micro_story",
+    "fragments": [
+      "A poeira só aparecia onde o sol insistia.",
+      "O resto do ar manteve seus segredos.",
+      "O sol seguiu em frente sem tirar a poeira."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-stories-016",
+    "type": "micro_story",
+    "fragments": [
+      "Uma carta havia sido dobrada duas vezes, com cuidado.",
+      "A caligrafia inclinou-se um pouco para a direita.",
+      "Ninguém precisava abri-lo neste minuto."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-stories-017",
+    "type": "micro_story",
+    "fragments": [
+      "A neblina transformou as árvores distantes em sugestões.",
+      "As árvores próximas permaneceram específicas.",
+      "Caminhar parecia mais curto do que era."
+    ],
+    "topics": [
+      "weather"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "environment",
+      "text": "Observe o ar em sua pele por um momento."
+    }
+  },
+  {
+    "id": "pt-stories-018",
+    "type": "micro_story",
+    "fragments": [
+      "Uma chaleira estalou ao terminar seu trabalho.",
+      "O Steam escreveu uma breve nuvem e a apagou.",
+      "A caneca poderia esperar mais um momento."
+    ],
+    "topics": [
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-stories-019",
+    "type": "micro_story",
+    "fragments": [
+      "Clay no volante levantou-se e depois descansou.",
+      "As mãos sabiam quando parar.",
+      "A forma secaria sozinha."
+    ],
+    "topics": [
+      "earth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-stories-020",
+    "type": "micro_story",
+    "fragments": [
+      "Uma mariposa se abriu no interior do abajur.",
+      "Suas asas eram um mapa de florestas mais tranquilas.",
+      "Permaneceu até que a luz parecesse suficiente."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "environment",
+      "text": "Encontre algo vivo ou a cor de algo vivo."
+    }
+  },
+  {
+    "id": "pt-stories-021",
+    "type": "micro_story",
+    "fragments": [
+      "A manhã chegou primeiro no parapeito da janela.",
+      "Então encontrou as lombadas dos livros.",
+      "O resto da sala alcançou lentamente."
+    ],
+    "topics": [
+      "sky"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-stories-022",
+    "type": "micro_story",
+    "fragments": [
+      "Um botão caiu e foi colocado em um prato.",
+      "Parecia acabado, mesmo sozinho.",
+      "Remendar poderia ser outro dia tranquilo."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-stories-023",
+    "type": "micro_story",
+    "fragments": [
+      "A neve fez a rua esquecer o barulho habitual.",
+      "Os passos tornaram-se uma pontuação cuidadosa.",
+      "Até o ar parecia ler mais devagar."
+    ],
+    "topics": [
+      "quiet"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "environment",
+      "text": "Encontre algo verde ao seu redor."
+    }
+  },
+  {
+    "id": "pt-stories-024",
+    "type": "micro_story",
+    "fragments": [
+      "Moss tomou o lado norte da pedra sem debater.",
+      "A pedra não se importava de ser parcialmente verde.",
+      "Anos se passaram nesse arranjo."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-stories-025",
+    "type": "micro_story",
+    "fragments": [
+      "Alguém alinhou os livros pela altura, quase.",
+      "Um membro mais alto recusou, educadamente.",
+      "A prateleira continha a discordância."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-stories-026",
+    "type": "micro_story",
+    "fragments": [
+      "Rain escreveu no vidro em letras temporárias.",
+      "Eles se encontraram e se tornaram clima.",
+      "Lá dentro, a mesa ficou seca de propósito."
+    ],
+    "topics": [
+      "water"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "environment",
+      "text": "Agora encontre um reflexo, mesmo que pequeno."
+    }
+  },
+  {
+    "id": "pt-stories-027",
+    "type": "micro_story",
+    "fragments": [
+      "Uma vela encurtou-se sem reclamar.",
+      "Wax lembrou-se da última hora em anéis.",
+      "A sala aproveitava bem a pequena luz."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-stories-028",
+    "type": "micro_story",
+    "fragments": [
+      "As palavras cruzadas tinham um quadrado vazio.",
+      "A pista era gentil, se você olhasse novamente.",
+      "Deixá-lo aberto também foi uma resposta."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-stories-029",
+    "type": "micro_story",
+    "fragments": [
+      "Um muro de jardim impedia que a colina passasse pelo caminho.",
+      "Lichen assinou as pedras em verde claro.",
+      "Ninguém precisou traduzi-lo."
+    ],
+    "topics": [
+      "earth"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "environment",
+      "text": "Encontre algo com um pouco de textura."
+    }
+  },
+  {
+    "id": "pt-stories-030",
+    "type": "micro_story",
+    "fragments": [
+      "A tarde teve meio, embora os relógios discordassem.",
+      "Uma mosca escolheu um pedaço de parede ensolarado.",
+      "Ambos ficaram por um tempo, depois não."
+    ],
+    "topics": [
+      "time"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-stories-031",
+    "type": "micro_story",
+    "fragments": [
+      "Uma colher de pau repousava sobre uma panela.",
+      "A sopa poderia esperar.",
+      "A agitação poderia esperar.",
+      "A cozinha parecia ela mesma."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-stories-032",
+    "type": "micro_story",
+    "fragments": [
+      "Os patos desenharam a mesma vírgula lenta no lago.",
+      "Ripples assinou e deixou passar.",
+      "A margem oposta não comentou."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "environment",
+      "text": "Encontre algo vivo ou a cor de algo vivo."
+    }
+  },
+  {
+    "id": "pt-stories-033",
+    "type": "micro_story",
+    "fragments": [
+      "Um mapa foi dobrado para que o rio se encontrasse.",
+      "Os vincos tornaram-se uma geografia extra.",
+      "O desdobramento pode acontecer mais tarde."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-stories-034",
+    "type": "micro_story",
+    "fragments": [
+      "O vento moveu as folhas secas sem escolher favoritas.",
+      "Eles fizeram um som como papel distante.",
+      "As árvores mantiveram seus lugares."
+    ],
+    "topics": [
+      "sky"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-stories-035",
+    "type": "micro_story",
+    "fragments": [
+      "Um cobertor manteve a forma da última pessoa.",
+      "O sofá não se importou.",
+      "A noite também poderia ficar lá."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "environment",
+      "text": "Olhe para um objeto parado perto de você."
+    }
+  },
+  {
+    "id": "pt-stories-036",
+    "type": "micro_story",
+    "fragments": [
+      "Em algum lugar do prédio, uma porta se fechou suavemente.",
+      "Passos desapareceram em uma espécie de clima.",
+      "Esta sala voltou ao seu próprio volume."
+    ],
+    "topics": [
+      "quiet"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-stories-037",
+    "type": "micro_story",
+    "fragments": [
+      "O gelo na beira do lago era fino e claro.",
+      "Seixos apareciam como uma pontuação silenciosa.",
+      "Ninguém precisava pisar nisso."
+    ],
+    "topics": [
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-stories-038",
+    "type": "micro_story",
+    "fragments": [
+      "Um manjericão no peitoril da janela estava inclinado em direção ao vidro.",
+      "Alguém virou a panela um quarto de volta.",
+      "Amanhã ele se inclinaria novamente.",
+      "Esse foi o pacto."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "environment",
+      "text": "Agora encontre algo verde ao seu redor."
+    }
+  },
+  {
+    "id": "pt-stories-039",
+    "type": "micro_story",
+    "fragments": [
+      "As chaves estavam em um pequeno prato de cerâmica.",
+      "Eles não eram necessários para esta hora.",
+      "O prato os fez parecer considerados."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-stories-040",
+    "type": "micro_story",
+    "fragments": [
+      "O sol tardio encontrou os grãos no chão de madeira.",
+      "Cada tabuleiro manteve um ouro ligeiramente diferente.",
+      "Então o ouro foi embora e a madeira permaneceu."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-stories-041",
+    "type": "micro_story",
+    "fragments": [
+      "Maré.",
+      "Desenhou uma linha fina de espuma.",
+      "Então peguei a linha de volta."
+    ],
+    "topics": [
+      "coast"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-stories-042",
+    "type": "micro_story",
+    "fragments": [
+      "Na orla da floresta a luz mudou de ideia.",
+      "Mais uma árvore.",
+      "Depois um campo."
+    ],
+    "topics": [
+      "forest"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "environment",
+      "text": "Encontre um formato de folha, mesmo em um padrão ou estampa."
+    }
+  },
+  {
+    "id": "pt-stories-043",
+    "type": "micro_story",
+    "fragments": [
+      "A janela noturna exibia um poste de luz e uma pequena mancha de poeira no vidro.",
+      "Lá fora, quase nada se movia.",
+      "Lá dentro, a sala mantinha-se na penumbra."
+    ],
+    "topics": [
+      "night"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-stories-044",
+    "type": "micro_story",
+    "fragments": [
+      "Uma pedra na palma da mão.",
+      "Mais frio do que o esperado.",
+      "Não pediu nada."
+    ],
+    "topics": [
+      "stone"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-stories-045",
+    "type": "micro_story",
+    "fragments": [
+      "Um envelope estava na prateleira, fechado de propósito.",
+      "O papel pode conter uma pausa e também uma mensagem."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "environment",
+      "text": "Observe um pedaço de papel ou papelão perto de você."
+    }
+  },
+  {
+    "id": "pt-stories-046",
+    "type": "micro_story",
+    "fragments": [
+      "As escadas lembravam muitos pés e ainda ofereciam as mesmas duas opções:",
+      "para cima ou para baixo,",
+      "ou sentado em um degrau sem motivo."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-stories-047",
+    "type": "micro_story",
+    "fragments": [
+      "Geada na grade.",
+      "Uma caligrafia fina e branca.",
+      "Não duraria a manhã."
+    ],
+    "topics": [
+      "weather"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-stories-048",
+    "type": "micro_story",
+    "fragments": [
+      "A pipa era apenas barbante e pano até que o ar concordasse.",
+      "Depois tornou-se uma pequena opinião num grande céu."
+    ],
+    "topics": [
+      "sky"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-stories-049",
+    "type": "micro_story",
+    "fragments": [
+      "Entre duas dunas",
+      "o caminho esqueceu que era um caminho.",
+      "Sand guardou mal o segredo."
+    ],
+    "topics": [
+      "coast"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-stories-050",
+    "type": "micro_story",
+    "fragments": [
+      "Tinta.",
+      "Uma vírgula escura na página.",
+      "A frase em torno disso poderia esperar."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-stories-051",
+    "type": "micro_story",
+    "fragments": [
+      "Na sala silenciosa o relógio era menos importante",
+      "do que a maneira como a cortina quase não se movia."
+    ],
+    "topics": [
+      "quiet"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "choice",
+      "text": "A sala em que você está está mais parada ou mais em movimento?",
+      "options": [
+        "ainda",
+        "em movimento",
+        "entre"
+      ]
+    }
+  },
+  {
+    "id": "pt-stories-052",
+    "type": "micro_story",
+    "fragments": [
+      "As agulhas dos pinheiros formavam um tapete de bronze que não se importava de ser pisado.",
+      "As árvores mantinham sua própria conversa acima dela."
+    ],
+    "topics": [
+      "forest"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-stories-053",
+    "type": "micro_story",
+    "fragments": [
+      "Uma dobradiça.",
+      "Conhecia duas posições.",
+      "Ambos foram honestos."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-stories-054",
+    "type": "micro_story",
+    "fragments": [
+      "A luz tardia ao longo da costa transformou a água em metal martelado.",
+      "Então o metal ficou opaco e voltou a ser apenas água."
+    ],
+    "topics": [
+      "coast"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-stories-055",
+    "type": "micro_story",
+    "fragments": [
+      "Alguém empilhou lenha como se empilhar fosse uma espécie de cuidado.",
+      "A pilha esperou sem pressa."
+    ],
+    "topics": [
+      "home"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-stories-056",
+    "type": "micro_story",
+    "fragments": [
+      "Lua.",
+      "Não está cheio.",
+      "Suficiente."
+    ],
+    "topics": [
+      "night"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-stories-057",
+    "type": "micro_story",
+    "fragments": [
+      "O corredor da biblioteca cheirava a papel seco e a um pouco de poeira acumulada propositalmente.",
+      "Os livros se apoiavam uns nos outros como as pessoas fazem em uma fila lenta."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "environment",
+      "text": "Encontre uma linha reta próxima – uma prateleira, uma moldura, uma borda."
+    }
+  },
+  {
+    "id": "pt-stories-058",
+    "type": "micro_story",
+    "fragments": [
+      "Uma pedra saltou uma vez na memória,",
+      "então o lago voltou a ser um lago."
+    ],
+    "topics": [
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-stories-059",
+    "type": "micro_story",
+    "fragments": [
+      "A estufa passou um verão privado enquanto o caminho lá fora permaneceu normal.",
+      "Glass fez a diferença sem fazer discurso."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-stories-060",
+    "type": "micro_story",
+    "fragments": [
+      "Amarre um prego.",
+      "Já foi útil.",
+      "Agora era apenas um pequeno fato pendente."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-stories-061",
+    "type": "micro_story",
+    "fragments": [
+      "A neblina tomou as árvores distantes e deixou as próximas.",
+      "Um comércio justo, se você estivesse parado."
+    ],
+    "topics": [
+      "weather"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "environment",
+      "text": "Olhe para a coisa mais distante que você pode ver daqui."
+    }
+  },
+  {
+    "id": "pt-stories-062",
+    "type": "micro_story",
+    "fragments": [
+      "O parapeito da janela reuniu três objetos que ainda não haviam decidido que pertenciam um ao outro:",
+      "uma pedra, um selo,",
+      "um pedaço de linha verde."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-stories-063",
+    "type": "micro_story",
+    "fragments": [
+      "Água do porto.",
+      "Escuro. Paciente.",
+      "Boats assentiu sem falar."
+    ],
+    "topics": [
+      "coast"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-stories-064",
+    "type": "micro_story",
+    "fragments": [
+      "No final da pista",
+      "uma lâmpada acendeu mais cedo que as outras.",
+      "Não se explicou."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-stories-065",
+    "type": "micro_story",
+    "fragments": [
+      "No final de uma rua tranquila",
+      "havia uma pequena padaria",
+      "com três mesas redondas.",
+      "A mesa ao lado da janela",
+      "tinha um copo azul nele.",
+      "Lembre-se da cor azul.",
+      "Olhe ao redor.",
+      "Você consegue encontrar algo azul?"
+    ],
+    "topics": [
+      "room",
+      "home"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-stories-066",
+    "type": "micro_story",
+    "fragments": [
+      "O porto ainda estava acordando.",
+      "Uma corda fazia um círculo lento na água.",
+      "Depois outro.",
+      "As gaivotas discutiam sobre nada importante.",
+      "Lembre-se dos círculos.",
+      "Se alguma coisa próxima for redonda,",
+      "deixe seus olhos descansarem lá."
+    ],
+    "topics": [
+      "coast",
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-stories-067",
+    "type": "micro_story",
+    "fragments": [
+      "Na mesa da cozinha",
+      "uma tigela continha três limões.",
+      "Um deles ainda tinha uma pequena folha presa.",
+      "O amarelo era quase seguro demais.",
+      "Segure esse amarelo por um momento.",
+      "Olhe ao redor.",
+      "Há algo perto de você tão brilhante?"
+    ],
+    "topics": [
+      "home",
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-stories-068",
+    "type": "micro_story",
+    "fragments": [
+      "No meio da pista",
+      "uma porta amarela esperava",
+      "como se alguém ainda pudesse voltar para pegar uma chave.",
+      "A tinta havia ficado mais fina no cabo.",
+      "O resto da rua permaneceu normal.",
+      "Observe uma coisa desgastada perto de você."
+    ],
+    "topics": [
+      "home"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-stories-069",
+    "type": "micro_story",
+    "fragments": [
+      "O rio organizou suas pedras",
+      "sem perguntar qual deveria estar no topo.",
+      "A água encontrou o mesmo caminho",
+      "havia encontrado ontem.",
+      "Uma pedra mais escura estava um pouco afastada.",
+      "Mantenha essa cor mais escura.",
+      "Encontre algo próximo que não seja brilhante."
+    ],
+    "topics": [
+      "water",
+      "stone"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-stories-070",
+    "type": "micro_story",
+    "fragments": [
+      "Sob o toldo do mercado",
+      "sombra fez um retângulo suave.",
+      "Uma caixa de laranjas refletiu a luz que sobrou.",
+      "Alguém os contou sem falar.",
+      "Conte um pequeno grupo de coisas perto de você.",
+      "Não há necessidade de ser exato."
+    ],
+    "topics": [
+      "home",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-stories-071",
+    "type": "micro_story",
+    "fragments": [
+      "A neve sentou-se no trilho da cerca",
+      "como se tivesse sido convidado.",
+      "Cada postagem usava o mesmo chapéu silencioso.",
+      "O campo atrás dele era apenas campo.",
+      "Procure uma linha reta próxima.",
+      "Um quadro. Uma vantagem. Algum tipo de trilho."
+    ],
+    "topics": [
+      "weather",
+      "earth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-stories-072",
+    "type": "micro_story",
+    "fragments": [
+      "A escada da livraria girou duas vezes",
+      "antes de chegar ao chão silencioso.",
+      "Uma janela continha um vaso de tomilho.",
+      "Os livros inclinavam-se da mesma forma que velhos amigos inclinavam-se.",
+      "Encontre uma palavra impressa perto de você.",
+      "Mesmo um pequeno."
+    ],
+    "topics": [
+      "paper",
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-stories-073",
+    "type": "micro_story",
+    "fragments": [
+      "Na gaveta da cozinha",
+      "uma colher de pau aprendeu o formato da sopa.",
+      "Estava ao lado de um batedor",
+      "isso era apenas geometria até que alguém precisasse.",
+      "Olhe para um objeto comum perto de você.",
+      "Que seja o suficiente."
+    ],
+    "topics": [
+      "home",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-stories-074",
+    "type": "micro_story",
+    "fragments": [
+      "O caminho do jardim",
+      "conhecia dois tipos de verde.",
+      "Musgo entre as pedras.",
+      "E o verde mais alto que se movia quando o ar o fazia.",
+      "Guarde uma dessas verduras.",
+      "Olhe ao redor.",
+      "Você consegue encontrar seu próprio verde?"
+    ],
+    "topics": [
+      "plants",
+      "forest"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-stories-075",
+    "type": "micro_story",
+    "fragments": [
+      "Tarde no quarto",
+      "a janela mantinha um quadrado de noite.",
+      "Um abajur formava um quadrado menor sobre a mesa.",
+      "Entre eles, o ar fazia muito pouco.",
+      "Observe de onde vem a luz.",
+      "Você pode ficar com isso."
+    ],
+    "topics": [
+      "night",
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-stories-076",
+    "type": "micro_story",
+    "fragments": [
+      "Da janela",
+      "os campos chegavam em longas faixas claras.",
+      "Uma única árvore manteve seu lugar",
+      "enquanto o resto da visão mudou de ideia.",
+      "Fique com essa árvore.",
+      "Encontre algo próximo que esteja parado",
+      "enquanto outras coisas podem se mover."
+    ],
+    "topics": [
+      "earth",
+      "sky"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-stories-077",
+    "type": "micro_story",
+    "fragments": [
+      "Um envelope esperava na prateleira",
+      "sem pressa para ser aberto.",
+      "O papel tinha um leve forro azul.",
+      "Alguém havia escrito apenas a primeira palavra de um endereço.",
+      "Observe um pedaço de papel perto de você.",
+      "Até um rótulo conta."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "pt-stories-078",
+    "type": "micro_story",
+    "fragments": [
+      "Os azulejos do corredor",
+      "eram quase brancos",
+      "exceto por um que decidiu ser azul.",
+      "Ficou lá como um fato silencioso.",
+      "Mantenha esse azul.",
+      "Olhe para baixo ou ao redor.",
+      "Existe uma cor que se destaca um pouco?"
+    ],
+    "topics": [
+      "room",
+      "home"
+    ],
+    "difficulty": 1
+  }
+]

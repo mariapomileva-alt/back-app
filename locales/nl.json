@@ -1,0 +1,513 @@
+{
+  "app": {
+    "name": "Rug"
+  },
+  "home": {
+    "hero": "You’re here",
+    "prompt": "What feels possible right now?",
+    "openSettings": "Open settings",
+    "openSettingsHint": "Opens theme, privacy, and other quiet preferences",
+    "startToolHint": "Starts support immediately",
+    "callMyPerson": "Need someone? Call my person",
+    "callMyPersonNeed": "Need someone?",
+    "callMyPersonAction": "Call my person",
+    "callMyPersonHint": "Opens your support contact",
+    "tools": {
+      "breathe": "Breathe",
+      "distract": "Distract",
+      "ground": "Ground",
+      "move": "Move",
+      "listen": "Listen",
+      "read": "Read"
+    },
+    "namePrompt": "Tell us what to call you — only on this phone",
+    "namePromptAction": "Choose a name",
+    "namePromptSkip": "Not now",
+    "heroNamedLine2": "you’re here",
+    "heroNamedA11y": "{name}, you’re here"
+  },
+  "common": {
+    "close": "Dichtbij",
+    "closeHint": "Keert terug naar het vorige scherm",
+    "back": "Rug",
+    "selected": "Gekozen",
+    "on": "Op",
+    "off": "Uit",
+    "play": "Toneelstuk",
+    "pause": "Pauze",
+    "mute": "Stom",
+    "unmute": "Dempen opheffen",
+    "replay": "Opnieuw afspelen",
+    "next": "Volgende"
+  },
+  "settings": {
+    "title": "Instellingen",
+    "theme": "Verschijning",
+    "themeHint": "Kies het uiterlijk van Back",
+    "voice": "Stem en geluid",
+    "haptics": "Haptiek",
+    "hapticsHint": "Schakelt zachte haptische feedback in of uit",
+    "reduceMotion": "Verminder beweging",
+    "reduceMotionHint": "Maakt gebruik van rustigere bewegingen, zelfs als uw systeem animatie toestaat",
+    "language": "Taal",
+    "languageHint": "Verandert de taal van Back onmiddellijk op dit apparaat",
+    "languageBlockedDuringSession": "Beëindig of sluit eerst uw huidige ondersteuning, daarna kunt u de taal wijzigen.",
+    "languageBlockedDuringSessionHint": "Taal kan niet veranderen tijdens een actieve sessie",
+    "languageSystemDefault": "Gebruik apparaattaal",
+    "languageComingSoon": "Binnenkort beschikbaar",
+    "read": "Lees voorkeuren",
+    "readHint": "Kies hoe snel lijnen verschijnen",
+    "supportContact": "Ondersteuningscontact",
+    "patterns": "Mijn patronen",
+    "subscription": "Abonnement",
+    "backPlus": "Terug Plus",
+    "backPlusHint": "Opent Back Plus-informatie",
+    "subscriptionHint": "Opent abonnement en Back Plus",
+    "backPlusSubtitleTrial": "Proefperiode actief · eindigt op {date}",
+    "backPlusSubtitleAnnual": "Jaarabonnement · verlengd op {date}",
+    "backPlusSubtitleMonthly": "Maandabonnement · wordt verlengd op {datum}",
+    "backPlusSubtitleRequired": "Abonnement vereist",
+    "backPlusSubtitleUnavailable": "Abonnementsinformatie",
+    "privacy": "Privacy",
+    "terms": "Gebruiksvoorwaarden",
+    "emergency": "Extra ondersteuning",
+    "about": "Over Terug",
+    "groups": {
+      "subscription": "Abonnement",
+      "experience": "Ervaring",
+      "personal": "Persoonlijk",
+      "safetyLegal": "Veiligheid en juridisch"
+    },
+    "profile": "About you",
+    "profileHint": "How you want Back to greet you on this device"
+  },
+  "themes": {
+    "title": "Thema",
+    "warmNeutral": "Warme aarde",
+    "deepGreen": "Woud",
+    "softBeige": "Airy Blue Sage",
+    "selectHint": "Past deze look onmiddellijk toe"
+  },
+  "patterns": {
+    "intro": "Dit blijft op dit apparaat. Terug uploadt het nooit.",
+    "breathe": "Laatste adempatroon",
+    "distract": "Laatste afleidingsactiviteit",
+    "listen": "Laatste luistergeluid",
+    "theme": "Laatste thema",
+    "haptics": "Haptiek",
+    "reduceMotion": "Verminder beweging",
+    "empty": "Nog niet opgeslagen",
+    "recent": "Recente hulpmiddelen",
+    "recentItem": "Recent: {tool} · {duration}",
+    "durationShort": "een korte tijd",
+    "durationMinute": "ongeveer een minuut",
+    "durationFew": "een paar minuten",
+    "forget": "Vergeet dit",
+    "forgetHint": "Verwijdert deze onthouden keuzes en recente tools van dit apparaat"
+  },
+  "session": {
+    "outcome": "Hoe voel je je nu?",
+    "alternatives": "We kunnen iets anders proberen.",
+    "better": "Een beetje beter",
+    "same": "Ongeveer hetzelfde",
+    "worse": "Slechter",
+    "betterBody": "Neem de tijd. Je kunt terugkomen wanneer je maar wilt.",
+    "sameBody": "We kunnen iets anders proberen.",
+    "worseBody": "Laten we meer steun krijgen.",
+    "done": "Klaar",
+    "share": "Deel terug",
+    "shareMessage": "Terug is stille ondersteuning voor de volgende minuut. Zes tools op dit apparaat.",
+    "shareHint": "Opent het systeemshareblad. Er wordt niets verzonden totdat u kiest waar.",
+    "shareUnavailable": "Delen is hier niet beschikbaar.",
+    "callPerson": "Bel mijn persoon",
+    "emergency": "Extra ondersteuning",
+    "returnTools": "Terug naar gereedschap",
+    "tryElse": "Probeer iets anders",
+    "tryElseHint": "Kies voor een ander soort ondersteuning"
+  },
+  "extraSupport": {
+    "title": "Extra ondersteuning",
+    "heading": "Heb je wat meer ondersteuning nodig?",
+    "steps": {
+      "feet": "Zet beide voeten op de grond.",
+      "breath": "Laat je ademhaling zacht blijven. \nForceer het niet.",
+      "water": "Neem een klein slokje water \nals je er een paar hebt.",
+      "see": "Kijk rond en benoem \ndrie dingen die je kunt zien.",
+      "now": "Je hoeft niet te bedenken \nalles eruit nu."
+    },
+    "callMyPerson": "Bel mijn persoon",
+    "messageMyPerson": "Stuur een bericht naar mijn persoon",
+    "chooseSomeone": "Kies iemand die ik vertrouw",
+    "chooseSomeoneHint": "Opent een privécontact dat u op dit apparaat bewaart",
+    "callHint": "Opent de telefoonapp. Het gesprek start pas als u bevestigt.",
+    "messageHint": "Opent berichten. Er wordt niets verzonden totdat u het verzendt.",
+    "urgentTitle": "Heeft u dringend hulp nodig?",
+    "urgentBody": "Als u denkt dat u dringend medische hulp nodig heeft, \nNeem contact op met uw plaatselijke hulpdienst.",
+    "emergencyHelp": "Noodhulp · {nummer}",
+    "urgentInCountry": "Dringende hulp in {country}",
+    "emergencyHint": "Opent de telefoonapp. Het gesprek start pas als u bevestigt.",
+    "findLocal": "Vind lokale noodhulp",
+    "chooseCountry": "Kies land",
+    "changeCountry": "Wijzig land",
+    "keepCountry": "Houd dit land",
+    "keepCountryHint": "Bewaart dit land op dit apparaat voor de volgende keer",
+    "savedCountry": "Opgeslagen op dit apparaat"
+  },
+  "supportSetup": {
+    "title": "Iemand die ik vertrouw",
+    "intro": "Dit blijft op dit apparaat. Terug uploadt het nooit.",
+    "name": "Naam",
+    "nameHint": "Een naam die je zult herkennen",
+    "phone": "Telefoonnummer",
+    "phoneHint": "Alleen gebruikt om vanaf hier te bellen of berichten te sturen",
+    "save": "Redden",
+    "clear": "Verwijderen van dit apparaat",
+    "change": "Wijzig deze persoon",
+    "localNote": "Niets hier wordt naar Back of iemand anders verzonden."
+  },
+  "exercise": {
+    "progress": "{huidig} van {totaal}",
+    "elapsed": "Verstreken tijd",
+    "okay": "Het gaat voorlopig goed met mij",
+    "okayHint": "Beëindigt deze ondersteuning. Vraagt ​​na ongeveer 20 seconden hoe u zich voelt.",
+    "closeSession": "Sessie sluiten",
+    "closeHint": "Beëindigt deze ondersteuning en keert terug naar huis, of vraagt ​​hoe u zich voelt na een korte sessie.",
+    "tryAnother": "Probeer een andere",
+    "tryAnotherHint": "Kiest hier een andere activiteit, zonder deze ondersteuning te beëindigen.",
+    "breatheUncomfortable": "Ademen voelt ongemakkelijk",
+    "moveUncomfortable": "Beweging voelt niet goed"
+  },
+  "breathe": {
+    "inhale": "Adem zachtjes in",
+    "exhale": "Adem langzaam uit",
+    "hold": "Uitstel",
+    "circle": "Ademhalingscirkel",
+    "patternHint": "Verandert het ademhalingsritme",
+    "menu": "Ademhalingspatronen",
+    "menuHint": "Opent de stille patroonlijst",
+    "tryAnotherHint": "Opent de lijst met ademhalingspatronen",
+    "patterns": {
+      "gentle": "Zacht 4/6",
+      "equal": "Gelijk 4/4",
+      "box": "Vak 4-4-4-4"
+    }
+  },
+  "distract": {
+    "choose": "Kies iets eenvoudigs.",
+    "menu": "Afleidingsmenu",
+    "menuHint": "Keert terug naar de activiteitenlijst",
+    "change": "Activiteit wijzigen",
+    "changeHint": "Opent de lijst met stille activiteiten",
+    "tryAnotherHint": "Opent de lijst met stille activiteiten",
+    "soundOn": "Geluid aan",
+    "soundOff": "Geluid uit",
+    "soundOnHint": "Schakelt spelgeluiden in",
+    "soundOffHint": "Schakelt spelgeluiden uit",
+    "activities": {
+      "shapes": "Vormen",
+      "blocks": "Blokken",
+      "snake": "Slang",
+      "catch": "Vangst"
+    },
+    "shapes": {
+      "instruction": "Zoek de bijpassende vorm.",
+      "names": {
+        "circle": "Cirkel",
+        "square": "Vierkant",
+        "triangle": "Driehoek",
+        "quarter": "Kwart cirkel"
+      },
+      "colors": {
+        "forest": "Woud",
+        "sage": "Verstandig",
+        "sand": "Zand",
+        "clay": "Klei",
+        "cool": "Koel"
+      }
+    },
+    "blocks": {
+      "instruction": "Plaats een vorm. Een volledige regel verdwijnt.",
+      "empty": "Lege ruimte",
+      "filled": "Gevulde ruimte",
+      "tray": "Vormen om te plaatsen",
+      "selectHint": "Selecteert deze vorm. Kies vervolgens een ruimte op het raster, of sleep deze daarheen.",
+      "placeHint": "Gekozen. Dubbeltik op een ruimte op het raster om deze te plaatsen, of dubbeltik nogmaals om deze te draaien.",
+      "turn": "Draai",
+      "turnHint": "Roteert de geselecteerde vorm",
+      "cellEmpty": "Rij {rij}, kolom {col}, leeg",
+      "cellFilled": "Rij {rij}, kolom {col}, gevuld",
+      "cellPlace": "Plaats {piece} op rij {row}, kolom {col}",
+      "pieces": {
+        "twin": "Paar",
+        "bar": "Bar",
+        "elbow": "Hoek",
+        "tile": "Tegel",
+        "arch": "Boog"
+      }
+    },
+    "snake": {
+      "instruction": "Leid de slang en verzamel.",
+      "field": "Rustig pad",
+      "left": "Links",
+      "right": "Rechts",
+      "up": "Omhoog",
+      "down": "Omlaag"
+    },
+    "catch": {
+      "instruction": "Tik op de cirkel zoals deze verschijnt.",
+      "target": "Cirkel",
+      "targetHint": "De cirkel waarop u kunt tikken"
+    }
+  },
+  "read": {
+    "canvas": "Lezing",
+    "revealHint": "Toont de volgende regel. Lijnen verschijnen ook op zichzelf.",
+    "pausedHint": "Lijnen zijn onderbroken. Dubbeltik om de volgende regel weer te geven.",
+    "pause": "Pauzeer de lijnen",
+    "pauseHint": "Voorkomt dat lijnen vanzelf verschijnen. U kunt nog steeds op tikken om door te gaan.",
+    "continue": "Vervolg de lijnen",
+    "continueHint": "Laat lijnen weer vanzelf verschijnen.",
+    "tryAnotherHint": "Start hier een nieuw leesdraadje",
+    "speedHint": "Hoe snel elke regel verschijnt. Tik ergens om de volgende regel onmiddellijk weer te geven.",
+    "speeds": {
+      "unhurried": "Niet gehaast",
+      "steady": "Stabiel",
+      "quick": "Snel"
+    },
+    "speedBoostOff": "Lees sneller",
+    "speedBoostOffHint": "Toont elke regel ongeveer twee keer zo snel voor deze sessie.",
+    "speedBoostOn": "Sneller lezen, aan",
+    "speedBoostOnHint": "Lijnen verschijnen ongeveer twee keer zo snel. Dubbeltik om terug te keren naar de normale snelheid.",
+    "firstHintFollow": "Just follow the words.",
+    "firstHintTap": "Tap anywhere if you want to go faster."
+  },
+  "ground": {
+    "previous": "Vorige instructie",
+    "previousHint": "Toont de vorige aardingsinstructie",
+    "next": "Volgende instructie",
+    "nextHint": "Toont de volgende aardingsinstructie",
+    "continueHint": "Toont de volgende aardingsinstructie",
+    "menu": "Aardingsmenu",
+    "menuHint": "Opent de lijst met stille aardingen",
+    "tryAnotherHint": "Opent de lijst met stille aardingen",
+    "sequences": {
+      "feetBody": "Voeten & Lichaam",
+      "fiveSenses": "5–4–3–2–1",
+      "lookAround": "Kijk rond",
+      "texture": "Textuur en temperatuur"
+    },
+    "steps": {
+      "feet": "Voel waar je voeten de vloer raken.",
+      "toes": "Beweeg je tenen voorzichtig.",
+      "weight": "Let op het gewicht van je voeten.",
+      "support": "Voel wat je lichaam ondersteunt.",
+      "hands": "Let op je handen.",
+      "shoulders": "Laat je schouders verzachten.",
+      "stay": "Blijf hier nog een moment."
+    },
+    "fiveSenses": {
+      "see": "Kijk rond. Noem vijf dingen die je kunt zien.",
+      "touch": "Let op vier dingen die je kunt aanraken.",
+      "hear": "Noem drie geluiden die je kunt horen.",
+      "smell": "Let op twee geuren, als die er zijn.",
+      "taste": "Merk één smaak op, of alleen het gevoel in je mond."
+    },
+    "lookAround": {
+      "see": "Kijk om je heen en noem drie dingen die je kunt zien.",
+      "farthest": "Let op het verste wat je vanaf hier kunt zien.",
+      "still": "Zoek naar iets dat nog steeds is.",
+      "object": "Kijk naar een stilstaand object bij jou in de buurt."
+    },
+    "texture": {
+      "notice": "Let op één textuur die je niet aanraakt.",
+      "find": "Zoek iets met een beetje textuur.",
+      "cool": "Zoek een oppervlak dat er cool uitziet.",
+      "temp": "Merk een temperatuurverschil op, zelfs een klein verschil."
+    },
+    "sequenceHint": "Changes the grounding exercise"
+  },
+  "move": {
+    "hold": "Uitstel.",
+    "release": "Uitgave.",
+    "notice": "Let op het verschil.",
+    "noticeFinal": "Rust hier. Merk op hoe je hele lichaam voelt.",
+    "menu": "Bewegingsmenu",
+    "menuHint": "Opent de lijst met stille bewegingen",
+    "tryAnotherHint": "Opent de lijst met stille bewegingen",
+    "activities": {
+      "fingers": "Vingers",
+      "palms": "Druk op Palmen",
+      "shoulders": "Schouders",
+      "feet": "Druk op Voeten",
+      "bodyScan": "Bodyscan",
+      "tense": "Gespannen en loslaten",
+      "hands": "Handen"
+    },
+    "hints": {
+      "press": "Houd hier ingedrukt terwijl u de instructie volgt",
+      "hold": "Blijf vasthouden totdat u wordt gevraagd los te laten",
+      "release": "Laat nu los",
+      "notice": "Rust hier uit en merk hoe je lichaam voelt"
+    },
+    "steps": {
+      "fingers": "Krul uw vingers voorzichtig naar binnen.",
+      "palms": "Druk je handpalmen zachtjes tegen elkaar.",
+      "shoulders": "Til je schouders een beetje op.",
+      "feet": "Druk uw voeten zachtjes in de vloer.",
+      "bodyScan": "Scan langzaam van top tot teen.",
+      "tense": "Span uw handen zachtjes aan.",
+      "hands": "Druk je handen in je benen."
+    }
+  },
+  "listen": {
+    "volume": "Volume",
+    "previous": "Vorig geluid",
+    "next": "Volgende geluid",
+    "chooseSound": "Kies een geluid",
+    "menu": "Geluiden",
+    "menuHint": "Opent de lijst met stille geluiden",
+    "tryAnotherHint": "Opent de lijst met stille geluiden",
+    "nowPlaying": "{naam} speelt",
+    "tapToPlay": "Tik om te spelen",
+    "groups": {
+      "nature": "Natuur",
+      "steady": "Stabiel"
+    },
+    "sounds": {
+      "rain": "Zachte regen",
+      "ocean": "Oceaan",
+      "stream": "Zachte stroom",
+      "forest": "Rustig bos",
+      "birds": "Verre vogels",
+      "fan": "Stabiele ventilator",
+      "brown": "Bruin geluid",
+      "white": "Zachte witte ruis",
+      "melody": "Zachte melodie"
+    },
+    "images": {
+      "rain": "Stille regen op bladeren",
+      "ocean": "Kalm oceaanwater",
+      "stream": "Zacht stromend water",
+      "forest": "Gedempt bos",
+      "birds": "Open lucht met verre vogels",
+      "fan": "Zachte abstracte lucht",
+      "brown": "Warme bruine textuur",
+      "white": "Lichte, gelijkmatige textuur",
+      "melody": "Zachte warme tinten"
+    },
+    "soundHint": "Changes the quiet sound",
+    "playing": "Playing",
+    "paused": "{name} paused",
+    "pausedStatus": "Paused"
+  },
+  "privacy": {
+    "onDevice": "Alles wat Back gebruikt voor de zes tools blijft op dit apparaat staan. Er is geen account en geen cloud.",
+    "stored": "Dat kan een ondersteuningscontact zijn dat u opslaat, een leesgeheugen, voorkeuren zoals uiterlijk en beweging, en een korte lokale lijst met recente tools.",
+    "notSent": "Niets hiervan wordt naar Back of iemand anders verzonden. Als u belt of een bericht stuurt, wordt uw telefoonapp geopend en wordt deze pas gestart als u bevestigt.",
+    "emergency": "Met extra ondersteuning kunt u iemand in de buurt bereiken. Terug belt niet voor u.",
+    "notMedical": "Back is geen medisch hulpmiddel. Er worden geen gezondheidsdossiers aangemaakt en Apple Health wordt niet gelezen.",
+    "extraSupport": "Extra ondersteuning",
+    "extraSupportHint": "Opent Extra ondersteuning",
+    "policy": "Privacybeleid"
+  },
+  "terms": {
+    "selfHelp": "Back is een zelfhulptool. Het is geen therapie en geen medisch hulpmiddel.",
+    "emergency": "Rug is geen vervanging voor spoedeisende zorg. Heeft u dringend hulp nodig, maak dan gebruik van Extra ondersteuning of neem contact op met de plaatselijke hulpdiensten.",
+    "calls": "Als u iemand belt of een bericht stuurt, wordt uw telefoonapp geopend. Het gesprek of bericht start pas als u bevestigt.",
+    "data": "Wat je in Back opslaat, blijft op dit apparaat staan. Er is geen account en geen cloud."
+  },
+  "legal": {
+    "openWeb": "Webpagina openen"
+  },
+  "voice": {
+    "intro": "Ground gebruikt instructies op het scherm. Luister, je kunt rustig geluid afspelen op dit apparaat.",
+    "lastSound": "Laatste luistergeluid",
+    "lastSoundEmpty": "Nog niet opgeslagen",
+    "lastSoundNote": "Luister onthoudt het laatste geluid dat je kiest. Dat blijft op dit apparaat.",
+    "mute": "Geluid dempen",
+    "muteHint": "Stilte Luister en aard op dit apparaat"
+  },
+  "about": {
+    "body": "Terug is snelle lokale ondersteuning voor de volgende minuut, met zes tools op dit apparaat.",
+    "disclaimer": "Rug is geen medisch hulpmiddel en is geen therapie."
+  },
+  "subscription": {
+    "kicker": "Terug Plus",
+    "headline": "Houd Back dichtbij",
+    "headlineActive": "Terug Plus is actief",
+    "headlineExpired": "Uw Back Plus-toegang is beëindigd",
+    "intro": "Zes eenvoudige tools voor moeilijke momenten: privé, offline en klaar wanneer je ze nodig hebt. \n\nProbeer alles 7 dagen gratis met het jaarabonnement als u daarvoor in aanmerking komt. Na de proefperiode is een actief maand- of jaarabonnement vereist om Breathe, Distract, Ground, Move, Listen en Read te gebruiken.",
+    "introPreparing": "Back Plus wordt voorbereid. \n\nBack bevat een proefperiode van 7 dagen met het jaarabonnement, gevolgd door een maand- of jaarabonnement. De definitieve prijzen en verlengingsdetails verschijnen vóór aankoop in de App Store of Google Play. \n\nEr is niets te kopen totdat Back Plus wordt uitgebracht.",
+    "introTrialActive": "Uw proefperiode van zeven dagen is actief op dit apparaat. Bedankt dat u Back Plus probeert.",
+    "introAnnualActive": "Uw jaarabonnement Back Plus is actief op dit toestel. Bedankt voor het steunen van Back.",
+    "introMonthlyActive": "Uw maandelijkse Back Plus-abonnement is actief op dit apparaat. Bedankt voor het steunen van Back.",
+    "introExpired": "Kies een abonnement om de zes Back-tools te blijven gebruiken, of herstel een eerdere aankoop. \n\nNoodinformatie, Extra Ondersteuning en Bel mijn persoon zijn nog steeds beschikbaar.",
+    "statusTrialEnds": "Proefperiode eindigt op {date}",
+    "statusAnnualRenews": "Verlengt {datum}",
+    "statusMonthlyRenews": "Verlengt {datum}",
+    "benefitsTitle": "Alles in BackPlus",
+    "plannedNote": "In ontwikkeling:",
+    "safetyTitle": "Ondersteuning blijft beschikbaar",
+    "safetyBody": "Noodinformatie, Extra Support en Bel mijn persoon blijven ook zonder abonnement beschikbaar. Back is een zelfhulpinstrument en geen noodhulpdienst, medisch hulpmiddel of vervanging voor professionele zorg.",
+    "chooseTitle": "Kies wat voor jou werkt",
+    "chooseIntro": "Abonnementen worden afgehandeld door Apple of Google. Prijzen en geschiktheid voor de proefperiode zijn afkomstig van uw winkelaccount.",
+    "preparing": "Er is hier nog niets te koop. Wanneer Back Plus wordt gelanceerd, kunt u een proefperiode van zeven dagen starten met het jaarabonnement als u daarvoor in aanmerking komt.",
+    "planMonthly": "Terug Plus Maandelijks",
+    "planAnnual": "Terug Plus Jaarlijks",
+    "planAnnualTrial": "7 dagen gratis voor in aanmerking komende nieuwe abonnees",
+    "planMonthlyNoTrial": "Geen gratis proefperiode",
+    "planUnavailable": "Nog niet beschikbaar",
+    "planUnavailableA11y": "Plan nog niet beschikbaar",
+    "planMonthlyLabel": "Verlengt maandelijks totdat u het opzegt in uw winkelaccount.",
+    "planAnnualLabel": "Wordt jaarlijks verlengd tot opzegging in uw winkelaccount.",
+    "bestValue": "Beste waarde",
+    "regionalPricing": "Prijzen variëren per regio en valuta. De definitieve prijzen verschijnen in de winkel voordat u de aankoop bevestigt.",
+    "choosePlan": "Kies een abonnement",
+    "restore": "Aankopen herstellen",
+    "manage": "Beheer abonnement",
+    "notNow": "Niet nu",
+    "notNowHint": "Sluit Back Plus en keert terug naar het vorige scherm",
+    "linkSupport": "Ondersteuning voor abonnementen",
+    "linkPrivacy": "Privacy",
+    "linkTerms": "Voorwaarden",
+    "linkSubscriptions": "Abonnementen op internet",
+    "benefits": {
+      "sixTools": "Ademen, afleiden, aarden, bewegen, luisteren en lezen",
+      "offlineSounds": "De complete offline geluidscollectie",
+      "allExercises": "Alle ademhalings-, aardings-, bewegings- en aandachtsoefeningen",
+      "readExperience": "De complete leeservaring",
+      "patterns": "Persoonlijke lokale patronen",
+      "themes": "Alle uiterlijkthema's",
+      "expandedSounds": "Uitgebreide omgevingsgeluiden voor luisteren",
+      "additionalThemes": "Extra uiterlijkthema's",
+      "readLibrary": "Meer Lees bibliotheekinhoud",
+      "patternsDepth": "Dieper Mijn patronen inzichten"
+    },
+    "headlineTrial": "Your trial is active.",
+    "introThankYouActive": "Thank you for keeping Back close.\n\nYour subscription helps us care for these tools and keep them private, reliable and available offline.",
+    "trialAfterNote": "After the trial, your plan renews at the price shown in the App Store or Google Play before you confirm.",
+    "startTrial": "Start free trial",
+    "done": "Done",
+    "doneHint": "Returns to the previous screen",
+    "continue": "Continue",
+    "whatsIncluded": "What's included",
+    "loading": "Loading subscription…",
+    "managePreviewNote": "On this web preview, Manage subscription opens Back’s subscription information page. On your phone, it opens Apple or Google subscription settings."
+  },
+  "notFound": {
+    "title": "Deze pagina is er niet",
+    "body": "Keer terug naar terug wanneer u maar wilt.",
+    "home": "Ga naar Terug",
+    "homeHint": "Keert terug naar de zes hulpmiddelen"
+  },
+  "profile": {
+    "title": "About you",
+    "lead": "Optional. A name, a nickname — whatever feels right. Skip if you prefer. Nothing leaves this phone.",
+    "displayName": "What should we call you?",
+    "displayNameHint": "Zayka",
+    "deviceOnly": "We don’t upload this. No account, no server. Later we may offer optional, anonymous insights — only if you turn that on.",
+    "save": "Save",
+    "clear": "Remove what I shared",
+    "skip": "Skip for now"
+  }
+}

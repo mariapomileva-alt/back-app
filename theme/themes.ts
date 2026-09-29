@@ -26,6 +26,16 @@ export type ThemeColors = {
   secondaryButtonText: string;
   icon: string;
   overlay: string;
+  markPrimary: string;
+  markSecondary: string;
+  markMuted: string;
+  markWarmAccent: string;
+  markSurface: string;
+  markLine: string;
+  markDeep: string;
+  markPale: string;
+  groundEarth: string;
+  groundRoot: string;
 };
 
 export type AppTheme = {
@@ -60,6 +70,16 @@ export const themes: Record<ThemeName, AppTheme> = {
       secondaryButtonText: '#153C32',
       icon: brand.deepForest,
       overlay: hexToRgba(brand.deepForest, 0.28),
+      markPrimary: brand.forestGreen,
+      markSecondary: brand.sage,
+      markMuted: brand.paleSage,
+      markWarmAccent: brand.camel,
+      markSurface: '#E7DDCE',
+      markLine: brand.blueSage,
+      markDeep: brand.deepForest,
+      markPale: brand.paleSage,
+      groundEarth: '#E7DDCE',
+      groundRoot: brand.forestGreen,
     },
   },
   deepGreen: {
@@ -87,33 +107,54 @@ export const themes: Record<ThemeName, AppTheme> = {
       secondaryButtonText: '#F3EDE1',
       icon: '#F3EDE1',
       overlay: hexToRgba(brand.deepForest, 0.4),
+      markPrimary: '#D2E0D0',
+      markSecondary: '#A3C0A6',
+      markMuted: '#8AAF9A',
+      markWarmAccent: '#D1A96C',
+      markSurface: '#3D6658',
+      markLine: '#C5D4CC',
+      markDeep: '#F3EDE1',
+      markPale: '#8AAF9A',
+      groundEarth: '#3D6658',
+      groundRoot: '#A3C0A6',
     },
   },
+  /** Airy Blue Sage — Ground sprout reference: cool gray milk, cornflower + sage. */
   softBeige: {
     name: 'softBeige',
     statusBar: 'dark',
     colors: {
-      background: '#E3E8DF',
-      surface: '#F1F3ED',
-      surfaceSecondary: '#D8DFD5',
-      surfaceElevated: '#F1F3ED',
-      primary: '#17483A',
-      forest: brand.forestGreen,
-      secondaryGreen: brand.sage,
-      muted: brand.paleSage,
-      text: '#173B32',
-      textSecondary: '#64736C',
-      border: '#CBD3C8',
-      highlight: '#B89467',
-      clay: '#B89467',
-      organic: '#D8DFD5',
-      cool: '#8FAAA4',
-      buttonBackground: '#17483A',
-      buttonText: brand.inverseText,
-      secondaryButtonBackground: '#D8DFD5',
-      secondaryButtonText: '#173B32',
-      icon: '#17483A',
-      overlay: hexToRgba(brand.deepForest, 0.28),
+      background: '#F2F3F5',
+      surface: '#E1EDE5',
+      surfaceSecondary: '#CFDFD4',
+      surfaceElevated: '#FAFBFC',
+      primary: '#212121',
+      forest: '#212121',
+      secondaryGreen: '#9FC4AD',
+      muted: '#E1EDE5',
+      text: '#212121',
+      textSecondary: '#5C6560',
+      border: '#D5DDE2',
+      highlight: '#CBA980',
+      clay: '#CBA980',
+      organic: '#E1EDE5',
+      cool: '#5494F7',
+      buttonBackground: '#5494F7',
+      buttonText: '#FFFFFF',
+      secondaryButtonBackground: '#FAFBFC',
+      secondaryButtonText: '#212121',
+      icon: '#212121',
+      overlay: hexToRgba('#212121', 0.22),
+      markPrimary: '#212121',
+      markSecondary: '#9FC4AD',
+      markMuted: '#E1EDE5',
+      markWarmAccent: '#CBA980',
+      markSurface: '#E1EDE5',
+      markLine: '#BBD3FB',
+      markDeep: '#212121',
+      markPale: '#E1EDE5',
+      groundEarth: '#CFDFD4',
+      groundRoot: '#9FC4AD',
     },
   },
 };

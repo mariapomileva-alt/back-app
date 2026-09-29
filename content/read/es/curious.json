@@ -1,0 +1,1506 @@
+[
+  {
+    "id": "es-curious-001",
+    "type": "curious",
+    "fragments": [
+      "algunas mariposas",
+      "saborear con los pies."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-002",
+    "type": "curious",
+    "fragments": [
+      "Una nube puede flotar durante días",
+      "sin aterrizaje."
+    ],
+    "topics": [
+      "sky"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-003",
+    "type": "curious",
+    "fragments": [
+      "La miel se queda sola.",
+      "durante mucho tiempo."
+    ],
+    "topics": [
+      "food"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-004",
+    "type": "curious",
+    "fragments": [
+      "Los plátanos son bayas.",
+      "Las fresas no lo son."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "environment",
+      "text": "Ahora encuentra algo verde a tu alrededor."
+    }
+  },
+  {
+    "id": "es-curious-005",
+    "type": "curious",
+    "fragments": [
+      "La luna se mueve lentamente.",
+      "más lejos de la Tierra."
+    ],
+    "topics": [
+      "sky"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-006",
+    "type": "curious",
+    "fragments": [
+      "Hay más árboles en la Tierra.",
+      "que las estrellas que puedes ver en una noche clara."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-007",
+    "type": "curious",
+    "fragments": [
+      "Un caracol puede descansar",
+      "durante una larga temporada y luego continuar."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-008",
+    "type": "curious",
+    "fragments": [
+      "Las nutrias a veces flotan",
+      "uno al lado del otro mientras duermen."
+    ],
+    "topics": [
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-009",
+    "type": "curious",
+    "fragments": [
+      "Un día en Venus",
+      "dura más que su año."
+    ],
+    "topics": [
+      "sky"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-010",
+    "type": "curious",
+    "fragments": [
+      "El musgo puede crecer sobre la piedra,",
+      "madera y techos silenciosos."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-011",
+    "type": "curious",
+    "fragments": [
+      "Las gotas de lluvia no tienen forma de lágrima.",
+      "Son redondos al caer."
+    ],
+    "topics": [
+      "weather"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-012",
+    "type": "curious",
+    "fragments": [
+      "Se puede desplegar un clip",
+      "en una sola línea delgada."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-013",
+    "type": "curious",
+    "fragments": [
+      "Los girasoles se vuelven hacia la luz",
+      "Cuando ellas son jovenes"
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-014",
+    "type": "curious",
+    "fragments": [
+      "La habitación más silenciosa del planeta",
+      "Todavía no está completamente silenciosa."
+    ],
+    "topics": [
+      "quiet"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-015",
+    "type": "curious",
+    "fragments": [
+      "El vidrio marino tarda años",
+      "para volverse suave."
+    ],
+    "topics": [
+      "water"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "environment",
+      "text": "Ahora busca un reflejo, aunque sea pequeño."
+    }
+  },
+  {
+    "id": "es-curious-016",
+    "type": "curious",
+    "fragments": [
+      "Una cucharadita de miel",
+      "Es obra de muchas abejas."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-017",
+    "type": "curious",
+    "fragments": [
+      "La nieve no es de un solo color.",
+      "Tiene muchas sombras diminutas."
+    ],
+    "topics": [
+      "weather"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-018",
+    "type": "curious",
+    "fragments": [
+      "Algunos bambúes pueden crecer",
+      "tan rápido como puedas verlo."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-019",
+    "type": "curious",
+    "fragments": [
+      "La aguja de una brújula es un pequeño imán.",
+      "que escucha a la Tierra."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-020",
+    "type": "curious",
+    "fragments": [
+      "Los cuervos recuerdan caras",
+      "Ellas se han conocido antes."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "choice",
+      "text": "¿Qué color está más cerca de tus manos?",
+      "options": [
+        "cálida",
+        "fría",
+        "otra cosa"
+      ]
+    }
+  },
+  {
+    "id": "es-curious-021",
+    "type": "curious",
+    "fragments": [
+      "El Sahara tiene zonas de piedra pálida",
+      "así como arena."
+    ],
+    "topics": [
+      "earth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-022",
+    "type": "curious",
+    "fragments": [
+      "Un guijarro en un río",
+      "poco a poco se está redondeando."
+    ],
+    "topics": [
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-023",
+    "type": "curious",
+    "fragments": [
+      "Las llamas de las velas apuntan hacia arriba",
+      "porque el aire caliente sube."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-024",
+    "type": "curious",
+    "fragments": [
+      "Los helechos son más viejos.",
+      "que la mayoría de las plantas con flores."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-025",
+    "type": "curious",
+    "fragments": [
+      "El sonido de una concha",
+      "es principalmente la habitación que te rodea."
+    ],
+    "topics": [
+      "quiet"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-026",
+    "type": "curious",
+    "fragments": [
+      "Los búhos pueden girar la cabeza.",
+      "mucho más lejos de lo que la gente puede."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "environment",
+      "text": "Encuentra algo vivo, o el color de algo vivo."
+    }
+  },
+  {
+    "id": "es-curious-027",
+    "type": "curious",
+    "fragments": [
+      "tinta sobre papel",
+      "Es una fina capa de color seco."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-028",
+    "type": "curious",
+    "fragments": [
+      "La luz de la mañana suele ser más fría",
+      "en color que la luz del atardecer."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-029",
+    "type": "curious",
+    "fragments": [
+      "Una nuez parece un poco",
+      "como un cerebro diminuto, por casualidad."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-030",
+    "type": "curious",
+    "fragments": [
+      "Algunos líquenes viven",
+      "sobre la misma piedra durante décadas."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-031",
+    "type": "curious",
+    "fragments": [
+      "Vapor de una tetera",
+      "Es el agua convirtiéndose en aire por un momento."
+    ],
+    "topics": [
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-032",
+    "type": "curious",
+    "fragments": [
+      "Una tarjeta de biblioteca cataloga más que libros.",
+      "Cataloga devoluciones."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-033",
+    "type": "curious",
+    "fragments": [
+      "bebida de polillas",
+      "con una lengua larga y enrollada."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-034",
+    "type": "curious",
+    "fragments": [
+      "La estrella del norte",
+      "apenas parece moverse."
+    ],
+    "topics": [
+      "sky"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-035",
+    "type": "curious",
+    "fragments": [
+      "Clay recuerda la forma.",
+      "de las manos que lo sostenían."
+    ],
+    "topics": [
+      "earth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-036",
+    "type": "curious",
+    "fragments": [
+      "Una sombra es sólo el lugar",
+      "la luz no llegaba."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-037",
+    "type": "curious",
+    "fragments": [
+      "Las piñas se abren más",
+      "cuando el aire está seco."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "environment",
+      "text": "Ahora encuentra algo verde a tu alrededor."
+    }
+  },
+  {
+    "id": "es-curious-038",
+    "type": "curious",
+    "fragments": [
+      "El vidrio se fabrica principalmente",
+      "de arena derretida."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-039",
+    "type": "curious",
+    "fragments": [
+      "Los bigotes de un gato",
+      "Son casi tan anchas como su cuerpo."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-040",
+    "type": "curious",
+    "fragments": [
+      "La niebla es una nube",
+      "que decidió mantenerse bajo."
+    ],
+    "topics": [
+      "weather"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-041",
+    "type": "curious",
+    "fragments": [
+      "El papel alguna vez fue principalmente trapos,",
+      "luego principalmente madera."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-042",
+    "type": "curious",
+    "fragments": [
+      "Las pozas de marea mantienen un pequeño océano",
+      "durante unas horas."
+    ],
+    "topics": [
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-043",
+    "type": "curious",
+    "fragments": [
+      "Una semilla ya contiene",
+      "la idea de una hoja."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-044",
+    "type": "curious",
+    "fragments": [
+      "Los ecos son sonido",
+      "llegando por segunda vez."
+    ],
+    "topics": [
+      "quiet"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-045",
+    "type": "curious",
+    "fragments": [
+      "El color del hielo profundo",
+      "puede parecer casi azul."
+    ],
+    "topics": [
+      "weather"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-046",
+    "type": "curious",
+    "fragments": [
+      "Las abejas ven patrones en las flores.",
+      "que la gente extraña."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-047",
+    "type": "curious",
+    "fragments": [
+      "Un ladrillo es solo arcilla.",
+      "que aprendió a estar quieto."
+    ],
+    "topics": [
+      "earth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-048",
+    "type": "curious",
+    "fragments": [
+      "El viento no tiene color.",
+      "Vemos lo que se mueve."
+    ],
+    "topics": [
+      "weather"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "environment",
+      "text": "Nota el aire en tu piel por un momento."
+    }
+  },
+  {
+    "id": "es-curious-049",
+    "type": "curious",
+    "fragments": [
+      "Algunos hongos brillan débilmente",
+      "en bosques oscuros."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-050",
+    "type": "curious",
+    "fragments": [
+      "Un sello postal",
+      "Es un campo impreso muy pequeño."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-051",
+    "type": "curious",
+    "fragments": [
+      "el río amazonas",
+      "Puede ser más ancha que algunas ciudades."
+    ],
+    "topics": [
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-052",
+    "type": "curious",
+    "fragments": [
+      "Los relojes de diente de león son semillas.",
+      "esperando una brisa."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-053",
+    "type": "curious",
+    "fragments": [
+      "Un espejo es vidrio",
+      "con un metal silencioso detrás."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-054",
+    "type": "curious",
+    "fragments": [
+      "Los gorriones se bañan en polvo",
+      "así como en agua."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-055",
+    "type": "curious",
+    "fragments": [
+      "El olor a lluvia tiene nombre:",
+      "petricor."
+    ],
+    "topics": [
+      "weather"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-056",
+    "type": "curious",
+    "fragments": [
+      "El coral está formado por animales diminutos.",
+      "durante mucho tiempo."
+    ],
+    "topics": [
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-057",
+    "type": "curious",
+    "fragments": [
+      "un lapiz escribe",
+      "con un fino rastro de carbono."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-058",
+    "type": "curious",
+    "fragments": [
+      "El rocío es agua.",
+      "que se reunió del aire fresco."
+    ],
+    "topics": [
+      "weather"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-059",
+    "type": "curious",
+    "fragments": [
+      "Un roble puede vivir",
+      "más largo que una casa."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "environment",
+      "text": "Ahora encuentra algo verde a tu alrededor."
+    }
+  },
+  {
+    "id": "es-curious-060",
+    "type": "curious",
+    "fragments": [
+      "La palabra alfabeto",
+      "Proviene de dos primeras letras."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-061",
+    "type": "curious",
+    "fragments": [
+      "La lava se enfría hasta convertirse en piedra",
+      "con diferentes texturas."
+    ],
+    "topics": [
+      "earth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-062",
+    "type": "curious",
+    "fragments": [
+      "Un silbato de tetera es vapor.",
+      "apretando a través de un pequeño agujero."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-063",
+    "type": "curious",
+    "fragments": [
+      "Las luciérnagas hacen luz",
+      "sin mucho calor."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-064",
+    "type": "curious",
+    "fragments": [
+      "La gobi tiene inviernos",
+      "de nieve tranquila."
+    ],
+    "topics": [
+      "earth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-065",
+    "type": "curious",
+    "fragments": [
+      "Un marcador es una pausa.",
+      "puedes aguantar."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-066",
+    "type": "curious",
+    "fragments": [
+      "Las ondas viajan,",
+      "pero la mayor parte del agua se queda."
+    ],
+    "topics": [
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-067",
+    "type": "curious",
+    "fragments": [
+      "El lino comienza como",
+      "una planta alta de flores azules."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-068",
+    "type": "curious",
+    "fragments": [
+      "la letra q",
+      "Casi siempre trae a U."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-069",
+    "type": "curious",
+    "fragments": [
+      "Una maceta de terracota",
+      "Tiene forma de tierra y está cocido."
+    ],
+    "topics": [
+      "earth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-070",
+    "type": "curious",
+    "fragments": [
+      "Las nubes se ven lentas",
+      "Porque ellas son muy grandes."
+    ],
+    "topics": [
+      "sky"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "environment",
+      "text": "Mire hacia arriba, aunque sólo sea hasta el techo."
+    }
+  },
+  {
+    "id": "es-curious-071",
+    "type": "curious",
+    "fragments": [
+      "Las alas de una polilla pueden parecer corteza",
+      "a la luz del día."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-072",
+    "type": "curious",
+    "fragments": [
+      "Los cristales de sal son cubos diminutos.",
+      "si miras de cerca."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-073",
+    "type": "curious",
+    "fragments": [
+      "La palabra serendipia",
+      "comenzó como el título de una historia."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-074",
+    "type": "curious",
+    "fragments": [
+      "El alféizar de una ventana es un pequeño escenario.",
+      "para la luz."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-075",
+    "type": "curious",
+    "fragments": [
+      "Las piedras del río chocan entre sí",
+      "Hasta que ellas estén de acuerdo."
+    ],
+    "topics": [
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-076",
+    "type": "curious",
+    "fragments": [
+      "El tomillo mantiene su olor.",
+      "incluso cuando está seco."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-077",
+    "type": "curious",
+    "fragments": [
+      "El cielo nocturno es un mapa.",
+      "que gira lentamente."
+    ],
+    "topics": [
+      "sky"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-078",
+    "type": "curious",
+    "fragments": [
+      "Un sobre es una pausa doblada.",
+      "entre dos habitaciones."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-079",
+    "type": "curious",
+    "fragments": [
+      "Espuma en una ola",
+      "Es principalmente una mezcla de aire y agua."
+    ],
+    "topics": [
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-080",
+    "type": "curious",
+    "fragments": [
+      "Algunas manzanas se mantienen crujientes",
+      "si se mantiene fresco y quieto."
+    ],
+    "topics": [
+      "food"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-081",
+    "type": "curious",
+    "fragments": [
+      "Una bisagra permite que una puerta",
+      "cambiar de opinión suavemente."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "environment",
+      "text": "Apoya la vista en un objeto sin nombrarlo."
+    }
+  },
+  {
+    "id": "es-curious-082",
+    "type": "curious",
+    "fragments": [
+      "El liquen suele tener dos vidas.",
+      "compartiendo una forma."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-083",
+    "type": "curious",
+    "fragments": [
+      "La palabra canción de cuna",
+      "Es más vieja que la mayoría de las casas."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-084",
+    "type": "curious",
+    "fragments": [
+      "El pan caliente huele más fuerte",
+      "que el pan frío."
+    ],
+    "topics": [
+      "food"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-085",
+    "type": "curious",
+    "fragments": [
+      "Petricor",
+      "es el nombre del olor a lluvia sobre tierra seca."
+    ],
+    "topics": [
+      "weather"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-086",
+    "type": "curious",
+    "fragments": [
+      "Las nutrias a veces se toman las patas mientras duermen.",
+      "para que no se separen."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-087",
+    "type": "curious",
+    "fragments": [
+      "Un santiamén es una unidad de tiempo real.",
+      "Muy pequeña"
+    ],
+    "topics": [
+      "time"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-088",
+    "type": "curious",
+    "fragments": [
+      "Los cacahuetes no son nueces.",
+      "Ellas crecen bajo tierra."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-089",
+    "type": "curious",
+    "fragments": [
+      "La Estrella Polar apenas se mueve.",
+      "El resto del cielo gira a su alrededor."
+    ],
+    "topics": [
+      "sky"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-090",
+    "type": "curious",
+    "fragments": [
+      "flotadores de hielo",
+      "porque es un poco menos densa que el agua de la que procede."
+    ],
+    "topics": [
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-091",
+    "type": "curious",
+    "fragments": [
+      "un grupo de búhos",
+      "se llama parlamento."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-092",
+    "type": "curious",
+    "fragments": [
+      "El papel alguna vez fue",
+      "en su mayoría trapos de tela."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "environment",
+      "text": "Observe una hoja de papel cerca de usted, incluso una etiqueta."
+    }
+  },
+  {
+    "id": "es-curious-093",
+    "type": "curious",
+    "fragments": [
+      "Algunas musgos pueden secarse casi por completo.",
+      "y luego beben ellos mismos."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-094",
+    "type": "curious",
+    "fragments": [
+      "la aguja de una brújula",
+      "Es un pequeño viajero que prefiere una dirección."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-095",
+    "type": "curious",
+    "fragments": [
+      "La niebla es una nube",
+      "que decidió mantenerse bajo."
+    ],
+    "topics": [
+      "weather"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-096",
+    "type": "curious",
+    "fragments": [
+      "La frase completa más corta en inglés.",
+      "es Ir."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-097",
+    "type": "curious",
+    "fragments": [
+      "Las abejas pueden reconocer rostros humanos.",
+      "Ellas no necesitan."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-098",
+    "type": "curious",
+    "fragments": [
+      "Una sombra es sólo",
+      "la ausencia de luz."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-099",
+    "type": "curious",
+    "fragments": [
+      "Las piedras del río se mueven",
+      "con paciencia, no con un plan."
+    ],
+    "topics": [
+      "stone"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-100",
+    "type": "curious",
+    "fragments": [
+      "Las piñas crecen del suelo,",
+      "no de los árboles."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-101",
+    "type": "curious",
+    "fragments": [
+      "Un día en Venus",
+      "es más largo que su año."
+    ],
+    "topics": [
+      "sky"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-102",
+    "type": "curious",
+    "fragments": [
+      "Las habitaciones más tranquilas están construidas.",
+      "tragar casi todos los sonidos."
+    ],
+    "topics": [
+      "quiet"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "choice",
+      "text": "¿El sonido a tu alrededor es más silencioso o más zumbido?",
+      "options": [
+        "Cállate",
+        "tararear",
+        "No estoy segura"
+      ]
+    }
+  },
+  {
+    "id": "es-curious-103",
+    "type": "curious",
+    "fragments": [
+      "Los gofres tienen bolsillos.",
+      "porque alguien quería más de lo que hay encima."
+    ],
+    "topics": [
+      "food"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-104",
+    "type": "curious",
+    "fragments": [
+      "Las koalas tienen huellas dactilares",
+      "Eso puede parecerse sorprendentemente a la nuestra."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-105",
+    "type": "curious",
+    "fragments": [
+      "Luz del sol",
+      "Tarda unos ocho minutos en llegar."
+    ],
+    "topics": [
+      "sky"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-106",
+    "type": "curious",
+    "fragments": [
+      "Una semilla puede esperar años",
+      "y todavía sé qué hacer."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-107",
+    "type": "curious",
+    "fragments": [
+      "El jabón deja que el agua se deslice en la tela.",
+      "Al hacerlo un poco menos tímida."
+    ],
+    "topics": [
+      "home"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-108",
+    "type": "curious",
+    "fragments": [
+      "El color de un flamenco",
+      "proviene de lo que come."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-109",
+    "type": "curious",
+    "fragments": [
+      "La Antártida es un desierto.",
+      "Muy seco y muy ancho."
+    ],
+    "topics": [
+      "earth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-110",
+    "type": "curious",
+    "fragments": [
+      "Un momento fue una vez",
+      "un período de tiempo medido."
+    ],
+    "topics": [
+      "time"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-111",
+    "type": "curious",
+    "fragments": [
+      "Algunos árboles se comunican",
+      "a través del suelo, silenciosamente."
+    ],
+    "topics": [
+      "forest"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-112",
+    "type": "curious",
+    "fragments": [
+      "El vidrio se enfría muy rápido.",
+      "nunca llega a ser un cristal normal."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-113",
+    "type": "curious",
+    "fragments": [
+      "Los cuervos recuerdan caras",
+      "y puede guardar rencor o un favor."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-114",
+    "type": "curious",
+    "fragments": [
+      "El mar es más ruidoso por la noche.",
+      "sobre todo porque el resto del mundo es más tranquilo."
+    ],
+    "topics": [
+      "coast"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-115",
+    "type": "curious",
+    "fragments": [
+      "La palabra serendipia",
+      "Comenzó como un accidente de cuento de hadas."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-116",
+    "type": "curious",
+    "fragments": [
+      "una cabeza de girasol",
+      "no es una sola flor.",
+      "Son cientos de pequeñas",
+      "aceptando enfrentar la misma manera."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-117",
+    "type": "curious",
+    "fragments": [
+      "El color que llamamos azul cielo.",
+      "es luz dispersa.",
+      "El aire mantiene el azul.",
+      "y deja que el resto siga."
+    ],
+    "topics": [
+      "sky"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-118",
+    "type": "curious",
+    "fragments": [
+      "Sabor a pulpo",
+      "con sus brazos.",
+      "algo que llega",
+      "También puede ser algo de conocimiento."
+    ],
+    "topics": [
+      "water",
+      "nature"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-119",
+    "type": "curious",
+    "fragments": [
+      "un lapiz puede escribir",
+      "alrededor de cuarenta y cinco mil palabras",
+      "antes de que vuelva a ser sólo madera."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "es-curious-120",
+    "type": "curious",
+    "fragments": [
+      "Los panales usan hexágonos",
+      "porque seis lados",
+      "aguanta mucho",
+      "con muy poca pared."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1
+  }
+]

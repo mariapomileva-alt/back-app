@@ -1,0 +1,513 @@
+{
+  "app": {
+    "name": "Indietro"
+  },
+  "home": {
+    "hero": "You’re here",
+    "prompt": "What feels possible right now?",
+    "openSettings": "Open settings",
+    "openSettingsHint": "Opens theme, privacy, and other quiet preferences",
+    "startToolHint": "Starts support immediately",
+    "callMyPerson": "Need someone? Call my person",
+    "callMyPersonNeed": "Need someone?",
+    "callMyPersonAction": "Call my person",
+    "callMyPersonHint": "Opens your support contact",
+    "tools": {
+      "breathe": "Breathe",
+      "distract": "Distract",
+      "ground": "Ground",
+      "move": "Move",
+      "listen": "Listen",
+      "read": "Read"
+    },
+    "namePrompt": "Tell us what to call you — only on this phone",
+    "namePromptAction": "Choose a name",
+    "namePromptSkip": "Not now",
+    "heroNamedLine2": "you’re here",
+    "heroNamedA11y": "{name}, you’re here"
+  },
+  "common": {
+    "close": "Vicina",
+    "closeHint": "Ritorna alla schermata precedente",
+    "back": "Indietro",
+    "selected": "Selezionata",
+    "on": "SU",
+    "off": "Spento",
+    "play": "Giocare",
+    "pause": "Pausa",
+    "mute": "Muta",
+    "unmute": "Riattiva",
+    "replay": "Rigiocare",
+    "next": "Prossima"
+  },
+  "settings": {
+    "title": "Impostazioni",
+    "theme": "Aspetto",
+    "themeHint": "Scegli il look di Back",
+    "voice": "Voce e suono",
+    "haptics": "Aptica",
+    "hapticsHint": "Attiva o disattiva il feedback tattile delicato",
+    "reduceMotion": "Ridurre il movimento",
+    "reduceMotionHint": "Utilizza movimenti più calmi anche se il tuo sistema consente l'animazione",
+    "language": "Lingua",
+    "languageHint": "Cambia immediatamente la lingua di Back su questo dispositivo",
+    "languageBlockedDuringSession": "Termina o chiudi prima il supporto attuale, quindi puoi cambiare lingua.",
+    "languageBlockedDuringSessionHint": "La lingua non può cambiare durante una sessione attiva",
+    "languageSystemDefault": "Utilizza la lingua del dispositivo",
+    "languageComingSoon": "Prossimamente",
+    "read": "Leggi le preferenze",
+    "readHint": "Scegli la velocità con cui appaiono le linee",
+    "supportContact": "Contatto di supporto",
+    "patterns": "I miei modelli",
+    "subscription": "Sottoscrizione",
+    "backPlus": "Indietro Più",
+    "backPlusHint": "Apre le informazioni di Back Plus",
+    "subscriptionHint": "Apre abbonamento e Back Plus",
+    "backPlusSubtitleTrial": "Prova attiva · termina il giorno {data}",
+    "backPlusSubtitleAnnual": "Piano annuale · rinnova il {data}",
+    "backPlusSubtitleMonthly": "Piano mensile · rinnova il {data}",
+    "backPlusSubtitleRequired": "È richiesto l'abbonamento",
+    "backPlusSubtitleUnavailable": "Informazioni sull'abbonamento",
+    "privacy": "Privacy",
+    "terms": "Termini di utilizzo",
+    "emergency": "Supporto aggiuntivo",
+    "about": "A proposito di Indietro",
+    "groups": {
+      "subscription": "Abbonamento",
+      "experience": "Esperienza",
+      "personal": "Personale",
+      "safetyLegal": "Sicurezza e legalità"
+    },
+    "profile": "About you",
+    "profileHint": "How you want Back to greet you on this device"
+  },
+  "themes": {
+    "title": "Tema",
+    "warmNeutral": "Terra calda",
+    "deepGreen": "Foresta",
+    "softBeige": "Airy Blue Sage",
+    "selectHint": "Applica questo aspetto immediatamente"
+  },
+  "patterns": {
+    "intro": "Questo rimane su questo dispositivo. Indietro non lo carica mai.",
+    "breathe": "Modello Ultimo respiro",
+    "distract": "Ultima attività di distrazione",
+    "listen": "Suono dell'ultimo ascolto",
+    "theme": "Ultimo tema",
+    "haptics": "Aptica",
+    "reduceMotion": "Ridurre il movimento",
+    "empty": "Non ancora salvato",
+    "recent": "Strumenti recenti",
+    "recentItem": "Recentemente: {strumento} · {durata}",
+    "durationShort": "un po' di tempo",
+    "durationMinute": "circa un minuto",
+    "durationFew": "pochi minuti",
+    "forget": "Dimentica questo",
+    "forgetHint": "Rimuove le scelte ricordate e gli strumenti recenti da questo dispositivo"
+  },
+  "session": {
+    "outcome": "Come ti senti adesso?",
+    "alternatives": "Possiamo provare qualcosa di diverso.",
+    "better": "Un po' meglio",
+    "same": "Più o meno lo stesso",
+    "worse": "Peggio",
+    "betterBody": "Prenditi il ​​​​tuo tempo. Puoi tornare quando ne avrai bisogno.",
+    "sameBody": "Possiamo provare qualcosa di diverso.",
+    "worseBody": "Otteniamo più supporto.",
+    "done": "Fatto",
+    "share": "Condividi indietro",
+    "shareMessage": "Il ritorno è un supporto silenzioso per il minuto successivo. Sei strumenti, su questo dispositivo.",
+    "shareHint": "Apre il foglio di condivisione del sistema. Non viene inviato nulla finché non scegli dove.",
+    "shareUnavailable": "La condivisione non è disponibile qui.",
+    "callPerson": "Chiama la mia persona",
+    "emergency": "Supporto aggiuntivo",
+    "returnTools": "Ritorna agli strumenti",
+    "tryElse": "Prova qualcos'altro",
+    "tryElseHint": "Scegli un diverso tipo di supporto"
+  },
+  "extraSupport": {
+    "title": "Supporto aggiuntivo",
+    "heading": "Hai bisogno di un po' più di supporto?",
+    "steps": {
+      "feet": "Metti entrambi i piedi sul pavimento.",
+      "breath": "Lascia che il tuo respiro rimanga delicato. \nNon forzarlo.",
+      "water": "Bevi un piccolo sorso d'acqua \nse ne hai qualcuno.",
+      "see": "Guardati intorno e dai un nome \ntre cose che puoi vedere.",
+      "now": "Non devi capire \ntutto fuori adesso."
+    },
+    "callMyPerson": "Chiama la mia persona",
+    "messageMyPerson": "Invia un messaggio alla mia persona",
+    "chooseSomeone": "Scegli qualcuno di cui mi fido",
+    "chooseSomeoneHint": "Apre un contatto privato che conservi su questo dispositivo",
+    "callHint": "Apre l'app del telefono. La chiamata parte solo se confermi.",
+    "messageHint": "Apre i messaggi. Non viene inviato nulla finché non lo invii.",
+    "urgentTitle": "Hai bisogno di aiuto urgente?",
+    "urgentBody": "Se pensi di aver bisogno di assistenza medica urgente, \ncontattare il servizio di emergenza locale.",
+    "emergencyHelp": "Aiuto di emergenza · {numero}",
+    "urgentInCountry": "Aiuto urgente in {paese}",
+    "emergencyHint": "Apre l'app del telefono. La chiamata parte solo se confermi.",
+    "findLocal": "Trova aiuto di emergenza locale",
+    "chooseCountry": "Scegli il paese",
+    "changeCountry": "Cambia paese",
+    "keepCountry": "Mantieni questo paese",
+    "keepCountryHint": "Salva questo Paese su questo dispositivo per la prossima volta",
+    "savedCountry": "Salvato su questo dispositivo"
+  },
+  "supportSetup": {
+    "title": "Qualcuno di cui mi fido",
+    "intro": "Questo rimane su questo dispositivo. Indietro non lo carica mai.",
+    "name": "Nome",
+    "nameHint": "Un nome che riconoscerai",
+    "phone": "Numero di telefono",
+    "phoneHint": "Utilizzato solo per chiamare o inviare messaggi da qui",
+    "save": "Salva",
+    "clear": "Rimuovi da questo dispositivo",
+    "change": "Cambia questa persona",
+    "localNote": "Niente qui viene inviato a Back o a chiunque altro."
+  },
+  "exercise": {
+    "progress": "{attuale} di {totale}",
+    "elapsed": "Tempo trascorso",
+    "okay": "Sto bene per ora",
+    "okayHint": "Termina questo supporto. Dopo circa 20 secondi, ti chiede come ti senti.",
+    "closeSession": "Chiudi sessione",
+    "closeHint": "Termina questo supporto e torna a casa, oppure ti chiede come ti senti dopo una breve sessione.",
+    "tryAnother": "Provane un altro",
+    "tryAnotherHint": "Sceglie un'altra attività qui, senza interrompere questo supporto.",
+    "breatheUncomfortable": "La respirazione è scomoda",
+    "moveUncomfortable": "Il movimento non sembra giusto"
+  },
+  "breathe": {
+    "inhale": "Inspira delicatamente",
+    "exhale": "Espira lentamente",
+    "hold": "Presa",
+    "circle": "Cerchio di respirazione",
+    "patternHint": "Cambia il ritmo della respirazione",
+    "menu": "Modelli di respirazione",
+    "menuHint": "Apre l'elenco dei pattern silenziosi",
+    "tryAnotherHint": "Apre l'elenco dei modelli di respirazione",
+    "patterns": {
+      "gentle": "Delicato 4/6",
+      "equal": "Pari 4/4",
+      "box": "Casella 4-4-4-4"
+    }
+  },
+  "distract": {
+    "choose": "Scegli qualcosa di semplice.",
+    "menu": "Menù di distrazione",
+    "menuHint": "Ritorna all'elenco delle attività",
+    "change": "Cambia attività",
+    "changeHint": "Apre l'elenco delle attività tranquille",
+    "tryAnotherHint": "Apre l'elenco delle attività tranquille",
+    "soundOn": "Suono attivo",
+    "soundOff": "Suono disattivato",
+    "soundOnHint": "Attiva i suoni del gioco",
+    "soundOffHint": "Disattiva i suoni del gioco",
+    "activities": {
+      "shapes": "Forme",
+      "blocks": "Blocchi",
+      "snake": "Serpente",
+      "catch": "Presa"
+    },
+    "shapes": {
+      "instruction": "Trova la forma corrispondente.",
+      "names": {
+        "circle": "Cerchio",
+        "square": "Piazza",
+        "triangle": "Triangolo",
+        "quarter": "Quarto di cerchio"
+      },
+      "colors": {
+        "forest": "Foresta",
+        "sage": "Saggia",
+        "sand": "Sabbia",
+        "clay": "Argilla",
+        "cool": "Freddo"
+      }
+    },
+    "blocks": {
+      "instruction": "Posiziona una forma. Una linea intera svanisce.",
+      "empty": "Spazio vuoto",
+      "filled": "Spazio pieno",
+      "tray": "Forme da posizionare",
+      "selectHint": "Seleziona questa forma. Quindi scegli uno spazio sulla griglia o trascinalo lì.",
+      "placeHint": "Selezionato. Tocca due volte uno spazio sulla griglia per posizionarlo oppure tocca nuovamente due volte per girarlo.",
+      "turn": "Giro",
+      "turnHint": "Ruota la forma selezionata",
+      "cellEmpty": "Riga {row}, colonna {col}, vuota",
+      "cellFilled": "Riga {row}, colonna {col}, riempita",
+      "cellPlace": "Posiziona {pezzo} nella riga {riga}, colonna {col}",
+      "pieces": {
+        "twin": "Paio",
+        "bar": "Sbarra",
+        "elbow": "Angolo",
+        "tile": "Piastrella",
+        "arch": "Arco"
+      }
+    },
+    "snake": {
+      "instruction": "Guida il serpente e raccogli.",
+      "field": "Percorso tranquillo",
+      "left": "Sinistra",
+      "right": "Destra",
+      "up": "Su",
+      "down": "Giù"
+    },
+    "catch": {
+      "instruction": "Tocca il cerchio come appare.",
+      "target": "Cerchio",
+      "targetHint": "Il cerchio che puoi toccare"
+    }
+  },
+  "read": {
+    "canvas": "Lettura",
+    "revealHint": "Mostra la riga successiva. Le linee appaiono anche da sole.",
+    "pausedHint": "Le linee sono in pausa. Tocca due volte per mostrare la riga successiva.",
+    "pause": "Metti in pausa le righe",
+    "pauseHint": "Impedisce alle linee di apparire da sole. Puoi ancora toccare per continuare.",
+    "continue": "Continua le righe",
+    "continueHint": "Lascia che le linee appaiano di nuovo da sole.",
+    "tryAnotherHint": "Inizia un nuovo thread di lettura qui",
+    "speedHint": "La velocità con cui viene visualizzata ogni riga. Tocca un punto qualsiasi per visualizzare immediatamente la riga successiva.",
+    "speeds": {
+      "unhurried": "Senza fretta",
+      "steady": "Costante",
+      "quick": "Presto"
+    },
+    "speedBoostOff": "Leggi più velocemente",
+    "speedBoostOffHint": "Mostra ciascuna riga circa due volte più velocemente per questa sessione.",
+    "speedBoostOn": "Lettura più veloce, avanti",
+    "speedBoostOnHint": "Le linee appaiono circa due volte più velocemente. Tocca due volte per tornare alla velocità normale.",
+    "firstHintFollow": "Just follow the words.",
+    "firstHintTap": "Tap anywhere if you want to go faster."
+  },
+  "ground": {
+    "previous": "Istruzione precedente",
+    "previousHint": "Mostra le precedenti istruzioni di messa a terra",
+    "next": "Prossima istruzione",
+    "nextHint": "Mostra la successiva istruzione di messa a terra",
+    "continueHint": "Mostra la successiva istruzione di messa a terra",
+    "menu": "Menù di messa a terra",
+    "menuHint": "Apre l'elenco dei collegamenti silenziosi",
+    "tryAnotherHint": "Apre l'elenco dei collegamenti silenziosi",
+    "sequences": {
+      "feetBody": "Piedi e corpo",
+      "fiveSenses": "5–4–3–2–1",
+      "lookAround": "Guardati intorno",
+      "texture": "Consistenza e temperatura"
+    },
+    "steps": {
+      "feet": "Senti dove i tuoi piedi toccano il pavimento.",
+      "toes": "Muovi delicatamente le dita dei piedi.",
+      "weight": "Nota il peso dei tuoi piedi.",
+      "support": "Senti cosa sostiene il tuo corpo.",
+      "hands": "Nota le tue mani.",
+      "shoulders": "Lascia che le tue spalle si ammorbidiscano.",
+      "stay": "Rimani qui ancora un momento."
+    },
+    "fiveSenses": {
+      "see": "Guardati intorno. Nomina cinque cose che puoi vedere.",
+      "touch": "Nota quattro cose che puoi toccare.",
+      "hear": "Nomina tre suoni che puoi sentire.",
+      "smell": "Nota due odori, se ce ne sono.",
+      "taste": "Nota un assaggio o semplicemente la sensazione in bocca."
+    },
+    "lookAround": {
+      "see": "Guardati intorno e nomina tre cose che puoi vedere.",
+      "farthest": "Nota la cosa più lontana che puoi vedere da qui.",
+      "still": "Cerca qualcosa che sia fermo.",
+      "object": "Osserva un oggetto immobile vicino a te."
+    },
+    "texture": {
+      "notice": "Nota una texture che non stai toccando.",
+      "find": "Trova qualcosa con un po' di consistenza.",
+      "cool": "Trova una superficie che sembri fresca al tatto.",
+      "temp": "Notare una differenza di temperatura, anche piccola."
+    },
+    "sequenceHint": "Changes the grounding exercise"
+  },
+  "move": {
+    "hold": "Presa.",
+    "release": "Pubblicazione.",
+    "notice": "Nota la differenza.",
+    "noticeFinal": "Riposa qui. Nota come si sente tutto il tuo corpo.",
+    "menu": "Menù di movimento",
+    "menuHint": "Apre l'elenco dei movimenti silenziosi",
+    "tryAnotherHint": "Apre l'elenco dei movimenti silenziosi",
+    "activities": {
+      "fingers": "Dita",
+      "palms": "Premi i palmi delle mani",
+      "shoulders": "Spalle",
+      "feet": "Premi i piedi",
+      "bodyScan": "Scansione del corpo",
+      "tense": "Teso e rilasciato",
+      "hands": "Mani"
+    },
+    "hints": {
+      "press": "Tieni premuto qui mentre segui le istruzioni",
+      "hold": "Continua a tenere premuto finché non ti viene chiesto di rilasciare",
+      "release": "Rilascia ora",
+      "notice": "Riposa qui e nota come si sente il tuo corpo"
+    },
+    "steps": {
+      "fingers": "Piega delicatamente le dita verso l'interno.",
+      "palms": "Premi delicatamente i palmi delle mani.",
+      "shoulders": "Solleva leggermente le spalle.",
+      "feet": "Premi delicatamente i piedi sul pavimento.",
+      "bodyScan": "Esegui la scansione lentamente dalla testa ai piedi.",
+      "tense": "Tendere delicatamente le mani.",
+      "hands": "Premi le mani sulle gambe."
+    }
+  },
+  "listen": {
+    "volume": "Volume",
+    "previous": "Suono precedente",
+    "next": "Suono successivo",
+    "chooseSound": "Scegli un suono",
+    "menu": "Suoni",
+    "menuHint": "Apre l'elenco dei suoni silenziosi",
+    "tryAnotherHint": "Apre l'elenco dei suoni silenziosi",
+    "nowPlaying": "{nome} sta giocando",
+    "tapToPlay": "Tocca per giocare",
+    "groups": {
+      "nature": "Natura",
+      "steady": "Costante"
+    },
+    "sounds": {
+      "rain": "Pioggia soffice",
+      "ocean": "Oceano",
+      "stream": "Flusso delicato",
+      "forest": "Foresta tranquilla",
+      "birds": "Uccelli lontani",
+      "fan": "Ventilatore costante",
+      "brown": "Rumore marrone",
+      "white": "Rumore bianco morbido",
+      "melody": "Melodia morbida"
+    },
+    "images": {
+      "rain": "Pioggia silenziosa sulle foglie",
+      "ocean": "Calma acqua dell'oceano",
+      "stream": "Acqua dolce che scorre",
+      "forest": "Foresta muta",
+      "birds": "Cielo aperto con uccelli lontani",
+      "fan": "Morbida aria astratta",
+      "brown": "Texture marrone calda",
+      "white": "Texture leggera e uniforme",
+      "melody": "Toni morbidi e caldi"
+    },
+    "soundHint": "Changes the quiet sound",
+    "playing": "Playing",
+    "paused": "{name} paused",
+    "pausedStatus": "Paused"
+  },
+  "privacy": {
+    "onDevice": "Tutto ciò che Back utilizza per i sei strumenti rimane su questo dispositivo. Non c'è nessun account e nessun cloud.",
+    "stored": "Ciò può includere un contatto di supporto salvato, memoria di lettura, preferenze come aspetto e movimento e un breve elenco locale di strumenti recenti.",
+    "notSent": "Niente di tutto questo viene inviato a Back o a chiunque altro. Se chiami o invii un messaggio, l'app del tuo telefono si apre e si avvia solo se confermi.",
+    "emergency": "Un ulteriore supporto può aiutarti a raggiungere qualcuno nelle vicinanze. Indietro non effettua la chiamata per te.",
+    "notMedical": "Back non è un dispositivo medico. Non crea cartelle cliniche e non legge Apple Health.",
+    "extraSupport": "Supporto aggiuntivo",
+    "extraSupportHint": "Apre il supporto extra",
+    "policy": "Politica sulla riservatezza"
+  },
+  "terms": {
+    "selfHelp": "Back è uno strumento di auto-aiuto. Non è una terapia e non è un dispositivo medico.",
+    "emergency": "La schiena non sostituisce le cure di emergenza. Se hai bisogno di aiuto urgente, utilizza il supporto Extra o contatta i servizi di emergenza locali.",
+    "calls": "Se chiami o invii un messaggio a qualcuno, si apre l'app del telefono. La chiamata o il messaggio iniziano solo se confermi.",
+    "data": "Ciò che salvi in ​​Indietro rimane su questo dispositivo. Non c'è nessun account e nessun cloud."
+  },
+  "legal": {
+    "openWeb": "Apri la pagina web"
+  },
+  "voice": {
+    "intro": "Ground utilizza le istruzioni sullo schermo. Ascolta può riprodurre un suono silenzioso su questo dispositivo.",
+    "lastSound": "Suono dell'ultimo ascolto",
+    "lastSoundEmpty": "Non ancora salvato",
+    "lastSoundNote": "Ascolta ricorda l'ultimo suono che hai scelto. Questo rimane su questo dispositivo.",
+    "mute": "Suono muto",
+    "muteHint": "Silenzia Ascolta e metti a terra su questo dispositivo"
+  },
+  "about": {
+    "body": "Indietro è il supporto locale rapido per il minuto successivo, con sei strumenti su questo dispositivo.",
+    "disclaimer": "Back non è un dispositivo medico e non costituisce una terapia."
+  },
+  "subscription": {
+    "kicker": "Indietro Più",
+    "headline": "Tieniti vicino",
+    "headlineActive": "Back Plus è attivo",
+    "headlineExpired": "Il tuo accesso a Back Plus è terminato",
+    "intro": "Sei semplici strumenti per i momenti difficili: privati, offline e pronti ogni volta che ne hai bisogno. \n\nProva tutto gratuitamente per 7 giorni con il piano annuale quando sei idoneo. Dopo la prova è necessario un abbonamento mensile o annuale attivo per utilizzare Breathe, Distract, Ground, Move, Listen e Read.",
+    "introPreparing": "Back Plus è in preparazione. \n\nIl servizio Back includerà una prova di 7 giorni con il piano annuale, seguita da un abbonamento mensile o annuale. I prezzi finali e i dettagli del rinnovo verranno visualizzati nell'App Store o in Google Play prima dell'acquisto. \n\nNon c'è nulla da acquistare finché non viene rilasciato Back Plus.",
+    "introTrialActive": "La tua prova di 7 giorni è attiva su questo dispositivo. Grazie per aver provato Back Plus.",
+    "introAnnualActive": "Il tuo piano annuale Back Plus è attivo su questo dispositivo. Grazie per il supporto a Back.",
+    "introMonthlyActive": "Il tuo piano mensile Back Plus è attivo su questo dispositivo. Grazie per il supporto a Back.",
+    "introExpired": "Scegli un piano per continuare a utilizzare i sei strumenti Indietro o ripristinare un acquisto precedente. \n\nLe informazioni sulle emergenze, il supporto extra e Chiama la mia persona sono ancora disponibili.",
+    "statusTrialEnds": "La prova termina il giorno {data}",
+    "statusAnnualRenews": "Rinnova il {data}",
+    "statusMonthlyRenews": "Rinnova il {data}",
+    "benefitsTitle": "Tutto in Back Plus",
+    "plannedNote": "In sviluppo:",
+    "safetyTitle": "Il supporto rimane disponibile",
+    "safetyBody": "Informazioni di emergenza, Supporto extra e Chiama la mia persona rimangono disponibili senza abbonamento. Back è uno strumento di auto-aiuto, non un servizio di emergenza, un dispositivo medico o un sostituto dell'assistenza professionale.",
+    "chooseTitle": "Scegli ciò che funziona per te",
+    "chooseIntro": "Gli abbonamenti sono gestiti da Apple o Google. I prezzi e l'idoneità alla prova provengono dal tuo account del negozio.",
+    "preparing": "Non c'è ancora niente da comprare qui. Al lancio di Back Plus, se sei idoneo puoi iniziare una prova di 7 giorni sul piano annuale.",
+    "planMonthly": "Indietro Plus mensile",
+    "planAnnual": "Indietro Plus annuale",
+    "planAnnualTrial": "7 giorni gratuiti per i nuovi abbonati idonei",
+    "planMonthlyNoTrial": "Nessuna prova gratuita",
+    "planUnavailable": "Non ancora disponibile",
+    "planUnavailableA11y": "Piano non ancora disponibile",
+    "planMonthlyLabel": "Si rinnova mensilmente fino all'annullamento nel tuo account del negozio.",
+    "planAnnualLabel": "Si rinnova annualmente fino all'annullamento nel tuo account del negozio.",
+    "bestValue": "Miglior valore",
+    "regionalPricing": "I prezzi variano in base alla regione e alla valuta. I prezzi finali vengono visualizzati nel negozio prima della conferma dell'acquisto.",
+    "choosePlan": "Scegli un piano",
+    "restore": "Ripristina gli acquisti",
+    "manage": "Gestisci l'abbonamento",
+    "notNow": "Non adesso",
+    "notNowHint": "Chiude Back Plus e torna alla schermata precedente",
+    "linkSupport": "Supporto per l'abbonamento",
+    "linkPrivacy": "Privacy",
+    "linkTerms": "Termini",
+    "linkSubscriptions": "Abbonamenti sul web",
+    "benefits": {
+      "sixTools": "Respira, distrai, radicati, muoviti, ascolta e leggi",
+      "offlineSounds": "La raccolta audio offline completa",
+      "allExercises": "Tutti gli esercizi di respirazione, radicamento, movimento e attenzione",
+      "readExperience": "L'esperienza di lettura completa",
+      "patterns": "Modelli locali personali",
+      "themes": "Tutti i temi dell'aspetto",
+      "expandedSounds": "Suoni ambientali espansi per Ascolta",
+      "additionalThemes": "Temi di aspetto aggiuntivi",
+      "readLibrary": "Altro Leggi il contenuto della libreria",
+      "patternsDepth": "Approfondimenti sui miei modelli"
+    },
+    "headlineTrial": "Your trial is active.",
+    "introThankYouActive": "Thank you for keeping Back close.\n\nYour subscription helps us care for these tools and keep them private, reliable and available offline.",
+    "trialAfterNote": "After the trial, your plan renews at the price shown in the App Store or Google Play before you confirm.",
+    "startTrial": "Start free trial",
+    "done": "Done",
+    "doneHint": "Returns to the previous screen",
+    "continue": "Continue",
+    "whatsIncluded": "What's included",
+    "loading": "Loading subscription…",
+    "managePreviewNote": "On this web preview, Manage subscription opens Back’s subscription information page. On your phone, it opens Apple or Google subscription settings."
+  },
+  "notFound": {
+    "title": "Questa pagina non è qui",
+    "body": "Torna su Indietro ogni volta che ne hai bisogno.",
+    "home": "Vai a Indietro",
+    "homeHint": "Ritorna ai sei strumenti"
+  },
+  "profile": {
+    "title": "About you",
+    "lead": "Optional. A name, a nickname — whatever feels right. Skip if you prefer. Nothing leaves this phone.",
+    "displayName": "What should we call you?",
+    "displayNameHint": "Zayka",
+    "deviceOnly": "We don’t upload this. No account, no server. Later we may offer optional, anonymous insights — only if you turn that on.",
+    "save": "Save",
+    "clear": "Remove what I shared",
+    "skip": "Skip for now"
+  }
+}

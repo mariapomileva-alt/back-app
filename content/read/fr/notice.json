@@ -1,0 +1,727 @@
+[
+  {
+    "id": "fr-notice-001",
+    "type": "observation",
+    "fragments": [
+      "Trouver un mot",
+      "vous pouvez voir autour de vous."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-notice-002",
+    "type": "observation",
+    "fragments": [
+      "Remarquez une couleur",
+      "près de vos mains."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-notice-003",
+    "type": "observation",
+    "fragments": [
+      "Trouver un avantage",
+      "où deux surfaces se rencontrent."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-notice-004",
+    "type": "observation",
+    "fragments": [
+      "Cherche quelque chose",
+      "c'est encore ça."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-notice-005",
+    "type": "observation",
+    "fragments": [
+      "Trouver une chose",
+      "c'est un peu plus proche",
+      "que le reste."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-notice-006",
+    "type": "observation",
+    "fragments": [
+      "Remarquez une ombre,",
+      "même un petit."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-notice-007",
+    "type": "observation",
+    "fragments": [
+      "Trouver une ligne droite",
+      "quelque part à proximité."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-notice-008",
+    "type": "observation",
+    "fragments": [
+      "Cherchez une courbe",
+      "au lieu d'un coin."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-notice-009",
+    "type": "observation",
+    "fragments": [
+      "Remarquez une texture",
+      "vous ne touchez pas."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-notice-010",
+    "type": "observation",
+    "fragments": [
+      "Trouvez quelque chose de mat,",
+      "pas brillant."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-notice-011",
+    "type": "observation",
+    "fragments": [
+      "Cherchez un patch",
+      "de lumière plus douce."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-notice-012",
+    "type": "observation",
+    "fragments": [
+      "Trouver un objet",
+      "qui pourrait tenir dans une poche."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-notice-013",
+    "type": "observation",
+    "fragments": [
+      "Remarquez la chose la plus éloignée",
+      "vous pouvez voir d'ici."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-notice-014",
+    "type": "observation",
+    "fragments": [
+      "Trouver un mot imprimé",
+      "quelque part à proximité."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-notice-015",
+    "type": "observation",
+    "fragments": [
+      "Regardez l'espace",
+      "entre deux objets."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-notice-016",
+    "type": "observation",
+    "fragments": [
+      "Remarquez quelque chose",
+      "c'est principalement une couleur."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-notice-017",
+    "type": "observation",
+    "fragments": [
+      "Trouver une surface",
+      "ça a l'air frais au toucher."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-notice-018",
+    "type": "observation",
+    "fragments": [
+      "Cherche quelque chose",
+      "verticale."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-notice-019",
+    "type": "observation",
+    "fragments": [
+      "Remarquez un endroit",
+      "où la poussière pourrait s'accumuler."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-notice-020",
+    "type": "observation",
+    "fragments": [
+      "Trouver une chose",
+      "en papier ou en carton."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-notice-021",
+    "type": "observation",
+    "fragments": [
+      "Cherchez un reflet,",
+      "même un faible."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-notice-022",
+    "type": "observation",
+    "fragments": [
+      "Attention au poids",
+      "de ce que tu es assis",
+      "ou debout dessus."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-notice-023",
+    "type": "observation",
+    "fragments": [
+      "Trouver un coin de la pièce",
+      "et posez-y vos yeux."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-notice-024",
+    "type": "observation",
+    "fragments": [
+      "Cherche quelque chose",
+      "plus vieux que cette semaine."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-notice-025",
+    "type": "observation",
+    "fragments": [
+      "Remarquez un son,",
+      "puis laisse passer."
+    ],
+    "topics": [
+      "quiet"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-notice-026",
+    "type": "observation",
+    "fragments": [
+      "Trouver un rectangle",
+      "quelque part autour de toi."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-notice-027",
+    "type": "observation",
+    "fragments": [
+      "Regarde le plafond",
+      "pour une lente respiration de recherche."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-notice-028",
+    "type": "observation",
+    "fragments": [
+      "Remarquez si la lumière",
+      "est uniforme ou inégal."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-notice-029",
+    "type": "observation",
+    "fragments": [
+      "Trouver quelque chose",
+      "vous pourriez le nommer en un seul mot."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-notice-030",
+    "type": "observation",
+    "fragments": [
+      "Cherchez un pli,",
+      "une couture ou un joint."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-notice-031",
+    "type": "observation",
+    "fragments": [
+      "Remarquez une chose",
+      "c'est volontairement vide."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-notice-032",
+    "type": "observation",
+    "fragments": [
+      "Trouver une plante,",
+      "ou l'idée d'une plante",
+      "dans une image."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-notice-033",
+    "type": "observation",
+    "fragments": [
+      "Regardez votre propre manche ou manchette",
+      "pendant un instant."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-notice-034",
+    "type": "observation",
+    "fragments": [
+      "Remarquez une différence de température,",
+      "même un petit."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-notice-035",
+    "type": "observation",
+    "fragments": [
+      "Trouver un numéro",
+      "quelque part à proximité."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-notice-036",
+    "type": "observation",
+    "fragments": [
+      "Cherchez quelque chose qui penche,",
+      "même légèrement."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-notice-037",
+    "type": "observation",
+    "fragments": [
+      "Remarquez le chemin emprunté par vos yeux",
+      "pour arriver ici."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-notice-038",
+    "type": "observation",
+    "fragments": [
+      "Trouver un cercle ou un ovale",
+      "dans la chambre."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-notice-039",
+    "type": "observation",
+    "fragments": [
+      "Regarde le sol",
+      "là où il rencontre un mur."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-notice-040",
+    "type": "observation",
+    "fragments": [
+      "Remarquez une chose",
+      "vous n'avez pas utilisé aujourd'hui."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-notice-041",
+    "type": "observation",
+    "fragments": [
+      "Trouvez une couleur calme,",
+      "pas bruyant."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-notice-042",
+    "type": "observation",
+    "fragments": [
+      "Cherchez l'écriture",
+      "ce n'est pas un écran."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-notice-043",
+    "type": "observation",
+    "fragments": [
+      "Remarquez à quelle distance se trouvent vos pieds",
+      "les uns des autres."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-notice-044",
+    "type": "observation",
+    "fragments": [
+      "Trouvez quelque chose d'empilé,",
+      "même deux choses."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-notice-045",
+    "type": "observation",
+    "fragments": [
+      "Regarde une porte",
+      "ou l'idée d'une porte."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-notice-046",
+    "type": "observation",
+    "fragments": [
+      "Remarquez une chose",
+      "qui est légèrement usé."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-notice-047",
+    "type": "observation",
+    "fragments": [
+      "Trouvez la source de lumière du jour la plus proche,",
+      "s'il y en a un."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-notice-048",
+    "type": "observation",
+    "fragments": [
+      "Regardez encore une fois,",
+      "puis choisissez un détail à conserver."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-notice-049",
+    "type": "observation",
+    "fragments": [
+      "Trouver une surface fraîche",
+      "et posez votre attention là, pas votre main."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-notice-050",
+    "type": "observation",
+    "fragments": [
+      "S'il y a une fenêtre,",
+      "remarquez ce qu’il encadre.",
+      "Sinon, remarquez un mur."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-notice-051",
+    "type": "observation",
+    "fragments": [
+      "Cherchez une ligne droite",
+      "ce n'est pas une lettre."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-notice-052",
+    "type": "observation",
+    "fragments": [
+      "Remarquez si la lumière est uniforme",
+      "ou rassemblés en un seul endroit."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-notice-053",
+    "type": "observation",
+    "fragments": [
+      "Trouvez quelque chose qui a été plié",
+      "ou pourrait être plié."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-notice-054",
+    "type": "observation",
+    "fragments": [
+      "Un son lointain, s'il en est un.",
+      "Vous n'avez pas besoin de le nommer."
+    ],
+    "topics": [
+      "quiet"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-notice-055",
+    "type": "observation",
+    "fragments": [
+      "Regarde le sol",
+      "comme s'il s'agissait d'un paysage."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-notice-056",
+    "type": "observation",
+    "fragments": [
+      "Trouvez un objet rond.",
+      "Même un bouton compte."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-notice-057",
+    "type": "observation",
+    "fragments": [
+      "Remarquez une différence de température",
+      "près de chez vous – un bord plus frais, une zone plus chaude."
+    ],
+    "topics": [
+      "home"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-notice-058",
+    "type": "observation",
+    "fragments": [
+      "Si vous pouvez voir à l'extérieur,",
+      "trouver la forme la plus simple en vue.",
+      "Sinon, trouvez-en un à l’intérieur."
+    ],
+    "topics": [
+      "sky"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-notice-059",
+    "type": "observation",
+    "fragments": [
+      "Gardez un détail de la dernière minute.",
+      "Vous n'avez pas besoin de le dire."
+    ],
+    "topics": [
+      "quiet"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-notice-060",
+    "type": "observation",
+    "fragments": [
+      "Trouver quelque chose qui n'essaie pas",
+      "à regarder."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  }
+]

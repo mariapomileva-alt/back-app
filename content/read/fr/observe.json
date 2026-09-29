@@ -1,0 +1,767 @@
+[
+  {
+    "id": "fr-observe-001",
+    "type": "observation",
+    "fragments": [
+      "Surveillez l'espace",
+      "entre ces lettres.",
+      "calme"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-observe-002",
+    "type": "observation",
+    "fragments": [
+      "Suivez ce mot",
+      "à mesure qu'il s'installe.",
+      "toujours"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-observe-003",
+    "type": "observation",
+    "fragments": [
+      "Laisse tes yeux se reposer",
+      "sur le dernier mot",
+      "un instant de plus.",
+      "toujours"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-observe-004",
+    "type": "observation",
+    "fragments": [
+      "Remarquez la forme",
+      "de la lettre S.",
+      "S"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-observe-005",
+    "type": "observation",
+    "fragments": [
+      "Regardez comment O",
+      "est une petite pièce fermée.",
+      "Ô"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-observe-006",
+    "type": "observation",
+    "fragments": [
+      "Le mot ici peut rester.",
+      "Vous n'êtes pas obligé de le tenir.",
+      "ici"
+    ],
+    "topics": [
+      "calme"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-observe-007",
+    "type": "observation",
+    "fragments": [
+      "Regarde la grande file",
+      "dans la lettre L.",
+      "L"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-observe-008",
+    "type": "observation",
+    "fragments": [
+      "Une pause est également",
+      "une sorte de phrase.",
+      "pause"
+    ],
+    "topics": [
+      "calme"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-observe-009",
+    "type": "observation",
+    "fragments": [
+      "Regardez le mot lent apparaître",
+      "sans se presser.",
+      "lente"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-observe-010",
+    "type": "observation",
+    "fragments": [
+      "La lettre M",
+      "a deux petits pics.",
+      "M"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-observe-011",
+    "type": "observation",
+    "fragments": [
+      "Laissez cette ligne de texte",
+      "suffire.",
+      "assez"
+    ],
+    "topics": [
+      "calme"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-observe-012",
+    "type": "observation",
+    "fragments": [
+      "Remarquez comment T",
+      "se dresse comme une petite table.",
+      "T"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-observe-013",
+    "type": "observation",
+    "fragments": [
+      "Suivez la courbe",
+      "dans la lettre C.",
+      "C"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-observe-014",
+    "type": "observation",
+    "fragments": [
+      "Le mot maintenant",
+      "est déjà en train de partir.",
+      "maintenant"
+    ],
+    "topics": [
+      "time"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-observe-015",
+    "type": "observation",
+    "fragments": [
+      "Regardez l'écart",
+      "sous la lettre E.",
+      "E"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-observe-016",
+    "type": "observation",
+    "fragments": [
+      "Une période est une très petite",
+      "arrêt complet de regarder.",
+      "."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-observe-017",
+    "type": "observation",
+    "fragments": [
+      "Laisse le mot doux",
+      "prendre son temps.",
+      "douce"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-observe-018",
+    "type": "observation",
+    "fragments": [
+      "La lettre W",
+      "est deux vallées.",
+      "W"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-observe-019",
+    "type": "observation",
+    "fragments": [
+      "Reste avec cette phrase",
+      "jusqu'à ce qu'il semble complet."
+    ],
+    "topics": [
+      "calme"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-observe-020",
+    "type": "observation",
+    "fragments": [
+      "Remarquez l'espace ouvert",
+      "à l'intérieur de la lettre A.",
+      "UNE"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-observe-021",
+    "type": "observation",
+    "fragments": [
+      "Le mot calme a cinq lettres",
+      "et de la place autour d'eux.",
+      "calme"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-observe-022",
+    "type": "observation",
+    "fragments": [
+      "Regardez le mot s'attarder",
+      "sans en ajouter davantage.",
+      "s'attarder"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-observe-023",
+    "type": "observation",
+    "fragments": [
+      "La lettre je",
+      "est une seule et mince présence.",
+      "je"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-observe-024",
+    "type": "observation",
+    "fragments": [
+      "Laissez voyager votre regard",
+      "dès le premier mot",
+      "jusqu'au dernier."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-observe-025",
+    "type": "observation",
+    "fragments": [
+      "La virgule est un petit souffle",
+      "sur la ligne."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-observe-026",
+    "type": "observation",
+    "fragments": [
+      "Remarquez comment H",
+      "a une petite fenêtre.",
+      "H"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-observe-027",
+    "type": "observation",
+    "fragments": [
+      "Le mot peut toujours signifier ne pas bouger,",
+      "ou même ainsi.",
+      "toujours"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-observe-028",
+    "type": "observation",
+    "fragments": [
+      "Regardez cette phrase arriver,",
+      "puis repose-toi."
+    ],
+    "topics": [
+      "calme"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-observe-029",
+    "type": "observation",
+    "fragments": [
+      "La lettre U",
+      "est un petit bol.",
+      "U"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-observe-030",
+    "type": "observation",
+    "fragments": [
+      "Laisse le mot doux reposer",
+      "au milieu de l'écran.",
+      "douce"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-observe-031",
+    "type": "observation",
+    "fragments": [
+      "Remarquez le pied",
+      "de la lettre R.",
+      "R."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-observe-032",
+    "type": "observation",
+    "fragments": [
+      "Une ligne vide",
+      "est également lisible."
+    ],
+    "topics": [
+      "calme"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-observe-033",
+    "type": "observation",
+    "fragments": [
+      "Le mot papier a deux p",
+      "debout l'un près de l'autre.",
+      "papier"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-observe-034",
+    "type": "observation",
+    "fragments": [
+      "Regardez la lettre Y",
+      "comme une petite fourchette.",
+      "Oui"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-observe-035",
+    "type": "observation",
+    "fragments": [
+      "Que ce soit une recherche lente,",
+      "pas une tâche."
+    ],
+    "topics": [
+      "calme"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-observe-036",
+    "type": "observation",
+    "fragments": [
+      "La lettre N",
+      "est une porte avec une diagonale.",
+      "N"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-observe-037",
+    "type": "observation",
+    "fragments": [
+      "Notez la rondeur",
+      "dans le mot lune.",
+      "lune"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-observe-038",
+    "type": "observation",
+    "fragments": [
+      "Le mot salle contient",
+      "une autre pièce : oo.",
+      "chambre"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-observe-039",
+    "type": "observation",
+    "fragments": [
+      "Restez avec la dernière phrase",
+      "après son apparition."
+    ],
+    "topics": [
+      "calme"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-observe-040",
+    "type": "observation",
+    "fragments": [
+      "La lettre B",
+      "dispose de deux petits jardins clos.",
+      "B"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-observe-041",
+    "type": "observation",
+    "fragments": [
+      "Laisse le mot s'ouvrir",
+      "faites seulement ce qu'il dit.",
+      "ouvrir"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-observe-042",
+    "type": "observation",
+    "fragments": [
+      "Regardez comment les lettres serif",
+      "avoir de petits pieds."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-observe-043",
+    "type": "observation",
+    "fragments": [
+      "Le mot feuille est composé de quatre lettres",
+      "et une forme.",
+      "feuille"
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-observe-044",
+    "type": "observation",
+    "fragments": [
+      "Remarquez le silence",
+      "après une courte phrase."
+    ],
+    "topics": [
+      "calme"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-observe-045",
+    "type": "observation",
+    "fragments": [
+      "La lettre G se ferme presque,",
+      "alors non.",
+      "G"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-observe-046",
+    "type": "observation",
+    "fragments": [
+      "Que la parole ici soit une place,",
+      "pas une demande.",
+      "ici"
+    ],
+    "topics": [
+      "calme"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-observe-047",
+    "type": "observation",
+    "fragments": [
+      "Regardez le mot crépuscule",
+      "comme si la lumière s'en allait.",
+      "crépuscule"
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-observe-048",
+    "type": "observation",
+    "fragments": [
+      "Cette ligne peut se terminer.",
+      "Vous pouvez rester une seconde de plus."
+    ],
+    "topics": [
+      "calme"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-observe-049",
+    "type": "observation",
+    "fragments": [
+      "Que ce mot suffise.",
+      "RÉCOLTE"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-observe-050",
+    "type": "observation",
+    "fragments": [
+      "Une lettre est une porte.",
+      "H"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-observe-051",
+    "type": "observation",
+    "fragments": [
+      "Lisez ceci une fois.",
+      "Ensuite, laissez vos yeux se reposer."
+    ],
+    "topics": [
+      "calme"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-observe-052",
+    "type": "observation",
+    "fragments": [
+      "LARGE",
+      "Remarquez comment le mot prend de la place."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-observe-053",
+    "type": "observation",
+    "fragments": [
+      "Le dernier mot peut être petit.",
+      "d'accord"
+    ],
+    "topics": [
+      "calme"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-observe-054",
+    "type": "observation",
+    "fragments": [
+      "Suivez les descendeurs —",
+      "les lettres qui plongent sous la ligne.",
+      "g p y"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-observe-055",
+    "type": "observation",
+    "fragments": [
+      "Tenez cette forme.",
+      "Ô",
+      "Une pièce sans meubles."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-observe-056",
+    "type": "observation",
+    "fragments": [
+      "Une ligne plus longue peut toujours être douce :",
+      "la lumière sur le mur n'est qu'une visite."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-observe-057",
+    "type": "observation",
+    "fragments": [
+      "Ne comptez rien.",
+      "Regardez simplement le mot jusqu'à ce qu'il devienne des marques.",
+      "RIVIÈRE"
+    ],
+    "topics": [
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-observe-058",
+    "type": "observation",
+    "fragments": [
+      "Douce.",
+      "Puis le mot en dessous.",
+      "LIN"
+    ],
+    "topics": [
+      "cloth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-observe-059",
+    "type": "observation",
+    "fragments": [
+      "Laissez le prochain mot arriver sans lui préparer un visage.",
+      "PIERRE"
+    ],
+    "topics": [
+      "stone"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "fr-observe-060",
+    "type": "observation",
+    "fragments": [
+      "Restez sur la virgule,",
+      "s'il y en a un,",
+      "ou sur la pause où pourrait se trouver une virgule."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  }
+]

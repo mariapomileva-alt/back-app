@@ -1,0 +1,1164 @@
+[
+  {
+    "id": "tr-words-001",
+    "type": "word",
+    "fragments": [
+      "YOSUN",
+      "Ne kadar az şeye ihtiyacı olduğuna dikkat edin."
+    ],
+    "topics": [
+      "plants",
+      "forest"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-002",
+    "type": "word",
+    "fragments": [
+      "Bu.",
+      "KETEN",
+      "L çizgisini takip edin."
+    ],
+    "topics": [
+      "room",
+      "cloth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-003",
+    "type": "word",
+    "fragments": [
+      "FİL",
+      "Yalnızca sesli harflere dikkat edin."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-004",
+    "type": "word",
+    "fragments": [
+      "Şu söze bakın.",
+      "PENCERE",
+      "Harfleri isim vermeden sayın."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-005",
+    "type": "word",
+    "fragments": [
+      "SESSİZLİK",
+      "İlk mektup.",
+      "Sonra sonuncusu."
+    ],
+    "topics": [
+      "room",
+      "quiet"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-006",
+    "type": "word",
+    "fragments": [
+      "Küçük bir kelime.",
+      "BULUT",
+      "C eğrisini takip edin."
+    ],
+    "topics": [
+      "sky"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-007",
+    "type": "word",
+    "fragments": [
+      "O'nun ağırlığına dikkat edin.",
+      "TAŞ"
+    ],
+    "topics": [
+      "stone"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "choice",
+      "text": "Bir ceket veya kazak görebiliyorsanız, bu ne renk?",
+      "options": [
+        "mavi",
+        "siyah",
+        "başka renk"
+      ]
+    }
+  },
+  {
+    "id": "tr-words-008",
+    "type": "word",
+    "fragments": [
+      "NEHİR",
+      "Bırak otursun."
+    ],
+    "topics": [
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-009",
+    "type": "word",
+    "fragments": [
+      "AMBER",
+      "A'nın sıcak şekline dikkat edin."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-010",
+    "type": "word",
+    "fragments": [
+      "Bu.",
+      "TÜY",
+      "Bırakın gözleriniz TH'ye odaklansın."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-011",
+    "type": "word",
+    "fragments": [
+      "ÇAYIR",
+      "Yalnızca sesli harflere dikkat edin."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-012",
+    "type": "word",
+    "fragments": [
+      "Şu söze bakın.",
+      "GÜMÜŞ",
+      "S dönerken onu takip edin."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-013",
+    "type": "word",
+    "fragments": [
+      "FENER",
+      "İlk mektup.",
+      "Sonra sonuncusu."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-014",
+    "type": "word",
+    "fragments": [
+      "Küçük bir kelime.",
+      "su ısıtıcı",
+      "Çift T sessiz bir kapı gibi duruyor."
+    ],
+    "topics": [
+      "room",
+      "home"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-015",
+    "type": "word",
+    "fragments": [
+      "V'nin nasıl tekrarladığına ve sonra nasıl durduğuna dikkat edin.",
+      "KADİFE"
+    ],
+    "topics": [
+      "room",
+      "cloth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-016",
+    "type": "word",
+    "fragments": [
+      "KAĞIT",
+      "Bırak otursun."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-017",
+    "type": "word",
+    "fragments": [
+      "BAL",
+      "Yalnızca O'ya dikkat edin."
+    ],
+    "topics": [
+      "plants",
+      "food"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-018",
+    "type": "word",
+    "fragments": [
+      "Bu.",
+      "BATTANİYE",
+      "Kelimenin yerini almasına izin verin."
+    ],
+    "topics": [
+      "room",
+      "home"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-019",
+    "type": "word",
+    "fragments": [
+      "BAHÇE",
+      "Yalnızca sesli harflere dikkat edin."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-020",
+    "type": "word",
+    "fragments": [
+      "Şu söze bakın.",
+      "MUM",
+      "Kelimeyi bir kez soldan sağa doğru takip edin."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-021",
+    "type": "word",
+    "fragments": [
+      "DÜĞME",
+      "İlk mektup.",
+      "Sonra sonuncusu."
+    ],
+    "topics": [
+      "room",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-022",
+    "type": "word",
+    "fragments": [
+      "Küçük bir kelime.",
+      "SÖĞÜT",
+      "W'nin iki kez açıldığına dikkat edin."
+    ],
+    "topics": [
+      "plants",
+      "forest"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-023",
+    "type": "word",
+    "fragments": [
+      "Anlamına değil şekline bakın.",
+      "MERMER"
+    ],
+    "topics": [
+      "stone"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-024",
+    "type": "word",
+    "fragments": [
+      "PAMUK",
+      "Bırak otursun."
+    ],
+    "topics": [
+      "room",
+      "cloth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-025",
+    "type": "word",
+    "fragments": [
+      "TABAK",
+      "S ve C eğrisine dikkat edin."
+    ],
+    "topics": [
+      "room",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-026",
+    "type": "word",
+    "fragments": [
+      "Bu.",
+      "TURUNCU",
+      "Sesli harfleri bulun ve gerisini bırakın."
+    ],
+    "topics": [
+      "plants",
+      "food"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-027",
+    "type": "word",
+    "fragments": [
+      "AYNA",
+      "Yalnızca sesli harflere dikkat edin."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-028",
+    "type": "word",
+    "fragments": [
+      "Şu söze bakın.",
+      "KABUK",
+      "Kelimenin ne kadar küçük kaldığına dikkat edin."
+    ],
+    "topics": [
+      "coast"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-029",
+    "type": "word",
+    "fragments": [
+      "MASA",
+      "İlk mektup.",
+      "Sonra sonuncusu."
+    ],
+    "topics": [
+      "room",
+      "home"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-030",
+    "type": "word",
+    "fragments": [
+      "Küçük bir kelime.",
+      "ESİNTİ",
+      "Çift E'yi takip edin."
+    ],
+    "topics": [
+      "sky",
+      "weather"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-031",
+    "type": "word",
+    "fragments": [
+      "Yuvarlak O'ya dikkat edin.",
+      "CEP"
+    ],
+    "topics": [
+      "room",
+      "cloth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-032",
+    "type": "word",
+    "fragments": [
+      "İPLİK",
+      "Bırak otursun."
+    ],
+    "topics": [
+      "paper",
+      "cloth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-033",
+    "type": "word",
+    "fragments": [
+      "MERDİVEN",
+      "Çift D sessiz bir çifttir."
+    ],
+    "topics": [
+      "room",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-034",
+    "type": "word",
+    "fragments": [
+      "Bu.",
+      "PERDE",
+      "Söz kalsın. Tutmanıza gerek yok."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-035",
+    "type": "word",
+    "fragments": [
+      "ÇAKIL",
+      "Yalnızca sesli harflere dikkat edin."
+    ],
+    "topics": [
+      "stone",
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-036",
+    "type": "word",
+    "fragments": [
+      "Şu söze bakın.",
+      "SARI",
+      "Dallanırken Y'yi takip edin."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "environment",
+      "text": "Şimdi etrafınızda sarı bir şey bulun."
+    }
+  },
+  {
+    "id": "tr-words-037",
+    "type": "word",
+    "fragments": [
+      "ORMAN",
+      "İlk mektup.",
+      "Sonra sonuncusu."
+    ],
+    "topics": [
+      "forest"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-038",
+    "type": "word",
+    "fragments": [
+      "Küçük bir kelime.",
+      "YASTIK",
+      "Yumuşak harfler. Çift L."
+    ],
+    "topics": [
+      "room",
+      "home"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-039",
+    "type": "word",
+    "fragments": [
+      "Harfleri sadece gözlerinizle sayın.",
+      "AKÇAAĞAÇ"
+    ],
+    "topics": [
+      "plants",
+      "forest"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-040",
+    "type": "word",
+    "fragments": [
+      "GÖLGE",
+      "Bırak otursun."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-041",
+    "type": "word",
+    "fragments": [
+      "SERAMİK",
+      "Her iki uçtaki C'yi takip edin."
+    ],
+    "topics": [
+      "room",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-042",
+    "type": "word",
+    "fragments": [
+      "Bu.",
+      "İĞNE",
+      "Ortada çift E."
+    ],
+    "topics": [
+      "plants",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-043",
+    "type": "word",
+    "fragments": [
+      "SEPET",
+      "Yalnızca sesli harflere dikkat edin."
+    ],
+    "topics": [
+      "room",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-044",
+    "type": "word",
+    "fragments": [
+      "Şu söze bakın.",
+      "YAĞMUR",
+      "Dört harf. Bolca."
+    ],
+    "topics": [
+      "sky",
+      "weather"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-045",
+    "type": "word",
+    "fragments": [
+      "YÜN",
+      "İlk mektup.",
+      "Sonra sonuncusu."
+    ],
+    "topics": [
+      "room",
+      "cloth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-046",
+    "type": "word",
+    "fragments": [
+      "Küçük bir kelime.",
+      "ZENCEFİL",
+      "İki kez yumuşak G."
+    ],
+    "topics": [
+      "plants",
+      "food"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-047",
+    "type": "word",
+    "fragments": [
+      "Bırakın gözleriniz TH'ye odaklansın.",
+      "BEZ"
+    ],
+    "topics": [
+      "room",
+      "cloth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-048",
+    "type": "word",
+    "fragments": [
+      "REYHAN",
+      "Bırak otursun."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-049",
+    "type": "word",
+    "fragments": [
+      "SÜRÜKLENME",
+      "Kelime zaten hareket ediyor. Kalabilirsin."
+    ],
+    "topics": [
+      "coast",
+      "water"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "choice",
+      "text": "Oturuyor musunuz, ayakta mı duruyorsunuz, yoksa arada bir yerde mi?",
+      "options": [
+        "oturma",
+        "ayakta",
+        "arada"
+      ]
+    }
+  },
+  {
+    "id": "tr-words-050",
+    "type": "word",
+    "fragments": [
+      "Bu.",
+      "YORGAN",
+      "Q ve U'nun birlikte seyahat ettiğine dikkat edin."
+    ],
+    "topics": [
+      "room",
+      "home"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-051",
+    "type": "word",
+    "fragments": [
+      "DİKİŞ",
+      "Yalnızca sesli harflere dikkat edin."
+    ],
+    "topics": [
+      "room",
+      "cloth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-052",
+    "type": "word",
+    "fragments": [
+      "Şu söze bakın.",
+      "OKYANUS",
+      "Üç sesli harf bekliyor."
+    ],
+    "topics": [
+      "coast",
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-053",
+    "type": "word",
+    "fragments": [
+      "LİMON",
+      "İlk mektup.",
+      "Sonra sonuncusu."
+    ],
+    "topics": [
+      "plants",
+      "food"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-054",
+    "type": "word",
+    "fragments": [
+      "Küçük bir kelime.",
+      "DAL",
+      "A'ya küçük bir çatı olarak bakın."
+    ],
+    "topics": [
+      "forest",
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-055",
+    "type": "word",
+    "fragments": [
+      "Beş harf, başında yuvarlak.",
+      "İNCİ"
+    ],
+    "topics": [
+      "coast"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-056",
+    "type": "word",
+    "fragments": [
+      "MÜTEVAZI",
+      "Bırak otursun."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-057",
+    "type": "word",
+    "fragments": [
+      "BAKIR",
+      "Çift P'yi takip edin."
+    ],
+    "topics": [
+      "light",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-058",
+    "type": "word",
+    "fragments": [
+      "Bu.",
+      "FİLDİŞİ",
+      "Yalnızca sesli harflere dikkat edin."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-059",
+    "type": "word",
+    "fragments": [
+      "BARDAK",
+      "Yalnızca sesli harflere dikkat edin."
+    ],
+    "topics": [
+      "room",
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-060",
+    "type": "word",
+    "fragments": [
+      "Şu söze bakın.",
+      "KEKİK",
+      "Küçük bir kelime. Bırak otursun."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-061",
+    "type": "word",
+    "fragments": [
+      "NİKEL",
+      "İlk mektup.",
+      "Sonra sonuncusu."
+    ],
+    "topics": [
+      "stone",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-062",
+    "type": "word",
+    "fragments": [
+      "Küçük bir kelime.",
+      "UN",
+      "Kelimeyi bir kez, yavaşça takip edin."
+    ],
+    "topics": [
+      "room",
+      "food"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-063",
+    "type": "word",
+    "fragments": [
+      "C'ye ve ardından şeklin geri kalanına dikkat edin.",
+      "SEDİR"
+    ],
+    "topics": [
+      "forest"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-064",
+    "type": "word",
+    "fragments": [
+      "ERİK",
+      "Bırak otursun."
+    ],
+    "topics": [
+      "plants",
+      "food"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-065",
+    "type": "word",
+    "fragments": [
+      "GELGİT",
+      "İçinde. Dışarı. Mektuplar kalıyor."
+    ],
+    "topics": [
+      "coast",
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-066",
+    "type": "word",
+    "fragments": [
+      "KÖPÜK",
+      "Harflerin ne kadar hafif olduğuna dikkat edin."
+    ],
+    "topics": [
+      "coast"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-067",
+    "type": "word",
+    "fragments": [
+      "Tek kelime.",
+      "ÇAM",
+      "Ortada duran I'ye dikkat edin."
+    ],
+    "topics": [
+      "forest"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-068",
+    "type": "word",
+    "fragments": [
+      "pus",
+      "Geri kalanına H'yi takip edin."
+    ],
+    "topics": [
+      "sky"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-069",
+    "type": "word",
+    "fragments": [
+      "BÖLME",
+      "İlk mektup.",
+      "Sonra sonuncusu."
+    ],
+    "topics": [
+      "room",
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-070",
+    "type": "word",
+    "fragments": [
+      "MÜREKKEP",
+      "Üç harf. Bolca."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-071",
+    "type": "word",
+    "fragments": [
+      "UÇURTMA",
+      "Yalnızca sesli harflere dikkat edin."
+    ],
+    "topics": [
+      "sky"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-072",
+    "type": "word",
+    "fragments": [
+      "GRANİT",
+      "Kelimenin ağırlığına dikkat edin."
+    ],
+    "topics": [
+      "stone"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-073",
+    "type": "word",
+    "fragments": [
+      "LAMBA",
+      "Bırak otursun."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-074",
+    "type": "word",
+    "fragments": [
+      "DON",
+      "Kenarları yumuşak."
+    ],
+    "topics": [
+      "sky",
+      "weather"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-075",
+    "type": "word",
+    "fragments": [
+      "GÖVDE",
+      "İlk mektup.",
+      "Sonra sonuncusu."
+    ],
+    "topics": [
+      "coast"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "environment",
+      "text": "Son kelimenin rengi yakındaysa, bir süre onun üzerinde dinlenin."
+    }
+  },
+  {
+    "id": "tr-words-076",
+    "type": "word",
+    "fragments": [
+      "SARMAŞIK",
+      "Üç harf tırmanıyor."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-077",
+    "type": "word",
+    "fragments": [
+      "akşam karanlığı",
+      "Yalnızca ABD'ye dikkat edin."
+    ],
+    "topics": [
+      "light",
+      "night"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-078",
+    "type": "word",
+    "fragments": [
+      "SİCİM",
+      "Ortadaki W'ye dikkat edin."
+    ],
+    "topics": [
+      "paper",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-079",
+    "type": "word",
+    "fragments": [
+      "İSKELE",
+      "Bırak otursun."
+    ],
+    "topics": [
+      "coast"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-080",
+    "type": "word",
+    "fragments": [
+      "KOR",
+      "Bırak otursun."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-081",
+    "type": "word",
+    "fragments": [
+      "OMURGA",
+      "İlk mektup. Sonra sonuncusu."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-082",
+    "type": "word",
+    "fragments": [
+      "YOSUNLU",
+      "Bırak otursun."
+    ],
+    "topics": [
+      "forest",
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-083",
+    "type": "word",
+    "fragments": [
+      "MARTI",
+      "Bırak otursun."
+    ],
+    "topics": [
+      "coast"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-084",
+    "type": "word",
+    "fragments": [
+      "LENTO",
+      "Sessiz bir mimari kelime."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-085",
+    "type": "word",
+    "fragments": [
+      "elma şarabı",
+      "Bırak otursun."
+    ],
+    "topics": [
+      "plants",
+      "food"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-086",
+    "type": "word",
+    "fragments": [
+      "FLINT",
+      "Bırak otursun."
+    ],
+    "topics": [
+      "stone"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-087",
+    "type": "word",
+    "fragments": [
+      "devedikeni",
+      "Bırak otursun."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "tr-words-088",
+    "type": "word",
+    "fragments": [
+      "LİMAN",
+      "Bırak otursun."
+    ],
+    "topics": [
+      "coast"
+    ],
+    "difficulty": 1
+  }
+]

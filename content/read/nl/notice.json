@@ -1,0 +1,727 @@
+[
+  {
+    "id": "nl-notice-001",
+    "type": "observation",
+    "fragments": [
+      "Zoek één woord",
+      "je kunt om je heen kijken."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-notice-002",
+    "type": "observation",
+    "fragments": [
+      "Let op één kleur",
+      "dichtbij uw handen."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-notice-003",
+    "type": "observation",
+    "fragments": [
+      "Zoek een rand",
+      "waar twee oppervlakken elkaar ontmoeten."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-notice-004",
+    "type": "observation",
+    "fragments": [
+      "Zoek iets",
+      "dat is nog steeds."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-notice-005",
+    "type": "observation",
+    "fragments": [
+      "Zoek één ding",
+      "dat is iets dichterbij",
+      "dan de rest."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-notice-006",
+    "type": "observation",
+    "fragments": [
+      "Let op een schaduw,",
+      "zelfs een kleintje."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-notice-007",
+    "type": "observation",
+    "fragments": [
+      "Zoek een rechte lijn",
+      "ergens in de buurt."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-notice-008",
+    "type": "observation",
+    "fragments": [
+      "Zoek naar een bocht",
+      "in plaats van een hoek."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-notice-009",
+    "type": "observation",
+    "fragments": [
+      "Let op één textuur",
+      "je raakt niet aan."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-notice-010",
+    "type": "observation",
+    "fragments": [
+      "Zoek iets dat mat is,",
+      "niet glanzend."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-notice-011",
+    "type": "observation",
+    "fragments": [
+      "Zoek naar een pleister",
+      "van zachter licht."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-notice-012",
+    "type": "observation",
+    "fragments": [
+      "Zoek één voorwerp",
+      "dat zou in een broekzak passen."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-notice-013",
+    "type": "observation",
+    "fragments": [
+      "Let op het verste",
+      "je kunt vanaf hier zien."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-notice-014",
+    "type": "observation",
+    "fragments": [
+      "Zoek een gedrukt woord",
+      "ergens in de buurt."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-notice-015",
+    "type": "observation",
+    "fragments": [
+      "Kijk naar de ruimte",
+      "tussen twee objecten."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-notice-016",
+    "type": "observation",
+    "fragments": [
+      "Merk iets op",
+      "dat is meestal één kleur."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-notice-017",
+    "type": "observation",
+    "fragments": [
+      "Zoek een oppervlak",
+      "dat ziet er cool uit om aan te raken."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-notice-018",
+    "type": "observation",
+    "fragments": [
+      "Zoek iets",
+      "verticaal."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-notice-019",
+    "type": "observation",
+    "fragments": [
+      "Let op een plaats",
+      "waar stof zich kan verzamelen."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-notice-020",
+    "type": "observation",
+    "fragments": [
+      "Zoek één ding",
+      "gemaakt van papier of karton."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-notice-021",
+    "type": "observation",
+    "fragments": [
+      "Zoek naar een reflectie,",
+      "zelfs een flauwe."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-notice-022",
+    "type": "observation",
+    "fragments": [
+      "Let op het gewicht",
+      "van wat je zit",
+      "of erop staan."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-notice-023",
+    "type": "observation",
+    "fragments": [
+      "Zoek een hoek van de kamer",
+      "en laat je ogen daar rusten."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-notice-024",
+    "type": "observation",
+    "fragments": [
+      "Zoek iets",
+      "ouder dan deze week."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-notice-025",
+    "type": "observation",
+    "fragments": [
+      "Let op één geluid,",
+      "laat het dan voorbijgaan."
+    ],
+    "topics": [
+      "quiet"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-notice-026",
+    "type": "observation",
+    "fragments": [
+      "Zoek een rechthoek",
+      "ergens om je heen."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-notice-027",
+    "type": "observation",
+    "fragments": [
+      "Kijk naar het plafond",
+      "voor één langzame adem van kijken."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-notice-028",
+    "type": "observation",
+    "fragments": [
+      "Let op of het licht",
+      "gelijkmatig of fragmentarisch is."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-notice-029",
+    "type": "observation",
+    "fragments": [
+      "Zoek iets",
+      "je zou het in één woord kunnen noemen."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-notice-030",
+    "type": "observation",
+    "fragments": [
+      "Zoek een vouw,",
+      "een naad of een verbinding."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-notice-031",
+    "type": "observation",
+    "fragments": [
+      "Let op één ding",
+      "dat is met opzet leeg."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-notice-032",
+    "type": "observation",
+    "fragments": [
+      "Zoek een plant,",
+      "of het idee van een plant",
+      "op een foto."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-notice-033",
+    "type": "observation",
+    "fragments": [
+      "Kijk naar je eigen mouw of manchet",
+      "even."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-notice-034",
+    "type": "observation",
+    "fragments": [
+      "Merk een temperatuurverschil op,",
+      "zelfs een kleintje."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-notice-035",
+    "type": "observation",
+    "fragments": [
+      "Zoek een nummer",
+      "ergens in de buurt."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-notice-036",
+    "type": "observation",
+    "fragments": [
+      "Zoek iets dat leunt,",
+      "zelfs een beetje."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-notice-037",
+    "type": "observation",
+    "fragments": [
+      "Let op het pad dat je ogen volgden",
+      "om hier te komen."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-notice-038",
+    "type": "observation",
+    "fragments": [
+      "Zoek een cirkel of een ovaal",
+      "in de kamer."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-notice-039",
+    "type": "observation",
+    "fragments": [
+      "Kijk naar de vloer",
+      "waar het een muur ontmoet."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-notice-040",
+    "type": "observation",
+    "fragments": [
+      "Let op één ding",
+      "die je vandaag niet hebt gebruikt."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-notice-041",
+    "type": "observation",
+    "fragments": [
+      "Zoek een rustige kleur,",
+      "niet luid."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-notice-042",
+    "type": "observation",
+    "fragments": [
+      "Zoek naar schrijven",
+      "dat is geen scherm."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-notice-043",
+    "type": "observation",
+    "fragments": [
+      "Merk op hoe ver je voeten zijn",
+      "van elkaar."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-notice-044",
+    "type": "observation",
+    "fragments": [
+      "Vind iets gestapeld,",
+      "zelfs twee dingen."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-notice-045",
+    "type": "observation",
+    "fragments": [
+      "Kijk naar een deuropening",
+      "of het idee van een deuropening."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-notice-046",
+    "type": "observation",
+    "fragments": [
+      "Let op één ding",
+      "dat is een beetje versleten."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-notice-047",
+    "type": "observation",
+    "fragments": [
+      "Vind de dichtstbijzijnde daglichtbron,",
+      "als die er is."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-notice-048",
+    "type": "observation",
+    "fragments": [
+      "Kijk nog een keer,",
+      "kies vervolgens één detail dat u wilt behouden."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-notice-049",
+    "type": "observation",
+    "fragments": [
+      "Zoek een koel oppervlak",
+      "en laat uw aandacht daarop rusten, niet uw hand."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-notice-050",
+    "type": "observation",
+    "fragments": [
+      "Als er een raam is,",
+      "let op wat het omlijst.",
+      "Als dat niet het geval is, let dan op een muur."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-notice-051",
+    "type": "observation",
+    "fragments": [
+      "Zoek naar een rechte lijn",
+      "dat is geen brief."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-notice-052",
+    "type": "observation",
+    "fragments": [
+      "Let op of het licht gelijkmatig is",
+      "of op één plek verzameld."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-notice-053",
+    "type": "observation",
+    "fragments": [
+      "Zoek iets dat is opgevouwen",
+      "of kan worden opgevouwen."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-notice-054",
+    "type": "observation",
+    "fragments": [
+      "Een geluid ver weg, als dat er is.",
+      "Je hoeft het niet te benoemen."
+    ],
+    "topics": [
+      "quiet"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-notice-055",
+    "type": "observation",
+    "fragments": [
+      "Kijk naar de vloer",
+      "alsof het een landschap is."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-notice-056",
+    "type": "observation",
+    "fragments": [
+      "Zoek een rond ding.",
+      "Zelfs een knop telt."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-notice-057",
+    "type": "observation",
+    "fragments": [
+      "Let op één temperatuurverschil",
+      "bij jou in de buurt – een koelere rand, een warmere plek."
+    ],
+    "topics": [
+      "home"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-notice-058",
+    "type": "observation",
+    "fragments": [
+      "Als je naar buiten kunt kijken,",
+      "zoek de eenvoudigste vorm die je ziet.",
+      "Zo niet, zoek er dan een binnenshuis."
+    ],
+    "topics": [
+      "sky"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-notice-059",
+    "type": "observation",
+    "fragments": [
+      "Bewaar één detail van de laatste minuut.",
+      "Je hoeft het niet te zeggen."
+    ],
+    "topics": [
+      "quiet"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "nl-notice-060",
+    "type": "observation",
+    "fragments": [
+      "Zoek iets dat niet probeert",
+      "naar gekeken worden."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  }
+]

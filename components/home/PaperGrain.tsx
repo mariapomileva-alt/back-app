@@ -6,7 +6,7 @@ type Props = {
 
 export function PaperGrain({ opacity = 0.16 }: Props) {
   return (
-    <View pointerEvents="none" style={styles.wrap} accessible={false}>
+    <View accessible={false} style={[styles.wrap, { pointerEvents: 'none' }]}>
       <Image
         source={require('../../assets/images/paper-grain.png')}
         resizeMode="repeat"

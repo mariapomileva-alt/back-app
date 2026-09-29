@@ -10,30 +10,42 @@ export const productionConfig = {
   iosBundleIdentifier: 'app.back.selfhelp',
   androidPackage: 'app.back.selfhelp',
 
-  // TODO: add RevenueCat public SDK keys. Until then, subscription uses a local mock.
+  // Development mode: purchasing is disabled. Do not implement RevenueCat in this pass.
+  // TODO: add RevenueCat public SDK keys only when a real store product exists.
   revenueCatIosApiKey: null as string | null,
   revenueCatAndroidApiKey: null as string | null,
 
-  // TODO: add the App Store / Play product identifier for Back Annual.
-  // Target: USD $9.99 / year with a 7-day trial. Never hard-code a displayed price.
+  // TODO (S3): App Store / Play product identifiers — do not invent IDs in repo.
+  // Planned Back Plus reference pricing (EUR, website planning only): see config/backPlus.ts.
+  // Display prices only from store / RevenueCat Offerings in app UI.
   annualProductId: null as string | null,
+  // TODO (S3): monthly product id if monthly plan is offered.
+  monthlyProductId: null as string | null,
   entitlementId: 'back_annual',
 
   // TODO: replace with the live Terms of Use URL before store release.
+  // In-app Terms: app/settings/terms.tsx. Do not invent a domain.
   termsUrl: null as string | null,
 
-  // TODO: replace with the live Privacy Policy URL before store release.
-  privacyUrl: null as string | null,
+  // Live Privacy Policy for App Store and in-app Privacy.
+  // In-app Privacy: app/settings/privacy.tsx.
+  privacyUrl: 'https://backapp.live/privacy.html',
 
-  // TODO: add professionally recorded English grounding audio before store release.
-  groundingAudioReady: false, // TODO: REPLACE WITH FINAL PRODUCTION ARTWORK / professionally recorded English grounding audio
+  // TODO: REPLACE WITH PROFESSIONALLY RECORDED BACK GROUNDING AUDIO BEFORE RELEASE
+  // Drop audio/grounding/english.wav (or .m4a), point the require() in
+  // features/media/catalog.ts at that file, then set this true.
+  // Until then keep english-placeholder.wav and this flag false.
+  groundingAudioReady: false,
 
   // TODO: add professionally mixed looping environment sounds before store release.
-  environmentAudioReady: false,
+  // Drop audio/sounds/{soft-rain,ocean,gentle-stream,forest,distant-birds,fan,brown-noise,soft-white-noise,soft-melody}.wav (or .m4a),
+  // point the require() paths in features/media/catalog.ts at those files, then set this true.
+  // Until then keep the *-placeholder.wav files and this flag false.
+  environmentAudioReady: true,
 
-  // TODO: export final app icon at required store sizes from the master artwork.
-  // Required sizes are listed in assets/docs/icon-export.txt
-  productionIconReady: false,
+  // Master: assets/brand/app-icon-master.png. Same opaque 1024 in
+  // store/ios/icon-1024.png (App Store Connect upload) and assets/images/icon.png.
+  productionIconReady: true,
 } as const;
 
 export function hasRevenueCatConfig(): boolean {

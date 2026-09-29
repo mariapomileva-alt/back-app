@@ -1,0 +1,66 @@
+{
+  "collection": "Back Listen artwork",
+  "version": 1,
+  "created": "2026-09-21",
+  "source": "Original AI-generated artwork created for the Back project using OpenAI image generation",
+  "productionReviewRequired": true,
+  "sharedSpecification": {
+    "format": "PNG",
+    "width": 1619,
+    "height": 971,
+    "alpha": true,
+    "safeZone": "approximately 5:3, centered",
+    "themes": ["warm-earth", "soft-sage", "deep-green"],
+    "animation": "static master; optional implementation animation must be created separately"
+  },
+  "assets": [
+    {
+      "id": "rain",
+      "file": "rain-master.png",
+      "alt": "Quiet rain falling over broad leaves",
+      "status": "draft"
+    },
+    {
+      "id": "ocean",
+      "file": "ocean-master.png",
+      "alt": "Layered calm ocean surface",
+      "status": "draft"
+    },
+    {
+      "id": "stream",
+      "file": "stream-master.png",
+      "alt": "Gentle stream flowing between rounded stones",
+      "status": "draft"
+    },
+    {
+      "id": "forest",
+      "file": "forest-master.png",
+      "alt": "Quiet group of softly layered trees",
+      "status": "draft"
+    },
+    {
+      "id": "birds",
+      "file": "birds-master.png",
+      "alt": "Distant birds above a delicate branch",
+      "status": "draft"
+    },
+    {
+      "id": "fan",
+      "file": "fan-master.png",
+      "alt": "Steady airflow represented by soft parallel ribbons",
+      "status": "draft"
+    },
+    {
+      "id": "brown",
+      "file": "brown-master.png",
+      "alt": "Grounded earth-toned fields for brown noise",
+      "status": "draft"
+    },
+    {
+      "id": "white",
+      "file": "white-master.png",
+      "alt": "Soft pale mist and fine texture for white noise",
+      "status": "draft"
+    }
+  ]
+}

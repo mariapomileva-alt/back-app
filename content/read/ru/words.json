@@ -1,0 +1,1164 @@
+[
+  {
+    "id": "ru-words-001",
+    "type": "word",
+    "fragments": [
+      "МОХ",
+      "Обратите внимание, как мало ему нужно."
+    ],
+    "topics": [
+      "plants",
+      "forest"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-002",
+    "type": "word",
+    "fragments": [
+      "Вот этот.",
+      "ШЕРСТЬ",
+      "Следуйте линии Л."
+    ],
+    "topics": [
+      "room",
+      "cloth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-003",
+    "type": "word",
+    "fragments": [
+      "СЛОН",
+      "Обратите внимание только на гласные."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-004",
+    "type": "word",
+    "fragments": [
+      "Посмотрите на это слово.",
+      "ОКНО",
+      "Сосчитайте буквы, не называя их."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-005",
+    "type": "word",
+    "fragments": [
+      "ТИХИЙ",
+      "Первое письмо.",
+      "Потом последнее."
+    ],
+    "topics": [
+      "room",
+      "quiet"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-006",
+    "type": "word",
+    "fragments": [
+      "Небольшое слово.",
+      "ОБЛАКО",
+      "Следуйте кривой C."
+    ],
+    "topics": [
+      "sky"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-007",
+    "type": "word",
+    "fragments": [
+      "Обратите внимание на вес О.",
+      "КАМЕНЬ"
+    ],
+    "topics": [
+      "stone"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "choice",
+      "text": "Если вы видите куртку или свитер, какого они цвета?",
+      "options": [
+        "синий",
+        "черный",
+        "другой цвет"
+      ]
+    }
+  },
+  {
+    "id": "ru-words-008",
+    "type": "word",
+    "fragments": [
+      "РЕКА",
+      "Пусть сидит."
+    ],
+    "topics": [
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-009",
+    "type": "word",
+    "fragments": [
+      "ЯНТАРЬ",
+      "Обратите внимание на теплую форму А."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-010",
+    "type": "word",
+    "fragments": [
+      "Вот этот.",
+      "ПЕРО",
+      "Пусть ваши глаза остановятся на TH."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-011",
+    "type": "word",
+    "fragments": [
+      "ЛУГ",
+      "Обратите внимание только на гласные."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-012",
+    "type": "word",
+    "fragments": [
+      "Посмотрите на это слово.",
+      "СЕРЕБРО",
+      "Следуйте за буквой S, когда она поворачивается."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-013",
+    "type": "word",
+    "fragments": [
+      "ФОНАРЬ",
+      "Первое письмо.",
+      "Потом последнее."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-014",
+    "type": "word",
+    "fragments": [
+      "Небольшое слово.",
+      "ЧАЙНИК",
+      "Двойная буква Т стоит как тихие ворота."
+    ],
+    "topics": [
+      "room",
+      "home"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-015",
+    "type": "word",
+    "fragments": [
+      "Обратите внимание, как V повторяется, а затем отдыхает.",
+      "БАРХАТ"
+    ],
+    "topics": [
+      "room",
+      "cloth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-016",
+    "type": "word",
+    "fragments": [
+      "БУМАГА",
+      "Пусть сидит."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-017",
+    "type": "word",
+    "fragments": [
+      "МЕД",
+      "Обратите внимание только на О."
+    ],
+    "topics": [
+      "plants",
+      "food"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-018",
+    "type": "word",
+    "fragments": [
+      "Вот этот.",
+      "ОДЕЯЛО",
+      "Позвольте слову занять свое место."
+    ],
+    "topics": [
+      "room",
+      "home"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-019",
+    "type": "word",
+    "fragments": [
+      "САД",
+      "Обратите внимание только на гласные."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-020",
+    "type": "word",
+    "fragments": [
+      "Посмотрите на это слово.",
+      "СВЕЧА",
+      "Следуйте за словом слева направо один раз."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-021",
+    "type": "word",
+    "fragments": [
+      "КНОПКА",
+      "Первое письмо.",
+      "Потом последнее."
+    ],
+    "topics": [
+      "room",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-022",
+    "type": "word",
+    "fragments": [
+      "Небольшое слово.",
+      "ИВЛА",
+      "Обратите внимание на отверстие W дважды."
+    ],
+    "topics": [
+      "plants",
+      "forest"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-023",
+    "type": "word",
+    "fragments": [
+      "Смотрите на форму, а не на смысл.",
+      "МРАМОР"
+    ],
+    "topics": [
+      "stone"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-024",
+    "type": "word",
+    "fragments": [
+      "ХЛОПОК",
+      "Пусть сидит."
+    ],
+    "topics": [
+      "room",
+      "cloth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-025",
+    "type": "word",
+    "fragments": [
+      "БЛЮДЦЕ",
+      "Обратите внимание на кривую S и C."
+    ],
+    "topics": [
+      "room",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-026",
+    "type": "word",
+    "fragments": [
+      "Вот этот.",
+      "АПЕЛЬСИН",
+      "Найдите гласные и оставьте остальные."
+    ],
+    "topics": [
+      "plants",
+      "food"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-027",
+    "type": "word",
+    "fragments": [
+      "ЗЕРКАЛО",
+      "Обратите внимание только на гласные."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-028",
+    "type": "word",
+    "fragments": [
+      "Посмотрите на это слово.",
+      "ОБОЛОЧКА",
+      "Обратите внимание, насколько маленьким остается это слово."
+    ],
+    "topics": [
+      "coast"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-029",
+    "type": "word",
+    "fragments": [
+      "СТОЛ",
+      "Первое письмо.",
+      "Потом последнее."
+    ],
+    "topics": [
+      "room",
+      "home"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-030",
+    "type": "word",
+    "fragments": [
+      "Небольшое слово.",
+      "ВЕТЕР",
+      "Следуйте двойному Е."
+    ],
+    "topics": [
+      "sky",
+      "weather"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-031",
+    "type": "word",
+    "fragments": [
+      "Обратите внимание на круглую О.",
+      "КАРМАН"
+    ],
+    "topics": [
+      "room",
+      "cloth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-032",
+    "type": "word",
+    "fragments": [
+      "НИТЬ",
+      "Пусть сидит."
+    ],
+    "topics": [
+      "paper",
+      "cloth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-033",
+    "type": "word",
+    "fragments": [
+      "ЛЕСТНИЦА",
+      "Двойная D — спокойная пара."
+    ],
+    "topics": [
+      "room",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-034",
+    "type": "word",
+    "fragments": [
+      "Вот этот.",
+      "ЗАНАВЕС",
+      "Пусть слово останется. Вам не обязательно его удерживать."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-035",
+    "type": "word",
+    "fragments": [
+      "ГАЛЬКА",
+      "Обратите внимание только на гласные."
+    ],
+    "topics": [
+      "stone",
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-036",
+    "type": "word",
+    "fragments": [
+      "Посмотрите на это слово.",
+      "ЖЕЛТЫЙ",
+      "Следуйте за Y по мере его разветвления."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "environment",
+      "text": "Теперь найдите вокруг себя что-нибудь желтое."
+    }
+  },
+  {
+    "id": "ru-words-037",
+    "type": "word",
+    "fragments": [
+      "ЛЕС",
+      "Первое письмо.",
+      "Потом последнее."
+    ],
+    "topics": [
+      "forest"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-038",
+    "type": "word",
+    "fragments": [
+      "Небольшое слово.",
+      "ПОДУШКА",
+      "Мягкие буквы. Двойной Л."
+    ],
+    "topics": [
+      "room",
+      "home"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-039",
+    "type": "word",
+    "fragments": [
+      "Считайте буквы только глазами.",
+      "КЛЕН"
+    ],
+    "topics": [
+      "plants",
+      "forest"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-040",
+    "type": "word",
+    "fragments": [
+      "ТЕНЬ",
+      "Пусть сидит."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-041",
+    "type": "word",
+    "fragments": [
+      "КЕРАМИКА",
+      "Следуйте по букве C с обоих концов."
+    ],
+    "topics": [
+      "room",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-042",
+    "type": "word",
+    "fragments": [
+      "Вот этот.",
+      "ИГОЛКА",
+      "Двойная Е посередине."
+    ],
+    "topics": [
+      "plants",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-043",
+    "type": "word",
+    "fragments": [
+      "КОРЗИНА",
+      "Обратите внимание только на гласные."
+    ],
+    "topics": [
+      "room",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-044",
+    "type": "word",
+    "fragments": [
+      "Посмотрите на это слово.",
+      "ДОЖДЬ",
+      "Четыре буквы. Множество."
+    ],
+    "topics": [
+      "sky",
+      "weather"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-045",
+    "type": "word",
+    "fragments": [
+      "ШЕРСТЬ",
+      "Первое письмо.",
+      "Потом последнее."
+    ],
+    "topics": [
+      "room",
+      "cloth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-046",
+    "type": "word",
+    "fragments": [
+      "Небольшое слово.",
+      "ИМБИРЬ",
+      "Мягкая G дважды."
+    ],
+    "topics": [
+      "plants",
+      "food"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-047",
+    "type": "word",
+    "fragments": [
+      "Пусть ваши глаза остановятся на TH.",
+      "ТКАНЬ"
+    ],
+    "topics": [
+      "room",
+      "cloth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-048",
+    "type": "word",
+    "fragments": [
+      "БАЗИЛИК",
+      "Пусть сидит."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-049",
+    "type": "word",
+    "fragments": [
+      "ДРИФТ",
+      "Слово уже движется. Ты можешь остаться."
+    ],
+    "topics": [
+      "coast",
+      "water"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "choice",
+      "text": "Вы сидите, стоите или где-то посередине?",
+      "options": [
+        "сидит",
+        "стоя",
+        "между"
+      ]
+    }
+  },
+  {
+    "id": "ru-words-050",
+    "type": "word",
+    "fragments": [
+      "Вот этот.",
+      "ОДЕЖДА",
+      "Обратите внимание, что Q и U путешествуют вместе."
+    ],
+    "topics": [
+      "room",
+      "home"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-051",
+    "type": "word",
+    "fragments": [
+      "СТРОЧКА",
+      "Обратите внимание только на гласные."
+    ],
+    "topics": [
+      "room",
+      "cloth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-052",
+    "type": "word",
+    "fragments": [
+      "Посмотрите на это слово.",
+      "ОКЕАН",
+      "Три гласные ждут."
+    ],
+    "topics": [
+      "coast",
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-053",
+    "type": "word",
+    "fragments": [
+      "ЛИМОН",
+      "Первое письмо.",
+      "Потом последнее."
+    ],
+    "topics": [
+      "plants",
+      "food"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-054",
+    "type": "word",
+    "fragments": [
+      "Небольшое слово.",
+      "ВЕТВЬ",
+      "Посмотрите на букву А как на небольшую крышу."
+    ],
+    "topics": [
+      "forest",
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-055",
+    "type": "word",
+    "fragments": [
+      "Пять букв, круглые в начале.",
+      "ЖЕМЧУГ"
+    ],
+    "topics": [
+      "coast"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-056",
+    "type": "word",
+    "fragments": [
+      "СКРОМНЫЙ",
+      "Пусть сидит."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-057",
+    "type": "word",
+    "fragments": [
+      "МЕДЬ",
+      "Следуйте двойному P."
+    ],
+    "topics": [
+      "light",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-058",
+    "type": "word",
+    "fragments": [
+      "Вот этот.",
+      "Слоновая кость",
+      "Обратите внимание только на гласные."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-059",
+    "type": "word",
+    "fragments": [
+      "СТЕКЛО",
+      "Обратите внимание только на гласные."
+    ],
+    "topics": [
+      "room",
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-060",
+    "type": "word",
+    "fragments": [
+      "Посмотрите на это слово.",
+      "ТИМЬЯН",
+      "Небольшое слово. Пусть сидит."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-061",
+    "type": "word",
+    "fragments": [
+      "НИКЕЛЬ",
+      "Первое письмо.",
+      "Потом последнее."
+    ],
+    "topics": [
+      "stone",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-062",
+    "type": "word",
+    "fragments": [
+      "Небольшое слово.",
+      "МУКА",
+      "Следуйте за словом один раз, медленно."
+    ],
+    "topics": [
+      "room",
+      "food"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-063",
+    "type": "word",
+    "fragments": [
+      "Обратите внимание на букву C, а затем на остальную часть фигуры.",
+      "КЕДР"
+    ],
+    "topics": [
+      "forest"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-064",
+    "type": "word",
+    "fragments": [
+      "СЛИВА",
+      "Пусть сидит."
+    ],
+    "topics": [
+      "plants",
+      "food"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-065",
+    "type": "word",
+    "fragments": [
+      "ПРИЛИВ",
+      "В. Вне. Письма остаются."
+    ],
+    "topics": [
+      "coast",
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-066",
+    "type": "word",
+    "fragments": [
+      "МЫЛО",
+      "Обратите внимание, насколько легкими кажутся буквы."
+    ],
+    "topics": [
+      "coast"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-067",
+    "type": "word",
+    "fragments": [
+      "Одно слово.",
+      "СОСНА",
+      "Обратите внимание на «Я», стоящее посередине."
+    ],
+    "topics": [
+      "forest"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-068",
+    "type": "word",
+    "fragments": [
+      "ТУМАН",
+      "Следуйте за H в остальное."
+    ],
+    "topics": [
+      "sky"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-069",
+    "type": "word",
+    "fragments": [
+      "ПАНЕЛЬ",
+      "Первое письмо.",
+      "Потом последнее."
+    ],
+    "topics": [
+      "room",
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-070",
+    "type": "word",
+    "fragments": [
+      "ЧЕРНИЛА",
+      "Три буквы. Множество."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-071",
+    "type": "word",
+    "fragments": [
+      "ЛЕТАЮЩИЙ ЗМЕЙ",
+      "Обратите внимание только на гласные."
+    ],
+    "topics": [
+      "sky"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-072",
+    "type": "word",
+    "fragments": [
+      "ГРАНИТ",
+      "Обратите внимание на вес слова."
+    ],
+    "topics": [
+      "stone"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-073",
+    "type": "word",
+    "fragments": [
+      "ЛАМПА",
+      "Пусть сидит."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-074",
+    "type": "word",
+    "fragments": [
+      "МОРОЗ",
+      "Мягкие по краям."
+    ],
+    "topics": [
+      "sky",
+      "weather"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-075",
+    "type": "word",
+    "fragments": [
+      "КОРПУС",
+      "Первое письмо.",
+      "Потом последнее."
+    ],
+    "topics": [
+      "coast"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "environment",
+      "text": "Если рядом находится цвет из последнего слова, остановитесь на нем на мгновение."
+    }
+  },
+  {
+    "id": "ru-words-076",
+    "type": "word",
+    "fragments": [
+      "ИВИ",
+      "Три буквы восхождения."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-077",
+    "type": "word",
+    "fragments": [
+      "СУМЕРКИ",
+      "Обратите внимание только на букву У."
+    ],
+    "topics": [
+      "light",
+      "night"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-078",
+    "type": "word",
+    "fragments": [
+      "ШПАТАТ",
+      "Обратите внимание на букву W посередине."
+    ],
+    "topics": [
+      "paper",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-079",
+    "type": "word",
+    "fragments": [
+      "НАБЕРЕЖНАЯ",
+      "Пусть сидит."
+    ],
+    "topics": [
+      "coast"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-080",
+    "type": "word",
+    "fragments": [
+      "ЭМБЕР",
+      "Пусть сидит."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-081",
+    "type": "word",
+    "fragments": [
+      "ПОЗВОНОЧНИК",
+      "Первое письмо. Потом последнее."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-082",
+    "type": "word",
+    "fragments": [
+      "МШИСТЫЙ",
+      "Пусть сидит."
+    ],
+    "topics": [
+      "forest",
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-083",
+    "type": "word",
+    "fragments": [
+      "ЧАЙКА",
+      "Пусть сидит."
+    ],
+    "topics": [
+      "coast"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-084",
+    "type": "word",
+    "fragments": [
+      "ЛИНТЕЛ",
+      "Тихое архитектурное слово."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-085",
+    "type": "word",
+    "fragments": [
+      "СИДР",
+      "Пусть сидит."
+    ],
+    "topics": [
+      "plants",
+      "food"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-086",
+    "type": "word",
+    "fragments": [
+      "КРЕМЕНЬ",
+      "Пусть сидит."
+    ],
+    "topics": [
+      "stone"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-087",
+    "type": "word",
+    "fragments": [
+      "ЧЕРТОП",
+      "Пусть сидит."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-words-088",
+    "type": "word",
+    "fragments": [
+      "ГАВАНЬ",
+      "Пусть сидит."
+    ],
+    "topics": [
+      "coast"
+    ],
+    "difficulty": 1
+  }
+]

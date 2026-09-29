@@ -2,7 +2,7 @@
   "expo": {
     "name": "Back",
     "slug": "back",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "back",
@@ -42,7 +42,7 @@
         {
           "backgroundColor": "#F3EDE1",
           "image": "./assets/images/splash-icon.png",
-          "imageWidth": 88,
+          "imageWidth": 120,
           "resizeMode": "contain"
         }
       ],

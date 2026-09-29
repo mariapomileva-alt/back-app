@@ -1,6 +1,7 @@
 import { type ReactNode } from 'react';
 import { Platform, Pressable, StyleSheet, View, type StyleProp, type ViewStyle } from 'react-native';
 
+import { hideFromA11yTree } from '@/components/accessibility/hideFromA11y';
 import { AppText } from '@/components/typography/AppText';
 import { useHaptics } from '@/hooks/useHaptics';
 import { useTheme } from '@/hooks/useTheme';
@@ -15,10 +16,21 @@ type Props = {
   visual?: ReactNode;
   onPress: () => void;
   accessibilityHint?: string;
+  selected?: boolean;
+  density?: 'standard' | 'compact';
   style?: StyleProp<ViewStyle>;
 };
 
-export function ToolCard({ label, icon, visual, onPress, accessibilityHint, style }: Props) {
+export function ToolCard({
+  label,
+  icon,
+  visual,
+  onPress,
+  accessibilityHint,
+  selected = false,
+  density = 'standard',
+  style,
+}: Props) {
   const { theme } = useTheme();
   const haptics = useHaptics();
   const withVisual = Boolean(visual);
@@ -26,7 +38,8 @@ export function ToolCard({ label, icon, visual, onPress, accessibilityHint, styl
   return (
     <Pressable
       accessibilityRole="button"
-      accessibilityLabel={label}
+      accessibilityLabel={selected ? `${label}, ${t('common.selected')}` : label}
+      accessibilityState={{ selected }}
       accessibilityHint={accessibilityHint ?? t('home.startToolHint')}
       onPress={() => {
         haptics.light();
@@ -35,6 +48,7 @@ export function ToolCard({ label, icon, visual, onPress, accessibilityHint, styl
       style={({ pressed }) => [
         styles.card,
         withVisual ? styles.cardVisual : styles.cardIcon,
+        withVisual && density === 'compact' ? styles.cardVisualCompact : null,
         styles.elevation,
         {
           backgroundColor: theme.colors.surface,
@@ -44,16 +58,32 @@ export function ToolCard({ label, icon, visual, onPress, accessibilityHint, styl
         style,
       ]}
     >
-      {visual ? <View style={styles.visual}>{visual}</View> : null}
+      {visual ? (
+        <View
+          {...hideFromA11yTree()}
+          style={[
+            styles.visual,
+            density === 'compact' ? styles.visualCompact : null,
+            { pointerEvents: 'none' },
+          ]}
+        >
+          {visual}
+        </View>
+      ) : null}
       {icon ? (
-        <View style={styles.icon} accessible={false}>
+        <View {...hideFromA11yTree()} style={styles.icon}>
           {icon}
         </View>
       ) : null}
       <AppText
         variant="button"
         numberOfLines={1}
-        style={[styles.label, withVisual ? styles.labelUnderMark : null]}
+        accessible={false}
+        style={[
+          styles.label,
+          withVisual ? styles.labelUnderMark : null,
+          withVisual && density === 'compact' ? styles.labelCompact : null,
+        ]}
       >
         {label}
       </AppText>
@@ -77,6 +107,11 @@ const styles = StyleSheet.create({
     paddingBottom: 12,
     alignItems: 'center',
     justifyContent: 'flex-end',
+  },
+  cardVisualCompact: {
+    minHeight: 0,
+    paddingTop: 8,
+    paddingBottom: 8,
   },
   cardIcon: {
     minHeight: 98,
@@ -103,6 +138,13 @@ const styles = StyleSheet.create({
     minHeight: 56,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  visualCompact: {
+    minHeight: 40,
+  },
+  labelCompact: {
+    fontSize: 15,
+    lineHeight: 18,
   },
   icon: {
     width: 36,

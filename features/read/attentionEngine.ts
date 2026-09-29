@@ -58,11 +58,36 @@ function leastRecentlySeen<T extends PoolItem>(items: T[], memory: ReadMemory): 
   });
 }
 
+function topicOverlap(left: string[], right: string[]): number {
+  if (left.length === 0 || right.length === 0) {
+    return 0;
+  }
+  return left.reduce((count, topic) => (right.includes(topic) ? count + 1 : count), 0);
+}
+
+function pickFromWindow<T extends PoolItem>(items: T[], memory: ReadMemory, lastTopics: string[]): T | undefined {
+  if (items.length === 0) {
+    return undefined;
+  }
+  const sorted = leastRecentlySeen(items, memory);
+  const earliest = memory.lastSeenAt[sorted[0]!.id] ?? -1;
+  const tier = sorted.filter((item) => (memory.lastSeenAt[item.id] ?? -1) === earliest);
+  const varied =
+    lastTopics.length === 0
+      ? tier
+      : [...tier].sort(
+          (left, right) => topicOverlap(left.topics, lastTopics) - topicOverlap(right.topics, lastTopics),
+        );
+  const window = varied.slice(0, Math.min(5, varied.length));
+  return shuffle(window)[0] ?? sorted[0];
+}
+
 function pickFromPool<T extends PoolItem>(
   items: T[],
   memory: ReadMemory,
   usedInSession: Set<string>,
   thread: ReadThread,
+  lastTopics: string[],
 ): T | undefined {
   if (items.length === 0) {
     return undefined;
@@ -77,21 +102,21 @@ function pickFromPool<T extends PoolItem>(
 
   const unseenMatch = matching(unseen);
   if (unseenMatch.length > 0) {
-    return shuffle(unseenMatch)[0];
+    return pickFromWindow(unseenMatch, memory, lastTopics);
   }
   const freshMatch = matching(notCooling);
   if (freshMatch.length > 0) {
-    return shuffle(freshMatch)[0];
+    return pickFromWindow(freshMatch, memory, lastTopics);
   }
   const availableMatch = matching(available);
   if (availableMatch.length > 0) {
-    return leastRecentlySeen(availableMatch, memory)[0];
+    return pickFromWindow(availableMatch, memory, lastTopics) ?? leastRecentlySeen(availableMatch, memory)[0];
   }
   if (unseen.length > 0) {
-    return shuffle(unseen)[0];
+    return pickFromWindow(unseen, memory, lastTopics);
   }
   if (notCooling.length > 0) {
-    return shuffle(notCooling)[0];
+    return pickFromWindow(notCooling, memory, lastTopics);
   }
   return leastRecentlySeen(available.length > 0 ? available : items, memory)[0];
 }
@@ -164,9 +189,8 @@ function toFragments(item: ReadContentItem): RevealFragment[] {
       id: `${item.id}:follow`,
       itemId: item.id,
       storyId: item.type === 'micro_story' ? item.id : undefined,
-      kind: 'choice',
+      kind: 'environment',
       text: followUp.text,
-      options: followUp.options,
     });
   }
 
@@ -182,13 +206,14 @@ function appendSlot(
   fragments: RevealFragment[],
   itemIds: string[],
   storyIds: string[],
-): void {
+  lastTopics: string[],
+): string[] {
   const pool = poolForSlot(pack, slot, thread);
   const eligible =
     slot === 'micro_story' ? pool.filter((item) => !storyIds.includes(item.id)) : pool;
-  const item = pickFromPool(eligible.length > 0 ? eligible : pool, memory, usedIds, thread);
+  const item = pickFromPool(eligible.length > 0 ? eligible : pool, memory, usedIds, thread, lastTopics);
   if (!item) {
-    return;
+    return lastTopics;
   }
   usedIds.add(item.id);
   itemIds.push(item.id);
@@ -205,6 +230,8 @@ function appendSlot(
       text: thread.recall,
     });
   }
+
+  return item.topics;
 }
 
 function buildFromPattern(
@@ -217,9 +244,10 @@ function buildFromPattern(
   const fragments: RevealFragment[] = [];
   const itemIds: string[] = [];
   const storyIds: string[] = [];
+  let lastTopics: string[] = [];
 
   for (const slot of pattern.slots) {
-    appendSlot(pack, memory, slot, thread, usedIds, fragments, itemIds, storyIds);
+    lastTopics = appendSlot(pack, memory, slot, thread, usedIds, fragments, itemIds, storyIds, lastTopics);
   }
 
   return { itemIds, storyIds, fragments };
@@ -238,7 +266,10 @@ export function createReadSession(pack: ReadPack, memory: ReadMemory): ReadSessi
 
 export function extendReadSession(pack: ReadPack, memory: ReadMemory, session: ReadSession): ReadSession {
   const usedIds = new Set(session.itemIds);
-  const thread = readThreads.find((item) => item.id === session.threadId) ?? pickThread(pack, memory);
+  const thread = pickThread(pack, {
+    ...memory,
+    threadHistory: [...(memory.threadHistory ?? []), session.threadId],
+  });
   const recentPatterns = new Set([...memory.patternHistory, session.patternId].slice(-PATTERN_MEMORY));
   const fresh = sessionPatterns.filter((pattern) => !recentPatterns.has(pattern.id));
   const pool = fresh.length > 0 ? fresh : sessionPatterns.filter((pattern) => pattern.id !== session.patternId);
@@ -246,6 +277,7 @@ export function extendReadSession(pack: ReadPack, memory: ReadMemory, session: R
   const extra = buildFromPattern(pack, memory, pattern, thread, usedIds);
   return {
     ...session,
+    threadId: thread.id,
     itemIds: [...session.itemIds, ...extra.itemIds],
     storyIds: [...session.storyIds, ...extra.storyIds],
     fragments: [...session.fragments, ...extra.fragments],

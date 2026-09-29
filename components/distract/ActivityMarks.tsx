@@ -13,8 +13,8 @@ export function ShapesActivityMark() {
 
 export function BlocksActivityMark() {
   const { theme } = useTheme();
-  const filled = [theme.colors.forest, theme.colors.clay, theme.colors.secondaryGreen];
-  const empty = theme.colors.muted;
+  const filled = [theme.colors.markPrimary, theme.colors.markWarmAccent, theme.colors.markSecondary];
+  const empty = theme.colors.markMuted;
   const pattern = [1, 0, 1, 0, 1, 0, 1, 0, 1];
 
   return (
@@ -52,7 +52,7 @@ export function SnakeActivityMark() {
       <Svg width="100%" height="100%" viewBox={markViewBox} preserveAspectRatio="xMidYMid meet">
         <Path
           d="M18 50 C30 36 46 24 70 26 C86 28 96 40 102 50"
-          stroke={theme.colors.secondaryGreen}
+          stroke={theme.colors.markSecondary}
           strokeWidth={1.2}
           fill="none"
           opacity={0.28}
@@ -63,7 +63,7 @@ export function SnakeActivityMark() {
             cx={bead.cx}
             cy={bead.cy}
             r={bead.r}
-            fill={theme.colors.forest}
+            fill={theme.colors.markPrimary}
             opacity={bead.opacity}
           />
         ))}
@@ -74,23 +74,23 @@ export function SnakeActivityMark() {
 
 export function CatchActivityMark() {
   const { theme } = useTheme();
-  const core = theme.name === 'deepGreen' ? theme.colors.background : theme.colors.forest;
+  const core = theme.colors.markPrimary;
 
   return (
     <MarkFrame>
       <View style={styles.catchStage} accessible={false}>
-        <View style={[styles.catchRing, styles.catchOuter, { backgroundColor: theme.colors.muted }]} />
+        <View style={[styles.catchRing, styles.catchOuter, { backgroundColor: theme.colors.markMuted }]} />
         <View
           style={[
             styles.catchRing,
             styles.catchMid,
-            { backgroundColor: theme.colors.secondaryGreen },
+            { backgroundColor: theme.colors.markSecondary },
           ]}
         />
         <View style={[styles.catchRing, styles.catchCore, { backgroundColor: core }]} />
-        <View style={[styles.dot, styles.dotA, { backgroundColor: theme.colors.clay }]} />
-        <View style={[styles.dot, styles.dotB, { backgroundColor: theme.colors.secondaryGreen }]} />
-        <View style={[styles.dot, styles.dotC, { backgroundColor: theme.colors.forest }]} />
+        <View style={[styles.dot, styles.dotA, { backgroundColor: theme.colors.markWarmAccent }]} />
+        <View style={[styles.dot, styles.dotB, { backgroundColor: theme.colors.markSecondary }]} />
+        <View style={[styles.dot, styles.dotC, { backgroundColor: theme.colors.markPrimary }]} />
       </View>
     </MarkFrame>
   );

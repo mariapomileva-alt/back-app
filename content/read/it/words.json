@@ -1,0 +1,1164 @@
+[
+  {
+    "id": "it-words-001",
+    "type": "word",
+    "fragments": [
+      "MUSCHIO",
+      "Nota quanto poco gli serve."
+    ],
+    "topics": [
+      "plants",
+      "forest"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-002",
+    "type": "word",
+    "fragments": [
+      "Questo.",
+      "BIANCHERIA",
+      "Seguire la linea della L."
+    ],
+    "topics": [
+      "room",
+      "cloth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-003",
+    "type": "word",
+    "fragments": [
+      "ELEFANTESSA",
+      "Notare solo le vocali."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-004",
+    "type": "word",
+    "fragments": [
+      "Guarda questa parola.",
+      "FINESTRA",
+      "Contare le lettere senza nominarle."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-005",
+    "type": "word",
+    "fragments": [
+      "TRANQUILLA",
+      "Prima lettera.",
+      "Poi l'ultimo."
+    ],
+    "topics": [
+      "room",
+      "quiet"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-006",
+    "type": "word",
+    "fragments": [
+      "Una piccola parola.",
+      "NUVOLA",
+      "Seguire la curva del C."
+    ],
+    "topics": [
+      "sky"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-007",
+    "type": "word",
+    "fragments": [
+      "Notare il peso dell'O.",
+      "CALCOLO"
+    ],
+    "topics": [
+      "stone"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "choice",
+      "text": "Se riesci a vedere una giacca o un maglione, di che colore è?",
+      "options": [
+        "blu",
+        "nera",
+        "un altro colore"
+      ]
+    }
+  },
+  {
+    "id": "it-words-008",
+    "type": "word",
+    "fragments": [
+      "FIUME",
+      "Lascialo riposare."
+    ],
+    "topics": [
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-009",
+    "type": "word",
+    "fragments": [
+      "AMBRA",
+      "Notare la forma calda di A."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-010",
+    "type": "word",
+    "fragments": [
+      "Questo.",
+      "PIUMA",
+      "Lascia che i tuoi occhi si posino sul TH."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-011",
+    "type": "word",
+    "fragments": [
+      "PRATO",
+      "Notare solo le vocali."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-012",
+    "type": "word",
+    "fragments": [
+      "Guarda questa parola.",
+      "ARGENTO",
+      "Seguire la S mentre gira."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-013",
+    "type": "word",
+    "fragments": [
+      "LANTERNA",
+      "Prima lettera.",
+      "Poi l'ultimo."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-014",
+    "type": "word",
+    "fragments": [
+      "Una piccola parola.",
+      "BOLLITORE",
+      "La doppia T si erge come un cancello silenzioso."
+    ],
+    "topics": [
+      "room",
+      "home"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-015",
+    "type": "word",
+    "fragments": [
+      "Nota come V ripete e poi riposa.",
+      "VELLUTO"
+    ],
+    "topics": [
+      "room",
+      "cloth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-016",
+    "type": "word",
+    "fragments": [
+      "CARTA",
+      "Lascialo riposare."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-017",
+    "type": "word",
+    "fragments": [
+      "MIELE",
+      "Da notare solo l'O."
+    ],
+    "topics": [
+      "plants",
+      "food"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-018",
+    "type": "word",
+    "fragments": [
+      "Questo.",
+      "COPERTA",
+      "Lasciamo che la parola occupi il suo spazio."
+    ],
+    "topics": [
+      "room",
+      "home"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-019",
+    "type": "word",
+    "fragments": [
+      "GIARDINO",
+      "Notare solo le vocali."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-020",
+    "type": "word",
+    "fragments": [
+      "Guarda questa parola.",
+      "CANDELA",
+      "Segui la parola da sinistra a destra, una volta."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-021",
+    "type": "word",
+    "fragments": [
+      "PULSANTE",
+      "Prima lettera.",
+      "Poi l'ultimo."
+    ],
+    "topics": [
+      "room",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-022",
+    "type": "word",
+    "fragments": [
+      "Una piccola parola.",
+      "SALICE",
+      "Notare l'apertura W due volte."
+    ],
+    "topics": [
+      "plants",
+      "forest"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-023",
+    "type": "word",
+    "fragments": [
+      "Guarda la forma, non il significato.",
+      "MARMO"
+    ],
+    "topics": [
+      "stone"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-024",
+    "type": "word",
+    "fragments": [
+      "COTONE",
+      "Lascialo riposare."
+    ],
+    "topics": [
+      "room",
+      "cloth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-025",
+    "type": "word",
+    "fragments": [
+      "PIATTINA",
+      "Notare la curva di S e C."
+    ],
+    "topics": [
+      "room",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-026",
+    "type": "word",
+    "fragments": [
+      "Questo.",
+      "ARANCIA",
+      "Trova le vocali e lascia il resto."
+    ],
+    "topics": [
+      "plants",
+      "food"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-027",
+    "type": "word",
+    "fragments": [
+      "SPECCHIO",
+      "Notare solo le vocali."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-028",
+    "type": "word",
+    "fragments": [
+      "Guarda questa parola.",
+      "CONCHIGLIA",
+      "Nota quanto piccola rimane la parola."
+    ],
+    "topics": [
+      "coast"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-029",
+    "type": "word",
+    "fragments": [
+      "TAVOLO",
+      "Prima lettera.",
+      "Poi l'ultimo."
+    ],
+    "topics": [
+      "room",
+      "home"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-030",
+    "type": "word",
+    "fragments": [
+      "Una piccola parola.",
+      "BREZZA",
+      "Segui la doppia E."
+    ],
+    "topics": [
+      "sky",
+      "weather"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-031",
+    "type": "word",
+    "fragments": [
+      "Notare la O rotonda.",
+      "TASCA"
+    ],
+    "topics": [
+      "room",
+      "cloth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-032",
+    "type": "word",
+    "fragments": [
+      "FILO",
+      "Lascialo riposare."
+    ],
+    "topics": [
+      "paper",
+      "cloth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-033",
+    "type": "word",
+    "fragments": [
+      "SCALA",
+      "La doppia D è una coppia tranquilla."
+    ],
+    "topics": [
+      "room",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-034",
+    "type": "word",
+    "fragments": [
+      "Questo.",
+      "TENDA",
+      "Lasciamo che la parola rimanga. Non è necessario trattenerlo."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-035",
+    "type": "word",
+    "fragments": [
+      "CIOTTOLO",
+      "Notare solo le vocali."
+    ],
+    "topics": [
+      "stone",
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-036",
+    "type": "word",
+    "fragments": [
+      "Guarda questa parola.",
+      "GIALLA",
+      "Segui Y mentre si dirama."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "environment",
+      "text": "Ora trova qualcosa di giallo intorno a te."
+    }
+  },
+  {
+    "id": "it-words-037",
+    "type": "word",
+    "fragments": [
+      "FORESTA",
+      "Prima lettera.",
+      "Poi l'ultimo."
+    ],
+    "topics": [
+      "forest"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-038",
+    "type": "word",
+    "fragments": [
+      "Una piccola parola.",
+      "CUSCINO",
+      "Lettere morbide. Doppia L."
+    ],
+    "topics": [
+      "room",
+      "home"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-039",
+    "type": "word",
+    "fragments": [
+      "Conta le lettere solo con gli occhi.",
+      "ACERO"
+    ],
+    "topics": [
+      "plants",
+      "forest"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-040",
+    "type": "word",
+    "fragments": [
+      "OMBRA",
+      "Lascialo riposare."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-041",
+    "type": "word",
+    "fragments": [
+      "CERAMICA",
+      "Seguire la C ad entrambe le estremità."
+    ],
+    "topics": [
+      "room",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-042",
+    "type": "word",
+    "fragments": [
+      "Questo.",
+      "AGO",
+      "Doppia E al centro."
+    ],
+    "topics": [
+      "plants",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-043",
+    "type": "word",
+    "fragments": [
+      "CESTO",
+      "Notare solo le vocali."
+    ],
+    "topics": [
+      "room",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-044",
+    "type": "word",
+    "fragments": [
+      "Guarda questa parola.",
+      "PIOVERE",
+      "Quattro lettere. Abbondanza."
+    ],
+    "topics": [
+      "sky",
+      "weather"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-045",
+    "type": "word",
+    "fragments": [
+      "LANA",
+      "Prima lettera.",
+      "Poi l'ultimo."
+    ],
+    "topics": [
+      "room",
+      "cloth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-046",
+    "type": "word",
+    "fragments": [
+      "Una piccola parola.",
+      "ZENZERO",
+      "Sol morbido due volte."
+    ],
+    "topics": [
+      "plants",
+      "food"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-047",
+    "type": "word",
+    "fragments": [
+      "Lascia che i tuoi occhi si posino su TH.",
+      "STOFFA"
+    ],
+    "topics": [
+      "room",
+      "cloth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-048",
+    "type": "word",
+    "fragments": [
+      "BASILICO",
+      "Lascialo riposare."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-049",
+    "type": "word",
+    "fragments": [
+      "DERIVA",
+      "La parola si sta già muovendo. Puoi restare."
+    ],
+    "topics": [
+      "coast",
+      "water"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "choice",
+      "text": "Sei seduto, in piedi o da qualche parte nel mezzo?",
+      "options": [
+        "seduta",
+        "in piedi",
+        "in mezzo"
+      ]
+    }
+  },
+  {
+    "id": "it-words-050",
+    "type": "word",
+    "fragments": [
+      "Questo.",
+      "TRAPUNTA",
+      "Nota che Q e U viaggiano insieme."
+    ],
+    "topics": [
+      "room",
+      "home"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-051",
+    "type": "word",
+    "fragments": [
+      "CUCIRE",
+      "Notare solo le vocali."
+    ],
+    "topics": [
+      "room",
+      "cloth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-052",
+    "type": "word",
+    "fragments": [
+      "Guarda questa parola.",
+      "OCEANO",
+      "Tre vocali in attesa."
+    ],
+    "topics": [
+      "coast",
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-053",
+    "type": "word",
+    "fragments": [
+      "LIMONE",
+      "Prima lettera.",
+      "Poi l'ultimo."
+    ],
+    "topics": [
+      "plants",
+      "food"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-054",
+    "type": "word",
+    "fragments": [
+      "Una piccola parola.",
+      "RAMO",
+      "Considera la A come un piccolo tetto."
+    ],
+    "topics": [
+      "forest",
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-055",
+    "type": "word",
+    "fragments": [
+      "Cinque lettere, rotonde all'inizio.",
+      "PERLA"
+    ],
+    "topics": [
+      "coast"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-056",
+    "type": "word",
+    "fragments": [
+      "UMILE",
+      "Lascialo riposare."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-057",
+    "type": "word",
+    "fragments": [
+      "RAME",
+      "Segui la doppia P."
+    ],
+    "topics": [
+      "light",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-058",
+    "type": "word",
+    "fragments": [
+      "Questo.",
+      "AVORIO",
+      "Notare solo le vocali."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-059",
+    "type": "word",
+    "fragments": [
+      "BICCHIERE",
+      "Notare solo le vocali."
+    ],
+    "topics": [
+      "room",
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-060",
+    "type": "word",
+    "fragments": [
+      "Guarda questa parola.",
+      "TIMO",
+      "Una piccola parola. Lascialo riposare."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-061",
+    "type": "word",
+    "fragments": [
+      "NICHEL",
+      "Prima lettera.",
+      "Poi l'ultimo."
+    ],
+    "topics": [
+      "stone",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-062",
+    "type": "word",
+    "fragments": [
+      "Una piccola parola.",
+      "FARINA",
+      "Segui la parola una volta, lentamente."
+    ],
+    "topics": [
+      "room",
+      "food"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-063",
+    "type": "word",
+    "fragments": [
+      "Notare la C, poi il resto della forma.",
+      "CEDRO"
+    ],
+    "topics": [
+      "forest"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-064",
+    "type": "word",
+    "fragments": [
+      "PRUGNA",
+      "Lascialo riposare."
+    ],
+    "topics": [
+      "plants",
+      "food"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-065",
+    "type": "word",
+    "fragments": [
+      "MAREA",
+      "In. Fuori. Le lettere restano."
+    ],
+    "topics": [
+      "coast",
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-066",
+    "type": "word",
+    "fragments": [
+      "SCHIUMA",
+      "Nota quanto sono leggere le lettere."
+    ],
+    "topics": [
+      "coast"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-067",
+    "type": "word",
+    "fragments": [
+      "Una parola.",
+      "PINO",
+      "Notate l'io che sta nel mezzo."
+    ],
+    "topics": [
+      "forest"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-068",
+    "type": "word",
+    "fragments": [
+      "FOSCHIA",
+      "Segui H nel resto."
+    ],
+    "topics": [
+      "sky"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-069",
+    "type": "word",
+    "fragments": [
+      "PANE",
+      "Prima lettera.",
+      "Poi l'ultimo."
+    ],
+    "topics": [
+      "room",
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-070",
+    "type": "word",
+    "fragments": [
+      "INCHIOSTRO",
+      "Tre lettere. Abbondanza."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-071",
+    "type": "word",
+    "fragments": [
+      "AQUILONE",
+      "Notare solo le vocali."
+    ],
+    "topics": [
+      "sky"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-072",
+    "type": "word",
+    "fragments": [
+      "GRANITO",
+      "Notare il peso della parola."
+    ],
+    "topics": [
+      "stone"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-073",
+    "type": "word",
+    "fragments": [
+      "LAMPADA",
+      "Lascialo riposare."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-074",
+    "type": "word",
+    "fragments": [
+      "GELO",
+      "Morbido ai bordi."
+    ],
+    "topics": [
+      "sky",
+      "weather"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-075",
+    "type": "word",
+    "fragments": [
+      "SCAFO",
+      "Prima lettera.",
+      "Poi l'ultimo."
+    ],
+    "topics": [
+      "coast"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "environment",
+      "text": "Se un colore dell'ultima parola è vicino, riposati su di esso per un momento."
+    }
+  },
+  {
+    "id": "it-words-076",
+    "type": "word",
+    "fragments": [
+      "EDERA",
+      "Tre lettere che si arrampicano."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-077",
+    "type": "word",
+    "fragments": [
+      "CREPUSCOLO",
+      "Da notare solo l'U."
+    ],
+    "topics": [
+      "light",
+      "night"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-078",
+    "type": "word",
+    "fragments": [
+      "SPAGO",
+      "Notare la W al centro."
+    ],
+    "topics": [
+      "paper",
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-079",
+    "type": "word",
+    "fragments": [
+      "BANCHINA",
+      "Lascialo riposare."
+    ],
+    "topics": [
+      "coast"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-080",
+    "type": "word",
+    "fragments": [
+      "EMBRA",
+      "Lascialo riposare."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-081",
+    "type": "word",
+    "fragments": [
+      "COLONNA VERTEBRALE",
+      "Prima lettera. Poi l'ultimo."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-082",
+    "type": "word",
+    "fragments": [
+      "MOSSA",
+      "Lascialo riposare."
+    ],
+    "topics": [
+      "forest",
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-083",
+    "type": "word",
+    "fragments": [
+      "GABBIANO",
+      "Lascialo riposare."
+    ],
+    "topics": [
+      "coast"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-084",
+    "type": "word",
+    "fragments": [
+      "ARCHITRAVE",
+      "Una parola architettonica tranquilla."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-085",
+    "type": "word",
+    "fragments": [
+      "SIDRO",
+      "Lascialo riposare."
+    ],
+    "topics": [
+      "plants",
+      "food"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-086",
+    "type": "word",
+    "fragments": [
+      "SELCE",
+      "Lascialo riposare."
+    ],
+    "topics": [
+      "stone"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-087",
+    "type": "word",
+    "fragments": [
+      "CARDO",
+      "Lascialo riposare."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-words-088",
+    "type": "word",
+    "fragments": [
+      "PORTO",
+      "Lascialo riposare."
+    ],
+    "topics": [
+      "coast"
+    ],
+    "difficulty": 1
+  }
+]

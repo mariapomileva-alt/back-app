@@ -1,0 +1,513 @@
+{
+  "app": {
+    "name": "Geri"
+  },
+  "home": {
+    "hero": "You’re here",
+    "prompt": "What feels possible right now?",
+    "openSettings": "Open settings",
+    "openSettingsHint": "Opens theme, privacy, and other quiet preferences",
+    "startToolHint": "Starts support immediately",
+    "callMyPerson": "Need someone? Call my person",
+    "callMyPersonNeed": "Need someone?",
+    "callMyPersonAction": "Call my person",
+    "callMyPersonHint": "Opens your support contact",
+    "tools": {
+      "breathe": "Breathe",
+      "distract": "Distract",
+      "ground": "Ground",
+      "move": "Move",
+      "listen": "Listen",
+      "read": "Read"
+    },
+    "namePrompt": "Tell us what to call you — only on this phone",
+    "namePromptAction": "Choose a name",
+    "namePromptSkip": "Not now",
+    "heroNamedLine2": "you’re here",
+    "heroNamedA11y": "{name}, you’re here"
+  },
+  "common": {
+    "close": "Kapalı",
+    "closeHint": "Önceki ekrana döner",
+    "back": "Geri",
+    "selected": "Seçildi",
+    "on": "Açık",
+    "off": "Kapalı",
+    "play": "Oynamak",
+    "pause": "Duraklat",
+    "mute": "Sesini kapatmak",
+    "unmute": "Sesini açmak",
+    "replay": "Tekrar oynat",
+    "next": "Sonraki"
+  },
+  "settings": {
+    "title": "Ayarlar",
+    "theme": "Dış görünüş",
+    "themeHint": "Arkanın görünümünü seçin",
+    "voice": "Ses ve ses",
+    "haptics": "Dokunsal",
+    "hapticsHint": "Nazik dokunsal geri bildirimi açar veya kapatır",
+    "reduceMotion": "Hareketi azalt",
+    "reduceMotionHint": "Sisteminiz animasyona izin verse bile daha sakin hareketler kullanır",
+    "language": "Dil",
+    "languageHint": "Bu cihazda Back'in dilini anında değiştirir",
+    "languageBlockedDuringSession": "Önce mevcut desteğinizi bitirin veya kapatın, ardından dili değiştirebilirsiniz.",
+    "languageBlockedDuringSessionHint": "Etkin bir oturum sırasında dil değişemez",
+    "languageSystemDefault": "Cihaz dilini kullan",
+    "languageComingSoon": "Yakında gelecek",
+    "read": "Tercihleri ​​oku",
+    "readHint": "Çizgilerin ne kadar hızlı görüneceğini seçin",
+    "supportContact": "Destek iletişim bilgileri",
+    "patterns": "Desenlerim",
+    "subscription": "Abonelik",
+    "backPlus": "Geri Artı",
+    "backPlusHint": "Back Plus bilgilerini açar",
+    "subscriptionHint": "Abonelik ve Back Plus'ı açar",
+    "backPlusSubtitleTrial": "Deneme etkin · {date} tarihinde sona eriyor",
+    "backPlusSubtitleAnnual": "Yıllık plan · {date} tarihinde yenilenir",
+    "backPlusSubtitleMonthly": "Aylık plan · {date} tarihinde yenilenir",
+    "backPlusSubtitleRequired": "Abonelik gerekli",
+    "backPlusSubtitleUnavailable": "Abonelik bilgileri",
+    "privacy": "Mahremiyet",
+    "terms": "Kullanım şartları",
+    "emergency": "Ekstra destek",
+    "about": "Geri Hakkında",
+    "groups": {
+      "subscription": "Abonelik",
+      "experience": "Deneyim",
+      "personal": "Kişisel",
+      "safetyLegal": "Güvenlik ve Hukuk"
+    },
+    "profile": "About you",
+    "profileHint": "How you want Back to greet you on this device"
+  },
+  "themes": {
+    "title": "Tema",
+    "warmNeutral": "Sıcak Dünya",
+    "deepGreen": "Orman",
+    "softBeige": "Airy Blue Sage",
+    "selectHint": "Bu görünümü hemen uygular"
+  },
+  "patterns": {
+    "intro": "Bu, bu cihazda kalır. Back asla yüklemez.",
+    "breathe": "Son Nefes deseni",
+    "distract": "Son Dikkat dağıtma etkinliği",
+    "listen": "Son Dinleme sesi",
+    "theme": "Son tema",
+    "haptics": "Dokunsal",
+    "reduceMotion": "Hareketi azalt",
+    "empty": "Henüz kaydedilmedi",
+    "recent": "En yeni araçlar",
+    "recentItem": "Son zamanlarda: {tool} · {duration}",
+    "durationShort": "kısa bir süre",
+    "durationMinute": "yaklaşık bir dakika",
+    "durationFew": "birkaç dakika",
+    "forget": "Bunu unut",
+    "forgetHint": "Bu hatırlanan seçimleri ve en yeni araçları bu cihazdan kaldırır"
+  },
+  "session": {
+    "outcome": "Şimdi nasıl hissediyorsun?",
+    "alternatives": "Farklı bir şey deneyebiliriz.",
+    "better": "Biraz daha iyi",
+    "same": "Aynı şey hakkında",
+    "worse": "Daha kötüsü",
+    "betterBody": "Acele etmeyin. İhtiyacınız olduğunda geri dönebilirsiniz.",
+    "sameBody": "Farklı bir şey deneyebiliriz.",
+    "worseBody": "Daha fazla destek alalım.",
+    "done": "Tamamlamak",
+    "share": "Geri Paylaş",
+    "shareMessage": "Geri bir sonraki dakika için sessiz destektir. Bu cihazda altı araç var.",
+    "shareHint": "Sistem paylaşım sayfasını açar. Siz nerede olduğunu seçene kadar hiçbir şey gönderilmez.",
+    "shareUnavailable": "Burada paylaşım yapılamıyor.",
+    "callPerson": "Kişimi ara",
+    "emergency": "Ekstra destek",
+    "returnTools": "Araçlara dön",
+    "tryElse": "Başka bir şey dene",
+    "tryElseHint": "Farklı bir destek türü seçin"
+  },
+  "extraSupport": {
+    "title": "Ekstra destek",
+    "heading": "Biraz daha desteğe mi ihtiyacınız var?",
+    "steps": {
+      "feet": "Her iki ayağınızı yere koyun.",
+      "breath": "Nefesinizin yumuşak kalmasına izin verin. \nZorlamayın.",
+      "water": "Küçük bir yudum su alın \neğer biraz varsa.",
+      "see": "Etrafa bakın ve isim verin \ngörebileceğiniz üç şey.",
+      "now": "Anlamak zorunda değilsin \nşu anda her şey yolunda."
+    },
+    "callMyPerson": "Kişimi ara",
+    "messageMyPerson": "Kişime mesaj at",
+    "chooseSomeone": "Güvendiğim birini seç",
+    "chooseSomeoneHint": "Bu cihazda tuttuğunuz özel bir kişiyi açar",
+    "callHint": "Telefon uygulamasını açar. Arama yalnızca onaylamanız durumunda başlar.",
+    "messageHint": "Mesajları açar. Siz gönderene kadar hiçbir şey gönderilmez.",
+    "urgentTitle": "Acil yardıma mı ihtiyacınız var?",
+    "urgentBody": "Acil tıbbi yardıma ihtiyacınız olabileceğini düşünüyorsanız, \nyerel acil servisinize başvurun.",
+    "emergencyHelp": "Acil yardım · {number}",
+    "urgentInCountry": "{country} için acil yardım",
+    "emergencyHint": "Telefon uygulamasını açar. Arama yalnızca onaylamanız durumunda başlar.",
+    "findLocal": "Yerel acil yardım bulun",
+    "chooseCountry": "Ülke seçin",
+    "changeCountry": "Ülkeyi değiştir",
+    "keepCountry": "Bu ülkeyi koruyun",
+    "keepCountryHint": "Bir dahaki sefere bu ülkeyi bu cihaza kaydeder",
+    "savedCountry": "Bu cihaza kaydedildi"
+  },
+  "supportSetup": {
+    "title": "Güvendiğim biri",
+    "intro": "Bu, bu cihazda kalır. Back asla yüklemez.",
+    "name": "İsim",
+    "nameHint": "Tanıyacağınız bir isim",
+    "phone": "Telefon numarası",
+    "phoneHint": "Yalnızca buradan aramak veya mesaj göndermek için kullanılır",
+    "save": "Kaydetmek",
+    "clear": "Bu cihazdan kaldır",
+    "change": "Bu kişiyi değiştir",
+    "localNote": "Buradaki hiçbir şey Back'e veya başka birine gönderilmez."
+  },
+  "exercise": {
+    "progress": "{current} / {toplam}",
+    "elapsed": "Geçen süre",
+    "okay": "şimdilik iyiyim",
+    "okayHint": "Bu desteği sonlandırır. Yaklaşık 20 saniye sonra nasıl hissettiğinizi sorar.",
+    "closeSession": "Oturumu kapat",
+    "closeHint": "Bu desteği sonlandırıp eve döner veya kısa bir seansın ardından nasıl hissettiğinizi sorar.",
+    "tryAnother": "Başka birini dene",
+    "tryAnotherHint": "Bu desteği sonlandırmadan burada başka bir aktivite seçer.",
+    "breatheUncomfortable": "Nefes almak rahatsız edici geliyor",
+    "moveUncomfortable": "Hareket doğru gelmiyor"
+  },
+  "breathe": {
+    "inhale": "Yavaşça nefes alın",
+    "exhale": "Yavaşça nefes verin",
+    "hold": "Tutmak",
+    "circle": "Solunum çemberi",
+    "patternHint": "Solunum ritmini değiştirir",
+    "menu": "Nefes alma düzenleri",
+    "menuHint": "Sessiz desen listesini açar",
+    "tryAnotherHint": "Solunum düzeni listesini açar",
+    "patterns": {
+      "gentle": "Nazik 4/6",
+      "equal": "Eşit 4/4",
+      "box": "Kutu 4-4-4-4"
+    }
+  },
+  "distract": {
+    "choose": "Basit bir şey seçin.",
+    "menu": "Dikkat dağıtma menüsü",
+    "menuHint": "Etkinlik listesine geri döner",
+    "change": "Etkinliği değiştir",
+    "changeHint": "Sessiz etkinlik listesini açar",
+    "tryAnotherHint": "Sessiz etkinlik listesini açar",
+    "soundOn": "Ses açık",
+    "soundOff": "Ses kapalı",
+    "soundOnHint": "Oyun seslerini açar",
+    "soundOffHint": "Oyun seslerini kapatır",
+    "activities": {
+      "shapes": "Şekiller",
+      "blocks": "Bloklar",
+      "snake": "Yılan",
+      "catch": "Yakalamak"
+    },
+    "shapes": {
+      "instruction": "Eşleşen şekli bulun.",
+      "names": {
+        "circle": "Daire",
+        "square": "Kare",
+        "triangle": "Üçgen",
+        "quarter": "Çeyrek daire"
+      },
+      "colors": {
+        "forest": "Orman",
+        "sage": "Adaçayı",
+        "sand": "Kum",
+        "clay": "Kil",
+        "cool": "Serin"
+      }
+    },
+    "blocks": {
+      "instruction": "Bir şekil yerleştirin. Dolu bir çizgi silinip gidiyor.",
+      "empty": "Boş alan",
+      "filled": "Doldurulmuş alan",
+      "tray": "Yerleştirilecek şekiller",
+      "selectHint": "Bu şekli seçer. Daha sonra ızgarada bir alan seçin veya oraya sürükleyin.",
+      "placeHint": "Seçildi. Izgaradaki bir alana yerleştirmek için iki kez dokunun veya döndürmek için tekrar iki kez dokunun.",
+      "turn": "Dönüş",
+      "turnHint": "Seçilen şekli döndürür",
+      "cellEmpty": "Satır {satır}, sütun {sütun, boş",
+      "cellFilled": "Satır {row}, sütun {col}, doldurulmuş",
+      "cellPlace": "{piece}'i {row}. satır, {col}. sütuna yerleştirin",
+      "pieces": {
+        "twin": "Çift",
+        "bar": "Çubuk",
+        "elbow": "Köşe",
+        "tile": "Fayans",
+        "arch": "Kemer"
+      }
+    },
+    "snake": {
+      "instruction": "Yılanı yönlendir ve topla.",
+      "field": "Sessiz yol",
+      "left": "Sol",
+      "right": "Sağ",
+      "up": "Yukarı",
+      "down": "Aşağı"
+    },
+    "catch": {
+      "instruction": "Göründüğü gibi daireye dokunun.",
+      "target": "Daire",
+      "targetHint": "Dokunabileceğiniz daire"
+    }
+  },
+  "read": {
+    "canvas": "Okuma",
+    "revealHint": "Sonraki satırı gösterir. Çizgiler ayrıca kendi başlarına görünür.",
+    "pausedHint": "Hatlar duraklatıldı. Sonraki satırı göstermek için iki kez dokunun.",
+    "pause": "Satırları duraklat",
+    "pauseHint": "Çizgilerin kendi başlarına görünmesini engeller. Devam etmek için hâlâ dokunabilirsiniz.",
+    "continue": "Satırlara devam et",
+    "continueHint": "Çizgilerin tekrar kendi başlarına görünmesini sağlar.",
+    "tryAnotherHint": "Burada yeni bir okuma dizisi başlatır",
+    "speedHint": "Her satırın ne kadar hızlı göründüğü. Sonraki satırı hemen göstermek için herhangi bir yere dokunun.",
+    "speeds": {
+      "unhurried": "Telaşsız",
+      "steady": "Sabit durmak",
+      "quick": "Hızlı"
+    },
+    "speedBoostOff": "Daha hızlı oku",
+    "speedBoostOffHint": "Bu oturum için her satırı yaklaşık iki kat daha hızlı gösterir.",
+    "speedBoostOn": "Daha hızlı okuma, açık",
+    "speedBoostOnHint": "Çizgiler yaklaşık iki kat daha hızlı görünüyor. Normal hıza dönmek için iki kez dokunun.",
+    "firstHintFollow": "Just follow the words.",
+    "firstHintTap": "Tap anywhere if you want to go faster."
+  },
+  "ground": {
+    "previous": "Önceki talimat",
+    "previousHint": "Önceki topraklama talimatını gösterir",
+    "next": "Sonraki talimat",
+    "nextHint": "Sonraki topraklama talimatını gösterir",
+    "continueHint": "Sonraki topraklama talimatını gösterir",
+    "menu": "Topraklama menüsü",
+    "menuHint": "Sessiz topraklama listesini açar",
+    "tryAnotherHint": "Sessiz topraklama listesini açar",
+    "sequences": {
+      "feetBody": "Ayaklar ve Vücut",
+      "fiveSenses": "5–4–3–2–1",
+      "lookAround": "Etrafına Bak",
+      "texture": "Doku ve Sıcaklık"
+    },
+    "steps": {
+      "feet": "Ayaklarınızın zeminle buluştuğu yeri hissedin.",
+      "toes": "Ayak parmaklarınızı yavaşça hareket ettirin.",
+      "weight": "Ayaklarınızın ağırlığına dikkat edin.",
+      "support": "Vücudunuzu neyin desteklediğini hissedin.",
+      "hands": "Ellerinize dikkat edin.",
+      "shoulders": "Omuzlarınızın yumuşamasına izin verin.",
+      "stay": "Bir dakika daha burada kal."
+    },
+    "fiveSenses": {
+      "see": "Etrafınıza bakın. Görebildiğiniz beş şeyin adını söyleyin.",
+      "touch": "Dokunabileceğiniz dört şeye dikkat edin.",
+      "hear": "Duyabileceğiniz üç sesi adlandırın.",
+      "smell": "Varsa iki kokuya dikkat edin.",
+      "taste": "Bir tadı veya sadece ağzınızdaki hissi fark edin."
+    },
+    "lookAround": {
+      "see": "Etrafınıza bakın ve görebildiğiniz üç şeyi adlandırın.",
+      "farthest": "Buradan görebileceğiniz en uzaktaki şeye dikkat edin.",
+      "still": "Hareketsiz olan bir şey arayın.",
+      "object": "Yakınınızdaki hareketsiz bir nesneye bakın."
+    },
+    "texture": {
+      "notice": "Dokunmadığınız bir dokuya dikkat edin.",
+      "find": "Biraz dokuya sahip bir şey bulun.",
+      "cool": "Dokunulduğunda hoş görünen bir yüzey bulun.",
+      "temp": "Küçük bir sıcaklık farkına bile dikkat edin."
+    },
+    "sequenceHint": "Changes the grounding exercise"
+  },
+  "move": {
+    "hold": "Tutmak.",
+    "release": "Serbest bırakmak.",
+    "notice": "Farkı fark edin.",
+    "noticeFinal": "Burada dinlenin. Tüm vücudunuzun nasıl hissettiğine dikkat edin.",
+    "menu": "Hareket menüsü",
+    "menuHint": "Sessiz hareket listesini açar",
+    "tryAnotherHint": "Sessiz hareket listesini açar",
+    "activities": {
+      "fingers": "Parmaklar",
+      "palms": "Avuç içi basın",
+      "shoulders": "Omuzlar",
+      "feet": "Pres Ayakları",
+      "bodyScan": "Vücut taraması",
+      "tense": "Germe ve Bırakma",
+      "hands": "Eller"
+    },
+    "hints": {
+      "press": "Talimatları izlerken burayı basılı tutun",
+      "hold": "Serbest bırakmanız istenene kadar tutmaya devam edin",
+      "release": "Şimdi yayınla",
+      "notice": "Burada dinlenin ve vücudunuzun nasıl hissettiğini fark edin"
+    },
+    "steps": {
+      "fingers": "Parmaklarınızı yavaşça içe doğru kıvırın.",
+      "palms": "Avuç içlerinizi yavaşça birbirine bastırın.",
+      "shoulders": "Omuzlarınızı biraz kaldırın.",
+      "feet": "Ayaklarınızı yavaşça yere bastırın.",
+      "bodyScan": "Baştan ayağa yavaşça tarayın.",
+      "tense": "Ellerinizi yavaşça gerin.",
+      "hands": "Ellerinizi bacaklarınıza bastırın."
+    }
+  },
+  "listen": {
+    "volume": "Hacim",
+    "previous": "Önceki ses",
+    "next": "Sonraki ses",
+    "chooseSound": "Bir ses seçin",
+    "menu": "Sesler",
+    "menuHint": "Sessiz ses listesini açar",
+    "tryAnotherHint": "Sessiz ses listesini açar",
+    "nowPlaying": "{name} oynuyor",
+    "tapToPlay": "Oynamak için dokunun",
+    "groups": {
+      "nature": "Doğa",
+      "steady": "Sabit durmak"
+    },
+    "sounds": {
+      "rain": "Yumuşak yağmur",
+      "ocean": "Okyanus",
+      "stream": "Nazik akış",
+      "forest": "Sessiz orman",
+      "birds": "Uzak kuşlar",
+      "fan": "Sabit fan",
+      "brown": "Kahverengi gürültü",
+      "white": "Yumuşak beyaz gürültü",
+      "melody": "Yumuşak melodi"
+    },
+    "images": {
+      "rain": "Yapraklarda sessiz yağmur",
+      "ocean": "Sakin okyanus suyu",
+      "stream": "Yumuşak akan su",
+      "forest": "Sessiz orman",
+      "birds": "Uzak kuşlarla açık gökyüzü",
+      "fan": "Yumuşak soyut hava",
+      "brown": "Sıcak kahverengi doku",
+      "white": "Hafif, eşit doku",
+      "melody": "Yumuşak sıcak tonlar"
+    },
+    "soundHint": "Changes the quiet sound",
+    "playing": "Playing",
+    "paused": "{name} paused",
+    "pausedStatus": "Paused"
+  },
+  "privacy": {
+    "onDevice": "Back'in altı araç için kullandığı her şey bu cihazda kalır. Hesap yok ve bulut yok.",
+    "stored": "Bu, kaydettiğiniz bir destek kişisini, Okuma hafızasını, görünüm ve hareket gibi tercihleri ​​ve en son araçların kısa bir yerel listesini içerebilir.",
+    "notSent": "Bunların hiçbiri Back'e veya başka birine gönderilmez. Aramanız veya mesaj göndermeniz durumunda telefon uygulamanız açılır ve yalnızca onaylamanız durumunda başlar.",
+    "emergency": "Ekstra destek yakınınızdaki birine ulaşmanıza yardımcı olabilir. Geri sizin için arama yapmaz.",
+    "notMedical": "Sırt tıbbi bir cihaz değildir. Sağlık Kayıtları oluşturmaz ve Apple Health'i okumaz.",
+    "extraSupport": "Ekstra destek",
+    "extraSupportHint": "Ekstra desteği açar",
+    "policy": "Gizlilik politikası"
+  },
+  "terms": {
+    "selfHelp": "Geri bir kendi kendine yardım aracıdır. Terapi veya tıbbi bir cihaz değildir.",
+    "emergency": "Sırt acil bakımın yerini tutmaz. Acil yardıma ihtiyacınız varsa Ekstra desteği kullanın veya yerel acil servislerle iletişime geçin.",
+    "calls": "Birini ararsanız veya mesaj gönderirseniz telefon uygulamanız açılır. Arama veya mesaj yalnızca siz onayladığınızda başlar.",
+    "data": "Geri'ye kaydettikleriniz bu cihazda kalır. Hesap yok ve bulut yok."
+  },
+  "legal": {
+    "openWeb": "Web sayfasını aç"
+  },
+  "voice": {
+    "intro": "Zemin ekrandaki talimatları kullanır. Dinle bu cihazda sessiz ses çalabilir.",
+    "lastSound": "Son Dinleme sesi",
+    "lastSoundEmpty": "Henüz kaydedilmedi",
+    "lastSoundNote": "Dinle, seçtiğiniz son sesi hatırlar. Bu, bu cihazda kalır.",
+    "mute": "Sesi kapat",
+    "muteHint": "Bu cihazda Dinleme ve Topraklamayı susturur"
+  },
+  "about": {
+    "body": "Geri, bu cihazdaki altı araçla bir sonraki dakika için hızlı yerel destektir.",
+    "disclaimer": "Sırt tıbbi bir cihaz değildir ve terapi değildir."
+  },
+  "subscription": {
+    "kicker": "Geri Artı",
+    "headline": "Geriyi yakın tut",
+    "headlineActive": "Back Plus aktif",
+    "headlineExpired": "Back Plus erişiminiz sona erdi",
+    "intro": "Zor anlar için altı basit araç; özel, çevrimdışı ve ihtiyacınız olduğunda hazır. \n\nUygun olduğunuzda yıllık planla her şeyi 7 gün boyunca ücretsiz deneyin. Deneme sonrasında Breathe, Distract, Ground, Move, Listen ve Read özelliklerini kullanabilmek için aylık veya yıllık aktif bir abonelik gereklidir.",
+    "introPreparing": "Back Plus hazırlanıyor. \n\nBack, yıllık planla birlikte 7 günlük bir denemeyi ve ardından aylık veya yıllık aboneliği içerecektir. Nihai fiyatlar ve yenileme ayrıntıları satın almadan önce App Store veya Google Play'de görünecektir. \n\nBack Plus çıkana kadar satın alınacak hiçbir şey yok.",
+    "introTrialActive": "7 günlük deneme süreniz bu cihazda etkin. Back Plus'ı denediğiniz için teşekkür ederiz.",
+    "introAnnualActive": "Yıllık Back Plus planınız bu cihazda etkin. Back'i desteklediğiniz için teşekkür ederiz.",
+    "introMonthlyActive": "Aylık Back Plus planınız bu cihazda etkin. Back'i desteklediğiniz için teşekkür ederiz.",
+    "introExpired": "Altı Geri aracını kullanmaya devam etmek veya daha önceki bir satın alma işlemini geri yüklemek için bir plan seçin. \n\nAcil durum bilgileri, Ekstra Destek ve Kişimi ara özellikleri hâlâ mevcuttur.",
+    "statusTrialEnds": "Deneme {date} tarihinde sona eriyor",
+    "statusAnnualRenews": "{date} yenileniyor",
+    "statusMonthlyRenews": "{date} yenileniyor",
+    "benefitsTitle": "Back Plus'taki her şey",
+    "plannedNote": "Geliştirme aşamasında:",
+    "safetyTitle": "Destek mevcut olmaya devam ediyor",
+    "safetyBody": "Acil durum bilgileri, Ekstra Destek ve Kişimi ara özellikleri abonelik olmadan da kullanılabilir. Back bir kendi kendine yardım aracıdır; acil servis, tıbbi cihaz veya profesyonel bakımın yerini tutmaz.",
+    "chooseTitle": "Sizin için neyin işe yaradığını seçin",
+    "chooseIntro": "Abonelikler Apple veya Google tarafından yönetilir. Fiyatlar ve deneme uygunluğu mağaza hesabınızdan gelir.",
+    "preparing": "Henüz burada satın alınacak bir şey yok. Back Plus piyasaya sürüldüğünde, uygunsanız yıllık planda 7 günlük denemeye başlayabilirsiniz.",
+    "planMonthly": "Geri Artı Aylık",
+    "planAnnual": "Back Plus Yıllık",
+    "planAnnualTrial": "Uygun yeni aboneler için 7 gün ücretsiz",
+    "planMonthlyNoTrial": "Ücretsiz deneme yok",
+    "planUnavailable": "Henüz mevcut değil",
+    "planUnavailableA11y": "Plan henüz mevcut değil",
+    "planMonthlyLabel": "Mağaza hesabınızda iptal edilene kadar aylık olarak yenilenir.",
+    "planAnnualLabel": "Mağaza hesabınızda iptal edilene kadar yıllık olarak yenilenir.",
+    "bestValue": "En iyi değer",
+    "regionalPricing": "Fiyatlar bölgeye ve para birimine göre değişiklik göstermektedir. Son fiyatlar siz satın almayı onaylamadan önce mağazada görünür.",
+    "choosePlan": "Bir plan seçin",
+    "restore": "Satın alınanları geri yükle",
+    "manage": "Aboneliği yönet",
+    "notNow": "Şimdi değil",
+    "notNowHint": "Back Plus'ı kapatır ve önceki ekrana döner",
+    "linkSupport": "Abonelik desteği",
+    "linkPrivacy": "Mahremiyet",
+    "linkTerms": "Şartlar",
+    "linkSubscriptions": "Web'deki abonelikler",
+    "benefits": {
+      "sixTools": "Nefes alın, Dikkatinizi dağıtın, Yere basın, Hareket edin, Dinleyin ve Okuyun",
+      "offlineSounds": "Eksiksiz çevrimdışı ses koleksiyonu",
+      "allExercises": "Tüm nefes alma, topraklama, hareket ve dikkat egzersizleri",
+      "readExperience": "Eksiksiz Okuma deneyimi",
+      "patterns": "Kişisel yerel kalıplar",
+      "themes": "Tüm görünüm temaları",
+      "expandedSounds": "Dinleme için genişletilmiş ortam sesleri",
+      "additionalThemes": "Ek görünüm temaları",
+      "readLibrary": "Daha Fazla Kitaplık içeriğini okuyun",
+      "patternsDepth": "Desenlerimin daha derin içgörüleri"
+    },
+    "headlineTrial": "Your trial is active.",
+    "introThankYouActive": "Thank you for keeping Back close.\n\nYour subscription helps us care for these tools and keep them private, reliable and available offline.",
+    "trialAfterNote": "After the trial, your plan renews at the price shown in the App Store or Google Play before you confirm.",
+    "startTrial": "Start free trial",
+    "done": "Done",
+    "doneHint": "Returns to the previous screen",
+    "continue": "Continue",
+    "whatsIncluded": "What's included",
+    "loading": "Loading subscription…",
+    "managePreviewNote": "On this web preview, Manage subscription opens Back’s subscription information page. On your phone, it opens Apple or Google subscription settings."
+  },
+  "notFound": {
+    "title": "Bu sayfa burada değil",
+    "body": "İhtiyacınız olduğunda Geriye dönün.",
+    "home": "Geriye Git",
+    "homeHint": "Altı araca geri döner"
+  },
+  "profile": {
+    "title": "About you",
+    "lead": "Optional. A name, a nickname — whatever feels right. Skip if you prefer. Nothing leaves this phone.",
+    "displayName": "What should we call you?",
+    "displayNameHint": "Zayka",
+    "deviceOnly": "We don’t upload this. No account, no server. Later we may offer optional, anonymous insights — only if you turn that on.",
+    "save": "Save",
+    "clear": "Remove what I shared",
+    "skip": "Skip for now"
+  }
+}

@@ -3,7 +3,12 @@
     "name": "Back"
   },
   "home": {
-    "hero": "You’re here.",
+    "hero": "You’re here",
+    "heroNamedLine2": "you’re here",
+    "heroNamedA11y": "{name}, you’re here",
+    "namePrompt": "Tell us what to call you — only on this phone",
+    "namePromptAction": "Choose a name",
+    "namePromptSkip": "Not now",
     "prompt": "What feels possible right now?",
     "openSettings": "Open settings",
     "openSettingsHint": "Opens theme, privacy, and other quiet preferences",
@@ -37,32 +42,78 @@
   },
   "settings": {
     "title": "Settings",
-    "theme": "Theme",
+    "theme": "Appearance",
     "themeHint": "Choose the look of Back",
     "voice": "Voice and sound",
     "haptics": "Haptics",
     "hapticsHint": "Turns gentle haptic feedback on or off",
     "reduceMotion": "Reduce motion",
     "reduceMotionHint": "Uses calmer motion even if your system allows animation",
-    "read": "Read",
+    "language": "Language",
+    "languageHint": "Changes Back’s language immediately on this device",
+    "languageBlockedDuringSession": "Finish or close your current support first, then you can change language.",
+    "languageBlockedDuringSessionHint": "Language cannot change during an active session",
+    "languageSystemDefault": "Use device language",
+    "languageComingSoon": "Coming soon",
+    "read": "Read preferences",
     "readHint": "Choose how quickly lines appear",
     "supportContact": "Support contact",
     "patterns": "My patterns",
     "subscription": "Subscription",
+    "backPlus": "Back Plus",
+    "backPlusHint": "Opens Back Plus information",
+    "subscriptionHint": "Opens subscription and Back Plus",
+    "backPlusSubtitleTrial": "Trial active · ends {date}",
+    "backPlusSubtitleAnnual": "Annual plan · renews {date}",
+    "backPlusSubtitleMonthly": "Monthly plan · renews {date}",
+    "backPlusSubtitleRequired": "Subscription required",
+    "backPlusSubtitleUnavailable": "Subscription information",
     "privacy": "Privacy",
+    "terms": "Terms of use",
     "emergency": "Extra support",
-    "about": "About Back"
+    "about": "About Back",
+    "profile": "About you",
+    "profileHint": "How you want Back to greet you on this device",
+    "groups": {
+      "subscription": "Subscription",
+      "experience": "Experience",
+      "personal": "Personal",
+      "safetyLegal": "Safety & Legal"
+    }
+  },
+  "profile": {
+    "title": "About you",
+    "lead": "Optional. A name, a nickname — whatever feels right. Skip if you prefer. Nothing leaves this phone.",
+    "displayName": "What should we call you?",
+    "displayNameHint": "Zayka",
+    "deviceOnly": "We don’t upload this. No account, no server. Later we may offer optional, anonymous insights — only if you turn that on.",
+    "save": "Save",
+    "clear": "Remove what I shared",
+    "skip": "Skip for now"
   },
   "themes": {
     "title": "Theme",
     "warmNeutral": "Warm Earth",
     "deepGreen": "Forest",
-    "softBeige": "Soft Sage",
+    "softBeige": "Airy Blue Sage",
     "selectHint": "Applies this look immediately"
   },
-  "placeholders": {
-    "tool": "Support will begin here.",
-    "settings": "This section will be ready in a later stage."
+  "patterns": {
+    "intro": "This stays on this device. Back never uploads it.",
+    "breathe": "Last Breathe pattern",
+    "distract": "Last Distract activity",
+    "listen": "Last Listen sound",
+    "theme": "Last theme",
+    "haptics": "Haptics",
+    "reduceMotion": "Reduce motion",
+    "empty": "Not saved yet",
+    "recent": "Recent tools",
+    "recentItem": "Recently: {tool} · {duration}",
+    "durationShort": "a short while",
+    "durationMinute": "about a minute",
+    "durationFew": "a few minutes",
+    "forget": "Forget this",
+    "forgetHint": "Removes these remembered choices and recent tools from this device"
   },
   "session": {
     "outcome": "How do you feel now?",
@@ -75,6 +126,9 @@
     "worseBody": "Let’s get more support.",
     "done": "Done",
     "share": "Share Back",
+    "shareMessage": "Back is quiet support for the next minute. Six tools, on this device.",
+    "shareHint": "Opens the system share sheet. Nothing is sent until you choose where.",
+    "shareUnavailable": "Sharing isn’t available here.",
     "callPerson": "Call my person",
     "emergency": "Extra support",
     "returnTools": "Return to tools",
@@ -100,9 +154,14 @@
     "urgentTitle": "Need urgent help?",
     "urgentBody": "If you think you may need urgent medical help,\ncontact your local emergency service.",
     "emergencyHelp": "Emergency help · {number}",
+    "urgentInCountry": "Urgent help in {country}",
     "emergencyHint": "Opens the phone app. The call starts only if you confirm.",
     "findLocal": "Find local emergency help",
-    "chooseCountry": "Choose country"
+    "chooseCountry": "Choose country",
+    "changeCountry": "Change country",
+    "keepCountry": "Keep this country",
+    "keepCountryHint": "Saves this country on this device for next time",
+    "savedCountry": "Saved on this device"
   },
   "supportSetup": {
     "title": "Someone I trust",
@@ -121,8 +180,10 @@
     "elapsed": "Elapsed time",
     "okay": "I’m okay for now",
     "okayHint": "Ends this support. After about 20 seconds, asks how you feel.",
+    "closeSession": "Close session",
     "closeHint": "Ends this support and returns home, or asks how you feel after a short session.",
     "tryAnother": "Try another",
+    "tryAnotherHint": "Chooses another activity here, without ending this support.",
     "breatheUncomfortable": "Breathing feels uncomfortable",
     "moveUncomfortable": "Movement doesn’t feel right"
   },
@@ -132,14 +193,14 @@
     "hold": "Hold",
     "circle": "Breathing circle",
     "patternHint": "Changes the breathing rhythm",
+    "menu": "Breathing patterns",
+    "menuHint": "Opens the quiet pattern list",
+    "tryAnotherHint": "Opens the breathing pattern list",
     "patterns": {
       "gentle": "Gentle 4/6",
       "equal": "Equal 4/4",
       "box": "Box 4-4-4-4"
     }
-  },
-  "focus": {
-    "instruction": "Find the matching shape."
   },
   "distract": {
     "choose": "Choose something simple.",
@@ -147,6 +208,11 @@
     "menuHint": "Returns to the activity list",
     "change": "Change activity",
     "changeHint": "Opens the quiet activity list",
+    "tryAnotherHint": "Opens the quiet activity list",
+    "soundOn": "Sound on",
+    "soundOff": "Sound off",
+    "soundOnHint": "Turns game sounds on",
+    "soundOffHint": "Turns game sounds off",
     "activities": {
       "shapes": "Shapes",
       "blocks": "Blocks",
@@ -160,12 +226,34 @@
         "square": "Square",
         "triangle": "Triangle",
         "quarter": "Quarter circle"
+      },
+      "colors": {
+        "forest": "Forest",
+        "sage": "Sage",
+        "sand": "Sand",
+        "clay": "Clay",
+        "cool": "Cool"
       }
     },
     "blocks": {
-      "instruction": "Fill the space in any way.",
-      "empty": "Empty square",
-      "filled": "Filled square"
+      "instruction": "Place a shape. A full line fades away.",
+      "empty": "Empty space",
+      "filled": "Filled space",
+      "tray": "Shapes to place",
+      "selectHint": "Selects this shape. Then choose a space on the grid, or drag it there.",
+      "placeHint": "Selected. Double tap a space on the grid to place it, or double tap again to turn it.",
+      "turn": "Turn",
+      "turnHint": "Rotates the selected shape",
+      "cellEmpty": "Row {row}, column {col}, empty",
+      "cellFilled": "Row {row}, column {col}, filled",
+      "cellPlace": "Place {piece} at row {row}, column {col}",
+      "pieces": {
+        "twin": "Pair",
+        "bar": "Bar",
+        "elbow": "Corner",
+        "tile": "Tile",
+        "arch": "Arch"
+      }
     },
     "snake": {
       "instruction": "Guide the snake and collect.",
@@ -177,69 +265,249 @@
     },
     "catch": {
       "instruction": "Tap the circle as it appears.",
-      "target": "Circle"
+      "target": "Circle",
+      "targetHint": "The circle you can tap"
     }
   },
   "read": {
-    "revealHint": "Shows the next line",
+    "canvas": "Reading",
+    "revealHint": "Shows the next line. Lines also appear on their own.",
+    "pausedHint": "Lines are paused. Double tap to show the next line.",
+    "pause": "Pause the lines",
+    "pauseHint": "Stops lines from appearing on their own. You can still tap to continue.",
+    "continue": "Continue the lines",
+    "continueHint": "Lets lines appear on their own again.",
+    "tryAnotherHint": "Starts a fresh reading thread here",
     "speedHint": "How quickly each line appears. Tap anywhere to show the next line immediately.",
     "speeds": {
       "unhurried": "Unhurried",
       "steady": "Steady",
       "quick": "Quick"
-    }
+    },
+    "speedBoostOff": "Read faster",
+    "speedBoostOffHint": "Shows each line about twice as quickly for this session.",
+    "speedBoostOn": "Faster reading, on",
+    "speedBoostOnHint": "Lines appear about twice as quickly. Double tap to return to normal speed.",
+    "firstHintFollow": "Just follow the words.",
+    "firstHintTap": "Tap anywhere if you want to go faster."
   },
   "ground": {
-    "image": "First-person view of feet resting on the floor",
+    "previous": "Previous instruction",
+    "previousHint": "Shows the previous grounding instruction",
+    "next": "Next instruction",
+    "nextHint": "Shows the next grounding instruction",
+    "continueHint": "Shows the next grounding instruction",
+    "menu": "Grounding menu",
+    "menuHint": "Opens the quiet grounding list",
+    "tryAnotherHint": "Opens the quiet grounding list",
+    "sequenceHint": "Changes the grounding exercise",
+    "sequences": {
+      "feetBody": "Feet & Body",
+      "fiveSenses": "5–4–3–2–1",
+      "lookAround": "Look Around",
+      "texture": "Texture & Temperature"
+    },
     "steps": {
       "feet": "Feel where your feet meet the floor.",
       "toes": "Gently move your toes.",
-      "see": "Notice one thing you can see.",
-      "sound": "Notice one sound around you.",
-      "support": "Feel the support beneath your body.",
+      "weight": "Notice the weight of your feet.",
+      "support": "Feel what is supporting your body.",
+      "hands": "Notice your hands.",
       "shoulders": "Let your shoulders soften.",
       "stay": "Stay here for one more moment."
+    },
+    "fiveSenses": {
+      "see": "Look around. Name five things you can see.",
+      "touch": "Notice four things you can touch.",
+      "hear": "Name three sounds you can hear.",
+      "smell": "Notice two smells, if any are there.",
+      "taste": "Notice one taste, or just the feeling in your mouth."
+    },
+    "lookAround": {
+      "see": "Look around and name three things you can see.",
+      "farthest": "Notice the farthest thing you can see from here.",
+      "still": "Look for something that is still.",
+      "object": "Look at one still object near you."
+    },
+    "texture": {
+      "notice": "Notice one texture you are not touching.",
+      "find": "Find something with a little texture.",
+      "cool": "Find a surface that looks cool to the touch.",
+      "temp": "Notice a temperature difference, even a small one."
     }
   },
   "move": {
-    "steps": {
-      "feet": "Press your feet into the floor for five seconds, then release.",
-      "palms": "Gently press your palms together.",
-      "release": "Release.",
-      "shoulders": "Roll your shoulders slowly.",
-      "wall": "Push your hands against a wall if one is nearby.",
-      "shake": "Shake out your hands gently."
+    "hold": "Hold.",
+    "release": "Release.",
+    "notice": "Notice the difference.",
+    "noticeFinal": "Rest here. Notice how your whole body feels.",
+    "menu": "Movement menu",
+    "menuHint": "Opens the quiet movement list",
+    "tryAnotherHint": "Opens the quiet movement list",
+    "activities": {
+      "fingers": "Fingers",
+      "palms": "Press Palms",
+      "shoulders": "Shoulders",
+      "feet": "Press Feet",
+      "bodyScan": "Body scan",
+      "tense": "Tense & Release",
+      "hands": "Hands"
     },
-    "images": {
-      "feet": "Feet gently pressing into the floor",
-      "hands": "Hands resting together"
+    "hints": {
+      "press": "Press and hold here while you follow the instruction",
+      "hold": "Keep holding until you are asked to release",
+      "release": "Release now",
+      "notice": "Rest here and notice how your body feels"
+    },
+    "steps": {
+      "fingers": "Gently curl your fingers inward.",
+      "palms": "Press your palms together gently.",
+      "shoulders": "Lift your shoulders a little.",
+      "feet": "Press your feet gently into the floor.",
+      "bodyScan": "Scan slowly from head to toe.",
+      "tense": "Gently tense your hands.",
+      "hands": "Press your hands into your legs."
     }
   },
   "listen": {
     "volume": "Volume",
     "previous": "Previous sound",
     "next": "Next sound",
+    "chooseSound": "Choose a sound",
+    "soundHint": "Changes the quiet sound",
+    "menu": "Sounds",
+    "menuHint": "Opens the quiet sound list",
+    "tryAnotherHint": "Opens the quiet sound list",
+    "nowPlaying": "{name} playing",
+    "playing": "Playing",
+    "tapToPlay": "Tap to play",
+    "paused": "{name} paused",
+    "pausedStatus": "Paused",
+    "groups": {
+      "nature": "Nature",
+      "steady": "Steady"
+    },
     "sounds": {
       "rain": "Soft rain",
       "ocean": "Ocean",
-      "fan": "Steady fan",
+      "stream": "Gentle stream",
       "forest": "Quiet forest",
-      "brown": "Brown noise"
+      "birds": "Distant birds",
+      "fan": "Steady fan",
+      "brown": "Brown noise",
+      "white": "Soft white noise",
+      "melody": "Soft melody"
     },
     "images": {
       "rain": "Quiet rain on leaves",
       "ocean": "Calm ocean water",
+      "stream": "Soft flowing water",
       "forest": "Muted forest",
+      "birds": "Open sky with distant birds",
       "fan": "Soft abstract air",
-      "brown": "Warm brown texture"
+      "brown": "Warm brown texture",
+      "white": "Light even texture",
+      "melody": "Soft warm tones"
     }
   },
+  "privacy": {
+    "onDevice": "Everything Back uses for the six tools stays on this device. There is no account and no cloud.",
+    "stored": "That can include a support contact you save, Read memory, preferences such as appearance and motion, and a short local list of recent tools.",
+    "notSent": "None of this is sent to Back or anyone else. If you call or message, your phone app opens, and it starts only if you confirm.",
+    "emergency": "Extra support can help you reach someone nearby. Back does not place the call for you.",
+    "notMedical": "Back is not a medical device. It does not create Health Records and it does not read Apple Health.",
+    "extraSupport": "Extra support",
+    "extraSupportHint": "Opens Extra support",
+    "policy": "Privacy policy"
+  },
+  "terms": {
+    "selfHelp": "Back is a self-help tool. It is not therapy and not a medical device.",
+    "emergency": "Back is not a substitute for emergency care. If you need urgent help, use Extra support or contact local emergency services.",
+    "calls": "If you call or message someone, your phone app opens. The call or message starts only if you confirm.",
+    "data": "What you save in Back stays on this device. There is no account and no cloud."
+  },
+  "legal": {
+    "openWeb": "Open web page"
+  },
+  "voice": {
+    "intro": "Ground uses on-screen instructions. Listen can play quiet sound on this device.",
+    "lastSound": "Last Listen sound",
+    "lastSoundEmpty": "Not saved yet",
+    "lastSoundNote": "Listen remembers the last sound you choose. That stays on this device.",
+    "mute": "Mute sound",
+    "muteHint": "Silences Listen and Ground on this device"
+  },
   "about": {
-    "body": "Back is a private self-help tool for the next minute."
+    "body": "Back is rapid local support for the next minute, with six tools on this device.",
+    "disclaimer": "Back is not a medical device and is not therapy."
+  },
+  "subscription": {
+    "kicker": "Back Plus",
+    "headline": "Keep Back close",
+    "headlineActive": "Back Plus is active.",
+    "headlineTrial": "Your trial is active.",
+    "headlineExpired": "Your Back Plus access has ended.",
+    "introThankYouActive": "Thank you for keeping Back close.\n\nYour subscription helps us care for these tools and keep them private, reliable and available offline.",
+    "intro": "Six simple tools for difficult moments — private, offline and ready whenever you need them.\n\nTry everything free for 7 days with the annual plan when you are eligible. After the trial, an active monthly or annual subscription is required to use Breathe, Distract, Ground, Move, Listen and Read.",
+    "introPreparing": "Back Plus is being prepared.\n\nBack will include a 7-day trial with the annual plan, followed by a monthly or annual subscription. Final prices and renewal details will appear in the App Store or Google Play before purchase.\n\nThere is nothing to buy until Back Plus is released.",
+    "introTrialActive": "Thank you for trying Back Plus on this device.",
+    "trialAfterNote": "After the trial, your plan renews at the price shown in the App Store or Google Play before you confirm.",
+    "introAnnualActive": "Your annual Back Plus plan is active on this device. Thank you for supporting Back.",
+    "introMonthlyActive": "Your monthly Back Plus plan is active on this device. Thank you for supporting Back.",
+    "introExpired": "Choose a plan to continue using the six Back tools, or restore an earlier purchase.\n\nEmergency information, Extra Support and Call my person are still available.",
+    "statusTrialEnds": "Trial ends {date}",
+    "statusAnnualRenews": "Renews {date}",
+    "statusMonthlyRenews": "Renews {date}",
+    "benefitsTitle": "Everything in Back Plus",
+    "plannedNote": "In development:",
+    "safetyTitle": "Support remains available",
+    "safetyBody": "Emergency information, Extra Support and Call my person remain available without a subscription. Back is a self-help tool — not an emergency service, medical device or substitute for professional care.",
+    "chooseTitle": "Choose what works for you",
+    "chooseIntro": "Subscriptions are handled by Apple or Google. Prices and trial eligibility come from your store account.",
+    "preparing": "There is nothing to buy here yet. When Back Plus launches, you can start a 7-day trial on the annual plan if you are eligible.",
+    "planMonthly": "Back Plus Monthly",
+    "planAnnual": "Back Plus Annual",
+    "planAnnualTrial": "7 days free for eligible new subscribers",
+    "planMonthlyNoTrial": "No free trial",
+    "planUnavailable": "Not available yet",
+    "planUnavailableA11y": "Plan not available yet",
+    "planMonthlyLabel": "Renews monthly until cancelled in your store account.",
+    "planAnnualLabel": "Renews annually until cancelled in your store account.",
+    "bestValue": "Best value",
+    "regionalPricing": "Prices vary by region and currency. Final prices appear in the store before you confirm purchase.",
+    "choosePlan": "Choose a plan",
+    "startTrial": "Start free trial",
+    "done": "Done",
+    "doneHint": "Returns to the previous screen",
+    "continue": "Continue",
+    "whatsIncluded": "What's included",
+    "loading": "Loading subscription…",
+    "managePreviewNote": "On this web preview, Manage subscription opens Back’s subscription information page. On your phone, it opens Apple or Google subscription settings.",
+    "restore": "Restore purchases",
+    "manage": "Manage subscription",
+    "notNow": "Not now",
+    "notNowHint": "Closes Back Plus and returns to the previous screen",
+    "linkSupport": "Subscription support",
+    "linkPrivacy": "Privacy",
+    "linkTerms": "Terms",
+    "linkSubscriptions": "Subscriptions on the web",
+    "benefits": {
+      "sixTools": "Breathe, Distract, Ground, Move, Listen and Read",
+      "offlineSounds": "The complete offline sound collection",
+      "allExercises": "All breathing, grounding, movement and attention exercises",
+      "readExperience": "The complete Read experience",
+      "patterns": "Personal local patterns",
+      "themes": "All appearance themes",
+      "expandedSounds": "Expanded environment sounds for Listen",
+      "additionalThemes": "Additional appearance themes",
+      "readLibrary": "More Read library content",
+      "patternsDepth": "Deeper My patterns insights"
+    }
   },
   "notFound": {
     "title": "This page isn’t here",
     "body": "Return to Back whenever you need.",
-    "home": "Go to Back"
+    "home": "Go to Back",
+    "homeHint": "Returns to the six tools"
   }
 }

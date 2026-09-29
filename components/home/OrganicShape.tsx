@@ -7,7 +7,7 @@ export function OrganicShape() {
   const { theme } = useTheme();
 
   return (
-    <View pointerEvents="none" style={styles.wrap} accessible={false}>
+    <View accessible={false} style={[styles.wrap, { pointerEvents: 'none' }]}>
       <View
         style={[
           styles.wave,

@@ -30,7 +30,7 @@ export default function ReadSettingsScreen() {
   }, []);
 
   return (
-    <ScreenContainer>
+    <ScreenContainer phoneWidth>
       <ScreenHeader title={t('settings.read')} />
       <AppText tone="secondary" style={styles.lead}>
         {t('read.speedHint')}

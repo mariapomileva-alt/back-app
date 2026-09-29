@@ -1,0 +1,1506 @@
+[
+  {
+    "id": "ru-curious-001",
+    "type": "curious",
+    "fragments": [
+      "Некоторые бабочки",
+      "попробовать ногами."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-002",
+    "type": "curious",
+    "fragments": [
+      "Облако может дрейфовать несколько дней",
+      "без приземления."
+    ],
+    "topics": [
+      "sky"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-003",
+    "type": "curious",
+    "fragments": [
+      "Мед остается самим собой",
+      "в течение очень долгого времени."
+    ],
+    "topics": [
+      "food"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-004",
+    "type": "curious",
+    "fragments": [
+      "Бананы – это ягоды.",
+      "Клубника нет."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "environment",
+      "text": "Теперь найдите что-нибудь зеленое вокруг себя."
+    }
+  },
+  {
+    "id": "ru-curious-005",
+    "type": "curious",
+    "fragments": [
+      "Луна медленно движется",
+      "дальше от Земли."
+    ],
+    "topics": [
+      "sky"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-006",
+    "type": "curious",
+    "fragments": [
+      "На Земле больше деревьев",
+      "чем звезды, которые можно увидеть в ясную ночь."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-007",
+    "type": "curious",
+    "fragments": [
+      "Улитка может отдохнуть",
+      "в течение длительного сезона, а затем продолжить."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-008",
+    "type": "curious",
+    "fragments": [
+      "Выдры иногда плавают",
+      "рядом, пока они спят."
+    ],
+    "topics": [
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-009",
+    "type": "curious",
+    "fragments": [
+      "День на Венере",
+      "длится дольше своего года."
+    ],
+    "topics": [
+      "sky"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-010",
+    "type": "curious",
+    "fragments": [
+      "Мох может расти на камне,",
+      "дерево и тихие крыши."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-011",
+    "type": "curious",
+    "fragments": [
+      "Капли дождя не имеют каплевидной формы.",
+      "Они круглые, когда падают."
+    ],
+    "topics": [
+      "weather"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-012",
+    "type": "curious",
+    "fragments": [
+      "Скрепку можно развернуть",
+      "в одну тонкую линию."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-013",
+    "type": "curious",
+    "fragments": [
+      "Подсолнухи поворачиваются к свету",
+      "когда они молоды."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-014",
+    "type": "curious",
+    "fragments": [
+      "Самая тихая комната на Земле",
+      "все еще не полностью молчит."
+    ],
+    "topics": [
+      "quiet"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-015",
+    "type": "curious",
+    "fragments": [
+      "Морское стекло занимает годы",
+      "стать гладким."
+    ],
+    "topics": [
+      "water"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "environment",
+      "text": "Теперь найдите отражение, хотя бы маленькое."
+    }
+  },
+  {
+    "id": "ru-curious-016",
+    "type": "curious",
+    "fragments": [
+      "Чайная ложка меда",
+      "это работа многих пчел."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-017",
+    "type": "curious",
+    "fragments": [
+      "Снег не одного цвета.",
+      "Он содержит множество крошечных теней."
+    ],
+    "topics": [
+      "weather"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-018",
+    "type": "curious",
+    "fragments": [
+      "Некоторые виды бамбука могут расти",
+      "так быстро, как только вы сможете это увидеть."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-019",
+    "type": "curious",
+    "fragments": [
+      "Стрелка компаса — это маленький магнит.",
+      "который слушает Землю."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-020",
+    "type": "curious",
+    "fragments": [
+      "Вороны запоминают лица",
+      "они встречались раньше."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "choice",
+      "text": "Какой цвет вам ближе всего к рукам?",
+      "options": [
+        "теплый",
+        "прохладный",
+        "что-то еще"
+      ]
+    }
+  },
+  {
+    "id": "ru-curious-021",
+    "type": "curious",
+    "fragments": [
+      "В Сахаре есть участки бледного камня.",
+      "а также песок."
+    ],
+    "topics": [
+      "earth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-022",
+    "type": "curious",
+    "fragments": [
+      "Камешек в реке",
+      "медленно округляется."
+    ],
+    "topics": [
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-023",
+    "type": "curious",
+    "fragments": [
+      "Пламя свечи направлено вверх",
+      "потому что теплый воздух поднимается вверх."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-024",
+    "type": "curious",
+    "fragments": [
+      "Папоротники старше",
+      "чем большинство цветковых растений."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-025",
+    "type": "curious",
+    "fragments": [
+      "Звук ракушки",
+      "в основном это комната вокруг вас."
+    ],
+    "topics": [
+      "quiet"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-026",
+    "type": "curious",
+    "fragments": [
+      "Совы умеют поворачивать головы",
+      "гораздо дальше, чем могут люди."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "environment",
+      "text": "Найдите что-нибудь живое или цвет чего-то живого."
+    }
+  },
+  {
+    "id": "ru-curious-027",
+    "type": "curious",
+    "fragments": [
+      "Чернила на бумаге",
+      "представляет собой тонкий слой высушенного цвета."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-028",
+    "type": "curious",
+    "fragments": [
+      "Утренний свет часто прохладнее",
+      "по цвету, чем вечерний свет."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-029",
+    "type": "curious",
+    "fragments": [
+      "Грецкий орех выглядит немного",
+      "как крошечный мозг, случайно."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-030",
+    "type": "curious",
+    "fragments": [
+      "Некоторые лишайники живут",
+      "на одном и том же камне десятилетиями."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-031",
+    "type": "curious",
+    "fragments": [
+      "Пар из чайника",
+      "вода на мгновение становится воздухом."
+    ],
+    "topics": [
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-032",
+    "type": "curious",
+    "fragments": [
+      "Библиотечный билет каталогизирует не только книги.",
+      "Он каталогизирует возвраты."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-033",
+    "type": "curious",
+    "fragments": [
+      "Мотыльки пьют",
+      "с длинным свернутым языком."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-034",
+    "type": "curious",
+    "fragments": [
+      "Полярная звезда",
+      "почти не двигается."
+    ],
+    "topics": [
+      "sky"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-035",
+    "type": "curious",
+    "fragments": [
+      "Клей запоминает форму",
+      "рук, которые его держали."
+    ],
+    "topics": [
+      "earth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-036",
+    "type": "curious",
+    "fragments": [
+      "Тень - это только место",
+      "свет не доходил."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-037",
+    "type": "curious",
+    "fragments": [
+      "Шишки открыть больше",
+      "когда воздух сухой."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "environment",
+      "text": "Теперь найдите что-нибудь зеленое вокруг себя."
+    }
+  },
+  {
+    "id": "ru-curious-038",
+    "type": "curious",
+    "fragments": [
+      "Стекло изготавливается в основном",
+      "из расплавленного песка."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-039",
+    "type": "curious",
+    "fragments": [
+      "Кошачьи усы",
+      "примерно такой же ширины, как и его тело."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-040",
+    "type": "curious",
+    "fragments": [
+      "Туман — это облако",
+      "который решил остаться на низком уровне."
+    ],
+    "topics": [
+      "weather"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-041",
+    "type": "curious",
+    "fragments": [
+      "Бумага когда-то была в основном тряпками,",
+      "тогда в основном дерево."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-042",
+    "type": "curious",
+    "fragments": [
+      "Приливные бассейны сохраняют немного океана",
+      "на несколько часов."
+    ],
+    "topics": [
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-043",
+    "type": "curious",
+    "fragments": [
+      "Семя уже содержит",
+      "идея листа."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-044",
+    "type": "curious",
+    "fragments": [
+      "Эхо звучит",
+      "приезжаю второй раз."
+    ],
+    "topics": [
+      "quiet"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-045",
+    "type": "curious",
+    "fragments": [
+      "Цвет глубокого льда",
+      "может выглядеть почти синим."
+    ],
+    "topics": [
+      "weather"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-046",
+    "type": "curious",
+    "fragments": [
+      "Пчелы видят узоры на цветах",
+      "что люди скучают."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-047",
+    "type": "curious",
+    "fragments": [
+      "Кирпич - это просто глина",
+      "который научился быть неподвижным."
+    ],
+    "topics": [
+      "earth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-048",
+    "type": "curious",
+    "fragments": [
+      "Ветер не имеет цвета.",
+      "Мы видим, что оно движется."
+    ],
+    "topics": [
+      "weather"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "environment",
+      "text": "Обратите на мгновение внимание на воздух на вашей коже."
+    }
+  },
+  {
+    "id": "ru-curious-049",
+    "type": "curious",
+    "fragments": [
+      "Некоторые грибы слабо светятся",
+      "в темном лесу."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-050",
+    "type": "curious",
+    "fragments": [
+      "Почтовая марка",
+      "это очень маленькое печатное поле."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-051",
+    "type": "curious",
+    "fragments": [
+      "Река Амазонка",
+      "может быть шире, чем в некоторых городах."
+    ],
+    "topics": [
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-052",
+    "type": "curious",
+    "fragments": [
+      "Часы одуванчика — это семена",
+      "ожидая ветерка."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-053",
+    "type": "curious",
+    "fragments": [
+      "Зеркало стеклянное",
+      "с тихим металлом позади него."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-054",
+    "type": "curious",
+    "fragments": [
+      "Воробьи купаются в пыли",
+      "так и в воде."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-055",
+    "type": "curious",
+    "fragments": [
+      "У запаха дождя есть имя:",
+      "петрикор."
+    ],
+    "topics": [
+      "weather"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-056",
+    "type": "curious",
+    "fragments": [
+      "Коралл построен крошечными животными",
+      "в течение длительного времени."
+    ],
+    "topics": [
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-057",
+    "type": "curious",
+    "fragments": [
+      "Карандаш пишет",
+      "с тонким следом углерода."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-058",
+    "type": "curious",
+    "fragments": [
+      "Роса – это вода",
+      "что собралось из прохладного воздуха."
+    ],
+    "topics": [
+      "weather"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-059",
+    "type": "curious",
+    "fragments": [
+      "Дуб может жить",
+      "длиннее дома."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "environment",
+      "text": "Теперь найдите что-нибудь зеленое вокруг себя."
+    }
+  },
+  {
+    "id": "ru-curious-060",
+    "type": "curious",
+    "fragments": [
+      "Слово алфавит",
+      "происходит от двух первых букв."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-061",
+    "type": "curious",
+    "fragments": [
+      "Лава остывает, превращаясь в камень",
+      "с разными текстурами."
+    ],
+    "topics": [
+      "earth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-062",
+    "type": "curious",
+    "fragments": [
+      "Свисток чайника - это пар",
+      "протискиваясь через маленькое отверстие."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-063",
+    "type": "curious",
+    "fragments": [
+      "Светлячки делают свет",
+      "без особого тепла."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-064",
+    "type": "curious",
+    "fragments": [
+      "В Гоби есть зимы",
+      "тихого снега."
+    ],
+    "topics": [
+      "earth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-065",
+    "type": "curious",
+    "fragments": [
+      "Закладка – это пауза",
+      "ты можешь держать."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-066",
+    "type": "curious",
+    "fragments": [
+      "Рябь путешествует,",
+      "но вода в основном остается."
+    ],
+    "topics": [
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-067",
+    "type": "curious",
+    "fragments": [
+      "Белье начинается как",
+      "высокое растение с голубыми цветками."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-068",
+    "type": "curious",
+    "fragments": [
+      "Буква К",
+      "почти всегда берет с собой Ю."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-069",
+    "type": "curious",
+    "fragments": [
+      "Терракотовый горшок",
+      "имеет форму земли и обожжен."
+    ],
+    "topics": [
+      "earth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-070",
+    "type": "curious",
+    "fragments": [
+      "Облака кажутся медленными",
+      "потому что они очень большие."
+    ],
+    "topics": [
+      "sky"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "environment",
+      "text": "Посмотрите вверх, хотя бы до потолка."
+    }
+  },
+  {
+    "id": "ru-curious-071",
+    "type": "curious",
+    "fragments": [
+      "Крылья мотылька могут выглядеть как кора",
+      "при дневном свете."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-072",
+    "type": "curious",
+    "fragments": [
+      "Кристаллы соли представляют собой крошечные кубики.",
+      "если присмотреться."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-073",
+    "type": "curious",
+    "fragments": [
+      "Слово «случайность»",
+      "началось как название рассказа."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-074",
+    "type": "curious",
+    "fragments": [
+      "Подоконник – маленькая сцена",
+      "для света."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-075",
+    "type": "curious",
+    "fragments": [
+      "Речные камни сбиваются вместе",
+      "пока они не согласятся."
+    ],
+    "topics": [
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-076",
+    "type": "curious",
+    "fragments": [
+      "Тимьян сохраняет свой запах",
+      "даже в высушенном виде."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-077",
+    "type": "curious",
+    "fragments": [
+      "Ночное небо — это карта",
+      "который медленно поворачивается."
+    ],
+    "topics": [
+      "sky"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-078",
+    "type": "curious",
+    "fragments": [
+      "Конверт – сложенная пауза",
+      "между двумя комнатами."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-079",
+    "type": "curious",
+    "fragments": [
+      "Пена на волне",
+      "в основном состоит из смеси воздуха и воды."
+    ],
+    "topics": [
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-080",
+    "type": "curious",
+    "fragments": [
+      "Некоторые яблоки остаются хрустящими",
+      "если сохранять спокойствие и спокойствие."
+    ],
+    "topics": [
+      "food"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-081",
+    "type": "curious",
+    "fragments": [
+      "Петля позволяет двери",
+      "мягко передумать."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "environment",
+      "text": "Остановите взгляд на одном предмете, не называя его."
+    }
+  },
+  {
+    "id": "ru-curious-082",
+    "type": "curious",
+    "fragments": [
+      "Лишайник – это часто две жизни",
+      "разделяя одну форму."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-083",
+    "type": "curious",
+    "fragments": [
+      "Слово колыбельная",
+      "старше большинства домов."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-084",
+    "type": "curious",
+    "fragments": [
+      "Теплый хлеб пахнет сильнее",
+      "чем крутой хлеб."
+    ],
+    "topics": [
+      "food"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-085",
+    "type": "curious",
+    "fragments": [
+      "Петричор",
+      "так называется запах дождя на сухой земле."
+    ],
+    "topics": [
+      "weather"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-086",
+    "type": "curious",
+    "fragments": [
+      "Выдры иногда держатся за лапы, пока спят",
+      "чтобы они не расходились."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-087",
+    "type": "curious",
+    "fragments": [
+      "Миг – это реальная единица времени.",
+      "Очень маленький."
+    ],
+    "topics": [
+      "time"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-088",
+    "type": "curious",
+    "fragments": [
+      "Арахис не орех.",
+      "Они растут под землей."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-089",
+    "type": "curious",
+    "fragments": [
+      "Полярная звезда почти не движется.",
+      "Остальное небо вращается вокруг него."
+    ],
+    "topics": [
+      "sky"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-090",
+    "type": "curious",
+    "fragments": [
+      "Лед плавает",
+      "потому что он немного менее плотный, чем вода, из которой он появился."
+    ],
+    "topics": [
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-091",
+    "type": "curious",
+    "fragments": [
+      "Группа сов",
+      "называется парламентом."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-092",
+    "type": "curious",
+    "fragments": [
+      "Бумага когда-то была",
+      "в основном тряпки."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "environment",
+      "text": "Обратите внимание на один листок бумаги рядом с вами, даже на этикетку."
+    }
+  },
+  {
+    "id": "ru-curious-093",
+    "type": "curious",
+    "fragments": [
+      "Некоторые мхи могут высохнуть почти полностью.",
+      "а потом напиваются."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-094",
+    "type": "curious",
+    "fragments": [
+      "Стрелка компаса",
+      "— крошечный путешественник, предпочитающий одно направление."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-095",
+    "type": "curious",
+    "fragments": [
+      "Туман — это облако",
+      "который решил остаться на низком уровне."
+    ],
+    "topics": [
+      "weather"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-096",
+    "type": "curious",
+    "fragments": [
+      "Самое короткое полное предложение на английском языке",
+      "это Го."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-097",
+    "type": "curious",
+    "fragments": [
+      "Медоносные пчелы могут распознавать человеческие лица.",
+      "Им это не нужно."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-098",
+    "type": "curious",
+    "fragments": [
+      "Тень – это всего лишь",
+      "отсутствие света."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-099",
+    "type": "curious",
+    "fragments": [
+      "Речные камни обходят стороной",
+      "терпением, а не планом."
+    ],
+    "topics": [
+      "stone"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-100",
+    "type": "curious",
+    "fragments": [
+      "Ананасы растут из земли,",
+      "не с деревьев."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-101",
+    "type": "curious",
+    "fragments": [
+      "День на Венере",
+      "длиннее своего года."
+    ],
+    "topics": [
+      "sky"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-102",
+    "type": "curious",
+    "fragments": [
+      "Самые тихие номера построены",
+      "проглатывать почти каждый звук."
+    ],
+    "topics": [
+      "quiet"
+    ],
+    "difficulty": 1,
+    "followUp": {
+      "type": "choice",
+      "text": "Звук вокруг вас стал более тихим или более гудящим?",
+      "options": [
+        "тише",
+        "гул",
+        "не уверен"
+      ]
+    }
+  },
+  {
+    "id": "ru-curious-103",
+    "type": "curious",
+    "fragments": [
+      "У вафель есть карманы.",
+      "потому что кто-то хотел большего из того, что идет сверху."
+    ],
+    "topics": [
+      "food"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-104",
+    "type": "curious",
+    "fragments": [
+      "У коал есть отпечатки пальцев",
+      "это может быть удивительно похоже на наше."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-105",
+    "type": "curious",
+    "fragments": [
+      "Свет от солнца",
+      "Доставка занимает около восьми минут."
+    ],
+    "topics": [
+      "sky"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-106",
+    "type": "curious",
+    "fragments": [
+      "Семя может ждать годы",
+      "и еще знаю, что делать."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-107",
+    "type": "curious",
+    "fragments": [
+      "Мыло позволяет воде стекать на ткань",
+      "сделав его немного менее застенчивым."
+    ],
+    "topics": [
+      "home"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-108",
+    "type": "curious",
+    "fragments": [
+      "Цвет фламинго",
+      "происходит от того, что он ест."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-109",
+    "type": "curious",
+    "fragments": [
+      "Антарктида — пустыня.",
+      "Очень сухой и очень широкий."
+    ],
+    "topics": [
+      "earth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-110",
+    "type": "curious",
+    "fragments": [
+      "Момент был когда-то",
+      "измеренный отрезок времени."
+    ],
+    "topics": [
+      "time"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-111",
+    "type": "curious",
+    "fragments": [
+      "Некоторые деревья общаются",
+      "сквозь почву, тихо."
+    ],
+    "topics": [
+      "forest"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-112",
+    "type": "curious",
+    "fragments": [
+      "Стекло охлаждается так быстро",
+      "он никогда не становится обычным кристаллом."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-113",
+    "type": "curious",
+    "fragments": [
+      "Вороны запоминают лица",
+      "и может затаить обиду или услугу."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-114",
+    "type": "curious",
+    "fragments": [
+      "Море ночью громче",
+      "главным образом потому, что остальной мир тише."
+    ],
+    "topics": [
+      "coast"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-115",
+    "type": "curious",
+    "fragments": [
+      "Слово «случайность»",
+      "началось как сказочная случайность."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-116",
+    "type": "curious",
+    "fragments": [
+      "Головка подсолнуха",
+      "это не один цветок.",
+      "Это сотни маленьких",
+      "согласившись смотреть в лицо так же."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-117",
+    "type": "curious",
+    "fragments": [
+      "Цвет, который мы называем небесно-голубым",
+      "это рассеянный свет.",
+      "Воздух сохраняет синий цвет",
+      "и пусть все остальное продолжается."
+    ],
+    "topics": [
+      "sky"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-118",
+    "type": "curious",
+    "fragments": [
+      "Вкус осьминогов",
+      "своими руками.",
+      "Достигающая вещь",
+      "также может быть знающей вещью."
+    ],
+    "topics": [
+      "water",
+      "nature"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-119",
+    "type": "curious",
+    "fragments": [
+      "Карандаш может писать",
+      "около сорока пяти тысяч слов",
+      "прежде чем это снова станет просто деревом."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-curious-120",
+    "type": "curious",
+    "fragments": [
+      "В сотах используются шестиугольники",
+      "потому что шесть сторон",
+      "держать много",
+      "с очень маленькой стеной."
+    ],
+    "topics": [
+      "nature"
+    ],
+    "difficulty": 1
+  }
+]

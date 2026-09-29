@@ -1,71 +1,136 @@
 import { useState } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { Pressable, StyleSheet, useWindowDimensions } from 'react-native';
 
-import { PrimaryButton } from '@/components/buttons/PrimaryButton';
 import { TextButton } from '@/components/buttons/TextButton';
-import { ProgressDots } from '@/components/feedback/ProgressDots';
-import { MoveMark } from '@/components/marks';
+import { MoveSfxMuteButton } from '@/components/move/MoveSfxMuteButton';
+import { MoveStage } from '@/components/move/MoveStage';
 import { ActiveSessionScreen } from '@/components/session/ActiveSessionScreen';
-import { AppText } from '@/components/typography/AppText';
-import { moveSteps } from '@/features/move/steps';
-import { useHaptics } from '@/hooks/useHaptics';
+import { SessionChoiceSheet } from '@/components/session/SessionChoiceSheet';
+import { CrossfadeInstructionText } from '@/components/typography/CrossfadeInstructionText';
+import { isMoveSequenceId, moveSequenceIds } from '@/features/move/steps';
+import { useMoveCycle } from '@/features/move/useMoveCycle';
+import { MOVE_UNCOMFORTABLE_INTENT } from '@/features/session/suggestions';
+import { useMoveAmbient } from '@/hooks/useMoveAmbient';
+import { usePaidToolGate } from '@/hooks/usePaidToolGate';
 import { t } from '@/locales/i18n';
 import { serif } from '@/theme/fonts';
 import { spacing } from '@/theme/spacing';
 
 export default function MoveScreen() {
-  const haptics = useHaptics();
-  const [step, setStep] = useState(0);
-  const last = step >= moveSteps.length - 1;
-  const current = moveSteps[step] ?? moveSteps[0]!;
-
-  const next = () => {
-    haptics.light();
-    if (!last) {
-      setStep((value) => value + 1);
-    }
-  };
+  usePaidToolGate();
+  const { height, fontScale } = useWindowDimensions();
+  const compact = height < 700 || fontScale > 1.35;
+  const { phase, instructionKey, sequenceId, stepId, onPressIn, onPressOut, selectSequence } =
+    useMoveCycle();
+  const [chooserOpen, setChooserOpen] = useState(false);
+  const moveAmbient = useMoveAmbient({ sessionPaused: chooserOpen });
+  const { unlockFromUserGesture, muted: moveSfxMuted, toggleMute: toggleMoveSfxMute } =
+    moveAmbient;
+  const instruction = t(instructionKey);
+  const hint = t(`move.hints.${phase}`);
+  const openChooser = () => setChooserOpen(true);
 
   return (
-    <ActiveSessionScreen
-      tool="move"
-      title={t('home.tools.move')}
-      extraActions={({ trySomethingElse }) => (
-        <TextButton label={t('exercise.moveUncomfortable')} onPress={trySomethingElse} />
-      )}
-    >
-      <View style={styles.mark} accessible={false}>
-        <MoveMark />
-      </View>
-      <AppText variant="instruction" style={styles.instruction}>
-        {t(current.textKey)}
-      </AppText>
-      <ProgressDots count={moveSteps.length} index={step} />
-      {last ? null : (
-        <View style={styles.footer}>
-          <PrimaryButton label={t('common.next')} onPress={next} />
-        </View>
-      )}
-    </ActiveSessionScreen>
+    <>
+      <ActiveSessionScreen
+        tool="move"
+        scroll={false}
+        title={t('home.tools.move')}
+        right={
+          <MoveSfxMuteButton
+            muted={moveSfxMuted}
+            onPress={() => {
+              unlockFromUserGesture();
+              toggleMoveSfxMute();
+            }}
+          />
+        }
+        onTryAnother={openChooser}
+        tryAnotherHint={t('move.tryAnotherHint')}
+        backClosesSession
+        backNavigates={chooserOpen}
+        onBack={chooserOpen ? () => setChooserOpen(false) : undefined}
+        extraActions={({ tryOfferedAlternatives }) => (
+          <TextButton
+            label={t('exercise.moveUncomfortable')}
+            onPress={() => tryOfferedAlternatives(MOVE_UNCOMFORTABLE_INTENT)}
+          />
+        )}
+      >
+        <>
+            <Pressable
+              accessibilityRole="none"
+              importantForAccessibility="no-hide-descendants"
+              onPress={unlockFromUserGesture}
+              style={[styles.stage, compact && styles.stageCompact]}
+            >
+              <MoveStage
+                activityId={sequenceId}
+                stepId={stepId}
+                phase={phase}
+                instruction={instruction}
+                hint={hint}
+                onPressIn={onPressIn}
+                onPressOut={onPressOut}
+              />
+              <CrossfadeInstructionText
+                contentKey={instructionKey}
+                variant="instruction"
+                accessibilityLiveRegion="polite"
+                style={[styles.instruction, compact && styles.instructionCompact]}
+                minHeight={compact ? 68 : 84}
+              >
+                {instruction}
+              </CrossfadeInstructionText>
+            </Pressable>
+            <SessionChoiceSheet
+              visible={chooserOpen}
+              title={t('move.menu')}
+              selectedId={sequenceId}
+              options={moveSequenceIds.map((id) => ({
+                id,
+                label: t(`move.activities.${id}`),
+              }))}
+              onSelect={(id) => {
+                if (isMoveSequenceId(id)) {
+                  selectSequence(id);
+                  setChooserOpen(false);
+                }
+              }}
+              onDismiss={() => setChooserOpen(false)}
+            />
+        </>
+      </ActiveSessionScreen>
+    </>
   );
 }
 
 const styles = StyleSheet.create({
-  mark: {
-    width: 168,
-    height: 100,
-    marginTop: spacing.md,
-    alignSelf: 'center',
+  stage: {
+    flex: 1,
+    minHeight: 0,
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: spacing.xs,
+    gap: spacing.md,
+    overflow: 'visible',
+  },
+  stageCompact: {
+    paddingVertical: spacing.xxs,
+    gap: spacing.sm,
   },
   instruction: {
     fontFamily: serif,
+    fontSize: 34,
+    lineHeight: 42,
     fontWeight: '500',
-    marginTop: spacing.lg,
-    marginBottom: spacing.lg,
-    maxWidth: 340,
+    textAlign: 'center',
+    maxWidth: 320,
+    paddingHorizontal: spacing.sm,
+    flexShrink: 0,
   },
-  footer: {
-    marginTop: 'auto',
-    paddingTop: spacing.lg,
+  instructionCompact: {
+    fontSize: 28,
+    lineHeight: 34,
   },
 });

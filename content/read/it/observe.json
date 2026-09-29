@@ -1,0 +1,767 @@
+[
+  {
+    "id": "it-observe-001",
+    "type": "observation",
+    "fragments": [
+      "Guarda lo spazio",
+      "tra queste lettere.",
+      "tranquilla"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-observe-002",
+    "type": "observation",
+    "fragments": [
+      "Segui questa parola",
+      "mentre si deposita.",
+      "Ancora"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-observe-003",
+    "type": "observation",
+    "fragments": [
+      "Lascia riposare gli occhi",
+      "sull'ultima parola",
+      "ancora un attimo.",
+      "Ancora"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-observe-004",
+    "type": "observation",
+    "fragments": [
+      "Notare la forma",
+      "della lettera S.",
+      "S"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-observe-005",
+    "type": "observation",
+    "fragments": [
+      "Guarda come O",
+      "è una piccola stanza chiusa.",
+      "O"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-observe-006",
+    "type": "observation",
+    "fragments": [
+      "La parola qui può restare.",
+      "Non è necessario trattenerlo.",
+      "Qui"
+    ],
+    "topics": [
+      "tranquilla"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-observe-007",
+    "type": "observation",
+    "fragments": [
+      "Guarda la linea alta",
+      "nella lettera l.",
+      "l"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-observe-008",
+    "type": "observation",
+    "fragments": [
+      "Anche una pausa lo è",
+      "una specie di frase.",
+      "pausa"
+    ],
+    "topics": [
+      "tranquilla"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-observe-009",
+    "type": "observation",
+    "fragments": [
+      "Guarda la parola \"lento\" apparire",
+      "senza fretta.",
+      "lenta"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-observe-010",
+    "type": "observation",
+    "fragments": [
+      "La lettera M",
+      "ha due piccoli picchi.",
+      "M"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-observe-011",
+    "type": "observation",
+    "fragments": [
+      "Lascia che questa riga di testo",
+      "essere sufficiente.",
+      "Abbastanza"
+    ],
+    "topics": [
+      "tranquilla"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-observe-012",
+    "type": "observation",
+    "fragments": [
+      "Si noti come T",
+      "si erge come un tavolino.",
+      "T"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-observe-013",
+    "type": "observation",
+    "fragments": [
+      "Segui la curva",
+      "nella lettera C.",
+      "C"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-observe-014",
+    "type": "observation",
+    "fragments": [
+      "La parola adesso",
+      "sta già partendo.",
+      "Ora"
+    ],
+    "topics": [
+      "time"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-observe-015",
+    "type": "observation",
+    "fragments": [
+      "Guarda il divario",
+      "sotto la lettera E.",
+      "E"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-observe-016",
+    "type": "observation",
+    "fragments": [
+      "Un periodo è molto piccolo",
+      "punto fermo dello sguardo.",
+      "."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-observe-017",
+    "type": "observation",
+    "fragments": [
+      "Lascia che la parola sia morbida",
+      "prenditi il ​​suo tempo.",
+      "morbida"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-observe-018",
+    "type": "observation",
+    "fragments": [
+      "La lettera W",
+      "sono due valli.",
+      "W"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-observe-019",
+    "type": "observation",
+    "fragments": [
+      "Rimani con questa frase",
+      "finché non ti senti completo."
+    ],
+    "topics": [
+      "tranquilla"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-observe-020",
+    "type": "observation",
+    "fragments": [
+      "Notare lo spazio aperto",
+      "all'interno della lettera A.",
+      "UNA"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-observe-021",
+    "type": "observation",
+    "fragments": [
+      "La parola tranquillo ha cinque lettere",
+      "e spazio intorno a loro.",
+      "tranquilla"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-observe-022",
+    "type": "observation",
+    "fragments": [
+      "Attenzione alla parola indugiare",
+      "senza aggiungere altro.",
+      "indugiare"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-observe-023",
+    "type": "observation",
+    "fragments": [
+      "La lettera I",
+      "è un'unica sottile presenza.",
+      "IO"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-observe-024",
+    "type": "observation",
+    "fragments": [
+      "Lascia viaggiare lo sguardo",
+      "dalla prima parola",
+      "fino all'ultimo."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-observe-025",
+    "type": "observation",
+    "fragments": [
+      "La virgola è un piccolo respiro",
+      "sulla linea."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-observe-026",
+    "type": "observation",
+    "fragments": [
+      "Si noti come H",
+      "ha una piccola finestra.",
+      "H"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-observe-027",
+    "type": "observation",
+    "fragments": [
+      "La parola ancora può significare non muoversi,",
+      "o anche così.",
+      "Ancora"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-observe-028",
+    "type": "observation",
+    "fragments": [
+      "Guarda arrivare questa frase,",
+      "poi riposati."
+    ],
+    "topics": [
+      "tranquilla"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-observe-029",
+    "type": "observation",
+    "fragments": [
+      "La lettera U",
+      "è una piccola ciotola.",
+      "U"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-observe-030",
+    "type": "observation",
+    "fragments": [
+      "Lasciamo stare la parola gentile",
+      "al centro dello schermo.",
+      "gentile"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-observe-031",
+    "type": "observation",
+    "fragments": [
+      "Notare il piede",
+      "della lettera R.",
+      "R"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-observe-032",
+    "type": "observation",
+    "fragments": [
+      "Una riga vuota",
+      "è anche leggibile."
+    ],
+    "topics": [
+      "tranquilla"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-observe-033",
+    "type": "observation",
+    "fragments": [
+      "La parola carta ha due p",
+      "stando uno accanto all'altro.",
+      "carta"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-observe-034",
+    "type": "observation",
+    "fragments": [
+      "Guarda la lettera Y",
+      "come una piccola forchetta.",
+      "Y"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-observe-035",
+    "type": "observation",
+    "fragments": [
+      "Lascia che questo sia uno sguardo lento,",
+      "non è un compito."
+    ],
+    "topics": [
+      "tranquilla"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-observe-036",
+    "type": "observation",
+    "fragments": [
+      "La lettera n",
+      "è un cancello con una diagonale.",
+      "N"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-observe-037",
+    "type": "observation",
+    "fragments": [
+      "Notare la rotondità",
+      "nella parola luna.",
+      "luna"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-observe-038",
+    "type": "observation",
+    "fragments": [
+      "La parola stanza contiene",
+      "un'altra stanza: oo.",
+      "camera"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-observe-039",
+    "type": "observation",
+    "fragments": [
+      "Rimani con l'ultima frase",
+      "dopo che appare."
+    ],
+    "topics": [
+      "tranquilla"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-observe-040",
+    "type": "observation",
+    "fragments": [
+      "La lettera B",
+      "ha due piccoli giardini recintati.",
+      "B"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-observe-041",
+    "type": "observation",
+    "fragments": [
+      "Lasciamo che la parola si apra",
+      "fai solo quello che dice.",
+      "aprire"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-observe-042",
+    "type": "observation",
+    "fragments": [
+      "Guarda come funzionano le lettere serif",
+      "hanno i piedi piccoli."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-observe-043",
+    "type": "observation",
+    "fragments": [
+      "La parola foglia è composta da quattro lettere",
+      "e una forma.",
+      "foglia"
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-observe-044",
+    "type": "observation",
+    "fragments": [
+      "Notare il silenzio",
+      "dopo una breve frase."
+    ],
+    "topics": [
+      "tranquilla"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-observe-045",
+    "type": "observation",
+    "fragments": [
+      "La lettera G quasi si chiude,",
+      "allora no.",
+      "G"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-observe-046",
+    "type": "observation",
+    "fragments": [
+      "Lascia che la parola qui sia un luogo,",
+      "non una richiesta.",
+      "Qui"
+    ],
+    "topics": [
+      "tranquilla"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-observe-047",
+    "type": "observation",
+    "fragments": [
+      "Attenzione alla parola crepuscolo",
+      "come se fosse luce che se ne andava.",
+      "crepuscolo"
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-observe-048",
+    "type": "observation",
+    "fragments": [
+      "Questa linea può finire.",
+      "Puoi restare ancora un secondo."
+    ],
+    "topics": [
+      "tranquilla"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-observe-049",
+    "type": "observation",
+    "fragments": [
+      "Basterà questa parola.",
+      "RACCOLTO"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-observe-050",
+    "type": "observation",
+    "fragments": [
+      "Una lettera è un cancello.",
+      "H"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-observe-051",
+    "type": "observation",
+    "fragments": [
+      "Leggi questo una volta.",
+      "Quindi lascia che i tuoi occhi si soffermino oltre."
+    ],
+    "topics": [
+      "tranquilla"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-observe-052",
+    "type": "observation",
+    "fragments": [
+      "LARGA",
+      "Nota come la parola occupa spazio."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-observe-053",
+    "type": "observation",
+    "fragments": [
+      "L'ultima parola può essere piccola.",
+      "OK"
+    ],
+    "topics": [
+      "tranquilla"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-observe-054",
+    "type": "observation",
+    "fragments": [
+      "Segui i discendenti -",
+      "le lettere che scendono sotto la linea.",
+      "g p y"
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-observe-055",
+    "type": "observation",
+    "fragments": [
+      "Mantieni questa forma.",
+      "O",
+      "Una stanza senza mobili."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-observe-056",
+    "type": "observation",
+    "fragments": [
+      "Una linea più lunga può ancora essere gentile:",
+      "la luce sul muro è solo visitatrice."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-observe-057",
+    "type": "observation",
+    "fragments": [
+      "Non contare nulla.",
+      "Basta guardare la parola finché non diventa un segno.",
+      "FIUME"
+    ],
+    "topics": [
+      "water"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-observe-058",
+    "type": "observation",
+    "fragments": [
+      "Morbida.",
+      "Poi la parola sotto.",
+      "BIANCHERIA"
+    ],
+    "topics": [
+      "cloth"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-observe-059",
+    "type": "observation",
+    "fragments": [
+      "Lascia che arrivi la parola successiva senza prepararle un volto.",
+      "CALCOLO"
+    ],
+    "topics": [
+      "stone"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "it-observe-060",
+    "type": "observation",
+    "fragments": [
+      "Rimani sulla virgola,",
+      "se ce n'è uno,",
+      "o sulla pausa dove potrebbe esserci una virgola."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  }
+]

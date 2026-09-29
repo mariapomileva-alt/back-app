@@ -2,6 +2,7 @@ import { type ReactNode } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 
+import { hideFromA11yTree } from '@/components/accessibility/hideFromA11y';
 import {
   BreatheMark,
   DistractMark,
@@ -44,7 +45,7 @@ export function HomeCardVisual({ id }: Props) {
   }
 
   return (
-    <View pointerEvents="none" style={styles.wrap} accessible={false}>
+    <View {...hideFromA11yTree()} style={[styles.wrap, { pointerEvents: 'none' }]}>
       {content}
       <LinearGradient
         colors={[hexToRgba(theme.colors.surface, 0), theme.colors.surface]}

@@ -23,6 +23,10 @@
         "sku": "app.back.selfhelp",
         "ascAppId": "6811918141",
         "appName": "Back: You're Here"
+      },
+      "android": {
+        "track": "internal",
+        "releaseStatus": "draft"
       }
     }
   }

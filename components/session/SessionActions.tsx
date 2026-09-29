@@ -3,32 +3,34 @@ import { StyleSheet, View } from 'react-native';
 
 import { ActivitySwitcher } from '@/components/session/ActivitySwitcher';
 import { SessionExitAction } from '@/components/session/SessionExitAction';
-import { TrySomethingElse } from '@/components/session/TrySomethingElse';
 import { spacing } from '@/theme/spacing';
 
 type Props = {
   onOkay: () => void;
-  onTrySomethingElse: () => void;
-  onChangeActivity?: () => void;
-  changeActivityLabel?: string;
+  onTryAnother?: () => void;
+  tryAnotherLabel?: string;
+  tryAnotherHint?: string;
   extra?: ReactNode;
 };
 
 export function SessionActions({
   onOkay,
-  onTrySomethingElse,
-  onChangeActivity,
-  changeActivityLabel,
+  onTryAnother,
+  tryAnotherLabel,
+  tryAnotherHint,
   extra,
 }: Props) {
   return (
     <View style={styles.actions}>
-      <SessionExitAction onPress={onOkay} />
-      {onChangeActivity ? (
-        <ActivitySwitcher onPress={onChangeActivity} label={changeActivityLabel} />
-      ) : null}
-      <TrySomethingElse onPress={onTrySomethingElse} />
       {extra}
+      {onTryAnother ? (
+        <ActivitySwitcher
+          onPress={onTryAnother}
+          label={tryAnotherLabel}
+          accessibilityHint={tryAnotherHint}
+        />
+      ) : null}
+      <SessionExitAction onPress={onOkay} />
     </View>
   );
 }
@@ -37,6 +39,9 @@ const styles = StyleSheet.create({
   actions: {
     width: '100%',
     alignItems: 'stretch',
-    paddingTop: spacing.sm,
+    flexShrink: 0,
+    paddingTop: spacing.xxs,
+    paddingBottom: spacing.xs,
+    gap: spacing.sm,
   },
 });

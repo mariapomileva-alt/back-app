@@ -1,0 +1,198 @@
+{
+  "paddingRatio": 0.085,
+  "sounds": {
+    "rain": {
+      "soundId": "rain",
+      "sourceCanvas": {
+        "width": 720,
+        "height": 432
+      },
+      "visibleBounds": {
+        "left": 30,
+        "top": 24,
+        "width": 682,
+        "height": 386
+      },
+      "cropBox": {
+        "left": 0,
+        "top": 0,
+        "width": 720,
+        "height": 432
+      },
+      "aspectRatio": 1.6667,
+      "files": {
+        "still": "assets/listen-art/runtime/rain-still.png",
+        "loop": "assets/listen-art/runtime/rain-loop.webp"
+      }
+    },
+    "ocean": {
+      "soundId": "ocean",
+      "sourceCanvas": {
+        "width": 720,
+        "height": 432
+      },
+      "visibleBounds": {
+        "left": 7,
+        "top": 121,
+        "width": 705,
+        "height": 236
+      },
+      "cropBox": {
+        "left": 0,
+        "top": 54,
+        "width": 720,
+        "height": 368
+      },
+      "aspectRatio": 1.9565,
+      "files": {
+        "still": "assets/listen-art/runtime/ocean-still.png",
+        "loop": "assets/listen-art/runtime/ocean-loop.webp"
+      }
+    },
+    "stream": {
+      "soundId": "stream",
+      "sourceCanvas": {
+        "width": 720,
+        "height": 432
+      },
+      "visibleBounds": {
+        "left": 1,
+        "top": 70,
+        "width": 719,
+        "height": 326
+      },
+      "cropBox": {
+        "left": 0,
+        "top": 6,
+        "width": 720,
+        "height": 426
+      },
+      "aspectRatio": 1.6901,
+      "files": {
+        "still": "assets/listen-art/runtime/stream-still.png",
+        "loop": "assets/listen-art/runtime/stream-loop.webp"
+      }
+    },
+    "forest": {
+      "soundId": "forest",
+      "sourceCanvas": {
+        "width": 720,
+        "height": 432
+      },
+      "visibleBounds": {
+        "left": 0,
+        "top": 0,
+        "width": 720,
+        "height": 432
+      },
+      "cropBox": {
+        "left": 0,
+        "top": 0,
+        "width": 720,
+        "height": 432
+      },
+      "aspectRatio": 1.6667,
+      "files": {
+        "still": "assets/listen-art/runtime/forest-still.png",
+        "loop": "assets/listen-art/runtime/forest-loop.webp"
+      }
+    },
+    "birds": {
+      "soundId": "birds",
+      "sourceCanvas": {
+        "width": 720,
+        "height": 432
+      },
+      "visibleBounds": {
+        "left": 0,
+        "top": 68,
+        "width": 645,
+        "height": 337
+      },
+      "cropBox": {
+        "left": 0,
+        "top": 0,
+        "width": 720,
+        "height": 432
+      },
+      "aspectRatio": 1.6667,
+      "files": {
+        "still": "assets/listen-art/runtime/birds-still.png",
+        "loop": "assets/listen-art/runtime/birds-loop.webp"
+      }
+    },
+    "fan": {
+      "soundId": "fan",
+      "sourceCanvas": {
+        "width": 972,
+        "height": 583
+      },
+      "visibleBounds": {
+        "left": 24,
+        "top": 92,
+        "width": 927,
+        "height": 391
+      },
+      "cropBox": {
+        "left": 0,
+        "top": 11,
+        "width": 972,
+        "height": 552
+      },
+      "aspectRatio": 1.7609,
+      "files": {
+        "still": "assets/listen-art/runtime/fan-still.png",
+        "loop": "assets/listen-art/runtime/fan-loop.webp"
+      }
+    },
+    "brown": {
+      "soundId": "brown",
+      "sourceCanvas": {
+        "width": 972,
+        "height": 583
+      },
+      "visibleBounds": {
+        "left": 26,
+        "top": 83,
+        "width": 920,
+        "height": 447
+      },
+      "cropBox": {
+        "left": 0,
+        "top": 1,
+        "width": 972,
+        "height": 582
+      },
+      "aspectRatio": 1.6701,
+      "files": {
+        "still": "assets/listen-art/runtime/brown-still.png",
+        "loop": "assets/listen-art/runtime/brown-loop.webp"
+      }
+    },
+    "white": {
+      "soundId": "white",
+      "sourceCanvas": {
+        "width": 972,
+        "height": 583
+      },
+      "visibleBounds": {
+        "left": 12,
+        "top": 178,
+        "width": 947,
+        "height": 260
+      },
+      "cropBox": {
+        "left": 0,
+        "top": 96,
+        "width": 972,
+        "height": 424
+      },
+      "aspectRatio": 2.2925,
+      "files": {
+        "still": "assets/listen-art/runtime/white-still.png",
+        "loop": "assets/listen-art/runtime/white-loop.webp"
+      }
+    }
+  },
+  "defaultAspectRatio": 1.7963
+}

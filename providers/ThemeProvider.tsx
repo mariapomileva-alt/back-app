@@ -8,6 +8,7 @@ import {
   type ReactNode,
 } from 'react';
 import { AccessibilityInfo } from 'react-native';
+import { ReduceMotion, ReducedMotionConfig } from 'react-native-reanimated';
 import * as SystemUI from 'expo-system-ui';
 
 import {
@@ -29,6 +30,7 @@ type ThemeContextValue = {
   setThemeName: (name: ThemeName) => void;
   setHapticsEnabled: (enabled: boolean) => void;
   setReduceMotionOverride: (enabled: boolean) => void;
+  reloadPreferences: () => Promise<void>;
 };
 
 const ThemeContext = createContext<ThemeContextValue | null>(null);
@@ -67,7 +69,7 @@ export function ThemeProvider({ children }: Props) {
 
     const apply = (enabled: boolean) => {
       if (!cancelled) {
-        setSystemReduceMotion(enabled);
+        setSystemReduceMotion((current) => (current === enabled ? current : enabled));
       }
     };
 
@@ -101,6 +103,13 @@ export function ThemeProvider({ children }: Props) {
     void saveReduceMotionOverride(enabled);
   }, []);
 
+  const reloadPreferences = useCallback(async () => {
+    const preferences = await loadPreferences();
+    setThemeNameState(preferences.themeName);
+    setHapticsEnabledState(preferences.hapticsEnabled);
+    setReduceMotionOverrideState(preferences.reduceMotionOverride);
+  }, []);
+
   const value = useMemo<ThemeContextValue>(
     () => ({
       theme,
@@ -112,6 +121,7 @@ export function ThemeProvider({ children }: Props) {
       setThemeName,
       setHapticsEnabled,
       setReduceMotionOverride,
+      reloadPreferences,
     }),
     [
       theme,
@@ -122,10 +132,18 @@ export function ThemeProvider({ children }: Props) {
       setThemeName,
       setHapticsEnabled,
       setReduceMotionOverride,
+      reloadPreferences,
     ],
   );
 
-  return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>;
+  return (
+    <ThemeContext.Provider value={value}>
+      <ReducedMotionConfig
+        mode={value.reduceMotion ? ReduceMotion.Always : ReduceMotion.Never}
+      />
+      {children}
+    </ThemeContext.Provider>
+  );
 }
 
 export function useTheme(): ThemeContextValue {

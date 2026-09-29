@@ -1,0 +1,727 @@
+[
+  {
+    "id": "ru-notice-001",
+    "type": "observation",
+    "fragments": [
+      "Найдите одно слово",
+      "вы можете видеть вокруг себя."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-notice-002",
+    "type": "observation",
+    "fragments": [
+      "Обратите внимание на один цвет",
+      "возле твоих рук."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-notice-003",
+    "type": "observation",
+    "fragments": [
+      "Найдите преимущество",
+      "где встречаются две поверхности."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-notice-004",
+    "type": "observation",
+    "fragments": [
+      "Ищите что-нибудь",
+      "это еще."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-notice-005",
+    "type": "observation",
+    "fragments": [
+      "Найдите одну вещь",
+      "это немного ближе",
+      "чем остальные."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-notice-006",
+    "type": "observation",
+    "fragments": [
+      "Обратите внимание на тень,",
+      "даже маленький."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-notice-007",
+    "type": "observation",
+    "fragments": [
+      "Найдите прямую линию",
+      "где-то рядом."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-notice-008",
+    "type": "observation",
+    "fragments": [
+      "Ищите кривую",
+      "вместо угла."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-notice-009",
+    "type": "observation",
+    "fragments": [
+      "Обратите внимание на одну текстуру",
+      "ты не трогаешь."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-notice-010",
+    "type": "observation",
+    "fragments": [
+      "Найдите что-нибудь матовое,",
+      "не блестящий."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-notice-011",
+    "type": "observation",
+    "fragments": [
+      "Ищите патч",
+      "более мягкого света."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-notice-012",
+    "type": "observation",
+    "fragments": [
+      "Найдите один объект",
+      "который мог бы поместиться в кармане."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-notice-013",
+    "type": "observation",
+    "fragments": [
+      "Обратите внимание на самую дальнюю вещь",
+      "вы можете увидеть отсюда."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-notice-014",
+    "type": "observation",
+    "fragments": [
+      "Найдите слово, напечатанное",
+      "где-то рядом."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-notice-015",
+    "type": "observation",
+    "fragments": [
+      "Посмотрите на пространство",
+      "между двумя объектами."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-notice-016",
+    "type": "observation",
+    "fragments": [
+      "Обратите внимание на что-то",
+      "это в основном один цвет."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-notice-017",
+    "type": "observation",
+    "fragments": [
+      "Найдите поверхность",
+      "на ощупь это выглядит круто."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-notice-018",
+    "type": "observation",
+    "fragments": [
+      "Ищите что-нибудь",
+      "вертикальный."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-notice-019",
+    "type": "observation",
+    "fragments": [
+      "Обратите внимание на место",
+      "где может собираться пыль."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-notice-020",
+    "type": "observation",
+    "fragments": [
+      "Найдите одну вещь",
+      "из бумаги или картона."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-notice-021",
+    "type": "observation",
+    "fragments": [
+      "Ищите отражение,",
+      "даже слабый."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-notice-022",
+    "type": "observation",
+    "fragments": [
+      "Обратите внимание на вес",
+      "того, что ты сидишь",
+      "или стоя."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-notice-023",
+    "type": "observation",
+    "fragments": [
+      "Найдите угол комнаты",
+      "и отдохните там."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-notice-024",
+    "type": "observation",
+    "fragments": [
+      "Ищите что-нибудь",
+      "старше, чем на этой неделе."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-notice-025",
+    "type": "observation",
+    "fragments": [
+      "Обратите внимание на один звук,",
+      "тогда пусть пройдет."
+    ],
+    "topics": [
+      "quiet"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-notice-026",
+    "type": "observation",
+    "fragments": [
+      "Найдите прямоугольник",
+      "где-то вокруг тебя."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-notice-027",
+    "type": "observation",
+    "fragments": [
+      "Посмотрите на потолок",
+      "за один медленный вздох взгляда."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-notice-028",
+    "type": "observation",
+    "fragments": [
+      "Обратите внимание, свет ли",
+      "является равномерным или неоднородным."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-notice-029",
+    "type": "observation",
+    "fragments": [
+      "Найдите что-нибудь",
+      "можно назвать одним словом."
+    ],
+    "topics": [
+      "language"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-notice-030",
+    "type": "observation",
+    "fragments": [
+      "Ищите складку,",
+      "шов или соединение."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-notice-031",
+    "type": "observation",
+    "fragments": [
+      "Обратите внимание на одну вещь",
+      "это пусто намеренно."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-notice-032",
+    "type": "observation",
+    "fragments": [
+      "Найдите растение,",
+      "или идея растения",
+      "на картинке."
+    ],
+    "topics": [
+      "plants"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-notice-033",
+    "type": "observation",
+    "fragments": [
+      "Посмотрите на свой рукав или манжету.",
+      "на мгновение."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-notice-034",
+    "type": "observation",
+    "fragments": [
+      "Обратите внимание на разницу температур,",
+      "даже маленький."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-notice-035",
+    "type": "observation",
+    "fragments": [
+      "Найти номер",
+      "где-то рядом."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-notice-036",
+    "type": "observation",
+    "fragments": [
+      "Ищите что-нибудь, что наклоняется,",
+      "даже слегка."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-notice-037",
+    "type": "observation",
+    "fragments": [
+      "Обратите внимание на путь, по которому прошли ваши глаза",
+      "чтобы попасть сюда."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-notice-038",
+    "type": "observation",
+    "fragments": [
+      "Найдите круг или овал",
+      "в комнате."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-notice-039",
+    "type": "observation",
+    "fragments": [
+      "Посмотрите на пол",
+      "где он встречается со стеной."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-notice-040",
+    "type": "observation",
+    "fragments": [
+      "Обратите внимание на одну вещь",
+      "вы не использовали сегодня."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-notice-041",
+    "type": "observation",
+    "fragments": [
+      "Найди тихий цвет,",
+      "не громкий."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-notice-042",
+    "type": "observation",
+    "fragments": [
+      "Ищите письмо",
+      "это не экран."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-notice-043",
+    "type": "observation",
+    "fragments": [
+      "Обратите внимание, как далеко находятся ваши ноги",
+      "друг от друга."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-notice-044",
+    "type": "observation",
+    "fragments": [
+      "Найдите что-нибудь сложенное,",
+      "даже две вещи."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-notice-045",
+    "type": "observation",
+    "fragments": [
+      "Посмотрите на дверной проем",
+      "или идея дверного проема."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-notice-046",
+    "type": "observation",
+    "fragments": [
+      "Обратите внимание на одну вещь",
+      "что слегка изношен."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-notice-047",
+    "type": "observation",
+    "fragments": [
+      "Найдите ближайший источник дневного света,",
+      "если он есть."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-notice-048",
+    "type": "observation",
+    "fragments": [
+      "Посмотрите еще раз,",
+      "затем выберите одну деталь, которую хотите сохранить."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-notice-049",
+    "type": "observation",
+    "fragments": [
+      "Найдите прохладную поверхность",
+      "и сосредоточьте на этом свое внимание, а не руку."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-notice-050",
+    "type": "observation",
+    "fragments": [
+      "Если есть окно,",
+      "обратите внимание, что он обрамляет.",
+      "Если нет, обратите внимание на стену."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-notice-051",
+    "type": "observation",
+    "fragments": [
+      "Ищите прямую линию",
+      "это не письмо."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-notice-052",
+    "type": "observation",
+    "fragments": [
+      "Обратите внимание, ровный ли свет",
+      "или собрались в одном месте."
+    ],
+    "topics": [
+      "light"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-notice-053",
+    "type": "observation",
+    "fragments": [
+      "Найдите что-нибудь сложенное",
+      "или можно сложить."
+    ],
+    "topics": [
+      "paper"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-notice-054",
+    "type": "observation",
+    "fragments": [
+      "Звук далеко, если он есть.",
+      "Вам не нужно называть это."
+    ],
+    "topics": [
+      "quiet"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-notice-055",
+    "type": "observation",
+    "fragments": [
+      "Посмотрите на пол",
+      "как будто это пейзаж."
+    ],
+    "topics": [
+      "room"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-notice-056",
+    "type": "observation",
+    "fragments": [
+      "Найдите круглую вещь.",
+      "Даже кнопка имеет значение."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-notice-057",
+    "type": "observation",
+    "fragments": [
+      "Обратите внимание на одну разницу температур",
+      "рядом с тобой — край попрохладнее, участок потеплее."
+    ],
+    "topics": [
+      "home"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-notice-058",
+    "type": "observation",
+    "fragments": [
+      "Если вы можете видеть снаружи,",
+      "найдите самую простую фигуру в поле зрения.",
+      "Если нет, найдите его в помещении."
+    ],
+    "topics": [
+      "sky"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-notice-059",
+    "type": "observation",
+    "fragments": [
+      "Сохраните одну деталь, сделанную в последнюю минуту.",
+      "Вам не нужно это говорить."
+    ],
+    "topics": [
+      "quiet"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "ru-notice-060",
+    "type": "observation",
+    "fragments": [
+      "Найдите что-то, что не пытается",
+      "чтобы посмотреть."
+    ],
+    "topics": [
+      "objects"
+    ],
+    "difficulty": 1
+  }
+]
