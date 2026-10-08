@@ -63,7 +63,6 @@ body {
 #how-it-works,
 #tools,
 #inside-back,
-#moments,
 #privacy,
 #built-with-care,
 #back-plus,
@@ -1602,49 +1601,6 @@ html.motion-paused .shelf-bg::after {
   }
 }
 
-.moments-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 20px;
-  margin-top: 12px;
-}
-
-.moment-card h3 {
-  margin: 16px 0 8px;
-  font-size: 19px;
-  font-weight: 600;
-}
-
-.moment-card p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 15px;
-  line-height: 1.45;
-}
-
-.moment-visual {
-  position: relative;
-  aspect-ratio: 4 / 3;
-  border-radius: 24px;
-  overflow: hidden;
-}
-
-.moment-visual--flight {
-  background: linear-gradient(145deg, #c9d4e0 0%, #e7ddce 55%, #9eb6b0 100%);
-}
-
-.moment-visual--desk {
-  background: linear-gradient(160deg, #f8f4ec 0%, #d7e0d5 48%, #bb8a52 100%);
-}
-
-.moment-visual--crowd {
-  background: linear-gradient(155deg, #e7ddce 0%, #d7e0d5 40%, #65736c 100%);
-}
-
-.moment-visual--evening {
-  background: linear-gradient(150deg, #315e4d 0%, #bb8a52 45%, #f3ede1 100%);
-}
-
 .privacy-inner {
   max-width: 720px;
 }
@@ -1829,7 +1785,6 @@ html.motion-paused .shelf-bg::after {
   .story,
   .story--reverse .story-copy,
   .story--reverse .story-visual,
-  .moments-grid,
   .plus-cards,
   .care-grid {
     grid-template-columns: 1fr;
