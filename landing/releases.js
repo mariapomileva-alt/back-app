@@ -2,7 +2,7 @@
    Optional: set android to a hosted .apk path when a build is available. */
 window.BACK_RELEASES = {
   version: "1.0.0",
-  ios: "",
-  android: "downloads/back.apk",
+  ios: "https://apps.apple.com/lv/app/back-youre-here/id6811918141",
+  android: "",
   androidStore: "",
 };
