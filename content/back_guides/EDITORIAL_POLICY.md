@@ -13,6 +13,8 @@ Back Guides offers calm, practical reading for people who are having a difficult
 - Every article includes a clearly visible urgent-help panel and links to Back's support page.
 - Every article uses calm, non-judgmental language: "might," "if it feels okay," "you can switch," and "one small action."
 - Do not use alarming photos, depictions of distress, medical imagery, or before/after recovery claims.
+- Write as one caring person speaking to another, never as a clinical instruction sheet. Prefer short, ordinary sentences; acknowledge that the reader may be frightened or tired; offer choices rather than commands; and never manufacture cheerfulness.
+- Guides visuals use a warm, tactile natural language: cream plaster or paper, muted moss and olive greens, soft window light, botanical shadows, stone, linen, or velvet-like texture. Images must remain calm and original, with no text, app UI, faces in distress, or medical symbolism.
 
 ## Product facts allowed in Guides
 
