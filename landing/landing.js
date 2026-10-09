@@ -54,6 +54,9 @@ function renderStoreLink(slot, label, href, caption, variant) {
   link.className = `btn ${variant} avail-link`;
   link.href = href;
   link.rel = "noopener noreferrer";
+  if (caption === "Download on the App Store") {
+    link.setAttribute("aria-label", "Download Back on the App Store");
+  }
 
   const name = document.createElement("span");
   name.textContent = label;
