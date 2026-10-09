@@ -1,0 +1,183 @@
+{
+  "campaign_id": "back_guides_month_01",
+  "site_url": "https://backapp.live",
+  "timezone": "Europe/Riga",
+  "publish_window": {
+    "weekday": [
+      "MON",
+      "WED",
+      "FRI"
+    ],
+    "start": "15:00",
+    "end": "18:00"
+  },
+  "reviewers": {
+    "owner": {
+      "label": "Owner",
+      "required": true
+    },
+    "product_editor": {
+      "label": "Product editor",
+      "required": true,
+      "telegram_chat_id_env": "BACK_GUIDES_TELEGRAM_CHAT_ID"
+    }
+  },
+  "articles": [
+    {
+      "id": "BG01",
+      "publish_at": "2026-10-12T15:00:00+03:00",
+      "slug": "what-to-do-when-panic-rises",
+      "title": "When Panic Rises: Choose One Small Thing for the Next Minute",
+      "source_path": "content/back_guides/staged/what-to-do-when-panic-rises/index.html",
+      "source_sha256": "9272f5fb6bdb03ff82b0d4d7be075113ae22dd5f2cfae7ca4072524bd8cd84ba",
+      "status": "ready_for_review",
+      "approvals": {
+        "owner": false,
+        "product_editor": false
+      }
+    },
+    {
+      "id": "BG02",
+      "publish_at": "2026-10-14T15:00:00+03:00",
+      "slug": "when-breathing-feels-hard-during-panic",
+      "title": "When Breathing Feels Hard During Panic: Do Not Force It",
+      "source_path": "content/back_guides/staged/when-breathing-feels-hard-during-panic/index.html",
+      "source_sha256": "aa052975a6bf5a35acda1a214501a88b12af4dbaf10a3ca6895aef265b29e844",
+      "status": "ready_for_review",
+      "approvals": {
+        "owner": false,
+        "product_editor": false
+      }
+    },
+    {
+      "id": "BG03",
+      "publish_at": "2026-10-16T15:00:00+03:00",
+      "slug": "grounding-when-thoughts-race",
+      "title": "Grounding When Thoughts Race: A Low-Pressure Way to Orient",
+      "source_path": "content/back_guides/staged/grounding-when-thoughts-race/index.html",
+      "source_sha256": "c3e0710d2eec47373968e119f9fecacee6c97ffc551d7b89caa6363e58be016a",
+      "status": "ready_for_review",
+      "approvals": {
+        "owner": false,
+        "product_editor": false
+      }
+    },
+    {
+      "id": "BG04",
+      "publish_at": "2026-10-19T15:00:00+03:00",
+      "slug": "asking-someone-you-trust-for-support",
+      "title": "How to Ask Someone You Trust for Support in a Difficult Moment",
+      "source_path": "content/back_guides/staged/asking-someone-you-trust-for-support/index.html",
+      "source_sha256": "5e56025f9fdbb46650471319e28022ee62664b65ce497bb0292c6b7b8ae6c970",
+      "status": "ready_for_review",
+      "approvals": {
+        "owner": false,
+        "product_editor": false
+      }
+    },
+    {
+      "id": "BG05",
+      "publish_at": "2026-10-21T15:00:00+03:00",
+      "slug": "make-a-calm-time-support-plan",
+      "title": "Make a Quiet Support Plan During a Calmer Moment",
+      "source_path": null,
+      "source_sha256": null,
+      "status": "planned",
+      "approvals": {
+        "owner": false,
+        "product_editor": false
+      }
+    },
+    {
+      "id": "BG06",
+      "publish_at": "2026-10-23T15:00:00+03:00",
+      "slug": "panic-at-night-next-minute-plan",
+      "title": "When Panic Shows Up at Night: A Next-Minute Plan",
+      "source_path": null,
+      "source_sha256": null,
+      "status": "planned",
+      "approvals": {
+        "owner": false,
+        "product_editor": false
+      }
+    },
+    {
+      "id": "BG07",
+      "publish_at": "2026-10-26T15:00:00+02:00",
+      "slug": "panic-in-public-next-minute",
+      "title": "Panic in Public: Small Ways to Make More Room for Yourself",
+      "source_path": null,
+      "source_sha256": null,
+      "status": "planned",
+      "approvals": {
+        "owner": false,
+        "product_editor": false
+      }
+    },
+    {
+      "id": "BG08",
+      "publish_at": "2026-10-28T15:00:00+02:00",
+      "slug": "when-you-cannot-decide-what-to-do",
+      "title": "When You Cannot Decide What to Do: Start Smaller",
+      "source_path": null,
+      "source_sha256": null,
+      "status": "planned",
+      "approvals": {
+        "owner": false,
+        "product_editor": false
+      }
+    },
+    {
+      "id": "BG09",
+      "publish_at": "2026-10-30T15:00:00+02:00",
+      "slug": "how-to-support-someone-overwhelmed",
+      "title": "How to Support Someone Who Feels Overwhelmed",
+      "source_path": null,
+      "source_sha256": null,
+      "status": "planned",
+      "approvals": {
+        "owner": false,
+        "product_editor": false
+      }
+    },
+    {
+      "id": "BG10",
+      "publish_at": "2026-11-02T15:00:00+02:00",
+      "slug": "when-self-help-is-not-enough",
+      "title": "When Self-Help Is Not Enough: Finding More Support",
+      "source_path": null,
+      "source_sha256": null,
+      "status": "planned",
+      "approvals": {
+        "owner": false,
+        "product_editor": false
+      }
+    },
+    {
+      "id": "BG11",
+      "publish_at": "2026-11-04T15:00:00+02:00",
+      "slug": "private-offline-tools-for-difficult-moments",
+      "title": "Why Private, Offline Tools Can Be Easier to Reach For",
+      "source_path": null,
+      "source_sha256": null,
+      "status": "planned",
+      "approvals": {
+        "owner": false,
+        "product_editor": false
+      }
+    },
+    {
+      "id": "BG12",
+      "publish_at": "2026-11-06T15:00:00+02:00",
+      "slug": "build-a-back-to-yourself-plan",
+      "title": "Build a Personal Back-to-Yourself Plan",
+      "source_path": null,
+      "source_sha256": null,
+      "status": "planned",
+      "approvals": {
+        "owner": false,
+        "product_editor": false
+      }
+    }
+  ]
+}
