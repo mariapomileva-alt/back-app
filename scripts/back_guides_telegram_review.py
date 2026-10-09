@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 """Send and collect Back Guides editorial reviews through a private Telegram bot.
 
-The bot token is read from BACK_GUIDES_TELEGRAM_BOT_TOKEN for temporary sessions,
-or from the local macOS Keychain for normal use. A product-editor approval needs the
-exact hash prefix shown in the review message, preventing an accidental generic
-"approve BG01" reply.
+The bot token is stored in a local, owner-only, Git-ignored file. A product-editor
+approval needs the exact hash prefix shown in the review message, preventing an
+accidental generic "approve BG01" reply.
 """
 
 from __future__ import annotations
 
 import argparse
+import getpass
 import json
 import mimetypes
 import os
@@ -26,6 +26,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SCHEDULE = ROOT / "content" / "back_guides" / "publication_schedule.json"
 STATE = ROOT / "var" / "back_guides_publisher" / "telegram_updates.json"
 FEEDBACK = ROOT / "var" / "back_guides_publisher" / "telegram_feedback.json"
+TOKEN_FILE = ROOT / "var" / "back_guides_publisher" / "telegram_bot_token"
 KEYCHAIN_SERVICE = "back-app-guides-telegram-bot-token"
 KEYCHAIN_ACCOUNT = "back-guides-publisher"
 DEFAULT_CHAT_ID = "849710803"
@@ -45,13 +46,34 @@ def keychain_token() -> str | None:
     return result.stdout.strip() if result.returncode == 0 and result.stdout.strip() else None
 
 
+def local_token() -> str | None:
+    """Read the Git-ignored token only when its permissions are owner-only."""
+    if not TOKEN_FILE.is_file():
+        return None
+    if TOKEN_FILE.stat().st_mode & 0o077:
+        raise RuntimeError(f"Telegram token file permissions are too broad: {TOKEN_FILE}")
+    return TOKEN_FILE.read_text(encoding="utf-8").strip() or None
+
+
+def configure_token() -> None:
+    """Store a bot token once without echoing it to Terminal or Git."""
+    token = getpass.getpass("Paste the BotFather token (input stays hidden): ").strip()
+    if not token:
+        raise RuntimeError("No Telegram token was entered.")
+    TOKEN_FILE.parent.mkdir(parents=True, exist_ok=True)
+    descriptor = os.open(TOKEN_FILE, os.O_WRONLY | os.O_CREAT | os.O_TRUNC, 0o600)
+    with os.fdopen(descriptor, "w", encoding="utf-8") as handle:
+        handle.write(token + "\n")
+    os.chmod(TOKEN_FILE, 0o600)
+    print("Telegram token saved locally for Back Guides. It is Git-ignored and owner-only.")
+
+
 def config() -> tuple[str, str]:
-    token = os.getenv("BACK_GUIDES_TELEGRAM_BOT_TOKEN") or keychain_token()
+    token = os.getenv("BACK_GUIDES_TELEGRAM_BOT_TOKEN") or local_token() or keychain_token()
     chat_id = os.getenv("BACK_GUIDES_TELEGRAM_CHAT_ID", DEFAULT_CHAT_ID)
     if not token:
         raise RuntimeError(
-            "Telegram is not configured. Save the bot token in macOS Keychain under "
-            f"service '{KEYCHAIN_SERVICE}' and account '{KEYCHAIN_ACCOUNT}'."
+            "Telegram is not configured. Run: python3 scripts/back_guides_telegram_review.py configure"
         )
     return token, chat_id
 
@@ -173,9 +195,12 @@ def main() -> int:
     send_cmd = sub.add_parser("send")
     send_cmd.add_argument("article_id")
     sub.add_parser("collect")
+    sub.add_parser("configure")
     args = parser.parse_args()
     try:
-        if args.command == "send":
+        if args.command == "configure":
+            configure_token()
+        elif args.command == "send":
             send(args.article_id.upper())
         else:
             collect()
