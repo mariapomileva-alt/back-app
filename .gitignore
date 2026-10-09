@@ -35,6 +35,9 @@ yarn-error.*
 .env
 .env*.local
 
+# Local Back Guides publisher state and review credentials
+/var/back_guides_publisher/
+
 # typescript
 *.tsbuildinfo
 
