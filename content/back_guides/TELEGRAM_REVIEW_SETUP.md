@@ -25,4 +25,4 @@ To send a packet after the draft has passed automated checks:
 python3 scripts/back_guides_telegram_review.py send BG01
 ```
 
-The product editor receives the source HTML and can reply with the exact approval code in the message. A periodic `collect` run accepts only replies from the configured chat ID with the current source-hash prefix. Until the token is installed, review packets remain local and the publisher stays blocked. No health-related draft is sent to an external service by default.
+The product editor receives the source HTML and can reply with the exact approval code in the message. For feedback, reply in one message, for example: `changes BG01 9272f5fb: Please soften the opening paragraph.` The note is saved only in the local, Git-ignored review log and resets the product-editor approval for that hash. A periodic `collect` run accepts only these structured replies from the configured chat ID with the current source-hash prefix. Until the token is installed, review packets remain local and the publisher stays blocked. No health-related draft is sent to an external service by default.

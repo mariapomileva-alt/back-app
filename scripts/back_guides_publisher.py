@@ -241,6 +241,7 @@ def register(article_id: str) -> None:
     digest = validate_source(article, require_hash=False)
     article["source_sha256"] = digest
     article["status"] = "ready_for_review"
+    article["approvals"] = {"owner": False, "product_editor": False}
     save_schedule(schedule)
     print(json.dumps({"id": article_id, "status": "ready_for_review", "source_sha256": digest}, indent=2))
 
@@ -254,6 +255,19 @@ def approve(article_id: str, role: str) -> None:
     article["approvals"][role] = True
     if all(article["approvals"].values()):
         article["status"] = "approved"
+    save_schedule(schedule)
+    print(json.dumps({"id": article_id, "status": article["status"], "approvals": article["approvals"]}, indent=2))
+
+
+def request_changes(article_id: str, role: str) -> None:
+    """Invalidate a human approval when that reviewer asks for changes."""
+    if role not in {"owner", "product_editor"}:
+        raise GateError("role must be owner or product_editor")
+    schedule = load_schedule()
+    article = find_article(schedule, article_id)
+    validate_source(article, require_hash=True)
+    article["approvals"][role] = False
+    article["status"] = "needs_changes"
     save_schedule(schedule)
     print(json.dumps({"id": article_id, "status": article["status"], "approvals": article["approvals"]}, indent=2))
 
@@ -311,6 +325,9 @@ def main() -> int:
     approval = sub.add_parser("approve")
     approval.add_argument("article_id")
     approval.add_argument("--role", required=True)
+    changes = sub.add_parser("request-changes")
+    changes.add_argument("article_id")
+    changes.add_argument("--role", required=True)
     for name in ("preflight", "publish-due"):
         command = sub.add_parser(name)
         command.add_argument("--now", help="ISO datetime for a read-only simulation")
@@ -323,6 +340,9 @@ def main() -> int:
             return 0
         if args.command == "approve":
             approve(args.article_id, args.role)
+            return 0
+        if args.command == "request-changes":
+            request_changes(args.article_id, args.role)
             return 0
         if args.command == "preflight":
             return preflight(args.now)

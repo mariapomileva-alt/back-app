@@ -29,6 +29,39 @@ class BackGuidesPublisherTests(unittest.TestCase):
         with self.assertRaises(publisher.GateError):
             publisher.require_publishable(article)
 
+    def test_request_changes_revokes_the_reviewer_approval(self):
+        schedule = {
+            "articles": [
+                {
+                    "id": "BG99",
+                    "status": "approved",
+                    "approvals": {"owner": True, "product_editor": True},
+                }
+            ]
+        }
+        with patch.object(publisher, "load_schedule", return_value=schedule), patch.object(publisher, "save_schedule"), patch.object(publisher, "validate_source"):
+            publisher.request_changes("BG99", "product_editor")
+        article = schedule["articles"][0]
+        self.assertEqual(article["status"], "needs_changes")
+        self.assertTrue(article["approvals"]["owner"])
+        self.assertFalse(article["approvals"]["product_editor"])
+
+    def test_register_resets_both_approvals_for_a_revised_source(self):
+        schedule = {
+            "articles": [
+                {
+                    "id": "BG99",
+                    "status": "approved",
+                    "approvals": {"owner": True, "product_editor": True},
+                }
+            ]
+        }
+        with patch.object(publisher, "load_schedule", return_value=schedule), patch.object(publisher, "save_schedule"), patch.object(publisher, "validate_source", return_value="new-hash"):
+            publisher.register("BG99")
+        article = schedule["articles"][0]
+        self.assertEqual(article["status"], "ready_for_review")
+        self.assertEqual(article["approvals"], {"owner": False, "product_editor": False})
+
     def test_unpushed_app_work_blocks_release(self):
         def git(*args, **_kwargs):
             if args == ("branch", "--show-current"):
