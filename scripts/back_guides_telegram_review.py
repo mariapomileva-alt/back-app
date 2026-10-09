@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Send and collect Back Guides editorial reviews through a private Telegram bot.
 
-Credentials are read only from BACK_GUIDES_TELEGRAM_BOT_TOKEN and
-BACK_GUIDES_TELEGRAM_CHAT_ID. A product-editor approval needs the exact hash prefix
-shown in the review message, preventing an accidental generic "approve BG01" reply.
+The bot token is read from BACK_GUIDES_TELEGRAM_BOT_TOKEN for temporary sessions,
+or from the local macOS Keychain for normal use. A product-editor approval needs the
+exact hash prefix shown in the review message, preventing an accidental generic
+"approve BG01" reply.
 """
 
 from __future__ import annotations
@@ -24,13 +25,33 @@ from urllib.request import Request, urlopen
 ROOT = Path(__file__).resolve().parents[1]
 SCHEDULE = ROOT / "content" / "back_guides" / "publication_schedule.json"
 STATE = ROOT / "var" / "back_guides_publisher" / "telegram_updates.json"
+KEYCHAIN_SERVICE = "back-app-guides-telegram-bot-token"
+KEYCHAIN_ACCOUNT = "back-guides-publisher"
+DEFAULT_CHAT_ID = "849710803"
+
+
+def keychain_token() -> str | None:
+    """Return the local Keychain token without ever printing it."""
+    try:
+        result = subprocess.run(
+            ["security", "find-generic-password", "-s", KEYCHAIN_SERVICE, "-a", KEYCHAIN_ACCOUNT, "-w"],
+            text=True,
+            capture_output=True,
+            check=False,
+        )
+    except FileNotFoundError:
+        return None
+    return result.stdout.strip() if result.returncode == 0 and result.stdout.strip() else None
 
 
 def config() -> tuple[str, str]:
-    token = os.getenv("BACK_GUIDES_TELEGRAM_BOT_TOKEN")
-    chat_id = os.getenv("BACK_GUIDES_TELEGRAM_CHAT_ID")
-    if not token or not chat_id:
-        raise RuntimeError("Telegram is not configured. Set BACK_GUIDES_TELEGRAM_BOT_TOKEN and BACK_GUIDES_TELEGRAM_CHAT_ID locally.")
+    token = os.getenv("BACK_GUIDES_TELEGRAM_BOT_TOKEN") or keychain_token()
+    chat_id = os.getenv("BACK_GUIDES_TELEGRAM_CHAT_ID", DEFAULT_CHAT_ID)
+    if not token:
+        raise RuntimeError(
+            "Telegram is not configured. Save the bot token in macOS Keychain under "
+            f"service '{KEYCHAIN_SERVICE}' and account '{KEYCHAIN_ACCOUNT}'."
+        )
     return token, chat_id
 
 

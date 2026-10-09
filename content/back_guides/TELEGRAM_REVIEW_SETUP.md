@@ -1,13 +1,23 @@
 # Telegram review notifications
 
-The approved product-editor Telegram destination is stored only in a local environment variable, never in Git. The product editor's approved chat ID is `849710803`.
+The approved product-editor Telegram destination is stored locally, never in Git. The product editor's approved chat ID is `849710803`.
 
 ```text
 BACK_GUIDES_TELEGRAM_CHAT_ID=849710803
 BACK_GUIDES_TELEGRAM_BOT_TOKEN=<token from the Back review bot>
 ```
 
-The bot token must be created in BotFather and stored in the local keychain or `.env.local`, which is ignored by Git. The publisher must not publish merely because a Telegram notification was delivered: the `product_editor` approval is a separate, explicit gate.
+## Recommended: macOS Keychain
+
+In **Keychain Access**, choose **File → New Password Item** and enter:
+
+- Keychain Item Name: `back-app-guides-telegram-bot-token`
+- Account Name: `back-guides-publisher`
+- Password: the token from BotFather
+
+The review script reads this item locally and never prints, commits, or uploads the token. An environment variable can still be used for a temporary local session, but it is not needed for normal use.
+
+The publisher must not publish merely because a Telegram notification was delivered: the `product_editor` approval is a separate, explicit gate.
 
 To send a packet after the draft has passed automated checks:
 
