@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 """Send and collect Back Guides editorial reviews through a private Telegram bot.
 
-The bot token is stored in a local, owner-only, Git-ignored file. A product-editor
-approval needs the exact hash prefix shown in the review message, preventing an
-accidental generic "approve BG01" reply.
+The bot token is stored in a local, owner-only, Git-ignored file. Telegram replies
+are advisory feedback only. Publication requires a separate owner approval.
 """
 
 from __future__ import annotations
 
 import argparse
+import base64
 import getpass
 import json
 import mimetypes
@@ -20,6 +20,9 @@ import uuid
 from pathlib import Path
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
+from urllib.parse import urljoin, urlsplit
+
+import back_guides_publisher as publisher
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -100,20 +103,62 @@ def multipart(fields: dict[str, str], filename: str, body: bytes) -> tuple[bytes
     return b"".join(chunks), boundary
 
 
+def review_html(source: Path) -> bytes:
+    """Build a portable review copy; never modify the staged article or assets."""
+    text = source.read_text(encoding="utf-8")
+
+    def local_asset(reference: str) -> Path:
+        if urlsplit(reference).scheme or reference.startswith("//"):
+            raise RuntimeError("Review assets must be local")
+        path = (source.parent / reference).resolve()
+        if not path.is_relative_to((ROOT / "landing" / "guides").resolve()):
+            raise RuntimeError("Review asset is outside landing/guides")
+        if not path.is_file():
+            raise RuntimeError(f"Missing review asset: {reference}")
+        return path
+
+    def stylesheet(match: re.Match) -> str:
+        css = local_asset(match.group(1)).read_text(encoding="utf-8")
+        if re.search(r"url\s*\(|@import", css, re.I):
+            raise RuntimeError("External CSS assets need embedding before review")
+        return "<style>" + css + "</style>"
+
+    def picture(match: re.Match) -> str:
+        path = local_asset(match.group(2))
+        mime = mimetypes.guess_type(path.name)[0]
+        if not mime or not mime.startswith("image/"):
+            raise RuntimeError("Review image has an unsupported type")
+        data = base64.b64encode(path.read_bytes()).decode("ascii")
+        return match.group(1) + f"data:{mime};base64,{data}" + match.group(3)
+
+    text = re.sub(r'<link\s+rel="stylesheet"\s+href="([^"]+)"\s*/?>', stylesheet, text)
+    text = re.sub(r'(<img\b[^>]*\bsrc=")([^"]+)(")', picture, text)
+    public_url = "https://backapp.live/guides/" + source.parent.name + "/"
+    text = re.sub(r'(<a\b[^>]*\bhref=")([^"]+)(")',
+                  lambda m: m.group(1) + urljoin(public_url, m.group(2)) + m.group(3), text)
+    return text.encode("utf-8")
+
+
 def send(article_id: str) -> None:
     token, chat_id = config()
     item = schedule_item(article_id)
     source = ROOT / (item.get("source_path") or "")
-    if item.get("status") != "ready_for_review" or not source.is_file() or not item.get("source_sha256"):
+    if item.get("status") not in {"ready_for_review", "approved", "needs_changes"} or not source.is_file() or not item.get("source_sha256"):
         raise RuntimeError(f"{article_id} is not a hash-locked review draft")
+    publisher.validate_source(item, require_hash=True)
     code = item["source_sha256"][:8]
     caption = (
         f"Back Guides review: {article_id}\n\n{item['title']}\nScheduled: {item['publish_at']}\n\n"
-        f"Reply exactly: approve {article_id} {code}\n"
-        f"or: changes {article_id} {code}: your note here\n\n"
-        "This is a private editorial draft. Please review tone, lived-experience fit, app accuracy, and any safety concern."
+        f"Optional feedback: changes {article_id} {code}: your note here\n\n"
+        "Your approval is not required. Only the owner authorizes publication. "
+        "Open the attached HTML in a browser: image and styling are embedded. "
+        "This is a private editorial draft; feedback on tone, accuracy and safety is welcome."
     )
-    payload, boundary = multipart({"chat_id": chat_id, "caption": caption}, source.name, source.read_bytes())
+    packet = review_html(source)
+    preview = ROOT / "var" / "back_guides_publisher" / f"{article_id}-review.html"
+    preview.parent.mkdir(parents=True, exist_ok=True)
+    preview.write_bytes(packet)
+    payload, boundary = multipart({"chat_id": chat_id, "caption": caption}, preview.name, packet)
     request = Request(api_url(token, "sendDocument"), data=payload, headers={"Content-Type": f"multipart/form-data; boundary={boundary}"}, method="POST")
     with urlopen(request, timeout=20) as response:
         result = json.loads(response.read().decode())
@@ -175,17 +220,11 @@ def collect() -> None:
         if not item.get("source_sha256", "").startswith(prefix.lower()):
             continue
         if action.lower() == "approve":
-            process = subprocess.run([sys.executable, str(ROOT / "scripts" / "back_guides_publisher.py"), "approve", article_id.upper(), "--role", "product_editor"], cwd=ROOT, text=True, capture_output=True)
-            if process.returncode:
-                raise RuntimeError(process.stderr.strip() or process.stdout.strip())
-            print(process.stdout.strip())
+            record_feedback(article_id.upper(), item["source_sha256"], message, "Positive editorial feedback (not publication approval).")
         else:
             note = (changes_match.group(3) or "No written note supplied.").strip()
             record_feedback(article_id.upper(), item["source_sha256"], message, note)
-            process = subprocess.run([sys.executable, str(ROOT / "scripts" / "back_guides_publisher.py"), "request-changes", article_id.upper(), "--role", "product_editor"], cwd=ROOT, text=True, capture_output=True)
-            if process.returncode:
-                raise RuntimeError(process.stderr.strip() or process.stdout.strip())
-            print(f"{article_id.upper()} feedback recorded; publication remains blocked until the revised draft is approved.")
+        print(f"{article_id.upper()} advisory feedback recorded; owner approval unchanged.")
     save_state(saved)
 
 

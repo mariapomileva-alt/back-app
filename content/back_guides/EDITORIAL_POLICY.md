@@ -28,8 +28,9 @@ Back Guides offers calm, practical reading for people who are having a difficult
 Automated checks cover structure, links, metadata, required safety copy, and prohibited claims. They do not replace editorial judgment.
 
 - Owner review: product, brand, and publication authority.
-- Product-editor review: lived-experience tone, app accuracy, and reader clarity.
-- A publication is blocked until both approvals and the source hash are recorded.
+- Product-editor Telegram review is optional advisory feedback on lived-experience tone, app accuracy, and reader clarity. It neither authorizes nor blocks publication.
+- Show the current draft to the owner and send the portable review copy to Telegram before requesting owner approval. Delivery is not approval.
+- Publication requires only the owner's explicit approval and the matching source hash, in addition to all automated safety and scheduling gates. Revisions reset approval; never infer approval from silence or Telegram feedback.
 - A publication is also blocked when local `main` contains unpushed commits, so a Guide release can never accidentally carry unrelated App Store or Google Play work.
 
 ## Reliable external references

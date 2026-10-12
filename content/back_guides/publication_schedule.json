@@ -18,7 +18,7 @@
     },
     "product_editor": {
       "label": "Product editor",
-      "required": true,
+      "required": false,
       "telegram_chat_id_env": "BACK_GUIDES_TELEGRAM_CHAT_ID"
     }
   },
@@ -30,9 +30,9 @@
       "title": "When Panic Rises: Choose One Small Thing for the Next Minute",
       "source_path": "content/back_guides/staged/what-to-do-when-panic-rises/index.html",
       "source_sha256": "1522b2f3f004ce441d85927b684cce953a6881ce61ddcb68516be7d52413c187",
-      "status": "ready_for_review",
+      "status": "approved",
       "approvals": {
-        "owner": false,
+        "owner": true,
         "product_editor": false
       }
     },

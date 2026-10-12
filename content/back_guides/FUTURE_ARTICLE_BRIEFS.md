@@ -1,6 +1,6 @@
 # Back Guides: future article briefs
 
-Each article must follow `EDITORIAL_POLICY.md`, use a single calm original SVG illustration, link to Back's support page, and receive both reviewer approvals before publication.
+Each article must follow `EDITORIAL_POLICY.md`, use a calm original natural-textured illustration, link to Back's support page, and receive the owner's explicit approval before publication. Show the owner the current draft and send a self-contained Telegram review copy; product-editor feedback is optional.
 
 | ID | Date | Reader question | Editorial promise |
 | --- | --- | --- | --- |

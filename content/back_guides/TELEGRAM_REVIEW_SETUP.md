@@ -17,7 +17,7 @@ python3 scripts/back_guides_telegram_review.py configure
 
 The prompt keeps the BotFather token hidden while you type. It saves the token to `var/back_guides_publisher/telegram_bot_token`, which is Git-ignored and readable only by the current macOS account. It does not use Keychain, so scheduled review checks do not ask for a Keychain password. An environment variable or existing Keychain item remain fallbacks only.
 
-The publisher must not publish merely because a Telegram notification was delivered: the `product_editor` approval is a separate, explicit gate.
+The publisher must not publish merely because a Telegram notification was delivered. Only the owner's explicit approval authorizes publication; product-editor replies are advisory, not a gate.
 
 To send a packet after the draft has passed automated checks:
 
@@ -25,4 +25,6 @@ To send a packet after the draft has passed automated checks:
 python3 scripts/back_guides_telegram_review.py send BG01
 ```
 
-The product editor receives the source HTML and can reply with the exact approval code in the message. For feedback, reply in one message, for example: `changes BG01 9272f5fb: Please soften the opening paragraph.` The note is saved only in the local, Git-ignored review log and resets the product-editor approval for that hash. A periodic `collect` run accepts only these structured replies from the configured chat ID with the current source-hash prefix. Until the token is installed, review packets remain local and the publisher stays blocked. No health-related draft is sent to an external service by default.
+The product editor receives a self-contained HTML review copy with embedded CSS and images. Download it and open it in a browser; Telegram's built-in file viewer may not render HTML. The same copy is available to show the owner in `var/back_guides_publisher/BG01-review.html`. The staged article is unchanged.
+
+For optional feedback, reply in one message, for example: `changes BG01 1522b2f3: Please soften the opening paragraph.` Use the current code from the actual message. Notes are saved only in the local Git-ignored review log. Legacy `approve` replies are recorded as positive feedback, never as publication authorization. `collect` accepts only structured replies from the configured chat ID matching the current source-hash prefix; neither response changes owner approval or publication status. Review safety concerns with the owner; if the article is revised, register the new source and obtain fresh owner approval.

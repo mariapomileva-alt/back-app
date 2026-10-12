@@ -7,6 +7,9 @@ from unittest.mock import patch
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 import back_guides_publisher as publisher  # noqa: E402
+import back_guides_telegram_review as telegram
+import base64
+import re
 
 
 class BackGuidesPublisherTests(unittest.TestCase):
@@ -24,7 +27,7 @@ class BackGuidesPublisherTests(unittest.TestCase):
         self.assertEqual({publisher.article_time(item).weekday() for item in schedule["articles"]}, {0, 2, 4})
         self.assertTrue(all(publisher.article_time(item).hour == 15 for item in schedule["articles"]))
 
-    def test_drafts_cannot_publish_without_both_approvals(self):
+    def test_drafts_cannot_publish_without_owner_approval(self):
         article = publisher.find_article(publisher.load_schedule(), "BG01")
         with self.assertRaises(publisher.GateError):
             publisher.require_publishable(article)
@@ -42,9 +45,45 @@ class BackGuidesPublisherTests(unittest.TestCase):
         with patch.object(publisher, "load_schedule", return_value=schedule), patch.object(publisher, "save_schedule"), patch.object(publisher, "validate_source"):
             publisher.request_changes("BG99", "product_editor")
         article = schedule["articles"][0]
-        self.assertEqual(article["status"], "needs_changes")
+        self.assertEqual(article["status"], "approved")
         self.assertTrue(article["approvals"]["owner"])
         self.assertFalse(article["approvals"]["product_editor"])
+
+    def test_owner_alone_approves_and_passes_gate(self):
+        item = {"id": "BG99", "status": "ready_for_review", "approvals": {"owner": False, "product_editor": False}}
+        with patch.object(publisher, "load_schedule", return_value={"articles": [item]}), patch.object(publisher, "save_schedule"), patch.object(publisher, "validate_source"):
+            publisher.approve("BG99", "owner")
+            publisher.require_publishable(item)
+        self.assertEqual(item["status"], "approved")
+        self.assertFalse(item["approvals"]["product_editor"])
+
+    def test_editor_alone_cannot_pass_gate(self):
+        item = {"id": "BG99", "status": "approved", "approvals": {"owner": False, "product_editor": True}}
+        with self.assertRaises(publisher.GateError):
+            publisher.require_publishable(item)
+
+    def test_portable_review_contains_exact_image_and_css(self):
+        item = publisher.find_article(publisher.load_schedule(), "BG01")
+        source = ROOT / item["source_path"]
+        before = source.read_bytes()
+        text = telegram.review_html(source).decode()
+        self.assertNotIn('rel="stylesheet"', text)
+        self.assertIn("--ivory: #f3ede1", text)
+        data = re.search(r'src="data:image/png;base64,([^"]+)"', text).group(1)
+        self.assertEqual(base64.b64decode(data), (ROOT / "landing/guides/assets/bg01-steady-object-v1.png").read_bytes())
+        self.assertEqual(before, source.read_bytes())
+
+    def test_telegram_replies_never_mutate_publication_approval(self):
+        import json
+        response = unittest.mock.MagicMock()
+        response.__enter__.return_value.read.return_value = json.dumps({"ok": True, "result": [
+            {"update_id": 1, "message": {"chat": {"id": 849710803}, "text": "approve BG01 12345678"}},
+            {"update_id": 2, "message": {"chat": {"id": 849710803}, "text": "changes BG01 12345678: Softer tone"}}
+        ]}).encode()
+        with patch.object(telegram, "config", return_value=("fake", "849710803")), patch.object(telegram, "state", return_value={"offset": 0}), patch.object(telegram, "save_state"), patch.object(telegram, "urlopen", return_value=response), patch.object(telegram, "schedule_item", return_value={"source_sha256": "12345678abcdef"}), patch.object(telegram, "record_feedback") as notes, patch.object(telegram.subprocess, "run") as process:
+            telegram.collect()
+        self.assertEqual(notes.call_count, 2)
+        process.assert_not_called()
 
     def test_register_resets_both_approvals_for_a_revised_source(self):
         schedule = {

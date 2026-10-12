@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Conservative publisher for Back Guides.
 
-Nothing is published by default. Publication requires a due, hash-locked, dual-approved
+Nothing is published by default. Publication requires a due, hash-locked, owner-approved
 article and an explicit --execute. The script only ever stages the files listed in
 ALLOWED_MUTATIONS and leaves store/android untouched.
 """
@@ -141,7 +141,7 @@ def due_article(schedule: dict, now: dt.datetime) -> dict | None:
 def require_publishable(article: dict) -> None:
     if article.get("status") != "approved":
         raise GateError(f"{article['id']} is {article.get('status')}, not approved")
-    if not all(article.get("approvals", {}).get(role) for role in ("owner", "product_editor")):
+    if not article.get("approvals", {}).get("owner"):
         raise GateError(f"{article['id']} is missing a required human approval")
     validate_source(article, require_hash=True)
 
@@ -253,7 +253,7 @@ def approve(article_id: str, role: str) -> None:
     article = find_article(schedule, article_id)
     validate_source(article, require_hash=True)
     article["approvals"][role] = True
-    if all(article["approvals"].values()):
+    if role == "owner":
         article["status"] = "approved"
     save_schedule(schedule)
     print(json.dumps({"id": article_id, "status": article["status"], "approvals": article["approvals"]}, indent=2))
@@ -267,7 +267,8 @@ def request_changes(article_id: str, role: str) -> None:
     article = find_article(schedule, article_id)
     validate_source(article, require_hash=True)
     article["approvals"][role] = False
-    article["status"] = "needs_changes"
+    if role == "owner":
+        article["status"] = "needs_changes"
     save_schedule(schedule)
     print(json.dumps({"id": article_id, "status": article["status"], "approvals": article["approvals"]}, indent=2))
 
