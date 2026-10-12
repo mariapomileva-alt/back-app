@@ -13,6 +13,7 @@ import datetime as dt
 import hashlib
 import html
 import json
+import os
 import re
 import shutil
 import subprocess
@@ -31,6 +32,8 @@ GUIDES = LANDING / "guides"
 STATE_DIR = ROOT / "var" / "back_guides_publisher"
 ALLOWED_UNTRACKED_PREFIXES = ("store/android/", "var/back_guides_publisher/")
 ALLOWED_RELEASE_PATHS = (
+    ".github/workflows/back-guides.yml",
+    ".github/workflows/pages.yml",
     ".gitignore",
     "content/back_guides/",
     "scripts/back_guides_publisher.py",
@@ -154,7 +157,11 @@ def run_git(*args: str, check: bool = True) -> str:
 
 
 def check_git_clean() -> None:
-    if run_git("branch", "--show-current").strip() != PUBLISH_BRANCH:
+    cloud = os.getenv("GITHUB_ACTIONS") == "true"
+    expected_branch = "main" if cloud else PUBLISH_BRANCH
+    if cloud and (os.getenv("GITHUB_REF") != "refs/heads/main" or os.getenv("GITHUB_EVENT_NAME") not in {"schedule", "workflow_dispatch"}):
+        raise GateError("Cloud publisher requires a main-branch schedule or manual workflow")
+    if run_git("branch", "--show-current").strip() != expected_branch:
         raise GateError(f"Publisher only runs from {PUBLISH_BRANCH}")
     if not run_git("remote", "get-url", "origin").strip():
         raise GateError("origin remote is missing")
@@ -292,6 +299,8 @@ def preflight(now_override: str | None) -> int:
 
 
 def publish_due(now_override: str | None, execute: bool) -> int:
+    if execute and now_override:
+        raise GateError("Simulated time cannot be used for publication")
     schedule = load_schedule()
     now = now_in(schedule, now_override)
     article = due_article(schedule, now)

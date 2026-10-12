@@ -17,7 +17,7 @@ class BackGuidesPublisherTests(unittest.TestCase):
         schedule = publisher.load_schedule()
         for article_id in ("BG01", "BG02", "BG03", "BG04"):
             article = publisher.find_article(schedule, article_id)
-            self.assertEqual(article["status"], "ready_for_review")
+            self.assertIn(article["status"], {"ready_for_review", "approved", "published"})
             self.assertTrue(article["source_sha256"])
             self.assertEqual(publisher.validate_source(article), article["source_sha256"])
 
@@ -28,7 +28,7 @@ class BackGuidesPublisherTests(unittest.TestCase):
         self.assertTrue(all(publisher.article_time(item).hour == 15 for item in schedule["articles"]))
 
     def test_drafts_cannot_publish_without_owner_approval(self):
-        article = publisher.find_article(publisher.load_schedule(), "BG01")
+        article = publisher.find_article(publisher.load_schedule(), "BG02")
         with self.assertRaises(publisher.GateError):
             publisher.require_publishable(article)
 
@@ -113,9 +113,31 @@ class BackGuidesPublisherTests(unittest.TestCase):
                 return "app/index.tsx\n"
             return ""
 
-        with patch.object(publisher, "run_git", side_effect=git):
+        with patch.dict(publisher.os.environ, {"GITHUB_ACTIONS": "false"}), patch.object(publisher, "run_git", side_effect=git):
             with self.assertRaisesRegex(publisher.GateError, "unrelated release work"):
                 publisher.check_git_clean()
+
+    def test_no_execute_with_simulated_time(self):
+        with self.assertRaises(publisher.GateError):
+            publisher.publish_due("2026-10-12T15:00:00+03:00", True)
+
+    def test_cloud_rejects_non_main_or_untrusted_event(self):
+        for ref, event in [("refs/heads/test", "workflow_dispatch"), ("refs/heads/main", "pull_request")]:
+            with patch.dict(publisher.os.environ, {"GITHUB_ACTIONS": "true", "GITHUB_REF": ref, "GITHUB_EVENT_NAME": event}):
+                with self.assertRaises(publisher.GateError):
+                    publisher.check_git_clean()
+
+    def test_schedule_handles_riga_dst_and_no_early_or_duplicate_release(self):
+        schedule = publisher.load_schedule()
+        for item in schedule["articles"]:
+            local = publisher.article_time(item).astimezone(publisher.ZoneInfo("Europe/Riga"))
+            self.assertEqual(local.hour, 15)
+            single = {"articles": [dict(item, status="approved")]}
+            self.assertIsNone(publisher.due_article(single, local - publisher.dt.timedelta(seconds=1)))
+            self.assertIsNotNone(publisher.due_article(single, local))
+            self.assertIsNone(publisher.due_article(single, local + publisher.dt.timedelta(hours=3, seconds=1)))
+            single["articles"][0]["status"] = "published"
+            self.assertIsNone(publisher.due_article(single, local))
 
 
 if __name__ == "__main__":
