@@ -13,7 +13,6 @@ import datetime as dt
 import hashlib
 import html
 import json
-import os
 import re
 import shutil
 import subprocess
@@ -32,8 +31,6 @@ GUIDES = LANDING / "guides"
 STATE_DIR = ROOT / "var" / "back_guides_publisher"
 ALLOWED_UNTRACKED_PREFIXES = ("store/android/", "var/back_guides_publisher/")
 ALLOWED_RELEASE_PATHS = (
-    ".github/workflows/back-guides.yml",
-    ".github/workflows/pages.yml",
     ".gitignore",
     "content/back_guides/",
     "scripts/back_guides_publisher.py",
@@ -157,11 +154,7 @@ def run_git(*args: str, check: bool = True) -> str:
 
 
 def check_git_clean() -> None:
-    cloud = os.getenv("GITHUB_ACTIONS") == "true"
-    expected_branch = "main" if cloud else PUBLISH_BRANCH
-    if cloud and (os.getenv("GITHUB_REF") != "refs/heads/main" or os.getenv("GITHUB_EVENT_NAME") not in {"schedule", "workflow_dispatch"}):
-        raise GateError("Cloud publisher requires a main-branch schedule or manual workflow")
-    if run_git("branch", "--show-current").strip() != expected_branch:
+    if run_git("branch", "--show-current").strip() != PUBLISH_BRANCH:
         raise GateError(f"Publisher only runs from {PUBLISH_BRANCH}")
     if not run_git("remote", "get-url", "origin").strip():
         raise GateError("origin remote is missing")
@@ -328,6 +321,35 @@ def publish_due(now_override: str | None, execute: bool) -> int:
     return 0
 
 
+def publish_approved(article_id: str, execute: bool) -> int:
+    """Publish one named owner-approved article outside its normal schedule.
+
+    This is deliberately separate from publish-due: it never infers approval from
+    time, and it refuses to act without an explicit --execute supplied by the
+    owner after a missed slot or an intentional exception.
+    """
+    if not execute:
+        raise GateError("Manual publication requires --execute")
+    schedule = load_schedule()
+    article = find_article(schedule, article_id)
+    require_publishable(article)
+    check_git_clean()
+    article["status"] = "published"
+    paths = write_public_release(schedule, article)
+    save_schedule(schedule)
+    run_git("add", "--", *relative(paths))
+    run_git("diff", "--cached", "--check")
+    run_git("commit", "-m", f"Publish Back Guide {article['id']}")
+    try:
+        run_git("push", "origin", "HEAD:main")
+    except GateError as error:
+        STATE_DIR.mkdir(parents=True, exist_ok=True)
+        (STATE_DIR / "requires_manual_action.json").write_text(json.dumps({"id": article["id"], "reason": str(error)}, indent=2) + "\n", encoding="utf-8")
+        raise
+    print(f"Published {article['id']}.")
+    return 0
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     sub = parser.add_subparsers(dest="command", required=True)
@@ -338,6 +360,9 @@ def main() -> int:
     changes = sub.add_parser("request-changes")
     changes.add_argument("article_id")
     changes.add_argument("--role", required=True)
+    manual = sub.add_parser("publish-approved")
+    manual.add_argument("article_id")
+    manual.add_argument("--execute", action="store_true")
     for name in ("preflight", "publish-due"):
         command = sub.add_parser(name)
         command.add_argument("--now", help="ISO datetime for a read-only simulation")
@@ -354,6 +379,8 @@ def main() -> int:
         if args.command == "request-changes":
             request_changes(args.article_id, args.role)
             return 0
+        if args.command == "publish-approved":
+            return publish_approved(args.article_id, args.execute)
         if args.command == "preflight":
             return preflight(args.now)
         return publish_due(args.now, args.execute)

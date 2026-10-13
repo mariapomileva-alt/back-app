@@ -113,19 +113,13 @@ class BackGuidesPublisherTests(unittest.TestCase):
                 return "app/index.tsx\n"
             return ""
 
-        with patch.dict(publisher.os.environ, {"GITHUB_ACTIONS": "false"}), patch.object(publisher, "run_git", side_effect=git):
+        with patch.object(publisher, "run_git", side_effect=git):
             with self.assertRaisesRegex(publisher.GateError, "unrelated release work"):
                 publisher.check_git_clean()
 
     def test_no_execute_with_simulated_time(self):
         with self.assertRaises(publisher.GateError):
             publisher.publish_due("2026-10-12T15:00:00+03:00", True)
-
-    def test_cloud_rejects_non_main_or_untrusted_event(self):
-        for ref, event in [("refs/heads/test", "workflow_dispatch"), ("refs/heads/main", "pull_request")]:
-            with patch.dict(publisher.os.environ, {"GITHUB_ACTIONS": "true", "GITHUB_REF": ref, "GITHUB_EVENT_NAME": event}):
-                with self.assertRaises(publisher.GateError):
-                    publisher.check_git_clean()
 
     def test_schedule_handles_riga_dst_and_no_early_or_duplicate_release(self):
         schedule = publisher.load_schedule()
@@ -138,6 +132,14 @@ class BackGuidesPublisherTests(unittest.TestCase):
             self.assertIsNone(publisher.due_article(single, local + publisher.dt.timedelta(hours=3, seconds=1)))
             single["articles"][0]["status"] = "published"
             self.assertIsNone(publisher.due_article(single, local))
+
+    def test_manual_publish_requires_explicit_execute_and_owner_gate(self):
+        with self.assertRaises(publisher.GateError):
+            publisher.publish_approved("BG01", False)
+        item = {"id": "BG99", "status": "approved", "approvals": {"owner": False}}
+        with patch.object(publisher, "load_schedule", return_value={"articles": [item]}):
+            with self.assertRaises(publisher.GateError):
+                publisher.publish_approved("BG99", True)
 
 
 if __name__ == "__main__":
