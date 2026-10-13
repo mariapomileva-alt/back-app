@@ -28,7 +28,7 @@ class BackGuidesPublisherTests(unittest.TestCase):
         self.assertTrue(all(publisher.article_time(item).hour == 15 for item in schedule["articles"]))
 
     def test_drafts_cannot_publish_without_owner_approval(self):
-        article = publisher.find_article(publisher.load_schedule(), "BG02")
+        article = publisher.find_article(publisher.load_schedule(), "BG03")
         with self.assertRaises(publisher.GateError):
             publisher.require_publishable(article)
 
