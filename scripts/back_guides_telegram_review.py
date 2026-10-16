@@ -110,7 +110,13 @@ def review_html(source: Path) -> bytes:
     def local_asset(reference: str) -> Path:
         if urlsplit(reference).scheme or reference.startswith("//"):
             raise RuntimeError("Review assets must be local")
-        path = (source.parent / reference).resolve()
+        # Published Guides refer to shared artwork as ../assets/*.  In a staged
+        # draft that same public path sits under landing/guides/assets, rather
+        # than beside the source HTML.
+        if reference.startswith("../assets/"):
+            path = (ROOT / "landing" / "guides" / "assets" / reference.removeprefix("../assets/")).resolve()
+        else:
+            path = (source.parent / reference).resolve()
         if not path.is_relative_to((ROOT / "landing" / "guides").resolve()):
             raise RuntimeError("Review asset is outside landing/guides")
         if not path.is_file():

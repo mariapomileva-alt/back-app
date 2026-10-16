@@ -55,10 +55,10 @@
       "slug": "grounding-when-thoughts-race",
       "title": "Grounding When Thoughts Race: A Low-Pressure Way to Orient",
       "source_path": "content/back_guides/staged/grounding-when-thoughts-race/index.html",
-      "source_sha256": "c3e0710d2eec47373968e119f9fecacee6c97ffc551d7b89caa6363e58be016a",
-      "status": "ready_for_review",
+      "source_sha256": "b50283bd1abebeda42b35ff5888d679197cd4442b838401fcd9bb93907041819",
+      "status": "approved",
       "approvals": {
-        "owner": false,
+        "owner": true,
         "product_editor": false
       }
     },
