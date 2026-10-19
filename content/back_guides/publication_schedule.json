@@ -68,10 +68,10 @@
       "slug": "asking-someone-you-trust-for-support",
       "title": "How to Ask Someone You Trust for Support in a Difficult Moment",
       "source_path": "content/back_guides/staged/asking-someone-you-trust-for-support/index.html",
-      "source_sha256": "5e56025f9fdbb46650471319e28022ee62664b65ce497bb0292c6b7b8ae6c970",
-      "status": "ready_for_review",
+      "source_sha256": "a41184ae6f7de104b270b33adbeae7417d2d7200612e3b988a2d74d8f26be59a",
+      "status": "approved",
       "approvals": {
-        "owner": false,
+        "owner": true,
         "product_editor": false
       }
     },
