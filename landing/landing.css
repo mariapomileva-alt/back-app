@@ -315,6 +315,7 @@ button {
 
 .lede-primary {
   margin-top: 18px;
+  max-width: 30rem;
   color: var(--ink);
   font-size: clamp(17px, 2.2vw, 20px);
   font-weight: 500;
@@ -323,15 +324,48 @@ button {
 
 .quiet-hero {
   margin: 12px 0 0;
-  max-width: 22rem;
+  max-width: 28rem;
+  font-size: 16px;
+  line-height: 1.45;
 }
 
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 16px 22px;
+  gap: 14px 20px;
   margin-top: 26px;
+}
+
+.hero-actions .btn {
+  min-height: 48px;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.hero-secondary {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 4px 2px;
+  color: var(--grove);
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--grove) 35%, transparent);
+  text-underline-offset: 0.18em;
+}
+
+.hero-secondary:hover {
+  color: var(--forest);
+  text-decoration-color: var(--forest);
+}
+
+.hero-secondary:focus-visible {
+  outline: 2px solid var(--forest);
+  outline-offset: 3px;
+  border-radius: 4px;
 }
 
 .quiet-proof {
