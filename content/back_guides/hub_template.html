@@ -3,24 +3,38 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="apple-itunes-app" content="app-id=6811918141" />
+    <meta name="theme-color" content="#F3EDE1" />
     <meta name="description" content="Calm, practical Guides from Back for difficult moments, private support, and small next steps." />
     <meta name="robots" content="index,follow" />
     <link rel="canonical" href="https://backapp.live/guides/" />
     <title>Back Guides — Small support for difficult moments</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon.png" type="image/png" sizes="48x48" />
+    <link rel="apple-touch-icon" href="/logo-mark.png" sizes="256x256" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Outfit:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="guides.css" />
   </head>
   <body>
+    <div class="grain" aria-hidden="true"></div>
     <a class="skip" href="#guides">Skip to Guides</a>
     <header class="shell topbar">
-      <a class="brand" href="../"><span class="mark" aria-hidden="true">B</span>Back</a>
-      <a class="back-link" href="../">Back app home</a>
+      <a class="brand" href="../">
+        <span class="mark" aria-hidden="true"></span>
+        Back
+      </a>
+      <a class="nav-cta" href="../">Back app home</a>
     </header>
     <main id="guides" class="shell">
       <section class="hero">
         <p class="eyebrow">Back Guides</p>
         <h1>Small support for difficult moments.</h1>
         <p class="lede">Quiet, practical reading for when anxiety, panic, or overwhelm makes the next step hard to find.</p>
-        <div class="rule" aria-hidden="true"></div>
       </section>
       <section class="guide-grid" aria-label="Guides">
         {{GUIDE_CARDS}}
@@ -30,6 +44,23 @@
         <div><h2>Back is not emergency or medical care.</h2><p>These Guides offer general self-help information. If you think you may need urgent medical help, contact your local emergency service. For product support, visit <a href="../support.html">Back Support</a>.</p></div>
       </aside>
     </main>
-    <footer class="shell footer">Back is quiet support for the next minute. It is not therapy or a medical device. · <a href="../privacy.html">Privacy</a> · <a href="../terms.html">Terms</a></footer>
+    <footer class="foot">
+      <p>
+        Back is quiet support for the next minute. It is not a medical device and is not therapy.
+      </p>
+      <p class="foot-urgent" role="note">
+        In danger right now? Call your local emergency number — 112 in the EU, 911 in the US, 999 in
+        the UK. More on our <a href="../support.html">Support page</a>.
+      </p>
+      <p class="foot-links">
+        <a href="../privacy.html">Privacy</a>
+        <a href="../support.html">Support</a>
+        <a href="../subscriptions.html">Subscriptions</a>
+        <a href="../terms.html">Terms</a>
+        <a href="https://www.instagram.com/backapp.live/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.youtube.com/@BackYouAreHere" target="_blank" rel="noopener noreferrer">YouTube</a>
+      </p>
+      <p class="foot-meta">© 2026 Back App</p>
+    </footer>
   </body>
 </html>
