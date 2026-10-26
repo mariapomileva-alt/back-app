@@ -163,7 +163,10 @@
     "save": "Salvar",
     "clear": "Remover deste dispositivo",
     "change": "Mude esta pessoa",
-    "localNote": "Nada aqui é enviado para Back ou qualquer outra pessoa."
+    "localNote": "Nada aqui é enviado para Back ou qualquer outra pessoa.",
+    "tellThem": "Conte a eles sobre o Back",
+    "tellThemHint": "Abre a folha de compartilhamento. Nada é enviado até você escolher para onde.",
+    "tellThemMessage": "Eu te adicionei como minha pessoa no Back, um app pequeno que uso quando o pânico sobe. Se eu ligar, você não precisa consertar nada. Isto explica o que ajuda: {url}"
   },
   "exercise": {
     "progress": "{atual} de {total}",

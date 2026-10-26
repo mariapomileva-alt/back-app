@@ -173,7 +173,10 @@
     "save": "Save",
     "clear": "Remove from this device",
     "change": "Change this person",
-    "localNote": "Nothing here is sent to Back or anyone else."
+    "localNote": "Nothing here is sent to Back or anyone else.",
+    "tellThem": "Tell them about Back",
+    "tellThemHint": "Opens the system share sheet. Nothing is sent until you choose where.",
+    "tellThemMessage": "I added you as my person in Back, a small app I use when panic rises. If I call, you don't have to fix anything. This explains what helps: {url}"
   },
   "exercise": {
     "progress": "{current} of {total}",

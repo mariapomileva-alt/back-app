@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 
@@ -11,6 +11,7 @@ import { ScreenContainer } from '@/components/layout/ScreenContainer';
 import { ScreenHeader } from '@/components/navigation/ScreenHeader';
 import { AppText } from '@/components/typography/AppText';
 import { isHomeToolId } from '@/features/session/activeSession';
+import { maybeRequestReview } from '@/features/session/reviewPrompt';
 import { shareBack } from '@/features/session/shareBack';
 import { alternativesForIntent } from '@/features/session/suggestions';
 import { openBackPlusPaywall } from '@/features/subscription/openBackPlusPaywall';
@@ -33,6 +34,16 @@ export default function SessionAlternativesScreen() {
   const intentValue = Array.isArray(intent) ? intent[0] : intent;
   const { hasPaidAccess } = useBackPlusAccess();
   const suggestions = alternativesForIntent(intentValue, currentTool);
+
+  useEffect(() => {
+    if (feeling !== 'better') {
+      return;
+    }
+    const timer = setTimeout(() => {
+      void maybeRequestReview({ outcome: 'better' });
+    }, 800);
+    return () => clearTimeout(timer);
+  }, [feeling]);
 
   const openSuggestion = (href: (typeof suggestions)[number]['href']) => {
     if (!hasPaidAccess) {

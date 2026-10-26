@@ -163,7 +163,10 @@
     "save": "Ahorrar",
     "clear": "Quitar de este dispositivo",
     "change": "cambiar a esta persona",
-    "localNote": "Nada aquí se envía a Back ni a nadie más."
+    "localNote": "Nada aquí se envía a Back ni a nadie más.",
+    "tellThem": "Cuéntales sobre Back",
+    "tellThemHint": "Abre la hoja para compartir. No se envía nada hasta que elijas dónde.",
+    "tellThemMessage": "Te añadí como mi persona en Back, una app pequeña que uso cuando sube el pánico. Si llamo, no tienes que arreglar nada. Aquí se explica lo que ayuda: {url}"
   },
   "exercise": {
     "progress": "{actual} de {total}",

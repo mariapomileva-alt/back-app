@@ -1,19 +1,20 @@
 import { useCallback, useState } from 'react';
 import { StyleSheet, TextInput, View } from 'react-native';
-import { useFocusEffect, useRouter } from 'expo-router';
+import { useFocusEffect } from 'expo-router';
 
 import { PrimaryButton } from '@/components/buttons/PrimaryButton';
+import { SecondaryButton } from '@/components/buttons/SecondaryButton';
 import { TextButton } from '@/components/buttons/TextButton';
 import { ScreenContainer } from '@/components/layout/ScreenContainer';
 import { ScreenHeader } from '@/components/navigation/ScreenHeader';
 import { AppText } from '@/components/typography/AppText';
 import { useTheme } from '@/hooks/useTheme';
 import { t } from '@/locales/i18n';
+import { shareTellThemAboutBack } from '@/features/session/shareBack';
 import { clearSupportContact, loadSupportContact, saveSupportContact } from '@/storage/supportContact';
 import { spacing, touch } from '@/theme/spacing';
 
 export default function SupportSetupScreen() {
-  const router = useRouter();
   const { theme } = useTheme();
   const [name, setName] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
@@ -97,14 +98,19 @@ export default function SupportSetupScreen() {
               phoneNumber: phoneNumber.trim(),
             }).then(() => {
               setHasSaved(true);
-              if (router.canGoBack()) {
-                router.back();
-              } else {
-                router.replace('/');
-              }
             });
           }}
         />
+
+        {hasSaved ? (
+          <SecondaryButton
+            label={t('supportSetup.tellThem')}
+            accessibilityHint={t('supportSetup.tellThemHint')}
+            onPress={() => {
+              void shareTellThemAboutBack();
+            }}
+          />
+        ) : null}
 
         {hasSaved ? (
           <TextButton

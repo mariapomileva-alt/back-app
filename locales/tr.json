@@ -163,7 +163,10 @@
     "save": "Kaydetmek",
     "clear": "Bu cihazdan kaldır",
     "change": "Bu kişiyi değiştir",
-    "localNote": "Buradaki hiçbir şey Back'e veya başka birine gönderilmez."
+    "localNote": "Buradaki hiçbir şey Back'e veya başka birine gönderilmez.",
+    "tellThem": "Onlara Back'ten bahset",
+    "tellThemHint": "Paylaşım sayfasını açar. Nereye göndereceğini seçene kadar hiçbir şey gönderilmez.",
+    "tellThemMessage": "Panik yükseldiğinde kullandığım küçük bir uygulama olan Back'te seni kişim olarak ekledim. Ararsam hiçbir şeyi düzeltmek zorunda değilsin. Ne yardımcı olur, burada yazıyor: {url}"
   },
   "exercise": {
     "progress": "{current} / {toplam}",

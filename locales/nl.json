@@ -163,7 +163,10 @@
     "save": "Redden",
     "clear": "Verwijderen van dit apparaat",
     "change": "Wijzig deze persoon",
-    "localNote": "Niets hier wordt naar Back of iemand anders verzonden."
+    "localNote": "Niets hier wordt naar Back of iemand anders verzonden.",
+    "tellThem": "Vertel hen over Back",
+    "tellThemHint": "Opent het deelblad. Er wordt niets verzonden tot je een plek kiest.",
+    "tellThemMessage": "Ik heb je in Back als mijn persoon toegevoegd, een kleine app die ik gebruik als paniek opkomt. Als ik bel, hoef je niets te fiksen. Dit legt uit wat helpt: {url}"
   },
   "exercise": {
     "progress": "{huidig} van {totaal}",

@@ -163,7 +163,10 @@
     "save": "Ratować",
     "clear": "Usuń z tego urządzenia",
     "change": "Zmień tę osobę",
-    "localNote": "Nic tutaj nie jest wysyłane do Backa ani nikogo innego."
+    "localNote": "Nic tutaj nie jest wysyłane do Backa ani nikogo innego.",
+    "tellThem": "Opowiedz im o Back",
+    "tellThemHint": "Otwiera systemowe udostępnianie. Nic nie jest wysyłane, dopóki nie wybierzesz gdzie.",
+    "tellThemMessage": "Dodałem cię jako moją osobę w Back, małej aplikacji, której używam, gdy rośnie panika. Jeśli zadzwonię, nie musisz niczego naprawiać. Tu jest, co pomaga: {url}"
   },
   "exercise": {
     "progress": "{bieżący} z {łącznie}",
