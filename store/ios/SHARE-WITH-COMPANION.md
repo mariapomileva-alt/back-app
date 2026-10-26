@@ -4,7 +4,7 @@ This folder is the **only** iOS App Store pack. Zip it, send it, or open it on G
 
 Эта папка — **единственный** пакет для App Store. Сожмите, отправьте, или откройте на GitHub.
 
-**App / Приложение:** Back: You're Here  
+**App / Приложение:** Back: Panic Attack Help  
 **Copyright:** 2026 Tatjana Fedorkova  
 **Branch / Ветка:** `cursor/active-session-foundation`  
 **Repo path:** `store/ios`
@@ -15,7 +15,7 @@ This folder is the **only** iOS App Store pack. Zip it, send it, or open it on G
 
 **English**
 
-1. Zip the folder `store/ios` (icon + `screenshots/` + `listing.md` + this file).
+1. Zip the folder `store/ios` (icon + `screenshots/` + `listing.md` + `localizations.md` + this file).
 2. Send the zip via iCloud Drive, Google Drive, or email.
 3. Or both people open the GitHub repo on branch `cursor/active-session-foundation` and go to `store/ios`.
 4. Companion pastes copy from `listing.md` into App Store Connect (map below).
@@ -23,7 +23,7 @@ This folder is the **only** iOS App Store pack. Zip it, send it, or open it on G
 
 **Русский**
 
-1. Сожмите папку `store/ios` (иконка + `screenshots/` + `listing.md` + этот файл).
+1. Сожмите папку `store/ios` (иконка + `screenshots/` + `listing.md` + `localizations.md` + этот файл).
 2. Отправьте zip через iCloud Drive, Google Drive или почту.
 3. Или оба открывают репозиторий на ветке `cursor/active-session-foundation` и папку `store/ios`.
 4. Компаньон копирует тексты из `listing.md` в App Store Connect (карта ниже).
@@ -40,15 +40,16 @@ Do not send secrets, Apple IDs, or certificates. / Не пересылайте �
 | App icon 1024×1024 (tactile forest disc) | `icon-1024.png` | Yes → App Information / App Icon if the build did not already include it |
 | Home | `screenshots/01-home.png` | Yes → 6.9" Display, first |
 | Breathe | `screenshots/02-breathe.png` | Yes → 6.9" |
-| Ground | `screenshots/03-ground.png` | Yes → 6.9" |
+| Home, offline | `screenshots/01-home-offline.png` | Yes → 6.9", third |
 | Listen | `screenshots/04-listen.png` | Yes → 6.9" |
-| Distract | `screenshots/05-distract.png` | Yes → 6.9" |
+| Ground | `screenshots/03-ground.png` | Yes → 6.9" |
 | Extra support | `screenshots/06-extra-support.png` | Yes → 6.9" |
+| Distract | `screenshots/05-distract.png` | Yes → 6.9" |
 | Paste-ready listing + Connect checklist | `listing.md` | No — copy/paste only |
 | This how-to | `SHARE-WITH-COMPANION.md` | No |
 | Screenshot compositor | `screenshots/compose.html` | **No** — generator, not an App Store asset |
 
-All six screenshots are **1320×2868** (iPhone 6.9" portrait). Not 6.5". No iPad, no Watch, no preview video.
+All seven screenshots are **1320×2868** (iPhone 6.9" portrait) with a paper caption above the UI. Not 6.5". No iPad, no Watch, no preview video.
 
 ---
 
@@ -58,17 +59,18 @@ Use `listing.md` as the source of truth. / Источник текстов — `
 
 | Connect field | From |
 | --- | --- |
-| Name | Back: You're Here |
-| Subtitle | `Quiet help for one minute` (25 / 30) |
+| Name | Back: Panic Attack Help (23 / 30) |
+| Subtitle | `Anxiety SOS & calm breathing` (28 / 30) |
 | Description | Description block in `listing.md` |
-| Keywords | Keywords block (100 / 100, no competitor names) |
+| Keywords | Keywords block (96 / 100 bytes, no competitor names) |
 | Promotional text (optional) | Promotional block |
-| What's New | `First release.` |
+| What's New | `Share Back now includes a link. Breathe and Listen are always free. Small fixes.` |
+| Other languages | `localizations.md` — drafts, needs native review |
 | Support URL | https://backapp.live/support.html — **only after it 200s** (see below) |
 | Privacy Policy URL | https://backapp.live/privacy.html — **only after it 200s** |
 | Marketing URL (optional) | https://backapp.live/ (this one is live) |
 | Category | Health & Fitness (not Medical) |
-| Screenshots | The six PNGs into **6.9" Display** |
+| Screenshots | The seven PNGs into **6.9" Display**, in the order in `listing.md` |
 | Review notes | Review Information block in `listing.md` |
 | Demo account | Leave blank |
 | IAP / subscription product | **Do not enable** |
