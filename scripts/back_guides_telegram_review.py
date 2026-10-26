@@ -110,11 +110,10 @@ def review_html(source: Path) -> bytes:
     def local_asset(reference: str) -> Path:
         if urlsplit(reference).scheme or reference.startswith("//"):
             raise RuntimeError("Review assets must be local")
-        # Published Guides refer to shared artwork as ../assets/*.  In a staged
-        # draft that same public path sits under landing/guides/assets, rather
-        # than beside the source HTML.
-        if reference.startswith("../assets/"):
-            path = (ROOT / "landing" / "guides" / "assets" / reference.removeprefix("../assets/")).resolve()
+        # Staged drafts use ../guides.css and ../assets/*. Those public files
+        # live under landing/guides, not beside the source HTML.
+        if reference.startswith("../"):
+            path = (ROOT / "landing" / "guides" / reference.removeprefix("../")).resolve()
         else:
             path = (source.parent / reference).resolve()
         if not path.is_relative_to((ROOT / "landing" / "guides").resolve()):
@@ -124,8 +123,16 @@ def review_html(source: Path) -> bytes:
         return path
 
     def stylesheet(match: re.Match) -> str:
-        css = local_asset(match.group(1)).read_text(encoding="utf-8")
-        if re.search(r"url\s*\(|@import", css, re.I):
+        href_match = re.search(r'\bhref="([^"]+)"', match.group(0))
+        if not href_match:
+            return ""
+        href = href_match.group(1)
+        if urlsplit(href).scheme in {"http", "https"}:
+            return ""
+        css = local_asset(href).read_text(encoding="utf-8")
+        if re.search(r"@import", css, flags=re.I) or re.search(
+            r"url\s*\(\s*['\"]?(?:https?:|//|\./|\.\./)", css, flags=re.I
+        ):
             raise RuntimeError("External CSS assets need embedding before review")
         return "<style>" + css + "</style>"
 
@@ -137,7 +144,7 @@ def review_html(source: Path) -> bytes:
         data = base64.b64encode(path.read_bytes()).decode("ascii")
         return match.group(1) + f"data:{mime};base64,{data}" + match.group(3)
 
-    text = re.sub(r'<link\s+rel="stylesheet"\s+href="([^"]+)"\s*/?>', stylesheet, text)
+    text = re.sub(r"<link\b[^>]*\brel=\"stylesheet\"[^>]*>", stylesheet, text)
     text = re.sub(r'(<img\b[^>]*\bsrc=")([^"]+)(")', picture, text)
     public_url = "https://backapp.live/guides/" + source.parent.name + "/"
     text = re.sub(r'(<a\b[^>]*\bhref=")([^"]+)(")',

@@ -23,12 +23,16 @@ class BackGuidesPublisherTests(unittest.TestCase):
 
     def test_month_has_twelve_monday_wednesday_friday_slots_at_three(self):
         schedule = publisher.load_schedule()
-        self.assertEqual(len(schedule["articles"]), 12)
+        original = schedule["articles"][:12]
+        self.assertEqual(len(original), 12)
+        self.assertGreaterEqual(len(schedule["articles"]), 12)
         self.assertEqual({publisher.article_time(item).weekday() for item in schedule["articles"]}, {0, 2, 4})
         self.assertTrue(all(publisher.article_time(item).hour == 15 for item in schedule["articles"]))
 
     def test_drafts_cannot_publish_without_owner_approval(self):
-        article = publisher.find_article(publisher.load_schedule(), "BG03")
+        article = publisher.find_article(publisher.load_schedule(), "BG13")
+        self.assertEqual(article["status"], "ready_for_review")
+        self.assertFalse(article["approvals"]["owner"])
         with self.assertRaises(publisher.GateError):
             publisher.require_publishable(article)
 
@@ -132,6 +136,34 @@ class BackGuidesPublisherTests(unittest.TestCase):
             self.assertIsNone(publisher.due_article(single, local + publisher.dt.timedelta(hours=3, seconds=1)))
             single["articles"][0]["status"] = "published"
             self.assertIsNone(publisher.due_article(single, local))
+
+    def test_render_article_adds_schema_updated_line_and_store_close(self):
+        article = publisher.find_article(publisher.load_schedule(), "BG06")
+        html = publisher.render_article(article)
+        self.assertIn('content="index,follow"', html)
+        self.assertIn('"@type": "Article"', html)
+        self.assertIn('"headline": "Panic Attack at Night: What to Do in the Next Minute"', html)
+        self.assertIn('"name": "Back"', html)
+        self.assertRegex(html, r'class="guide-updated">Updated \d{4}-\d{2}-\d{2}</p>')
+        self.assertNotIn("Reviewed by", html)
+        self.assertIn("Back works offline and needs no account. Open it when the next minute feels hard.", html)
+        self.assertIn("https://apps.apple.com/app/id6811918141?mt=8&amp;ct=guide_panic-at-night-next-minute-plan", html)
+
+    def test_reviewer_byline_stays_empty_until_configured(self):
+        article = dict(publisher.find_article(publisher.load_schedule(), "BG01"))
+        html = publisher.render_article(article)
+        self.assertNotIn("guide-reviewer", html)
+        article["reviewed_by"] = "Example Reviewer"
+        html = publisher.render_article(article)
+        self.assertIn("Reviewed by Example Reviewer", html)
+
+    def test_queued_drafts_are_hash_locked_and_not_published(self):
+        schedule = publisher.load_schedule()
+        for article_id in ("BG07", "BG13", "BG14"):
+            article = publisher.find_article(schedule, article_id)
+            self.assertEqual(article["status"], "ready_for_review")
+            self.assertFalse(article["approvals"]["owner"])
+            self.assertEqual(publisher.validate_source(article), article["source_sha256"])
 
     def test_manual_publish_requires_explicit_execute_and_owner_gate(self):
         with self.assertRaises(publisher.GateError):
