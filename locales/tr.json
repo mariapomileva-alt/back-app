@@ -123,7 +123,10 @@
     "emergency": "Ekstra destek",
     "returnTools": "Araçlara dön",
     "tryElse": "Başka bir şey dene",
-    "tryElseHint": "Farklı bir destek türü seçin"
+    "tryElseHint": "Farklı bir destek türü seçin",
+    "lockScreenHint": "Back’i kilit ekranına ekleyin, bir sonraki sefer bir dokunuş uzağınızda olsun",
+    "lockScreenHintDismiss": "OK",
+    "lockScreenHintDismissHint": "Bu notu gizler. Hiçbir şey gönderilmez."
   },
   "extraSupport": {
     "title": "Ekstra destek",

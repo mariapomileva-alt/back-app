@@ -133,7 +133,10 @@
     "emergency": "Extra support",
     "returnTools": "Return to tools",
     "tryElse": "Try something else",
-    "tryElseHint": "Choose a different kind of support"
+    "tryElseHint": "Choose a different kind of support",
+    "lockScreenHint": "Add Back to your Lock Screen, so next time it is one tap away",
+    "lockScreenHintDismiss": "OK",
+    "lockScreenHintDismissHint": "Hides this note. Nothing is sent."
   },
   "extraSupport": {
     "title": "Extra support",

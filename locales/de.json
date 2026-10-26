@@ -123,7 +123,10 @@
     "emergency": "Zusätzliche Unterstützung",
     "returnTools": "Zurück zu den Werkzeugen",
     "tryElse": "Versuchen Sie etwas anderes",
-    "tryElseHint": "Wählen Sie eine andere Art der Unterstützung"
+    "tryElseHint": "Wählen Sie eine andere Art der Unterstützung",
+    "lockScreenHint": "Fügen Sie Back zum Sperrbildschirm hinzu, damit es das nächste Mal nur einen Tipp entfernt ist",
+    "lockScreenHintDismiss": "OK",
+    "lockScreenHintDismissHint": "Blendet diesen Hinweis aus. Es wird nichts gesendet."
   },
   "extraSupport": {
     "title": "Zusätzliche Unterstützung",

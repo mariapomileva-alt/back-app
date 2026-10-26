@@ -22,4 +22,5 @@ export const storageKeys = {
   homeNamePromptDismissed: 'back.homeNamePromptDismissed',
   reviewBetterCount: 'back.review.betterCount',
   reviewLastRequestedAt: 'back.review.lastRequestedAt',
+  lockScreenHintShown: 'back.lockScreenHintShown',
 } as const;

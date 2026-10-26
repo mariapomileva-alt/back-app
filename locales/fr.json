@@ -123,7 +123,10 @@
     "emergency": "Assistance supplémentaire",
     "returnTools": "Retour aux outils",
     "tryElse": "Essayez autre chose",
-    "tryElseHint": "Choisissez un autre type de support"
+    "tryElseHint": "Choisissez un autre type de support",
+    "lockScreenHint": "Ajoutez Back à votre écran de verrouillage, pour que la prochaine fois ce soit à un geste",
+    "lockScreenHintDismiss": "OK",
+    "lockScreenHintDismissHint": "Masque cette note. Rien n’est envoyé."
   },
   "extraSupport": {
     "title": "Assistance supplémentaire",

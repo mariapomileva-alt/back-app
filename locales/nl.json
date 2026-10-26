@@ -123,7 +123,10 @@
     "emergency": "Extra ondersteuning",
     "returnTools": "Terug naar gereedschap",
     "tryElse": "Probeer iets anders",
-    "tryElseHint": "Kies voor een ander soort ondersteuning"
+    "tryElseHint": "Kies voor een ander soort ondersteuning",
+    "lockScreenHint": "Zet Back op je toegangsscherm, zodat het de volgende keer één tik verwijderd is",
+    "lockScreenHintDismiss": "OK",
+    "lockScreenHintDismissHint": "Verbergt deze notitie. Er wordt niets verzonden."
   },
   "extraSupport": {
     "title": "Extra ondersteuning",

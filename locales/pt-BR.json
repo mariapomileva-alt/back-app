@@ -123,7 +123,10 @@
     "emergency": "Suporte extra",
     "returnTools": "Voltar para ferramentas",
     "tryElse": "Tente outra coisa",
-    "tryElseHint": "Escolha um tipo diferente de suporte"
+    "tryElseHint": "Escolha um tipo diferente de suporte",
+    "lockScreenHint": "Adicione o Back à tela de bloqueio, para que da próxima vez esteja a um toque",
+    "lockScreenHintDismiss": "OK",
+    "lockScreenHintDismissHint": "Oculta esta nota. Nada é enviado."
   },
   "extraSupport": {
     "title": "Suporte extra",
