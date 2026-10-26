@@ -159,7 +159,11 @@ class BackGuidesPublisherTests(unittest.TestCase):
 
     def test_queued_drafts_are_hash_locked_and_not_published(self):
         schedule = publisher.load_schedule()
-        for article_id in ("BG07", "BG13", "BG14"):
+        published = publisher.find_article(schedule, "BG07")
+        self.assertEqual(published["status"], "published")
+        self.assertTrue(published["approvals"]["owner"])
+        self.assertEqual(publisher.validate_source(published), published["source_sha256"])
+        for article_id in ("BG13", "BG14"):
             article = publisher.find_article(schedule, article_id)
             self.assertEqual(article["status"], "ready_for_review")
             self.assertFalse(article["approvals"]["owner"])
