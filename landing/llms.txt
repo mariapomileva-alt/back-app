@@ -1,0 +1,27 @@
+# Back
+
+Back is a self-help app for the first minute of a panic attack, acute anxiety, or sensory overwhelm. Six gentle tools start in one tap: Breathe, Distract, Ground, Move, Listen, and Read. There is no account. The tools work offline. Preferences and a support contact stay on the phone. The App Store privacy label is Data Not Collected.
+
+Back is not therapy, a diagnosis, a medical device, or an emergency service. It does not promise to stop or treat panic. If someone may be in immediate danger, they should contact local emergency services.
+
+Today every tool is free. A later paid plan called Back Plus is not available yet. Safety routes — Extra Support, emergency information, and Call my person — stay outside any future paywall.
+
+Back is on the App Store for iPhone: https://apps.apple.com/app/id6811918141?mt=8&ct=llms
+This project does not list a Google Play URL.
+
+## Guides
+
+- https://backapp.live/guides/what-to-do-when-panic-rises/ — When panic rises, choose one small next-minute step.
+- https://backapp.live/guides/when-breathing-feels-hard-during-panic/ — You do not have to force a breathing exercise.
+- https://backapp.live/guides/grounding-when-thoughts-race/ — A low-pressure way to orient when thoughts race.
+- https://backapp.live/guides/asking-someone-you-trust-for-support/ — How to ask someone you trust for support.
+- https://backapp.live/guides/make-a-calm-time-support-plan/ — A quiet support plan made on a calmer day.
+- https://backapp.live/guides/panic-at-night-next-minute-plan/ — What to do when panic shows up at night.
+
+## Other pages
+
+- https://backapp.live/
+- https://backapp.live/privacy.html
+- https://backapp.live/terms.html
+- https://backapp.live/support.html
+- https://backapp.live/subscriptions.html
