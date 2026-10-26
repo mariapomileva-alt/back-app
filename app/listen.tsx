@@ -22,7 +22,6 @@ import {
   type ListenSoundId,
 } from '@/features/listen/sounds';
 import { useLoopingSound } from '@/hooks/useLoopingSound';
-import { usePaidToolGate } from '@/hooks/usePaidToolGate';
 import { useTheme } from '@/hooks/useTheme';
 import { t } from '@/locales/i18n';
 import {
@@ -59,7 +58,6 @@ function normalizePickerSound(id: ListenSoundId): ListenSoundId {
 }
 
 export default function ListenScreen() {
-  usePaidToolGate();
   const { theme } = useTheme();
   const { width: windowWidth, height: windowHeight, fontScale } = useWindowDimensions();
   const compact = windowHeight < 740;

@@ -1,4 +1,4 @@
-# App Store Connect pack — Back: You're Here
+# App Store Connect pack — Back: Panic Attack Help
 
 Upload these files in App Store Connect. This file is the listing copy and the fill-in checklist.
 
@@ -6,7 +6,7 @@ Companion how-to (zip, where to paste, what they still click): **`store/ios/SHAR
 
 **Copyright:** 2026 Tatjana Fedorkova  
 **Bundle ID:** `app.back.selfhelp`  
-**Version:** 1.0.0  
+**Version:** 1.0.1  
 **SKU suggestion:** `back-ios-1` (set once; cannot invent Apple IDs)  
 **Branch for this pack:** `cursor/active-session-foundation`
 
@@ -20,16 +20,17 @@ Companion how-to (zip, where to paste, what they still click): **`store/ios/SHAR
 | --- | --- | --- | --- |
 | App icon (master) | `store/ios/icon-1024.png` | 1024×1024, RGB, opaque PNG, no rounded corners, no alpha, no pre-rounded mask | **Present.** Approved tactile forest disc. `sips`: 1024×1024, RGB, `hasAlpha: no`. Same bytes as `assets/images/icon.png`. |
 | App icon (Expo slot) | `assets/images/icon.png` | Same file as master | Present (identical hash). |
-| Screenshots | `store/ios/screenshots/` | iPhone **6.9"** portrait **1320×2868** | **Present.** Six PNGs, all 1320×2868 RGB opaque. Full-bleed app UI (status bar + Dynamic Island as the screen, not a 3D phone bezel). No lorem. |
+| Screenshots | `store/ios/screenshots/` | iPhone **6.9"** portrait **1320×2868** | **Present.** Seven PNGs, all 1320×2868. Paper frame, serif caption above the app UI. No lorem. No competitor names on captions. |
 
 Screenshots (upload in this order, 6.9" well — not 6.5"):
 
-1. `01-home.png` — Home
-2. `02-breathe.png` — Breathe
-3. `03-ground.png` — Ground
-4. `04-listen.png` — Listen
-5. `05-distract.png` — Distract
-6. `06-extra-support.png` — Extra support
+1. `01-home.png` — Help in the first minute of panic
+2. `02-breathe.png` — Breathe gently. Or pick another way
+3. `01-home-offline.png` — No account. Works offline. Nothing leaves your phone
+4. `04-listen.png` — Rain, ocean, brown noise for night panic
+5. `03-ground.png` — Ground yourself in the room you are in
+6. `06-extra-support.png` — Your person, one tap away
+7. `05-distract.png` — Calm games with no scores
 
 No iPad, Watch, or preview video.
 
@@ -66,12 +67,14 @@ No product email is in the repo. Support is GitHub Issues (stated on the support
 
 ## Listing copy (English, US)
 
-### Name
-Back: You're Here
-
-### Subtitle (25 / 30 characters)
+### Name (23 / 30)
 ```
-Quiet help for one minute
+Back: Panic Attack Help
+```
+
+### Subtitle (28 / 30)
+```
+Anxiety SOS & calm breathing
 ```
 
 ### Description
@@ -96,21 +99,21 @@ Private. No account. Nothing you save is sent to Back. Your “my person” cont
 Back is not therapy, not a diagnosis, and not an emergency service. It is not a medical device.
 ```
 
-### Keywords (100 / 100 characters)
+### Keywords (96 / 100 bytes)
 ```
-anxiety,panic,breathe,grounding,overload,stress,self-help,quiet,breathing,ground,relief,minute,tools
-```
-
-No competitor names. No “Calm”, “Headspace”, or similar.
-
-### Promotional text (optional, 57 / 170)
-```
-Six quiet tools for the next minute. Private. No account.
+relief,grounding,stress,overwhelm,sensory,overload,breathe,night,noise,offline,distract,selfcare
 ```
 
-### What's New
+**No competitor names in any metadata field.** Do not use Calm, Headspace, Insight Timer, or similar.
+
+### Promotional text (optional, 90 / 170)
 ```
-First release.
+Panic at night or on the metro? Back opens in one tap, needs no account and works offline.
+```
+
+### What's New (80 / 4000)
+```
+Share Back now includes a link. Breathe and Listen are always free. Small fixes.
 ```
 
 ---
@@ -199,9 +202,9 @@ You must complete this in App Store Connect. A banner about trader status (from 
 
 Submit stays grey until a human does these in the UI:
 
-1. Create the iOS app record if needed (bundle `app.back.selfhelp`, listing name **Back: You're Here**).
+1. Create the iOS app record if needed (bundle `app.back.selfhelp`, listing name **Back: Panic Attack Help**).
 2. Upload `store/ios/icon-1024.png` if the build’s AppIcon is not already this file (EAS/Expo should pick `assets/images/icon.png`).
-3. Upload the six 1320×2868 screenshots into **6.9" Display** (not 6.5").
+3. Upload the seven 1320×2868 screenshots into **6.9" Display** (not 6.5"), in the order listed above.
 4. Paste subtitle, description, keywords, What’s New.
 5. Set Support URL and Privacy Policy URL.
 6. Category: Health & Fitness.
@@ -242,6 +245,10 @@ Extra support disclaimer is in the app and in the listing. Keep it.
 
 ## Character counts
 
-- Subtitle: 25 / 30
-- Keywords: 100 / 100
-- Promotional text: 57 / 170
+- Name: 23 / 30
+- Subtitle: 28 / 30
+- Keywords: 96 / 100 bytes
+- Promotional text: 90 / 170
+- What's New: 80 / 4000
+
+Localized name/subtitle drafts: `store/ios/localizations.md`. Keyword fields there stay empty until Maria fills them.

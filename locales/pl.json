@@ -123,7 +123,10 @@
     "emergency": "Dodatkowe wsparcie",
     "returnTools": "Wróć do narzędzi",
     "tryElse": "Spróbuj czegoś innego",
-    "tryElseHint": "Wybierz inny rodzaj wsparcia"
+    "tryElseHint": "Wybierz inny rodzaj wsparcia",
+    "lockScreenHint": "Dodaj Back do ekranu blokady, żeby następnym razem było to jedno stuknięcie",
+    "lockScreenHintDismiss": "OK",
+    "lockScreenHintDismissHint": "Ukrywa tę notatkę. Nic nie jest wysyłane."
   },
   "extraSupport": {
     "title": "Dodatkowe wsparcie",
@@ -163,7 +166,10 @@
     "save": "Ratować",
     "clear": "Usuń z tego urządzenia",
     "change": "Zmień tę osobę",
-    "localNote": "Nic tutaj nie jest wysyłane do Backa ani nikogo innego."
+    "localNote": "Nic tutaj nie jest wysyłane do Backa ani nikogo innego.",
+    "tellThem": "Opowiedz im o Back",
+    "tellThemHint": "Otwiera systemowe udostępnianie. Nic nie jest wysyłane, dopóki nie wybierzesz gdzie.",
+    "tellThemMessage": "Dodałem cię jako moją osobę w Back, małej aplikacji, której używam, gdy rośnie panika. Jeśli zadzwonię, nie musisz niczego naprawiać. Tu jest, co pomaga: {url}"
   },
   "exercise": {
     "progress": "{bieżący} z {łącznie}",
@@ -436,12 +442,12 @@
     "headline": "Trzymaj Wróć blisko",
     "headlineActive": "Powrót Plus jest aktywny",
     "headlineExpired": "Twój dostęp do Back Plus dobiegł końca",
-    "intro": "Sześć prostych narzędzi na trudne chwile — prywatne, offline i gotowe, kiedy ich potrzebujesz. \n\nWypróbuj wszystko za darmo przez 7 dni w ramach planu rocznego, jeśli się kwalifikujesz. Po okresie próbnym wymagana jest aktywna miesięczna lub roczna subskrypcja, aby móc korzystać z funkcji Oddychanie, Odwracanie uwagi, Ziemia, Poruszanie się, Słuchanie i Czytanie.",
-    "introPreparing": "Powrót Plus jest w przygotowaniu. \n\nPowrót będzie obejmował 7-dniowy okres próbny z planem rocznym, po którym nastąpi miesięczna lub roczna subskrypcja. Ostateczne ceny i szczegóły odnowienia pojawią się w App Store lub Google Play przed zakupem. \n\nNie ma nic do kupienia, dopóki Back Plus nie zostanie wydany.",
+    "intro": "Six simple tools for difficult moments — private, offline and ready whenever you need them.\n\nBreathe and Listen are always free. Back Plus adds Distract, Ground, Move, Read, patterns and themes.\n\nTry Back Plus free for 7 days with the annual plan when you are eligible.",
+    "introPreparing": "Back Plus is being prepared.\n\nBreathe and Listen stay free. Back Plus will add Distract, Ground, Move, Read, patterns and themes, with a 7-day trial on the annual plan. Final prices and renewal details will appear in the App Store or Google Play before purchase.\n\nThere is nothing to buy until Back Plus is released.",
     "introTrialActive": "Twój 7-dniowy okres próbny jest aktywny na tym urządzeniu. Dziękujemy za wypróbowanie Back Plus.",
     "introAnnualActive": "Twój roczny plan Back Plus jest aktywny na tym urządzeniu. Dziękuję za wsparcie Backa.",
     "introMonthlyActive": "Twój miesięczny plan Back Plus jest aktywny na tym urządzeniu. Dziękuję za wsparcie Backa.",
-    "introExpired": "Wybierz plan, aby nadal korzystać z sześciu narzędzi Wstecz lub przywrócić wcześniejszy zakup. \n\nInformacje w sytuacjach awaryjnych, Dodatkowe wsparcie i Zadzwoń do mojej osoby są nadal dostępne.",
+    "introExpired": "Breathe and Listen stay free. Choose a plan to add Distract, Ground, Move, Read, patterns and themes, or restore an earlier purchase.\n\nEmergency information, Extra Support and Call my person are still available.",
     "statusTrialEnds": "Okres próbny kończy się {data}",
     "statusAnnualRenews": "Odnawia {data}",
     "statusMonthlyRenews": "Odnawia {data}",
@@ -472,7 +478,7 @@
     "linkTerms": "Warunki",
     "linkSubscriptions": "Subskrypcje w internecie",
     "benefits": {
-      "sixTools": "Oddychaj, odwracaj uwagę, uziemiaj, poruszaj się, słuchaj i czytaj",
+      "sixTools": "Distract, Ground, Move, Read, patterns and themes",
       "offlineSounds": "Kompletna kolekcja dźwięków offline",
       "allExercises": "Wszystkie ćwiczenia oddechowe, uziemiające, ruchowe i uwagi",
       "readExperience": "Pełne doświadczenie czytania",

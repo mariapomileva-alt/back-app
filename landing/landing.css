@@ -286,6 +286,50 @@ button {
   color: var(--grove);
 }
 
+.hero-here {
+  margin: 0 0 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--grove);
+}
+
+.poster-sentence {
+  font-size: clamp(32px, 5.2vw, 56px);
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  max-width: min(22rem, 100%);
+}
+
+.hero-qr {
+  display: none;
+  margin: 0;
+  padding: 10px 12px 8px;
+  background: var(--ivory);
+  border: 1px solid color-mix(in srgb, var(--divider) 70%, var(--ivory));
+  border-radius: 18px;
+}
+
+.hero-qr img {
+  display: block;
+  width: 120px;
+  height: 120px;
+}
+
+.hero-qr figcaption {
+  margin: 8px 0 0;
+  max-width: 120px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.35;
+  text-align: center;
+}
+
+@media (min-width: 900px) {
+  .hero-qr {
+    display: block;
+  }
+}
+
 .kicker.light,
 .lede.light {
   color: #cfd9d2;
@@ -902,6 +946,31 @@ button {
 
 .principles-grid p {
   margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+.faq-list {
+  display: grid;
+  gap: 18px;
+  margin: 28px 0 0;
+}
+
+.faq-item {
+  padding: 18px 20px;
+  background: var(--surface, #fff);
+  border: 1px solid color-mix(in srgb, var(--divider) 70%, var(--ivory));
+  border-radius: 22px;
+}
+
+.faq-item dt {
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.faq-item dd {
+  margin: 8px 0 0;
   color: var(--muted);
   font-size: 16px;
   line-height: 1.45;

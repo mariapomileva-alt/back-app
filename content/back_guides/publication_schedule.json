@@ -27,9 +27,9 @@
       "id": "BG01",
       "publish_at": "2026-10-12T15:00:00+03:00",
       "slug": "what-to-do-when-panic-rises",
-      "title": "When Panic Rises: Choose One Small Thing for the Next Minute",
+      "title": "What to Do During a Panic Attack: The First Minute",
       "source_path": "content/back_guides/staged/what-to-do-when-panic-rises/index.html",
-      "source_sha256": "1522b2f3f004ce441d85927b684cce953a6881ce61ddcb68516be7d52413c187",
+      "source_sha256": "1681e25406b19667d8221fb59c1f3e878f5e4d20cd4e728be72dcfe322b7839e",
       "status": "published",
       "approvals": {
         "owner": true,
@@ -40,9 +40,9 @@
       "id": "BG02",
       "publish_at": "2026-10-14T15:00:00+03:00",
       "slug": "when-breathing-feels-hard-during-panic",
-      "title": "When Breathing Feels Hard During Panic: Do Not Force It",
+      "title": "Can't Breathe During a Panic Attack? You Don't Have to Force It",
       "source_path": "content/back_guides/staged/when-breathing-feels-hard-during-panic/index.html",
-      "source_sha256": "f67d8478cb33351a9b9a8ee82cc806ca5e1484d9e5ad83531399162e1f4ea04b",
+      "source_sha256": "d14dc38ef10bb1cca595e81c80b435986eb0afd81d662f1c9941188576fe214c",
       "status": "published",
       "approvals": {
         "owner": true,
@@ -53,9 +53,9 @@
       "id": "BG03",
       "publish_at": "2026-10-16T15:00:00+03:00",
       "slug": "grounding-when-thoughts-race",
-      "title": "Grounding When Thoughts Race: A Low-Pressure Way to Orient",
+      "title": "Grounding for Racing Thoughts: A Gentle Version",
       "source_path": "content/back_guides/staged/grounding-when-thoughts-race/index.html",
-      "source_sha256": "b50283bd1abebeda42b35ff5888d679197cd4442b838401fcd9bb93907041819",
+      "source_sha256": "761cf0404669fb001fdd3b1b35cdcc284b095f433a0467296b3f16d4aeddf58e",
       "status": "published",
       "approvals": {
         "owner": true,
@@ -66,9 +66,9 @@
       "id": "BG04",
       "publish_at": "2026-10-19T15:00:00+03:00",
       "slug": "asking-someone-you-trust-for-support",
-      "title": "How to Ask Someone You Trust for Support in a Difficult Moment",
+      "title": "How to Ask Someone for Support During a Panic Attack",
       "source_path": "content/back_guides/staged/asking-someone-you-trust-for-support/index.html",
-      "source_sha256": "a41184ae6f7de104b270b33adbeae7417d2d7200612e3b988a2d74d8f26be59a",
+      "source_sha256": "aef499e688e21faaba8a3b8d1763a00286915d670aedd6b1295633d1f1c956c2",
       "status": "published",
       "approvals": {
         "owner": true,
@@ -79,9 +79,9 @@
       "id": "BG05",
       "publish_at": "2026-10-21T15:00:00+03:00",
       "slug": "make-a-calm-time-support-plan",
-      "title": "Make a Quiet Support Plan During a Calmer Moment",
+      "title": "A Panic Attack Plan Made on a Calm Day",
       "source_path": "content/back_guides/staged/make-a-calm-time-support-plan/index.html",
-      "source_sha256": "412322b72e60ea265c504b70ba53ac1e2940e14c723cc1d1ab9c60356a66f30c",
+      "source_sha256": "fbe6f6f88198e6455e9e18bd951a306176d3ceacdb8eb3f6e90bb90534cd7eb4",
       "status": "published",
       "approvals": {
         "owner": true,
@@ -92,9 +92,9 @@
       "id": "BG06",
       "publish_at": "2026-10-23T15:00:00+03:00",
       "slug": "panic-at-night-next-minute-plan",
-      "title": "When Panic Shows Up at Night: A Next-Minute Plan",
+      "title": "Panic Attack at Night: What to Do in the Next Minute",
       "source_path": "content/back_guides/staged/panic-at-night-next-minute-plan/index.html",
-      "source_sha256": "cdd07782bcb3dd390544120e974de852105a0cae79b86466e75aac271db1a0fa",
+      "source_sha256": "eb2cea0d7afbe07dd18480d5e187537fe0e8c36a75612348349b94559d64e459",
       "status": "published",
       "approvals": {
         "owner": true,
@@ -174,6 +174,32 @@
       "source_path": null,
       "source_sha256": null,
       "status": "planned",
+      "approvals": {
+        "owner": false,
+        "product_editor": false
+      }
+    },
+    {
+      "id": "BG13",
+      "publish_at": "2026-11-09T15:00:00+02:00",
+      "slug": "how-to-help-someone-having-a-panic-attack",
+      "title": "How to Help Someone Having a Panic Attack",
+      "source_path": "content/back_guides/staged/how-to-help-someone-having-a-panic-attack/index.html",
+      "source_sha256": "e5d6e2f76ddc65d7bf7c9fd729d4e63c312e09ddbc540e682706c817bb73f244",
+      "status": "ready_for_review",
+      "approvals": {
+        "owner": false,
+        "product_editor": false
+      }
+    },
+    {
+      "id": "BG14",
+      "publish_at": "2026-11-11T15:00:00+02:00",
+      "slug": "panic-attack-on-a-plane",
+      "title": "Panic Attack on a Plane",
+      "source_path": "content/back_guides/staged/panic-attack-on-a-plane/index.html",
+      "source_sha256": "c3d596cf092ceb77bf05a10981ab49cc882d10bb17f0a5a7ea385f273656d52b",
+      "status": "ready_for_review",
       "approvals": {
         "owner": false,
         "product_editor": false

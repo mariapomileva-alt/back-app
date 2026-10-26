@@ -20,4 +20,7 @@ export const storageKeys = {
   languagePreference: 'back.languagePreference',
   localProfile: 'back.profile.v1',
   homeNamePromptDismissed: 'back.homeNamePromptDismissed',
+  reviewBetterCount: 'back.review.betterCount',
+  reviewLastRequestedAt: 'back.review.lastRequestedAt',
+  lockScreenHintShown: 'back.lockScreenHintShown',
 } as const;

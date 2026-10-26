@@ -123,7 +123,10 @@
     "emergency": "Suporte extra",
     "returnTools": "Voltar para ferramentas",
     "tryElse": "Tente outra coisa",
-    "tryElseHint": "Escolha um tipo diferente de suporte"
+    "tryElseHint": "Escolha um tipo diferente de suporte",
+    "lockScreenHint": "Adicione o Back à tela de bloqueio, para que da próxima vez esteja a um toque",
+    "lockScreenHintDismiss": "OK",
+    "lockScreenHintDismissHint": "Oculta esta nota. Nada é enviado."
   },
   "extraSupport": {
     "title": "Suporte extra",
@@ -163,7 +166,10 @@
     "save": "Salvar",
     "clear": "Remover deste dispositivo",
     "change": "Mude esta pessoa",
-    "localNote": "Nada aqui é enviado para Back ou qualquer outra pessoa."
+    "localNote": "Nada aqui é enviado para Back ou qualquer outra pessoa.",
+    "tellThem": "Conte a eles sobre o Back",
+    "tellThemHint": "Abre a folha de compartilhamento. Nada é enviado até você escolher para onde.",
+    "tellThemMessage": "Eu te adicionei como minha pessoa no Back, um app pequeno que uso quando o pânico sobe. Se eu ligar, você não precisa consertar nada. Isto explica o que ajuda: {url}"
   },
   "exercise": {
     "progress": "{atual} de {total}",
@@ -436,12 +442,12 @@
     "headline": "Mantenha as costas por perto",
     "headlineActive": "Back Plus está ativo",
     "headlineExpired": "Seu acesso ao Back Plus terminou",
-    "intro": "Seis ferramentas simples para momentos difíceis: privadas, off-line e prontas sempre que você precisar. \n\nExperimente tudo gratuitamente por 7 dias com o plano anual quando for elegível. Após o teste, é necessária uma assinatura mensal ou anual ativa para usar Respirar, Distrair, Aterrar, Mover, Ouvir e Ler.",
-    "introPreparing": "Back Plus está sendo preparado. \n\nBack incluirá um teste de 7 dias com o plano anual, seguido de uma assinatura mensal ou anual. Os preços finais e os detalhes da renovação aparecerão na App Store ou no Google Play antes da compra. \n\nNão há nada para comprar até que o Back Plus seja lançado.",
+    "intro": "Six simple tools for difficult moments — private, offline and ready whenever you need them.\n\nBreathe and Listen are always free. Back Plus adds Distract, Ground, Move, Read, patterns and themes.\n\nTry Back Plus free for 7 days with the annual plan when you are eligible.",
+    "introPreparing": "Back Plus is being prepared.\n\nBreathe and Listen stay free. Back Plus will add Distract, Ground, Move, Read, patterns and themes, with a 7-day trial on the annual plan. Final prices and renewal details will appear in the App Store or Google Play before purchase.\n\nThere is nothing to buy until Back Plus is released.",
     "introTrialActive": "Seu teste de 7 dias está ativo neste dispositivo. Obrigado por experimentar o Back Plus.",
     "introAnnualActive": "Seu plano anual Back Plus está ativo neste dispositivo. Obrigado por apoiar Back.",
     "introMonthlyActive": "Seu plano mensal Back Plus está ativo neste dispositivo. Obrigado por apoiar Back.",
-    "introExpired": "Escolha um plano para continuar usando as seis ferramentas Voltar ou restaure uma compra anterior. \n\nInformações de emergência, Suporte Extra e Ligue para minha pessoa ainda estão disponíveis.",
+    "introExpired": "Breathe and Listen stay free. Choose a plan to add Distract, Ground, Move, Read, patterns and themes, or restore an earlier purchase.\n\nEmergency information, Extra Support and Call my person are still available.",
     "statusTrialEnds": "A avaliação termina em {data}",
     "statusAnnualRenews": "Renova {data}",
     "statusMonthlyRenews": "Renova {data}",
@@ -472,7 +478,7 @@
     "linkTerms": "Termos",
     "linkSubscriptions": "Assinaturas na web",
     "benefits": {
-      "sixTools": "Respire, distraia, aterre, mova, ouça e leia",
+      "sixTools": "Distract, Ground, Move, Read, patterns and themes",
       "offlineSounds": "A coleção completa de sons offline",
       "allExercises": "Todos os exercícios de respiração, aterramento, movimento e atenção",
       "readExperience": "A experiência de leitura completa",

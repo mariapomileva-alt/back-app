@@ -123,7 +123,10 @@
     "emergency": "Zusätzliche Unterstützung",
     "returnTools": "Zurück zu den Werkzeugen",
     "tryElse": "Versuchen Sie etwas anderes",
-    "tryElseHint": "Wählen Sie eine andere Art der Unterstützung"
+    "tryElseHint": "Wählen Sie eine andere Art der Unterstützung",
+    "lockScreenHint": "Fügen Sie Back zum Sperrbildschirm hinzu, damit es das nächste Mal nur einen Tipp entfernt ist",
+    "lockScreenHintDismiss": "OK",
+    "lockScreenHintDismissHint": "Blendet diesen Hinweis aus. Es wird nichts gesendet."
   },
   "extraSupport": {
     "title": "Zusätzliche Unterstützung",
@@ -163,7 +166,10 @@
     "save": "Speichern",
     "clear": "Von diesem Gerät entfernen",
     "change": "Ändere diese Person",
-    "localNote": "Hier wird nichts an Back oder jemand anderen gesendet."
+    "localNote": "Hier wird nichts an Back oder jemand anderen gesendet.",
+    "tellThem": "Erzähl ihnen von Back",
+    "tellThemHint": "Öffnet das Teilen-Menü. Es wird nichts gesendet, bis du einen Ort wählst.",
+    "tellThemMessage": "Ich habe dich in Back als meine Person gespeichert, eine kleine App für den Moment, wenn Panik aufsteigt. Wenn ich anrufe, musst du nichts richten. Das erklärt, was hilft: {url}"
   },
   "exercise": {
     "progress": "{current} von {total}",
@@ -436,12 +442,12 @@
     "headline": "Bleiben Sie in der Nähe",
     "headlineActive": "Back Plus ist aktiv",
     "headlineExpired": "Ihr Back Plus-Zugang ist beendet",
-    "intro": "Sechs einfache Tools für schwierige Momente – privat, offline und jederzeit einsatzbereit. \n\nTesten Sie alles 7 Tage lang kostenlos mit dem Jahresplan, wenn Sie dazu berechtigt sind. Nach der Testversion ist ein aktives Monats- oder Jahresabonnement erforderlich, um Breathe, Distract, Ground, Move, Listen und Read nutzen zu können.",
-    "introPreparing": "Back Plus ist in Vorbereitung. \n\nBack beinhaltet eine 7-tägige Testversion mit dem Jahresplan, gefolgt von einem Monats- oder Jahresabonnement. Die endgültigen Preise und Einzelheiten zur Verlängerung werden vor dem Kauf im App Store oder bei Google Play angezeigt. \n\nBis zur Veröffentlichung von Back Plus gibt es nichts zu kaufen.",
+    "intro": "Six simple tools for difficult moments — private, offline and ready whenever you need them.\n\nBreathe and Listen are always free. Back Plus adds Distract, Ground, Move, Read, patterns and themes.\n\nTry Back Plus free for 7 days with the annual plan when you are eligible.",
+    "introPreparing": "Back Plus is being prepared.\n\nBreathe and Listen stay free. Back Plus will add Distract, Ground, Move, Read, patterns and themes, with a 7-day trial on the annual plan. Final prices and renewal details will appear in the App Store or Google Play before purchase.\n\nThere is nothing to buy until Back Plus is released.",
     "introTrialActive": "Ihre 7-tägige Testversion ist auf diesem Gerät aktiv. Vielen Dank, dass Sie Back Plus ausprobiert haben.",
     "introAnnualActive": "Ihr jährlicher Back Plus-Plan ist auf diesem Gerät aktiv. Vielen Dank für die Unterstützung von Back.",
     "introMonthlyActive": "Ihr monatlicher Back Plus-Plan ist auf diesem Gerät aktiv. Vielen Dank für die Unterstützung von Back.",
-    "introExpired": "Wählen Sie einen Plan, um die sechs Back-Tools weiterhin zu nutzen oder einen früheren Kauf wiederherzustellen. \n\nNotfallinformationen, zusätzlicher Support und „Meine Person anrufen“ sind weiterhin verfügbar.",
+    "introExpired": "Breathe and Listen stay free. Choose a plan to add Distract, Ground, Move, Read, patterns and themes, or restore an earlier purchase.\n\nEmergency information, Extra Support and Call my person are still available.",
     "statusTrialEnds": "Testversion endet am {Datum}",
     "statusAnnualRenews": "Erneuert {Datum}",
     "statusMonthlyRenews": "Erneuert {Datum}",
@@ -472,7 +478,7 @@
     "linkTerms": "Bedingungen",
     "linkSubscriptions": "Abonnements im Internet",
     "benefits": {
-      "sixTools": "Atmen, ablenken, erden, bewegen, zuhören und lesen",
+      "sixTools": "Distract, Ground, Move, Read, patterns and themes",
       "offlineSounds": "Die komplette Offline-Soundsammlung",
       "allExercises": "Alle Atem-, Erdungs-, Bewegungs- und Aufmerksamkeitsübungen",
       "readExperience": "Das komplette Leseerlebnis",

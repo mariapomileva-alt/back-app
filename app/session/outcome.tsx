@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import Svg, { Ellipse } from 'react-native-svg';
@@ -9,6 +10,7 @@ import { ScreenContainer } from '@/components/layout/ScreenContainer';
 import { ScreenHeader } from '@/components/navigation/ScreenHeader';
 import { AppText } from '@/components/typography/AppText';
 import { isHomeToolId } from '@/features/session/activeSession';
+import { resolveLockScreenHint } from '@/features/session/lockScreenHint';
 import { useTheme } from '@/hooks/useTheme';
 import { t } from '@/locales/i18n';
 import { saveSessionOutcome } from '@/storage/history';
@@ -28,17 +30,43 @@ export default function SessionOutcomeScreen() {
   const closedTool = isHomeToolId(toolParam) ? toolParam : undefined;
   const sessionId = firstParam(params.sessionId);
   const durationMs = Number(firstParam(params.durationMs));
+  const [pendingOutcome, setPendingOutcome] = useState<SessionOutcome | null>(null);
+  const [showLockHint, setShowLockHint] = useState(false);
+  const [busy, setBusy] = useState(false);
+
+  const goToAlternatives = (outcome: SessionOutcome) => {
+    router.replace({
+      pathname: '/session/alternatives',
+      params: { feeling: outcome, ...(closedTool ? { tool: closedTool } : {}) },
+    });
+  };
 
   const chooseOutcome = (outcome: SessionOutcome) => {
+    if (busy) {
+      return;
+    }
+    setBusy(true);
     void saveSessionOutcome(
       sessionId,
       outcome,
       closedTool && Number.isFinite(durationMs) ? { tool: closedTool, durationMs } : undefined,
     );
-    router.replace({
-      pathname: '/session/alternatives',
-      params: { feeling: outcome, ...(closedTool ? { tool: closedTool } : {}) },
-    });
+    void (async () => {
+      const decision = await resolveLockScreenHint({ outcome });
+      if (decision === 'show') {
+        setPendingOutcome(outcome);
+        setShowLockHint(true);
+        setBusy(false);
+        return;
+      }
+      goToAlternatives(outcome);
+    })();
+  };
+
+  const dismissLockHint = () => {
+    if (pendingOutcome) {
+      goToAlternatives(pendingOutcome);
+    }
   };
 
   return (
@@ -53,12 +81,25 @@ export default function SessionOutcomeScreen() {
             <Ellipse cx="36" cy="13" rx="9" ry="5" fill={theme.colors.primary} opacity={0.28} />
           </Svg>
         </View>
-        <AppText style={styles.title}>{t('session.outcome')}</AppText>
-        <View style={styles.list}>
-          <SupportCard title={t('session.better')} onPress={() => chooseOutcome('better')} />
-          <SupportCard title={t('session.same')} onPress={() => chooseOutcome('same')} />
-          <SupportCard title={t('session.worse')} onPress={() => chooseOutcome('worse')} />
-        </View>
+        {showLockHint ? (
+          <View style={styles.list}>
+            <SupportCard
+              title={t('session.lockScreenHint')}
+              body={t('session.lockScreenHintDismiss')}
+              accessibilityHint={t('session.lockScreenHintDismissHint')}
+              onPress={dismissLockHint}
+            />
+          </View>
+        ) : (
+          <>
+            <AppText style={styles.title}>{t('session.outcome')}</AppText>
+            <View style={styles.list}>
+              <SupportCard title={t('session.better')} onPress={() => chooseOutcome('better')} />
+              <SupportCard title={t('session.same')} onPress={() => chooseOutcome('same')} />
+              <SupportCard title={t('session.worse')} onPress={() => chooseOutcome('worse')} />
+            </View>
+          </>
+        )}
       </ScreenContainer>
     </View>
   );

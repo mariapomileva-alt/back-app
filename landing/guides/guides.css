@@ -294,6 +294,24 @@ h1 {
   font-weight: 600;
 }
 
+.guide-updated,
+.guide-reviewer {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.guide-app-close {
+  margin: 44px 0 0;
+  padding: 28px 0 0;
+  border-top: 1px solid var(--divider);
+}
+
+.guide-app-close p {
+  margin: 0 0 18px;
+  color: var(--grove);
+}
+
 .guide-art {
   display: grid;
   min-height: 250px;

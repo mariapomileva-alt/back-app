@@ -6,7 +6,9 @@ Each article must follow `EDITORIAL_POLICY.md`, use a calm original natural-text
 | --- | --- | --- | --- |
 | BG05 | Oct 21 | What can I prepare when I feel calm? | Create a small, editable support plan without turning it into homework. |
 | BG06 | Oct 23 | What can I do when panic interrupts the night? | Offer low-stimulation choices and a clear escalation route. |
-| BG07 | Oct 26 | What can I do in public without drawing attention? | Present discreet, optional ways to orient and get space. |
+| BG07 | Oct 26 | What can I do in public without drawing attention? | Present discreet, optional ways to orient and get space. Draft is queued for review; do not publish without owner approval. |
+| BG13 | Nov 9 | How can I help someone having a panic attack? | For a partner or friend: consent, presence, and urgent-help boundaries. Draft queued for review. |
+| BG14 | Nov 11 | What if a panic attack starts on a plane? | Quiet seat-level options, crew help, and no medication advice. Draft queued for review. |
 | BG08 | Oct 28 | What if I cannot choose a coping tool? | Reduce the decision to one smallest available action. |
 | BG09 | Oct 30 | How can I help someone without taking control? | Give consent-based language, practical presence, and urgent-help boundaries. |
 | BG10 | Nov 2 | When should I look for more help? | Explain life-impact and worsening symptoms without diagnosing. |

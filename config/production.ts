@@ -15,13 +15,11 @@ export const productionConfig = {
   revenueCatIosApiKey: null as string | null,
   revenueCatAndroidApiKey: null as string | null,
 
-  // TODO (S3): App Store / Play product identifiers — do not invent IDs in repo.
-  // Planned Back Plus reference pricing (EUR, website planning only): see config/backPlus.ts.
-  // Display prices only from store / RevenueCat Offerings in app UI.
-  annualProductId: null as string | null,
-  // TODO (S3): monthly product id if monthly plan is offered.
-  monthlyProductId: null as string | null,
-  entitlementId: 'back_annual',
+  // Product identifiers are prepared. Purchases stay off until subscriptionsPubliclyAvailable is true.
+  // Display prices only from StoreKit / RevenueCat Offerings. Never hardcode live prices in UI.
+  annualProductId: 'app.back.selfhelp.plus.annual',
+  monthlyProductId: 'app.back.selfhelp.plus.monthly',
+  entitlementId: 'back_plus',
 
   // TODO: replace with the live Terms of Use URL before store release.
   // In-app Terms: app/settings/terms.tsx. Do not invent a domain.

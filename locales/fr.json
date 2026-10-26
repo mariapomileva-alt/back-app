@@ -123,7 +123,10 @@
     "emergency": "Assistance supplémentaire",
     "returnTools": "Retour aux outils",
     "tryElse": "Essayez autre chose",
-    "tryElseHint": "Choisissez un autre type de support"
+    "tryElseHint": "Choisissez un autre type de support",
+    "lockScreenHint": "Ajoutez Back à votre écran de verrouillage, pour que la prochaine fois ce soit à un geste",
+    "lockScreenHintDismiss": "OK",
+    "lockScreenHintDismissHint": "Masque cette note. Rien n’est envoyé."
   },
   "extraSupport": {
     "title": "Assistance supplémentaire",
@@ -163,7 +166,10 @@
     "save": "Sauvegarder",
     "clear": "Supprimer de cet appareil",
     "change": "Changer cette personne",
-    "localNote": "Rien ici n'est envoyé à Back ou à quelqu'un d'autre."
+    "localNote": "Rien ici n'est envoyé à Back ou à quelqu'un d'autre.",
+    "tellThem": "Parle-leur de Back",
+    "tellThemHint": "Ouvre la feuille de partage. Rien n'est envoyé tant que tu n'as pas choisi où.",
+    "tellThemMessage": "Je t'ai ajouté comme ma personne dans Back, une petite app que j'utilise quand la panique monte. Si j'appelle, tu n'as rien à réparer. Voici ce qui aide : {url}"
   },
   "exercise": {
     "progress": "{actuel} sur {total}",
@@ -436,12 +442,12 @@
     "headline": "Restez à proximité",
     "headlineActive": "Retour Plus est actif",
     "headlineExpired": "Votre accès Back Plus est terminé",
-    "intro": "Six outils simples pour les moments difficiles : privés, hors ligne et prêts quand vous en avez besoin. \n\nEssayez tout gratuitement pendant 7 jours avec le forfait annuel lorsque vous êtes éligible. Après l'essai, un abonnement mensuel ou annuel actif est requis pour utiliser Respirer, Distraire, Sol, Bouger, Écouter et Lire.",
-    "introPreparing": "Back Plus est en préparation. \n\nBack comprendra un essai de 7 jours avec le forfait annuel, suivi d'un abonnement mensuel ou annuel. Les prix finaux et les détails du renouvellement apparaîtront dans l'App Store ou Google Play avant l'achat. \n\nIl n’y a rien à acheter jusqu’à la sortie de Back Plus.",
+    "intro": "Six simple tools for difficult moments — private, offline and ready whenever you need them.\n\nBreathe and Listen are always free. Back Plus adds Distract, Ground, Move, Read, patterns and themes.\n\nTry Back Plus free for 7 days with the annual plan when you are eligible.",
+    "introPreparing": "Back Plus is being prepared.\n\nBreathe and Listen stay free. Back Plus will add Distract, Ground, Move, Read, patterns and themes, with a 7-day trial on the annual plan. Final prices and renewal details will appear in the App Store or Google Play before purchase.\n\nThere is nothing to buy until Back Plus is released.",
     "introTrialActive": "Votre essai de 7 jours est actif sur cet appareil. Merci d'avoir essayé Back Plus.",
     "introAnnualActive": "Votre forfait annuel Back Plus est actif sur cet appareil. Merci de soutenir Back.",
     "introMonthlyActive": "Votre forfait mensuel Back Plus est actif sur cet appareil. Merci de soutenir Back.",
-    "introExpired": "Choisissez un forfait pour continuer à utiliser les six outils Back ou restaurez un achat antérieur. \n\nLes informations d'urgence, l'assistance supplémentaire et Appeler ma personne sont toujours disponibles.",
+    "introExpired": "Breathe and Listen stay free. Choose a plan to add Distract, Ground, Move, Read, patterns and themes, or restore an earlier purchase.\n\nEmergency information, Extra Support and Call my person are still available.",
     "statusTrialEnds": "L'essai se termine le {date}",
     "statusAnnualRenews": "Renouvelle {date}",
     "statusMonthlyRenews": "Renouvelle {date}",
@@ -472,7 +478,7 @@
     "linkTerms": "Termes",
     "linkSubscriptions": "Abonnements sur le web",
     "benefits": {
-      "sixTools": "Respirez, distrayez, ancrez-vous, bougez, écoutez et lisez",
+      "sixTools": "Distract, Ground, Move, Read, patterns and themes",
       "offlineSounds": "La collection complète de sons hors ligne",
       "allExercises": "Tous les exercices de respiration, d’ancrage, de mouvement et d’attention",
       "readExperience": "L’expérience de lecture complète",

@@ -123,7 +123,10 @@
     "emergency": "Extra ondersteuning",
     "returnTools": "Terug naar gereedschap",
     "tryElse": "Probeer iets anders",
-    "tryElseHint": "Kies voor een ander soort ondersteuning"
+    "tryElseHint": "Kies voor een ander soort ondersteuning",
+    "lockScreenHint": "Zet Back op je toegangsscherm, zodat het de volgende keer één tik verwijderd is",
+    "lockScreenHintDismiss": "OK",
+    "lockScreenHintDismissHint": "Verbergt deze notitie. Er wordt niets verzonden."
   },
   "extraSupport": {
     "title": "Extra ondersteuning",
@@ -163,7 +166,10 @@
     "save": "Redden",
     "clear": "Verwijderen van dit apparaat",
     "change": "Wijzig deze persoon",
-    "localNote": "Niets hier wordt naar Back of iemand anders verzonden."
+    "localNote": "Niets hier wordt naar Back of iemand anders verzonden.",
+    "tellThem": "Vertel hen over Back",
+    "tellThemHint": "Opent het deelblad. Er wordt niets verzonden tot je een plek kiest.",
+    "tellThemMessage": "Ik heb je in Back als mijn persoon toegevoegd, een kleine app die ik gebruik als paniek opkomt. Als ik bel, hoef je niets te fiksen. Dit legt uit wat helpt: {url}"
   },
   "exercise": {
     "progress": "{huidig} van {totaal}",
@@ -436,12 +442,12 @@
     "headline": "Houd Back dichtbij",
     "headlineActive": "Terug Plus is actief",
     "headlineExpired": "Uw Back Plus-toegang is beëindigd",
-    "intro": "Zes eenvoudige tools voor moeilijke momenten: privé, offline en klaar wanneer je ze nodig hebt. \n\nProbeer alles 7 dagen gratis met het jaarabonnement als u daarvoor in aanmerking komt. Na de proefperiode is een actief maand- of jaarabonnement vereist om Breathe, Distract, Ground, Move, Listen en Read te gebruiken.",
-    "introPreparing": "Back Plus wordt voorbereid. \n\nBack bevat een proefperiode van 7 dagen met het jaarabonnement, gevolgd door een maand- of jaarabonnement. De definitieve prijzen en verlengingsdetails verschijnen vóór aankoop in de App Store of Google Play. \n\nEr is niets te kopen totdat Back Plus wordt uitgebracht.",
+    "intro": "Six simple tools for difficult moments — private, offline and ready whenever you need them.\n\nBreathe and Listen are always free. Back Plus adds Distract, Ground, Move, Read, patterns and themes.\n\nTry Back Plus free for 7 days with the annual plan when you are eligible.",
+    "introPreparing": "Back Plus is being prepared.\n\nBreathe and Listen stay free. Back Plus will add Distract, Ground, Move, Read, patterns and themes, with a 7-day trial on the annual plan. Final prices and renewal details will appear in the App Store or Google Play before purchase.\n\nThere is nothing to buy until Back Plus is released.",
     "introTrialActive": "Uw proefperiode van zeven dagen is actief op dit apparaat. Bedankt dat u Back Plus probeert.",
     "introAnnualActive": "Uw jaarabonnement Back Plus is actief op dit toestel. Bedankt voor het steunen van Back.",
     "introMonthlyActive": "Uw maandelijkse Back Plus-abonnement is actief op dit apparaat. Bedankt voor het steunen van Back.",
-    "introExpired": "Kies een abonnement om de zes Back-tools te blijven gebruiken, of herstel een eerdere aankoop. \n\nNoodinformatie, Extra Ondersteuning en Bel mijn persoon zijn nog steeds beschikbaar.",
+    "introExpired": "Breathe and Listen stay free. Choose a plan to add Distract, Ground, Move, Read, patterns and themes, or restore an earlier purchase.\n\nEmergency information, Extra Support and Call my person are still available.",
     "statusTrialEnds": "Proefperiode eindigt op {date}",
     "statusAnnualRenews": "Verlengt {datum}",
     "statusMonthlyRenews": "Verlengt {datum}",
@@ -472,7 +478,7 @@
     "linkTerms": "Voorwaarden",
     "linkSubscriptions": "Abonnementen op internet",
     "benefits": {
-      "sixTools": "Ademen, afleiden, aarden, bewegen, luisteren en lezen",
+      "sixTools": "Distract, Ground, Move, Read, patterns and themes",
       "offlineSounds": "De complete offline geluidscollectie",
       "allExercises": "Alle ademhalings-, aardings-, bewegings- en aandachtsoefeningen",
       "readExperience": "De complete leeservaring",

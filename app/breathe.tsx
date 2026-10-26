@@ -18,7 +18,6 @@ import {
 } from '@/features/breathe/patterns';
 import { useBreathCycle } from '@/features/breathe/useBreathCycle';
 import { useBreatheAmbient } from '@/hooks/useBreatheAmbient';
-import { usePaidToolGate } from '@/hooks/usePaidToolGate';
 import { useReduceMotion } from '@/hooks/useReduceMotion';
 import { t } from '@/locales/i18n';
 import { loadLastBreathPattern, saveLastBreathPattern } from '@/storage/preferences';
@@ -32,7 +31,6 @@ const OPEN_SIZE = 320;
 const REDUCE_OPEN_SIZE = 280;
 
 export default function BreatheScreen() {
-  usePaidToolGate();
   const reduceMotion = useReduceMotion();
   const { width, height, fontScale } = useWindowDimensions();
   const compact = height < 700 || fontScale > 1.35;

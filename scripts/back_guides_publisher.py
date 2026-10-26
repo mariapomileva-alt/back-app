@@ -196,16 +196,103 @@ def render_hub(schedule: dict) -> str:
     return HUB_TEMPLATE.read_text(encoding="utf-8").replace("{{GUIDE_CARDS}}", "\n".join(cards))
 
 
+def git_file_date(path: Path, *, first: bool = False) -> str:
+    rel = str(path.relative_to(ROOT))
+    args = ["log", "--format=%cs", "--", rel]
+    if first:
+        args = ["log", "--diff-filter=A", "--format=%cs", "--", rel]
+    lines = [line for line in run_git(*args, check=False).splitlines() if line]
+    if first:
+        return lines[-1] if lines else dt.date.today().isoformat()
+    dirty = run_git("status", "--porcelain", "--", rel, check=False).strip()
+    if dirty:
+        return dt.date.today().isoformat()
+    return lines[0] if lines else dt.date.today().isoformat()
+
+
+def app_store_url(campaign: str) -> str:
+    return f"https://apps.apple.com/app/id6811918141?mt=8&ct={campaign}"
+
+
 def render_article(article: dict) -> str:
     text = source_path(article).read_text(encoding="utf-8")
-    return text.replace('content="noindex,nofollow"', 'content="index,follow"')
+    text = text.replace('content="noindex,nofollow"', 'content="index,follow"')
+    title = article["title"]
+    slug = article["slug"]
+    source = source_path(article)
+    published = git_file_date(source, first=True)
+    modified = git_file_date(source)
+    text = re.sub(r"<title>[^<]*</title>", f"<title>{html.escape(title)} — Back Guides</title>", text, count=1)
+    if re.search(r'<meta property="og:title"', text):
+        text = re.sub(
+            r'<meta property="og:title" content="[^"]*"\s*/?>',
+            f'<meta property="og:title" content="{html.escape(title)}" />',
+            text,
+            count=1,
+        )
+    else:
+        text = text.replace(
+            "</title>",
+            "</title>\n    "
+            f'<meta property="og:title" content="{html.escape(title)}" />\n    '
+            '<meta property="og:type" content="article" />',
+            1,
+        )
+    json_ld = {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": title,
+        "datePublished": published,
+        "dateModified": modified,
+        "author": {"@type": "Organization", "name": "Back"},
+    }
+    json_ld_tag = f'<script type="application/ld+json">{json.dumps(json_ld, ensure_ascii=False)}</script>'
+    if "application/ld+json" in text:
+        text = re.sub(r'<script type="application/ld\+json">.*?</script>', json_ld_tag, text, count=1, flags=re.S)
+    else:
+        text = text.replace("</title>", f"</title>\n    {json_ld_tag}", 1)
+    text = re.sub(r"<h1(?:\s[^>]*)?>.*?</h1>", f"<h1>{html.escape(title)}</h1>", text, count=1, flags=re.S)
+    if "guide-updated" not in text:
+        text = re.sub(
+            r"(<h1(?:\s[^>]*)?>.*?</h1>)",
+            rf'\1\n      <p class="guide-updated">Updated {html.escape(modified)}</p>',
+            text,
+            count=1,
+            flags=re.S,
+        )
+    # TODO(Maria): set article["reviewed_by"] to a real reviewer name before rendering a byline.
+    reviewer = (article.get("reviewed_by") or "").strip()
+    if reviewer and "guide-reviewer" not in text:
+        text = re.sub(
+            r'(<p class="guide-updated">.*?</p>)',
+            rf'\1\n      <p class="guide-reviewer">Reviewed by {html.escape(reviewer)}</p>',
+            text,
+            count=1,
+            flags=re.S,
+        )
+    if "guide-app-close" not in text:
+        store = app_store_url(f"guide_{slug}")
+        closing = (
+            '<section class="guide-download guide-app-close">'
+            "<p>Back works offline and needs no account. Open it when the next minute feels hard.</p>"
+            f'<a class="btn forest" href="{html.escape(store)}" aria-label="Download Back on the App Store">'
+            "Download on the App Store</a>"
+            "</section>"
+        )
+        text = text.replace("</main>", f"      {closing}\n    </main>")
+    return text
 
 
 def render_sitemap(schedule: dict) -> str:
-    urls = list(BASE_SITEMAP_URLS)
-    urls.extend(f"/guides/{a['slug']}/" for a in schedule["articles"] if a["status"] == "published")
-    nodes = "\n".join(f"  <url><loc>https://backapp.live{path}</loc></url>" for path in urls)
-    return '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + nodes + "\n</urlset>\n"
+    entries = [("/", "landing/index.html"), ("/privacy.html", "landing/privacy.html"), ("/terms.html", "landing/terms.html"), ("/support.html", "landing/support.html"), ("/subscriptions.html", "landing/subscriptions.html"), ("/guides/", "landing/guides/index.html")]
+    for article in schedule["articles"]:
+        if article["status"] == "published":
+            entries.append((f"/guides/{article['slug']}/", article["source_path"]))
+    nodes = []
+    for path, file_path in entries:
+        lastmod = git_file_date(ROOT / file_path) if (ROOT / file_path).exists() else dt.date.today().isoformat()
+        nodes.append(f"  <url><loc>https://backapp.live{path}</loc><lastmod>{lastmod}</lastmod></url>")
+    return '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "\n".join(nodes) + "\n</urlset>\n"
 
 
 def update_landing_nav(text: str) -> str:
@@ -321,6 +408,23 @@ def publish_due(now_override: str | None, execute: bool) -> int:
     return 0
 
 
+def refresh_published() -> int:
+    """Regenerate public HTML for already published guides without a release."""
+    schedule = load_schedule()
+    published = [article for article in schedule["articles"] if article["status"] == "published"]
+    if not published:
+        raise GateError("No published articles to refresh")
+    for article in published:
+        validate_source(article, require_hash=True)
+        destination = GUIDES / article["slug"] / "index.html"
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        destination.write_text(render_article(article), encoding="utf-8")
+    (GUIDES / "index.html").write_text(render_hub(schedule), encoding="utf-8")
+    (LANDING / "sitemap.xml").write_text(render_sitemap(schedule), encoding="utf-8")
+    print(json.dumps({"status": "refreshed", "ids": [article["id"] for article in published]}, indent=2))
+    return 0
+
+
 def publish_approved(article_id: str, execute: bool) -> int:
     """Publish one named owner-approved article outside its normal schedule.
 
@@ -363,6 +467,7 @@ def main() -> int:
     manual = sub.add_parser("publish-approved")
     manual.add_argument("article_id")
     manual.add_argument("--execute", action="store_true")
+    sub.add_parser("refresh-published")
     for name in ("preflight", "publish-due"):
         command = sub.add_parser(name)
         command.add_argument("--now", help="ISO datetime for a read-only simulation")
@@ -381,6 +486,8 @@ def main() -> int:
             return 0
         if args.command == "publish-approved":
             return publish_approved(args.article_id, args.execute)
+        if args.command == "refresh-published":
+            return refresh_published()
         if args.command == "preflight":
             return preflight(args.now)
         return publish_due(args.now, args.execute)

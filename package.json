@@ -17,6 +17,7 @@
     "locales:draft": "node scripts/generate-draft-localization.mjs"
   },
   "dependencies": {
+    "@bacons/apple-targets": "^5.0.0",
     "@react-native-async-storage/async-storage": "2.2.0",
     "decode-uri-component": "file:vendor/decode-uri-component",
     "expo": "^57.0.22",
@@ -29,6 +30,7 @@
     "expo-router": "^57.0.21",
     "expo-splash-screen": "^57.0.9",
     "expo-status-bar": "~57.0.1",
+    "expo-store-review": "~57.0.3",
     "expo-system-ui": "~57.0.3",
     "playwright": "^1.51.0",
     "react": "19.2.3",
@@ -48,6 +50,7 @@
     "eslint": "^9.39.5",
     "eslint-config-expo": "~57.0.2",
     "google-translate-api-x": "^10.7.2",
+    "qrcode": "^1.5.4",
     "typescript": "~6.0.3",
     "vitest": "^3.2.4"
   },
