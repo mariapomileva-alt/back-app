@@ -13,6 +13,7 @@ import { HomeHeroLine } from '@/components/home/HomeHeroLine';
 import { AppText } from '@/components/typography/AppText';
 import { homeCardBorder } from '@/features/home/surfaces';
 import { homeTools } from '@/features/home/tools';
+import { hasToolAccess } from '@/config/backPlus';
 import { openBackPlusPaywall } from '@/features/subscription/openBackPlusPaywall';
 import { useBackPlusAccess } from '@/features/subscription/useBackPlusAccess';
 import { useHomeFitLayout } from '@/hooks/useHomeFitLayout';
@@ -31,7 +32,7 @@ const toolRows = [
 export default function HomeScreen() {
   const router = useRouter();
   const { theme } = useTheme();
-  const { accessState, hasPaidAccess } = useBackPlusAccess();
+  const { accessState } = useBackPlusAccess();
   const [salutation, setSalutation] = useState<string | null>(null);
   const [showNamePrompt, setShowNamePrompt] = useState(false);
   const homeLayout = useHomeFitLayout(showNamePrompt, Boolean(salutation));
@@ -55,15 +56,15 @@ export default function HomeScreen() {
     }, []),
   );
 
-  const openTool = (href: (typeof homeTools)[number]['href']) => {
+  const openTool = (tool: (typeof homeTools)[number]) => {
     if (accessState === 'loading') {
       return;
     }
-    if (!hasPaidAccess) {
+    if (!hasToolAccess(tool.id, accessState)) {
       openBackPlusPaywall(router);
       return;
     }
-    router.push(href);
+    router.push(tool.href);
   };
 
   return (
@@ -123,7 +124,7 @@ export default function HomeScreen() {
                   label={t(`home.tools.${tool.id}`)}
                   visual={<HomeCardVisual id={tool.id} />}
                   density={homeLayout.cardDensity}
-                  onPress={() => openTool(tool.href)}
+                  onPress={() => openTool(tool)}
                   style={{
                     backgroundColor: theme.colors.surface,
                     borderColor: homeCardBorder(theme),

@@ -10,6 +10,7 @@ import { PaperGrain } from '@/components/home/PaperGrain';
 import { ScreenContainer } from '@/components/layout/ScreenContainer';
 import { ScreenHeader } from '@/components/navigation/ScreenHeader';
 import { AppText } from '@/components/typography/AppText';
+import { hasToolAccess } from '@/config/backPlus';
 import { isHomeToolId } from '@/features/session/activeSession';
 import { maybeRequestReview } from '@/features/session/reviewPrompt';
 import { shareBack } from '@/features/session/shareBack';
@@ -32,7 +33,7 @@ export default function SessionAlternativesScreen() {
   }>();
   const currentTool = isHomeToolId(tool) ? tool : undefined;
   const intentValue = Array.isArray(intent) ? intent[0] : intent;
-  const { hasPaidAccess } = useBackPlusAccess();
+  const { accessState } = useBackPlusAccess();
   const suggestions = alternativesForIntent(intentValue, currentTool);
 
   useEffect(() => {
@@ -45,12 +46,12 @@ export default function SessionAlternativesScreen() {
     return () => clearTimeout(timer);
   }, [feeling]);
 
-  const openSuggestion = (href: (typeof suggestions)[number]['href']) => {
-    if (!hasPaidAccess) {
+  const openSuggestion = (tool: (typeof suggestions)[number]) => {
+    if (!hasToolAccess(tool.id, accessState)) {
       openBackPlusPaywall(router);
       return;
     }
-    router.replace(href);
+    router.replace(tool.href);
   };
 
   const title =
@@ -100,7 +101,7 @@ export default function SessionAlternativesScreen() {
                 key={tool.id}
                 label={t(`home.tools.${tool.id}`)}
                 icon={<ToolIcon name={tool.id} size={28} />}
-                onPress={() => openSuggestion(tool.href)}
+                onPress={() => openSuggestion(tool)}
               />
             ))}
           </View>

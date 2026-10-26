@@ -2,9 +2,9 @@
  * Back Plus — subscription model (information + access boundaries). No purchase activation here (S3).
  *
  * Access model:
- * - Paid: Breathe, Distract, Ground, Move, Listen, Read, My patterns, themes, and related content
+ * - Always free: Breathe and Listen, so help in a panic moment is never locked.
+ * - Paid: Distract, Ground, Move, Read, My patterns, themes, and related content
  *   require active trial OR active subscription (verified via store / RevenueCat when S3 is live).
- * - No permanent free product tier for core tools.
  *
  * Ethical rules (do not bypass in UI or copy):
  * - Never interrupt an active exercise with a paywall; finish the session first.
@@ -46,15 +46,18 @@ export const devPreviewActiveSubscription = false;
 
 export const backPlusProductName = 'Back Plus';
 
-/** Core tools and experience surfaces that require trial or subscription. */
+/** Tools that stay reachable in every entitlement state. */
+export const freeForeverToolIds = ['breathe', 'listen'] as const;
+
+/** Core tools that require trial or subscription. Breathe and Listen stay free. */
 export const paidToolIds = [
-  'breathe',
   'distract',
   'ground',
   'move',
-  'listen',
   'read',
 ] as const;
+
+export type FreeForeverToolId = (typeof freeForeverToolIds)[number];
 
 export type PaidToolId = (typeof paidToolIds)[number];
 
@@ -113,8 +116,10 @@ export const backPlusBenefits: BackPlusBenefit[] = [
  * App UI must use store-localized prices when S3 is enabled.
  */
 export const backPlusPlannedPricingReference = {
-  monthlyEur: 2.99,
-  annualEur: 19.99,
+  // Planned store prices to test, not shown in the app. Paywall must use StoreKit/RevenueCat.
+  monthlyEur: 4.99,
+  annualEur: 29.99,
+  annualTrialDays: 7,
   /** Shown on static site when store data is unavailable (State A). */
   regionalVariationNote:
     'Prices vary by region and currency. Final prices appear in the App Store or Google Play when Back Plus is available.',
@@ -150,6 +155,25 @@ export function hasConfiguredStoreProducts(): boolean {
 
 export function hasPaidToolAccess(state: BackPlusAccessState): boolean {
   return state === 'trialActive' || state === 'subscribed';
+}
+
+export function isFreeForeverTool(toolId: string): boolean {
+  return (freeForeverToolIds as readonly string[]).includes(toolId);
+}
+
+export function isPaidTool(toolId: string): boolean {
+  return (paidToolIds as readonly string[]).includes(toolId);
+}
+
+/** Breathe and Listen stay open in every entitlement state, including none and expired. */
+export function hasToolAccess(toolId: string, state: BackPlusAccessState): boolean {
+  if (isFreeForeverTool(toolId)) {
+    return true;
+  }
+  if (state === 'unavailable' || state === 'loading') {
+    return true;
+  }
+  return hasPaidToolAccess(state);
 }
 
 /** @deprecated use useBackPlusAccess */
