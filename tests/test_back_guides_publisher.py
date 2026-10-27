@@ -79,10 +79,10 @@ class BackGuidesPublisherTests(unittest.TestCase):
 
     def test_article_enhancement_has_visible_provenance_schema_and_download(self):
         item = publisher.find_article(publisher.load_schedule(), "BG07")
-        source = (ROOT / item["source_path"]).read_text(encoding="utf-8")
-        enhanced = publisher.enhance_article(item, source.replace('content="noindex,nofollow"', 'content="index,follow"'))
+        enhanced = publisher.render_article(item)
         self.assertIn('Written by <a href="../editorial-policy/">Back Guides Editorial Team</a>', enhanced)
-        self.assertIn('data-back-guide-schema', enhanced)
+        self.assertIn('application/ld+json', enhanced)
+        self.assertIn('"name": "Back Guides Editorial Team"', enhanced)
         self.assertIn('Download on the App Store', enhanced)
         self.assertIn(item["title"], enhanced)
 
@@ -158,7 +158,7 @@ class BackGuidesPublisherTests(unittest.TestCase):
         self.assertIn('content="index,follow"', html)
         self.assertIn('"@type": "Article"', html)
         self.assertIn('"headline": "Panic Attack at Night: What to Do in the Next Minute"', html)
-        self.assertIn('"name": "Back"', html)
+        self.assertIn('"name": "Back Guides Editorial Team"', html)
         self.assertRegex(html, r'class="guide-updated">Updated \d{4}-\d{2}-\d{2}</p>')
         self.assertNotIn("Reviewed by", html)
         self.assertIn("Back works offline and needs no account. Open it when the next minute feels hard.", html)

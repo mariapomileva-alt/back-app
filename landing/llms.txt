@@ -21,6 +21,7 @@ This project does not list a Google Play URL.
 
 ## Other pages
 
+- https://backapp.live/guides/editorial-policy/ — How Back Guides are written, sourced, and updated.
 - https://backapp.live/
 - https://backapp.live/privacy.html
 - https://backapp.live/terms.html

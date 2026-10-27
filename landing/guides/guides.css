@@ -295,10 +295,19 @@ h1 {
 }
 
 .guide-updated,
-.guide-reviewer {
+.guide-reviewer,
+.guide-byline {
   margin: 8px 0 0;
   color: var(--muted);
   font-size: 14px;
+}
+
+.guide-byline {
+  font-weight: 600;
+}
+
+.guide-byline a {
+  color: var(--forest);
 }
 
 .guide-app-close {

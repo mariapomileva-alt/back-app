@@ -26,6 +26,7 @@ PUBLISH_BRANCH = "back-guides-release"
 CONTENT = ROOT / "content" / "back_guides"
 SCHEDULE_PATH = CONTENT / "publication_schedule.json"
 HUB_TEMPLATE = CONTENT / "hub_template.html"
+EDITORIAL_TEMPLATE = CONTENT / "editorial_policy_page.html"
 LANDING = ROOT / "landing"
 GUIDES = LANDING / "guides"
 STATE_DIR = ROOT / "var" / "back_guides_publisher"
@@ -40,10 +41,13 @@ ALLOWED_RELEASE_PATHS = (
     "landing/index.html",
     "landing/sitemap.xml",
     "landing/robots.txt",
+    "landing/llms.txt",
 )
 BASE_SITEMAP_URLS = ("/", "/privacy.html", "/terms.html", "/support.html", "/subscriptions.html", "/guides/")
 TITLE_SUFFIX = " | Back"
 TITLE_LIMIT = 60
+AUTHOR_NAME = "Back Guides Editorial Team"
+EDITORIAL_POLICY_URL = "https://backapp.live/guides/editorial-policy/"
 BANNED_CLAIMS = (
     r"\bcure[sd]?\b",
     r"\bguarantee[sd]?\b",
@@ -299,7 +303,7 @@ def render_article(article: dict) -> str:
         "headline": title,
         "datePublished": published,
         "dateModified": modified,
-        "author": {"@type": "Organization", "name": "Back"},
+        "author": {"@type": "Organization", "name": AUTHOR_NAME, "url": EDITORIAL_POLICY_URL},
     }
     json_ld_tag = f'<script type="application/ld+json">{json.dumps(json_ld, ensure_ascii=False)}</script>'
     if "application/ld+json" in text:
@@ -307,6 +311,14 @@ def render_article(article: dict) -> str:
     else:
         text = text.replace("</title>", f"</title>\n    {json_ld_tag}", 1)
     text = re.sub(r"<h1(?:\s[^>]*)?>.*?</h1>", f"<h1>{html_text(title)}</h1>", text, count=1, flags=re.S)
+    if "guide-byline" not in text:
+        text = re.sub(
+            r"(<h1(?:\s[^>]*)?>.*?</h1>)",
+            rf'\1\n      <p class="guide-byline">Written by <a href="../editorial-policy/">{AUTHOR_NAME}</a></p>',
+            text,
+            count=1,
+            flags=re.S,
+        )
     if "guide-updated" not in text:
         text = re.sub(
             r"(<h1(?:\s[^>]*)?>.*?</h1>)",
@@ -343,6 +355,7 @@ def render_sitemap(schedule: dict) -> str:
     for article in schedule["articles"]:
         if article["status"] == "published":
             entries.append((f"/guides/{article['slug']}/", article["source_path"]))
+    entries.append(("/guides/editorial-policy/", "content/back_guides/editorial_policy_page.html"))
     nodes = []
     for path, file_path in entries:
         lastmod = git_file_date(ROOT / file_path) if (ROOT / file_path).exists() else dt.date.today().isoformat()
@@ -366,11 +379,14 @@ def write_public_release(schedule: dict, article: dict) -> list[Path]:
     destination.parent.mkdir(parents=True, exist_ok=True)
     destination.write_text(render_article(article), encoding="utf-8")
     (GUIDES / "index.html").write_text(render_hub(schedule), encoding="utf-8")
+    policy_destination = GUIDES / "editorial-policy" / "index.html"
+    policy_destination.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copyfile(EDITORIAL_TEMPLATE, policy_destination)
     (LANDING / "sitemap.xml").write_text(render_sitemap(schedule), encoding="utf-8")
     (LANDING / "robots.txt").write_text("User-agent: *\nAllow: /\nSitemap: https://backapp.live/sitemap.xml\n", encoding="utf-8")
     landing_index = LANDING / "index.html"
     landing_index.write_text(update_landing_nav(landing_index.read_text(encoding="utf-8")), encoding="utf-8")
-    return [destination, GUIDES / "index.html", LANDING / "sitemap.xml", LANDING / "robots.txt", landing_index, SCHEDULE_PATH]
+    return [destination, GUIDES / "index.html", policy_destination, LANDING / "sitemap.xml", LANDING / "robots.txt", landing_index, SCHEDULE_PATH]
 
 
 def relative(paths: list[Path]) -> list[str]:
@@ -475,6 +491,9 @@ def refresh_published() -> int:
         destination.parent.mkdir(parents=True, exist_ok=True)
         destination.write_text(render_article(article), encoding="utf-8")
     (GUIDES / "index.html").write_text(render_hub(schedule), encoding="utf-8")
+    policy_destination = GUIDES / "editorial-policy" / "index.html"
+    policy_destination.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copyfile(EDITORIAL_TEMPLATE, policy_destination)
     (LANDING / "sitemap.xml").write_text(render_sitemap(schedule), encoding="utf-8")
     print(json.dumps({"status": "refreshed", "ids": [article["id"] for article in published]}, indent=2))
     return 0
