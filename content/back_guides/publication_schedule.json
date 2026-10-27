@@ -119,9 +119,9 @@
       "publish_at": "2026-10-28T15:00:00+02:00",
       "slug": "when-you-cannot-decide-what-to-do",
       "title": "When You Cannot Decide What to Do: Start Smaller",
-      "source_path": null,
-      "source_sha256": null,
-      "status": "planned",
+      "source_path": "content/back_guides/staged/when-you-cannot-decide-what-to-do/index.html",
+      "source_sha256": "6e643405b945704709ce0cd192faa453bfd0c5e6edeb92568fb65c3eb384a8a1",
+      "status": "ready_for_review",
       "approvals": {
         "owner": false,
         "product_editor": false
