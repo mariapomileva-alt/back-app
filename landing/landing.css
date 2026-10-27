@@ -318,8 +318,34 @@ button {
 }
 
 @media (min-width: 900px) {
+  .hero-cta {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      "actions qr"
+      "proof qr";
+    align-items: center;
+    column-gap: 24px;
+    row-gap: 8px;
+  }
+
+  .hero-cta-main {
+    display: contents;
+  }
+
+  .hero-actions {
+    grid-area: actions;
+  }
+
+  .quiet-proof {
+    grid-area: proof;
+    margin-top: 0;
+  }
+
   .hero-qr {
     display: block;
+    grid-area: qr;
+    margin: 0;
   }
 }
 
@@ -376,12 +402,23 @@ button {
   line-height: 1.45;
 }
 
+.hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 18px 28px;
+  margin-top: 26px;
+}
+
+.hero-cta-main {
+  min-width: 0;
+}
+
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 14px 20px;
-  margin-top: 26px;
 }
 
 .hero-actions .btn {

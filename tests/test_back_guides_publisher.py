@@ -148,6 +148,25 @@ class BackGuidesPublisherTests(unittest.TestCase):
         self.assertNotIn("Reviewed by", html)
         self.assertIn("Back works offline and needs no account. Open it when the next minute feels hard.", html)
         self.assertIn("https://apps.apple.com/app/id6811918141?mt=8&amp;ct=guide_panic-at-night-next-minute-plan", html)
+        self.assertIn('property="og:description"', html)
+        self.assertIn('name="twitter:card" content="summary"', html)
+        self.assertIn("<title>Panic Attack at Night: What to Do in the Next Minute | Back</title>", html)
+
+    def test_page_titles_drop_suffix_when_they_would_exceed_sixty(self):
+        self.assertEqual(publisher.page_title("Short Title"), "Short Title | Back")
+        long_title = "Can't Breathe During a Panic Attack? You Don't Have to Force It"
+        self.assertEqual(publisher.page_title(long_title), long_title)
+        html = publisher.render_article(publisher.find_article(publisher.load_schedule(), "BG02"))
+        self.assertIn("<title>Can't Breathe During a Panic Attack? You Don't Have to Force It</title>", html)
+        self.assertNotIn("Can&#x27;t", html)
+        self.assertIn('"headline": "Can\'t Breathe During a Panic Attack? You Don\'t Have to Force It"', html)
+
+    def test_public_panic_guide_uses_the_search_title(self):
+        article = publisher.find_article(publisher.load_schedule(), "BG07")
+        self.assertEqual(article["title"], "Panic Attack in Public: Quiet Ways to Get Through It")
+        html = publisher.render_article(article)
+        self.assertIn("<h1>Panic Attack in Public: Quiet Ways to Get Through It</h1>", html)
+        self.assertIn('"headline": "Panic Attack in Public: Quiet Ways to Get Through It"', html)
 
     def test_reviewer_byline_stays_empty_until_configured(self):
         article = dict(publisher.find_article(publisher.load_schedule(), "BG01"))
