@@ -42,6 +42,8 @@ ALLOWED_RELEASE_PATHS = (
     "landing/robots.txt",
 )
 BASE_SITEMAP_URLS = ("/", "/privacy.html", "/terms.html", "/support.html", "/subscriptions.html", "/guides/")
+TITLE_SUFFIX = " | Back"
+TITLE_LIMIT = 60
 BANNED_CLAIMS = (
     r"\bcure[sd]?\b",
     r"\bguarantee[sd]?\b",
@@ -57,6 +59,31 @@ class GateError(RuntimeError):
 
 def sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def html_text(value: str) -> str:
+    return html.escape(value, quote=False)
+
+
+def html_attr(value: str) -> str:
+    return (
+        value.replace("&", "&amp;")
+        .replace("<", "&lt;")
+        .replace(">", "&gt;")
+        .replace('"', "&quot;")
+    )
+
+
+def page_title(title: str) -> str:
+    if len(title) + len(TITLE_SUFFIX) > TITLE_LIMIT:
+        return title
+    return f"{title}{TITLE_SUFFIX}"
+
+
+def upsert_meta(text: str, tag: str, pattern: str) -> str:
+    if re.search(pattern, text, flags=re.I):
+        return re.sub(pattern, tag, text, count=1, flags=re.I)
+    return text.replace("</title>", f"</title>\n    {tag}", 1)
 
 
 def load_schedule() -> dict:
@@ -175,9 +202,13 @@ def check_git_clean() -> None:
         raise GateError("Working tree is not clean outside allowed local paths: " + "; ".join(unexpected))
 
 
-def read_meta_description(text: str) -> str:
+def raw_meta_description(text: str) -> str:
     match = re.search(r'<meta name="description" content="([^\"]+)"', text, flags=re.I)
-    return html.escape(match.group(1) if match else "Read this Back Guide.")
+    return match.group(1) if match else "Read this Back Guide."
+
+
+def read_meta_description(text: str) -> str:
+    return html.escape(raw_meta_description(text))
 
 
 def render_hub(schedule: dict) -> str:
@@ -222,22 +253,46 @@ def render_article(article: dict) -> str:
     source = source_path(article)
     published = git_file_date(source, first=True)
     modified = git_file_date(source)
-    text = re.sub(r"<title>[^<]*</title>", f"<title>{html.escape(title)} — Back Guides</title>", text, count=1)
-    if re.search(r'<meta property="og:title"', text):
-        text = re.sub(
-            r'<meta property="og:title" content="[^"]*"\s*/?>',
-            f'<meta property="og:title" content="{html.escape(title)}" />',
-            text,
-            count=1,
-        )
-    else:
-        text = text.replace(
-            "</title>",
-            "</title>\n    "
-            f'<meta property="og:title" content="{html.escape(title)}" />\n    '
-            '<meta property="og:type" content="article" />',
-            1,
-        )
+    description = raw_meta_description(text)
+    if description == "Read this Back Guide.":
+        description = title
+    canonical = f"https://backapp.live/guides/{slug}/"
+    text = re.sub(r"<title>[^<]*</title>", f"<title>{html_text(page_title(title))}</title>", text, count=1)
+    text = upsert_meta(
+        text,
+        f'<meta property="og:title" content="{html_attr(title)}" />',
+        r'<meta property="og:title" content="[^"]*"\s*/?>',
+    )
+    text = upsert_meta(
+        text,
+        '<meta property="og:type" content="article" />',
+        r'<meta property="og:type" content="[^"]*"\s*/?>',
+    )
+    text = upsert_meta(
+        text,
+        f'<meta property="og:url" content="{html_attr(canonical)}" />',
+        r'<meta property="og:url" content="[^"]*"\s*/?>',
+    )
+    text = upsert_meta(
+        text,
+        f'<meta property="og:description" content="{html_attr(description)}" />',
+        r'<meta property="og:description" content="[^"]*"\s*/?>',
+    )
+    text = upsert_meta(
+        text,
+        '<meta name="twitter:card" content="summary" />',
+        r'<meta name="twitter:card" content="[^"]*"\s*/?>',
+    )
+    text = upsert_meta(
+        text,
+        f'<meta name="twitter:title" content="{html_attr(title)}" />',
+        r'<meta name="twitter:title" content="[^"]*"\s*/?>',
+    )
+    text = upsert_meta(
+        text,
+        f'<meta name="twitter:description" content="{html_attr(description)}" />',
+        r'<meta name="twitter:description" content="[^"]*"\s*/?>',
+    )
     json_ld = {
         "@context": "https://schema.org",
         "@type": "Article",
@@ -251,7 +306,7 @@ def render_article(article: dict) -> str:
         text = re.sub(r'<script type="application/ld\+json">.*?</script>', json_ld_tag, text, count=1, flags=re.S)
     else:
         text = text.replace("</title>", f"</title>\n    {json_ld_tag}", 1)
-    text = re.sub(r"<h1(?:\s[^>]*)?>.*?</h1>", f"<h1>{html.escape(title)}</h1>", text, count=1, flags=re.S)
+    text = re.sub(r"<h1(?:\s[^>]*)?>.*?</h1>", f"<h1>{html_text(title)}</h1>", text, count=1, flags=re.S)
     if "guide-updated" not in text:
         text = re.sub(
             r"(<h1(?:\s[^>]*)?>.*?</h1>)",
