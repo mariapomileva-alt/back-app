@@ -77,6 +77,21 @@ class BackGuidesPublisherTests(unittest.TestCase):
         self.assertEqual(base64.b64decode(data), (ROOT / "landing/guides/assets/bg01-steady-object-v1.png").read_bytes())
         self.assertEqual(before, source.read_bytes())
 
+    def test_article_enhancement_has_visible_provenance_schema_and_download(self):
+        item = publisher.find_article(publisher.load_schedule(), "BG07")
+        source = (ROOT / item["source_path"]).read_text(encoding="utf-8")
+        enhanced = publisher.enhance_article(item, source.replace('content="noindex,nofollow"', 'content="index,follow"'))
+        self.assertIn('Written by <a href="../editorial-policy/">Back Guides Editorial Team</a>', enhanced)
+        self.assertIn('data-back-guide-schema', enhanced)
+        self.assertIn('Download on the App Store', enhanced)
+        self.assertIn(item["title"], enhanced)
+
+    def test_sitemap_includes_truthful_lastmod_for_published_guides(self):
+        schedule = publisher.load_schedule()
+        sitemap = publisher.render_sitemap(schedule)
+        self.assertIn("/guides/editorial-policy/", sitemap)
+        self.assertIn("<lastmod>", sitemap)
+
     def test_telegram_replies_never_mutate_publication_approval(self):
         import json
         response = unittest.mock.MagicMock()
