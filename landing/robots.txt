@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
 Sitemap: https://backapp.live/sitemap.xml
-# https://backapp.live/llms.txt
