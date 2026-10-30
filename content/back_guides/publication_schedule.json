@@ -132,9 +132,9 @@
       "publish_at": "2026-10-30T15:00:00+02:00",
       "slug": "how-to-support-someone-overwhelmed",
       "title": "How to Support Someone Who Feels Overwhelmed",
-      "source_path": null,
-      "source_sha256": null,
-      "status": "planned",
+      "source_path": "content/back_guides/staged/how-to-support-someone-overwhelmed/index.html",
+      "source_sha256": "30d00558036156447c68b80bbb3c95f0c20bb8e4b46774d0ce227ef799da0052",
+      "status": "ready_for_review",
       "approvals": {
         "owner": false,
         "product_editor": false
