@@ -145,9 +145,9 @@
       "publish_at": "2026-11-02T15:00:00+02:00",
       "slug": "when-self-help-is-not-enough",
       "title": "When Self-Help Is Not Enough: Finding More Support",
-      "source_path": null,
-      "source_sha256": null,
-      "status": "planned",
+      "source_path": "content/back_guides/staged/when-self-help-is-not-enough/index.html",
+      "source_sha256": "8f5c820365bbd09c443d93f0fe3f724bd8e5026c55cfaf160937bce340fe35eb",
+      "status": "ready_for_review",
       "approvals": {
         "owner": false,
         "product_editor": false
