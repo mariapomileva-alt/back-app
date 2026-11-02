@@ -147,9 +147,9 @@
       "title": "When Self-Help Is Not Enough: Finding More Support",
       "source_path": "content/back_guides/staged/when-self-help-is-not-enough/index.html",
       "source_sha256": "8f5c820365bbd09c443d93f0fe3f724bd8e5026c55cfaf160937bce340fe35eb",
-      "status": "ready_for_review",
+      "status": "approved",
       "approvals": {
-        "owner": false,
+        "owner": true,
         "product_editor": false
       }
     },
