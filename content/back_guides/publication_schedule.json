@@ -185,10 +185,10 @@
       "slug": "how-to-help-someone-having-a-panic-attack",
       "title": "How to Help Someone Having a Panic Attack",
       "source_path": "content/back_guides/staged/how-to-help-someone-having-a-panic-attack/index.html",
-      "source_sha256": "e5d6e2f76ddc65d7bf7c9fd729d4e63c312e09ddbc540e682706c817bb73f244",
-      "status": "ready_for_review",
+      "source_sha256": "bdc321736b1d709e1cde42611a1ef8b15246094bdfb98ad65ad11ecfb6bf34cd",
+      "status": "approved",
       "approvals": {
-        "owner": false,
+        "owner": true,
         "product_editor": false
       }
     },
