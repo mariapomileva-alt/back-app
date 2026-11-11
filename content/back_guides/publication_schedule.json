@@ -198,10 +198,10 @@
       "slug": "panic-attack-on-a-plane",
       "title": "Panic Attack on a Plane",
       "source_path": "content/back_guides/staged/panic-attack-on-a-plane/index.html",
-      "source_sha256": "c3d596cf092ceb77bf05a10981ab49cc882d10bb17f0a5a7ea385f273656d52b",
-      "status": "ready_for_review",
+      "source_sha256": "7a88a0b438795b35e2256d4dd49749e3235fcb8c2ba4efbaa415645ef651c3f8",
+      "status": "approved",
       "approvals": {
-        "owner": false,
+        "owner": true,
         "product_editor": false
       }
     }
