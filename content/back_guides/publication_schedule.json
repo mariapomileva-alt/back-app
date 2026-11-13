@@ -204,6 +204,19 @@
         "owner": true,
         "product_editor": false
       }
+    },
+    {
+      "id": "BG15",
+      "publish_at": "2026-11-13T15:00:00+02:00",
+      "slug": "what-to-do-after-a-panic-attack",
+      "title": "What to Do After a Panic Attack: A Gentle Next Step",
+      "source_path": "content/back_guides/staged/what-to-do-after-a-panic-attack/index.html",
+      "source_sha256": "3da46721e3de09becac9445514c043400df2863ff9915690828ba821dd534446",
+      "status": "approved",
+      "approvals": {
+        "owner": true,
+        "product_editor": false
+      }
     }
   ]
 }
